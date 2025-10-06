@@ -1561,8 +1561,54 @@ int main() {
       <br><a href="https://codeforces.com/contest/991" target="_blank">Codeforces Round 491 (Div. 2) 2018-06-23</a>
     </div>
 
-  </details>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
 
+using namespace std;
+
+typedef long long ll;
+
+bool check(ll n, ll k) {
+  ll vas = 0; // съел Вася
+  ll pet = 0; // съел Петя
+  ll rest = n; // осталось
+  while (rest) {
+    ll current = min(rest, k);
+    vas += current;
+    rest -= current;
+    pet = rest / 10;
+    rest -= pet;
+  }
+
+  return vas * 2 >= n;
+}
+
+int main() {
+  // ввод данных
+  ll n; // число эклеров
+  cin >> n;
+
+  // решение
+  ll left = 0;
+  ll right = n;
+  ll mid;
+
+  // бинарный поиск
+  while (right - left > 1) {
+    mid = left + (right - left) / 2;
+    if (check(n, mid)) {
+      right = mid;
+    } else {
+      left = mid;
+    }
+  }
+
+  // вывод результата
+  cout &lt;&lt; right;
+}
+</pre>
+  </details>
 </article>
 
 

@@ -20,6 +20,7 @@ import html46       from './../pages/elem-46-sio2.html';
 import html48       from './../pages/elem-48-sio3.html';
 import html50       from './../pages/elem-50-Round47.html';
 import html52       from './../pages/elem-52-TRound1.html';
+import html59       from './../pages/elem-59-Round55.html';
 import html70       from './../pages/elem-70-Round64.html';
 import html71       from './../pages/elem-71-Round65.html';
 import html76       from './../pages/elem-76-vuos.html';
@@ -28,25 +29,35 @@ import html82       from './../pages/elem-82-yandex-q2.html';
 import html85       from './../pages/elem-85-yandex-r1.html';
 import html86       from './../pages/elem-86-yandex-r2.html';
 import html97       from './../pages/elem-97-yandex-f.html';
+import html110      from './../pages/elem-110-Round84.html';
 import html112      from './../pages/elem-112-Round85.html';
 import html116      from './../pages/elem-116-Round87.html';
 import html120      from './../pages/elem-120-kosSaratov.html';
 import html134      from './../pages/elem-134-TRound3.html';
+import html136      from './../pages/elem-136-Round97.html';
 import html141      from './../pages/elem-141-Round101.html';
 import html158      from './../pages/elem-158-vk-q1.html';
 import html159      from './../pages/elem-159-vk-q2.html';
 import html163      from './../pages/elem-163-vk-r2.html';
+import html169      from './../pages/elem-169-vk-r2.html';
+import html200      from './../pages/elem-200-Round126.html';
 import html228      from './../pages/elem-228-Round141.html';
 import html230      from './../pages/elem-230-Round142.html';
+import html268      from './../pages/elem-268-Round164.html';
+import html278      from './../pages/elem-278-Round170.html';
 import html313      from './../pages/elem-313-Round186.html';
 import html318      from './../pages/elem-318-Round188.html';
 import html339      from './../pages/elem-339-Round197.html';
 import html381      from './../pages/elem-381-Round223.html';
+import html427      from './../pages/elem-427-Round244.html';
 import html467      from './../pages/elem-467-Round267.html';
 import html469      from './../pages/elem-469-Round268.html';
+import html490      from './../pages/elem-490-Round279.html';
 import html492      from './../pages/elem-492-Round280.html';
 import html520      from './../pages/elem-520-Round295.html';
+import html546      from './../pages/elem-546-Round304.html';
 import html580      from './../pages/elem-580-Round321.html';
+import html617      from './../pages/elem-617-Round340.html';
 import html646      from './../pages/elem-646-Techno1z.html';
 import html647      from './../pages/elem-647-Techno2z.html';
 import html648      from './../pages/elem-648-Techno1o.html';
@@ -54,12 +65,21 @@ import html649      from './../pages/elem-649-Techno2o.html';
 import html705      from './../pages/elem-705-Round366.html';
 import html723      from './../pages/elem-723-Round375.html';
 import html727      from './../pages/elem-727-Techno2017o1.html';
+import html732      from './../pages/elem-732-Round377.html';
+import html733      from './../pages/elem-733-Round378.html';
 import html743      from './../pages/elem-743-Round384.html';
 import html758      from './../pages/elem-758-Round392.html';
+import html791      from './../pages/elem-791-Round405.html';
+import html895      from './../pages/elem-895-Round448.html';
 import html1030     from './../pages/elem-1030-Techno2019o1.html';
+import html1041     from './../pages/elem-1041-Round509.html';
+import html1296     from './../pages/elem-1296-Round617.html';
 import html1313     from './../pages/elem-1313-Round622.html';
 import html1325     from './../pages/elem-1325-Round628.html';
+import html1351     from './../pages/elem-1351-TRound16.html';
 import html1352     from './../pages/elem-1352-Round640.html';
+import html1360     from './../pages/elem-1360-Round644.html';
+import html1420     from './../pages/elem-1420-Round672.html';
 import html1490     from './../pages/elem-1490-Round702.html';
 import html1512     from './../pages/elem-1512-Round713.html';
 import html1520     from './../pages/elem-1520-Round719.html';
@@ -87,6 +107,7 @@ import html1791     from './../pages/elem-1791-Round849.html';
 import html1798     from './../pages/elem-1798-Round860.html';
 import html1807     from './../pages/elem-1807-Round859.html';
 import html1824     from './../pages/elem-1824-Round872.html';
+import html1825     from './../pages/elem-1825-Round872.html';
 import html1829     from './../pages/elem-1829-Round871.html';
 import html1850     from './../pages/elem-1850-Round886.html';
 import html1873     from './../pages/elem-1873-Round898.html';
@@ -146,6 +167,7 @@ export const pages = [
   html48,
   html50,
   html52,
+  html59,
   html70,
   html71,
   html76,
@@ -154,25 +176,35 @@ export const pages = [
   html85,
   html86,
   html97,
+  html110,
   html112,
   html116,
   html120,
   html134,
+  html136,
   html141,
   html158,
   html159,
   html163,
+  html169,
+  html200,
   html228,
   html230,
+  html268,
+  html278,
   html313,
   html318,
   html339,
   html381,
+  html427,
   html467,
   html469,
+  html490,
   html492,
   html520,
+  html546,
   html580,
+  html617,
   html646,
   html647,
   html648,
@@ -180,12 +212,21 @@ export const pages = [
   html705,
   html723,
   html727,
+  html732,
+  html733,
   html743,
   html758,
+  html791,
+  html895,
   html1030,
+  html1041,
+  html1296,
   html1313,
   html1325,
+  html1351,
   html1352,
+  html1360,
+  html1420,
   html1490,
   html1512,
   html1520,
@@ -213,6 +254,7 @@ export const pages = [
   html1798,
   html1807,
   html1824,
+  html1825,
   html1829,
   html1850,
   html1873,
