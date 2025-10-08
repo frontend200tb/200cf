@@ -204,5 +204,94 @@ int main() {
     <br><a href="https://codeforces.com/contest/490" target="_blank">Codeforces 490 Round 279 (Div. 2) 2014.11.23</a>
   </div>
 
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  // ввод данных
+  int n; // число школьников
+  cin >> n;
+  vector&lt;int&gt; t1; // школьники со способностью к программированию
+  vector&lt;int&gt; t2; // школьники со способностью к математике
+  vector&lt;int&gt; t3; // школьники со способностью к физкультуре
+  int in;
+
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> in;
+    switch (in) {
+    case 1: t1.push_back(i); break;
+    case 2: t2.push_back(i); break;
+    case 3: t3.push_back(i); break;
+    }
+  }
+
+  // решение
+  int size = min(t1.size(), min(t2.size(), t3.size()));
+
+  // вывод результата
+  if (size) {
+    cout &lt;&lt; size &lt;&lt; '\n';
+    for (int i = 0; i &lt; size; i++) {
+      cout &lt;&lt; t1[i] &lt;&lt; ' ' &lt;&lt; t2[i] &lt;&lt; ' ' &lt;&lt; t3[i] &lt;&lt; '\n';
+    }
+  } else {
+    cout &lt;&lt; 0;
+  }
+}
+</pre>
   </details>
+</article>
+
+
+<!-- Задача F. Полицейские-рекруты -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F. Полицейские-рекруты</h3>
+
+  <div class="t6"></div>
+
+</article>
+
+
+<!-- Задача G. I_love_%username% -->
+<article class="article">
+  <div class="anchor" id="t7"></div>
+  <h3>Задача G. I_love_%username%</h3>
+
+  <div class="t7"></div>
+
+</article>
+
+
+<!-- Задача H. Четный массив -->
+<article class="article">
+  <div class="anchor" id="t8"></div>
+  <h3>Задача H. Четный массив</h3>
+
+  <div class="t8"></div>
+
+</article>
+
+
+<!-- Задача I. Максимум в таблице -->
+<article class="article">
+  <div class="anchor" id="t9"></div>
+  <h3>Задача I. Максимум в таблице</h3>
+
+  <div class="t9"></div>
+
+</article>
+
+
+<!-- Задача J. Подарки -->
+<article class="article">
+  <div class="anchor" id="t10"></div>
+  <h3>Задача J. Подарки</h3>
+
+  <div class="t10"></div>
+
 </article>
