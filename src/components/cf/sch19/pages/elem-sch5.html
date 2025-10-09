@@ -252,8 +252,15 @@ int main() {
   <div class="anchor" id="t6"></div>
   <h3>Задача F. Полицейские-рекруты</h3>
 
-  <div class="t6"></div>
+  <details>
+    <summary>Решение</summary>
 
+    <div>
+      <a href="https://codeforces.com/contest/427/problem/A" target="_blank">Задача 427А</a>
+      <br><a href="https://codeforces.com/contest/427" target="_blank">Codeforces 427 Round 244 (Div. 2) 2014-05-02</a>
+    </div>
+
+  </details>
 </article>
 
 
@@ -262,8 +269,47 @@ int main() {
   <div class="anchor" id="t7"></div>
   <h3>Задача G. I_love_%username%</h3>
 
-  <div class="t7"></div>
+  <details>
+    <summary>Решение</summary>
 
+    <div>
+      <a href="https://codeforces.com/contest/155/problem/A" target="_blank">Задача 155А</a>
+      <br><a href="https://codeforces.com/contest/155" target="_blank">Codeforces 155 Round 109 (Div. 2) 2012-02-24</a>
+    </div>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  // ввод данных
+  int n; // число соревнований
+  cin >> n;
+  int in; // баллы за первое соревнование
+  cin >> in;
+
+  int min = in;
+  int max = in;
+  int cnt = 0;
+
+  for (int i = 1; i &lt; n; i++) {
+    cin >> in;
+    if (in > max) {
+      cnt++;
+      max = in;
+    }
+    if (in &lt; min) {
+      cnt++;
+      min = in;
+    }
+  }
+
+  // вывод результата
+  cout &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
 
 
@@ -272,7 +318,14 @@ int main() {
   <div class="anchor" id="t8"></div>
   <h3>Задача H. Четный массив</h3>
 
-  <div class="t8"></div>
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/1367/problem/B" target="_blank">Задача 1367B</a>
+      <br><a href="https://codeforces.com/contest/1367" target="_blank">Codeforces 1367 Round 650 (Div. 3) 2020-06-16</a>
+    </div>
+  </details>
 
 </article>
 
@@ -282,7 +335,15 @@ int main() {
   <div class="anchor" id="t9"></div>
   <h3>Задача I. Максимум в таблице</h3>
 
-  <div class="t9"></div>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/509/problem/A" target="_blank">Задача 509A</a>
+      <br><a href="https://codeforces.com/contest/509" target="_blank">Codeforces 509 Round 289 (Div. 2) 2015-01-31</a>
+    </div>
+  </details>
 
 </article>
 
@@ -292,6 +353,11 @@ int main() {
   <div class="anchor" id="t10"></div>
   <h3>Задача J. Подарки</h3>
 
-  <div class="t10"></div>
+
+  <div>
+    <a href="https://codeforces.com/contest/136/problem/A" target="_blank">Задача 136A</a>
+    <br><a href="https://codeforces.com/contest/136" target="_blank">Codeforces 136 Beta Round 97 (Div. 2) 2011-12-09</a>
+  </div>
+</details>
 
 </article>

@@ -45,8 +45,8 @@ export default function pageLink(asideItems, currentContent) {
           case 12: in34(); break;
           case 13: in38(); break;
           case 32: in134(); break;
-          case 38: in230(); break;
-          case 39: in313(); break;
+          case 39: in230(); break;
+          case 40: in313(); break;
         }
       }
     });

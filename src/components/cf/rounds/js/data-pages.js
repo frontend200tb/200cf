@@ -36,6 +36,7 @@ import html120      from './../pages/elem-120-kosSaratov.html';
 import html134      from './../pages/elem-134-TRound3.html';
 import html136      from './../pages/elem-136-Round97.html';
 import html141      from './../pages/elem-141-Round101.html';
+import html155      from './../pages/elem-155-Round109.html';
 import html158      from './../pages/elem-158-vk-q1.html';
 import html159      from './../pages/elem-159-vk-q2.html';
 import html163      from './../pages/elem-163-vk-r2.html';
@@ -54,6 +55,7 @@ import html467      from './../pages/elem-467-Round267.html';
 import html469      from './../pages/elem-469-Round268.html';
 import html490      from './../pages/elem-490-Round279.html';
 import html492      from './../pages/elem-492-Round280.html';
+import html509      from './../pages/elem-509-Round289.html';
 import html520      from './../pages/elem-520-Round295.html';
 import html546      from './../pages/elem-546-Round304.html';
 import html580      from './../pages/elem-580-Round321.html';
@@ -79,6 +81,7 @@ import html1325     from './../pages/elem-1325-Round628.html';
 import html1351     from './../pages/elem-1351-TRound16.html';
 import html1352     from './../pages/elem-1352-Round640.html';
 import html1360     from './../pages/elem-1360-Round644.html';
+import html1367     from './../pages/elem-1367-Round650.html';
 import html1420     from './../pages/elem-1420-Round672.html';
 import html1490     from './../pages/elem-1490-Round702.html';
 import html1512     from './../pages/elem-1512-Round713.html';
@@ -183,6 +186,7 @@ export const pages = [
   html134,
   html136,
   html141,
+  html155,
   html158,
   html159,
   html163,
@@ -201,6 +205,7 @@ export const pages = [
   html469,
   html490,
   html492,
+  html509,
   html520,
   html546,
   html580,
@@ -226,6 +231,7 @@ export const pages = [
   html1351,
   html1352,
   html1360,
+  html1367,
   html1420,
   html1490,
   html1512,
