@@ -343,8 +343,42 @@ int main() {
       <a href="https://codeforces.com/contest/509/problem/A" target="_blank">Задача 509A</a>
       <br><a href="https://codeforces.com/contest/509" target="_blank">Codeforces 509 Round 289 (Div. 2) 2015-01-31</a>
     </div>
-  </details>
 
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  // ввод данных
+  int n; // число строк и столбцов таблицы
+  cin >> n;
+
+  // решение
+  int res = 0;
+  vector&lt;vector&lt;int&gt; &gt; A(n, vector&lt;int&gt;(n));
+
+  // заполним верхний ряд и левый столбик таблицы единицами
+  for (int i = 0; i &lt; n; i++) {
+    A[0][i] = 1;
+    A[i][0] = 1;
+  }
+
+  // честно посчитаем всю таблицу
+  for (int i = 1; i &lt; n; i++) {
+    for (int j = 1; j &lt; n; j++) {
+      A[i][j] = A[i - 1][j] + A[i][j - 1];
+    }
+  }
+
+  // ответ лежит в последнем столбце последней строки
+
+  // вывод результата
+  cout &lt;&lt; A[n-1][n-1];
+}
+</pre>
+  </details>
 </article>
 
 
