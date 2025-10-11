@@ -26,6 +26,35 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Камни на столе</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  // ввод данных
+  int n; // число камней
+  cin >> n;
+  string s;
+  cin >> s;
+
+  // решение
+  int res = 0;
+  char c = s[0];
+  for (int i = 1; i &lt; s.size(); i++) {
+    if (c == s[i]) {
+      res++;
+    }
+    c = s[i];
+  }
+
+  // вывод результата
+  cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 
 
