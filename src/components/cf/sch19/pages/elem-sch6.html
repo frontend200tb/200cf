@@ -26,6 +26,31 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Команда</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число задач
+  cin >> n;
+
+  int cnt = 0; // число задач с решениями
+
+  while (n--) {
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a + b + c > 1) {
+      cnt++;
+    }
+  }
+
+  cout &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
 
 
