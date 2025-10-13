@@ -3,14 +3,14 @@
 
 https://frontend200tb.github.io/200cf/dist/
 
-Сначала установим необходимые пакеты. Я их устанавливаю глобально, чтобы не появлялась лишняя папка node_modules в моем проекте
+Сначала установим необходимые пакеты.
 
-npm i -g html-loader html-webpack-plugin
+npm i -D html-loader html-webpack-plugin
 
-npm i -g css-loader mini-css-extract-plugin
+npm i -D css-loader mini-css-extract-plugin
 
-npm i -g sass-loader sass
+npm i -D sass-loader sass
 
-npm i -g postcss-loader postcss postcss-preset-env
+npm i -D postcss-loader postcss postcss-preset-env
 
-npm i -g babel-loader @babel/core @babel/preset-env
+npm i -D babel-loader @babel/core @babel/preset-env

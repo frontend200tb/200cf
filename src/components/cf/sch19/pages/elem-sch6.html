@@ -77,4 +77,40 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Следующий раунд</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число участников
+  int k; // число баллов
+  cin >> n >> k;
+
+  int cnt = 0; // число участников в след. раунде
+  int bk; // число баллов k-го места
+
+  for (int i = 1; i &lt;= n; i++) {
+    int b; // число баллов
+    cin >> b;
+    if (b > 0) {
+      if (i &lt; k) {
+        cnt++;
+      }
+      if (i == k) {
+        bk = b;
+        cnt++;
+      }
+      if (i > k && b == bk) {
+        cnt++;
+      }
+    }
+  }
+
+  cout &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
