@@ -106,6 +106,61 @@ int main() {
   <div class="anchor" id="t3"></div>
   <h3>Задача C. Несчастливый билет</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  string s;
+  cin >> s;
+
+  vector&lt;int&gt; A(n);
+  vector&lt;int&gt; B(n);
+
+  for (int i = 0; i &lt; n; i++) {
+    A[i] = s[i];
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    B[i] = s[i + n];
+  }
+
+  sort(A.begin(), A.end());
+  sort(B.begin(), B.end());
+
+  bool flag = true;
+
+  if (A[n - 1] > B[n - 1]) {
+    for (int i = 0; i &lt; n; i++) {
+      if (B[i] >= A[i]) {
+        flag = false;
+      }
+    }
+  } else if (B[n - 1] > A[n - 1]) {
+    for (int i = 0; i &lt; n; i++) {
+      if (A[i] >= B[i]) {
+        flag = false;
+      }
+    }
+  } else {
+    flag = false;
+  }
+
+  if (flag) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
