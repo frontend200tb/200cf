@@ -34,6 +34,34 @@
   <div class="anchor" id="t2"></div>
   <h3>Задача B. Юный физик</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число сил
+  cin >> n;
+  int x, y, z; // вектор силы
+  int sumx = 0, sumy = 0, sumz = 0;
+
+  while (n--) {
+    cin >> x >> y >> z;
+    sumx += x;
+    sumy += y;
+    sumz += z;
+  }
+
+  if (sumx == 0 and sumy == 0 and sumz == 0) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
