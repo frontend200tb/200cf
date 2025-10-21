@@ -493,9 +493,8 @@ void update(int v, int l, int r, int pos, int val) {
   <ol>
     <li>k ≤ t[2*v + 1] -> k-й ноль в левом сыне.</li>
     <li>k > t[2*v + 1] -> k-й ноль в правом сыне. Причем там он (k - t[2*v + 1])-й ноль</li>
-    <li></li>
   </ol>
-  <p>Реализация</p>
+  <p>Реализация дерева отрезков</p>
 <pre>
 vector&lt;int&gt; t(4*MAXN), a;
 void build(int v, int l, int r) {

@@ -1771,5 +1771,80 @@ int main() {
       <br><a href="https://codeforces.com/contest/1730" target="_blank">Codeforces Round 823 (Div. 2) 2022-09-25</a>
     </div>
 
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+double time(double mid, vector&lt;int&gt;& x, vector&lt;int&gt;& t, int n) {
+  double res = 0;
+  for (int i = 0; i < n; i++) {
+    res = max(res, t[i] + fabs(x[i] - mid));
+  }
+  return res;
+}
+
+
+int main() {
+  // ускорение ввода-вывода
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // число людей
+    cin >> n;
+    vector&lt;int&gt; x(n); // позиции людей
+    cin >> x[0];
+    double left = x[0]; // положение крайнего слева человека
+    double right = x[0]; // положение крайнего справа человека
+    for (int i = 1; i < n; i++) {
+      cin >> x[i];
+      if (left > x[i]) {
+        left = x[i];
+      }
+      if (x[i] > right) {
+        right = x[i];
+      }
+    }
+    vector&lt;int&gt; t(n); // время чтобы одеться
+    for (int i = 0; i &lt; n; i++) {
+      cin >> t[i];
+    }
+
+    double mid1, mid2;
+    double t1, t2;
+    double eps = 1e-7;
+    // вещественный тернарный поиск
+    while (right - left > eps) {
+      mid1 = left + (right - left) / 3;
+      mid2 = left + 2 * (right - left) / 3;
+      t1 = time(mid1, x, t, n);
+      t2 = time(mid2, x, t, n);
+      if (t1 >= t2) {
+        left = mid1;
+      } else {
+        right = mid2;
+      }
+    }
+
+    cout &lt;&lt; fixed &lt;&lt; setprecision(6);
+    cout &lt;&lt; left &lt;&lt; '\n';
+  }
+}
+</pre>
   </details>
 </article>

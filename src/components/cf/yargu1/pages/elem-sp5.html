@@ -2081,23 +2081,21 @@ int main() {
 
   while (t--) {
     // ввод данных
-    int n;
+    int n; // длина строки
     cin >> n;
     string s;
     cin >> s;
 
     // решение
-    int res = 0;
-    for (int i = 0; i &lt; s.size(); i++) {
-      if (i + 2 &lt; s.size()) {
+    int cnt2 = 0; // счетчик повторов
+    for (int i = 0; i &lt; n - 2; i++) {
         if (s[i] == s[i + 2]) {
-          res++;
+          cnt2++;
         }
-      }
     }
 
     // вывод результата
-    cout &lt;&lt; s.size() - res - 1 &lt;&lt; '\n';
+    cout &lt;&lt; n - 1 - cnt2 &lt;&lt; '\n';
   }
 }
 </pre>
