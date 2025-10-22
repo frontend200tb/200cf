@@ -1687,8 +1687,66 @@ int main() {
       <br><a href="https://codeforces.com/contest/1011" target="_blank">Codeforces Round 499 (Div. 2) 2018-07-26</a>
     </div>
 
-  </details>
+    <p>Для начала узнаем, как определить, может ли ракета пролететь весь маршрут. Рассмотрим некоторый элемент из массива a[] или b[]. Обозначим его через t. Если t=1 (то есть одна тонна топлива может довезти только одну тонну (груза + топлива)), то топливо может довезти только себя, а нам нужно довезти ещё и ракету и полезный груз (масса которых положительна). То есть, если t=1 хотя бы для одного t, нужно вывести -1, в противном случае сделать следующие шаги.</p>
+    <p>Для начала надо взлететь с Земли. Потом будем приземляться и взлетать с каждой планеты. Потом приземлимся на Земле. На каждом шаге масса ракеты mr равна массе груза плюс масса оставшегося топлива. Пусть t это масса, которую может поднять 1 тонна топлива (из массива A или B). Тогда топливо которое тратится на данном шаге</p>
+    <code>mr + x = t * x</code>
+    <code>x = mr / (t - 1)</code>
 
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+int main() {
+  // ускорение ввода-вывода
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int n; // число планет
+  int m; // масса груза
+  cin >> n >> m;
+  bool flag = true; // ракета сможет долететь
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+    if (A[i] <= 1) {
+      flag = false;
+    }
+  }
+  vector&lt;int&gt; B(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> B[i];
+    if (B[i] &lt;= 1) {
+      flag = false;
+    }
+  }
+
+  double mr = m; // масса ракеты (груза и топлива)
+  mr += mr / (A[0] - 1); // взлететь с Земли
+  for (int i = n - 1; i >= 1; i--) {
+    mr += mr / (B[i] - 1); // тормозить на i планете
+    mr += mr / (A[i] - 1); // взлететь с i планеты
+  }
+  mr += mr / (B[0] - 1); // тормозить на Земле
+
+  if (flag) {
+    cout &lt;&lt; fixed &lt;&lt; setprecision(8);
+    cout &lt;&lt; mr - m;
+  } else {
+    cout &lt;&lt; -1;
+  }
+}
+</pre>
+  </details>
 </article>
 
 
