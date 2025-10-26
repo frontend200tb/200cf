@@ -665,6 +665,66 @@ int main() {
 </pre>
     <code>3</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+int main() {
+  // ускорение ввода-вывода
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int n; // число платформ
+  cin >> n;
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i]; // высота i-ой платформы
+  }
+
+  int energy = 0; // затрачено энергии
+  int cur = 0; // текущая платформа
+
+  // будем выбирать минимальную энергию
+  // между двумя способами
+  // en1 прыжок на соседние платформы
+  // en2 прыжок через однуплатформу
+  int en1 = 0;
+  int en2 = 0;
+
+  while (cur &lt; n - 2) {
+    en1 = abs(A[cur + 1] - A[cur]) + abs(A[cur + 2] - A[cur + 1]);
+    en2 = 3 * abs(A[cur + 2] - A[cur]);
+    if (en2 > en1) {
+      energy += abs(A[cur + 1] - A[cur]);
+      cur = cur + 1;
+    } else {
+      energy += en2;
+      cur = cur + 2;
+    }
+  }
+
+  // если последний прыжок был на соседнюю платформу
+  if (cur == n - 2) {
+    energy += abs(A[cur + 1] - A[cur]);
+  }
+
+  cout &lt;&lt; energy;
+}
+</pre>
+  </details>
 </article>
 
 
@@ -990,6 +1050,15 @@ int main() {
     <summary>Пример</summary>
     <code>3 1</code>
     <code>000</code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Решаем с помощью ДП.</p>
+    <p>Храним vector A(n)</p>
+    <p>Считаем ячейку A[i] как следующую в лексикографическом порядке после A[i-1], такую что никакие две 1 не стоят на соседних местах.</p>
+    <p>Базовый случай A[1] = {0,0,0,0}, A[2] = {0,0,0,1}</p>
+    <p>Ответ хранится в A[k] векторе</p>
   </details>
 </article>
 

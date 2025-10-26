@@ -26,6 +26,36 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Красивый год</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int y; // номер года от 1000 до 9000
+  cin >> y;
+
+  int res = y + 1;
+  int d1 = res % 10;
+  int d2 = (res / 10) % 10;
+  int d3 = (res / 100) % 10;
+  int d4 = res / 1000;
+
+  while (d1 == d2 || d1 == d3 || d1 == d4
+     || d2 == d3 || d2 == d4 || d3 == d4) {
+    res++;
+    d1 = res % 10;
+    d2 = (res / 10) % 10;
+    d3 = (res / 100) % 10;
+    d4 = res / 1000;
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 
 
