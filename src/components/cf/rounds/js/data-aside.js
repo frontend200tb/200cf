@@ -148,4 +148,6 @@ export const asideThemes = [
   '2148 Round 1050 (Div. 4)',
   '2149 Round 1054 (Div. 3)',
   '2152 Round 1055 (Div. 1 + 2)',
+  '2162 Round 1059 (Div. 3)',
+  '2167 Round 1062 (Div. 4)',
 ];

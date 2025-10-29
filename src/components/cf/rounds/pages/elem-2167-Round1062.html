@@ -1,0 +1,142 @@
+<article class="article">
+  <a href="https://codeforces.com/contest/2167" target="_blank">Codeforces 2167 Round 1062 (Div. 4) 2025.10.28</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. Квадрат?</a>
+  <br><a href="#t2">Задача B. Твоё имя</a>
+  <br><a href="#t3">Задача C. Исаматдин и его волшебная палочка!</a>
+  <br><a href="#t4">Задача D. Еще одна задача с массивами</a>
+  <br><a href="#t5">Задача E. khba любит спать!</a>
+  <br><a href="#t6">Задача F. Дерево, ДЕРЕВО!!!</a>
+  <br><a href="#t7">Задача G. Мухаммадали и гладкий массив</a>
+</article>
+
+
+<!-- Задача A. Квадрат? -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. Квадрат?</h3>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int a, b, c, d; // длины палочек
+    cin >> a >> b >> c >> d;
+
+    if (a == b && a == c && a == d) {
+      cout &lt;&lt; "YES\n";
+    } else {
+      cout &lt;&lt; "NO\n";
+    }
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача B. Твоё имя -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Твоё имя</h3>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int q;
+  cin >> q;
+
+  while (q--) {
+    int n; // длины строки
+    cin >> n;
+    string s, t;
+    cin >> s >> t;
+
+    vector&lt;char&gt; A(n);
+    vector&lt;char&gt; B(n);
+    for (int i = 0; i &lt; n; i++) {
+      A[i] = s[i];
+      B[i] = t[i];
+    }
+
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end());
+    bool flag = true;
+
+    for (int i = 0; i &lt; n; i++) {
+      if (A[i] != B[i]) {
+        flag = false;
+      }
+    }
+
+    if (flag) {
+      cout &lt;&lt; "YES\n";
+    } else {
+      cout &lt;&lt; "NO\n";
+    }
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача C. Исаматдин и его волшебная палочка! -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Исаматдин и его волшебная палочка!</h3>
+
+</article>
+
+
+<!-- Задача D. Еще одна задача с массивами -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. Еще одна задача с массивами</h3>
+
+</article>
+
+
+<!-- Задача E. khba любит спать! -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. khba любит спать!</h3>
+
+</article>
+
+
+<!-- Задача F. Дерево, ДЕРЕВО!!! -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F. Дерево, ДЕРЕВО!!!</h3>
+
+</article>
+
+
+<!-- Задача G. Мухаммадали и гладкий массив -->
+<article class="article">
+  <div class="anchor" id="t7"></div>
+  <h3>Задача G. Мухаммадали и гладкий массив</h3>
+
+</article>
