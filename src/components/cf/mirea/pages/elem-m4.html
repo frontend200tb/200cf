@@ -37,6 +37,46 @@
 
   <div class="t1"></div>
 
+  <details>
+    <summary>Решение</summary>
+
+    <h4>Тест 9</h4>
+<pre>
+6
+7388 8451 7463 5742 1534 6567
+</pre>
+    <code>37145</code>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  freopen("ladder.in", "rt", stdin);
+  freopen("ladder.out", "wt", stdout);
+
+  int n; // число ступенек
+  cin >> n;
+
+  vector&lt;int&gt; A(n + 1);
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> A[i];
+  }
+
+  vector&lt;int&gt; DP(n + 1);
+  DP[0] = 0;
+  DP[1] = A[1];
+  for (int i = 2; i &lt;= n; i++) {
+    DP[i] = max(DP[i - 2] + A[i], DP[i - 1] + A[i]);
+  }
+
+  cout &lt;&lt; DP[n];
+}
+</pre>
+  </details>
 </article>
 
 
