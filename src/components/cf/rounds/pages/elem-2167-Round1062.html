@@ -24,6 +24,7 @@
 
   <details>
     <summary>Решение</summary>
+    <p>Чтобы получился квадрат, надо проверить что все стороны равны.</p>
 <pre>
 #include &lt;iostream&gt;
 
@@ -56,6 +57,7 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+    <p>Нужно отсортировать две строки и сравнить их.</p>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -107,6 +109,52 @@ int main() {
   <div class="anchor" id="t3"></div>
   <h3>Задача C. Исаматдин и его волшебная палочка!</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Если у всех элементов совпадает четность, то мы не можем ничего поменять местами. Если есть хоть одно число с другой четностью, то мы можем отсортировать массив как мы хотим. Начнем решение с того что посчитаем четные и нечетные числа.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // число игрушек
+    cin >> n;
+
+    vector&lt;int&gt; A(n);
+    int cnt1 = 0; // число нечетных чисел
+    int cnt2 = 0; // число четный чисел
+
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+
+      if (A[i] % 2 == 0) {
+        cnt2++;
+      } else {
+        cnt1++;
+      }
+    }
+
+    if (cnt1 == 0 || cnt2 == 0) {
+    } else {
+      sort(A.begin(), A.end());
+    }
+
+    for (int i = 0; i &lt; n; i++) {
+      cout &lt;&lt; A[i] &lt;&lt; ' ';
+    }
+    cout &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -115,6 +163,70 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Еще одна задача с массивами</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Число с которым какое то число из массива будет иметь НОД равный 1, должно быть простым. Поэтому соберем Решето Эратосфена. И будем перебирвать все простые числа и считать НОД с каждым числом из массива, пока НОД не равен 1.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+  vector&lt;int&gt; Simple;
+  vector&lt;int&gt; Resh(1e6);
+
+  for (int i = 2; i &lt; Resh.size(); i++) {
+    if (Resh[i] == 0) {
+      Simple.push_back(i);
+      for (int j = 2 * i; j &lt; Resh.size(); j += i) {
+        Resh[j] = 1;
+      }
+    }
+  }
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n;
+    cin >> n;
+    vector&lt;long long&gt; A(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+    bool flag = false;
+    int res;
+    int uk = 0;
+    while(flag == false) {
+      res = Simple[uk];
+      uk++;
+      long long t1;
+      long long t2;
+
+      for (int i = 0; i &lt; n; i++) {
+        t1 = res;
+        t2 = A[i];
+        while (t1 > 0 && t2 > 0) {
+          if (t1 > t2) {
+            t1 = t1 % t2;
+          } else {
+            t2 = t2 % t1;
+          }
+        }
+        if (t1 + t2 == 1) {
+          flag = true;
+        }
+      }
+    }
+
+    if (flag) {
+      cout &lt;&lt; res &lt;&lt; '\n';
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -123,6 +235,10 @@ int main() {
   <div class="anchor" id="t5"></div>
   <h3>Задача E. khba любит спать!</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>k позиций телепортов будем выбираь так, чтобы они были максимально далеко от позиции слева и от позиции справа.</p>
+  </details>
 </article>
 
 

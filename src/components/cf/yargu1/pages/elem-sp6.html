@@ -193,6 +193,7 @@ int main() {
   for (int i = 0; i &lt; n; i++) {
     cin >> A[i];
   }
+
   sort(A.begin(), A.end(), comp);
   for (int i = 0; i &lt; n; i ++) {
     cout &lt;&lt; A[i] &lt;&lt; " ";
@@ -207,33 +208,40 @@ int main() {
   <div class="anchor" id="p6"></div>
   <h3>Работа с файлами</h3>
 
+  <h4>fstream</h4>
+
   <p>Для работы с файлами необходимо подключить заголовочный файл fstream. В fstream определены несколько классов и подключены заголовочные файлы ifstream — файловый ввод и ofstream — файловый вывод.
   </p>
 <pre>
 #include &lt;fstream&gt;
 
 int main() {
-  int n;
   ifstream in("input.txt");
   ofstream out("output.txt");
+
+  int n;
   in >> n;
   out &lt;&lt; n * n;
+
   in.close();
   out.close();
 }
 </pre>
 
-  <h4>Перенаправление stdin, stdout и stderr на файлы, определенные пользователем</h4>
-  <p>freopen обычно используется для перенаправления заранее открытых файлов stdin, stdout и stderr на файлы, определенные пользователем.</p>
+  <h4>freopen</h4>
+
+  <p>freopen обычно используется для перенаправления заранее открытых файлов stdin, stdout и stderr на файлы, определенные пользователем. Перед этим необходимо создать и добавить в проект файлы input.txt и output.txt.</p>
   <ul>
     <li>"r" Открывает для чтения. Если файл не существует или не удается найти, вызов завершается ошибкой freopen.</li>
     <li>"w"	Открывает пустой файл для записи. Если указанный файл существует, его содержимое удаляется.</li>
+    <li>"t"	Текстовый режим работы с файлом.</li>
   </ul>
 <pre>
 #ifdef _DEBUG
   freopen("input.txt", "rt", stdin);
   freopen("output.txt", "wt", stdout);
 #endif
+
   int n;
   cin >> n;
   cout &lt;&lt; n * n;
@@ -485,7 +493,7 @@ int kvadr(int a, int b) {
   if (a == b) {
     return 1;
   } else if (a > b) {
-    return 1 + kvadr(a  - b, b);
+    return 1 + kvadr(a - b, b);
   } else {
     return 1 + kvadr(b - a, a);
   }
@@ -573,10 +581,10 @@ int max_size = 0;
 bool check(vector&lt;int&gt;& A, int l, int r) {
   for (int i = l; i &lt; r; i++) {
     if (A[i] > A[i + 1]) {
-      return false;
+      return false; // не отсортирован
     }
   }
-  return true;
+  return true; // отсортирован
 }
 
 void sort_tanos(vector&lt;int&gt;& A, int l, int r) {
@@ -763,15 +771,15 @@ int main() {
   int count = 0;
 
   // всего 5 случаев
-  // 1) если x больше всех элементов
+  // 1. если x больше всех элементов
   if (x > A[n - 1]) {
     count = n + 1;
 
-  // 2) если x меньше всех элементов
+  // 2. если x меньше всех элементов
   } else if (x &lt; A[0]) {
     count = n;
 
-  // 3) если x &lt; med
+  // 3. если x &lt; med
   } else if (x &lt; med) {
     int c = 0;
     // пока x меньше медианы
@@ -785,7 +793,7 @@ int main() {
       count = c * 2;
     }
 
-  // 4) если x > med
+  // 4. если x > med
   } else if (x > med) {
     int c = 0;
     // пока x больше медианы
@@ -800,7 +808,7 @@ int main() {
     }
   }
 
-  // 5) если x == med, то оставляем count == 0
+  // 5. если x == med, то оставляем count == 0
 
   // вывод результата
   cout &lt;&lt; count;
@@ -876,22 +884,25 @@ long long gcd(long long a, long long b) {
 
 int main() {
   // ввод данных
-  long long a, b, n, cnt = 0;
+  long long a, b, n;
   cin >> a >> b >> n;
 
   // решение
+  int hod = 0; // 0 - ход Семена
+               // 1 - ход Антисемена
+
   while (n != 0) {
-    if (cnt == 0) {
+    if (hod == 0) {
       n -= gcd(a, n);
-      cnt = 1;
+      hod = 1;
     } else {
       n -= gcd(b, n);
-      cnt = 0;
+      hod = 0;
     }
   }
 
   // вывод результата
-  cout &lt;&lt; (cnt + 1) % 2;
+  cout &lt;&lt; (hod + 1) % 2;
 }
 </pre>
   </details>
