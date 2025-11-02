@@ -237,7 +237,108 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-    <p>k позиций телепортов будем выбираь так, чтобы они были максимально далеко от позиции слева и от позиции справа.</p>
+    <p>k позиций телепортов будем выбирать так, чтобы они были максимально далеко от позиции слева и от позиции справа. Упорядочиваем позиции телепортов по удаленности. rbegin возвращает самую удаленную точку. bad_pos отслеживает что позиция повторно не добавляется. Сначала проверяем две крайние точки и расстояние от них до ближайшего друга. Потом берем пары отсортированных друзей и проверяем расстояние между ними.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n, k, x;
+    cin >> n >> k >> x;
+
+    vector&lt;int&gt; A(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+    set&lt;int&gt; bad_pos;
+    sort(A.begin(), A.end());
+
+    // first - расстояние,
+    // second.first позиция соседа слева
+    // second.second позиция соседа справа
+    set&lt;pair&lt;int, pair&lt;int, int&gt; &gt; &gt; st;
+    pair&lt;int, pair&lt;int, int&gt; &gt; tmp;
+    vector&lt;int&gt; Result;
+
+    // расстояние от нуля
+    tmp.first = A[0] - 0;
+    tmp.second.first = 0;
+    tmp.second.second = A[0];
+    st.insert(tmp);
+
+    // расстояние от x
+    tmp.first = x - A[n-1];
+    tmp.second.first = x;
+    tmp.second.second = A[n-1];
+    st.insert(tmp);
+
+    for (int i = 0; i &lt; n - 1; i++) {
+      // для каждой пары друзей
+      if ((A[i + 1] - A[i]) % 2 == 0) {
+        // если расстояние между ними четное
+        tmp.first = (A[i + 1] + A[i]) / 2 - A[i];
+        tmp.second.first = (A[i + 1] + A[i]) / 2;
+        tmp.second.second = A[i];
+        st.insert(tmp);
+
+        tmp.first = A[i + 1] -(A[i+1] + A[i]) / 2;
+        tmp.second.first = (A[i + 1] + A[i]) / 2;
+        tmp.second.second = A[i+1];
+        st.insert(tmp);
+      } else {
+        // если расстояние между ними нечетное
+        tmp.first = (A[i + 1] + A[i]) / 2 - A[i];
+        tmp.second.first = (A[i + 1] + A[i]) / 2;
+        tmp.second.second = A[i];
+        st.insert(tmp);
+
+        tmp.first = A[i + 1] -(A[i+1] + A[i] + 1) / 2;
+        tmp.second.first = (A[i + 1] + A[i] + 1) / 2;
+        tmp.second.second = A[i+1];
+        st.insert(tmp);
+      }
+    }
+
+    while (Result.size() != k) {
+      tmp = *st.rbegin();
+      st.erase(*st.rbegin());
+      if (bad_pos.find(tmp.second.first) == bad_pos.end()) {
+        bad_pos.insert(tmp.second.first);
+        Result.push_back(tmp.second.first);
+      }
+      tmp.first--;
+      if (tmp.second.first >= tmp.second.second) {
+        tmp.second.first--;
+      } else {
+        tmp.second.first++;
+      }
+      st.insert(tmp);
+    }
+
+    sort(Result.begin(), Result.end());
+
+    for (int i = 0; i &lt; Result.size(); i++) {
+      cout &lt;&lt; Result[i] &lt;&lt; ' ';
+    }
+    cout &lt;&lt; '\n';
+  }
+}
+</pre>
   </details>
 </article>
 
@@ -247,6 +348,64 @@ int main() {
   <div class="anchor" id="t6"></div>
   <h3>Задача F. Дерево, ДЕРЕВО!!!</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Это задача на DFS с DP. Собираем граф и идем в dfs. Там смотрим если это не наш предок, то идем в DP. Собираем ДП это сколько подчиненных с нашей стороны. Мы смотрим на ребро. dfs находит сына, дальше ДП смотрит сколько подчиненных у этого сына и добавляет их к своим подчиненным. Смотрим сколько у него подчиненных с одной стороны h1 и с другой стороны h2. Если h1 >= k, то LCA может быть одна из вершин. Если h2 >= k, то мы можем быть LCA для наших сыновей.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+long long res;
+int n, k;
+
+void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
+  vector&lt;int&gt;& DP, int pos, int y) {
+  for (int i = 0; i &lt; G[pos].size(); i++) {
+    if (G[pos][i] != y) {
+      dfs(G, DP, G[pos][i], pos);
+      DP[pos] += DP[G[pos][i]];
+      int h1 = DP[G[pos][i]];
+      int h2 = n - h1;
+      if (h1 >= k) {
+        res += h2;
+      }
+      if (h2 >= k) {
+        res += h1;
+      }
+    }
+  }
+}
+
+int main() {
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    res = 0;
+    cin >> n >> k;
+    vector&lt;vector&lt;int&gt; &gt; G(n + 1);
+    vector&lt;int&gt; DP(n + 1, 1);
+    int x, y;
+    for (int i = 0; i &lt; n - 1; i++) {
+      cin >> x >> y;
+      G[x].push_back(y);
+      G[y].push_back(x);
+    }
+    dfs(G, DP, 1, 0);
+
+    cout &lt;&lt; res + n &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -255,4 +414,69 @@ int main() {
   <div class="anchor" id="t7"></div>
   <h3>Задача G. Мухаммадали и гладкий массив</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Сложность O(n<sup>2</sup>)</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n;
+    cin >> n;
+    vector&lt;long long&gt; A(n);
+    vector&lt;long long&gt; B(n);
+    vector&lt;long long&gt; C(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+      B[i] = A[i];
+    }
+    for (int i = 0; i &lt; n; i++) {
+      cin >> C[i];
+    }
+    sort(B.begin(), B.end());
+    vector &lt;long long&gt; Sloy1(n + 1);
+    vector &lt;long long&gt; Sloy2(n + 1);
+    long long buf = 1e15;
+    int tmp = 0;
+    for (int j = 1; j &lt;= n; j++) {
+      buf = 1e15;
+      for (int i = 1; i &lt;= n; i++) {
+        if (B[i - 1] != A[j - 1]) {
+          tmp = C[j - 1];
+        } else {
+          tmp = 0;
+        }
+        buf = min(buf, Sloy1[i]);
+        Sloy2[i] = buf + tmp;
+      }
+      for (int i = 0; i &lt;= n; i++) {
+        Sloy1[i] = Sloy2[i];
+        Sloy2[i] = 0;
+      }
+    }
+
+    long long res = 1e15;
+    for (int i = 1; i &lt;= n; i++) {
+      res = min(res, Sloy1[i]);
+    }
+
+    cout &lt;&lt; res &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
