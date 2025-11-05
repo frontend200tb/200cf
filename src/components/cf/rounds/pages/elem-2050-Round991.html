@@ -84,46 +84,35 @@ a
 
 using namespace std;
 
-void solve() {
-  long long n, m;
-  cin >> n >> m;
-
-  vector&lt;string&gt; v(n);
-
-  for (int i = 0; i &lt; n; ++i) {
-    cin >> v[i];
-  }
-  // суммарная длина добавленных строк
-  long long len = 0;
-
-  for (int i = 0; i &lt; n; ++i) {
-    // если очередную строку не можем добавить,
-    // то можем выводить ответ i
-    if (len + v[i].size() > m) {
-      // благодаря индексации с нуля количество
-      // строк от 0-ой до (i - 1)-ой равно i
-      cout &lt;&lt; i &lt;&lt; '\n';
-      return;
-    }
-
-    // если добавить можем, то увеличиваем суммарную длину
-    len += v[i].size();
-  }
-
-  // если все строки получилось добавить, то ответ - n
-  cout &lt;&lt; n &lt;&lt; '\n';
-}
-
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
-
-  long long t = 1;
+  int t;
   cin >> t;
 
   while (t--) {
-    solve();
+    int n; // число слов
+    int m; // число символов
+    cin >> n >> m;
+    vector&lt;string&gt; v(n); // слова из текста
+    for (int i = 0; i &lt; n; ++i) {
+      cin >> v[i];
+    }
+
+    // суммарная длина добавленных слов
+    long long len = 0;
+    // число добавленных слов
+    int cnt = 0;
+
+    for (int i = 0; i &lt; n; i++) {
+      // если можем добавить очередное слово
+      if (len + v[i].size() &lt;= m) {
+        len += v[i].size();
+        cnt++;
+      } else {
+        break;
+      }
+    }
+
+    cout &lt;&lt; cnt &lt;&lt; '\n';
   }
 }
 </pre>
