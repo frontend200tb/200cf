@@ -1720,6 +1720,15 @@ int main() {
     <summary>Пример</summary>
     <code>7 2 1 4 5 1 3 3</code>
     <code>8</code>
+    <p>Нарисуем гистограму</p>
+<pre>
+   #
+  ##
+  ## ##
+# ## ##
+#######
+2145133
+</pre>
   </details>
 
   <details>
@@ -1751,17 +1760,17 @@ int main() {
   int n; // число прямоугольников
   cin >> n;
   vector&lt;long long&gt; H(n);
-  for (int i = 0; i &lt; n; ++i) {
+  for (int i = 0; i &lt; n; i++) {
     cin >> H[i]; // высоты прямоугольников
   }
 
   // решение
-  long long res = 0; // максимальная площадь
-  long long area = 0; // текущая площадь
   stack&lt;long long&gt; st; // стек для индексов столбцов
+  long long cur_area = 0; // текущая площадь
+  long long area = 0; // максимальная площадь
   long long i = 0; // индекс столбца в векторе H
-  // для каждого столбца
 
+  // для каждого столбца
   while (i &lt; n) {
 
     if (st.empty() || H[st.top()] &lt;= H[i]) {
@@ -1777,11 +1786,11 @@ int main() {
       st.pop();
 
       // пересчитываем текущую площадь
-      area = H[top] * (st.empty() ? i : i - st.top() - 1);
-      if (area > res) {
+      cur_area = H[top] * (st.empty() ? i : i - st.top() - 1);
+      if (cur_area > area) {
         // если текущая площадь больше максимальной
         // обновляем максимальную площадь
-        res = area;
+        area = cur_area;
       }
     }
   }
@@ -1792,17 +1801,18 @@ int main() {
     // берем верхний индес и удаляем из стека
     long long top = st.top();
     st.pop();
+
     // пересчитываем текущую площадь
-    area = H[top] * (st.empty() ? n : n - st.top() - 1);
-    if (area > res) {
-        // если текущая площадь больше максимальной
-        // обновляем максимальную площадь
-      res = area;
+    cur_area = H[top] * (st.empty() ? n : n - st.top() - 1);
+    if (cur_area > area) {
+      // если текущая площадь больше максимальной
+      // обновляем максимальную площадь
+      area = cur_area;
     }
   }
 
   // вывод результата
-  cout &lt;&lt; res;
+  cout &lt;&lt; area;
 }
 </pre>
   </details>

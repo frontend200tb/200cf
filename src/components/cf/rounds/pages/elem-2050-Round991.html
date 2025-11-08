@@ -456,54 +456,50 @@ int main() {
 
 using namespace std;
 
-void solve() {
-  string s;
-  cin >> s;
-
-  long long n = s.size();
-  vector&lt;long long&gt; v(n);
-
-  for (int i = 0; i &lt; n; ++i) {
-    v[i] = s[i] - '0';         // для удобства перепишем строку s в массив целых чисел v
-  }
-
-  for (int i = 0; i &lt; n; ++i) {
-    long long ind = i;         // индекс элемента, который должен стоять на i-ой позиции
-    long long val = v[i];      // значение элемента с индексом ind, когда он будет стоять на i-ой позиции
-
-    for (int j = i + 1; j &lt;= min(n - 1, (long long)i + 10); ++j) {  // так как все числа до 9, элемент, стоящий дальше
-    // (i + 10)-ой позиции точно нельзя поставить в позицию i
-
-      if (v[j] - (j - i) > val) {  // (j - i) - сколько потеряет v[j], если мы его переставим в i-ую позицию
-        ind = j;
-        val = v[j] - (j - i);
-      }
-    }
-
-    while (ind > i) {  // проделываем операцию, пока найденный элемент на позиции ind не встанет на позицию i
-      --v[ind];
-      swap(v[ind], v[ind - 1]);
-      --ind;
-    }
-  }
-
-  for (int i = 0; i &lt; n; ++i) {
-    cout &lt;&lt; v[i];  // выводим ответ
-  }
-
-  cout &lt;&lt; '\n';
-}
-
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
 
-  long long t = 1;
+  int t = 1;
   cin >> t;
 
   while (t--) {
-    solve();
+    string s;
+    cin >> s;
+
+    long long n = s.size();
+    vector&lt;long long&gt; v(n);
+
+    for (int i = 0; i &lt; n; ++i) {
+      v[i] = s[i] - '0';         // для удобства перепишем строку s в массив целых чисел v
+    }
+
+    for (int i = 0; i &lt; n; ++i) {
+      long long ind = i;         // индекс элемента, который должен стоять на i-ой позиции
+      long long val = v[i];      // значение элемента с индексом ind, когда он будет стоять на i-ой позиции
+
+      for (int j = i + 1; j &lt;= min(n - 1, (long long)i + 10); ++j) {  // так как все числа до 9, элемент, стоящий дальше
+      // (i + 10)-ой позиции точно нельзя поставить в позицию i
+
+        if (v[j] - (j - i) > val) {  // (j - i) - сколько потеряет v[j], если мы его переставим в i-ую позицию
+          ind = j;
+          val = v[j] - (j - i);
+        }
+      }
+
+      while (ind > i) {  // проделываем операцию, пока найденный элемент на позиции ind не встанет на позицию i
+        --v[ind];
+        swap(v[ind], v[ind - 1]);
+        --ind;
+      }
+    }
+
+    for (int i = 0; i &lt; n; ++i) {
+      cout &lt;&lt; v[i];  // выводим ответ
+    }
+
+    cout &lt;&lt; '\n';
   }
 }
 </pre>
