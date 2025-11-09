@@ -1476,6 +1476,46 @@ int main() {
 </pre>
     <code>10</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n; // длина массива
+  cin >> n;
+  vector&lt;int&gt; A(n+1);
+  int sum = 0; // сумма всех элементов массива
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+    sum += A[i];
+  }
+
+  vector&lt;int&gt; DP(sum + 1, 0);
+  DP[0] = 1;
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = sum; j >= A[i]; j--) {
+      if (DP[j - A[i]]) {
+        DP[j] = 1;
+      }
+    }
+  }
+
+  int res = 0;
+  for (int i = 0; i &lt;= sum; i++) {
+    if (DP[i]) {
+      res++;
+    }
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 
 
