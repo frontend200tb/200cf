@@ -1556,6 +1556,77 @@ int main() {
 </pre>
     <code>0</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+vector&lt;int&gt; maxP;
+
+int main() {
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int n, k, t;
+  cin >> n >> k >> t;
+  vector&lt;int&gt; T(n), P(n), S(n), maxP(n);
+
+  for (int i = 0; i &lt; n; i++) {
+    cin >> T[i]; // время
+  }
+  for (int i = 0; i &lt; n; i++) {
+    cin >> P[i]; // богатство
+  }
+  for (int i = 0; i &lt; n; i++) {
+    cin >> S[i]; // полнота
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    if (T[i] &lt; S[i]) {
+      P[i] = 0; // ганстер вообще не сможет войти в магазин
+    }
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = i + 1; j &lt; n; j++) {
+      if (T[i] > T[j]) {
+        swap(T[i], T[j]);
+        swap(P[i], P[j]);
+        swap(S[i], S[j]);
+      }
+    }
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    int curMaxPayment = P[i]; // i-ый гангстер по умолчанию - начало цепочки
+    for (int j = 0; j &lt; i; j++) {
+      if (maxP[j] != 0) {
+        // j-ый гангстер смог зайти, значит i-ый
+        // [возможно] сможет продолжить
+        // цепочку заканчивающуюся j-ым гангстером
+        int dt = T[i] - T[j];
+        int dk = abs(S[i] - S[j]);
+        if (dk &lt;= dt) {
+          // если [true], то [точно сможет] продолжить
+          curMaxPayment = max(curMaxPayment, maxP[j] + P[i]);
+        }
+      }
+    }
+    maxP[i] = curMaxPayment;
+  }
+
+  cout &lt;&lt; *max_element(maxP.begin(), maxP.end());
+}
+</pre>
+  </details>
 </article>
 
 
