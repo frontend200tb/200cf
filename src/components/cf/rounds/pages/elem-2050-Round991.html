@@ -582,65 +582,71 @@ egaegaeg
 
 using namespace std;
 
-void solve() {
-  string a, b, c;
-  cin >> a >> b >> c;
-
-  long long na = a.size();
-  long long nb = b.size();
-
-  vector&lt;vector&lt;long long&gt; &gt; dp(na + 1, vector&lt;long long&gt;(nb + 1));  // dp[i][j] - минимальное количество замен, которые нужно сделать к моменту,
-  // когда мы стоим на i-ой позиции в строке a и j-ой позиции в строке b
-
-  dp[0][0] = 0;  // когда мы стоим на нулевом символе (нумерация с нуля) в строке a и в строке b мы не взяли
-                 // ни одного символа, значит сделали 0 замен.
-
-  for (int i = 1; i &lt;= na; ++i) {
-    dp[i][0] = dp[i - 1][0];
-    // заполняем нулевой столбец dp
-    if (c[i - 1] != a[i - 1]) {
-      ++dp[i][0];
-    }
-  }
-
-  for (int i = 1; i &lt;= nb; ++i) {
-    dp[0][i] = dp[0][i - 1];
-    // заполняем нулевую строку dp
-    if (c[i - 1] != b[i - 1]) {
-      ++dp[0][i];
-    }
-  }
-
-  for (int i = 1; i &lt;= na; ++i) {
-    for (int j = 1; j &lt;= nb; ++j) {
-      long long t1 = dp[i - 1][j];
-      long long t2 = dp[i][j - 1];
-      // мы можем прийти в dp[i][j] либо из dp[i - 1][j], взяв символ из строки a
-      if (c[i + j - 1] != a[i - 1]) {  // либо из dp[i][j - 1], взяв символ из строки b
-        ++t1;
-      }
-
-      if (c[i + j - 1] != b[j - 1]) {
-        ++t2;
-      }
-
-      dp[i][j] = min(t1, t2);  // ответ посчитаем как минимум из двух возможных переходов
-    }
-  }
-
-  cout &lt;&lt; dp[na][nb] &lt;&lt; '\n';  // dp[na][nb] - минимальное количество замен, когда мы использовали все символы из строк a и b
-}
-
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
 
-  long long t = 1;
+  int t;
   cin >> t;
 
   while (t--) {
-    solve();
+    string a, b, c;
+    cin >> a >> b >> c;
+
+    int lena = a.size();
+    int lenb = b.size();
+
+    vector&lt;vector&lt;long long&gt; &gt; dp(lena + 1, vector&lt;long long&gt;(lenb + 1));
+    // dp[i][j] - минимальное количество замен, которые нужно сделать к моменту,
+    // когда мы стоим на i-ой позиции в строке a и j-ой позиции в строке b
+
+    dp[0][0] = 0;
+    // когда мы стоим на нулевом символе (нумерация с нуля)
+    // в строке a и в строке b мы не взяли
+    // ни одного символа, значит сделали 0 замен.
+
+    for (int i = 1; i &lt;= lena; ++i) {
+      dp[i][0] = dp[i - 1][0];
+      // заполняем нулевой столбец dp
+      if (c[i - 1] != a[i - 1]) {
+        ++dp[i][0];
+      }
+    }
+
+    for (int i = 1; i &lt;= lenb; ++i) {
+      dp[0][i] = dp[0][i - 1];
+      // заполняем нулевую строку dp
+      if (c[i - 1] != b[i - 1]) {
+        ++dp[0][i];
+      }
+    }
+
+    for (int i = 1; i &lt;= lena; ++i) {
+      for (int j = 1; j &lt;= lenb; ++j) {
+        long long t1 = dp[i - 1][j];
+        long long t2 = dp[i][j - 1];
+        // мы можем прийти в dp[i][j] либо из dp[i - 1][j],
+        // взяв символ из строки a
+        // либо из dp[i][j - 1], взяв символ из строки b
+        if (c[i + j - 1] != a[i - 1]) {
+          ++t1;
+        }
+
+        if (c[i + j - 1] != b[j - 1]) {
+          ++t2;
+        }
+
+        dp[i][j] = min(t1, t2);
+        // ответ посчитаем как минимум из двух возможных переходов
+      }
+    }
+
+    cout &lt;&lt; dp[lena][lenb] &lt;&lt; '\n';
+    // dp[na][nb] - минимальное количество замен,
+    // когда мы использовали все символы из строк a и b
   }
 }
 </pre>
