@@ -710,114 +710,107 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+    <p>данную задачу можно решить деревом отрезков. Поймем, что значит, что все числа равны по модулю m это значит, что все возможные разности этих чисел делятся на m но количество пар очень много, примерно n^2 тогда заметим еще одну вещь, что если выбрать n-1 пару, которые будут образовывать дерево (ребро это пара чисел, которые мы взяли) если мы решим задачу для них, то решим для всех потому что все остальные расстояния (а разность можно сказать тоже самое что расстояние между числами) выражаются через выбранные арифметическими действиями + и - а значит их НОД (наиболший общий делитель) не изменится а, собственно говоря, его и ищем это значит, что все возможные разности этих чисел делятся на m == если хотим max(m) то это НОД всех возможных разностей</p>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
 
 using namespace std;
-// данную задачу можно решить деревом отрезков
-// поймем, что значит, что все числа равны по модулю m
-// это значит, что все возможные разности этих чисел делятся на m
-// но количество пар очень много, примерно n^2
-// тогда заметим еще одну вещь, что если выбрать n-1 пару, которые будут образовывать дерево
-// (ребро это пара чисел, которые мы взяли)
-// если мы решим задачу для них, то решим для всех
-// потому что все остальные расстояния(а разность можно сказать тоже самое что расстояние между числами)
-// выражаются через выбранные арифметическими действиями + и -
-// а значит их НОД(наиболший общий делитель) не изменится
-// а, собственно говоря, его и ищем
-// это значит, что все возможные разности этих чисел делятся на m == если хотим max(m) то это НОД всех возможных разностей
-//
-int gcd(int a, int b)//функция считает НОД двух чисел
-{
-	if (a &lt; b)
-	{
-		swap(a, b);
-	}
-	if (b == 0)
-		return a;
-	return gcd(b, a % b);
+
+//НОД двух чисел
+int gcd(int a, int b) {
+  if (a &lt; b) {
+    swap(a, b);
+  }
+  if (b == 0) {
+    return a;
+  }
+  return gcd(b, a % b);
 }
 
-struct node//структура, которая отвечает за какой-то отрезок
-{
-	int z = 0;//какое-то число на этом отрезке, чтобы можно было соединять отрезки
-	int nod = 0;//ответ на отрезке
+//структура, которая отвечает за какой-то отрезок
+struct node {
+  int z = 0;
+  //какое-то число на этом отрезке,
+  //чтобы можно было соединять отрезки
+
+  int nod = 0;
+  //ответ на отрезке
 };
 
-vector&lt;node&gt; tree;//дерево отрезков
-vector&lt;int&gt; a;//начальный массив
+vector&lt;node&gt; tree; //дерево отрезков
+vector&lt;int&gt; a; //начальный массив
 
-node mer(node a, node b)//функция слияния двух отрезков
-{
-	node c;
-	c.nod = gcd(a.nod, b.nod);
-	if (a.z > 0 && b.z > 0 && a.z != b.z)//тут происходит проверка на то, что мы соединяем или с пустым отрезком или что на отрезке все числа равны
-	{
-		int t = abs(a.z - b.z);
-		c.nod = gcd(c.nod, t);
-	}
-	c.z = max(a.z, b.z);
-	return c;
+//функция слияния двух отрезков
+node mer(node a, node b) {
+  node c;
+  c.nod = gcd(a.nod, b.nod);
+
+  //если мы соединяем с пустым отрезком
+  //или на отрезке все числа равны
+  if (a.z > 0 && b.z > 0 && a.z != b.z) {
+    int t = abs(a.z - b.z);
+    c.nod = gcd(c.nod, t);
+  }
+  c.z = max(a.z, b.z);
+  return c;
 }
 
-void build(int id, int tl, int tr)//построение дерева отрезков
-{
-	if (tl + 1 == tr)
-	{
-		tree[id].z = a[tl];
-		return;
-	}
-	int mid = tl + tr >> 1;
-	build(id * 2, tl, mid);
-	build(id * 2 + 1, mid, tr);
-	tree[id] = mer(tree[id * 2], tree[id * 2 + 1]);
+//построение дерева отрезков
+void build(int id, int tl, int tr) {
+  if (tl + 1 == tr) {
+    tree[id].z = a[tl];
+    return;
+  }
+  int mid = tl + tr >> 1;
+  build(id * 2, tl, mid);
+  build(id * 2 + 1, mid, tr);
+  tree[id] = mer(tree[id * 2], tree[id * 2 + 1]);
 }
+
 node def;//пустой отрезок
 
-node an(int id, int tl, int tr, int l, int r)//функция, собирающая ответ по дереву отрезков
-{
-	if (tl >= r || tr &lt;= l)
-	{
-		return def;
-	}
-	if (tl >= l && tr &lt;= r)
-	{
-		return tree[id];
-	}
-	int mid = tl + tr >> 1;
-	return mer(an(id * 2, tl, mid, l, r), an(id * 2 + 1, mid, tr, l, r));
+//функция, собирающая ответ по дереву отрезков
+node an(int id, int tl, int tr, int l, int r) {
+  if (tl >= r || tr &lt;= l) {
+    return def;
+  }
+  if (tl >= l && tr &lt;= r) {
+    return tree[id];
+  }
+  int mid = tl + tr >> 1;
+  return mer(an(id * 2, tl, mid, l, r), an(id * 2 + 1, mid, tr, l, r));
 }
 
-void slove()
-{
-	int n, q;
-	cin >> n >> q;
-	a.clear();
-	tree.clear();
-	a.resize(n);
-	tree.resize(4 * n);
-	for (int i = 0; i &lt; n; i++)
-		cin >> a[i];
-	build(1, 0, n);
-	while (q--)
-	{
-		int l, r;
-		cin >> l >> r; l--;
-		cout &lt;&lt; an(1, 0, n, l, r).nod &lt;&lt; ' ';
-	}
-	cout &lt;&lt; endl;
-}
-int main()
-{
-	int t = 1;
-	cin >> t;//количество наборов входных
+int main() {
+// условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+  int t = 1;
+  cin >> t;
 
-	while (t--)
-	{
-		slove();//функция, которая решает один набор  входных данных
-	}
+  while (t--) {
+    int n, q;
+    cin >> n >> q;
+
+    a.clear();
+    tree.clear();
+    a.resize(n);
+    tree.resize(4 * n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> a[i];
+    }
+    build(1, 0, n);
+    while (q--) {
+      int l, r;
+      cin >> l >> r; l--;
+      cout &lt;&lt; an(1, 0, n, l, r).nod &lt;&lt; ' ';
+    }
+    cout &lt;&lt; endl;
+  }
 }
 </pre>
   </details>
