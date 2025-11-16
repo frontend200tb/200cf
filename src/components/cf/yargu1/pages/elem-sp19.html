@@ -796,9 +796,11 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+// условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
 
   // ввод данных
   int n; // число вершин
@@ -807,7 +809,7 @@ int main() {
 
   vector&lt;vector&lt;int&gt; &gt; G(n + 1, vector&lt;int&gt;(n + 1));
   int x, y;
-  for (int i = 1; i &lt; m; i++) {
+  for (int i = 0; i &lt; m; i++) {
     cin >> x >> y;
 
     // решение
