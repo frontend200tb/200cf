@@ -26,6 +26,33 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. HQ9+</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+  string s; // входная строка
+  getline(cin, s);
+  bool flag = false;
+
+  for (char ch : s) {
+    if (ch == 'H' || ch == 'Q' || ch == '9') {
+      flag = true;
+    }
+  }
+
+  if (flag) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
