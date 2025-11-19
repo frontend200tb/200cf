@@ -1,0 +1,158 @@
+<article class="article">
+  <a href="https://codeforces.com/contest/2166" target="_blank">Codeforces 2166 Round 1064 (Div. 2) 2025.11.16</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. Одинаковая разница</a>
+  <br><a href="#t2">Задача B. Закрытие вкладок</a>
+  <br><a href="#t3">Задача C. Циклическое слияние</a>
+  <br><a href="#t4">Задача D. Совет мрамора</a>
+  <br><a href="#t5">Задача E. Бинарное вино</a>
+  <br><a href="#t6">Задача F. Разделение пути</a>
+</article>
+
+
+<!-- Задача A. Одинаковая разница -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. Одинаковая разница</h3>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+// условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // длина строки
+    cin >> n;
+    string s; // строка
+    cin >> s;
+
+    int res = 0;
+    for (int i = n - 1; i > 0; i--) {
+      if (s[i] != s[i - 1]) {
+        s[i - 1] = s[i];
+        res++;
+      }
+    }
+    cout &lt;&lt; res &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача B. Закрытие вкладок -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Закрытие вкладок</h3>
+
+</article>
+
+
+<!-- Задача C. Циклическое слияние -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Циклическое слияние</h3>
+
+</article>
+
+
+<!-- Задача D. Совет мрамора -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. Совет мрамора</h3>
+
+</article>
+
+
+<!-- Задача E. Бинарное вино -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. Бинарное вино</h3>
+
+</article>
+
+
+<!-- Задача F. Разделение пути -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F. Разделение пути</h3>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Это задача на DFS с DP. Собираем граф и идем в dfs. Там смотрим если это не наш предок, то идем в DP. Собираем ДП это сколько подчиненных с нашей стороны. Мы смотрим на ребро. dfs находит сына, дальше ДП смотрит сколько подчиненных у этого сына и добавляет их к своим подчиненным. Смотрим сколько у него подчиненных с одной стороны h1 и с другой стороны h2. Если h1 >= k, то LCA может быть одна из вершин. Если h2 >= k, то мы можем быть LCA для наших сыновей.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+long long res;
+int n, k;
+
+void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
+  vector&lt;int&gt;& DP, int pos, int y) {
+  for (int i = 0; i &lt; G[pos].size(); i++) {
+    if (G[pos][i] != y) {
+      dfs(G, DP, G[pos][i], pos);
+      DP[pos] += DP[G[pos][i]];
+      int h1 = DP[G[pos][i]];
+      int h2 = n - h1;
+      if (h1 >= k) {
+        res += h2;
+      }
+      if (h2 >= k) {
+        res += h1;
+      }
+    }
+  }
+}
+
+int main() {
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    res = 0;
+    cin >> n >> k;
+    vector&lt;vector&lt;int&gt; &gt; G(n + 1);
+    vector&lt;int&gt; DP(n + 1, 1);
+    int x, y;
+    for (int i = 0; i &lt; n - 1; i++) {
+      cin >> x >> y;
+      G[x].push_back(y);
+      G[y].push_back(x);
+    }
+    dfs(G, DP, 1, 0);
+
+    cout &lt;&lt; res + n &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
