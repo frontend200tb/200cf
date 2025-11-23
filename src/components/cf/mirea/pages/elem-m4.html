@@ -248,6 +248,36 @@ int main() {
 
   <div class="t3"></div>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Соберем вектор DP на 2 клетки больше вправо и на 2 клетки больше вниз, поскольку конь может ходить на 2 вправо и на 2 вниз.В каждой клетке будем считать число способов в нее попасть.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  freopen("knight.in", "rt", stdin);
+  freopen("knight.out", "wt", stdout);
+
+  int n, m; // размер доски
+  cin >> n >> m;
+
+  vector&lt;vector&lt;int&gt; &gt; DP(n+2, vector&lt;int&gt;(m+2));
+  DP[0][0] = 1;
+
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; m; j++) {
+      DP[i + 1][j + 2] += DP[i][j];
+      DP[i + 2][j + 1] += DP[i][j];
+    }
+  }
+
+  cout &lt;&lt; DP[n - 1][m - 1];
+}
+</pre>
+  </details>
 </article>
 
 
