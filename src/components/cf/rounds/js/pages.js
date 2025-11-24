@@ -14,6 +14,7 @@ import in9       from '../pages/elem-9-Round9';
 import in10      from '../pages/elem-10-Round10';
 import in11      from '../pages/elem-11-Round11';
 import in12      from '../pages/elem-12-Round12';
+import in13      from '../pages/elem-13-Round13';
 import in34      from '../pages/elem-34-Round34';
 import in38      from '../pages/elem-38-sio1';
 import in134     from '../pages/elem-134-TRound3';
@@ -26,27 +27,36 @@ export default function pageLink(asideItems, currentContent) {
       e.preventDefault();
 
       if (pages[index]) {
-        currentContent.innerHTML = pages[index];
+        if (pages[index].length === 2) {
+          // если задачи берутся из базы
+          // подключаем страницу
+          currentContent.innerHTML = pages[index][0];
 
-        // подключаем на каждую страницу свои задачи
-        switch (index) {
-          case 0:  in1(); break;
-          case 1:  in2(); break;
-          case 2:  in3(); break;
-          case 3:  in4(); break;
-          case 4:  in5(); break;
-          case 5:  in6(); break;
-          case 6:  in7(); break;
-          case 7:  in8(); break;
-          case 8:  in9(); break;
-          case 9:  in10(); break;
-          case 10: in11(); break;
-          case 11: in12(); break;
-          case 12: in34(); break;
-          case 13: in38(); break;
-          case 32: in134(); break;
-          case 39: in230(); break;
-          case 40: in313(); break;
+          // подключаем задачи на страницу из базы
+          switch (pages[index][1]) {
+            case 1:  in1(); break;
+            case 2:  in2(); break;
+            case 3:  in3(); break;
+            case 4:  in4(); break;
+            case 5:  in5(); break;
+            case 6:  in6(); break;
+            case 7:  in7(); break;
+            case 8:  in8(); break;
+            case 9:  in9(); break;
+            case 10: in10(); break;
+            case 11: in11(); break;
+            case 12: in12(); break;
+            case 13: in13(); break;
+            case 34: in34(); break;
+            case 38: in38(); break;
+            case 134: in134(); break;
+            case 230: in230(); break;
+            case 313: in313(); break;
+          }
+        } else {
+          // если задачи на странице
+          // подключаем только страницу
+          currentContent.innerHTML = pages[index];
         }
       }
     });

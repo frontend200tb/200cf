@@ -11,6 +11,9 @@ import html9        from './../pages/elem-9-Round9.html';
 import html10       from './../pages/elem-10-Round10.html';
 import html11       from './../pages/elem-11-Round11.html';
 import html12       from './../pages/elem-12-Round12.html';
+import html13       from './../pages/elem-13-Round13.html';
+import html14       from './../pages/elem-14-Round14.html';
+import html15       from './../pages/elem-15-Round15.html';
 import html34       from './../pages/elem-34-Round34.html';
 import html38       from './../pages/elem-38-sio1.html';
 import html39       from './../pages/elem-39-sko1.html';
@@ -153,20 +156,23 @@ import html2167     from './../pages/elem-2167-Round1062.html';
 import html2171     from './../pages/elem-2171-Round1065.html';
 
 export const pages = [
-  html1,
-  html2,
-  html3,
-  html4,
-  html5,
-  html6,
-  html7,
-  html8,
-  html9,
-  html10,
-  html11,
-  html12,
-  html34,
-  html38,
+  [html1, 1],
+  [html2, 2],
+  [html3, 3],
+  [html4, 4],
+  [html5, 5],
+  [html6, 6],
+  [html7, 7],
+  [html8, 8],
+  [html9, 9],
+  [html10, 10],
+  [html11, 11],
+  [html12, 12],
+  [html13, 13],
+  html14,
+  html15,
+  [html34, 34],
+  [html38, 38],
   html39,
   html44,
   html45,
@@ -187,7 +193,7 @@ export const pages = [
   html112,
   html116,
   html120,
-  html134,
+  [html134, 134],
   html136,
   html141,
   html155,
@@ -197,10 +203,10 @@ export const pages = [
   html169,
   html200,
   html228,
-  html230,
+  [html230, 230],
   html268,
   html278,
-  html313,
+  [html313, 313],
   html318,
   html339,
   html381,
