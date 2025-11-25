@@ -189,20 +189,29 @@ cout &lt;&lt; DP[n];
   <details>
     <summary>Решение</summary>
 <pre>
-int n;
-cin >> n;
-vector&lt;int&gt; DP(n + 1);
-DP[0] = 1;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
-for (int i = 1; i &lt;= n; i++) {
-  for (int j = 1; j &lt;= k; j++) {
-    if (i - j >= 1) {
-      DP[i] += DP[i - j];
+using namespace std;
+
+int main() {
+  int n; // число кочек
+  int k; // число шагов
+  cin >> n >> k;
+
+  vector&lt;int&gt; DP(n + 1);
+  DP[0] = 1;
+
+  for (int i = 1; i &lt;= n; i++) {
+    for (int j = 1; j &lt;= k; j++) {
+      if (i - j >= 1) {
+        DP[i] += DP[i - j];
+      }
     }
   }
-}
 
-cout &lt;&lt; DP[n];
+  cout &lt;&lt; DP[n];
+}
 </pre>
   </details>
 
@@ -213,21 +222,30 @@ cout &lt;&lt; DP[n];
   <details>
     <summary>Решение</summary>
 <pre>
-int n;
-cin >> n;
-vector&lt;int&gt; DP(n + 1);
-DP[0] = 1;
-long long sum = 1;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
-for (int i = 1; i &lt;= n; i++) {
-  if (i - k - 1 >= 1) {
-    sum -= DP[i - k - 1];
+using namespace std;
+
+int main() {
+  int n; // число кочек
+  int k; // число шагов
+  cin >> n >> k;
+
+  vector&lt;int&gt; DP(n + 1);
+  DP[0] = 1;
+  int sum = 1;
+
+  for (int i = 1; i &lt;= n; i++) {
+    if (i - k - 1 >= 0) {
+      sum -= DP[i - k - 1];
+    }
+    DP[i] = sum;
+    sum += DP[i];
   }
-  DP[i] = sum;
-  sum += DP[i];
-}
 
-cout &lt;&lt; DP[n];
+  cout &lt;&lt; DP[n];
+}
 </pre>
 </article>
 

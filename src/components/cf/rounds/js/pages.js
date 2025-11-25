@@ -15,6 +15,8 @@ import in10      from '../pages/elem-10-Round10';
 import in11      from '../pages/elem-11-Round11';
 import in12      from '../pages/elem-12-Round12';
 import in13      from '../pages/elem-13-Round13';
+import in14      from '../pages/elem-14-Round14';
+import in15      from '../pages/elem-15-Round15';
 import in34      from '../pages/elem-34-Round34';
 import in38      from '../pages/elem-38-sio1';
 import in134     from '../pages/elem-134-TRound3';
@@ -47,6 +49,8 @@ export default function pageLink(asideItems, currentContent) {
             case 11: in11(); break;
             case 12: in12(); break;
             case 13: in13(); break;
+            case 14: in14(); break;
+            case 15: in15(); break;
             case 34: in34(); break;
             case 38: in38(); break;
             case 134: in134(); break;
