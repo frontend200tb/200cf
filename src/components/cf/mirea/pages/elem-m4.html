@@ -474,7 +474,24 @@ int main() {
   </details>
 
   <details>
-    <summary>Решение превышено ограничение по времени на тесте 1</summary>
+    <summary>Решение</summary>
+
+    <h4>Тест 3</h4>
+<pre>
+1
+100
+</pre>
+    <code>100</code>
+
+    <h4>Тест 4</h4>
+<pre>
+3
+0
+10 -10
+-100 -100 -50
+</pre>
+    <code>-60</code>
+
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -483,10 +500,7 @@ int main() {
 using namespace std;
 
 int main() {
-  freopen("slalom.in", "rt", stdin);
-  freopen("slalom.out", "wt", stdout);
-
-  const int mino = -1e5; // минимальное значение
+  const int mino = -100000; // минимальное значение
   int n; // число этапов
   cin >> n;
 
@@ -512,7 +526,7 @@ int main() {
   int maxo = mino; // максимальный ответ
   // ищем максимальный ответ на последнем этапе
   for (int i = 1; i &lt;= n; i++) {
-    maxo = max(maxo, DP2[i]);
+    maxo = max(maxo, DP1[i]);
   }
   cout &lt;&lt; maxo;
 }
