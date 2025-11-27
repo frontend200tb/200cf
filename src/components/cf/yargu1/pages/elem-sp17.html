@@ -418,49 +418,56 @@ int main() {
     <h4>Динамика по слоям</h4>
     <p>Заметим, что ответ в ячейке j зависит только от слоя j-1. Поэтому нам не нужно хранить всю матрицу DP, а достаточно только обновлять два последних ее слоя - слой j  и слой j-1. Это сэкономит память.</p>
 <pre>
-int n;
-cin >> n;
-long long mod = 1e9 + 7;
-vector&lt;long long&gt; A(1e4);
-vector&lt;long long&gt; B(1e4);
-vector&lt;long long&gt; C(1e4);
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
-// база
-A[0] = 1;
+using namespace std;
 
-for (int h = 1; h &lt;= n; h++) {
-  for (int i = 0; i &lt; 9900; i++) {
-    for (int j = 0; j &lt;= 9; j++) {
-      B[i+j] += A[i];
+int main() {
+  int n;
+  cin >> n;
+  long long mod = 1e9 + 7;
+  vector&lt;long long&gt; A(1e4);
+  vector&lt;long long&gt; B(1e4);
+  vector&lt;long long&gt; C(1e4);
+
+  // база
+  A[0] = 1;
+
+  for (int h = 1; h &lt;= n; h++) {
+    for (int i = 0; i &lt; 9900; i++) {
+      for (int j = 0; j &lt;= 9; j++) {
+        B[i+j] += A[i];
+      }
+    }
+    for (int i = 0; i &lt; A.size(); i++) {
+      A[i] = B[i] % mod;
+      B[i] = 0;
     }
   }
-  for (int i = 0; i &lt; A.size(); i++) {
-    A[1] = B[i] % mod;
-    B[i] = 0;
-  }
-}
-for (int i = 0; i &lt; 10000; i++) {
-  long long cnt = A[i];
-  long long z = 0, y = i;
+  for (int i = 0; i &lt; 10000; i++) {
+    long long cnt = A[i];
+    long long z = 0, y = i;
 
-  while (y >= 10) {
-    while (y > 0) {
-      z += y % 10;
-      y /= 10;
+    while (y >= 10) {
+      while (y > 0) {
+        z += y % 10;
+        y /= 10;
+      }
+      y = z;
+      z = 0;
     }
-    y = z;
-    z = 0;
+
+    C[y] = (C[y] + cnt) % mod;
   }
 
-  C[y] = (C[y] + cnt) % mod;
-}
+  long long res = 0;
+  for (int i = 0; i &lt; 10; i++) {
+    res = (res + C[i] * C[i]) % mod;
+  }
 
-long long res = 0;
-for (int i = 0; i &lt; 10; i++) {
-  res = (res + C[i] * C[i]) % mod;
+  cout &lt;&lt; res;
 }
-
-cout &lt;&lt; res;
 </pre>
   </details>
 </article>
