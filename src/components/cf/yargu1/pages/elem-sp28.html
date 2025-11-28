@@ -241,6 +241,9 @@ new_a = ( cos(-Θ) sin(-Θ)) (x)
       <code>S = (1 / 2) * a * b * sin(Θ) = |cross(a, b)| / 2.</code>
       <p>Площадь через синус угла очень похожа на векторное произведение (cross).</p>
     </li>
+    <li>Используя формулу площади через координаты
+      <code>double area = abs((x1*(y2 - y3) + x2*(y3 - y1) + x3*(y1 - y2)) / 2.0);</code>
+    </li>
   </ol>
 
   <p>Медиана треугольника — это отрезок, соединяющий вершину треугольника с серединой противоположной стороны.</p>
@@ -508,6 +511,32 @@ int main() {
     <summary>Пример</summary>
     <code>1 0 2 4 5 2</code>
     <code>7.0</code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Используя формулу площади через координаты</p>
+    <code>double area = abs((x1*(y2 - y3) + x2*(y3 - y1) + x3*(y1 - y2)) / 2.0);</code>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+int main() {
+  // работа с файлами
+  freopen("area1.in", "rt", stdin);
+  freopen("area1.out", "wt", stdout);
+
+  long long ax, ay, bx, by, cx, cy;
+  cin >> ax >> ay >> bx >> by >> cx >> cy;
+
+  double square = 0.5 * abs(ax * (by-cy) + bx * (cy-ay) + cx * (ay-by));
+
+  cout &lt;&lt; fixed &lt;&lt; setprecision(8) &lt;&lt; square;
+}
+</pre>
   </details>
 </article>
 

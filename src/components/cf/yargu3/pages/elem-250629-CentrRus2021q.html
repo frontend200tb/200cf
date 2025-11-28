@@ -363,6 +363,29 @@ int main() {
 </pre>
     <code>0.50000000</code>
   </details>
+
+
+  <details>
+    <summary>Решение</summary>
+    <p>Используя формулу площади через координаты</p>
+    <code>double area = abs((x1*(y2 - y3) + x2*(y3 - y1) + x3*(y1 - y2)) / 2.0);</code>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+int main() {
+  long long ax, ay, bx, by, cx, cy;
+  cin >> ax >> ay >> bx >> by >> cx >> cy;
+
+  double square = 0.5 * abs(ax * (by-cy) + bx * (cy-ay) + cx * (ay-by));
+
+  cout &lt;&lt; fixed &lt;&lt; setprecision(8) &lt;&lt; square;
+}
+</pre>
+  </details>
 </article>
 
 
