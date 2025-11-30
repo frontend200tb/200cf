@@ -167,6 +167,53 @@ int main() {
   <p>В первом наборе вы можете съесть 1 конфету из второй коробки, 2 конфеты из третьей коробки, 3 конфеты из четвертой коробки и 4 конфеты из пятой коробки. Теперь распределение конфет по коробкам выглядит так: [1,1,1,1,1]. Вы съели всего 0+1+2+3+4=10 конфет, поэтому ответ равен 10.</p>
   <p>Лучший ответ для второго набора получается, если уменьшить количество конфет во всех коробках до 5. Так, вы съедите 995+995+0+995+995+995=4975 конфет.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/1676/problem/B" target="_blank">Задача 1676B</a>
+      <br><a href="https://codeforces.com/contest/1676" target="_blank">Codeforces Round 790 (Div. 4) 2022-05-10</a>
+    </div>
+
+    <p>Найдем коробку с минимальным количеством конфет и сделаем, чтобы во всех коробках было по столько же.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // число коробок
+    cin >> n;
+    vector&lt;int&gt; A(n);
+
+    // число конфет из первой коробки
+    // примем за начальный минимум
+    int mina;
+    cin >> mina;
+    A[0] = mina;
+    for (int i = 1; i &lt; n; i++) {
+      cin >> A[i];
+      if (mina > A[i]) {
+        mina = A[i];
+      }
+    }
+
+    long long res = 0;
+    for (int i = 0; i &lt; n; i++) {
+      res += A[i] - mina;
+    }
+
+    cout &lt;&lt; res &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 

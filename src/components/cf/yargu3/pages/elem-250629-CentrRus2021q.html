@@ -334,6 +334,48 @@ int main() {
 </pre>
     <code>entrance exams</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Отсортируем быллы абитуриентов и найдем проходной балл, по числу мест. Сравним баллы Игоря с проходным баллом.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+bool cmp(int a, int b) {
+  return a > b;
+}
+
+using namespace std;
+
+int main() {
+  int n; // число мест
+  int k; // число баллов Игоря
+  int m; // число других абитуриентов
+  cin >> n >> k >> m;
+  vector&lt;int&gt; A(m);
+  for (int i = 0; i &lt; m; i++) {
+    cin >> A[i];
+  }
+
+  if (n > m) {
+    cout &lt;&lt; "enter";
+  } else {
+    sort(A.begin(), A.end(), cmp);
+    int bal = A[n - 1]; // проходной балл
+
+    if (k > bal) {
+      cout &lt;&lt; "enter";
+    } else if (k == bal) {
+      cout &lt;&lt; "entrance exams";
+    } else {
+      cout &lt;&lt; "no chance";
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
