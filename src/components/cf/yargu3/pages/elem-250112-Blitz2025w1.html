@@ -31,6 +31,39 @@
 
   <div class="time-memory">(Время 2с. Память 256мб)</div>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число брусков
+  cin >> n;
+  int A[1001] = {};
+  int in;
+
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> in; // длина бруска
+    A[in]++;
+  }
+
+  int maxa = 1; // высота наибольшей башни
+  int cnt = 0; // число башен
+  for (int i = 1; i &lt; 1001; i++) {
+    if (A[i]) {
+      cnt++;
+    }
+    if (A[i] > maxa) {
+      maxa = A[i];
+    }
+  }
+
+  cout &lt;&lt; maxa &lt;&lt; ' ' &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
 
 
