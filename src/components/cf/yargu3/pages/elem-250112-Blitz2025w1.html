@@ -74,6 +74,137 @@ int main() {
 
   <div class="time-memory">(Время 2с. Память 256мб)</div>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Посчитаем решение для каждого k отдельно. При k=4 нужно аккуратно обработать варианты.</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    int k; // от 2 до 5
+    cin >> n >> k;
+    int in;
+
+    if (k == 2) {
+      int flag2 = 1;
+
+      for (int i = 0; i &lt; n; i++) {
+        cin >> in;
+        if (flag2 && in % 2 == 0) {
+          flag2 = 0;
+        }
+      }
+
+      if (flag2) {
+        cout &lt;&lt; 1 &lt;&lt; '\n';
+      } else {
+        cout &lt;&lt; 0 &lt;&lt; '\n';
+      }
+
+    } else if (k == 3) {
+      int flag0 = 0;
+      int flag1 = 0;
+      int flag2 = 0;
+
+      for (int i = 0; i &lt; n; i++) {
+        cin >> in;
+        if (in % 3 == 0) {
+          flag0 = 1;
+        } else if (in % 3 == 2) {
+          flag1 = 1;
+        } else if (in % 3 == 1) {
+          flag2 = 1;
+        }
+      }
+
+      if (flag0) {
+        cout &lt;&lt; 0 &lt;&lt; '\n';
+      } else if (flag1) {
+        cout &lt;&lt; 1 &lt;&lt; '\n';
+      } else if (flag2) {
+        cout &lt;&lt; 2 &lt;&lt; '\n';
+      }
+
+    } else if (k == 4) {
+      int flag0 = 0;
+      int flag1 = 0;
+      int chet = 0;
+
+
+      for (int i = 0; i &lt; n; i++) {
+        cin >> in;
+        if (in % 4 == 0) {
+          flag0 = 1;
+        } else if (in % 4 == 3) {
+          flag1 = 1;
+        } else if (in % 2 == 0) {
+          if (chet) {
+            flag0 = 1;
+          }
+          chet = 1;
+          flag1 = 1;
+        }
+      }
+
+      if (flag0) {
+        cout &lt;&lt; 0 &lt;&lt; '\n';
+      } else if (flag1) {
+        cout &lt;&lt; 1 &lt;&lt; '\n';
+      } else {
+        cout &lt;&lt; 2 &lt;&lt; '\n';
+      }
+
+    } else if (k == 5) {
+      int flag0 = 0;
+      int flag1 = 0;
+      int flag2 = 0;
+      int flag3 = 0;
+      int flag4 = 0;
+
+      for (int i = 0; i &lt; n; i++) {
+        cin >> in;
+        if (in % 5 == 0) {
+          flag0 = 1;
+        } else if (in % 5 == 4) {
+          flag1 = 1;
+        } else if (in % 5 == 3) {
+          flag2 = 1;
+        } else if (in % 5 == 2) {
+          flag3 = 1;
+        } else if (in % 5 == 1) {
+          flag4 = 1;
+        }
+      }
+
+      if (flag0) {
+        cout &lt;&lt; 0 &lt;&lt; '\n';
+      } else if (flag1) {
+        cout &lt;&lt; 1 &lt;&lt; '\n';
+      } else if (flag2) {
+        cout &lt;&lt; 2 &lt;&lt; '\n';
+      } else if (flag3) {
+        cout &lt;&lt; 3 &lt;&lt; '\n';
+      } else if (flag4) {
+        cout &lt;&lt; 4 &lt;&lt; '\n';
+      }
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
