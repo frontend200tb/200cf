@@ -61,6 +61,51 @@ int main() {
   <div class="anchor" id="t2"></div>
   <h3>Задача B. Счастливый билет</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // длина номера
+  cin >> n;
+
+  char in;
+  bool flag = true;
+  int sum1 = 0;
+  for (int i = 0; i &lt; n / 2; i++) {
+    cin >> in;
+    if (in != '4' && in != '7') {
+      flag = false;
+    }
+    int tmp = static_cast&lt;int&gt;(in);
+    sum1 += tmp;
+  }
+
+  int sum2 = 0;
+  for (int i = 0; i &lt; n / 2; i++) {
+    cin >> in;
+    if (in != '4' && in != '7') {
+      flag = false;
+    }
+    int tmp = static_cast&lt;int&gt;(in);
+    sum2 += tmp;
+  }
+
+  if (sum1 != sum2) {
+    flag = false;
+  }
+
+  if (flag) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 

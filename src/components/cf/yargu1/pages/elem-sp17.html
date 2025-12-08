@@ -455,6 +455,52 @@ int main() {
     <code>10</code>
     <code>92378</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Заведем вектор DP[len][dig] — количество чисел длины len, оканчивающихся на цифру dig (от 0 до 9), где цифры идут в неубывающем порядке. Базовый случай: для длины 1 DP[1][dig] есть ровно одно число длины 1 оканчивающееся на каждую цифру. Переход: чтобы получить число длины len, оканчивающееся на цифру dig мы можем взять любое число длины len-1, оканчивающееся на цифру prev (prev &le; dig) и дописать в конец цифру dig.</p>
+<pre>
+for (int prev = 0; prev &lt; dig; prev++) {
+  DP[len][dig] = DP[len-1][prev];
+}
+</pre>
+    <p>Прямой подсчет суммы за O(10) для каждого состояния даст O(N * 10²) = O(100N), что для N до 10⁶ будет 10⁸ операций — слишком много. Но мы можем ускорить, используя префиксные суммы: Заведем</p>
+    <code>prefix[len][last] = sum(dp[len][0] + ... + dp[len][last])</code>
+    <p>Тогда</p>
+    <code>dp[len][last] = prefix[len-1][last]</code>
+    <code>prefix[len][last] = prefix[len][last-1] + dp[len][last]</code>
+    <p>Но N * 10 = 10⁷, что ~80 MB для long long — многовато.      Можно хранить только предыдущий слой, так как для вычисления dp[len] нужен только prefix[len-1].</p>
+    <p>Можно заметить, что нам вообще не нужен массив prefix размера 10 на каждой итерации, достаточно обновлять его на месте, так как формула:</p>
+    <code>new_prefix[d] = new_prefix[d-1] + prefix[d]</code>
+    <p>На старте prefix[d] хранит prefix[len-1][d]</p>
+    <p>После обновления prefix[d] становится prefix[len][d]</p>
+    <p>Формула prefix[len][d] = prefix[len][d-1] + prefix[len-1][d] именно так и выполняется</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  long long mod = 1e9 + 7;
+  vector&lt;long long> DP(10);
+  for (int i = 0; i &lt; 10; i++) {
+    DP[i] = i + 1;
+  }
+
+  for (int len = 2; len &lt;= n; len++) {
+    for (int i = 1; i &lt; 10; i++) {
+      DP[i] = (DP[i - 1] + DP[i]) % mod;
+    }
+  }
+
+  cout &lt;&lt; DP[9];
+}
+</pre>
+  </details>
 </article>
 
 

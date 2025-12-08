@@ -5,6 +5,7 @@ import showYargu3      from '../cf/yargu3/yargu3';
 import showMirea       from '../cf/mirea/mirea';
 import showSch19       from '../cf/sch19/sch19';
 import showSpbgu       from '../cf/spbgu/spbgu';
+import showTulgu       from '../cf/tulgu/tulgu';
 import showAll         from '../cf/all/all';
 
 export const dataNavCf = [
@@ -62,6 +63,14 @@ export const dataNavCf = [
     content: '<cf-spbgu></cf-spbgu>',
     act() {
       showSpbgu();
+    },
+  },
+  {
+    url: 'tulgu.html',
+    text: 'ТулГУ',
+    content: '<cf-tulgu></cf-tulgu>',
+    act() {
+      showTulgu();
     },
   },
   {
