@@ -408,6 +408,53 @@ int main() {
     <code>3</code>
     <code>2</code>
   </details>
+
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/629/problem/A" target="_blank">Задача 629A</a>
+      <br><a href="https://codeforces.com/contest/629" target="_blank">Codeforces Round 343 (Div. 2) 2016-02-20</a>
+    </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+	int n; // длина стороны торта
+	cin >> n;
+	vector&lt;string&gt; A(n);
+	for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+	}
+
+	int res = 0;
+	int cnt = 0;
+	for (int i = 0; i &lt; n; i++) {
+		cnt = 0;
+		for (int j = 0; j &lt; n; j++)
+			if (A[i][j] == 'C') {
+				cnt++;
+			}
+		res += (cnt - 1) * cnt / 2;
+
+		cnt = 0;
+		for (int j = 0; j &lt; n; j++) {
+			if (A[j][i] == 'C') {
+				cnt++;
+			}
+		}
+		res += (cnt - 1) * cnt / 2;
+	}
+
+	cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 
 

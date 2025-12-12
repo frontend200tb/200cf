@@ -1,4 +1,5 @@
 import showRounds      from '../cf/rounds/rounds';
+import showEdu         from '../cf/edu/edu';
 import showYargu1      from '../cf/yargu1/yargu1';
 import showYargu2      from '../cf/yargu2/yargu2';
 import showYargu3      from '../cf/yargu3/yargu3';
@@ -15,6 +16,14 @@ export const dataNavCf = [
     content: '<cf-rounds></cf-rounds>',
     act() {
       showRounds();
+    },
+  },
+  {
+    url: 'edu.html',
+    text: 'Edu',
+    content: '<cf-edu></cf-edu>',
+    act() {
+      showEdu();
     },
   },
   {
