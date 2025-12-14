@@ -60,6 +60,65 @@ int main() {
   <div class="anchor" id="t2"></div>
   <h3>Задача B. Настоящие друзья</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Задача на бинарный поиск по ответу. Нужно найти такую коробку, чтобы число всех конфет сверху до этой коробки было равно числу конфет в нижних коробках.</p>
+    <p>Сумма чисел от 1 до n</p>
+		<code>n * (n+1) / 2</code>
+		<p>Сумма чисел от A до B</p>
+		<code>(B-A+1) * (A+B) / 2</code>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+typedef long long ll;
+
+ll sum1(ll n) {
+  return n * (n + 1) / 2;
+}
+
+ll sum2(ll A, ll B) {
+  return (B - A + 1) * (A + B) / 2;
+}
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    ll k; // число коробок
+    cin >> k;
+
+    // сумма чисел от 1 до n
+    // n * (n+1) / 2
+    // сумма чисел от A до B
+    // (B-A+1) * (A+B) / 2
+
+    ll left = 0;
+    ll right = k + 1;
+    ll mid;
+
+    // бинарный поиск по ответу
+    while (right - left > 1) {
+      mid = (right + left) / 2;
+      if (sum1(mid) &lt;= sum2(mid+1, k)) {
+        left = mid;
+      } else {
+        right = mid;
+      }
+    }
+
+    if (sum1(left) == sum2(left+1, k)) {
+      cout &lt;&lt; "yes" &lt;&lt; '\n';
+    } else {
+      cout &lt;&lt; "no" &lt;&lt; '\n';
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
