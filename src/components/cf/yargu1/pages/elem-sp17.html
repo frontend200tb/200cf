@@ -1075,9 +1075,64 @@ int main() {
       <a href="https://codeforces.com/contest/106/problem/C" target="_blank">Задача C</a>
       <br><a href="https://codeforces.com/contest/106" target="_blank">Codeforces Beta Round 82 (Div. 2)</a>
     </div>
+    <h4>Пример 3</h4>
+<pre>
+10 1 5 2
+100 1 2 3
+</pre>
+    <code>15</code>
 
+    <h4>Пример 4</h4>
+<pre>
+10 1 5 11
+3 1 3 8
+</pre>
+    <code>24</code>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число грамм теста
+  int m; // число видов начинки
+  int c0; // число грамм теста на булочку без начинки
+  int d0; // цена булочки без начинки
+  cin >> n >> m >> c0 >> d0;
+
+  vector&lt;int&gt; A(m+1); // число грамм i-ой начинки
+  vector&lt;int&gt; B(m+1); // число грамм i-ой начинки для одной булочки
+  vector&lt;int&gt; C(m+1); // число грамм теста с i-ой начинкой для одной булочки
+  vector&lt;int&gt; D(m+1); // цена булочки с i-ой начинкой
+  for (int i = 1; i &lt;= m; i++) {
+    cin >> A[i] >> B[i] >> C[i] >> D[i];
+  }
+
+  // DP[i] максимальное количество денег,
+  // которое мы получим если используем i грамм теста
+  vector&lt;int&gt; DP(n+1,0);
+
+  for (int i = 1; i &lt;= m; i++) {
+    int maxb = A[i] / B[i]; // максимум булочек из i-ой начинки
+    for (int j = 1; j &lt;= maxb; j++) {
+      for (int k = 0; k &lt;= n - C[i]; k++) {
+        DP[k] = max(DP[k + C[i]] + D[i], DP[k]);
+      }
+    }
+  }
+
+  int res = 0;
+  for (int i = 0; i &lt;= n; i++) {
+    res = max(res, DP[i] + i / c0 * d0);
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
   </details>
-
 </article>
 
 

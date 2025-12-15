@@ -32,6 +32,7 @@ import html82       from './../pages/elem-82-yandex-q2.html';
 import html85       from './../pages/elem-85-yandex-r1.html';
 import html86       from './../pages/elem-86-yandex-r2.html';
 import html97       from './../pages/elem-97-yandex-f.html';
+import html106      from './../pages/elem-106-Round82.html';
 import html110      from './../pages/elem-110-Round84.html';
 import html112      from './../pages/elem-112-Round85.html';
 import html116      from './../pages/elem-116-Round87.html';
@@ -78,6 +79,7 @@ import html791      from './../pages/elem-791-Round405.html';
 import html895      from './../pages/elem-895-Round448.html';
 import html1030     from './../pages/elem-1030-Techno2019o1.html';
 import html1041     from './../pages/elem-1041-Round509.html';
+import html1272     from './../pages/elem-1272-Round605.html';
 import html1296     from './../pages/elem-1296-Round617.html';
 import html1313     from './../pages/elem-1313-Round622.html';
 import html1325     from './../pages/elem-1325-Round628.html';
@@ -189,6 +191,7 @@ export const pages = [
   html85,
   html86,
   html97,
+  html106,
   html110,
   html112,
   html116,
@@ -235,6 +238,7 @@ export const pages = [
   html895,
   html1030,
   html1041,
+  html1272,
   html1296,
   html1313,
   html1325,
