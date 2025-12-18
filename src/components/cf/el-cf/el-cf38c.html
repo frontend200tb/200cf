@@ -41,3 +41,36 @@
   <code>0</code>
   <p>В первом тесте из условия, искомое окно имеет размеры 2 x 4, а жалюзи для него состоят из 4 частей по 2 бурльметра каждая. Одна из частей — это исходная полоса длины 2, другая — часть обрезанной полосы длины 3, а две оставшиеся — части разрезанной пополам полосы длины 4.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число полос
+  int l; // минимальная длина
+  cin >> n >> l;
+
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+  }
+
+  int res = 0;
+  for (int i = l; i &lt;= 100; i++) {
+    int s = 0; // число полос длины i
+    for (int j = 0; j &lt; n; j++) {
+      s += A[j] / i;
+    }
+
+    res = max(res, s * i);
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
+</details>
