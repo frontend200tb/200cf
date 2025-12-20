@@ -36,3 +36,45 @@
 </pre>
   <code>11</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstring&gt;
+
+using namespace std;
+
+typedef long long ll;
+typedef pair&lt;ll, ll&gt; ii;
+
+ii mas[3000];
+ll table[3001][3001];
+int n; // число шариков
+
+ll getans(int p, int l) {
+  if (p == n)
+    return 0;
+  ll& ans = table[p][l];
+  if (ans != -1)
+    return ans;
+  ans = min(getans(p + 1, p) + mas[p].second, getans(p + 1, l) + mas[p].first - mas[l].first);
+  return ans;
+}
+
+int main() {
+  cin >> n;
+  for (int i = 0; i &lt; n; i++) {
+    cin >> mas[i].first >> mas[i].second;
+  }
+
+  sort(mas, mas + n);
+
+  memset(table, -1, sizeof(table));
+
+  cout &lt;&lt; getans(1, 0) + mas[0].second;
+}
+</pre>
+</details>
