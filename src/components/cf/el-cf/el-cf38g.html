@@ -47,3 +47,78 @@
 </pre>
   <code>3 1 5 4 2</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;forward_list&gt;
+
+using namespace std;
+
+template&lt;class T&gt; inline void smin(T& a, T b) { if (b < a)a = b; }
+template&lt;class T&gt; inline void smax(T& a, T b) { if (a < b)a = b; }
+
+const int maxn = 100000 + 100;
+const int CTV = 800;
+
+int n;
+int a[maxn], c[maxn];
+struct Block {
+  forward_list&lt;int&gt; L;
+  int len;
+  int maxa;
+  Block() { L.clear(); len = 0; maxa = -1; };
+};
+forward_list&lt;Block&gt; Q;
+
+int ans[maxn];
+
+int main() {
+  ios_base::sync_with_stdio(false);
+
+  cin >> n;
+  for (int i = 0; i &lt; n; i++) {
+    cin >> a[i] >> c[i], smin(c[i], i);
+  }
+
+  Q.push_front(Block());
+  for (int i = 0; i &lt; n; i++) {
+    auto it = Q.begin();
+    while (it->len &lt; c[i] && it->maxa &lt; a[i]) c[i] -= it->len, it++;
+    auto& cur = *it;
+    auto it2 = cur.L.before_begin();
+    while (c[i]) {
+      if (a[*next(it2)] &lt; a[i]) it2++, c[i]--;
+      else break;
+    }
+    cur.L.insert_after(it2, i);
+    cur.len++;
+    smax(cur.maxa, a[i]);
+    if (cur.len > CTV) {
+      auto nwit = Q.insert_after(it, Block());
+      nwit->L.splice_after(nwit->L.before_begin(), it->L,
+      next(it->L.begin(), CTV / 2), it->L.end());
+      int mx;
+      int nwlen = 0;
+      mx = 0; for (int x : nwit->L) smax(mx, a[x]), nwlen++;
+      nwit->maxa = mx;
+      nwit->len = nwlen;
+      mx = 0; for (int x : it->L) smax(mx, a[x]);
+      it->maxa = mx;
+      it->len -= nwlen;
+    }
+  }
+
+  int pos = n;
+  for (auto cur : Q) for (int x : cur.L) {
+    ans[--pos] = x;
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    cout &lt;&lt; 1 + ans[i] &lt;&lt; ' ';
+  }
+}
+</pre>
+</details>
