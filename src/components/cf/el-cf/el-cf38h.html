@@ -54,3 +54,151 @@
 </pre>
   <code>4</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+typedef long long ll;
+typedef pair&lt;int, int&gt; ii;
+typedef vector&lt;ii&gt; vii;
+
+int n;
+int m;
+
+int g1, g2, s1, s2;
+int dist[50][50];
+
+ii l[50], r[50];
+ll table[51][51][51];
+
+vii v[50];
+ii zlo[50][50];
+
+int check2(int x) {
+  return x >= s1 && x &lt;= s2;
+}
+
+ll getans(int p1, int p2) {
+  for (int i = n-1; i >= 0; i--) {
+    for (int c1 = 0; c1 &lt; min(g2 + 1, i + 1); c1++) {
+      for (int c2 = 0; c2 &lt; i + 1; c2++) {
+        ll& ans = table[c1][c2][i];
+        if (i == p1) {
+          ans = table[c1 + 1][c2][i + 1];
+          continue;
+        }
+        if (i == p2) {
+          ans = table[c1][c2 + 1][i + 1];
+          continue;
+        }
+
+        ans = 0;
+        if (l[i] &lt; l[p1]) {
+          ans += table[c1 + 1][c2][i + 1];
+        }
+        if (r[i] > r[p2]) {
+          ans += table[c1][c2 + 1][i + 1];
+        }
+        if (zlo[i][p1] &lt; r[p2]) {
+          ans += table[c1][c2][i + 1];
+        }
+
+      }
+    }
+  }
+
+  return table[0][0][0];
+}
+
+int main() {
+  cin >> n >> m;
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; n; j++) {
+      dist[i][j] = (int)(1e9);
+    }
+  }
+  for (int i = 0; i &lt; n; i++) {
+    dist[i][i] = 0;
+  }
+
+  for (int i = 0; i &lt; m; i++) {
+    int a, b, c;
+    cin >> a >> b >> c;
+    a--;
+    b--;
+    dist[a][b] = min(dist[a][b], c);
+    dist[b][a] = min(dist[b][a], c);
+  }
+
+  cin >> g1 >> g2 >> s1 >> s2;
+
+  for (int k = 0; k &lt; n; k++) {
+    for (int i = 0; i &lt; n; i++) {
+      for (int j = 0; j &lt; n; j++) {
+        dist[i][j] = min(dist[i][k] + dist[k][j], dist[i][j]);
+      }
+    }
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    r[i] = make_pair(-1, 0);
+    l[i] = make_pair(1000000000, 0);
+    for (int j = 0; j &lt; n; j++) {
+      if (i != j) {
+        v[i].push_back(make_pair(dist[i][j], i));
+        l[i] = min(l[i], make_pair(dist[i][j], i));
+        r[i] = max(r[i], make_pair(dist[i][j], i));
+      }
+    }
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    sort(v[i].begin(), v[i].end());
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; n; j++) {
+      if (r[i] > l[j]) {
+        zlo[i][j] = *lower_bound(v[i].begin(), v[i].end(), l[j]);
+      } else {
+        zlo[i][j] = make_pair(1000000000, 0);
+      }
+    }
+  }
+
+  if (0) {
+    for (int i = 0; i &lt; n; i++) {
+      cout &lt;&lt; i &lt;&lt; ' ' &lt;&lt; l[i].first &lt;&lt; ' ' &lt;&lt; l[i].second
+      &lt;&lt; ' ' &lt;&lt; r[i].first &lt;&lt; ' ' &lt;&lt; r[i].second &lt;&lt; endl;
+    }
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; n; j++) {
+      if (i &lt;= g2 && i >= g1 && check2(n - i - j)) {
+        table[i][j][n] = 1;
+      } else {
+        table[i][j][n] = 0;
+      }
+    }
+  }
+
+  ll ans = 0;
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; n; j++) {
+      if (i != j && l[i] &lt; r[j]) {
+        ans += getans(i, j);
+      }
+    }
+  }
+
+  cout &lt;&lt; ans;
+}
+</pre>
+</details>
