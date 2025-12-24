@@ -1519,12 +1519,12 @@ using namespace std;
 
 int main() {
   // ввод данных
-  long long n;
+  long long n; // число друзей
   cin >> n;
   vector&lt;long long&gt; A(n);
-  long long max1 = 0;
+  long long max1 = 0; // сколько игр нужно сыграть
   for (int i = 0; i &lt; n; i++) {
-    cin >> A[i];
+    cin >> A[i]; // число раундов для i-го друга
     max1 = max(max1, A[i]);
   }
 

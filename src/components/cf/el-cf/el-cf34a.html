@@ -25,3 +25,56 @@
 </pre>
   <code>1 2</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+  <h4>Тест 3</h4>
+<pre>
+6
+189 782 387 832 667 933
+</pre>
+  <code>4 5</code>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число солдат
+  cin >> n;
+
+  int first; // рост первого солдата
+  cin >> first;
+
+  int s1 = first; // рост солдата
+  int s2; // рост следующего солдата
+  cin >> s2;
+
+  int mins = abs(s1 - s2); // минимальная разница в росте
+  int res1 = 1;
+  int res2 = 2;
+  s1 = s2;
+
+  // проверяем с третьего до последнего
+  for (int i = 3; i &lt;= n; i++) {
+    cin >> s2;
+    if (abs(s1 - s2) &lt; mins) {
+      mins = abs(s1 - s2);
+      res1 = i-1;
+      res2 = i;
+    }
+    s1 = s2;
+  }
+
+  // сравниваем первого с последним
+  if (abs(s1 - first) &lt; mins) {
+    res1 = n;
+    res2 = 1;
+  }
+
+  cout &lt;&lt; res1 &lt;&lt; ' ' &lt;&lt; res2;
+}
+</pre>
+</details>
