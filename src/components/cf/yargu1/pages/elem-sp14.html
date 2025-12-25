@@ -89,20 +89,25 @@ int tmp = *st.begin();
 
   <p>Решение задачи экзамен по истории</p>
 <pre>
-int n, q, tmp, count = 0;
-set&lt;int&gt; st;
+int n; // число дат в списке учителя
 cin >> n;
+int tmp; // временная переменная для ввода даты
+set&lt;int&gt; st;
 for (int i = 0; i &lt; n; i++) {
-  cin >> tmp;
+  cin >> tmp; // очередная дата в списке учителя
   st.insert(tmp);
 }
+
+int q; // число дат в списке студента
 cin >> q;
+int count = 0; // число совпавших дат
 for (int i = 0; i &lt; q; i++) {
-  cin >> tmp;
+  cin >> tmp; // очередная дата в списке студента
   if (st.find(tmp) != st.end()) {
     count++;
   }
 }
+
 cout &lt;&lt; count;
 </pre>
 

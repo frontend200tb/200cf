@@ -619,6 +619,53 @@ int main() {
 
     <p>Во втором примере оптимальный отрезок всего один, в нем содержится ровно один элемента массива (элемент номер три).</p>
   </details>
+
+
+  <details>
+    <summary>Решение на C++</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/252/problem/A" target="_blank">Задача 252А</a>
+      <br><a href="https://codeforces.com/contest/252" target="_blank">Codeforces Round 153 (Div. 2) 2012-12-06</a>
+    </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число элементов массива
+  cin >> n;
+
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+  }
+
+  int res = 0; // максимальный xor отрезка
+
+  for (int i = 0; i &lt; n; i++) {
+    res = max(res, A[i]); // проверяем очередное число
+    int curi = A[i]; // xor текущего отрезка
+    int maxi = A[i]; // макс xor отрезков
+
+    for (int j = i + 1; j &lt; n; j++) {
+      curi = curi ^ A[j];
+      if (curi > maxi) {
+        maxi = curi;
+      }
+    }
+
+    res = max(res, maxi);
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 
 

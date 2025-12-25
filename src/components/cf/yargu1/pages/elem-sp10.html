@@ -821,24 +821,20 @@ int main() {
 using namespace std;
 
 int main() {
-  // ввод данных
-  // список преподавателя
-  int n;
+  int n; // число дат в списке преподавателя
   cin >> n;
   vector&lt;int&gt; A(n);
   for (int i = 0; i &lt; n; i++) {
-    cin >> A[i];
+    cin >> A[i]; // дата в списке преподавателя
   }
 
-  // список студента
-  int m;
+  int m; // число дат в списке студента
   cin >> m;
   vector&lt;int&gt; B(m);
   for (int i = 0; i &lt; m; i++) {
-    cin >> B[i];
+    cin >> B[i]; // дата в списке студента
   }
 
-  // решение
   int res = 0;
   for (int i = 0; i &lt; m; i++) {
     int tmp, left, right, mid;
@@ -846,6 +842,7 @@ int main() {
     left = 0;
     right = n - 1;
 
+    // бинарный поиск
     while (right - left > 1) {
       mid = (right + left) / 2;
       if (A[mid] > tmp) {
@@ -860,7 +857,6 @@ int main() {
     }
   }
 
-  // вывод результата
   cout &lt;&lt; res;
 }
 </pre>
