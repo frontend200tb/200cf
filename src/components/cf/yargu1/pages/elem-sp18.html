@@ -622,7 +622,7 @@ int main() {
 
 
   <details>
-    <summary>Решение на C++</summary>
+    <summary>Решение</summary>
 
     <div>
       <a href="https://codeforces.com/contest/252/problem/A" target="_blank">Задача 252А</a>
@@ -719,6 +719,32 @@ int main() {
       <a href="https://codeforces.com/gym/103720/problem/E" target="_blank">Задача E</a>
       <br><a href="https://codeforces.com/gym/103720/" target="_blank">VII Липецкая командная олимпиада школьников по программированию. Финал. 3-7 классы</a>
     </div>
+
+    <p>AND любых элементов не больше максимального элемента. Поэтому нужно просто найти максимальный элемент. Тогда отрезок, содержащий только максимальный элемент, будет отрезком с максимальным AND.</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число элементов
+  cin >> n;
+
+  int tmp;
+  cin >> tmp; // первый элемент
+  int res = tmp; // максимальный элемент
+  n--;
+
+  while (n--) {
+    cin >> tmp;
+    if (tmp > res) {
+      res = tmp;
+    }
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
   </details>
 </article>
 
