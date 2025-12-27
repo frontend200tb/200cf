@@ -1346,5 +1346,42 @@ DDRR
       <br><a href="https://codeforces.com/contest/1829" target="_blank">Codeforces Round 871 (Div. 4)</a>
     </div>
 
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+const int max_n = 2000007;
+const int max_i = 1500;
+
+long long a[max_i][max_i] = {};
+long long cur = 1;
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  vector&lt;long long&gt; DP(max_n);
+  for (int i = 1; i &lt; max_i; i++) {
+    for (int j = i - 1; j >= 1; j--) {
+      a[j][i - j] = a[j - 1][i - j] + a[j][i - j - 1]
+      - a[j - 1][i - j - 1] + cur * cur;
+      DP[cur] = a[j][i - j];
+      cur++;
+    }
+  }
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // номер банки
+    cin >> n;
+
+    cout &lt;&lt; DP[n] &lt;&lt; '\n';
+  }
+}
+</pre>
   </details>
 </article>

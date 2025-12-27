@@ -88,6 +88,59 @@ int main() {
 
   <div class="t3"></div>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Виктор может получить оба навыка только в двух случааях</p>
+    <ol>
+      <li>если прочитает две книги, одна из которых дает первый навык, но не дает второй, а другая дает второй навык, но не дает первый. Это книги с двоичным кодом '10' и '01'</li>
+      <li>если прочитает одну книгу, которая дает и первый навык и второй навык. Это книга с кодом '11'</li>
+    </ol>
+    <p>Можно не рассматривать книги, чтение которых не дает никаких навыков. Это книги с двоичным кодом '00'</p>
+    <p>Найдем все книги с кодами 01, 10, 11 и выберем из них те которые можно прочесть за минимальное время</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  // число тестов
+  int t;
+  cin >> t;
+
+  while (t--) {
+    // ввод данных
+    int n;
+    cin >> n;
+    int min10 = 10000000;
+    int min01 = 10000000;
+    int min11 = 10000000;
+    for (int i = 0; i &lt; n; i++) {
+      int m;
+      string s;
+      cin >> m >> s;
+
+      // решение
+      if (s == "11") {
+        min11 = min(min11, m);
+      } else if (s == "10") {
+        min10 = min(min10, m);
+      } else if (s == "01") {
+        min01 = min(min01, m);
+      }
+    }
+    int result = min(min11, min10 + min01);
+
+    // вывод результата
+    if (result >= 1000000) {
+      cout &lt;&lt; -1 &lt;&lt; '\n';
+    } else {
+      cout &lt;&lt; result &lt;&lt; '\n';
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -98,6 +151,51 @@ int main() {
 
   <div class="t4"></div>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Напишем рекурсивную функцию three(n, m). Если n == m то возвращаем true. Если m > n или n не делится на 3 то возвращаем false. Вызываем саму себя для (1/3)n и (2/3)n.</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+bool three(int n, int m) {
+  if (n == m) {
+    return true;
+  }
+  int a, b;
+  if (n % 3 || m > n) {
+    return false;
+  } else {
+    a = n / 3;
+    b = n / 3 * 2;
+    return (three(a, m) || three(b, m));
+  }
+}
+
+int main() {
+  // число тестов
+  int t;
+  cin >> t;
+
+  while (t--) {
+    // ввод данных
+    int n, m;
+    cin >> n >> m;
+
+    // решение
+    bool gold = three(n, m);
+
+    // вывод результата
+    if (gold) {
+      cout &lt;&lt; "YES" &lt;&lt; '\n';
+    } else {
+      cout &lt;&lt; "NO" &lt;&lt; '\n';
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -128,6 +226,46 @@ int main() {
 
   <div class="t7"></div>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+const int max_n = 2000007;
+const int max_i = 1500;
+
+long long a[max_i][max_i] = {};
+long long cur = 1;
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  vector&lt;long long&gt; DP(max_n);
+  for (int i = 1; i &lt; max_i; i++) {
+    for (int j = i - 1; j >= 1; j--) {
+      a[j][i - j] = a[j - 1][i - j] + a[j][i - j - 1]
+      - a[j - 1][i - j - 1] + cur * cur;
+      DP[cur] = a[j][i - j];
+      cur++;
+    }
+  }
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // номер банки
+    cin >> n;
+
+    cout &lt;&lt; DP[n] &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
