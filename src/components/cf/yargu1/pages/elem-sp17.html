@@ -812,6 +812,66 @@ int main() {
     <code>4</code>
     <code>2</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Находим все делители n. Перебираем от 1 до корня из n. Если i делит n, то i и n/i это делители. Проверяем, что i != n/i, чтобы не дублировать для квадратов. Сортируем и создаем map для быстрого доступа. Теперь мы можем за O(logN) найти индекс делителя в массиве divisors.</p>
+    <p>dp[i] = количество способов превратить divisors[i] в 1. Базовый случай: dp[0] = 1 для числа 1 (1 способ — уже единица).</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+int main() {
+  long long n; // натуральное число
+  cin >> n;
+
+  int mod = 1e9 + 7;
+
+  // находим все делители n
+  vector&lt;long long&gt; divisors;
+  for (long long i = 1; i * i &lt;= n; i++) {
+    if (n % i == 0) {
+      divisors.push_back(i);
+      if (i != n / i) {
+        divisors.push_back(n / i);
+      }
+    }
+  }
+
+  sort(divisors.begin(), divisors.end());
+
+  map&lt;long long, int&gt; idx;
+  for (int i = 0; i &lt; (int)divisors.size(); i++) {
+    idx[divisors[i]] = i;
+  }
+
+  int m = divisors.size();
+  vector&lt;long long&gt; dp(m, 0);
+
+  dp[0] = 1; // для делителя 1
+
+  for (int i = 1; i &lt; m; i++) {
+    long long x = divisors[i];
+    // ищем все делители d > 1 числа x
+    for (int j = 1; j &lt; m; j++) {
+      long long d = divisors[j];
+      if (d > x) break;
+      if (d > 1 && x % d == 0) {
+        dp[i] = (dp[i] + dp[idx[x / d]]) % mod;
+      }
+    }
+  }
+
+  cout &lt;&lt; dp[idx[n]];
+}
+</pre>
+  </details>
 </article>
 
 
