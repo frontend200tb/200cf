@@ -909,6 +909,66 @@ int main() {
     <code>20</code>
     <code>60</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Пусть у нас разбиение длины m</p>
+    <ol>
+      <li>Если m=1 — это всегда рекурсивно палиндромно (оно само число).</li>
+      <li>Если m нечётно, то структура:
+        <code>a1, a2, ..., ak, c, ak, ..., a2, a1</code>
+        <p>Сумма:</p>
+        <code>2 * sum(A) + c = n</code>
+        <p>A — рекурсивно палиндромное разбиение некоторого числа S, c — произвольное положительное целое, S=sum(A)</p>
+      </li>
+      <li>Если m чётно, то структура:
+        <code>a1, a2, ..., ak, ak, ..., a2, a1</code>
+        <p>Сумма:</p>
+        <code>2 * sum(A) = n</code>
+        <p>A — рекурсивно палиндромное разбиение некоторого числа S, S=sum(A)</p>
+      </li>
+    </ol>
+    <p>dp[n] — количество рекурсивно палиндромных разбиений числа n</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+
+int main() {
+  int n; // число
+  cin >> n;
+
+  int mod = 1e9 + 7; // модуль
+
+  vector&lt;int&gt; dp(n + 1, 0);
+  vector&lt;int&gt; pref(n + 1, 0);
+  // pref[i] = dp[1] + dp[2] + ... + dp[i]
+
+  dp[1] = 1;
+  pref[1] = 1;
+
+  for (int i = 2; i &lt;= n; i++) {
+    // длина 1
+    dp[i] = 1;
+
+    // нечётная длина > 1
+    int k = (i - 1) / 2;
+    dp[i] = (dp[i] + pref[k]) % mod;
+
+    // чётная длина
+    if (i % 2 == 0) {
+      dp[i] = (dp[i] + dp[i / 2]) % mod;
+    }
+
+    pref[i] = (pref[i - 1] + dp[i]) % mod;
+  }
+
+  cout &lt;&lt; dp[n];
+}
+</pre>
+  </details>
 </article>
 
 
