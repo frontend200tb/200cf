@@ -1096,6 +1096,49 @@ int main() {
     <code>3 1</code>
     <code>2</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>dp[n][t] — количество перестановок длины n, имеющих ровно t инверсий</p>
+    <p>Для перестановки длины n мы можем получить её, вставляя число n в перестановку длины n-1. Если мы вставляем n на позицию k от конца (т.е. перед k элементами в конце текущей перестановки длины n-1), то это создаёт ровно k новых инверсий (т.к. n больше всех предыдущих чисел).</p>
+    <code>dp[n][t] = sum(dp[n-1][t-k])</code>
+    <code>S(t)=S(t-1)+dp[n-1][t]-dp[n-1][t-n](если t-n≥0)</code>
+    <p>Заметим, что при вычислении dp[n][t] нам нужен только предыдущий слой dp[n-1][...]. Поэтому можно хранить только два одномерных массива: для текущего и предыдущего n.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n; // длина перестановки
+  int t; // число инверсий
+  cin >> n >> t;
+
+  int mod = 1e9 + 7; // модуль
+
+  // dp[n][t] — количество перестановок длины n, имеющих ровно t инверсий
+  vector&lt;int&gt; prev(t + 1, 0); // dp[len-1][...]
+  vector&lt;int&gt; curr(t + 1, 0); // dp[len][...]
+  prev[0] = 1;  // dp[0][0] = 1
+
+  for (int len = 1; len &lt;= n; len++) {
+    long long sum = 0;
+    for (int inv = 0; inv &lt;= t; inv++) {
+      sum += prev[inv];
+      if (inv >= len) {
+        sum -= prev[inv - len];
+      }
+      sum = (sum % mod + mod) % mod;
+      curr[inv] = sum;
+    }
+    swap(prev, curr);
+  }
+
+  cout &lt;&lt; prev[t];
+}
+</pre>
+  </details>
 </article>
 
 
