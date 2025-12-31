@@ -36,6 +36,7 @@ import html106      from './../pages/elem-106-Round82.html';
 import html110      from './../pages/elem-110-Round84.html';
 import html112      from './../pages/elem-112-Round85.html';
 import html116      from './../pages/elem-116-Round87.html';
+import html118      from './../pages/elem-118-Round89.html';
 import html120      from './../pages/elem-120-kosSaratov.html';
 import html134      from './../pages/elem-134-TRound3.html';
 import html136      from './../pages/elem-136-Round97.html';
@@ -195,6 +196,7 @@ export const pages = [
   html110,
   html112,
   html116,
+  html118,
   html120,
   [html134, 134],
   html136,

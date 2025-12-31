@@ -37,6 +37,7 @@ export const asideThemes = [
   '110 Round 84 (Div. 2)',
   '112 Round 85 (Div. 2)',
   '116 Round 87 (Div. 2)',
+  '118 Round 89 (Div. 2)',
   '120 КОШ Саратов 2011',
   '134 Testing Round 3',
   '136 Round 97 (Div. 2)',

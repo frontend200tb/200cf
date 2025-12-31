@@ -1,0 +1,92 @@
+<article class="article">
+  <a href="https://codeforces.com/contest/118" target="_blank">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.07</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. Упражнение на строки</a>
+  <br><a href="#t2">Задача B. Подарок от Лены</a>
+  <br><a href="#t3">Задача C. Модный номер</a>
+  <br><a href="#t4">Задача D. Легионы Цезаря</a>
+  <br><a href="#t5">Задача E. Дороги в Бертауне</a>
+</article>
+
+
+<!-- Задача A. Упражнение на строки -->
+<article class="article">
+  <div class="anchor" id="task1"></div>
+  <h3>Задача A. Упражнение на строки</h3>
+
+  <div class="t1"></div>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  vector&lt;char&gt; res;
+  vector&lt;char&gt; vow{ 'a','A','o','O','y','Y','e','E','u','U','i','I' };
+
+  string s;
+  cin >> s;
+  for (int i = 0; i &lt; s.size(); i++) {
+    if (find(vow.begin(), vow.end(), s[i]) == vow.end()) {
+      res.push_back('.');
+      res.push_back(tolower(s[i]));
+    }
+  }
+
+  for (int i = 0; i &lt; res.size(); i++) {
+    cout &lt;&lt; res[i];
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача B. Подарок от Лены -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Подарок от Лены</h3>
+
+  <div class="t2"></div>
+
+</article>
+
+
+<!-- Задача C. Модный номер -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Модный номер</h3>
+
+  <div class="t3"></div>
+
+</article>
+
+
+<!-- Задача D. Легионы Цезаря -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. Легионы Цезаря</h3>
+
+  <div class="t4"></div>
+
+</article>
+
+
+<!-- Задача E. Дороги в Бертауне -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. Дороги в Бертауне</h3>
+
+  <div class="t5"></div>
+
+</article>
