@@ -127,6 +127,44 @@ int main() {
   <div class="anchor" id="t3"></div>
   <h3>Задача C. Пирамида</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Создадим вектор кирпичей, для каждого кирпича будем хранить только его меньшую сторону. Отсортируем вектор кирпичей по размеру. Пройдем по всем кирпичам и если очередной кирпич может сделать еще один слой пирамиды, то будем увеличивать высоту пирамиды на один.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число кирпичей
+  cin >> n;
+  int a; // меньшая сторона кирпича
+  int b; // большая стороная кирпича
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> a >> b; // стороны кирпича
+    if (a > b) {
+      A[i] = b; // размер кирпича
+    } else {
+      A[i] = a; // размер кирпича
+    }
+  }
+
+  sort(A.begin(), A.end());
+  int k = 0; // высота пирамиды
+
+  for (int i = 0; i &lt; n; i++) {
+    if (A[i] >= 2 * (k + 1) - 1) {
+      k++;
+    }
+  }
+
+  cout &lt;&lt; k;
+}
+</pre>
+  </details>
 </article>
 
 
