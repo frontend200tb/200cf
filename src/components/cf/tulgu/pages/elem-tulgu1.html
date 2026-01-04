@@ -173,6 +173,59 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Простой феникс</h3>
 
+  <details>
+    <summary>Решение на 39 баллов из 100 потому что превышено ограниение по памяти</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n, m; // размер поля
+  int k; // число врагов
+  cin >> n >> m >> k;
+  int x; // координата x
+  int y; // координата y
+
+  vector&lt;vector&lt;int&gt; &gt; A(n+4, vector&lt;int&gt;(m+4));
+  // 0 - свободно, 1 - враг
+  // вокруг поля добавим по две свободные клетки
+
+  for (int i = 0; i &lt; k; i++) {
+    cin >> x >> y; // координаты врага
+    A[x+1][y+1] = 1;
+  }
+
+  bool res = 0; // нет эффективной атаки
+
+  for (int i = 2; i &lt; n + 2; i++) {
+    for (int j = 2; j &lt; m + 2; j++) {
+      if (A[i][j] == 0) {
+        if (A[i - 1][j] == 1 && A[i - 2][j] == 1) {
+          res = 1;
+        }
+        if (A[i + 1][j] == 1 && A[i + 2][j] == 1) {
+          res = 1;
+        }
+        if (A[i][j - 1] == 1 && A[i][j - 2] == 1) {
+          res = 1;
+        }
+        if (A[i][j + 1] == 1 && A[i][j + 2] == 1) {
+          res = 1;
+        }
+      }
+    }
+  }
+
+  if (res) {
+    cout &lt;&lt; "yes";
+  } else {
+    cout &lt;&lt; "no";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
