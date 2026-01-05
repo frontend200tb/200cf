@@ -1185,6 +1185,80 @@ int main() {
       <br><a href="https://codeforces.com/contest/118" target="_blank">Codeforces Beta Round 89 (Div. 2)</a>
     </div>
 
+    <p>dp[i][j][x][y] — количество способов расставить i пехотинцев и j всадников так, чтобы последние x идущих подряд воинов были пехотинцами и последние y идущих подряд воинов были всадниками (фактически, x и y не могут быть ненулевыми одновременно)</p>
+    <p>Базовые случаи:</p>
+    <p>Если нет пехотинцев (i = 0), то можно расставить только всадников, но не более k2 подряд:</p>
+    <code>if (j &lt;= k2) dp[0][j][0][j] = 1</code>
+    <p>Если нет всадников (j = 0), то можно расставить только пехотинцев, но не более k1 подряд:</p>
+    <code>if (i &lt;= k1) dp[i][0][i][0] = 1</code>
+    <p>Переходы:</p>
+    <p>Если последний воин — пехотинец (тогда y = 0):</p>
+    <code>dp[i][j][x][0] += dp[i-1][j][x-1][0] для x > 0</code>
+    <p>Если последний воин — всадник (тогда x = 0):</p>
+    <code>dp[i][j][0][y] += dp[i][j-1][0][y-1] для y > 0</code>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n1; // число пехотинцев
+  int n2; // число всадников
+  int k1; // макс подряд пехотинцев
+  int k2; // макс подряд всадников
+  cin >> n1 >> n2 >> k1 >> k2;
+
+  int mod = 1e8;
+
+  // dp[i][j][x][y]
+  vector&lt;vector&lt;vector&lt;vector&lt;int&gt; &gt; &gt; &gt;dp(n1 + 1,
+    vector&lt;vector&lt;vector&lt;int&gt; &gt; &gt;(n2 + 1,
+      vector&lt;vector&lt;int&gt; &gt;(k1 + 1, vector&lt;int&gt;(k2 + 1, 0))));
+
+  // базовый случай
+  for (int i = 0; i &lt;= k1; i++) {
+    for (int j = 0; j &lt;= k2; j++) {
+
+      // расставляем пехотинцев
+      for (int x = 0; x &lt;= n1; x++) {
+        if (i >= x) {
+          dp[x][0][i][j] = 1;
+        }
+      }
+
+      // расставляем всадников
+      for (int y = 0; y &lt;= n2; y++) {
+        if (j >= y) {
+          dp[0][y][i][j] = 1;
+        }
+      }
+    }
+  }
+
+  // переходы
+  for (int i = 1; i &lt;= n1; i++) {
+    for (int j = 1; j &lt;= n2; j++) {
+      for (int x = 0; x &lt;= k1; x++) {
+        for (int y = 0; y &lt;= k2; y++) {
+          int op1 = 0;
+          if (x) {
+            op1 = dp[i - 1][j][x - 1][k2];
+          }
+          int op2 = 0;
+          if (y) {
+            op2 = dp[i][j - 1][k1][y - 1];
+          }
+          dp[i][j][x][y] = (op1 + op2) % mod;
+        }
+      }
+    }
+  }
+
+  cout &lt;&lt; dp[n1][n2][k1][k2];
+}
+</pre>
   </details>
 </article>
 

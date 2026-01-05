@@ -174,55 +174,72 @@ int main() {
   <h3>Задача D. Простой феникс</h3>
 
   <details>
-    <summary>Решение на 39 баллов из 100 потому что превышено ограниение по памяти</summary>
+    <summary>Решение</summary>
+    <p>эффективная атака возможна, если существуют два врага, расположенные рядом по горизонтали или вертикали, и с одной из сторон от этой пары есть свободная клетка для приземления феникса</p>
+    <p>Храним позиции врагов в set для быстрой проверки и в vector для итерации</p>
+    <p>Для каждого врага проверяем, есть ли соседний враг справа или снизу (чтобы не проверять пары дважды).</p>
+    <p>Для каждой найденной пары проверяем, есть ли свободная клетка для приземления феникса с любой стороны от пары.</p>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
+#include &lt;set&gt;
 
 using namespace std;
 
-int main() {
-  int n, m; // размер поля
-  int k; // число врагов
-  cin >> n >> m >> k;
-  int x; // координата x
-  int y; // координата y
+typedef long long ll;
 
-  vector&lt;vector&lt;int&gt; &gt; A(n+4, vector&lt;int&gt;(m+4));
-  // 0 - свободно, 1 - враг
-  // вокруг поля добавим по две свободные клетки
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+
+  ll n, m; // размер поля
+  ll k; // число врагов
+  cin >> n >> m >> k;
+
+  set&lt;pair&lt;ll, ll&gt; &gt; enemies;
+  vector&lt;pair&lt;ll, ll&gt; &gt; enemy_positions(k);
 
   for (int i = 0; i &lt; k; i++) {
-    cin >> x >> y; // координаты врага
-    A[x+1][y+1] = 1;
+    cin >> enemy_positions[i].first >> enemy_positions[i].second;
+    enemies.insert(enemy_positions[i]);
   }
 
-  bool res = 0; // нет эффективной атаки
+  // Проверяем каждую пару соседних врагов
+  for (const auto& pos : enemy_positions) {
+    ll x = pos.first;
+    ll y = pos.second;
 
-  for (int i = 2; i &lt; n + 2; i++) {
-    for (int j = 2; j &lt; m + 2; j++) {
-      if (A[i][j] == 0) {
-        if (A[i - 1][j] == 1 && A[i - 2][j] == 1) {
-          res = 1;
-        }
-        if (A[i + 1][j] == 1 && A[i + 2][j] == 1) {
-          res = 1;
-        }
-        if (A[i][j - 1] == 1 && A[i][j - 2] == 1) {
-          res = 1;
-        }
-        if (A[i][j + 1] == 1 && A[i][j + 2] == 1) {
-          res = 1;
-        }
+    // Горизонтальная пара: (x, y) и (x, y+1)
+    if (enemies.count({ x, y + 1 })) {
+      // Проверяем возможность атаки слева от пары
+      if (y - 1 >= 1 && !enemies.count({ x, y - 1 })) {
+        cout &lt;&lt; "yes";
+        return 0;
+      }
+      // Проверяем возможность атаки справа от пары
+      if (y + 2 &lt;= m && !enemies.count({ x, y + 2 })) {
+        cout &lt;&lt; "yes";
+        return 0;
+      }
+    }
+
+    // Вертикальная пара: (x, y) и (x+1, y)
+    if (enemies.count({ x + 1, y })) {
+      // Проверяем возможность атаки сверху от пары
+      if (x - 1 >= 1 && !enemies.count({ x - 1, y })) {
+        cout &lt;&lt; "yes";
+        return 0;
+      }
+      // Проверяем возможность атаки снизу от пары
+      if (x + 2 &lt;= n && !enemies.count({ x + 2, y })) {
+        cout &lt;&lt; "yes";
+        return 0;
       }
     }
   }
 
-  if (res) {
-    cout &lt;&lt; "yes";
-  } else {
-    cout &lt;&lt; "no";
-  }
+  cout &lt;&lt; "no";
+  return 0;
 }
 </pre>
   </details>
