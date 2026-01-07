@@ -569,6 +569,56 @@ int main() {
 
   <p>Суммарная площадь в ответа равна 2⋅3=6.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--) {
+    long long n; // число прямоугольников
+    long long q; // число запросов
+    cin >> n >> q;
+
+    long long h; // высота
+    long long w; // ширина
+    vector&lt;vector&lt;long long&gt; &gt; A(1005, vector&lt;long long&gt;(1005));
+    for (int i = 0; i &lt; n; i++) {
+      cin >> h >> w;
+      A[h][w] += h * w;
+    }
+
+    vector&lt;vector&lt;long long&gt; &gt; Pref(1005, vector&lt;long long&gt;(1005));
+    for (int i = 1; i &lt;= 1000; i++) {
+      for (int j = 1; j &lt;= 1000; j++) {
+        Pref[i][j] = Pref[i - 1][j] + Pref[i][j - 1] - Pref[i - 1][j - 1] + A[i][j];
+      }
+    }
+
+    // запросы
+    while (q--) {
+      long long hs; // мин высота
+      long long ws; // мин ширина
+      long long hb; // макс высота
+      long long wb; // макс ширина
+      cin >> hs >> ws >> hb >> wb;
+
+      long long res = 0;
+      res = Pref[hb - 1][wb - 1] - Pref[hb - 1][ws] - Pref[hs][wb - 1] + Pref[hs][ws];
+
+      cout &lt;&lt; res &lt;&lt; '\n';
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
