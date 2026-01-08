@@ -151,4 +151,52 @@ int main() {
   <div class="anchor" id="t10"></div>
   <h3>Задача J. Турнир УрФУ</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  string s1; // ход первого игрока
+  string s2; // ход второго игрока
+  cin >> s1 >> s2;
+
+  if (s1 == s2) {
+    cout &lt;&lt; "Tie";
+  } else if (s1 == "Rock") {
+    if (s2 == "Scissors" || s2 == "Lizard") {
+      cout &lt;&lt; "First";
+    } else {
+      cout &lt;&lt; "Second";
+    }
+  } else if (s1 == "Scissors") {
+    if (s2 == "Paper" || s2 == "Lizard") {
+      cout &lt;&lt; "First";
+    } else {
+      cout &lt;&lt; "Second";
+    }
+  } else if (s1 == "Paper") {
+    if (s2 == "Rock" || s2 == "Spock") {
+      cout &lt;&lt; "First";
+    } else {
+      cout &lt;&lt; "Second";
+    }
+  } else if (s1 == "Lizard") {
+    if (s2 == "Paper" || s2 == "Spock") {
+      cout &lt;&lt; "First";
+    } else {
+      cout &lt;&lt; "Second";
+    }
+  } else if (s1 == "Spock") {
+    if (s2 == "Scissors" || s2 == "Rock") {
+      cout &lt;&lt; "First";
+    } else {
+      cout &lt;&lt; "Second";
+    }
+  }
+}
+</pre>
+  </details>
 </article>
