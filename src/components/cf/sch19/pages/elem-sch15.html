@@ -69,29 +69,33 @@ int main() {
 using namespace std;
 
 int main() {
-  int n; // длина номера
+  int n; // длина номера билета от 2 до 50
   cin >> n;
 
-  char in;
-  bool flag = true;
-  int sum1 = 0;
-  for (int i = 0; i &lt; n / 2; i++) {
-    cin >> in;
-    if (in != '4' && in != '7') {
+  string s; // номер билета от 2 до 50 знаков
+  cin >> s;
+
+  bool flag = true; // номер счастливый
+
+  // решение и вывод результата
+  int n2 = n / 2; // половина цифр
+  int sum1 = 0; // сумма цифр первой половины
+  int sum2 = 0; // сумма цифр второй половины
+
+  for (int i = 0; i &lt; n2; i++) {
+    if (s[i] == '4' || s[i] == '7') {
+      sum1 += s[i] - '0';
+    } else {
       flag = false;
     }
-    int tmp = static_cast&lt;int&gt;(in);
-    sum1 += tmp;
   }
 
-  int sum2 = 0;
-  for (int i = 0; i &lt; n / 2; i++) {
-    cin >> in;
-    if (in != '4' && in != '7') {
+  for (int i = n2; i &lt; n; i++) {
+    if (s[i] == '4' || s[i] == '7') {
+      sum2 += s[i] - '0';
+    } else {
       flag = false;
     }
-    int tmp = static_cast&lt;int&gt;(in);
-    sum2 += tmp;
   }
 
   if (sum1 != sum2) {
