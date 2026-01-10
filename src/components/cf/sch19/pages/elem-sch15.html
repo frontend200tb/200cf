@@ -126,4 +126,35 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Петя и книга</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число страниц в книге
+  cin >> n;
+
+  int A[7];
+  for (int i = 0; i &lt; 7; i++) {
+    cin >> A[i];
+  }
+
+  int day = 0;
+
+  while (n > 0) {
+    for (int i = 0; n > 0 && i &lt; 7; i++) {
+      n -= A[i];
+      if (n &lt;= 0) {
+        day = i + 1;
+      }
+    }
+  }
+
+  cout &lt;&lt; day;
+}
+</pre>
+  </details>
 </article>
