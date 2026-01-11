@@ -1115,6 +1115,76 @@ TAK
       <br><a href="https://codeforces.com/contest/1151" target="_blank">Codeforces Round 553 (Div. 2)</a>
     </div>
 
+    <h4>Пример 39</h4>
+<pre>
+3 3
+1 2 3
+1 2 3
+0 0 0
+</pre>
+<pre>
+TAK
+2 1 1
+</pre>
+
+  <p>Для начала возьмем в каждом массиве первое число.</p>
+
+  <p>Если текущее побитовое исключающее ИЛИ уже больше нуля, мы можем вывести ответ.</p>
+
+  <p>А также, если есть массив, который содержит хотя бы два различных числа, вы можете в этом массиве заменить первое число на число, которое от него отличается, и получить побитовое исключающее ИЛИ 0⊕x>0.</p>
+
+  <p>Иначе, каждый массив состоит из одинаковых чисел, поэтому все возможные значения XOR равны 0, и ответа нет.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int A[500][500]; // таблица
+
+int main() {
+  int n, m; // размер таблицы от 1 до 500
+  cin >> n >> m;
+
+  // ввод таблицы
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; m; j++) {
+      cin >> A[i][j];
+    }
+  }
+
+  bool flag = false; // xor не больше нуля
+  int xor2 = 0; // xor чисел
+  int res[500]; // результат с номеров чисел
+
+  for (int i = 0; i &lt; n; i++) {
+    xor2 = xor2 xor A[i][0];
+    res[i] = 1;
+  }
+
+  if (xor2 > 0) {
+    flag = true;
+  } else {
+    for (int i = 0; !flag && i &lt; n; i++) {
+      for (int j = 0; !flag && j &lt; m; j++) {
+        if (A[i][0] != A[i][j]) {
+          res[i] = j + 1;
+          flag = true;
+        }
+      }
+    }
+  }
+
+  if (flag) {
+    cout &lt;&lt; "TAK\n";
+    for (int i = 0; i &lt; n; i++) {
+      cout &lt;&lt; res[i] &lt;&lt; ' ';
+    }
+  } else {
+    cout &lt;&lt; "NIE";
+  }
+}
+</pre>
   </details>
 </article>
 
