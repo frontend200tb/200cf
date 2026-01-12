@@ -1233,6 +1233,77 @@ int main() {
       <a href="https://codeforces.com/gym/101641/problem/D" target="_blank">Задача D</a>
       <br><a href="https://codeforces.com/gym/101641" target="_blank">Личный чемпионат Самарского университета среди новичков 2017</a>
     </div>
+
+    <p>Если всего 2 элемента, удаляем минимальный.</p>
+    <p>Создаем префиксный массив Pref, где Pref[i] содержит побитовое И всех элементов от a[0] до a[i].</p>
+    <p>Создаем суффиксный массив Suf, где Suf[i] содержит побитовое И всех элементов от a[i] до a[n-1].</p>
+    <p>Если удаляем первый элемент, результат = Suf[1]. Если удаляем последний элемент, результат = Pref[n-2]. Иначе результат = Pref[i-1] & Suf[i+1].</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int n; // размер массива
+  cin >> n;
+
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i]; // элементы массива
+  }
+
+  if (n == 2) {
+    // если всего 2 элемента, удаляем минимальный
+    cout &lt;&lt; max(A[0], A[1]);
+    return 0;
+  }
+
+  // префиксные AND
+  vector&lt;int&gt; Pref(n);
+  Pref[0] = A[0];
+  for (int i = 1; i &lt; n; i++) {
+    Pref[i] = Pref[i - 1] & A[i];
+  }
+
+  // суффиксные AND
+  vector&lt;int&gt; Suf(n);
+  Suf[n - 1] = A[n - 1];
+  for (int i = n - 2; i >= 0; i--) {
+    Suf[i] = Suf[i + 1] & A[i];
+  }
+
+  int max_and = 0; // максимальный AND
+  int del_i = 0; // удаляемый элемент
+
+  // проверяем удаление каждого элемента
+  for (int i = 0; i &lt; n; i++) {
+    int cur_and; // текущий AND
+
+    if (i == 0) {
+      // удаляем первый элемент
+      cur_and = Suf[1];
+    } else if (i == n - 1) {
+      // удаляем последний элемент
+      cur_and = Pref[n - 2];
+    } else {
+      // удаляем элемент в середине
+      cur_and = Pref[i - 1] & Suf[i + 1];
+    }
+
+    if (cur_and > max_and) {
+      max_and = cur_and;
+      del_i = i;
+    } else if (cur_and == max_and && A[i] &lt; A[del_i]) {
+      // Если AND одинаковый, удаляем меньший элемент
+      del_i = i;
+    }
+  }
+
+  cout &lt;&lt; max_and;
+}
+</pre>
   </details>
 </article>
 
