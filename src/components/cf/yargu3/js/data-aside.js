@@ -1,5 +1,7 @@
 // Создаем массив asideThemes с темами для блока aside
 export const asideThemes = [
+  '2025 Новогодний контест',
+  '2026 Новогодний контест',
   'Central Russia 2020',
   'Central Russia 2021',
   'Central Russia 2021 квалификация',
@@ -9,7 +11,6 @@ export const asideThemes = [
   'Demidov Cup 2023',
   'Demidov Cup 2024',
   'Demidov Cup 2025',
-  'New Year 2025',
   'Novosibirsk 2018',
   'Зимний блитц 1 2024',
   'Зимний блитц 2 2024',

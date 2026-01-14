@@ -1,4 +1,6 @@
 // Создаем массив pages со страницами из aside меню
+import htmlNY2025          from './../pages/elem-241229-NY2025.html';
+import htmlNY2026          from './../pages/elem-251229-NY2026.html';
 import htmlCentrRus2020    from './../pages/elem-250726-CentrRus2020.html';
 import htmlCentrRus2021    from './../pages/elem-250629-CentrRus2021.html';
 import htmlCentrRus2021q   from './../pages/elem-250629-CentrRus2021q.html';
@@ -8,7 +10,6 @@ import htmlDem2022         from './../pages/elem-220521-Dem2022.html';
 import htmlDem2023         from './../pages/elem-230520-Dem2023.html';
 import htmlDem2024         from './../pages/elem-240520-Dem2024.html';
 import htmlDem2025         from './../pages/elem-250520-Dem2025.html';
-import htmlNY2025          from './../pages/elem-241229-NY2025.html';
 import htmlNvsb2018        from './../pages/elem-250511-Nvsb2018.html';
 import htmlBlitz2024w1     from './../pages/elem-240107-Blitz2024w1.html';
 import htmlBlitz2024w2     from './../pages/elem-240114-Blitz2024w2.html';
@@ -38,6 +39,8 @@ import htmlStud2023        from './../pages/elem-230326-stud2023.html';
 import htmlStud2024        from './../pages/elem-240309-stud2024.html';
 
 export const pages = [
+  htmlNY2025,
+  htmlNY2026,
   htmlCentrRus2020,
   htmlCentrRus2021,
   htmlCentrRus2021q,
@@ -47,7 +50,6 @@ export const pages = [
   htmlDem2023,
   htmlDem2024,
   htmlDem2025,
-  htmlNY2025,
   htmlNvsb2018,
   htmlBlitz2024w1,
   htmlBlitz2024w2,
