@@ -128103,17 +128103,22 @@ int main() {
 
   // решение
   sort(A.rbegin(), A.rend());
-  // число мест равно n, поэтому пройдет ровно n абитуриентов
-  int proh = A[n - 1]; // проходной балл
   string res;
-  if (k > proh) {
+  // если число мест больше чем абитуриентов, то пройдут все
+  if (n > m) {
     res = "enter";
-  }
-  if (k == proh) {
-    res = "entrance exams";
-  }
-  if (k &lt; proh) {
-    res = "no chance";
+  } else {
+    // число мест равно n, поэтому пройдет ровно n абитуриентов
+    int proh = A[n - 1]; // проходной балл
+    if (k > proh) {
+      res = "enter";
+    }
+    if (k == proh) {
+      res = "entrance exams";
+    }
+    if (k &lt; proh) {
+      res = "no chance";
+    }
   }
 
   // вывод результата
@@ -128415,6 +128420,52 @@ int main() {
 75 100 125 80 15 8 33 37 85 150
 </pre>
   <code>1</code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int gcd(int a, int b) {
+  while (a != 0 && b != 0) {
+    if (a > b) {
+      a = a % b;
+    } else {
+      b = b % a;
+    }
+  }
+  return a + b;
+}
+
+int main() {
+  int n; // число кустов
+  cin >> n;
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+  }
+
+  sort(A.begin(), A.end());
+
+  if (n == 2) {
+    cout &lt;&lt; A[1] - A[0];
+  } else {
+    int res = gcd((A[2] - A[1]), (A[1] - A[0]));
+    for (int i = 3; i &lt; n; i++) {
+      int x = A[i] - A[i - 1];
+      int y = A[i-1] - A[i - 2];
+      res = gcd(res, gcd(x, y));
+    }
+
+    cout &lt;&lt; res;
+  }
+}
+</pre>
   </details>
 </article>
 
