@@ -12786,7 +12786,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: () => (/* binding */ asideThemes)
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)'];
+var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)'];
 
 /***/ }),
 
@@ -12959,6 +12959,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./../pages/elem-2166-Round1064.html */ "./src/components/cf/rounds/pages/elem-2166-Round1064.html");
 /* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/pages/elem-2167-Round1062.html");
 /* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/pages/elem-2171-Round1065.html");
+/* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/pages/elem-2185-Round1074.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -13118,7 +13119,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var pages = [[_pages_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_15__["default"], 34], [_pages_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_16__["default"], 38], _pages_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_18__["default"], _pages_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_19__["default"], _pages_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_21__["default"], _pages_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_22__["default"], _pages_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_38__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_39__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_48__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_49__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_51__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_52__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_53__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__["default"]];
+
+var pages = [[_pages_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_15__["default"], 34], [_pages_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_16__["default"], 38], _pages_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_18__["default"], _pages_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_19__["default"], _pages_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_21__["default"], _pages_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_22__["default"], _pages_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_38__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_39__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_48__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_49__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_51__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_52__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_53__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__["default"]];
 
 /***/ }),
 
@@ -49030,6 +49032,1154 @@ int main() {
   <div class="anchor" id="t9"></div>
   <h3>Задача H. Сиори Мияги и максимальный балл массивов</h3>
 
+</article>
+
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/pages/elem-2185-Round1074.html":
+/*!*****************************************************************!*\
+  !*** ./src/components/cf/rounds/pages/elem-2185-Round1074.html ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<article class="article">
+  <a href="https://codeforces.com/contest/2185" target="_blank">Codeforces 2185 Round 1074 (Div. 4) 2026.01.18</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. Совершенный корень</a>
+  <br><a href="#t2">Задача B. Префиксный максимум</a>
+  <br><a href="#t3">Задача C. Сдвинутый MEX</a>
+  <br><a href="#t4">Задача D. OutOfMemoryError</a>
+  <br><a href="#t5">Задача E. Роботизированная спешка</a>
+  <br><a href="#t6">Задача F. BattleCows</a>
+  <br><a href="#t7">Задача G. Смешивание MEXов</a>
+  <br><a href="#t8">Задача H. BattleCows 2</a>
+</article>
+
+
+<!-- Задача A. Совершенный корень -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. Совершенный корень</h3>
+
+  <div class="time-memory">(Время 1с. Память 256мб)</div>
+
+  <p>Положительное целое число x является совершенным корнем, если существует целое число y, такое что √y=x. Например, 5 является совершенным корнем, потому что √25=5.</p>
+
+  <p>Для каждого набора входных данных выведите n различных совершенных корней. Обратите внимание, что значения должны быть различными только в пределах каждого набора входных данных; вы можете использовать одно и то же значение в разных наборах.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1 ≤ t ≤ 20) — количество наборов входных данных.</p>
+
+  <p>Единственная строка каждого набора входных данных содержит целое число n (1 ≤ n ≤ 20) — количество совершенных корней для вывода.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите n различных совершенных корней. Каждый совершенный корень x должен находиться в диапазоне 1 ≤ x ≤ 10<sup>9</sup>.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+3
+1
+2
+5
+</pre>
+<pre>
+1
+2 4
+2 102 43 1 21
+</pre>
+  </details>
+  <p>Для первого набора входных данных:</p>
+  <p>1 является совершенным корнем, потому что √1=1.</p>
+
+  <p>Для второго набора входных данных:</p>
+  <p>2 является совершенным корнем, потому что √4=2.</p>
+  <p>4 является совершенным корнем, потому что √16=4.</p>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Любое натуральное число является совершенным корнем какого-то натурального числа. Поэтому выводим n чисел начиная с 1.</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // число совершенных корней
+    cin >> n;
+
+    for (int i = 1; i &lt;= n; i++) {
+      cout &lt;&lt; i &lt;&lt; ' ';
+    }
+    cout &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача B. Префиксный максимум -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Префиксный максимум</h3>
+
+  <div class="time-memory">(Время 1.5с. Память 256мб)</div>
+
+  <p>Дан массив из n целых чисел a1, a2, …, an.</p>
+
+  <p>Значение массива — это сумма максимумов каждого префикса массива. Более формально, значение массива a равно ∑(n,i=1) max(a1,…,ai). Например, значение массива [1,2,1] равно max(1)+max(1,2)+max(1,2,1)=1+2+2=5.</p>
+
+  <p>Вы можете выбрать два индекса i и j и поменять местами элементы ai и aj; эта операция может быть выполнена не более одного раза.</p>
+
+  <p>Найдите максимальное возможное значение массива a
+  после выполнения не более одной операции.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1 ≤ t ≤ 100) — количество наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит одно целое число n (2 ≤ n ≤ 50) — длину массива a.</p>
+
+  <p>Вторая строка содержит n целых чисел a1, a2, …, an (1 ≤ ai ≤ 10<sup>4</sup>) — массив a.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите максимальное возможное значение массива a после выполнения обмена.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+4
+5
+2 1 4 5 3
+2
+5 1
+3
+3 2 1
+2
+6 7
+</pre>
+<pre>
+25
+10
+9
+14
+</pre>
+  </details>
+
+  <p>Для первого набора входных данных мы можем поменять местами a1 с a4, чтобы получить массив [5,1,4,2,3], который имеет значение max(5)+max(5,1)+max(5,1,4)+max(5,1,4,2)+max(5,1,4,2,3)=25.</p>
+
+  <p>Для второго набора входных данных текущее значение массива равно max(5)+max(5,1)=10. Если мы поменяем местами a1 и a2, то a будет равно [1,5], что имеет значение max(1)+max(1,5)=6, что означает, что лучший вариант — не выполнять обмен.</p>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Чтобы все префиксы массива были максимальными, нужно максимальное значение поставить первым элементом массива. Тогда сумма максимумов всех префиксов будет равна произведению максимального элемента массива на его длину.</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    cin >> n;
+
+    int maxi = 1; // максимальный элемент массива
+    int in; // входной элемент массива
+    for (int i = 0; i &lt; n; i++) {
+      cin >> in;
+      if (in > maxi) {
+        maxi = in;
+      }
+    }
+
+    cout &lt;&lt; n * maxi &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача C. Сдвинутый MEX -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Сдвинутый MEX</h3>
+
+  <div class="time-memory">(Время 2с. Память 256мб)</div>
+
+  <p>Вам дан массив из n целых чисел a1, a2, …, an. Вам разрешено выполнить следующую операцию один раз.</p>
+
+  <p>Выберите целое число x (которое может быть отрицательным), и для каждого значения i (1≤i≤n) присвойте ai=ai+x.</p>
+
+  <p>Например, если a=[1,3,4,2], и вы выполните операцию с x=3, то a теперь равен [4,6,7,5].</p>
+
+  <p>Выведите максимальное возможное значение MEX(a) * после выполнения операции.</p>
+
+  <p>* MEX(a) определяется как наименьшее неотрицательное целое число, которое отсутствует в массиве. Например, MEX([1,2,0,5]) равно 3, а MEX([1,2,4,9]) равно 0.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1≤t≤1000) — количество наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит одно целое число n (1≤n≤3000) — длину массива a.</p>
+
+  <p>Вторая строка содержит n целых чисел a1, a2, …, an (-10<sup>9</sup> ≤ ai ≤ 10<sup>9</sup>) — массив a.</p>
+
+  <p>Гарантируется, что сумма n по всем наборам входных данных не превышает 3000.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите максимальное возможное значение MEX(a) после выполнения операции.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+6
+1
+4
+5
+0 1 1 2 3
+2
+1 1
+4
+4 2 3 6
+5
+2 4 1 0 -1
+6
+-1 1 2 3 5 6
+</pre>
+<pre>
+1
+4
+1
+3
+4
+3
+</pre>
+  </details>
+  <p>Для первого набора входных данных выполнение операции с x = -4 делает a=[0], и MEX([0])=1.</p>
+
+  <p>Для второго набора входных данных MEX уже равен 4, что является максимальным возможным значением, поэтому мы можем выполнить операцию с x=0, что не изменит массив.</p>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Поскольку всю последовательность мы можем сдвинуть влево или вправо на любое расстояние, то максимально возможное значение минимального целого неотрицательного числа, которого нет в последовательности будет равно длине максимальной последовательности подряд идущих чисел.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    cin >> n;
+
+    vector&lt;int&gt; A(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+
+    sort(A.begin(), A.end());
+    int dlin = 1;
+    int max_dlin = 1;
+
+    // найдем максимальную длину подряд идущих чисел
+    for (int i = 1; i &lt; n; i++) {
+      if (A[i] == A[i - 1] + 1) {
+        dlin++;
+      } else if (A[i] > A[i - 1] + 1) {
+        max_dlin = max(max_dlin, dlin);
+        dlin = 1;
+      } else {
+        max_dlin = max(max_dlin, dlin);
+      }
+    }
+    max_dlin = max(max_dlin, dlin);
+
+    cout &lt;&lt; max_dlin &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача D. OutOfMemoryError -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. OutOfMemoryError</h3>
+
+  <div class="time-memory">(Время 2с. Память 256мб)</div>
+
+  <p>У Бесси есть массив из n целых чисел a1, a2, …, an. Бесси выполняет m операций над массивом. i-я операция устанавливает abi=abi+ci.</p>
+
+  <p>К сожалению, из-за растущих затрат на оперативную память компьютер Бесси имеет ограниченную память, и каждый раз, когда любой элемент массива превышает h, её компьютер зависает, и каждый элемент массива сбрасывается на своё исходное значение.</p>
+
+  <p>После выполнения всех операций выведите массив a.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит три целых числа n,m,h (1≤n,m≤2⋅10⁵, 1≤h≤10⁹) — длину массива a, количество выполненных операций и максимальное значение, которое компьютер Бесси может хранить без зависания.</p>
+
+  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤h) — массив a.</p>
+
+  <p>Следующие m строк содержат по два целых числа bi,ci (1≤bi≤n, 0≤ci≤10⁹) — операции, которые Бесси выполняет над массивом.</p>
+
+  <p>Гарантируется, что сумма n и сумма m по всем наборам входных данных не превышает 2⋅10⁵.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите массив a после выполнения всех операций.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+3
+3 4 5
+1 2 1
+1 4
+2 4
+3 3
+2 0
+5 3 1
+1 1 1 1 1
+1 1
+1 1
+2 1
+4 4 1
+1 0 0 0
+1 1
+4 4
+3 3
+4 4
+</pre>
+<pre>
+1 2 4
+1 1 1 1 1
+1 0 0 0
+</pre>
+  </details>
+
+  <p>Для первого набора входных данных массив a изменяется следующим образом:</p>
+  <ul>
+    <li>Перед всеми операциями, a=[1,2,1].</li>
+    <li>После первой операции, a=[5,2,1].</li>
+    <li>После второй операции, a=[5,6,1], но так как 6>h, компьютер зависает, и a=[1,2,1].</li>
+    <li>После третьей операции, a=[1,2,4].</li>
+    <li>После четвертой операции, a=[1,2,4].</li>
+  </ul>
+  <p>Для третьего набора входных данных каждая операция вызывает зависание компьютера, поэтому a=[1,0,0,0].</p>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Храним оригинальный массив, а ответ будем собирать в измененном массиве.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+int main() {
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    int m; // число операций
+    int h; // максимальное значение
+    cin >> n >> m >> h;
+
+    vector&lt;int&gt; A(n + 1); // оригинальный массив
+    vector&lt;int&gt; B(n + 1); // измененный массив
+    for (int i = 1; i &lt;= n; i++) {
+      cin >> A[i];
+      B[i] = A[i];
+    }
+
+    queue&lt;int&gt; q; // очередь изменений
+    int pos; // индекс массива
+    int c; // слагаемое
+
+    for (int i = 0; i &lt; m; i++) {
+      // считываем каждую операцию
+      cin >> pos >> c;
+
+      B[pos] = B[pos] + c;
+      q.push(pos);
+      if (B[pos] > h) {
+        while (q.size() > 0) {
+          pos = q.front();
+          q.pop();
+          B[pos] = A[pos];
+        }
+      }
+    }
+
+    for (int i = 1; i &lt;= n; i++) {
+      cout &lt;&lt; B[i] &lt;&lt; ' ';
+    }
+    cout &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача E. Роботизированная спешка -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. Роботизированная спешка</h3>
+
+  <div class="time-memory">(Время 3с. Память 256мб)</div>
+
+  <p>Существует бесконечно длинная числовая прямая.</p>
+
+  <p>На числовой прямой находятся n роботов и m шипов, каждый из которых расположен в определенной точке на числовой прямой. i-й робот находится на позиции ai, а i-й шип расположен на позиции bi. Если робот касается шипа, он погибает.</p>
+
+  <p>Роботам передаются k инструкций, каждая из которых заключается в том, чтобы либо переместиться влево на одну единицу, либо переместиться вправо на одну единицу.</p>
+
+  <p>Для каждого значения i (1≤i≤k) выведите, сколько роботов все еще живы после обработки первых i инструкций.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит три целых числа n,m,k (1≤n,m,k≤2⋅10⁵) — количество роботов, шипов и инструкций соответственно.</p>
+
+  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤10⁹) — расположение роботов. Гарантируется, что все элементы a различны.</p>
+
+  <p>Третья строка содержит m целых чисел b1,b2,…,bm (0≤bi≤10⁹) — расположение шипов. Гарантируется, что все элементы b различны.</p>
+
+  <p>Четвертая строка содержит строку длины k — инструкции, переданные роботам. Каждый символ является либо L, представляющим инструкцию переместиться влево, либо R, представляющим инструкцию переместиться вправо.</p>
+
+  <p>Гарантируется, что сумма каждого из n,m,k по всем наборам входных данных не превышает 2⋅10⁵.</p>
+
+  <p>Дополнительное ограничение: гарантируется, что нет роботов и шипов на одной позиции.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Выведите k целых чисел, где i-е целое число указывает, сколько роботов живы после обработки первых i инструкций.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+3
+2 1 3
+0 1
+2
+LRR
+2 3 3
+2 4
+1 3 5
+LRL
+3 2 3
+1 3 7
+9 6
+RRL
+</pre>
+<pre>
+2 2 1
+0 0 0
+3 2 2
+</pre>
+  </details>
+  <p>Для первого набора входных данных:</p>
+
+  <p>Первый робот переместится на позиции 0→-1→0→1, так что он не погибнет.</p>
+  <p>Второй робот переместится на позиции 1→0→1→2, так что он погибнет после обработки третьей инструкции, так как на позиции 2 находится шип.</p>
+  <p>Для второго набора входных данных оба робота погибнут после одного перемещения.</p>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n; // число роботов
+    int m; // число шипов
+    int k; // число инструкций
+    cin >> n >> m >> k;
+
+    vector&lt;int&gt; A(n); // роботы
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+
+    vector&lt;int&gt; B(m); // шипы
+    for (int i = 0; i &lt; m; i++) {
+      cin >> B[i];
+    }
+
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end());
+    int r = 0; // указатель на робота
+    int s = 0; // указатель на шип
+    vector&lt;int&gt; L; // сколько шагов влево до шипа
+    vector&lt;int&gt; R; // сколько шагов вправо до шипа
+
+    // пока есть роботы
+    while (A.size() > r) {
+
+      // для каждого робота сохраним
+      // шаги вправо до шипа
+      while ( (A.size() > r) && (B[s] > A[r])) {
+        R.push_back(B[s] - A[r]);
+        r++;
+      }
+
+      // для каждого робота сохраним
+      // шаги влево до шипа
+      int dif = 0;
+      while ( (A.size() > r) && (A[r] > B[s])) {
+        dif = A[r] - B[s];
+        s++;
+      }
+      if (dif) {
+        L.push_back(dif);
+      }
+    }
+
+    sort(L.begin(), L.end());
+    sort(R.begin(), R.end());
+
+    int live = n; // число живых роботов
+    int move_l = 0; // число движений влево
+    int move_r = 0; // число движений вправо
+    int pl = 0; // указатель на шаги влево до шипа
+    int pr = 0; // указатель на шаги вправо до шипа
+    vector&lt;int&gt; Res(k + 1); // оставшиеся роботы
+
+    for (int i = 1; i &lt;= k; i++) {
+      char move; // ход
+      cin >> move;
+
+      // изменяем число движений влево и вправо
+      if (move == 'L') {
+        move_l++;
+        move_r--;
+      } else {
+        move_l--;
+        move_r++;
+      }
+
+      // если робот левее начальной позиции
+      // то проверяем шаги влево до шипа
+      if (move_l > 0) {
+        while ( (L.size() > pl) && (move_l >= L[pl]) ) {
+          live--;
+          pl++;
+        }
+      }
+
+      // если робот правее начальной позиции
+      // то проверяем шаги вправо до шипа
+      if (move_r > 0) {
+        while ( (R.size() > pr) && (move_r >= R[pr]) ) {
+          live--;
+          pr++;
+        }
+      }
+
+      Res[i] = live;
+    }
+
+    for (int i = 1; i &lt;= k; i++) {
+      cout &lt;&lt; Res[i] &lt;&lt; ' ';
+    }
+    cout &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача F. BattleCows -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F. BattleCows</h3>
+
+  <div class="time-memory">(Время 2с. Память 256мб)</div>
+
+  <p>Фермер Джон отправляет корову участвовать в Международной Коровьей Олимпиаде, но ему слишком лень писать задачи для конкурса, поэтому он делает следующее самое разумное: организует турнир по борьбе!</p>
+
+  <p>У фермера Джона есть 2<sup>n</sup> коров, стоящих в ряд, при этом i-я корова имеет уровень навыка ai. Каждая корова начинает в стопке, содержащей только её саму, и уровень навыка стопки равен XOR-сумме∗ уровней навыка всех коров в ней. Например, если стопка состоит из коров с уровнями навыка 1,3,9 снизу вверх, то уровень навыка стопки равен 1⊕3⊕9=11.</p>
+
+  <p>Следующий процесс повторяется до тех пор, пока не останется только одна стопка.</p>
+  <ul>
+    <li>Каждая стопка на нечётной позиции (1-я, 3-я и т.д.) начинает бой со стопкой справа от неё. Например, 1-я стопка будет сражаться с 2-й стопкой, 3-я стопка будет сражаться с 4-й стопкой и т.д.</li>
+    <li>Стопка с более высоким уровнем навыка выиграет матч, при равенстве выигрывает левая стопка.</li>
+    <li>Выигравшая стопка перепрыгнет на верх проигравшей стопки и сдвинет себя так, чтобы не осталось пробелов от побеждённых стопок.</li>
+  </ul>
+  <p>Чтобы сделать это более захватывающим, фермер Джон создал q   зелий, так что i-е зелье делает уровень навыка коровы, которая его выпьет, равным ci. Фермер Джон хочет протестировать свои зелья на коровах, поэтому он даёт i-е зелье корове bi, а затем проводит турнир. Для каждого испытания фермер Джон хочет знать, сколько коров находится выше коровы, которая получила зелье, в финальной стопке.</p>
+
+  <p>Зелья фермера Джона быстро теряют свою силу, поэтому, когда турнир заканчивается, корова, которая получила зелье, вернёт свой уровень навыка к тому, каким он был изначально. Другими словами, все запросы независимы.</p>
+
+  <p>* XOR-сумма массива x1,x2,…,xy равна x1⊕x2⊕x3…xy-1⊕xy, где ⊕ обозначает побитовую операцию XOR.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>
+
+  <p>Первая строка каждого набора содержит два целых числа n и q (1≤n≤18, 1≤q≤2⋅10⁵) — где 2<sup>n</sup> равно количеству коров в турнире, а q — количество зелий.</p>
+
+  <p>Вторая строка содержит 2<sup>n</sup> целых чисел a1,a2,…,a2n (1≤ai≤2³⁰) — уровни навыка коров.</p>
+
+  <p>Следующие q строк содержат по два целых числа bi и ci (1≤bi≤2<sup>n</sup>, 1≤ci≤2³⁰) — индекс коровы, которая получает зелье, и новый уровень навыка коровы.</p>
+
+  <p>Гарантируется, что сумма 2<sup>n</sup> по всем наборам не превышает 2¹⁸=262144, а сумма q по всем наборам не превышает 2⋅10⁵.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого испытания выведите, сколько коров находится выше коровы, которая получила зелье, в финальной стопке.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+4
+2 2
+1 3 5 7
+1 1
+4 8
+1 2
+1 3
+1 4
+1 2
+3 4
+1 8 3 10 2 5 7 1
+5 3
+8 12
+1 9
+2 1
+2 1
+1 2 3 4
+3 1
+</pre>
+<pre>
+1
+0
+0
+1
+5
+0
+2
+3
+1
+</pre>
+  </details>
+
+  <p>Для первого раунда первого примера уровни навыка коров не меняются, и матчи проходят следующим образом:</p>
+  <ul>
+    <li>Коровы 1 и 2 сражаются. Поскольку уровень навыка коровы 2 выше, чем уровень навыка коровы 1, корова 2 выигрывает бой, поэтому её стопка теперь содержит коров 1,2 в этом порядке, а уровень навыка стопки теперь 3⊕1=2.</li>
+    <li>Коровы 3 и 4 сражаются. Поскольку уровень навыка коровы 4 выше, чем уровень навыка коровы 3, корова 4 выигрывает бой, поэтому её стопка теперь содержит коров 3,4 в этом порядке, а уровень навыка стопки теперь 7⊕5=2.</li>
+    <li>Две оставшиеся стопки сражаются. Поскольку уровень навыка первой стопки равен уровню навыка второй стопки, первая стопка выигрывает бой, так как её индекс ниже, чем у второй стопки, поэтому финальная стопка содержит коров 3,4,1,2 в этом порядке, а её уровень навыка теперь 2⊕2=0.</li>
+  </ul>
+  <p>Поскольку мы дали зелье корове 1, наш ответ равен 1, так как над коровой 1 находится одна корова.</p>
+  <p>Визуализация раунда показана ниже.</p>
+
+  <p>Для второго раунда первого примера уровень навыка коровы 4 теперь 8, и матчи проходят следующим образом:</p>
+  <ul>
+    <li>Коровы 1 и 2 сражаются. Поскольку уровень навыка коровы 2 выше, чем уровень навыка коровы 1, корова 2 выигрывает бой, поэтому её стопка теперь содержит коров 1,2 в этом порядке, а уровень навыка стопки теперь 3⊕1=2.</li>
+    <li>Коровы 3 и 4 сражаются. Поскольку уровень навыка коровы 4 выше, чем уровень навыка коровы 3, корова 4 выигрывает бой, поэтому её стопка теперь содержит коров 3,4 в этом порядке, а уровень навыка стопки теперь 8⊕5=13.</li>
+    <li>Две оставшиеся стопки сражаются. Поскольку уровень навыка второй стопки выше, чем уровень навыка первой стопки, вторая стопка выигрывает бой, поэтому финальная стопка содержит коров 1,2,3,4 в этом порядке, а её уровень навыка теперь 2⊕15=13.</li>
+  </ul>
+  <p>Поскольку мы дали зелье корове 4, наш ответ равен 0, так как над коровой 4 нет коров.</p>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n, q;
+    cin >> n >> q;
+    vector&lt;int&gt; a(1 &lt;&lt; n);
+    for (int i = 0; i &lt; (1 &lt;&lt; n); i++) cin >> a[i];
+    vector&lt;int&gt; cur((1 &lt;&lt; n) * 4);
+    vector&lt;int&gt; len((1 &lt;&lt; n) * 4);
+    vector&lt;int&gt; id(1 &lt;&lt; n);
+
+    function&lt;void(int,int,int)&gt; dfs = [&] (int v, int l, int r) {
+      len[v] = r - l;
+      if (r - l == 1) {
+        id[l] = v;
+        cur[v] = a[l];
+      } else {
+        int m = (l + r) / 2;
+        dfs(v * 2 + 1, l, m);
+        dfs(v * 2 + 2, m, r);
+        cur[v] = cur[v * 2 + 1] ^ cur[v * 2 + 2];
+      }
+    };
+
+    function&lt;void(int,int,int,int,int)&gt; upd = [&] (int v, int l, int r, int i, int x) {
+      if (r - l == 1) {
+        cur[v] = x;
+      } else {
+        int m = (l + r) / 2;
+        if (i &lt; m) {
+          upd(v * 2 + 1, l, m, i, x);
+        } else {
+          upd(v * 2 + 2, m, r, i, x);
+        }
+        cur[v] = (cur[v * 2 + 1] ^ cur[v * 2 + 2]);
+      }
+    };
+
+    int l = (1 &lt;&lt; n);
+    dfs(0, 0, (1 &lt;&lt; n));
+
+    while (q--) {
+      int b, c;
+      cin >> b >> c;
+      b--;
+      upd(0, 0, l, b, c);
+      int v = id[b];
+      int ans = 0;
+      while (v) {
+        int me = (v);
+        v = (v - 1) / 2;
+        if (v * 2 + 1 == me) {
+          if (cur[v * 2 + 1] &lt; cur[v * 2 + 2]) {
+            ans += len[v * 2 + 2];
+          }
+        } else {
+          if (cur[v * 2 + 1] >= cur[v * 2 + 2]) {
+            ans += len[v * 2 + 1];
+          }
+        }
+      }
+      upd(0, 0, l, b, a[b]);
+      cout &lt;&lt; ans &lt;&lt; '\\n';
+    }
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача G. Смешивание MEXов -->
+<article class="article">
+  <div class="anchor" id="t7"></div>
+  <h3>Задача G. Смешивание MEXов</h3>
+
+  <div class="time-memory">(Время 2с. Память 256мб)</div>
+
+  <p>Вам даны n массивов a1,a2,…,an.</p>
+
+  <p>Следующая операция выполняется ровно один раз:</p>
+  <ul>
+    <li>Выберите любой массив из a1,a2,…,an. Предположим, вы выбрали массив ai (1≤i≤n).</li>
+    <li>Выберите любой элемент в массиве ai. Предположим, вы выбрали j-й элемент массива ai, обозначенный как ai,j (1≤j≤|ai|, где |ai| обозначает длину массива ai).</li>
+    <li>Выберите любой другой массив из a1,a2,…an который не является ai. Предположим, вы выбрали ak (1≤k≤n,k≠i).</li>
+    <li>Добавьте ai,j в конец массива ak. Затем удалите ai,j из ai.</li>
+    <li>Значение этой операции (i,j,k) определяется как сумма MEX каждого массива после выполнения операции. Более формально, значение операции после выполнения операции равно ∑ni=1MEX(ai).</li>
+  </ul>
+
+  <p>Найдите сумму значений всех возможных различных независимых операций. Две операции различны, если упорядоченная тройка целых чисел (i,j,k) различна.</p>
+
+  <p>MEX(a) определяется как наименьшее неотрицательное целое число, которое отсутствует в массиве. Например, MEX([1,2,0,5]) равно 3, а MEX([1,2,4,9]) равно 0.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит одно целое число n (2≤n≤2⋅10⁵) — количество массивов.</p>
+
+  <p>Следующие n строк начинаются с li(1≤li≤10⁵) — длины i-го массива — затем содержат li целых числа a1,a2,…,ali (0≤aij≤10⁶) — массив ai.</p>
+
+  <p>Гарантируется, что сумма li по всем наборам входных данных не превышает 2⋅10⁵.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите сумму значений всех возможных различных операций.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+6
+2
+1 0
+2 1 2
+3
+1 1
+2 2 3
+3 4 5 6
+5
+4 1 7 8 10
+2 5 6
+2 0 7
+2 6 6
+2 6 8
+2
+1 3
+3 0 1 2
+2
+6 0 0 1 2 2 3
+3 0 2 3
+10
+1 0
+9 7 8 0 1 5 6 4 3 2
+8 4 3 8 6 2 5 0 1
+7 2 3 0 1 0 4 0
+2 3 1
+9 2 0 5 4 1 3 0 0 0
+7 6 3 2 4 1 8 0
+5 3 2 4 1 0
+4 0 3 1 1
+3 0 3 2
+</pre>
+<pre>
+6
+0
+50
+8
+43
+19202
+</pre>
+  </details>
+
+  <p>Для первого набора входных данных у нас есть 3 возможные различные операции:</p>
+  <ul>
+    <li>i=1,j=1,k=2: Массивы теперь [] и [0,1,2], которые имеют mex равный 0 и 3 соответственно, так что значение операции равно 3.</li>
+    <li>i=2,j=1,k=1: Массивы теперь [0,1] и [2], которые имеют mex равный 2 и 0 соответственно, так что значение операции равно 2.</li>
+    <li>i=2,j=2,k=1: Массивы теперь [0,2] и [1], которые имеют mex равный 1 и 0 соответственно, так что значение операции равно 1.</li>
+  </ul>
+  <p>Для второго набора входных данных, поскольку ни один массив не содержит нуля, значение всех операций будет 0.</p>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n;
+    cin >> n;
+    vector&lt;int&gt; l(n);
+    vector&lt;vector&lt;int&gt; &gt; a(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> l[i];
+      a[i].resize(l[i]);
+      for (int &x : a[i]) cin >> x;
+      sort(a[i].begin(), a[i].end());
+    }
+    vector&lt;int&gt; v(n), v_new(n);
+    for (int i = 0; i &lt; n; i++) {
+      int mex = 0;
+      for (int x : a[i]) {
+        if (x == mex) mex++;
+      }
+      v[i] = mex;
+      mex++;
+      for (int x : a[i]) {
+        if (x == mex) mex++;
+      }
+      v_new[i] = mex;
+    }
+    ll score = 0;
+    for (int i = 0; i &lt; n; i++) {
+      score += v[i];
+    }
+    ll ans = 0;
+    map&lt;int, int&gt; score_delta;
+    for (int i = 0; i &lt; n; i++) {
+      score_delta[v[i]] += v_new[i] - v[i];
+    }
+    for (int i = 0; i &lt; n; i++) {
+      int my_mex = 0;
+      map&lt;int, int&gt; mp;
+      map&lt;int, int&gt; lst;
+      vector&lt;int&gt; l(a[i].size());
+      for (int j = (int) a[i].size() - 1; j >= 0; j--) {
+        if (mp.count(a[i][j] + 1)) {
+          l[j] = l[mp[a[i][j] + 1]] + 1;
+        } else {
+          l[j] = 1;
+        }
+        if (!lst.count(a[i][j])) {
+          lst[a[i][j]] = j;
+        }
+        mp[a[i][j]] = j;
+      }
+      int ptr = 0;
+      for (int x : a[i]) {
+        ll new_score = (n - 1) * (ll) (score - v[i]) + score_delta[x];
+        int cur = lst[my_mex];
+        int new_mex = my_mex;
+        if (cur > ptr) {
+          new_mex += l[cur];
+        }
+        new_score += new_mex * (ll) (n - 1);
+        ans += new_score;
+        if (x == my_mex) my_mex++;
+        ptr++;
+      }
+    }
+    cout &lt;&lt; ans &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача H. BattleCows 2 -->
+<article class="article">
+  <div class="anchor" id="t8"></div>
+  <h3>Задача H. BattleCows 2</h3>
+
+  <div class="time-memory">(Время 3с. Память 256мб)</div>
+
+  <p>Фермер Джон хочет провести еще один турнир с n коровами, где i-я корова имеет уровень навыка ai. Следующий процесс повторяется, пока в очереди не останется только одна корова.</p>
+  <ul>
+    <li>Первая корова в очереди сражается со второй коровой в очереди, и корова с более высоким уровнем навыка побеждает. Если есть ничья, побеждает первая корова.</li>
+    <li>Уровень навыка победившей коровы устанавливается равным x+y, где x — уровень навыка победившей коровы, а y — уровень навыка проигравшей коровы.</li>
+    <li>Проигравшая корова покидает очередь.</li>
+  </ul>
+
+  <p>Однако, чтобы сохранить точность к настоящему соревнованию USACOW, корова может жульничать до k раз. Это означает, что даже если она проигрывает матч, фермер Джон будет считать, что проигравшая корова выиграла матч, что означает, что уровень навыка проигравшей коровы будет установлен равным x+y, где x — уровень навыка победившей коровы, а y — уровень навыка проигравшей коровы, и победившая корова покинет очередь.</p>
+
+  <p>Позиция x хороша для коровы i, если корова i может быть удалена из своего первоначального положения и вставлена на индекс x без изменения порядка других коров и быть единственной коровой, оставшейся в очереди, когда турнир закончится, при условии, что ни одна другая корова не жульничает.</p>
+
+  <p>Для каждой коровы в очереди вычислите количество хороших позиций для этой коровы.</p>
+
+  <h4>Входные данные</h4>
+  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит два целых числа n и k (2≤n≤2⋅10⁵, 0 ≤ k &lt; n) — количество коров и количество жульничеств, которые может использовать корова.</p>
+
+  <p>Вторая строка содержит n целых чисел a1,a2,…,an (1≤ai≤10⁹) — уровни навыка коров.</p>
+
+  <p>Гарантируется, что сумма n по всем наборам входных данных не превышает 2⋅10⁵.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите n целых чисел, где i-е целое число обозначает количество хороших позиций для коровы i.</p>
+
+  <details>
+    <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+7
+2 0
+2 1
+2 0
+1 1
+3 1
+1 1 3
+3 0
+2 1 1
+3 1
+1 3 1
+4 1
+1 2 1 3
+7 2
+1 3 3 17 39 3 12
+</pre>
+<pre>
+2 0
+1 1
+2 2 3
+2 0 0
+3 3 2
+4 4 4 4
+4 6 6 7 7 5 7
+</pre>
+  </details>
+
+  <p>Для первого набора входных данных корова 2 проиграет, независимо от того, где она будет расположена, а корова 1 выиграет, независимо от того, где она будет расположена.</p>
+
+  <p>Для второго набора входных данных обе коровы могут выиграть, находясь на позиции 1, но не могут на позиции 2, что означает, что у каждой из них есть 1 хорошая позиция.</p>
+
+  <p>Для третьего набора входных данных давайте посмотрим на корову 1.</p>
+  <ul>
+    <li>Если корова 1 будет на позиции 1, то она выиграет свой первый матч, сделав ее уровень навыка равным 2, и сможет жульничать, чтобы выиграть свой второй матч.</li>
+    <li>Если корова 1 будет на позиции 2, то ей придется жульничать, чтобы выиграть свой первый матч, но затем она проиграет свой второй матч.</li>
+    <li>Если корова 1 будет на позиции 3, то ей придется жульничать, чтобы выиграть свой первый матч, и у нее не будет больше матчей.</li>
+  </ul>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n, k;
+    cin >> n >> k;
+    vector&lt;ll&gt; a(n);
+    vector&lt;ll&gt; p(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> a[i];
+      p[i] = (i ? p[i - 1] : 0ll) + a[i];
+    }
+    vector&lt;int&gt; els;
+    for (int t = 0; t &lt; 32; t++) {
+      vector&lt;int&gt; arr;
+      for (int i = 0; i &lt; n; i++) {
+        if (a[i] >= (1ll &lt;&lt; t) && a[i] &lt; (1ll &lt;&lt; (t + 1))) {
+          if ((int) arr.size() &lt;= 2) {
+            arr.push_back(i);
+          }
+        }
+      }
+      for (int x : arr) els.push_back(x);
+    }
+
+    sort(els.begin(), els.end());
+    for (int i = 0; i &lt; n; i++) {
+      vector&lt;pair&lt;int, int&gt; &gt; evs;
+      auto add = [&] (int l, int r, int cnt) {
+        evs.push_back({l, 1});
+        evs.push_back({r + 1, -1});
+      };
+      auto real_s = [&] (int j) {
+        if (j &lt; 0) return 0ll;
+        ll cur = p[j];
+        if (i &lt;= j) cur -= a[i];
+        return cur;
+      };
+      for (int j : els) {
+        if (j != i) {
+          ll total = real_s(j - 1) + a[i];
+          if (a[j] > total) {
+            int real_pos = j;
+            if (i &lt;= j) real_pos--;
+            add(0, real_pos, 1);
+          }
+        }
+      }
+      auto if_pos = [&] (int x) {
+        int pref = x;
+        if (i &lt;= x) pref++;
+        return real_s(pref - 1);
+      };
+      int l = -1, r = n;
+      while (l &lt; r - 1) {
+        int mid = (l + r) / 2;
+        if (if_pos(mid) >= a[i]) {
+          r = mid;
+        } else {
+          l = mid;
+        }
+      }
+      add(r, n - 1, 1);
+      evs.push_back({0, 0});
+      evs.push_back({n, 0});
+      sort(evs.begin(), evs.end());
+      int bal = 0;
+      int ans = 0;
+      for (int i = 0; i &lt; (int) evs.size(); i++) {
+        bal += evs[i].second;
+        if (i + 1 &lt; (int) evs.size() && evs[i + 1].first != evs[i].first) {
+          if (bal &lt;= k) {
+            ans += evs[i + 1].first - evs[i].first;
+          }
+        }
+      }
+      cout &lt;&lt; ans &lt;&lt; ' ';
+    }
+    cout &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 `;
@@ -128514,6 +129664,46 @@ int main() {
 + 7
 </pre>
   <code>5 7 8 </code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число жильцов
+  int k; // число записей
+  cin >> n >> k;
+  set&lt;int&gt; A; // жильцы которые вышли
+  set&lt;int&gt; B; // жильцы которые пришли
+
+  while (k--) {
+    char sign; // - вышел, + пришел
+    cin >> sign;
+
+    int num; // номер жильца
+    cin >> num;
+    if (sign == '-') {
+      A.insert(num);
+      while (B.size() > 0) {
+        A.erase(*B.begin());
+        B.erase(B.begin());
+      }
+    } else {
+      B.insert(num);
+    }
+  }
+
+  while (A.size() > 0) {
+    cout &lt;&lt; *A.begin() &lt;&lt; ' ';
+    A.erase(A.begin());
+  }
+}
+</pre>
   </details>
 </article>
 

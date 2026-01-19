@@ -157,6 +157,7 @@ import html2162     from './../pages/elem-2162-Round1059.html';
 import html2166     from './../pages/elem-2166-Round1064.html';
 import html2167     from './../pages/elem-2167-Round1062.html';
 import html2171     from './../pages/elem-2171-Round1065.html';
+import html2185     from './../pages/elem-2185-Round1074.html';
 
 export const pages = [
   [html1, 1],
@@ -317,4 +318,5 @@ export const pages = [
   html2166,
   html2167,
   html2171,
+  html2185,
 ];

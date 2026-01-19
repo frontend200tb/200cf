@@ -862,6 +862,46 @@ int main() {
 </pre>
   <code>5 7 8 </code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число жильцов
+  int k; // число записей
+  cin >> n >> k;
+  set&lt;int&gt; A; // жильцы которые вышли
+  set&lt;int&gt; B; // жильцы которые пришли
+
+  while (k--) {
+    char sign; // - вышел, + пришел
+    cin >> sign;
+
+    int num; // номер жильца
+    cin >> num;
+    if (sign == '-') {
+      A.insert(num);
+      while (B.size() > 0) {
+        A.erase(*B.begin());
+        B.erase(B.begin());
+      }
+    } else {
+      B.insert(num);
+    }
+  }
+
+  while (A.size() > 0) {
+    cout &lt;&lt; *A.begin() &lt;&lt; ' ';
+    A.erase(A.begin());
+  }
+}
+</pre>
+  </details>
 </article>
 
 
