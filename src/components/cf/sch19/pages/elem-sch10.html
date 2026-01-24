@@ -42,6 +42,42 @@
   <div class="anchor" id="t3"></div>
   <h3>Задача C. Плюс один на подмножестве</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    cin >> n;
+
+    int first; // первый элемент массива
+    cin >> first;
+    int mina = first;
+    int maxa = first;
+    int in = 0; // следующий элемент массива
+
+    for (int i = 1; i &lt; n; i++) {
+      cin >> in;
+      if (mina > in) {
+        mina = in;
+      }
+      if (in > maxa) {
+        maxa = in;
+      }
+    }
+
+    cout &lt;&lt; maxa - mina &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
