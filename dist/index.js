@@ -49534,7 +49534,7 @@ RRL
   <p>Для второго набора входных данных оба робота погибнут после одного перемещения.</p>
 
   <details>
-    <summary>Решение</summary>
+    <summary>Решение Превышено ограничение времени на тесте 2</summary>
     <p>Если слева от робота нет шипа, то при движении влево он никогда не погибнет. Если справа от робота нет шипа, то при движении вправо он никогда не погибнет.</p>
     <p>Отсортируем роботов и шипы на прямой. Используем метод двух указателей. Вначале указатель r указывает на первого робота, а указатель s указывает на первый шип. Используем два линейных прохода.</p>
     <p>Первый проход. Линейно проходим по всем роботам, подсчитывая расстояние от каждого робота до ближайшего шипа слева и справа.</p>
@@ -49749,7 +49749,7 @@ int main() {
   <p>Поскольку мы дали зелье корове 4, наш ответ равен 0, так как над коровой 4 нет коров.</p>
 
   <details>
-    <summary>Решение</summary>
+    <summary>Решение ошибка компиляции</summary>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -57130,6 +57130,42 @@ var code = `<article class="article">
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Следующий раунд</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число участников
+  int k; // число баллов
+  cin >> n >> k;
+
+  int cnt = 0; // число участников в след. раунде
+  int bk; // число баллов k-го места
+
+  for (int i = 1; i &lt;= n; i++) {
+    int b; // число баллов
+    cin >> b;
+    if (b > 0) {
+      if (i &lt; k) {
+        cnt++;
+      }
+      if (i == k) {
+        bk = b;
+        cnt++;
+      }
+      if (i > k && b == bk) {
+        cnt++;
+      }
+    }
+  }
+
+  cout &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
 
 
@@ -57138,6 +57174,32 @@ var code = `<article class="article">
   <div class="anchor" id="t2"></div>
   <h3>Задача B. Счастливое деление</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // от 1 до 1000
+  cin >> n;
+
+  bool flag = false;
+  if (n % 4 == 0 or n % 7 == 0 or n % 47 == 0 or n % 74 == 0 or
+    n % 447 == 0 or n % 474 == 0 or n % 477 == 0 or
+    n % 744 == 0 or n % 747 == 0 or n % 774 == 0) {
+    flag = true;
+  }
+
+  if (flag) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -59764,6 +59826,42 @@ var code = `<article class="article">
   <div class="anchor" id="t2"></div>
   <h3>Задача B. Следующий раунд</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число участников
+  int k; // число баллов
+  cin >> n >> k;
+
+  int cnt = 0; // число участников в след. раунде
+  int bk; // число баллов k-го места
+
+  for (int i = 1; i &lt;= n; i++) {
+    int b; // число баллов
+    cin >> b;
+    if (b > 0) {
+      if (i &lt; k) {
+        cnt++;
+      }
+      if (i == k) {
+        bk = b;
+        cnt++;
+      }
+      if (i > k && b == bk) {
+        cnt++;
+      }
+    }
+  }
+
+  cout &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
 
 

@@ -26,6 +26,42 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Следующий раунд</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число участников
+  int k; // число баллов
+  cin >> n >> k;
+
+  int cnt = 0; // число участников в след. раунде
+  int bk; // число баллов k-го места
+
+  for (int i = 1; i &lt;= n; i++) {
+    int b; // число баллов
+    cin >> b;
+    if (b > 0) {
+      if (i &lt; k) {
+        cnt++;
+      }
+      if (i == k) {
+        bk = b;
+        cnt++;
+      }
+      if (i > k && b == bk) {
+        cnt++;
+      }
+    }
+  }
+
+  cout &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
 
 
@@ -34,6 +70,32 @@
   <div class="anchor" id="t2"></div>
   <h3>Задача B. Счастливое деление</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // от 1 до 1000
+  cin >> n;
+
+  bool flag = false;
+  if (n % 4 == 0 or n % 7 == 0 or n % 47 == 0 or n % 74 == 0 or
+    n % 447 == 0 or n % 474 == 0 or n % 477 == 0 or
+    n % 744 == 0 or n % 747 == 0 or n % 774 == 0) {
+    flag = true;
+  }
+
+  if (flag) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
