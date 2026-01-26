@@ -12786,7 +12786,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: () => (/* binding */ asideThemes)
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)'];
+var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)', '2193 Round 1076 (Div. 3)'];
 
 /***/ }),
 
@@ -12960,6 +12960,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/pages/elem-2167-Round1062.html");
 /* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/pages/elem-2171-Round1065.html");
 /* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/pages/elem-2185-Round1074.html");
+/* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/pages/elem-2193-Round1076.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -13120,7 +13121,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var pages = [[_pages_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_15__["default"], 34], [_pages_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_16__["default"], 38], _pages_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_18__["default"], _pages_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_19__["default"], _pages_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_21__["default"], _pages_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_22__["default"], _pages_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_38__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_39__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_48__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_49__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_51__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_52__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_53__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__["default"]];
+
+var pages = [[_pages_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_15__["default"], 34], [_pages_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_16__["default"], 38], _pages_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_18__["default"], _pages_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_19__["default"], _pages_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_21__["default"], _pages_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_22__["default"], _pages_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_38__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_39__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_48__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_49__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_51__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_52__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_53__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__["default"], _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_159__["default"]];
 
 /***/ }),
 
@@ -50192,6 +50194,200 @@ int main() {
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/pages/elem-2193-Round1076.html":
+/*!*****************************************************************!*\
+  !*** ./src/components/cf/rounds/pages/elem-2193-Round1076.html ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<article class="article">
+  <a href="https://codeforces.com/contest/2193" target="_blank">Codeforces 2193 Round 1076 (Div. 3) 2026.01.25</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. DBMB и массив</a>
+  <br><a href="#t2">Задача B. Перевернуть перестановку</a>
+  <br><a href="#t3">Задача C. Заменяй и суммируй</a>
+  <br><a href="#t4">Задача D. Игра с монстрами</a>
+  <br><a href="#t5">Задача E. Запросы произведения</a>
+  <br><a href="#t6">Задача F. Доставка пиццы</a>
+  <br><a href="#t7">Задача G. Пути в дереве</a>
+  <br><a href="#t8">Задача H. Удалить Граильское дерево</a>
+</article>
+
+
+<!-- Задача A. DBMB и массив -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. DBMB и массив</h3>
+
+  <div class="time-memory">(Время 1с. Память 256мб)</div>
+
+  <p>У DBMB вчера был день рождения. Ему подарили массив a из n элементов и число x. Но есть одна проблема, ему нравятся только те массивы, у которых сумма элементов равна s. Чтобы ему понравился массив, вы можете делать следующую операцию сколько угодно раз:</p>
+  <ul>
+    <li>Выбрать индекс i (1≤i≤n) и прибавить x к числу ai.</li>
+  </ul>
+
+  <p>К примеру, если ему подарили массив [1,2,3,5] и x=2, вы можете выбрать индекс 3 и получить массив [1,2,5,5]. Ваша задача — выяснить, может ли массив понравиться DBMB после любого количества операций.</p>
+
+  <h4>Входные данные</h4>
+  <p>Каждый тест состоит из нескольких наборов входных данных. Первая строка содержит одно целое число t (1≤t≤1000) — количество наборов входных данных. Далее следует описание наборов входных данных.</p>
+
+  <p>Первая строка каждого набора содержит три целых числа n, s, x (1≤n,x≤10, 1≤s≤100).</p>
+
+  <p>Вторая строка каждого набора содержит n целых чисел a1,a2,…an (1≤ai≤10) — элементы массива, подаренного DBMB.</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите «YES», если массив может понравиться DBMB. В противном случае выведите «NO».</p>
+
+  <p>Вы можете выводить каждую букву в любом регистре (строчную или заглавную). Например, строки «yEs», «yes», «Yes» и «YES» будут приняты как положительный ответ.</p>
+
+  <details>
+    <summary>Примеры</summary>
+    <h4>Пример 1</h4>
+<pre>
+6
+3 3 5
+1 1 1
+3 8 2
+1 2 3
+4 7 2
+1 1 1 1
+3 15 1
+2 4 10
+2 100 5
+4 6
+5 12 1
+1 2 2 3 2
+</pre>
+<pre>
+YES
+YES
+NO
+NO
+YES
+YES
+</pre>
+  <p>Во втором наборе входных данных a=[1,2,3], применим операцию на a2 и получим a=[1,4,3]. Сумма массива равна s.</p>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Найдем сумму sum элементов массива. Нельзя получить нужную сумму s только в двух случаях: если sum > s и если s - sum не делится на x.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    int s; // необходимая сумма элементов массива
+    int x; // слагаемое
+    cin >> n >> s >> x;
+
+    int sum = 0; // сумма элементов массива
+    vector&lt;int&gt; A(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+      sum += A[i];
+    }
+
+    bool res = true;
+
+    if (sum > s) {
+      res = false;
+    } else if ((s - sum) % x > 0) {
+      res = false;
+    }
+
+    if (res) {
+      cout &lt;&lt; "YES\\n";
+    } else {
+      cout &lt;&lt; "NO\\n";
+    }
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача B. Перевернуть перестановку -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Перевернуть перестановку</h3>
+
+</article>
+
+
+<!-- Задача C. Заменяй и суммируй -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Заменяй и суммируй</h3>
+
+</article>
+
+
+<!-- Задача D. Игра с монстрами -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. Игра с монстрами</h3>
+
+</article>
+
+
+<!-- Задача E. Запросы произведения -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. Запросы произведения</h3>
+
+</article>
+
+
+<!-- Задача F. Доставка пиццы -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F. Доставка пиццы</h3>
+
+</article>
+
+
+<!-- Задача G. Пути в дереве -->
+<article class="article">
+  <div class="anchor" id="t7"></div>
+  <h3>Задача G. Пути в дереве</h3>
+
+</article>
+
+
+<!-- Задача H. Удалить Граильское дерево -->
+<article class="article">
+  <div class="anchor" id="t8"></div>
+  <h3>Задача H. Удалить Граильское дерево</h3>
+
+</article>
+
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/pages/elem-228-Round141.html":
 /*!***************************************************************!*\
   !*** ./src/components/cf/rounds/pages/elem-228-Round141.html ***!
@@ -62742,7 +62938,7 @@ int main() {
 <!-- Задача E. Дело о делимости -->
 <article class="article">
   <div class="anchor" id="t5"></div>
-  <h3>Задача E. Простой феникс</h3>
+  <h3>Задача E. Дело о делимости</h3>
 
 </article>
 `;
@@ -63540,6 +63736,43 @@ var code = `<article class="article">
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Возможно из ЕГЭ</h3>
 
+  <p>В условии забыли указать, что в двоичной записи есть ведущие нули, которые тоже учитываются в ответе.</p>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // десятичное число
+  int l, r; // границы двоичной записи числа n
+  cin >> n >> l >> r;
+  int i = 0; // номер разряда двоичного числа
+  int b; // разряд двоичного числа
+  bool res = true;
+
+  while (n > 0 && r >= i) {
+    b = n % 2;
+    if (i >= l) {
+      if (b != 0) {
+        res = false;
+        break;
+      }
+    }
+    n /= 2;
+    i++;
+  }
+
+  if (res) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -79382,7 +79615,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-      <p>Создадим два одномерных массива DP0 и DP1. DP0[i] хранит количество последовательностей длины i которые оканчиваются на 0. DP1[i] хранит количество последовательностей длины i которые оканчиваются не на 0. Если в конце последовательности стоял не 0, то при увеличении последовательности на 1 вконце можно поставить любую цифру, даже 0. Если в конце последовательности стоял 0, то при увеличении последовательности на 1 вконце можно поставить любую цифру кроме 0, потому что иначе появятся два подряд идущих нуля.</p>
+      <p>Создадим два одномерных массива DP0 и DP1. DP0[i] хранит количество последовательностей длины i которые оканчиваются на 0. DP1[i] хранит количество последовательностей длины i которые оканчиваются не на 0.</p>
+      <p>Если в конце последовательности стоял не 0, то при увеличении последовательности на 1 вконце можно поставить любую цифру, даже 0. Если в конце последовательности стоял 0, то при увеличении последовательности на 1 вконце можно поставить любую цифру кроме 0, потому что иначе появятся два подряд идущих нуля.</p>
       <code>DP0[i] = DP1[i-1];</code>
       <code>DP1[i] = (DP0[i-1] + DP1[i-1]) * (k-1);</code>
       <p>Базовые случаи. DP0[1] = 0 не существует однозначных чисел, заканчивающихся на 0. DP1[1] = k - 1 количество однозначных чисел, которые не заканчиваются на 0.</p>
@@ -79394,19 +79628,19 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-
-  // ввод данных
-  long long n, k;
+  long long n; // n значные числа
+  long long k; // в системе счисления с основанием k
   cin >> n >> k;
 
-  // решение
+  // создадим два объекта ДП
   vector&lt;long long&gt; DP0(n + 1);
   vector&lt;long long&gt; DP1(n + 1);
+
+  // базовый случай
   DP0[1] = 0;
   DP1[1] = k - 1;
+
+  // обход элементов ДП
   for (int i = 2; i &lt;= n; i++) {
     DP0[i] = DP1[i - 1];
     DP1[i] = (DP0[i - 1] + DP1[i - 1]) * (k - 1);

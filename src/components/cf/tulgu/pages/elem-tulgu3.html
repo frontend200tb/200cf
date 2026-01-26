@@ -34,6 +34,43 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Возможно из ЕГЭ</h3>
 
+  <p>В условии забыли указать, что в двоичной записи есть ведущие нули, которые тоже учитываются в ответе.</p>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // десятичное число
+  int l, r; // границы двоичной записи числа n
+  cin >> n >> l >> r;
+  int i = 0; // номер разряда двоичного числа
+  int b; // разряд двоичного числа
+  bool res = true;
+
+  while (n > 0 && r >= i) {
+    b = n % 2;
+    if (i >= l) {
+      if (b != 0) {
+        res = false;
+        break;
+      }
+    }
+    n /= 2;
+    i++;
+  }
+
+  if (res) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
