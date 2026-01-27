@@ -1478,8 +1478,52 @@ int main() {
       <br><a href="https://codeforces.com/contest/1720" target="_blank">Codeforces Round 815 (Div. 2)</a>
     </div>
 
-  </details>
+    <p>Будем хранить для каждого значения val от 0 до 255 лучший dp[j] для индекса j с a[j] = val. Но так как условие зависит от j, мы не можем просто взять максимум. Однако, если i фиксировано, то j должен быть близок к i, потому что при большом отличии i и j неравенство a[j] XOR i &lt; a[i] XOR j скорее всего не выполнится из-за влияния старших бит.</p>
+    <p>Мы инициализируем dp[i] = 1 — подпоследовательность может состоять только из самого элемента.</p>
+    <p>Для каждого i проверяем все предыдущие j в диапазоне [i - 512, i - 1].</p>
+    <p>Если выполняется условие (a[j] XOR i) &lt; (a[i] XOR j), то пытаемся улучшить dp[i] через dp[j] + 1.</p>
+    <p>В конце выводим максимум в dp.</p>
+    <p>Это решение использует ограничение a[i] ≤ 200 для того, чтобы ограничить область поиска j, и работает за O(512 * n), что укладывается в ограничения.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
 
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    cin >> n;
+    vector&lt;int&gt; A(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+
+    vector&lt;int&gt; dp(n, 1);
+
+    for (int i = 0; i &lt; n; i++) {
+      // проверяем только предыдущие индексы в пределах 512
+      for (int j = max(0, i - 512); j &lt; i; j++) {
+        if ((A[j] ^ i) &lt; (A[i] ^ j)) {
+          dp[i] = max(dp[i], dp[j] + 1);
+        }
+      }
+    }
+
+    int res = *max_element(dp.begin(), dp.end());
+
+    cout &lt;&lt; res &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 

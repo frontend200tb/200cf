@@ -49536,7 +49536,7 @@ RRL
   <p>Для второго набора входных данных оба робота погибнут после одного перемещения.</p>
 
   <details>
-    <summary>Решение Превышено ограничение времени на тесте 2</summary>
+    <summary>Решение</summary>
     <p>Если слева от робота нет шипа, то при движении влево он никогда не погибнет. Если справа от робота нет шипа, то при движении вправо он никогда не погибнет.</p>
     <p>Отсортируем роботов и шипы на прямой. Используем метод двух указателей. Вначале указатель r указывает на первого робота, а указатель s указывает на первый шип. Используем два линейных прохода.</p>
     <p>Первый проход. Линейно проходим по всем роботам, подсчитывая расстояние от каждого робота до ближайшего шипа слева и справа.</p>
@@ -49545,114 +49545,60 @@ RRL
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
+#include &lt;map&gt;
 
 using namespace std;
 
 int main() {
-#ifdef _DEBUG
-  freopen("input.txt", "rt", stdin);
-  freopen("output.txt", "wt", stdout);
-#endif
-
-  ios_base::sync_with_stdio(false);
-  cin.tie(nullptr);
-
   int t;
   cin >> t;
 
   while (t--) {
-    int n; // число роботов
-    int m; // число шипов
-    int k; // число инструкций
+    int n, m, k;
     cin >> n >> m >> k;
 
-    vector&lt;int&gt; A(n); // роботы
+    vector&lt;int&gt; robots(n); for (auto& x : robots) cin >> x;
+
+    vector&lt;int&gt; lava(m); for (auto& x : lava) cin >> x;
+
+    vector&lt;bool&gt; dead(n);
+    map&lt;int, vector&lt;int&gt; &gt; death_locations;
+
+    string instructions;
+    cin >> instructions;
+
+    sort(lava.begin(), lava.end());
+
     for (int i = 0; i &lt; n; i++) {
-      cin >> A[i];
+      if (lava[0] &lt; robots[i]) {
+        int left_dist = robots[i] - (*(lower_bound(lava.begin(), lava.end(), robots[i]) - 1));
+        death_locations[-left_dist].push_back(i);
+      }
+      if (lava[m - 1] > robots[i]) {
+        int right_dist = *lower_bound(lava.begin(), lava.end(), robots[i]) - robots[i];
+        death_locations[right_dist].push_back(i);
+      }
+
     }
 
-    vector&lt;int&gt; B(m); // шипы
-    for (int i = 0; i &lt; m; i++) {
-      cin >> B[i];
+    int current_pos = 0;
+    int alive = n;
+
+    for (auto& x : instructions) {
+      if (x == 'L') current_pos--;
+      else current_pos++;
+
+      for (int i : death_locations[current_pos]) {
+
+        if (dead[i]) continue;
+        dead[i] = true;
+        alive--;
+      }
+      death_locations[current_pos].clear();
+      cout &lt;&lt; alive &lt;&lt; " ";
     }
 
-    sort(A.begin(), A.end());
-    sort(B.begin(), B.end());
-    int r = 0; // указатель на робота
-    int s = 0; // указатель на шип
-    vector&lt;int&gt; L; // сколько шагов влево до шипа
-    vector&lt;int&gt; R; // сколько шагов вправо до шипа
-
-    // пока есть роботы
-    while (A.size() > r) {
-
-      // для каждого робота сохраним
-      // шаги вправо до шипа
-      while ( (A.size() > r) && (B[s] > A[r])) {
-        R.push_back(B[s] - A[r]);
-        r++;
-      }
-
-      // для каждого робота сохраним
-      // шаги влево до шипа
-      int dif = 0;
-      while ( (A.size() > r) && (A[r] > B[s])) {
-        dif = A[r] - B[s];
-        s++;
-      }
-      if (dif) {
-        L.push_back(dif);
-      }
-    }
-
-    sort(L.begin(), L.end());
-    sort(R.begin(), R.end());
-
-    int live = n; // число живых роботов
-    int move_l = 0; // число движений влево
-    int move_r = 0; // число движений вправо
-    int pl = 0; // указатель на шаги влево до шипа
-    int pr = 0; // указатель на шаги вправо до шипа
-    vector&lt;int&gt; Res(k + 1); // оставшиеся роботы
-
-    for (int i = 1; i &lt;= k; i++) {
-      char move; // ход
-      cin >> move;
-
-      // изменяем число движений влево и вправо
-      if (move == 'L') {
-        move_l++;
-        move_r--;
-      } else {
-        move_l--;
-        move_r++;
-      }
-
-      // если робот левее начальной позиции
-      // то проверяем шаги влево до шипа
-      if (move_l > 0) {
-        while ( (L.size() > pl) && (move_l >= L[pl]) ) {
-          live--;
-          pl++;
-        }
-      }
-
-      // если робот правее начальной позиции
-      // то проверяем шаги вправо до шипа
-      if (move_r > 0) {
-        while ( (R.size() > pr) && (move_r >= R[pr]) ) {
-          live--;
-          pr++;
-        }
-      }
-
-      Res[i] = live;
-    }
-
-    for (int i = 1; i &lt;= k; i++) {
-      cout &lt;&lt; Res[i] &lt;&lt; ' ';
-    }
-    cout &lt;&lt; '\\n';
+    cout &lt;&lt; "\\n";
   }
 }
 </pre>
@@ -49751,84 +49697,56 @@ int main() {
   <p>Поскольку мы дали зелье корове 4, наш ответ равен 0, так как над коровой 4 нет коров.</p>
 
   <details>
-    <summary>Решение ошибка компиляции</summary>
+    <summary>Решение</summary>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
-#include &lt;map&gt;
+#include &lt;algorithm&gt;
 
 using namespace std;
 
-typedef long long ll;
-
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-
   int t;
   cin >> t;
 
   while (t--) {
     int n, q;
     cin >> n >> q;
-    vector&lt;int&gt; a(1 &lt;&lt; n);
-    for (int i = 0; i &lt; (1 &lt;&lt; n); i++) cin >> a[i];
-    vector&lt;int&gt; cur((1 &lt;&lt; n) * 4);
-    vector&lt;int&gt; len((1 &lt;&lt; n) * 4);
-    vector&lt;int&gt; id(1 &lt;&lt; n);
 
-    function&lt;void(int,int,int)&gt; dfs = [&] (int v, int l, int r) {
-      len[v] = r - l;
-      if (r - l == 1) {
-        id[l] = v;
-        cur[v] = a[l];
-      } else {
-        int m = (l + r) / 2;
-        dfs(v * 2 + 1, l, m);
-        dfs(v * 2 + 2, m, r);
-        cur[v] = cur[v * 2 + 1] ^ cur[v * 2 + 2];
-      }
-    };
+    int num_cows = (1 &lt;&lt; n);
+    vector&lt;int&gt; cows(num_cows); for (auto& x : cows) cin >> x;
 
-    function&lt;void(int,int,int,int,int)&gt; upd = [&] (int v, int l, int r, int i, int x) {
-      if (r - l == 1) {
-        cur[v] = x;
-      } else {
-        int m = (l + r) / 2;
-        if (i &lt; m) {
-          upd(v * 2 + 1, l, m, i, x);
-        } else {
-          upd(v * 2 + 2, m, r, i, x);
-        }
-        cur[v] = (cur[v * 2 + 1] ^ cur[v * 2 + 2]);
-      }
-    };
-
-    int l = (1 &lt;&lt; n);
-    dfs(0, 0, (1 &lt;&lt; n));
+    vector&lt;int&gt; prefix(num_cows); prefix[0] = cows[0];
+    for (int i = 1; i &lt; num_cows; i++) {
+      prefix[i] = cows[i] ^ prefix[i - 1];
+    }
 
     while (q--) {
-      int b, c;
-      cin >> b >> c;
-      b--;
-      upd(0, 0, l, b, c);
-      int v = id[b];
-      int ans = 0;
-      while (v) {
-        int me = (v);
-        v = (v - 1) / 2;
-        if (v * 2 + 1 == me) {
-          if (cur[v * 2 + 1] &lt; cur[v * 2 + 2]) {
-            ans += len[v * 2 + 2];
-          }
+      int cow_idx, skill_level;
+      cin >> cow_idx >> skill_level;
+      cow_idx--;
+
+      int curr_position = 0;
+      for (int i = 0; i &lt; n; i++) {
+        int size = (1 &lt;&lt; i);
+        int leader_idx = cow_idx / size;
+
+        int leader_value = prefix[(size) * (leader_idx + 1) - 1] ^ (leader_idx == 0 ? 0 : prefix[(size) * (leader_idx)-1]);
+        leader_value ^= cows[cow_idx];
+        leader_value ^= skill_level;
+
+        int enemy_value;
+        if (leader_idx % 2 == 0) {
+          enemy_value = prefix[(size) * (leader_idx + 2) - 1] ^ prefix[(size) * (leader_idx + 1) - 1];
         } else {
-          if (cur[v * 2 + 1] >= cur[v * 2 + 2]) {
-            ans += len[v * 2 + 1];
-          }
+          enemy_value = prefix[(size) * (leader_idx)-1] ^ ((leader_idx - 1) == 0 ? 0 : prefix[(size) * (leader_idx - 1) - 1]);
+        }
+        if (leader_value &lt; enemy_value || (leader_value == enemy_value && leader_idx % 2 == 1)) {
+          curr_position += size;
         }
       }
-      upd(0, 0, l, b, a[b]);
-      cout &lt;&lt; ans &lt;&lt; '\\n';
+
+      cout &lt;&lt; curr_position &lt;&lt; "\\n";
     }
   }
 }
@@ -80205,7 +80123,7 @@ var code = `<article class="article">
       <code>Если str[j]==1, тогда DP[i][j]=DP[i-1][j-1]+DP[i-1][j-2]</code>
       <code>Если str[j]==0, тогда DP[i][j]=0</code>
     </li>
-    <li>Что является простейшим случаем? (база) Ситуация, когда кузнечик никуда не прыгал. Заполним первую строку в матрице.</li>
+    <li>Что является простейшим случаем? (база) Ситуация, когда кузнечик никуда не прыгал. В нулевую строчку кузнечик попадает за ноль прыжков одним способом DP[0][0] = 1. Заполним нулями остальные ячейки в первой строке и в первом столбце матрицы.</li>
     <li>Как обходить объект ДП? Классический обход слева направо сверху вниз.</li>
     <li>Где хранится ответ на задачу? Ответ хранится в последнем столбце, необходимо будет найти первый элемент отличный от нуля.</li>
   </ol>
@@ -80328,8 +80246,11 @@ cout &lt;&lt; DP[k][n];
   <p>Последовательно ответим на 5 вопросов ДП:</p>
   <ol>
     <li>Что храним? Создадим двумерный массив DP. В ячейке DP[i][j] будем хранить количество изменений, чтобы изменить префикс str1 длины i в префикс str2 длины j.</li>
-    <li>Как считаем ячейку? Если str1[i] == str2[j], тогда DP[i][j] = DP[i - 1][j - 1]. Если str1[i]! = str2[j], тогда
-    <code>DP[i][j] = min(DP[i - 1][j - 1], min(DP[i][j - 1],DP[i - 1][j])) + 1.</code>
+    <li>Как считаем ячейку?
+      <p>Если str1[i] == str2[j], тогда</p>
+      <code>DP[i][j] = DP[i-1][j-1]</code>
+      <p>Если str1[i] != str2[j], тогда</p>
+      <code>DP[i][j] = min(DP[i-1][j-1], min(DP[i][j-1], DP[i-1][j])) + 1</code>
     </li>
     <li>Что является простейшим случаем? (база) Первый столбец и первая строка, преобразование пустой строки в str2 и из str1 в пустую строку.</li>
     <li>Как обходить объект ДП? Классический обход слева направо сверху вниз.</li>
@@ -80353,12 +80274,16 @@ string str1, str2;
 cin >> str1 >> str2;
 
 vector&lt;vector&lt;int&gt; &gt; DP(str1.size() + 1, vector&lt;int&gt;(str2.size() + 1));
+
+// базовый случай
 for (int i = 0; i &lt;= str1.size(); i++) {
   DP[i][0] = i;
 }
 for (int j = 0; j &lt;= str2.size(); j++) {
   DP[0][j] = j;
 }
+
+// обход ДП
 for (int i = 1; i &lt;= str1.size(); i++) {
   for (int j = 1; j &lt;= str2.size(); j++) {
     if (str1[i-1] = str2[j-1]) {
@@ -80368,6 +80293,7 @@ for (int i = 1; i &lt;= str1.size(); i++) {
     }
   }
 }
+
 cout &lt;&lt; DP[str1.size()][str2.size()];
 </pre>
 
@@ -83423,8 +83349,52 @@ int main() {
       <br><a href="https://codeforces.com/contest/1720" target="_blank">Codeforces Round 815 (Div. 2)</a>
     </div>
 
-  </details>
+    <p>Будем хранить для каждого значения val от 0 до 255 лучший dp[j] для индекса j с a[j] = val. Но так как условие зависит от j, мы не можем просто взять максимум. Однако, если i фиксировано, то j должен быть близок к i, потому что при большом отличии i и j неравенство a[j] XOR i &lt; a[i] XOR j скорее всего не выполнится из-за влияния старших бит.</p>
+    <p>Мы инициализируем dp[i] = 1 — подпоследовательность может состоять только из самого элемента.</p>
+    <p>Для каждого i проверяем все предыдущие j в диапазоне [i - 512, i - 1].</p>
+    <p>Если выполняется условие (a[j] XOR i) &lt; (a[i] XOR j), то пытаемся улучшить dp[i] через dp[j] + 1.</p>
+    <p>В конце выводим максимум в dp.</p>
+    <p>Это решение использует ограничение a[i] ≤ 200 для того, чтобы ограничить область поиска j, и работает за O(512 * n), что укладывается в ограничения.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
 
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    cin >> n;
+    vector&lt;int&gt; A(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+
+    vector&lt;int&gt; dp(n, 1);
+
+    for (int i = 0; i &lt; n; i++) {
+      // проверяем только предыдущие индексы в пределах 512
+      for (int j = max(0, i - 512); j &lt; i; j++) {
+        if ((A[j] ^ i) &lt; (A[i] ^ j)) {
+          dp[i] = max(dp[i], dp[j] + 1);
+        }
+      }
+    }
+
+    int res = *max_element(dp.begin(), dp.end());
+
+    cout &lt;&lt; res &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
