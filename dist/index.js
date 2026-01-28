@@ -80806,6 +80806,7 @@ int main() {
     DP[i][3] = G[i];
   }
 
+  // обход ДП
   for (int i = 4; i &lt;= n; i++) {
     for (int j = 100; j &lt; 1000; j++) {
       for (int k = 0; k &lt; 10; k++) {
@@ -81090,7 +81091,9 @@ int main() {
   cin.tie(0);
 
   // ввод данных
-  long long n, k, p;
+  long long n; // число выстрелов
+  long long k; // число колец
+  long long p; // число очков Игоря
   cin >> n >> k >> p;
 
   // решение
