@@ -34,4 +34,81 @@
     <a href="https://codeforces.com/contest/3/problem/B" target="_blank">Задача 3B</a>
     <br><a href="https://codeforces.com/contest/3" target="_blank">Codeforces Beta Round 3 2010-03-07</a>
   </div>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream>
+#include &lt;algorithm>
+
+using namespace std;
+
+const int M = 100005;
+
+struct Node {
+  int v, id;
+  bool operator&lt;(Node a)const {
+    return a.v &lt; v;
+  }
+}vone[M], vtwo[M];
+int so[M], st[M];
+
+int main() {
+  int n, v;
+  cin >> n >> v;
+
+  int none = 0, ntwo = 0;
+  for (int i = 1; i &lt;= n; i++) {
+    int con;
+    cin >> con;
+    if (con == 1) {
+      vone[none].id = i;
+      cin >> vone[none++].v;
+    } else {
+      vtwo[ntwo].id = i;
+      cin >> vtwo[ntwo++].v;
+    }
+  }
+  if (none == 0 && v &lt; 2) {
+    cout &lt;&lt; "0\n\n";
+    return 0;
+  }
+
+  sort(vone, vone + none);
+  sort(vtwo, vtwo + ntwo);
+  for (int i = 0;i &lt; none;i++)
+    so[i + 1] = so[i] + vone[i].v;
+  for (int i = 0;i &lt; ntwo;i++)
+    st[i + 1] = st[i] + vtwo[i].v;
+
+  int now = v, ans = none + ntwo, ma = 0;
+  int i = 0;
+  if (v > none) {
+    i = (v - none + 1) / 2;
+    now = none;
+    if ((v & 1) ^ (none & 1))
+      now--;
+  }
+
+  for (; i &lt;= min(ntwo, v / 2); i++) {
+    if (now &lt; 0)
+      break;
+    if (so[now] + st[i] > ma) {
+      ma = so[now] + st[i];
+      ans = now;
+    }
+    now -= 2;
+  }
+  if (ma == 0)
+    ma = so[none] + st[ntwo];
+  cout &lt;&lt; ma &lt;&lt; '\n';
+
+  for (int i = 0;i &lt; min(none, ans);i++)
+    cout &lt;&lt; vone[i].id &lt;&lt; ' ';
+  for (int i = 0;i &lt; min(ntwo, (v - ans) / 2);i++)
+    cout &lt;&lt; vtwo[i].id &lt;&lt; ' ';
+  cout &lt;&lt; '\n';
+}
+</pre>
+  </details>
 </details>
