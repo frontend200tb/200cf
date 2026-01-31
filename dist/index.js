@@ -83618,6 +83618,78 @@ int main() {
 1 2
 </pre>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector>
+#include &lt;fstream>
+
+using namespace std;
+
+int main() {
+  ifstream fin("input.txt");
+  ofstream fout("output.txt");
+
+  int n; // число тестов
+  int m; // число неверных решений
+  fin >> n >> m;
+
+  vector&lt;long long> testMask(n, 0);  // маска покрытий для каждого теста
+
+  for (int i = 0; i &lt; n; i++) {
+    int k; // число неверных решений для i -го теста
+    fin >> k;
+    for (int j = 0; j &lt; k; j++) {
+      int sol;
+      fin >> sol;
+      sol--;  // переводим в 0-индексацию
+      testMask[i] |= (1LL &lt;&lt; sol);
+    }
+  }
+
+  // маска всех решений (m бит)
+  long long allSolutionsMask = (1LL &lt;&lt; m) - 1;
+
+  int bestCount = n + 1;
+  int bestMask = 0;
+
+  // перебираем все подмножества тестов
+  for (int mask = 1; mask &lt; (1 &lt;&lt; n); mask++) {
+    long long covered = 0;
+    int cnt = 0;
+
+    for (int i = 0; i &lt; n; i++) {
+      if (mask & (1 &lt;&lt; i)) {
+        covered |= testMask[i];
+        cnt++;
+      }
+    }
+
+    if (covered == allSolutionsMask && cnt < bestCount) {
+      bestCount = cnt;
+      bestMask = mask;
+    }
+  }
+
+  // вывод результата
+  fout &lt;&lt; bestCount &lt;&lt; "\\n";
+  bool first = true;
+  for (int i = 0; i &lt; n; i++) {
+    if (bestMask & (1 &lt;&lt; i)) {
+      if (!first) fout &lt;&lt; " ";
+      fout &lt;&lt; (i + 1);
+      first = false;
+    }
+  }
+  fout &lt;&lt; "\\n";
+
+  fin.close();
+  fout.close();
+}
+</pre>
+  </details>
 </article>
 
 
