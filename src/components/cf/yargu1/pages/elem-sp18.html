@@ -1010,6 +1010,7 @@ int main() {
     <code>61₁₀ = 32 + 16 + 8 + 4 + 1 = 111101₂</code>
     <p>Нужно собрать битовую маску. Там где 1 должна быть тоже 1, там где 0 может быть любой символ.</p>
     <p>Задача решается за O(n³). Но мы воспользуемся ДП. Сократим постоянный перерасчет действующих пар. Сложность O(64*n)</p>
+    <p>Сначала нужно самому сгенерировать строчку, которая содержит все 64 символа. Потом эту строчку вставить в код, а саму генерацию закомментировать.</p>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -1021,14 +1022,21 @@ int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  string s;
-  cin >> s;
+  /*
+  генерация 64 символов
+  for (int i = 0; i &lt; 10; i++) cout &lt;&lt; i;
+  for (int i = 'A'; i &lt;= 'Z'; i++) cout &lt;&lt; (char)(i);
+  for (int i = 'a'; i &lt;= 'z'; i++) cout &lt;&lt; (char)(i);
+  cout &lt;&lt; '-';
+  cout &lt;&lt; '_';
+  */
 
-  // решение
   string s1 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_";
   vector&lt;long long&gt; A(64);
   vector&lt;long long&gt; B(64);
+
+  string s; // входная строка
+  cin >> s;
 
   for (int i = 0; i &lt; 64; i++) {
     int mask = i;

@@ -7983,6 +7983,219 @@ X0X
     <a href="https://codeforces.com/contest/3/problem/C" target="_blank">Задача 3C</a>
     <br><a href="https://codeforces.com/contest/3" target="_blank">Codeforces Beta Round 3 2010-03-07</a>
   </div>
+
+  <h4>Пример 2</h4>
+<pre>
+0.X
+XX.
+000
+</pre>
+  <code>illegal</code>
+
+  <h4>Пример 126</h4>
+<pre>
+X.0
+00.
+XXX
+</pre>
+  <code>the first player won</code>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  char A[9];
+  for (int i = 0; i &lt; 9; i++) {
+    cin >> A[i];
+  }
+
+  int x1 = 0; // число крестиков
+  int x2 = 0; // число ноликов
+  for (int i = 0; i &lt; 9; i++) {
+    if (A[i] == 'X') {
+      x1++;
+    }
+    if (A[i] == '0') {
+      x2++;
+    }
+  }
+
+  bool first = false; // ходит крестик
+  bool second = false; // ходит нолик
+  bool illegal = false; // невозможная ситуация
+  bool winX = false; // победил крестик
+  bool winX1 = false; // победил крестик по горизонтали
+  bool winX2 = false; // победил крестик по вертикали
+  bool win0 = false; // победил нолик
+  bool win01 = false; // победил нолик по горизонтали
+  bool win02 = false; // победил нолик по вертикали
+  bool draw = false; // ничья
+
+  if (x1 == x2) {
+    first = true;
+  } else if (x1 == x2 + 1) {
+    second = true;
+  } else {
+    illegal = true;
+  }
+
+  // выигрывает первый по горизонтали
+  // нельзя выиграть по двум горизонталям
+  if (A[0] == 'X' && A[1] == 'X' && A[2] == 'X') {
+    winX = true;
+    winX1 = true;
+  }
+
+  if (A[3] == 'X' && A[4] == 'X' && A[5] == 'X') {
+    if (winX1) {
+      illegal = true;
+    } else {
+      winX = true;
+      winX1 = true;
+    }
+  }
+
+  if (A[6] == 'X' && A[7] == 'X' && A[8] == 'X') {
+    if (winX1) {
+      illegal = true;
+    } else {
+      winX = true;
+      winX1 = true;
+    }
+  }
+
+  // выигрывает первый по вертикали
+  // нельзя выиграть по двум вертикалям
+  if (A[0] == 'X' && A[3] == 'X' && A[6] == 'X') {
+    winX = true;
+    winX2 = true;
+  }
+
+  if (A[1] == 'X' && A[4] == 'X' && A[7] == 'X') {
+    if (winX2) {
+      illegal = true;
+    } else {
+      winX = true;
+      winX2 = true;
+    }
+  }
+
+  if (A[2] == 'X' && A[5] == 'X' && A[8] == 'X') {
+    if (winX2) {
+      illegal = true;
+    } else {
+      winX = true;
+      winX2 = true;
+    }
+  }
+
+  // выигрывает первый по диагонали
+  if (A[0] == 'X' && A[4] == 'X' && A[8] == 'X') {
+    winX = true;
+  }
+
+  if (A[2] == 'X' && A[4] == 'X' && A[6] == 'X') {
+    winX = true;
+  }
+
+  // выигрывает второй по горизонтали
+  // нельзя выиграть по двум горизонталям
+  if (A[0] == '0' && A[1] == '0' && A[2] == '0') {
+    if (winX) {
+      illegal = true;
+    }
+    win0 = true;
+    win01 = true;
+  }
+
+  if (A[3] == '0' && A[4] == '0' && A[5] == '0') {
+    if (winX || win01) {
+      illegal = true;
+    } else {
+      win0 = true;
+      win01 = true;
+    }
+  }
+
+  if (A[6] == '0' && A[7] == '0' && A[8] == '0') {
+    if (winX || win01) {
+      illegal = true;
+    } else {
+      win0 = true;
+      win01 = true;
+    }
+  }
+
+  // выигрывает второй по вертикали
+  // нельзя выиграть по двум вертикалям
+  if (A[0] == '0' && A[3] == '0' && A[6] == '0') {
+    if (winX) {
+      illegal = true;
+    }
+    win0 = true;
+    win02 = true;
+  }
+
+  if (A[1] == '0' && A[4] == '0' && A[7] == '0') {
+    if (winX || win02) {
+      illegal = true;
+    } else {
+      win0 = true;
+      win02 = true;
+    }
+  }
+
+  if (A[2] == '0' && A[5] == '0' && A[8] == '0') {
+    if (winX || win02) {
+      illegal = true;
+    } else {
+      win0 = true;
+      win02 = true;
+    }
+  }
+
+  // выигрывает второй по диагонали
+  if (A[0] == '0' && A[4] == '0' && A[8] == '0') {
+    if (winX) {
+      illegal = true;
+    }
+    win0 = true;
+  }
+
+  if (A[2] == '0' && A[4] == '0' && A[6] == '0') {
+    if (winX) {
+      illegal = true;
+    }
+    win0 = true;
+  }
+
+
+  // вывод результата
+  if (illegal) {
+    cout &lt;&lt; "illegal";
+  } else if (winX) {
+    if (x1 == x2 + 1) {
+      cout &lt;&lt; "the first player won";
+    } else {
+      cout &lt;&lt; "illegal";
+    }
+  } else if (win0) {
+    if (x1 == x2) {
+      cout &lt;&lt; "the second player won";
+    } else {
+      cout &lt;&lt; "illegal";
+    }
+  } else if (x1 == 5 && x2 == 4) {
+    cout &lt;&lt; "draw";
+  } else if (first) {
+    cout &lt;&lt; "first";
+  } else if (second) {
+    cout &lt;&lt; "second";
+  }
+}
+</pre>
 </details>
 `;
 // Exports
@@ -83026,6 +83239,7 @@ int main() {
     <code>61₁₀ = 32 + 16 + 8 + 4 + 1 = 111101₂</code>
     <p>Нужно собрать битовую маску. Там где 1 должна быть тоже 1, там где 0 может быть любой символ.</p>
     <p>Задача решается за O(n³). Но мы воспользуемся ДП. Сократим постоянный перерасчет действующих пар. Сложность O(64*n)</p>
+    <p>Сначала нужно самому сгенерировать строчку, которая содержит все 64 символа. Потом эту строчку вставить в код, а саму генерацию закомментировать.</p>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -83037,14 +83251,21 @@ int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  string s;
-  cin >> s;
+  /*
+  генерация 64 символов
+  for (int i = 0; i &lt; 10; i++) cout &lt;&lt; i;
+  for (int i = 'A'; i &lt;= 'Z'; i++) cout &lt;&lt; (char)(i);
+  for (int i = 'a'; i &lt;= 'z'; i++) cout &lt;&lt; (char)(i);
+  cout &lt;&lt; '-';
+  cout &lt;&lt; '_';
+  */
 
-  // решение
   string s1 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_";
   vector&lt;long long&gt; A(64);
   vector&lt;long long&gt; B(64);
+
+  string s; // входная строка
+  cin >> s;
 
   for (int i = 0; i &lt; 64; i++) {
     int mask = i;
