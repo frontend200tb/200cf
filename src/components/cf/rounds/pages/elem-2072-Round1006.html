@@ -67,6 +67,47 @@
 
   <p>В седьмом примере нужно сделать единственную операцию a3 = -7.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--)	{
+    int n, k, p, i, j;
+
+    cin >> n >> k >> p;
+
+    //сделаем к положительным, чтобы корректно сравнивались
+    //значения, ответ при этом не поменяется
+    k = abs(k);
+
+    //максимальное число, которое можем присваивать - это p
+    //проверим, что с помощью p можем набрать к (это излишнее условие)
+    if (k / p > n) {
+      cout &lt;&lt; "-1\n";
+    } else {
+      //считаем, сколько нужно p чтобы в сумме получилось к.
+      //и добавляем +1 если есть остаток, потому что под
+      //него нужно отдельный элемент
+      int ans = k / p + int(k % p != 0);
+      if (ans &lt;= n) {
+        cout &lt;&lt; ans &lt;&lt; '\n';
+      } else {
+        cout &lt;&lt; "-1\n";
+      }
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -144,6 +185,37 @@ _-
 
   <p>В седьмом и восьмом наборах длина строки n &lt; 3, а значит, подпоследовательностей длины 3 не существует.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Чтобы максимизировать количество подстрок -_-, надо для каждого символа _ максимизировать количество подстрок -_- с этим символом.  Это максимальное количество достигается, когда слева и справа от символа _ равное количество символов -.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--)	{
+    long long n, i, j, a = 0, b = 0;
+    string s;
+
+    cin >> n;
+    cin >> s;
+
+    for (i = 0; i &lt; n; ++i) {
+      a += (s[i] == '_'); //количество символов _
+      b += (s[i] == '-'); //количество символов -
+    }
+
+    cout &lt;&lt; a * ((b / 2) * (b - b / 2)) &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -204,6 +276,65 @@ _-
 0 1 8 3 0 9 11 2 10
 4 0 3 8 1 2
 0 3
+</pre>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+#define ll long long
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--)	{
+    ll n, i, j, x, res = 0;
+
+    cin >> n >> x;
+
+    if (n == 1) {
+      cout &lt;&lt; x &lt;&lt; '\n';
+    } else {
+      vector&lt;ll&gt; ans;
+      //чтобы максимизировать мех будет добавлять в наш набор
+      //числа от 0 пока можем. Мы не можем добавить очередное число, если
+      //при добавлении его в ИЛИ-сумму она гарантированно не будет равна х
+      for (i = 0; i &lt; n; ++i) {
+        if ((x | i) != x || i == x) {
+          break;
+        } else {
+          ans.push_back(i);
+          res |= i;
+        }
+      }
+
+      //если в наборе меньше чем н чисел, добавляем х пока нужно
+      //ИЛИ-сумма от этого не изменится
+      for (; i &lt; n; ++i) {
+        ans.push_back(x);
+        res |= x;
+      }
+
+      //если случилось так, что итоговая ИЛИ-сумма не равна х, в набор
+      //нужно добавить х
+      if (res != x) {
+        ans.pop_back();
+        ans.push_back(x);
+      }
+
+      for (auto a : ans) {
+        cout &lt;&lt; a &lt;&lt; ' ';
+      }
+      cout &lt;&lt; '\n';
+    }
+  }
+}
 </pre>
   </details>
 </article>
@@ -285,6 +416,72 @@ _-
 
   <p>В последнем примере массив изначально отсортирован, поэтому любая операция над отрезком длины хотя бы 2 только увеличит количество инверсий.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+	int t;
+	cin >> t;
+
+	while (t--) {
+		int n, i, j, cnt = 0, curr, mmin = 1e9, x, y;
+
+		cin >> n;
+		vector&lt;int&gt; A(n);
+
+		for (i = 0; i &lt; n; ++i)
+			cin >> A[i];
+
+		//посчитаем количество инверсий в исходом массиве
+		for (i = 0; i &lt; n; ++i)
+			for (j = i + 1; j &lt; n; ++j)
+				cnt += (A[i] > A[j]);
+
+		mmin = cnt;
+		x = 0;
+		y = 0;
+		//функция пересчёта минимума
+		//если текущее значение минимума больше, то обновляем его и
+		//обновляем границы отрезка на котором он достигается
+		auto recalc = [&]() {
+			if (mmin > curr) {
+				mmin = curr;
+				x = i;
+				y = j;
+			}
+		};
+
+		//описанная в условии операция циклического сдвига
+		//эквивалентна перемещения элемента на позиции L на
+		// позицию после элемента R
+
+		//перебираем элемент, который будем двигать направо
+		for (i = 0; i &lt; n; ++i) {
+			curr = cnt;
+			//перебираем на какую позицию переставить элемент,
+			//параллельно пересчитывать количество инверсий
+			for (j = i + 1; j &lt; n; ++j) {
+				if (A[j] &lt; A[i])//исправили инверсиюю
+					curr--;
+				recalc();//обновляем ответ
+				if (A[j] > A[i])//добавили инверсию
+					curr++;
+				recalc();//обновляем ответ
+			}
+
+		}
+
+		cout &lt;&lt; x + 1 &lt;&lt; ' ' &lt;&lt; y + 1 &lt;&lt; '\n';
+	}
+}
+</pre>
+  </details>
 </article>
 
 
@@ -346,6 +543,72 @@ _-
 1 10
 </pre>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Заметим, что р(а,б)==д(а,б) тогда и только тогда, когда у точек а и б равны координаты х или у также заметим, что среди н посохов с одинаковой координатой х и различными координатами у подходящих пар ровно н*(н-1)/2, при этом это максимальное значение, которое можно получить для н посохов представим данное число к в следующем виде</p>
+    <code>k=x1*(x1-1)/2+x2*(x2-1)/2+x3*(x3-1)/2+...+xn*(xn-1)/2</code>
+    <p>это можно сделать следующей рекуррсивной функцией найдём x1 как максимальное число такое, что x1*(x1-1)/2 &lt;= k добавим х1 в ответ и запустим эту функцию для k=(k-x1*(x1-1)/2) поиск х1 можно делать с помощью бинарного поиска зная разбиение x1...xn осталось вывести ответ в формате точек должно получиться n блоков, в блоке в номером i ровно i точек с одинаковой у координатой и различными х координатами</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+#define ll long long
+
+using namespace std;
+
+int main() {
+	int t;
+	cin >> t;
+
+	while (t--) {
+		ll k, i, j;
+
+		cin >> k;
+		vector&lt;ll&gt; ans;
+
+		function&lt;void(ll, ll)&gt; func = [&](ll n, ll a) {
+			ll left, right, mid;
+			left = 0;
+			right = a;
+			while (right - left > 1)
+			{
+				mid = (right + left) / 2;
+				if (mid * (mid - 1) / 2 > n)
+					right = mid;
+				else
+					left = mid;
+			}
+
+			if (right * (right - 1) / 2 &lt;= n) {
+				ans.push_back(right);
+				if (right * (right - 1) / 2 != n)
+					func(n - right * (right - 1) / 2, a - right);
+			} else {
+				if (left == 0)
+					return;
+				ans.push_back(left);
+				if (left * (left - 1) / 2 != n)
+					func(n - left * (left - 1) / 2, a - left);
+			}
+		};
+		func(k, 500);
+
+		int w = 0;
+		ll sum = 0;
+		for (auto a : ans)
+			sum += a;
+		cout &lt;&lt; sum &lt;&lt; '\n';
+		for (i = 0; i &lt; ans.size(); ++i) {
+			for (j = 0; j &lt; ans[i]; ++j) {
+				cout &lt;&lt; w &lt;&lt; ' ' &lt;&lt; i &lt;&lt; '\n';
+				w++;
+			}
+		}
+	}
+}
+</pre>
+  </details>
 </article>
 
 
@@ -400,6 +663,55 @@ _-
   <p>В первом примере первая строка Великого Магического Треугольника [5] по определению.</p>
 
   <p>Во втором примере T<sub>2,1</sub> = T<sub>1,1</sub> = 10 и T<sub>2,2</sub> = T<sub>1,1</sub> = 10.</p>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>заметим, что число k не влияет на положение нулей/не нулей в ответе если вывести треугольник, заданный в условии, на экран , то можно заметить, что он имеет фрактальную структуру, т.е. самоподобен. (чем-то похож на треугольник Серпинского) фрактальную структуру можно реализовать с помощью рекуррсии</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+#define ll long long
+
+using namespace std;
+
+int main() {
+	int t;
+	cin >> t;
+
+	while (t--) {
+		ll n, k, i, j;
+
+		cin >> n >> k;
+
+		function&lt;void(ll)&gt; func = [&](ll a) {
+			ll x = 1;
+
+      while (1)
+			{
+				if (x * 2 &lt;= a)
+					x *= 2;
+				else
+					break;
+			}
+
+			if (x == a) {
+				for (i = 0; i &lt; x; ++i)
+					cout &lt;&lt; k &lt;&lt; ' ';
+				return;
+			}
+			func(a - x);
+			for (i = 0; i &lt; a - 2 * (a - x); ++i)
+				cout &lt;&lt; "0 ";
+			func(a - x);
+		};
+
+		func(n);
+		cout &lt;&lt; '\n';
+	}
+}
+</pre>
   </details>
 </article>
 
