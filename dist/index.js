@@ -22158,6 +22158,44 @@ CODEFORCES
   </ul>
   <p>Суммарно команды получили 2+2+1=5 шариков.Во втором наборе входных данных была решена только одна задача. Решившая её команда получила 2 шара: один за решение задачи, второй за то, что она решила задачу A первой.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // длина строки от 1 до 50
+    cin >> n;
+
+    char A[26] = { 0 };
+    int res = 0;
+
+    for (int i = 0; i &lt; n; i++) {
+      char in; // задача от A до Z
+      cin >> in;
+      int index = in - 'A';
+
+      if (A[index]) {
+        res++; // если задачу уже решали
+      } else {
+        res += 2; // если задачу решили в первый раз
+      }
+
+      A[index]++;
+    }
+
+    cout &lt;&lt; res &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -37951,59 +37989,59 @@ int main() {
 using namespace std;
 
 int main() {
-	int t;
-	cin >> t;
+  int t;
+  cin >> t;
 
-	while (t--) {
-		int n, i, j, cnt = 0, curr, mmin = 1e9, x, y;
+  while (t--) {
+    int n, i, j, cnt = 0, curr, mmin = 1e9, x, y;
 
-		cin >> n;
-		vector&lt;int&gt; A(n);
+    cin >> n;
+    vector&lt;int&gt; A(n);
 
-		for (i = 0; i &lt; n; ++i)
-			cin >> A[i];
+    for (i = 0; i &lt; n; ++i)
+      cin >> A[i];
 
-		//посчитаем количество инверсий в исходом массиве
-		for (i = 0; i &lt; n; ++i)
-			for (j = i + 1; j &lt; n; ++j)
-				cnt += (A[i] > A[j]);
+    //посчитаем количество инверсий в исходом массиве
+    for (i = 0; i &lt; n; ++i)
+      for (j = i + 1; j &lt; n; ++j)
+        cnt += (A[i] > A[j]);
 
-		mmin = cnt;
-		x = 0;
-		y = 0;
-		//функция пересчёта минимума
-		//если текущее значение минимума больше, то обновляем его и
-		//обновляем границы отрезка на котором он достигается
-		auto recalc = [&]() {
-			if (mmin > curr) {
-				mmin = curr;
-				x = i;
-				y = j;
-			}
-		};
+    mmin = cnt;
+    x = 0;
+    y = 0;
+    //функция пересчёта минимума
+    //если текущее значение минимума больше, то обновляем его и
+    //обновляем границы отрезка на котором он достигается
+    auto recalc = [&]() {
+      if (mmin > curr) {
+        mmin = curr;
+        x = i;
+        y = j;
+      }
+    };
 
-		//описанная в условии операция циклического сдвига
-		//эквивалентна перемещения элемента на позиции L на
-		// позицию после элемента R
+    //описанная в условии операция циклического сдвига
+    //эквивалентна перемещения элемента на позиции L на
+    // позицию после элемента R
 
-		//перебираем элемент, который будем двигать направо
-		for (i = 0; i &lt; n; ++i) {
-			curr = cnt;
-			//перебираем на какую позицию переставить элемент,
-			//параллельно пересчитывать количество инверсий
-			for (j = i + 1; j &lt; n; ++j) {
-				if (A[j] &lt; A[i])//исправили инверсиюю
-					curr--;
-				recalc();//обновляем ответ
-				if (A[j] > A[i])//добавили инверсию
-					curr++;
-				recalc();//обновляем ответ
-			}
+    //перебираем элемент, который будем двигать направо
+    for (i = 0; i &lt; n; ++i) {
+      curr = cnt;
+      //перебираем на какую позицию переставить элемент,
+      //параллельно пересчитывать количество инверсий
+      for (j = i + 1; j &lt; n; ++j) {
+        if (A[j] &lt; A[i])//исправили инверсиюю
+          curr--;
+        recalc();//обновляем ответ
+        if (A[j] > A[i])//добавили инверсию
+          curr++;
+        recalc();//обновляем ответ
+      }
 
-		}
+    }
 
-		cout &lt;&lt; x + 1 &lt;&lt; ' ' &lt;&lt; y + 1 &lt;&lt; '\\n';
-	}
+    cout &lt;&lt; x + 1 &lt;&lt; ' ' &lt;&lt; y + 1 &lt;&lt; '\\n';
+  }
 }
 </pre>
   </details>
@@ -38077,60 +38115,61 @@ int main() {
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
+#include &lt;functional&gt;
 
 #define ll long long
 
 using namespace std;
 
 int main() {
-	int t;
-	cin >> t;
+  int t;
+  cin >> t;
 
-	while (t--) {
-		ll k, i, j;
+  while (t--) {
+    ll k, i, j;
 
-		cin >> k;
-		vector&lt;ll&gt; ans;
+    cin >> k;
+    vector&lt;ll&gt; ans;
 
-		function&lt;void(ll, ll)&gt; func = [&](ll n, ll a) {
-			ll left, right, mid;
-			left = 0;
-			right = a;
-			while (right - left > 1)
-			{
-				mid = (right + left) / 2;
-				if (mid * (mid - 1) / 2 > n)
-					right = mid;
-				else
-					left = mid;
-			}
+    function&lt;void(ll, ll)&gt; func = [&](ll n, ll a) {
+      ll left, right, mid;
+      left = 0;
+      right = a;
+      while (right - left > 1)
+      {
+        mid = (right + left) / 2;
+        if (mid * (mid - 1) / 2 > n)
+          right = mid;
+        else
+          left = mid;
+      }
 
-			if (right * (right - 1) / 2 &lt;= n) {
-				ans.push_back(right);
-				if (right * (right - 1) / 2 != n)
-					func(n - right * (right - 1) / 2, a - right);
-			} else {
-				if (left == 0)
-					return;
-				ans.push_back(left);
-				if (left * (left - 1) / 2 != n)
-					func(n - left * (left - 1) / 2, a - left);
-			}
-		};
-		func(k, 500);
+      if (right * (right - 1) / 2 &lt;= n) {
+        ans.push_back(right);
+        if (right * (right - 1) / 2 != n)
+          func(n - right * (right - 1) / 2, a - right);
+      } else {
+        if (left == 0)
+          return;
+        ans.push_back(left);
+        if (left * (left - 1) / 2 != n)
+          func(n - left * (left - 1) / 2, a - left);
+      }
+    };
+    func(k, 500);
 
-		int w = 0;
-		ll sum = 0;
-		for (auto a : ans)
-			sum += a;
-		cout &lt;&lt; sum &lt;&lt; '\\n';
-		for (i = 0; i &lt; ans.size(); ++i) {
-			for (j = 0; j &lt; ans[i]; ++j) {
-				cout &lt;&lt; w &lt;&lt; ' ' &lt;&lt; i &lt;&lt; '\\n';
-				w++;
-			}
-		}
-	}
+    int w = 0;
+    ll sum = 0;
+    for (auto a : ans)
+      sum += a;
+    cout &lt;&lt; sum &lt;&lt; '\\n';
+    for (i = 0; i &lt; ans.size(); ++i) {
+      for (j = 0; j &lt; ans[i]; ++j) {
+        cout &lt;&lt; w &lt;&lt; ' ' &lt;&lt; i &lt;&lt; '\\n';
+        w++;
+      }
+    }
+  }
 }
 </pre>
   </details>
@@ -38196,45 +38235,46 @@ int main() {
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
+#include &lt;functional&gt;
 
 #define ll long long
 
 using namespace std;
 
 int main() {
-	int t;
-	cin >> t;
+  int t;
+  cin >> t;
 
-	while (t--) {
-		ll n, k, i, j;
+  while (t--) {
+    ll n, k, i, j;
 
-		cin >> n >> k;
+    cin >> n >> k;
 
-		function&lt;void(ll)&gt; func = [&](ll a) {
-			ll x = 1;
+    function&lt;void(ll)&gt; func = [&](ll a) {
+      ll x = 1;
 
       while (1)
-			{
-				if (x * 2 &lt;= a)
-					x *= 2;
-				else
-					break;
-			}
+      {
+        if (x * 2 &lt;= a)
+          x *= 2;
+        else
+          break;
+      }
 
-			if (x == a) {
-				for (i = 0; i &lt; x; ++i)
-					cout &lt;&lt; k &lt;&lt; ' ';
-				return;
-			}
-			func(a - x);
-			for (i = 0; i &lt; a - 2 * (a - x); ++i)
-				cout &lt;&lt; "0 ";
-			func(a - x);
-		};
+      if (x == a) {
+        for (i = 0; i &lt; x; ++i)
+          cout &lt;&lt; k &lt;&lt; ' ';
+        return;
+      }
+      func(a - x);
+      for (i = 0; i &lt; a - 2 * (a - x); ++i)
+        cout &lt;&lt; "0 ";
+      func(a - x);
+    };
 
-		func(n);
-		cout &lt;&lt; '\\n';
-	}
+    func(n);
+    cout &lt;&lt; '\\n';
+  }
 }
 </pre>
   </details>
@@ -92323,7 +92363,10 @@ int main() {
   cin.tie(0);
 
   // ввод данных
-  int n, d, v, r;
+  int n; // число деревень
+  int d; // начальная деревня
+  int v; // конечная деревня
+  int r; // число рейсов
   cin >> n >> d >> v >> r;
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;int&gt; Time(n + 1, -1);
@@ -92343,7 +92386,7 @@ int main() {
 
   // соберем список смежности
   for (int i = 0; i &lt; r; i++) {
-    cin >> name1 >> time1 >> name2 >> time2;
+    cin >> name1 >> time1 >> name2 >> time2; // рейс
     buf.first = time1;
     buf.second.first = name2;
     buf.second.second = time2;
@@ -105582,8 +105625,7 @@ int main() {
   int k = 0;
   string s;
   for (int i = 2; i &lt; 50; i++) {
-    if (A[i] == 0)
-    {
+    if (A[i] == 0) {
       cout &lt;&lt; i &lt;&lt; "\\n";
       fflush(stdout);
       cin >> s;

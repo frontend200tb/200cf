@@ -591,7 +591,10 @@ int main() {
   cin.tie(0);
 
   // ввод данных
-  int n, d, v, r;
+  int n; // число деревень
+  int d; // начальная деревня
+  int v; // конечная деревня
+  int r; // число рейсов
   cin >> n >> d >> v >> r;
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;int&gt; Time(n + 1, -1);
@@ -611,7 +614,7 @@ int main() {
 
   // соберем список смежности
   for (int i = 0; i &lt; r; i++) {
-    cin >> name1 >> time1 >> name2 >> time2;
+    cin >> name1 >> time1 >> name2 >> time2; // рейс
     buf.first = time1;
     buf.second.first = name2;
     buf.second.second = time2;
