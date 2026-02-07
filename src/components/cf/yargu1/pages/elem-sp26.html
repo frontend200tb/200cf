@@ -91,14 +91,13 @@
 
 using namespace std;
 
-
 int main() {
   // ускорение ввода
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
   // ввод данных
-  int n;
+  int n; // число отрезков
   cin >> n;
   vector&lt;pair&lt;int, int&gt; &gt; A;
   int time, mark;
@@ -265,21 +264,24 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  // ввод данных
-  int n;
+  int n; // число отрезков
   cin >> n;
+
   vector&lt;pair&lt;long long, long long&gt; &gt; A(n);
   for (int i = 0; i &lt; n; i++) {
+    // левый и правый конец отрезка
     cin >> A[i].first >> A[i].second;
   }
+
   sort(A.begin(), A.end());
+
+  // два указателя begin и end
   int begin = A[0].first;
   int end = A[0].second;
-  long long sum = 0;
+  long long sum = 0; // длина окрашенной части прямой
 
   for (int i = 1; i &lt; n; i++) {
     if (A[i].first &lt;= end) {
@@ -293,7 +295,7 @@ int main() {
     }
   }
 
-  sum += end - begin;
+  sum += end - begin; // учтем последнюю полоску
 
   // вывод результата
   cout &lt;&lt; sum;
@@ -1077,15 +1079,14 @@ int time_string_int(string time) {
 }
 
 int main() {
-  // ускорение ввода
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  // ввод данных
-  vector&lt;int&gt; All_time(1000000);
-  int n;
-  string s1, s2;
+  int n; // число промежутков сна
   cin >> n;
+
+  string s1, s2;
+  vector&lt;int&gt; All_time(1000000);
   int time_start, time_end;
 
   for (int i = 0; i &lt; n; i++) {
@@ -1109,7 +1110,7 @@ int main() {
   }
 
   int count = 0;
-  int result = 0;
+  int result = 0; // число секунд на ремонт
   for (int i = 0; i &lt; 24 * 60 * 60; i++) {
     count += All_time[i];
     if (count == 0) {

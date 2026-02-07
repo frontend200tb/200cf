@@ -38356,6 +38356,107 @@ int main() {
   </ul>
   <p>Значит x=9+1=10.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+constexpr int64_t mod = 1e9 + 7;
+constexpr int64_t twoInv = 500'000'004;
+constexpr int64_t sixInv = 166'666'668;
+
+int64_t add(int64_t a, int64_t b) {
+  return (a % mod + b % mod) % mod;
+}
+
+int64_t mns(int64_t a, int64_t b) {
+  return (a % mod - b % mod + mod) % mod;
+}
+
+int64_t mul(int64_t a, int64_t b) {
+  return (a % mod) * (b % mod) % mod;
+}
+
+int64_t rev(int64_t n, int64_t p) {
+  int64_t res = 0;
+  while (n) {
+    res = add(mul(res, p), n % p);
+    n /= p;
+  }
+  return res;
+}
+
+int64_t stupid(int64_t n, int64_t k) {
+  int64_t res = 0;
+  for (int64_t p = 2; p &lt;= k; ++p) {
+    res = add(res, rev(n, p));
+  }
+  return res;
+}
+
+int64_t sum1(int64_t r) {
+  return mul(mul(r, r + 1), twoInv);
+}
+
+int64_t sum1(int64_t l, int64_t r) {
+  return mns(sum1(r), sum1(l - 1));
+}
+
+int64_t sum2(int64_t r) {
+  return mul(mul(mul(r, r + 1), 2 * r + 1), sixInv);
+}
+
+int64_t sum2(int64_t l, int64_t r) {
+  return mns(sum2(r), sum2(l - 1));
+}
+
+int64_t get(int64_t n, int64_t l, int64_t r) {
+  if (l > r) {
+    return 0;
+  }
+
+  int64_t res = mul(sum1(l, r), n);
+  int64_t minus = 0, plus = 0;
+
+  int64_t L = l;
+  while (L <= r) {
+    int64_t value = n / L;
+    int64_t R = min(r, n / value);
+
+    minus = add(minus, mul(sum2(L, R), value));
+    plus = add(plus, mul(R - L + 1, value));
+
+    L = R + 1;
+  }
+
+  return add(mns(res, minus), plus);
+}
+
+void solve() {
+  int64_t n, k;
+  cin >> n >> k;
+
+  int64_t sq = (int64_t)sqrtl((long double)n);
+  int64_t ans = mul(max&lt;int64_t&gt;(0, k - n), n);
+  ans = add(ans, stupid(n, min(sq, k)));
+  ans = add(ans, get(n, sq + 1, min(n, k)));
+
+  cout &lt;&lt; ans &lt;&lt; '\\n';
+}
+
+int main() {
+  int tt = 1;
+  cin >> tt;
+  while (tt-- > 0) {
+    solve();
+  }
+  return 0;
+}
+</pre>
+  </details>
 </article>
 `;
 // Exports
@@ -97074,14 +97175,13 @@ var code = `<article class="article">
 
 using namespace std;
 
-
 int main() {
   // ускорение ввода
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
   // ввод данных
-  int n;
+  int n; // число отрезков
   cin >> n;
   vector&lt;pair&lt;int, int&gt; &gt; A;
   int time, mark;
@@ -97248,21 +97348,24 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  // ввод данных
-  int n;
+  int n; // число отрезков
   cin >> n;
+
   vector&lt;pair&lt;long long, long long&gt; &gt; A(n);
   for (int i = 0; i &lt; n; i++) {
+    // левый и правый конец отрезка
     cin >> A[i].first >> A[i].second;
   }
+
   sort(A.begin(), A.end());
+
+  // два указателя begin и end
   int begin = A[0].first;
   int end = A[0].second;
-  long long sum = 0;
+  long long sum = 0; // длина окрашенной части прямой
 
   for (int i = 1; i &lt; n; i++) {
     if (A[i].first &lt;= end) {
@@ -97276,7 +97379,7 @@ int main() {
     }
   }
 
-  sum += end - begin;
+  sum += end - begin; // учтем последнюю полоску
 
   // вывод результата
   cout &lt;&lt; sum;
@@ -98060,15 +98163,14 @@ int time_string_int(string time) {
 }
 
 int main() {
-  // ускорение ввода
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  // ввод данных
-  vector&lt;int&gt; All_time(1000000);
-  int n;
-  string s1, s2;
+  int n; // число промежутков сна
   cin >> n;
+
+  string s1, s2;
+  vector&lt;int&gt; All_time(1000000);
   int time_start, time_end;
 
   for (int i = 0; i &lt; n; i++) {
@@ -98092,7 +98194,7 @@ int main() {
   }
 
   int count = 0;
-  int result = 0;
+  int result = 0; // число секунд на ремонт
   for (int i = 0; i &lt; 24 * 60 * 60; i++) {
     count += All_time[i];
     if (count == 0) {
