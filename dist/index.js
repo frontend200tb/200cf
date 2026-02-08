@@ -38361,6 +38361,7 @@ int main() {
     <summary>Решение</summary>
 <pre>
 #include &lt;iostream&gt;
+#include &lt;cmath&gt;
 
 using namespace std;
 
