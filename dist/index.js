@@ -38459,7 +38459,6 @@ int main() {
 </pre>
   </details>
 </article>
-
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
@@ -85280,39 +85279,36 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  int n;
+  int n; // число холмов
   cin >> n;
 
   vector&lt;vector&lt;int&gt; &gt; G(n + 1, vector&lt;int&gt;(n + 1));
   for (int i = 1; i &lt;= n; i++) {
     for (int j = 1; j &lt;= n; j++) {
-      cin >> G[i][j];
+      cin >> G[i][j]; // мост между холмами i и j
     }
   }
 
   vector&lt;int&gt; Color(n + 1);
   for (int i = 1; i &lt;= n; i++) {
-    cin >> Color[i];
+    cin >> Color[i]; // цвет холма
   }
 
-  // решение
-  int res = 0;
+  int res = 0; // число плохих мостов
+
   for (int i = 1; i &lt;= n; i++) {
     for (int j = i + 1; j &lt;= n; j++) {
-      if (G[i][j] == 1) {
-        if (Color[i] != Color[j]) {
-          res++;
+      if (G[i][j] == 1) { // если есть мост
+        if (Color[i] != Color[j]) { // между холмами разного цвета
+          res++; // то это плохой мост
         }
       }
     }
   }
 
-  // вывод результата
   cout &lt;&lt; res;
 }
 </pre>
@@ -85363,7 +85359,9 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-    <p>Задача на ориентированный граф. Показано кто на кого ссылается. Будем искать циклы длины 3. Проверим что 1 → 2 → 3 → 1</p>
+    <p>Задача на ориентированный граф. Показано кто на кого ссылается. Будем искать циклы длины 3. Проверим что самолет не смотрит сам на себя</p>
+    <code>G[i] != i</code>
+    <p>Проверим что 1 → 2 → 3 → 1</p>
     <code>G[G[G[i]]] == i</code>
 <pre>
 #include &lt;iostream&gt;
@@ -85372,31 +85370,27 @@ int main() {
 using namespace std;
 
 int main() {
-  // условная компиляция
 #ifdef _DEBUG
   freopen("input.txt", "rt", stdin);
   freopen("output.txt", "wt", stdout);
 #endif
 
-  // ввод данных
   int n; // число самолетов
   cin >> n;
 
   vector&lt;int&gt; G(n + 1);
   for (int i = 1; i &lt;= n; i++) {
-    cin >> G[i];
-    // самолету i нравится самолет G[i]
+    cin >> G[i]; // самолету i нравится самолет G[i]
   }
 
-  // решение
-  bool flag = false;
+  bool flag = false; // нет любовного треугольника
+
   for (int i = 0; i &lt;= n; i++) {
     if (G[i] != i && G[G[G[i]]] == i) {
-      flag = true;
+      flag = true; // есть любовный треугольник
     }
   }
 
-  // вывод результата
   if (flag == true) {
     cout &lt;&lt; "YES";
   } else {
@@ -85571,28 +85565,26 @@ int main() {
 using namespace std;
 
 int main() {
-// условная компиляция
 #ifdef _DEBUG
   freopen("input.txt", "rt", stdin);
   freopen("output.txt", "wt", stdout);
 #endif
 
-  // ввод данных
   int n; // число вершин
   int m; // число ребер
   cin >> n >> m;
 
+  // матрица смежности
   vector&lt;vector&lt;int&gt; &gt; G(n + 1, vector&lt;int&gt;(n + 1));
   int x, y;
+
   for (int i = 0; i &lt; m; i++) {
     cin >> x >> y;
 
-    // решение
     G[x][y] = 1;
     G[y][x] = 1;
   }
 
-  // вывод результата
   for (int i = 1; i &lt;= n; i++) {
     for (int j = 1; j &lt;= n; j++) {
       cout &lt;&lt; G[i][j] &lt;&lt; ' ';
@@ -85894,7 +85886,9 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+    <p>Решение задачи при помощи моделирования. Сначала выгоним всех тех у кого шнурки связаны только с одним партнером. Ищем вершины со степенью 1 и удаляем их из списка.</p>
     <p>Сложность O(n³). При n = 100 это приемлемо.</p>
+    <p>Сначала переведем входные данные из списка ребер в список смежности.</p>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -85902,28 +85896,28 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  int n, m;
+  int n; // число шестиклассников
+  int m; // число шнурков
   cin >> n >> m;
 
   // список смежности
   vector&lt;vector&lt;int&gt; &gt; G(n + 1);
+
   int x, y;
+
   for (int i = 0; i &lt; m; i++) {
     cin >> x >> y;
     G[x].push_back(y);
     G[y].push_back(x);
   }
 
-  // решение
   int res = 0;
-  vector&lt;int&gt; Mark(n + 1);
-  vector&lt;int&gt; Level(n + 1);
-  bool flag = true;
+  vector&lt;int&gt; Mark(n + 1); // ученик еще в классе
+  vector&lt;int&gt; Level(n + 1); // степень связи ученика с другими
+  bool flag = true; // еще есть ученик которого можно выгнать из класса
 
   while (flag) {
     flag = false;
