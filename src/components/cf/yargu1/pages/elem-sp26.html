@@ -671,6 +671,7 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+    <p>Соберем все события (отрезки и точки) в векторе A и отсортируем его по времени наступления события. Заведем счетчик count, который будем увеличивать при наступлении события начало отрезка и уменьшать при наступлении конца отрезка. Если наступит событие точка, то в результат записываем значение счетчика count.</p>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -679,27 +680,26 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  // ввод данных
-  int n, m;
+  int n; // число отрезков
+  int m; // число точек
   cin >> n >> m;
   int a1, b1, a, b;
   pair&lt;pair&lt;int, int&gt;, int&gt; tmp;
-  vector&lt;pair&lt;pair&lt;int, int&gt;, int&gt; &gt; A;
+  vector&lt;pair&lt;pair&lt;int, int&gt;, int&gt; &gt; A; // события
 
   // собираем отрезки
   for (int i = 0; i &lt; n; i++) {
     cin >> a1 >> b1;
-    a = min(a1, b1);
-    b = max(a1, b1);
+    a = min(a1, b1); // начало отрезка
+    b = max(a1, b1); // конец отрезка
     tmp.first.first = a;
-    tmp.first.second = -1;  // начало отрезка
+    tmp.first.second = -1;  // маркер начала отрезка
     A.push_back(tmp);
     tmp.first.first = b;
-    tmp.first.second = 1; // маркер окон отрезка
+    tmp.first.second = 1; // маркер конца отрезка
     A.push_back(tmp);
   }
 
@@ -707,23 +707,23 @@ int main() {
   for (int i = 0; i &lt; m; i++) {
     cin >> a;
     tmp.first.first = a;
-    tmp.first.second = 0; // точка
+    tmp.first.second = 0; // маркер точки
     tmp.second = i; // индекс точки
     A.push_back(tmp);
   }
 
   sort(A.begin(), A.end());
-  vector&lt;int&gt; Result(m);
+  vector&lt;int&gt; Result(m); // в скольких отрезках есть точка
   int count = 0;
 
   for (int i = 0; i &lt; A.size(); i++) {
     if (A[i].first.second == 0) {
-      Result[A[i].second] = count;
+      Result[A[i].second] = count; // событие точка
     } else {
       if (A[i].first.second == -1) {
-        count++;
+        count++; // событие начало отрезка
       } else {
-        count--;
+        count--; // событие конец отрезка
       }
     }
   }
