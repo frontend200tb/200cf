@@ -58949,6 +58949,46 @@ var code = `<article class="article">
   <div class="anchor" id="t2"></div>
   <h3>Задача B. Приезд генерала</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число солдат
+  cin >> n;
+
+  int in; // рост солдата
+  cin >> in;
+
+  int min_r = in; // минимальный рост
+  int min_i = 1; // номер минимального роста
+  int max_r = in; // максимальный рост
+  int max_i = 1; // номер максимального роста
+
+  for (int i = 2; i &lt;= n; i++) {
+    cin >> in;
+    if (in > max_r) {
+      max_r = in;
+      max_i = i;
+    }
+    if (in &lt;= min_r) {
+      min_r = in;
+      min_i = i;
+    }
+  }
+
+  int sec = (max_i - 1) + (n - min_i);
+  if (max_i > min_i) {
+    sec--;
+  }
+
+  cout &lt;&lt; sec;
+}
+</pre>
+  </details>
 </article>
 
 
