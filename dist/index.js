@@ -86367,6 +86367,82 @@ int main() {
 </pre>
     <p>Первый набор входных данных изображен в условии. Обратите внимание, что вывод 3 5 является неправильным, так как сначала должно быть выведено x, а затем y.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Анализ структуры графа-снежинки</p>
+    <ol>
+      <li>Есть центральная вершина (назовем ее center)</li>
+      <li>К центру подключены x вершин (первый уровень)</li>
+      <li>К каждой из этих x вершин подключены y вершин (второй уровень)</li>
+    </ol>
+    <p>Таким образом:</p>
+    <ol>
+      <li>Количество вершин: n = 1 + x + x*y</li>
+      <li>Количество ребер: m = x + xy = x(1+y)</li>
+    </ol>
+    <p>Нужно найти центр графа. Центральная вершина имеет степень x, а вершины первого уровня имеют степень (1 + y). Ни один сосед не должен иметь степень 1 (иначе это была бы вершина второго уровня). Определяем x: это степень центральной вершины. Определяем y: берем любого соседа центра, его степень минус 1 (так как он соединен с центром и y вершинами второго уровня)</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n, m;
+    cin >> n >> m;
+
+    vector&lt;set&lt;int&gt; &gt; G(n + 1);
+
+    for (int i = 0; i &lt; m; i++) {
+      int u, v;
+      cin >> u >> v;
+      G[u].insert(v);
+      G[v].insert(u);
+    }
+
+    int center = -1;
+    for (int i = 1; i &lt;= n; i++) {
+      if (G[i].size() > 1) {
+        bool valid = true;
+        int deg = -1;
+
+        for (int node : G[i]) {
+          if (G[node].size() == 1) {
+            valid = false;
+            break;
+          }
+          if (deg == -1) {
+            deg = G[node].size();
+          } else if (G[node].size() != deg) {
+            valid = false;
+            break;
+          }
+        }
+
+        if (valid) {
+          center = i;
+          break;
+        }
+      }
+    }
+
+    int x = G[center].size();
+
+    int lev = *G[center].begin();
+    int y = G[lev].size() - 1;
+
+    cout &lt;&lt; x &lt;&lt; ' ' &lt;&lt; y &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
 </article>
 `;
 // Exports
