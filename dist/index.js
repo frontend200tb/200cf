@@ -88561,7 +88561,7 @@ int a, b; // две вершины одного ребра
 // список смежности
 vector&lt;vector&lt;int&gt; &gt; G(n + 1);
 
-// ссписок ребер сохраним в список смежности
+// список ребер сохраним в список смежности
 for (int i = 0; i &lt; m; i++) {
   cin >> a >> b;
   G[a].push_back(b);
@@ -88592,7 +88592,7 @@ for (int i = 1; i &lt;= n; i++) {
 cin >> q;
 
 while (q--) {
-  int a, b;
+  int a, b; // две вершины
   cin >> a >> b;
   if (Color[a] == Color[b]) {
     cout &lt;&lt; "Yes\\n";
@@ -88604,12 +88604,11 @@ while (q--) {
 
   <p>Реализация BFS через очередь для проверки существования пути из вершины a в вершину b.</p>
 <pre>
-void bfs(
-     vector&lt;vector&lt;int&gt; &gt;& G,
-     vector&lt;int&gt;& Mark,
-     vector&lt;int&gt;& Color,
-     int number_color,
-     int start) {
+void bfs(vector&lt;vector&lt;int&gt; &gt;& G,
+        vector&lt;int&gt;& Mark,
+        vector&lt;int&gt;& Color,
+        int number_color,
+        int start) {
 
   queue&lt;int&gt; q;
   q.push(start);
@@ -88655,7 +88654,7 @@ int a, b; // две вершины одного ребра
 // список смежности
 vector&lt;vector&lt;int&gt; &gt; G(n + 1);
 
-// ссписок ребер сохраним в список смежности
+// список ребер сохраним в список смежности
 for (int i = 0; i &lt; m; i++) {
   cin >> a >> b;
   G[a].push_back(b);
@@ -88791,7 +88790,7 @@ int a, b; // две вершины одного ребра
 // список смежности
 vector&lt;vector&lt;int&gt; &gt; G(n + 1);
 
-// ссписок ребер сохраним в список смежности
+// список ребер сохраним в список смежности
 for (int i = 0; i &lt; m; i++) {
   cin >> a >> b;
   G[a].push_back(b);
