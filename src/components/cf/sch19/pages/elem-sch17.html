@@ -26,6 +26,52 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Середина контеста</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int h1, m1; // время начала контеста
+  int h2, m2; // время окончания контеста
+  char colon;
+  cin >> h1 >> colon >> m1 >> h2 >> colon >> m2;
+
+  // переведем время в минуты
+  m1 = h1 * 60 + m1;
+  m2 = h2 * 60 + m2;
+
+  // длительность контеста
+  int dif = m1 - m2;
+
+  // длительность половины контеста
+  int dif2 = dif / 2;
+
+  // время половины контеста в минутах
+  int time2m = m1 - dif2;
+
+  // часы
+  int h = time2m / 60;
+
+  // минуты
+  int m = time2m % 60;
+
+  if (h &lt; 10) {
+    cout &lt;&lt; 0;
+  }
+
+  cout &lt;&lt; h &lt;&lt; ':';
+
+  if (m &lt; 10) {
+    cout &lt;&lt; 0;
+  }
+
+  cout &lt;&lt; m;
+}
+</pre>
+  </details>
 </article>
 
 
