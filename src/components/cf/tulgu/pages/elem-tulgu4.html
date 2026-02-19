@@ -31,6 +31,34 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Ограбление</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int a; // позиция преступника
+  int b, c; // позиции сигнализации
+  int n; // число купюр
+  cin >> a >> b >> c >> n;
+
+  int in; // следующий сейф
+  int cnt = 0; // число купюр между сейфами b и c
+
+  // соберем купюры не доходя до сигнализаций
+  while (n--) {
+    cin >> in;
+    if (in > b && in &lt; c) {
+      cnt++;
+    }
+  }
+
+  cout &lt;&lt; cnt;
+}
+</pre>
+  </details>
 </article>
 
 
