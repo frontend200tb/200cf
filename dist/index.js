@@ -64968,6 +64968,60 @@ int main() {
   <div class="anchor" id="t7"></div>
   <h3>Задача G. Автосалон</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+#include &lt;map&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число машин
+  int k; // число различных чисел
+  cin >> n >> k;
+
+  set&lt;int&gt; S;
+  vector&lt;int&gt; A(n + 1);
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> A[i];
+    S.insert(A[i]);
+  }
+
+  if (S.size() &lt; k) {
+    cout &lt;&lt; "-1 -1";
+  } else {
+    // метод двух указателей
+    map&lt;int, int&gt; M;
+    int l = 1; // левый указатель
+    int r = 1; // правый указатель
+
+    // находим правую границу
+    while (M.size() &lt; k) {
+      if (!M[A[r]]) {
+        M[A[r]] = 0;
+      }
+      M[A[r]]++;
+      r++;
+    }
+
+    // находим левую границу
+    while (M.size() == k) {
+      M[A[l]]--;
+      if (M[A[l]] == 0) {
+        M.erase(A[l]);
+      }
+      l++;
+    }
+
+    cout &lt;&lt; l - 1 &lt;&lt; ' ' &lt;&lt; r - 1;
+  }
+
+}
+</pre>
+  </details>
 </article>
 
 
