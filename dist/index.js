@@ -64837,7 +64837,7 @@ var code = `<article class="article">
   <br><a href="#t3">Задача C. Стол-конструктор</a>
   <br><a href="#t4">Задача D. Шоколадки</a>
   <br><a href="#t5">Задача E. Таблица</a>
-  <br><a href="#t6">Задача F. C–</a>
+  <br><a href="#t6">Задача F. C–-</a>
   <br><a href="#t7">Задача G. Автосалон</a>
   <br><a href="#t8">Задача H. Подмножество делимости</a>
 </article>
@@ -64944,6 +64944,63 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Шоколадки</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Для каждой шоколадки размером n×m и нужного количества долек p мы пытаемся найти такие целые a и b, чтобы:</p>
+    <ul>
+      <li>a x b = p (прямоугольник нужной площади)</li>
+      <li>a ≤ n и b ≤ m (прямоугольник помещается в шоколадку по вертикали и горизонтали)</li>
+    </ul>
+    <p>Мы перебираем все возможные значения a от 1 до n и проверяем, делится ли p на a без остатка. Если делится, то b = p / a, и проверяем, помещается ли b по ширине m.</p>
+    <p>Мы также проверяем случай, когда сторона a идет по ширине (от 1 до m), а сторона b - по высоте.</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int q; // число шоколадок
+  cin >> q;
+
+  while (q--) {
+    int n, m; // размер шоколадки
+    int p; // число плиток которые отломать
+    cin >> n >> m >> p;
+
+    bool res = false;
+
+    // проверим все возможные стороны прямоугольника a и b
+    for (int a = 1; a &lt;= n; a++) {
+      if (p % a == 0) {
+        int b = p / a;
+        if (b &lt;= m) {
+          res = true;
+          break;
+        }
+      }
+    }
+
+    if (!res) {
+      for (int a = 1; a &lt;= m; a++) {
+        if (p % a == 0) {
+          int b = p / a;
+          if (b &lt;= n) {
+            res = true;
+            break;
+          }
+        }
+      }
+    }
+
+    if (res) {
+      cout &lt;&lt; "Yes\\n";
+    } else {
+      cout &lt;&lt; "No\\n";
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -64955,11 +65012,47 @@ int main() {
 </article>
 
 
-<!-- Задача F. C– -->
+<!-- Задача F. C–- -->
 <article class="article">
   <div class="anchor" id="t6"></div>
-  <h3>Задача F. C–</h3>
+  <h3>Задача F. C–-</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Чтобы квадрат числа поместился в больший размер типа данных, размер должен быть в два раза больше.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число типов в языке c--
+  cin >> n;
+
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i]; // размер типа
+  }
+
+  sort(A.begin(), A.end());
+  bool isThrow = false;
+
+  for (int i = 0; i &lt; n - 1; i++) {
+    if (A[i] * 2 > A[i + 1] && A[i+1] > A[i]) {
+      isThrow = true;
+    }
+  }
+
+  if (isThrow) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -65088,6 +65181,82 @@ var code = `<article class="article">
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Пирамидальные пути</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число вершин в графе
+  cin >> n;
+
+  vector&lt;int&gt; A(n);
+  cin >> A[0]; // первая вершина
+  cin >> A[1] ;// вторая вершина
+
+  if (A[0] > A[1]) {
+    bool dir = 0; // идем вниз
+    int i = 2;
+    while (i &lt; n) {
+      cin >> A[i];
+      if (A[i] > A[i-1]) {
+        dir = 1; // идем вверх
+        i++;
+        break;
+      }
+      i++;
+    }
+    while (i &lt; n) {
+      cin >> A[i];
+      if (A[i-1] > A[i]) {
+        dir = 0; // идем вниз
+        i++;
+        break;
+      }
+      i++;
+    }
+
+    if (dir == 1) {
+      cout &lt;&lt; "YES";
+    } else {
+      cout &lt;&lt; "NO";
+    }
+  }
+
+  if (A[1] > A[0]) {
+    bool dir = 1; // идем вверх
+    int i = 2;
+    while (i &lt; n) {
+      cin >> A[i];
+      if (A[i-1] > A[i]) {
+        dir = 0; // идем вниз
+        i++;
+        break;
+      }
+      i++;
+    }
+    while (i &lt; n) {
+      cin >> A[i];
+      if (A[i] > A[i-1]) {
+        dir = 1; // идем вверх
+        i++;
+        break;
+      }
+      i++;
+    }
+
+    if (dir == 0) {
+      cout &lt;&lt; "YES";
+    } else {
+      cout &lt;&lt; "NO";
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
