@@ -65289,6 +65289,49 @@ int main() {
   <div class="anchor" id="t5"></div>
   <h3>Задача E. Ника и репка</h3>
 
+  <details>
+    <summary>Решение неправильный ответ на тесте 25</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+typedef long long ll;
+
+using namespace std;
+
+bool s(ll a, ll b) {
+  return a > b;
+}
+
+int main() {
+  int n; // число помощников
+  ll x; // нужная сила
+  cin >> n >> x;
+
+  vector&lt;ll&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+  }
+
+  sort(A.begin(), A.end(), s);
+  double sum = 0;
+  bool res = 0;
+  for (int i = 0; i &lt; n; i++) {
+    sum += (1.0 * A[i]) / (i + 1);
+    if ((ll)sum >= x) {
+      res = 1;
+    }
+  }
+
+  if (res) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -65410,6 +65453,31 @@ var code = `<article class="article">
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Качели</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Из трех детей самый тяжелый должен сесть на одну сторону качелей, а двое других на другую сторону. Если разность масс превышает допустимую, то нужно взять камень.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int a, b, c; // массы детей
+  int d; // допустимая разность
+  cin >> a >> b >> c >> d;
+
+  int m = max(a, max(b, c)); // самый тяжелый ребенок
+  int dif = abs((a + b + c) - m - m); // разница на качелях
+
+  if (dif > d) {
+    cout &lt;&lt; dif - d;
+  } else {
+    cout &lt;&lt; 0;
+  }
+}
+</pre>
+  </details>
 </article>
 
 
