@@ -85118,6 +85118,80 @@ int main() {
 7
 </pre>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <p>Мы используем жадный подход, пытаясь установить биты в ответе от старшего к младшему.</p>
+    <ul>
+      <li>Для каждого бита мы проверяем, можем ли мы установить его в ответе</li>
+      <li>Создаем кандидата: текущий ответ + текущий бит</li>
+      <li>Проверяем, существует ли такая перестановка массива b, что для всех i выполняется: (a[i] XOR b[i]) И candidate = candidate</li>
+    </ul>
+    <ul>
+      <li>Сохраняем в мультимножество значения (a[i] & candidate)</li>
+      <li>Для каждого b[i] ищем необходимое значение (~b[i]) & candidate</li>
+      <li>Если для какого-то b[i] не находим соответствие, то candidate невозможен</li>
+    </ul>
+    <p>Сложность: O(n * log n * 30), что проходит по времени при ограничениях задачи.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // размер массивов
+    cin >> n;
+
+    vector&lt;int&gt; a(n), b(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> a[i];
+    }
+    for (int i = 0; i &lt; n; i++) {
+      cin >> b[i];
+    }
+
+    int res = 0;
+
+    for (int bit = 29; bit >= 0; bit--) {
+      int next = res | (1 &lt;&lt; bit);
+
+      multiset&lt;int&gt; s;
+      for (int i = 0; i &lt; n; i++) {
+        s.insert(a[i] & next);
+      }
+
+      bool flag = true;
+      for (int i = 0; i &lt; n; i++) {
+        int needed = (~b[i]) & next;
+        auto it = s.find(needed);
+        if (it == s.end()) {
+          flag = false;
+          break;
+        }
+        s.erase(it);
+      }
+
+      if (flag) {
+        res = next;
+      }
+    }
+
+    cout &lt;&lt; res &lt;&lt; '\\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -90743,7 +90817,7 @@ int a, b; // две вершины одного ребра
 // список смежности
 vector&lt;vector&lt;int&gt; &gt; G(n + 1);
 
-// ссписок ребер сохраним в список смежности
+// список ребер сохраним в список смежности
 for (int i = 0; i &lt; m; i++) {
   cin >> a >> b;
   G[a].push_back(b);
@@ -91843,6 +91917,7 @@ void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
   vector&lt;int&gt;& Time_out,
   int& time,
   int pos) {
+
   time++;
   Time_in[pos] = time;
   for (int i = 0; i &lt; G[pos].size(); i++) {
@@ -91862,8 +91937,10 @@ int main() {
   freopen("ancestor.out", "wt", stdout);
 
   // ввод данных
-  int n, start, tmp;
+  int n; // число вершин
   cin >> n;
+
+  int start, tmp;
   vector&lt;vector&lt;int&gt; &gt; G(n + 1);
   for (int i = 1; i &lt;= n; i++) {
     cin >> tmp;
@@ -91877,9 +91954,11 @@ int main() {
   vector&lt;int&gt; Time_in(n + 1), Time_out(n + 1);
   int time = 0;
   dfs(G, Time_in, Time_out, time, start);
-  int m;
+
+  int m; // число запросов
   cin >> m;
-  int a, b;
+
+  int a, b; // является ли вершина a предком вершины b и наоборот
   while (m--) {
     cin >> a >> b;
     if (Time_in[a] &lt; Time_in[b] && Time_out[b] &lt; Time_out[a]) {
@@ -92061,7 +92140,7 @@ void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
       dfs(G, Mark, flag, G[pos][i], pos);
     } else {
       if (G[pos][i] != last_pos) {
-        flag = true;
+        flag = true; // цикл найден
       }
     }
   }
@@ -92073,10 +92152,15 @@ int main() {
   cin.tie(0);
 
   // ввод данных
-  int n, m;
+  int n; // число вершин
+  int m; // число ребер
   cin >> n >> m;
+
+  // список смежности
   vector&lt;vector&lt;int&gt; &gt; G(n + 1);
-  int x, y;
+  int x, y; // две вершины одного ребра
+
+  // список ребер сохраним в список смежности
   for (int i = 0; i &lt; m; i++) {
     cin >> x >> y;
     G[x].push_back(y);

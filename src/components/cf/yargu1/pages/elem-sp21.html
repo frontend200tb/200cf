@@ -100,7 +100,7 @@ int a, b; // две вершины одного ребра
 // список смежности
 vector&lt;vector&lt;int&gt; &gt; G(n + 1);
 
-// ссписок ребер сохраним в список смежности
+// список ребер сохраним в список смежности
 for (int i = 0; i &lt; m; i++) {
   cin >> a >> b;
   G[a].push_back(b);
@@ -1200,6 +1200,7 @@ void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
   vector&lt;int&gt;& Time_out,
   int& time,
   int pos) {
+
   time++;
   Time_in[pos] = time;
   for (int i = 0; i &lt; G[pos].size(); i++) {
@@ -1219,8 +1220,10 @@ int main() {
   freopen("ancestor.out", "wt", stdout);
 
   // ввод данных
-  int n, start, tmp;
+  int n; // число вершин
   cin >> n;
+
+  int start, tmp;
   vector&lt;vector&lt;int&gt; &gt; G(n + 1);
   for (int i = 1; i &lt;= n; i++) {
     cin >> tmp;
@@ -1234,9 +1237,11 @@ int main() {
   vector&lt;int&gt; Time_in(n + 1), Time_out(n + 1);
   int time = 0;
   dfs(G, Time_in, Time_out, time, start);
-  int m;
+
+  int m; // число запросов
   cin >> m;
-  int a, b;
+
+  int a, b; // является ли вершина a предком вершины b и наоборот
   while (m--) {
     cin >> a >> b;
     if (Time_in[a] &lt; Time_in[b] && Time_out[b] &lt; Time_out[a]) {
@@ -1418,7 +1423,7 @@ void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
       dfs(G, Mark, flag, G[pos][i], pos);
     } else {
       if (G[pos][i] != last_pos) {
-        flag = true;
+        flag = true; // цикл найден
       }
     }
   }
@@ -1430,10 +1435,15 @@ int main() {
   cin.tie(0);
 
   // ввод данных
-  int n, m;
+  int n; // число вершин
+  int m; // число ребер
   cin >> n >> m;
+
+  // список смежности
   vector&lt;vector&lt;int&gt; &gt; G(n + 1);
-  int x, y;
+  int x, y; // две вершины одного ребра
+
+  // список ребер сохраним в список смежности
   for (int i = 0; i &lt; m; i++) {
     cin >> x >> y;
     G[x].push_back(y);

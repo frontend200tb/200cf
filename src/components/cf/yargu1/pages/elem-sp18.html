@@ -1856,6 +1856,80 @@ int main() {
 7
 </pre>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <p>Мы используем жадный подход, пытаясь установить биты в ответе от старшего к младшему.</p>
+    <ul>
+      <li>Для каждого бита мы проверяем, можем ли мы установить его в ответе</li>
+      <li>Создаем кандидата: текущий ответ + текущий бит</li>
+      <li>Проверяем, существует ли такая перестановка массива b, что для всех i выполняется: (a[i] XOR b[i]) И candidate = candidate</li>
+    </ul>
+    <ul>
+      <li>Сохраняем в мультимножество значения (a[i] & candidate)</li>
+      <li>Для каждого b[i] ищем необходимое значение (~b[i]) & candidate</li>
+      <li>Если для какого-то b[i] не находим соответствие, то candidate невозможен</li>
+    </ul>
+    <p>Сложность: O(n * log n * 30), что проходит по времени при ограничениях задачи.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // размер массивов
+    cin >> n;
+
+    vector&lt;int&gt; a(n), b(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> a[i];
+    }
+    for (int i = 0; i &lt; n; i++) {
+      cin >> b[i];
+    }
+
+    int res = 0;
+
+    for (int bit = 29; bit >= 0; bit--) {
+      int next = res | (1 &lt;&lt; bit);
+
+      multiset&lt;int&gt; s;
+      for (int i = 0; i &lt; n; i++) {
+        s.insert(a[i] & next);
+      }
+
+      bool flag = true;
+      for (int i = 0; i &lt; n; i++) {
+        int needed = (~b[i]) & next;
+        auto it = s.find(needed);
+        if (it == s.end()) {
+          flag = false;
+          break;
+        }
+        s.erase(it);
+      }
+
+      if (flag) {
+        res = next;
+      }
+    }
+
+    cout &lt;&lt; res &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
