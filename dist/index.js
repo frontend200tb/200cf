@@ -65290,36 +65290,36 @@ int main() {
   <h3>Задача E. Ника и репка</h3>
 
   <details>
-    <summary>Решение неправильный ответ на тесте 25</summary>
+    <summary>Решение неправильный ответ на тесте 88</summary>
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
 
-typedef long long ll;
+typedef long double ld;
 
 using namespace std;
 
-bool s(ll a, ll b) {
+bool s(ld a, ld b) {
   return a > b;
 }
 
 int main() {
   int n; // число помощников
-  ll x; // нужная сила
+  ld x; // нужная сила
   cin >> n >> x;
 
-  vector&lt;ll&gt; A(n);
+  vector&lt;ld&gt; A(n);
   for (int i = 0; i &lt; n; i++) {
     cin >> A[i];
   }
 
   sort(A.begin(), A.end(), s);
-  double sum = 0;
+  ld sum = 0;
   bool res = 0;
   for (int i = 0; i &lt; n; i++) {
-    sum += (1.0 * A[i]) / (i + 1);
-    if ((ll)sum >= x) {
+    sum += A[i] / (i + 1);
+    if (sum >= x) {
       res = 1;
     }
   }
@@ -89364,6 +89364,81 @@ void bfs(
 3 5
 </pre>
     <code>3</code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+void bfs(
+  vector&lt;vector&lt;int&gt; &gt;& G,
+  vector&lt;int&gt;& Mark,
+  vector&lt;int&gt;& Len,
+  int start) {
+
+  queue&lt;int&gt; q;
+  q.push(start);
+  Mark[start] = 1;
+  Len[start] = 0;
+  int tmp;
+
+  while (q.size() > 0) {
+    tmp = q.front();
+    q.pop();
+    for (int i = 0; i &lt; G[tmp].size(); i++) {
+      if (Mark[G[tmp][i]] == 0) {
+        Mark[G[tmp][i]] = 1;
+        Len[G[tmp][i]] = 1 + Len[tmp];
+        q.push(G[tmp][i]);
+      }
+    }
+  }
+}
+
+
+int main() {
+  int n; // число вершин
+  cin >> n;
+  int in;
+
+  // список смежности
+  vector&lt;vector&lt;int&gt; &gt; G(n + 1);
+
+  // матрицу смежности сохраним в список смежности
+  for (int i = 1; i &lt;= n; i++) {
+    for (int j = 1; j &lt;= n; j++) {
+      cin >> in;
+      if (in == 1) {
+        G[i].push_back(j);
+      }
+    }
+  }
+
+  int start; // начальная вершина
+  int finish; // конечная вершина
+  cin >> start >> finish;
+
+  vector&lt;int&gt; Mark(n + 1);
+  // Mark[i] = 0 если не посещали вершину
+  // Mark[i] = 1 если уже посетили вершину
+
+  vector&lt;int&gt; Len(n + 1);
+  // Len[i] путь от вершины start до вершины i
+
+  bfs(G, Mark, Len, start);
+
+  if (Mark[finish] == 0) {
+    cout &lt;&lt; -1; // вершина finish недостижима
+  } else {
+    cout &lt;&lt; Len[finish];
+  }
+}
+</pre>
   </details>
 </article>
 
