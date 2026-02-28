@@ -33808,7 +33808,7 @@ void dfs(int v, int pr) {
         if (m2 &lt; dp[c])
           m2 = dp[c];
       }
-      col++;//считаем количество сыновей
+      col++; //считаем количество сыновей
     }
   }
   dp[v] = max(col, col - 1 + m1);//тогда мы или начнем удаляемый путь из текущей вершинки или продолжим из какого-то сына наверх к отцу
@@ -89197,20 +89197,28 @@ void bfs_path(
 
   <p>В задачах иногда требуется не только определить длину кратчайшего пути, но и вывести сам кратчайший путь между парой вершин start и finish. Для вывода самого пути мы можем запомнить для каждой вершины x, из какой смежной вершины мы в нее прибыли.</p>
   <p>Создадим дополнительный vector&lt;int&gt; Putty, где в Putty[i] будет храниться номер смежной вершины, из которой мы при прибыли в вершину i.</p>
+  <p>Создадим дополнительный vector&lt;int&gt; Path, в который запишем кратчайший путь.</p>
+
+<pre>
+vector&lt;int&gt; Putty(n+1); // для восстановления пути
+vector&lt;int&gt; Path; // кратчайший путь
+</pre>
+
+  <p>В алгоритме для нахождения длины кратчайшего пути добавим три новых строчки, чтобы получить алгоритм для восстановления кратчайшего пути.</p>
 
 <pre>
 void bfs_save_path(
      vector&lt;vector&lt;int&gt; &gt;& G,
      vector&lt;int&gt;& Mark,
      vector&lt;int&gt;& Len,
-     vector&lt;int&gt; Putty,
+     vector&lt;int&gt;& Putty, // новая строка
      int start) {
 
   queue&lt;int&gt; q;
   q.push(start);
   Mark[start] = 1;
   Len[start] = 0;
-  Putty[start] = start;
+  Putty[start] = start; // новая строка
   int tmp;
 
   while (q.size() > 0) {
@@ -89220,7 +89228,7 @@ void bfs_save_path(
       if (Mark[G[tmp][i]] == 0) {
         Mark[G[tmp][i]] = 1;
         Len[G[tmp][i]] = 1 + Len[tmp];
-        Putty[G[tmp][i]] = tmp;
+        Putty[G[tmp][i]] = tmp; // новая строка
         q.push(G[tmp][i]);
       }
     }
@@ -89231,11 +89239,10 @@ void bfs_save_path(
   <p>Для восстановления пути из вершины start в вершину finish мы пройдем по Putty от вершины finish в вершину start. Таким образом, мы пройдем ребра в обратном порядке и сможем восстановить путь.</p>
 <pre>
 void find_path(
-     vector&lt;int&gt; Putty,
-     vector&lt;int&gt; Path,
+     vector&lt;int&gt;& Putty,
+     vector&lt;int&gt;& Path,
      int start,
-     int finish,
-     int n) {
+     int finish) {
 
   Path.push_back(finish);
   int u = finish;
