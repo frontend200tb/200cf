@@ -990,23 +990,26 @@ int main()
     <summary>Решение</summary>
 <pre>
 #include &lt;iostream&gt;
-#include &lt;iomanip&gt;
 #include &lt;vector&gt;
 #include &lt;stack&gt;
 #include &lt;queue&gt;
 
 using namespace std;
 
+//Поиск в глубину в котором мы находим цикл
 void dfs(vector&lt;int&gt;& Pred, vector&lt;int&gt;& Mark,
          int x, stack&lt;int&gt; &st, bool &flag) {
   Mark[x] = 1;
   st.push(x);
   if (Mark[Pred[x]] == 0) {
+    //если предок не посещен переходим в него
     dfs(Pred, Mark, Pred[x], st, flag);
   } else {
+    //если предок был помечен
     if (Mark[Pred[x]] == 1) {
-      st.push(Pred[x]);
-      flag = false;
+      //если он помечен 1 значит мы получили цикл
+      st.push(Pred[x]); //запоминаем в stack повтор вершины
+      flag = false; //помечаем флагом что нашли цикл
     }
   }
 }
@@ -1017,7 +1020,7 @@ int main() {
   cin.tie(0);
 
   // ввод данных
-  int t;
+  int t; // число тестов
   cin >> t;
 
   while (t--) {
@@ -1025,8 +1028,9 @@ int main() {
     cin >> n;
 
     // решение
-    vector&lt;int&gt; A(n + 1);
+    vector&lt;int&gt; A(n + 1); //вектор предков
     vector&lt;vector&lt;int&gt; &gt; G(n + 1);
+    //для хранения ребер в обратном направлении для bfs
     for (int i = 1; i &lt;= n; i++) {
       cin >> A[i];
       G[A[i]].push_back(i);
