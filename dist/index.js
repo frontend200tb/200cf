@@ -85224,6 +85224,129 @@ int main() {
 </pre>
     <code>8</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <h4>Тест 38</h4>
+<pre>
+999999
+100000
+100001
+000000
+</pre>
+    <code>0</code>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+long long modpow(long long base, long long exp, long long mod) {
+  long long res = 1;
+  while (exp > 0) {
+    if (exp & 1) res = (res * base) % mod;
+    base = (base * base) % mod;
+    exp >>= 1;
+  }
+  return res;
+}
+
+int main() {
+  string n; // длина массива
+  string a, b, c; // числа для AND, OR, XOR
+  cin >> n >> a >> b >> c;
+
+  int MOD = 1e9 + 7;
+  int len = a.length();
+
+  // Проверка n=1
+  if (n == "1") {
+    for (int i = 0; i &lt; len; i++) {
+      if (a[i] != b[i] || a[i] != c[i]) {
+        cout &lt;&lt; "0\\n";
+        return 0;
+      }
+    }
+    cout &lt;&lt; "1\\n";
+    return 0;
+  }
+
+  // Определяем четность n
+  int last_digit = n.back() - '0';
+  int n_parity = last_digit % 2; // 0 если чет, 1 если нечет
+
+  int cnt_01 = 0, k1 = 0, k0 = 0;
+  bool impossible = false;
+
+  for (int i = 0; i &lt; len; i++) {
+    int ai = a[i] - '0';
+    int bi = b[i] - '0';
+    int ci = c[i] - '0';
+
+    if (ai == 1 && bi == 0) {
+      impossible = true;
+      break;
+    }
+
+    if (ai == bi) {
+      if (ai == 1) {
+        // Все единицы
+        if (ci != n_parity) {
+          impossible = true;
+          break;
+        }
+      } else {
+        // Все нули
+        if (ci != 0) {
+          impossible = true;
+          break;
+        }
+      }
+    } else { // ai == 0, bi == 1
+      cnt_01++;
+      if (ci == 1) k1++;
+      else k0++;
+    }
+  }
+
+  if (impossible) {
+    cout &lt;&lt; "0\\n";
+    return 0;
+  }
+
+  if (cnt_01 == 0) {
+    cout &lt;&lt; "1\\n";
+    return 0;
+  }
+
+  // Вычисляем n mod (MOD-1) для показателя степени
+  long long n_mod = 0;
+  for (char digit : n) {
+    n_mod = (n_mod * 10 + (digit - '0')) % (MOD - 1);
+  }
+  long long n_minus_1_mod = (n_mod - 1 + MOD - 1) % (MOD - 1);
+
+  long long pow2 = modpow(2, n_minus_1_mod, MOD);
+
+  bool n_even = (n_parity == 0);
+
+  long long even_ways, odd_ways;
+  if (n_even) {
+    even_ways = (pow2 - 2 + MOD) % MOD;
+    odd_ways = pow2;
+  } else {
+    even_ways = (pow2 - 1 + MOD) % MOD;
+    odd_ways = (pow2 - 1 + MOD) % MOD;
+  }
+
+  long long res = 1;
+  res = (res * modpow(even_ways, k0, MOD)) % MOD;
+  res = (res * modpow(odd_ways, k1, MOD)) % MOD;
+
+  cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 
 
@@ -92733,10 +92856,10 @@ var code = `<article class="article">
 
   <p>Приведем реализацию алгоритма в виде функции dijkstra. В аргументах функции dijkstra передается:</p>
   <ul>
-    <li>vector &lt;vector&lt;pair&lt;int, int&gt; &gt; &gt; G — граф, представленный в виде списка смежности, где в каждой i строке каждая ячейка — это пара чисел first — вес ребра, second — номер вершины, с которой соединена вершина с номером i;</li>
-    <li>vector&lt;int&gt;Mark — вектор посещаемости. Mark[i] равняется 1, если
+    <li>vector&lt;vector&lt;pair&lt;int, int&gt; &gt; &gt; G — граф, представленный в виде списка смежности, где в каждой i строке каждая ячейка — это пара чисел first — вес ребра, second — номер вершины, с которой соединена вершина с номером i;</li>
+    <li>vector&lt;int&gt; Mark — вектор посещаемости. Mark[i] равняется 1, если
       до вершины с номером i построен путь, иначе равняется 0. Изначально каждая вершина считается не посещенной;</li>
-    <li>vector&lt;int&gt;Dist — вектор длин путей, Dist[i] будет равняться длине кратчайшего пути до вершины i. Изначально каждая ячейка хранит величину, заведомо превосходящую длину кратчайшего пути, или так называемую недостижимую величину;</li>
+    <li>vector&lt;int&gt; Dist — вектор длин путей, Dist[i] будет равняться длине кратчайшего пути до вершины i. Изначально каждая ячейка хранит величину, заведомо превосходящую длину кратчайшего пути, или так называемую недостижимую величину;</li>
     <li>n — количество вершин в графе;</li>
     <li>start — вершина старта.</li>
   </ul>
@@ -92746,18 +92869,22 @@ void dijkstra(vector&lt;vector&lt;pair&lt;int, int&gt; &gt; &gt;& G,
   vector&lt;int&gt;& Dist,
   int n,
   int start) {
+
+  // начальная инициализация
   for (int i = 1; i &lt;= n; i++) {
     Dist[i] = 1e9;
     Mark[i] = 0;
   }
 
   Dist[start] = 0;
-  int u = 0; d;
+  int u = 0; // наилучшая вершина
+  int d; // минимальная длина
 
   for (int relax = 1; relax &lt;= n && u != -1; relax++) {
     u = -1, d = 1e9;
     for (int i = 1; i &lt; n; i++) {
       if (Mark[i] == 0 && Dist[i] &lt; d) {
+        // улучшаем путь
         u = i;
         d = Dist[i];
       }
