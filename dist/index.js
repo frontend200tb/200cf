@@ -86795,6 +86795,38 @@ int main() {
 3 4
 </pre>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Города Берляндии имеют номера с 1 до n и степени вершин от 1 до n. Города Бирляндии имеют номера с n+1 до 2n и степени вершин от 1 до n. Общее число дорог равно сумме всех степеней поделенной на 2</p>
+    <code>m = n * (n + 1) / 2</code>
+    <p>Нужно распределить так, чтобы город со значимостью k из Бирляндии получал ровно k соединений. Это значит, что город n+k должен соединяться с городами i ≥ k из Берляндии.</p>
+<pre>
+#include &lt;iostream>
+
+using namespace std;
+
+int main() {
+  int n; // число городов
+  cin >> n;
+
+  // если город один
+  if (n == 1) {
+    cout &lt;&lt; "1\\n1 2\\n";
+    return 0;
+  }
+
+  int m = n * (n + 1) / 2; // число дорог
+  cout &lt;&lt; m &lt;&lt; '\\n';
+
+  for (int k = 1; k &lt;= n; k++) {
+    for (int i = n - k + 1; i <= n; i++) {
+      cout &lt;&lt; i &lt;&lt; ' ' &lt;&lt; (n + k) &lt;&lt; '\\n';
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
@@ -92936,25 +92968,33 @@ void dijkstra_optimized(
   vector&lt;int&gt;& Dist,
   int n,
   int start) {
+
+  // начальная инициализация
   for (int i = 1; i &lt;= n; i++) {
     Dist[i] = 1e9;
     Mark[i] = 0;
   }
 
+  // set расстояний
   set&lt;pair&lt;int, int&gt; &gt;Dist_st;
+  // вспомогательные пары
   pair&lt;int, int&gt; tmp1, tmp2;
+  // первая вершина
   tmp1.first = 0;
   tmp1.second = start;
   Dist_st.insert(tmp1);
 
   while (Dist_st.size() > 0) {
+    // пока set не пустой, достаем первую вершину
     tmp1 = *Dist_st.begin();
 
     if (Mark[tmp1.second] == 0) {
+      // если вершина еще не посещена
       Dist[tmp1.second] = tmp1.first;
       Mark[tmp1.second] = 1;
 
       for (int i = 0; i &lt; G[tmp1.second].size(); i++) {
+        // до каждой смежной вершины обновим расстояние
         tmp2.second = G[tmp1.second][i].second;
         tmp2.first = tmp1.first + G[tmp1.second][i].first;
         Dist_st.insert(tmp2);
@@ -92963,6 +93003,8 @@ void dijkstra_optimized(
   }
 }
 </pre>
+
+  <h4>Восстановление пути</h4>
   <p>В задачах, где требуется восстановить обратный путь, структура данных становится более сложной, поскольку нам потребуется запоминать вершины, создающие последнее ребро в пути. Мы можем переделать set для запоминания последнего ребра, например следующим образом set&lt;pair&lt;int, pair&lt;int, int&gt; &gt; &gt;, где first — длина пути, second.first — номер вершины, в которую направляется путь, second.second — вершина, из которой мы пришли в вершину second.first. Сам путь мы сможем восстановить при помощи vector&lt;int&gt;Putty.</p>
 <pre>
 void dijkstra_optimized_save_path(
@@ -92972,12 +93014,14 @@ void dijkstra_optimized_save_path(
   vector&lt;int&gt;& Putty,
   int n,
   int start) {
+
+  // начальная инициализация
   for (int i = 1; i &lt;= n; i++) {
     Dist[i] = 1e9;
     Mark[i] = 0;
   }
 
-  set&lt;pair&lt;int, int&gt; &gt;Dist_st;
+  set&lt;pair&lt;int, int&gt; &gt; Dist_st;
   pair&lt;int, pair&lt;int, int&gt; &gt; tmp1, tmp2;
   tmp1.first = 0;
   tmp1.second.first = start;
@@ -93107,13 +93151,13 @@ void dijkstra_optimized_save_path(
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  int n, m;
+  int n; // число городов
+  int m; // число дорог
   cin >> n >> m;
+
   vector&lt;vector&lt;pair&lt;long long, int&gt; &gt; &gt; G(n + 1);
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;int&gt; Dist(n + 1);
@@ -93130,10 +93174,13 @@ int main() {
     G[a].push_back(tmp1);
   }
 
-  // инициализация
-  int s, k;
+  int s; // начальный город
+  int k; // конечный город
   cin >> s >> k;
+
   set&lt;pair&lt;long long, int&gt; &gt; st;
+
+  // инициализация
   tmp1.first = 0;
   tmp1.second = s;
   st.insert(tmp1);

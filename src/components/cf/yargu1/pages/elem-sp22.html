@@ -148,25 +148,33 @@ void dijkstra_optimized(
   vector&lt;int&gt;& Dist,
   int n,
   int start) {
+
+  // начальная инициализация
   for (int i = 1; i &lt;= n; i++) {
     Dist[i] = 1e9;
     Mark[i] = 0;
   }
 
+  // set расстояний
   set&lt;pair&lt;int, int&gt; &gt;Dist_st;
+  // вспомогательные пары
   pair&lt;int, int&gt; tmp1, tmp2;
+  // первая вершина
   tmp1.first = 0;
   tmp1.second = start;
   Dist_st.insert(tmp1);
 
   while (Dist_st.size() > 0) {
+    // пока set не пустой, достаем первую вершину
     tmp1 = *Dist_st.begin();
 
     if (Mark[tmp1.second] == 0) {
+      // если вершина еще не посещена
       Dist[tmp1.second] = tmp1.first;
       Mark[tmp1.second] = 1;
 
       for (int i = 0; i &lt; G[tmp1.second].size(); i++) {
+        // до каждой смежной вершины обновим расстояние
         tmp2.second = G[tmp1.second][i].second;
         tmp2.first = tmp1.first + G[tmp1.second][i].first;
         Dist_st.insert(tmp2);
@@ -175,6 +183,8 @@ void dijkstra_optimized(
   }
 }
 </pre>
+
+  <h4>Восстановление пути</h4>
   <p>В задачах, где требуется восстановить обратный путь, структура данных становится более сложной, поскольку нам потребуется запоминать вершины, создающие последнее ребро в пути. Мы можем переделать set для запоминания последнего ребра, например следующим образом set&lt;pair&lt;int, pair&lt;int, int&gt; &gt; &gt;, где first — длина пути, second.first — номер вершины, в которую направляется путь, second.second — вершина, из которой мы пришли в вершину second.first. Сам путь мы сможем восстановить при помощи vector&lt;int&gt;Putty.</p>
 <pre>
 void dijkstra_optimized_save_path(
@@ -184,12 +194,14 @@ void dijkstra_optimized_save_path(
   vector&lt;int&gt;& Putty,
   int n,
   int start) {
+
+  // начальная инициализация
   for (int i = 1; i &lt;= n; i++) {
     Dist[i] = 1e9;
     Mark[i] = 0;
   }
 
-  set&lt;pair&lt;int, int&gt; &gt;Dist_st;
+  set&lt;pair&lt;int, int&gt; &gt; Dist_st;
   pair&lt;int, pair&lt;int, int&gt; &gt; tmp1, tmp2;
   tmp1.first = 0;
   tmp1.second.first = start;
@@ -319,13 +331,13 @@ void dijkstra_optimized_save_path(
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  int n, m;
+  int n; // число городов
+  int m; // число дорог
   cin >> n >> m;
+
   vector&lt;vector&lt;pair&lt;long long, int&gt; &gt; &gt; G(n + 1);
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;int&gt; Dist(n + 1);
@@ -342,10 +354,13 @@ int main() {
     G[a].push_back(tmp1);
   }
 
-  // инициализация
-  int s, k;
+  int s; // начальный город
+  int k; // конечный город
   cin >> s >> k;
+
   set&lt;pair&lt;long long, int&gt; &gt; st;
+
+  // инициализация
   tmp1.first = 0;
   tmp1.second = s;
   st.insert(tmp1);
