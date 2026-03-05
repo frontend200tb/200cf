@@ -367,9 +367,13 @@ int main() {
 
   // алгоритм Дейкстры
   while (st.size() > 0) {
+    // пока в сете есть вершины
+    // достаем первую вершину
     tmp1 = *st.begin();
     st.erase(st.begin());
+
     if (Mark[tmp1.second] == 0) {
+      // если она еще не посещена
       Mark[tmp1.second] = 1;
       Dist[tmp1.second] = tmp1.first;
       for (int i = 0; i &lt; G[tmp1.second].size(); i++) {
@@ -484,19 +488,19 @@ int main() {
     <summary>Решение</summary>
 <pre>
 #include &lt;iostream&gt;
-#include &lt;set&gt;
 #include &lt;vector&gt;
+#include &lt;set&gt;
 
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  int n, m;
+  int n; // число вершин
+  int m; // число ребер
   cin >> n >> m;
+
   vector&lt;vector&lt;pair&lt;long long, pair&lt;int, int&gt; &gt; &gt; &gt; G(n + 1);
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;long long&gt; Dist(n + 1, 1e18);
@@ -529,17 +533,22 @@ int main() {
   // алгоритм Дейкстры
   // находит все пути от вершины start
   while (st.size() > 0) {
+    // пока в сете есть вершины
+    // достаем первую вершину
     tmp1 = *st.begin();
     st.erase(st.begin());
-    if (Mark[tmp1.second.first] == 0) {
-        Mark[tmp1.second.first] = 1;
-        Dist[tmp1.second.first] = tmp1.first;
-        Putty[tmp1.second.first] = tmp1.second.second;
-        for (int i = 0; i &lt; G[tmp1.second.first].size(); i++) {
-          tmp2 = G[tmp1.second.first][i];
-          tmp2.first += tmp1.first;
-          st.insert(tmp2);
-        }
+    int pos = tmp1.second.first; // номер первой вершины
+
+    if (Mark[pos] == 0) {
+      // если она еще не посещена
+      Mark[pos] = 1;
+      Dist[pos] = tmp1.first;
+      Putty[pos] = tmp1.second.second;
+      for (int i = 0; i &lt; G[pos].size(); i++) {
+        tmp2 = G[pos][i];
+        tmp2.first += tmp1.first;
+        st.insert(tmp2);
+      }
     }
   }
 
@@ -605,16 +614,15 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
   int n; // число деревень
   int d; // начальная деревня
   int v; // конечная деревня
   int r; // число рейсов
   cin >> n >> d >> v >> r;
+
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;int&gt; Time(n + 1, -1);
   pair&lt;int, int&gt; tmp1, tmp2;
@@ -658,10 +666,11 @@ int main() {
     }
   }
 
-  // если нельзя попасть в деревню
   if (Mark[v] == 0) {
+    // если нельзя попасть в деревню
     cout &lt;&lt; -1;
   } else {
+    // если можно попасть в деревню
     cout &lt;&lt; Time[v];
   }
 }

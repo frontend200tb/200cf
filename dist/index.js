@@ -85403,6 +85403,79 @@ ijklmnopqrstuvwxyz
 
     <p>В первом тесте кошмары образуются парами ⟨1,3⟩, ⟨2,5⟩, ⟨3,4⟩, ⟨6,7⟩, ⟨9,10⟩.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/1800/problem/F" target="_blank">Задача F</a>
+      <br><a href="https://codeforces.com/contest/1800" target="_blank">Codeforces Round 855 (Div. 3) 2023-03-22</a>
+    </div>
+
+    <p>Наблюдение 1 : произведение нечётных чисел нечётно, значит условие на длину кошмара автоматически выполнено.</p>
+
+    <p>Обозначим за f(x) количество единичных битов в x. Пронумеруем буквы латинского алфавита с 0 до 25.</p>
+
+    <p>Наблюдение 2: для каждого слова достаточно знать набор букв, входящих в него, и четность их количеств. Букв в алфавите всего 26, потому удобно хранить характеристику слова si как пару масок ⟨ai,bi⟩. Бит с номером j в ai будет отвечать за наличие буквы j в si. Бит с номером j в bi будет отвечать за четность количества буквы j в si.</p>
+
+    <p>Наблюдение 3: строки sisj образует кошмар тогда и только тогда, когда f(ai|aj)=f(bi⊕bj)=25.</p>
+
+    <p>Давайте зафиксируем число k — номер буквы, которой не будет в кошмарах. Выкинем все слова с буквой k, теперь можем рассматривать слова по очереди и искать им пару среди уже рассмотренных. Легко заметить, что условие f(ai|aj)=25 следует из условия f(bi⊕bj)=25, если одна буква запрещена.</p>
+
+    <p>Чтобы посчитать количество пар, включающих наше слово, надо посчитать количество слов с характеристикой bj=bi⊕(226-1). Можно сделать это бинпоиском по отсортированному массиву b или использовать стандартные структуры данных. Получили решение за O(∑|s|+26⋅n⋅logn).</p>
+<pre>
+#include &lt;iostream>
+#include &lt;algorithm>
+
+using namespace std;
+
+const int MAXN = 200200;
+const int L = 26;
+
+int n; // число слов
+string srr[MAXN]; // массив слов
+int arr[MAXN], brr[MAXN], crr[MAXN];
+
+long long calc(int c) {
+	int k = 0;
+	for (int i = 0; i &lt; n; ++i)
+		if (brr[i] >> c & 1 ^ 1) crr[k++] = arr[i];
+	sort(crr, crr + k);
+	int mask = -1 & ((1 &lt;&lt; L) - 1) ^ (1 &lt;&lt; c);
+	long long ans = 0;
+	for (int i = 0; i &lt; k; ++i) {
+		auto itl = lower_bound(crr, crr + k, crr[i] ^ mask);
+		auto itr = upper_bound(crr, crr + k, crr[i] ^ mask);
+		ans += itr - itl;
+	}
+	return ans >> 1LL;
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	cin >> n;
+	for (int i = 0; i &lt; n; ++i) {
+    cin >> srr[i];
+  }
+
+	for (int i = 0; i &lt; n; ++i) {
+		for (char c : srr[i]) {
+			arr[i] ^= (1 &lt;&lt; (c - 'a'));
+			brr[i] |= (1 &lt;&lt; (c - 'a'));
+		}
+	}
+
+	long long res = 0;
+	for (int c = 0; c &lt; L; ++c) {
+    res += calc(c);
+  }
+
+	cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 `;
 // Exports
@@ -93187,9 +93260,13 @@ int main() {
 
   // алгоритм Дейкстры
   while (st.size() > 0) {
+    // пока в сете есть вершины
+    // достаем первую вершину
     tmp1 = *st.begin();
     st.erase(st.begin());
+
     if (Mark[tmp1.second] == 0) {
+      // если она еще не посещена
       Mark[tmp1.second] = 1;
       Dist[tmp1.second] = tmp1.first;
       for (int i = 0; i &lt; G[tmp1.second].size(); i++) {
@@ -93304,19 +93381,19 @@ int main() {
     <summary>Решение</summary>
 <pre>
 #include &lt;iostream&gt;
-#include &lt;set&gt;
 #include &lt;vector&gt;
+#include &lt;set&gt;
 
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
-  int n, m;
+  int n; // число вершин
+  int m; // число ребер
   cin >> n >> m;
+
   vector&lt;vector&lt;pair&lt;long long, pair&lt;int, int&gt; &gt; &gt; &gt; G(n + 1);
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;long long&gt; Dist(n + 1, 1e18);
@@ -93349,17 +93426,22 @@ int main() {
   // алгоритм Дейкстры
   // находит все пути от вершины start
   while (st.size() > 0) {
+    // пока в сете есть вершины
+    // достаем первую вершину
     tmp1 = *st.begin();
     st.erase(st.begin());
-    if (Mark[tmp1.second.first] == 0) {
-        Mark[tmp1.second.first] = 1;
-        Dist[tmp1.second.first] = tmp1.first;
-        Putty[tmp1.second.first] = tmp1.second.second;
-        for (int i = 0; i &lt; G[tmp1.second.first].size(); i++) {
-          tmp2 = G[tmp1.second.first][i];
-          tmp2.first += tmp1.first;
-          st.insert(tmp2);
-        }
+    int pos = tmp1.second.first; // номер первой вершины
+
+    if (Mark[pos] == 0) {
+      // если она еще не посещена
+      Mark[pos] = 1;
+      Dist[pos] = tmp1.first;
+      Putty[pos] = tmp1.second.second;
+      for (int i = 0; i &lt; G[pos].size(); i++) {
+        tmp2 = G[pos][i];
+        tmp2.first += tmp1.first;
+        st.insert(tmp2);
+      }
     }
   }
 
@@ -93425,16 +93507,15 @@ int main() {
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  // ввод данных
   int n; // число деревень
   int d; // начальная деревня
   int v; // конечная деревня
   int r; // число рейсов
   cin >> n >> d >> v >> r;
+
   vector&lt;int&gt; Mark(n + 1);
   vector&lt;int&gt; Time(n + 1, -1);
   pair&lt;int, int&gt; tmp1, tmp2;
@@ -93478,10 +93559,11 @@ int main() {
     }
   }
 
-  // если нельзя попасть в деревню
   if (Mark[v] == 0) {
+    // если нельзя попасть в деревню
     cout &lt;&lt; -1;
   } else {
+    // если можно попасть в деревню
     cout &lt;&lt; Time[v];
   }
 }
