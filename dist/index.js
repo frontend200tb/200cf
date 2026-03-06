@@ -86875,7 +86875,7 @@ int main() {
     <code>m = n * (n + 1) / 2</code>
     <p>Нужно распределить так, чтобы город со значимостью k из Бирляндии получал ровно k соединений. Это значит, что город n+k должен соединяться с городами i ≥ k из Берляндии.</p>
 <pre>
-#include &lt;iostream>
+#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -86893,7 +86893,7 @@ int main() {
   cout &lt;&lt; m &lt;&lt; '\\n';
 
   for (int k = 1; k &lt;= n; k++) {
-    for (int i = n - k + 1; i <= n; i++) {
+    for (int i = n - k + 1; i &lt;= n; i++) {
       cout &lt;&lt; i &lt;&lt; ' ' &lt;&lt; (n + k) &lt;&lt; '\\n';
     }
   }
@@ -86998,6 +86998,72 @@ int main() {
 1 2
 </pre>
     <code>5 5 9 20 </code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/gym/104454/problem/H" target="_blank">Задача H</a>
+      <br><a href="https://codeforces.com/gym/104454" target="_blank">ICPC Central Russia Regional Contest, 2021</a>
+    </div>
+
+    <p>Создадим массив A, где для каждого города храним число предприятий в нем (от всех игроков).</p>
+    <p>Создадим массив B, где для каждого игрока храним его дороги.</p>
+    <p>Создадим массив C, где для каждого игрока посчитаем его очки.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n; // число городов
+  cin >> n;
+
+  // число предприятий в каждом городе
+  vector&lt;int&gt; A(n + 1, 0);
+
+  // дороги каждого игрока
+  vector&lt;vector&lt;pair&lt;int, int&gt; &gt; &gt; B(4);
+
+  for (int i = 0; i &lt; 4; i++) {
+    // для каждого игрока
+    int m; // число производств
+    int g; // число дорог
+    cin >> m >> g;
+
+    for (int j = 0; j &lt; m; j++) {
+      int city;
+      cin >> city;
+      A[city]++;
+    }
+
+    B[i].resize(g);
+    for (int j = 0; j &lt; g; j++) {
+      cin >> B[i][j].first >> B[i][j].second;
+    }
+  }
+
+  // число очков для каждого игрока
+  vector&lt;long long&gt; C(4, 0);
+
+  for (int i = 0; i &lt; 4; i++) {
+    for (int j = 0; j &lt; B[i].size(); j++) {
+      int a = B[i][j].first;
+      int b = B[i][j].second;
+      C[i] += A[a] + A[b];
+    }
+  }
+
+  for (int i = 0; i &lt; 4; i++) {
+    cout &lt;&lt; C[i] &lt;&lt; ' ';
+  }
+}
+</pre>
   </details>
 </article>
 
