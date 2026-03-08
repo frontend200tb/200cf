@@ -90034,7 +90034,6 @@ NO
 using namespace std;
 
 int main() {
-  // ускорение ввода
   ios::sync_with_stdio(0);
   cin.tie(0);
 
@@ -90044,7 +90043,6 @@ int main() {
   freopen("output.txt", "wt", stdout);
 #endif
 
-  // ввод данных
   int n; // число вершин
   int m; // число ребер
   cin >> n >> m;
@@ -90060,7 +90058,6 @@ int main() {
     G[b].push_back(a);
   }
 
-  // решение
   // вектор длин это расстояние от начала до вершины i
   // изначально длина равна -1
   vector&lt;vector&lt;int&gt; &gt; Len(n + 1, vector&lt;int&gt;(n+1, -1));
@@ -90161,6 +90158,83 @@ NO
 YES
 YES
 NO
+</pre>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Для того чтобы вершина k была на кратчайшем пути из u в v, необходимо чтобы длина пути (u,v) = (u,k) + (k,v).</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
+  // условная компиляция
+#ifdef _DEBUG
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+#endif
+
+  int n; // число вершин
+  int m; // число ребер
+  cin >> n >> m;
+  int a, b; // две вершины одного ребра
+
+  // список смежности
+  vector&lt;vector&lt;int&gt; &gt; G(n + 1);
+
+  // список ребер сохраним в список смежности
+  for (int i = 0; i &lt; m; i++) {
+    cin >> a >> b;
+    G[a].push_back(b);
+    G[b].push_back(a);
+  }
+
+  // вектор длин это расстояние от начала до вершины i
+  // изначально длина равна -1
+  vector&lt;vector&lt;int&gt; &gt; Len(n + 1, vector&lt;int&gt;(n + 1, -1));
+
+  // запускаем BFS
+  for (int i = 1; i &lt;= n; i++) {
+    queue&lt;int&gt; q;
+    q.push(i);
+    Len[i][i] = 0;
+    int tmp;
+
+    while (q.size() > 0) {
+      tmp = q.front();
+      q.pop();
+
+      for (int j = 0; j &lt; G[tmp].size(); j++) {
+        if (Len[i][G[tmp][j]] == -1) {
+          q.push(G[tmp][j]);
+          Len[i][G[tmp][j]] = Len[i][tmp] + 1;
+        }
+      }
+    }
+  }
+
+  // обрабатываем запросы
+  int t; // число запросов
+  cin >> t;
+  while (t--) {
+    int u, v, k; // вершины
+    cin >> u >> v >> k;
+    if (Len[u][v] == Len[u][k] + Len[k][v]) {
+      cout &lt;&lt; "YES\\n";
+    } else {
+      cout &lt;&lt; "NO\\n";
+    }
+  }
+}
 </pre>
   </details>
 </article>
