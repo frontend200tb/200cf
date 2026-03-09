@@ -1216,6 +1216,45 @@ int main() {
 
     <p>Во втором примере с какого бы школьника не начал преподаватель, этот же школьник и будет тем, кто получит вторую дырку в бейджике.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число школьников
+  cin >> n;
+
+  vector&lt;int&gt; A(n + 1);
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> A[i]; // какой школьник идет после i-го школьника
+  }
+
+  // переберем всех школьников
+  for (int i = 1; i &lt;= n; i++) {
+    vector&lt;int&gt; Mark(n + 1); // помеченные школьники
+    Mark[i] = 1;
+    int next = i;
+    bool loop = false; // еще не найден цикл
+
+    // поиск цикла
+    while (!loop) {
+      next = A[next];
+      Mark[next]++;
+      if (Mark[next] == 2) {
+        loop = true;
+      }
+    }
+
+    cout &lt;&lt; next &lt;&lt; ' ';
+  }
+}
+</pre>
+  </details>
 </article>
 
 
