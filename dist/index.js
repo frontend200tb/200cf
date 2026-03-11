@@ -91237,6 +91237,15 @@ NO
 
     <p>В шестом примере достаточно поменять местами две крайние буквы.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/1800/problem/E2" target="_blank">Задача 1800E2</a>
+      <br><a href="https://codeforces.com/contest/1800" target="_blank">Codeforces Round 855 (Div. 3) 2023-03-02</a>
+    </div>
+  </details>
 </article>
 
 
@@ -91339,37 +91348,40 @@ NO
 
   <details>
     <summary>Решение</summary>
-    <p>Решение будет зависить от длины строки n. Рассмотрим четыре случая.</p>
+
+    <div>
+      <a href="https://codeforces.com/contest/1800/problem/E1" target="_blank">Задача 1800E1</a>
+      <br><a href="https://codeforces.com/contest/1800" target="_blank">Codeforces Round 855 (Div. 3) 2023-03-02</a>
+    </div>
+
+    <p>Решение будет зависить от длины строки n. Рассмотрим два случая.</p>
     <ol>
       <li>Если длина строки n ≥ 6, то все символы можно менять как угодно.</li>
-      <li>Если n = 5, то символы с индексами 0,1,3,4 можно менять как угодно, а символ с индексом 2 должен совпасть у обеих строк.</li>
-      <li>При n = 4 можем менять только 1 с 4.</li>
-      <li>При n &lt; 4 строки должны полностью совпасть.</li>
+      <li>можно было решать задачу перебором для n≤5. Для перебора можно было хранить map строк, которые мы можем получить и перебрать все строки с помощью bfs.</li>
     </ol>
-    <p>Возможно не работает</p>
+
 <pre>
 #include &lt;iostream&gt;
 #include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;set&gt;
+#include &lt;queue&gt;
+#include &lt;map&gt;
 
 using namespace std;
 
 int main() {
-  // ускорение ввода-вывода
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-
-  // ввод данных
-  int test;
+  int test; // число тестов
   cin >> test;
 
   while (test--) {
-    int n, k;
+    int n; // длина заклятия
+    int k; // число k = 3
     cin >> n >> k;
     string s, t;
     cin >> s >> t;
 
-    // 1 случай
-    if (n >= 6) {
+    if (n > 5) {
       sort(s.begin(), s.end());
       sort(t.begin(), t.end());
       if (s == t) {
@@ -91377,40 +91389,37 @@ int main() {
       } else {
         cout &lt;&lt; "NO\\n";
       }
+    }
 
-    // 2 случай
-    } else if (n == 5) {
-      string buf1, buf2;
-      buf1 = s[0] + s[1] + s[3] + s[4];
-      buf2 = t[0] + t[1] + t[3] + t[4];
-      sort(buf1.begin(), buf1.end());
-      sort(buf2.begin(), buf2.end());
-      if ( (s[2] == t[2]) && (buf1 == buf2) ) {
-        cout &lt;&lt; "YES\\n";
-      } else {
-        cout &lt;&lt; "NO\\n";
-      }
+    if (n &lt;= 5) {
+      set&lt;string&gt; was;
 
-    // 3 случай
-    } else if (n == 4) {
-      string buf1, buf2;
-      buf1 = s[0] + s[3];
-      buf2 = t[0] + t[3];
-      sort(buf1.begin(), buf1.end());
-      sort(buf2.begin(), buf2.end());
-      if ( (s[1] == t[1]) && (s[2] == t[2]) && (buf1 == buf2) ) {
-        cout &lt;&lt; "YES\\n";
-      } else {
-        cout &lt;&lt; "NO\\n";
-      }
+      queue&lt;string&gt; q;
+      q.push(s);
+      was.insert(s);
 
-    // 4 случай
-    } else {
-      if (s == t) {
-        cout &lt;&lt; "YES\\n";
-      } else {
-        cout &lt;&lt; "NO\\n";
+      auto add = [&](string& s, int i, int j) {
+        if (i >= 0 && i &lt; j && j &lt; n) {
+          swap(s[i], s[j]);
+          if (!was.count(s)) {
+            was.insert(s);
+            q.push(s);
+          }
+          swap(s[i], s[j]);
+        }
+
+        };
+
+      while (!q.empty()) {
+        s = q.front(); q.pop();
+        for (int i = 0; i &lt; n; ++i) {
+          add(s, i, i + k);
+          add(s, i, i + k + 1);
+          add(s, i - k, i);
+          add(s, i - k - 1, i);
+        }
       }
+      cout &lt;&lt; (was.count(t) ? "Yes" : "No") &lt;&lt; '\\n';
     }
   }
 }
@@ -125963,6 +125972,14 @@ void delete_cycle(vector&lt;vector&lt;int&gt; &gt; &G,
 }
 </pre>
   <p>Асимптотика написанного кода O(m<sup>2</sup>)</p>
+  <p>Есть два способа чтобы улучшить эту асимптотику.</p>
+  <p>1 способ. Мы можем улучшить решение если заменим вектор векторов на вектор сетов.</p>
+  <code>vector&lt;set&lt;int&gt; &gt; G;</code>
+  <p>Теперь, вместо того чтобы линейно бегать по списку смежности и искать нужную вершину, мы можем методом find быстро ее найти и методом erase быстро ее стереть.</p>
+  <p>Асимптотика становится O(mlogn)</p>
+
+  <p>2 способ. Можно сделать набор плохих ребер.</p>
+  <code>set&lt;pair&lt;int, int&gt; &gt; set_bad;</code>
 </article>`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
