@@ -1511,6 +1511,111 @@ int main() {
 
     <p>В большинстве языков программирования побитовый OR уже встроен. В языках C++, Python эта операция обозначается как |, в Pascal — это операция or, в Visual Basic — это операция Or.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/gym/102786/problem/J" target="_blank">Задача J</a>
+      <br><a href="https://codeforces.com/gym/102786" target="_blank">Demidov Open IT Cup 2019</a>
+    </div>
+
+    <p>Прямой перебор всех путей невозможен из-за размера графа. Нужно использовать особенности побитового ИЛИ:</p>
+    <ol>
+      <li>Побитовое ИЛИ не уменьшается при добавлении новых рёбер (монотонно)</li>
+      <li>Максимальное значение ИЛИ ограничено 2³⁰ (так как веса ≤ 10⁹ ≈ 2³⁰)</li>
+      <li>Можно использовать бинарный поиск по ответу</li>
+    </ol>
+
+    <p>Для каждого предполагаемого ответа X проверяем, существует ли путь от a до b, где ИЛИ весов ≤ X. Как это проверить?</p>
+
+    <p>Если мы хотим, чтобы ИЛИ ≤ X, то в пути нельзя использовать рёбра, у которых есть бит, не входящий в X. То есть нужно использовать только рёбра, где (wi | X) == X (все биты wi содержатся в X).</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+typedef long long ll;
+const int MAXN = 100005;
+const int INF = 2e9;
+
+int n; // число домов
+int m; // число дорог
+vector&lt;pair&lt;int, int&gt; &gt; graph[MAXN];  // first - вершина, second - вес
+int a, b;
+
+bool can(int limit) {
+  // BFS для проверки достижимости b из a
+  // используем только рёбра, где (weight | limit) == limit
+  vector&lt;bool&gt; visited(n + 1, false);
+  queue&lt;int&gt; q;
+
+  q.push(a);
+  visited[a] = true;
+
+  while (!q.empty()) {
+    int v = q.front();
+    q.pop();
+
+    if (v == b) return true;
+
+    for (const auto& edge : graph[v]) {
+      int to = edge.first;
+      int weight = edge.second;
+      if (!visited[to] && (weight | limit) == limit) {
+        visited[to] = true;
+        q.push(to);
+      }
+    }
+  }
+
+  return false;
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+
+  cin >> n >> m;
+
+  for (int i = 0; i &lt; m; i++) {
+    int p, q, w;
+    cin >> p >> q >> w;
+    graph[p].push_back({ q, w });
+    graph[q].push_back({ p, w });
+  }
+
+  cin >> a >> b;
+
+  // Бинарный поиск по ответу
+  int left = 0, right = (1 &lt;&lt; 30) - 1;  // максимальное значение для 30 бит
+  int res = -1;
+
+  // Сначала проверим, есть ли вообще путь
+  if (!can(right)) {
+    cout &lt;&lt; -1 &lt;&lt; endl;
+    return 0;
+  }
+
+  while (left &lt;= right) {
+    int mid = left + (right - left) / 2;
+
+    if (can(mid)) {
+      res = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
+  </details>
 </article>
 
 
