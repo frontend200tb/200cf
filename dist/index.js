@@ -65822,6 +65822,70 @@ var code = `<article class="article">
   <div class="anchor" id="t3"></div>
   <h3>Задача C. Путь зигзагом</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int x = 0; // начальная координата
+int y = 0; // начальная координата
+
+void p() {
+  cout &lt;&lt; x &lt;&lt; ' ' &lt;&lt; y &lt;&lt; '\\n';
+}
+
+int main() {
+  int a, b; // координаты финиша
+  cin >> a >> b;
+
+  if (a >= b) {
+    while (x &lt; a && y &lt; b) {
+      x++;
+      p();
+      y++;
+      p();
+    }
+
+    while (x &lt; a && y == b) {
+      x++;
+      p();
+      if (x &lt; a) {
+        y++;
+        p();
+        x++;
+        p();
+        y--;
+        p();
+      }
+    }
+  }
+
+  if (a &lt; b) {
+    while (x &lt; a && y &lt; b) {
+      y++;
+      p();
+      x++;
+      p();
+    }
+
+    while (x == a && y &lt; b) {
+      y++;
+      p();
+      if (y &lt; b) {
+        x++;
+        p();
+        y++;
+        p();
+        x--;
+        p();
+      }
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
