@@ -26,6 +26,33 @@
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Сколько квадратов?</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>n<sup>2</sup> всегда будет больше суммы n чисел от 0 до n.</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    ll n; // n+1 число элементов
+    ll s; // сумма элементов
+    cin >> n >> s;
+
+    ll cnt = s / (n * n);
+
+    cout &lt;&lt; cnt &lt;&lt; '\n';
+  }
+
+}
+</pre>
+  </details>
 </article>
 
 
