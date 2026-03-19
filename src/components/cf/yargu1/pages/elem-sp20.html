@@ -1833,6 +1833,12 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/gym/104454/problem/E" target="_blank">Задача E</a>
+      <br><a href="https://codeforces.com/gym/104454" target="_blank">ICPC Central Russia Regional Contest, 2021</a>
+    </div>
+
     <p>Необходимо собрать четырехмерную матрицу A[32][32][32][32]. Начальное состояние A[k1][k2][k3][k4]. Из начального состояния нужно попасть в конечное состояние A[0][0][0][0]. Найти минимальное число ходов.</p>
     <p>При решении динамическим программированием нужно идти от состояния A[0][0][0][0].</p>
     <p>Задавать четырехмерный вектор это не очень хорошая идея.</p>
@@ -2052,6 +2058,156 @@ int main() {
 6 1
 </pre>
     <code>2 3</code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+    <div>
+      <a href="https://codeforces.com/gym/104454/problem/G" target="_blank">Задача G</a>
+      <br><a href="https://codeforces.com/gym/104454" target="_blank">ICPC Central Russia Regional Contest, 2021</a>
+    </div>
+
+    <p>Свои бочонки можно использовать для любых заводов без ограничений (даже если пивоварня и завод в разных компонентах связности)</p>
+    <p>Чужие бочонки можно использовать только если пивоварня и завод в одной компоненте связности</p>
+    <ol>
+      <li>Строим граф из N городов и G дорог.</li>
+      <li>Находим компоненты связности графа (можно через DSU или BFS/DFS).</li>
+      <li>Для каждой компоненты связности считаем:
+        <p>сколько заводов хочет открыть Игорь в этой компоненте (need[comp])</p>
+        <p>сколько своих пивоварен у Игоря в этой компоненте (my_beer[comp])</p>
+        <p>сколько чужих пивоварен в этой компоненте (other_beer[comp])</p>
+      </li>
+      <li>Изначально все свои бочонки можно использовать: my_used = min(need_total, my_beer_total)</li>
+      <li>После использования своих, остаются необеспеченные заводы: remaining = need_total - my_used</li>
+      <li>Для каждой компоненты, если своих пивоварен не хватило на заводы в этой компоненте, недостачу можно покрыть чужими бочонками из той же компоненты.</li>
+      <li>Суммируем по всем компонентам: other_used = sum(min(remaining_in_component, other_beer[comp]))</li>
+    </ol>
+
+    <h4>Тест 9</h4>
+<pre>
+9
+5
+8 7 1 6 5
+10
+9 2 1 4 5 5 1 9 5 5
+3
+1 8 9
+3
+4 3
+7 4
+9 1
+</pre>
+<pre>
+5 0
+</pre>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+vector&lt;int&gt; parent, sz;
+
+int find_set(int v) {
+  if (v == parent[v]) return v;
+  return parent[v] = find_set(parent[v]);
+}
+
+void union_sets(int a, int b) {
+  a = find_set(a);
+  b = find_set(b);
+  if (a != b) {
+    if (sz[a] &lt; sz[b]) swap(a, b);
+    parent[b] = a;
+    sz[a] += sz[b];
+  }
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int N;
+  cin >> N;
+
+  parent.resize(N + 1);
+  sz.resize(N + 1, 1);
+  for (int i = 1; i &lt;= N; i++) {
+    parent[i] = i;
+  }
+
+  int M;
+  cin >> M;
+  vector&lt;int&gt; factories(M);
+  for (int i = 0; i &lt; M; i++) {
+    cin >> factories[i];
+  }
+
+  int K;
+  cin >> K;
+  vector&lt;int&gt; my_beer(K);
+  for (int i = 0; i &lt; K; i++) {
+    cin >> my_beer[i];
+  }
+
+  int L;
+  cin >> L;
+  vector&lt;int&gt; other_beer(L);
+  for (int i = 0; i &lt; L; i++) {
+    cin >> other_beer[i];
+  }
+
+  int G;
+  cin >> G;
+  for (int i = 0; i &lt; G; i++) {
+    int a, b;
+    cin >> a >> b;
+    union_sets(a, b);
+  }
+
+  // Сначала считаем, сколько заводов можно обеспечить своими (без ограничений)
+  int my_used = min(M, K);
+  int remaining = M - my_used;
+
+  if (remaining == 0) {
+    cout &lt;&lt; my_used &lt;&lt; " 0" &lt;&lt; endl;
+    return 0;
+  }
+
+  // Для оставшихся заводов считаем чужие бочонки по компонентам
+  map&lt;int, int&gt; need_in_comp;
+  map&lt;int, int&gt; other_in_comp;
+
+  // Считаем все заводы (для распределения остатка)
+  for (int city : factories) {
+    int comp = find_set(city);
+    need_in_comp[comp]++;
+  }
+
+  // Считаем чужие пивоварни
+  for (int city : other_beer) {
+    int comp = find_set(city);
+    other_in_comp[comp]++;
+  }
+
+  // Теперь распределяем оставшиеся заводы
+  int other_used = 0;
+  for (auto& [comp, need] : need_in_comp) {
+    // Сколько заводов в этой компоненте нужно обеспечить чужими
+    // (все, т.к. свои мы уже использовали глобально)
+    int other_available = other_in_comp[comp];
+    other_used += min(need, other_available);
+  }
+
+  // Но мы не можем использовать больше, чем remaining
+  other_used = min(other_used, remaining);
+
+  cout &lt;&lt; my_used &lt;&lt; " " &lt;&lt; other_used;
+}
+</pre>
   </details>
 </article>
 

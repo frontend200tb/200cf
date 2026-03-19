@@ -1134,13 +1134,13 @@ int main() {
   }
 
   // решение
-  vector&lt;long long&gt; Count_left(n);
-  vector&lt;long long&gt; Count_up(m);
+  vector&lt;long long&gt; CntX(n);
+  vector&lt;long long&gt; CntY(m);
   for (int i = 0; i &lt; n; i++) {
     for (int j = 0; j &lt; m; j++) {
       if (A[i][j] == '*') {
-        Count_left[i]++;
-        Count_up[j]++;
+        CntX[i]++;
+        CntY[j]++;
       }
     }
   }
@@ -1149,7 +1149,7 @@ int main() {
   for (int i = 0; i &lt; n; i++) {
     for (int j = 0; j &lt; m; j++) {
       if (A[i][j] == '*') {
-        res += (Count_left[i] - 1) * (Count_up[j] - 1);
+        res += (CntX[i] - 1) * (CntY[j] - 1);
       }
     }
   }
