@@ -7362,8 +7362,8 @@ var code = `<!-- Задача G. Очередь -->
 
 using namespace std;
 
-template&lt;class T&gt; inline void smin(T& a, T b) { if (b < a)a = b; }
-template&lt;class T&gt; inline void smax(T& a, T b) { if (a < b)a = b; }
+template&lt;class T&gt; inline void smin(T& a, T b) { if (b &lt; a)a = b; }
+template&lt;class T&gt; inline void smax(T& a, T b) { if (a &lt; b)a = b; }
 
 const int maxn = 100000 + 100;
 const int CTV = 800;
@@ -20844,6 +20844,67 @@ BWBWBWBW
   <p>Первый пример изображён в условии. Только поддеревья вершин 2 и 3 сбалансированны.</p>
   <p>Во втором примере только поддерево вершины 1 сбалансированно.</p>
   <p>в третьем примере сбалансированны поддеревья вершин 1, 3, 5 и 7.</p>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Код подсчитывает количество вершин в дереве, в поддереве которых количество белых узлов равно количеству черных узлов.</p>
+    <p>Вершины нумеруются с 1 до n</p>
+    <p>Корень всегда вершина 1</p>
+    <p>Для каждой вершины i (от 2 до n) читаем номер её родителя и добавляем в список детей этого родителя</p>
+    <p>Рекурсивный подсчет: функция возвращает баланс поддерева, который используется родителем</p>
+    <p>Передача по ссылке: res накапливает результат через все рекурсивные вызовы</p>
+    <p>Временная сложность: O(n) для каждого теста (каждая вершина посещается 1 раз)</p>
+    <p>Пространственная сложность: O(n) для хранения дерева</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int dfs(int x, const vector&lt;vector&lt;int&gt; &gt;& child, const string& s, int& res) {
+  int bal = (s[x - 1] == 'B') ? -1 : 1;
+
+  for (int c : child[x]) {
+    bal += dfs(c, child, s, res);
+  }
+
+  if (bal == 0) {
+    res++;
+  }
+  return bal;
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t; // число тестов
+  cin >> t;
+
+  for (int test = 1; test &lt;= t; test++) {
+    int n; // число вершин
+    cin >> n;
+
+    vector&lt;vector&lt;int&gt; &gt; child(n + 1);
+
+    for (int i = 2; i &lt;= n; i++) {
+      int x;
+      cin >> x;
+      child[x].push_back(i);
+    }
+
+    string s;
+    cin >> s;
+
+    int res = 0;
+    dfs(1, child, s, res);
+
+    cout &lt;&lt; res &lt;&lt; '\\n';
+  }
+}
+</pre>
   </details>
 </article>
 
@@ -38451,7 +38512,7 @@ int64_t get(int64_t n, int64_t l, int64_t r) {
   int64_t minus = 0, plus = 0;
 
   int64_t L = l;
-  while (L <= r) {
+  while (L &lt;= r) {
     int64_t value = n / L;
     int64_t R = min(r, n / value);
 
@@ -85087,8 +85148,8 @@ int main() {
     </ul>
 <pre>
 #include &lt;iostream&gt;
-#include &lt;vector>
-#include &lt;fstream>
+#include &lt;vector&gt;
+#include &lt;fstream&gt;
 
 using namespace std;
 
@@ -85100,7 +85161,7 @@ int main() {
   int m; // число неверных решений
   fin >> n >> m;
 
-  vector&lt;long long> testMask(n, 0);  // маска покрытий для каждого теста
+  vector&lt;long long&gt; testMask(n, 0);  // маска покрытий для каждого теста
 
   for (int i = 0; i &lt; n; i++) {
     int k; // число неверных решений для i -го теста
@@ -85131,7 +85192,7 @@ int main() {
       }
     }
 
-    if (covered == allSolutionsMask && cnt < bestCount) {
+    if (covered == allSolutionsMask && cnt &lt; bestCount) {
       bestCount = cnt;
       bestMask = mask;
     }
