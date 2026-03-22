@@ -819,6 +819,94 @@ int main() {
 
   <p>В пятом примере выбор p=10 заставит каждого врага получать 1 урон за атаку. Оба врага будут побеждены за 15 атак.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Код решает задачу с помощью бинарного поиска по количеству атак. Для каждого предполагаемого количества атак mid он проверяет: существует ли такая позиция p, с которой можно победить хотя бы k врагов за mid атак</p>
+    <ul>
+      <li>lo — заведомо невозможное количество атак (0)</li>
+      <li>hi — заведомо возможное количество атак (очень большое число)</li>
+      <li>Бинарный поиск находит минимальное количество атак</li>
+    </ul>
+    <p>Для каждого врага вычисляется, сколько урона он получает за одну атаку в зависимости от позиции Шилонен</p>
+    <p>Для всех врагов мы получаем интервалы позиций p, где их можно победить за mid атак</p>
+    <p>Проходим по событиям в порядке возрастания позиций:</p>
+    <ul>
+      <li>sc — количество интервалов, покрывающих текущую точку</li>
+      <li>Если sc >= k, значит существует позиция p, где можно победить хотя бы k врагов</li>
+    </ul>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // число врагов
+    int m; // урон от атаки
+    int k; // число врагов, которых нужно победить
+    cin >> n >> m >> k;
+
+    vector&lt;int&gt; h(n); // здоровье врагов
+    for (int i = 0; i &lt; n; i++) {
+      cin >> h[i];
+    }
+
+    vector&lt;int&gt; x(n); // позиции врагов
+    for (int i = 0; i &lt; n; i++) {
+      cin >> x[i];
+    }
+
+    long long lo = 0;
+    long long hi = 1e10;
+
+    while (hi - lo > 1) {
+      long long mid = (lo + hi) / 2;
+      map&lt;long long, int&gt; ev;
+
+      for (int i = 0; i &lt; n; i++) {
+        long long ma = (h[i] + mid - 1) / mid;
+        if (ma > m) {
+          continue;
+        }
+        ev[x[i] - m + ma] += 1;
+        ev[x[i] + m - ma + 1] -= 1;
+      }
+
+      int sc = 0;
+      bool found = false;
+      for (auto& p : ev) {
+        sc += p.second;
+        if (sc >= k) {
+          hi = mid;
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) {
+        lo = mid;
+      }
+    }
+
+    if (hi == (long long)1e10) {
+      cout &lt;&lt; -1 &lt;&lt; '\n';
+    } else {
+      cout &lt;&lt; hi &lt;&lt; '\n';
+    }
+  }
+}
+</pre>
+  </details>
 </article>
 
 
