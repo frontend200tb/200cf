@@ -102,67 +102,65 @@ int main() {
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
 
-    int t;
-    cin >> t;
-    while (t--) {
-        int n;
-        cin >> n;
-        vector&lt;int&gt; a(n);
-        for (int i = 0; i &lt; n; i++) {
-            cin >> a[i];
-        }
-
-        vector&lt;int&gt; ans(n);
-
-        for (int i = 0; i &lt; n; i++) {
-            vector&lt;pair&lt;double, int&gt; &gt; events;
-
-            int cnt_left = 0; // количество a_j &lt; a_i (побеждают при k -> -inf)
-            int cnt_right = 0; // количество a_j > a_i (побеждают при k -> +inf)
-
-            for (int j = i + 1; j &lt; n; j++) {
-                if (a[j] > a[i]) {
-                    cnt_right++;
-                    double mid = (a[i] + a[j]) / 2.0;
-                    events.emplace_back(mid, +1); // при k > mid, этот j начинает побеждать
-                } else if (a[j] &lt; a[i]) {
-                    cnt_left++;
-                    double mid = (a[i] + a[j]) / 2.0;
-                    events.emplace_back(mid, -1); // при k > mid, этот j перестает побеждать
-                }
-            }
-
-            // Начальное состояние: при k -> -inf побеждают все a_j &lt; a_i
-            int current = cnt_left;
-            int best = max(current, cnt_right);
-
-            sort(events.begin(), events.end());
-
-            for (size_t idx = 0; idx &lt; events.size(); ) {
-                double pos = events[idx].first;
-                int delta = 0;
-                while (idx &lt; events.size() && events[idx].first == pos) {
-                    delta += events[idx].second;
-                    idx++;
-                }
-                current += delta;
-                best = max(best, current);
-            }
-
-            ans[i] = best;
-        }
-
-        for (int i = 0; i &lt; n; i++) {
-            cout &lt;&lt; ans[i];
-            if (i &lt; n - 1) cout &lt;&lt; " ";
-        }
-        cout &lt;&lt; "\n";
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    vector&lt;int&gt; a(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> a[i];
     }
 
-    return 0;
+    vector&lt;int&gt; ans(n);
+
+    for (int i = 0; i &lt; n; i++) {
+      vector&lt;pair&lt;double, int&gt; &gt; events;
+
+      int cnt_left = 0; // количество a_j &lt; a_i (побеждают при k -> -inf)
+      int cnt_right = 0; // количество a_j > a_i (побеждают при k -> +inf)
+
+      for (int j = i + 1; j &lt; n; j++) {
+        if (a[j] > a[i]) {
+          cnt_right++;
+          double mid = (a[i] + a[j]) / 2.0;
+          events.emplace_back(mid, +1); // при k > mid, этот j начинает побеждать
+        } else if (a[j] &lt; a[i]) {
+          cnt_left++;
+          double mid = (a[i] + a[j]) / 2.0;
+          events.emplace_back(mid, -1); // при k > mid, этот j перестает побеждать
+        }
+      }
+
+      // Начальное состояние: при k -> -inf побеждают все a_j &lt; a_i
+      int current = cnt_left;
+      int best = max(current, cnt_right);
+
+      sort(events.begin(), events.end());
+
+      for (size_t idx = 0; idx &lt; events.size(); ) {
+        double pos = events[idx].first;
+        int delta = 0;
+        while (idx &lt; events.size() && events[idx].first == pos) {
+          delta += events[idx].second;
+          idx++;
+        }
+        current += delta;
+        best = max(best, current);
+      }
+
+      ans[i] = best;
+    }
+
+    for (int i = 0; i &lt; n; i++) {
+      cout &lt;&lt; ans[i];
+      if (i &lt; n - 1) cout &lt;&lt; " ";
+    }
+    cout &lt;&lt; "\n";
+  }
 }
 </pre>
   </details>
@@ -176,7 +174,56 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+    <p>В массиве длины 2n есть n нулей и n различных ненулевых чисел (от 1 до n). Если два элемента равны, то они обязательно оба нули (так как ненулевые числа уникальны).</p>
+    <p>Следовательно, если мы найдём любую пару индексов (i, j), для которой query(i, j) = 1, то оба элемента — нули, и мы можем вывести любой из них.</p>
+    <p>Алгоритм гарантированно находит ноль за n+1 запросов, используя простую логику проверки пар и небольшой fallback для первых двух элементов.</p>
+<pre>
+#include &lt;iostream&gt;
 
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    int ans = -1;
+
+    // проверка пар среди первых 2n-2 элементов
+    for (int i = 1; i &lt; n; ++i) {
+      cout &lt;&lt; "? " &lt;&lt; 2 * i + 1
+      &lt;&lt; " " &lt;&lt; 2 * i + 2 &lt;&lt; endl;
+      int resp;
+      cin >> resp;
+      if (resp == 1) {
+        ans = 2 * i + 1;
+        break;
+      }
+    }
+
+    // обработка случая, когда не нашли пару нулей
+    if (ans == -1) {
+      cout &lt;&lt; "? 1 3" &lt;&lt; endl;
+      int resp;
+      cin >> resp;
+      if (resp == 1) {
+        ans = 1;
+      } else {
+        cout &lt;&lt; "? 1 4" &lt;&lt; endl;
+        cin >> resp;
+        if (resp == 1) {
+          ans = 1;
+        } else {
+          ans = 2;
+        }
+      }
+    }
+
+    cout &lt;&lt; "! " &lt;&lt; ans &lt;&lt; endl;
+  }
+}
+</pre>
   </details>
 </article>
 
@@ -186,10 +233,6 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Призрачные огни</h3>
 
-  <details>
-    <summary>Решение</summary>
-
-  </details>
 </article>
 
 
@@ -198,10 +241,6 @@ int main() {
   <div class="anchor" id="t5"></div>
   <h3>Задача E. Тривиальная задача на строки</h3>
 
-  <details>
-    <summary>Решение</summary>
-
-  </details>
 </article>
 
 
@@ -210,9 +249,5 @@ int main() {
   <div class="anchor" id="t6"></div>
   <h3>Задача F. Динамические значения и максимальный счёт</h3>
 
-  <details>
-    <summary>Решение</summary>
-
-  </details>
 </article>
 
