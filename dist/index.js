@@ -51436,70 +51436,38 @@ int main() {
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
-#include &lt;algorithm&gt;
 
 using namespace std;
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(nullptr);
+	int t; // число тестов
+	cin >> t;
 
-  int t;
-  cin >> t;
-  while (t--) {
-    int n;
-    cin >> n;
-    vector&lt;int&gt; a(n);
-    for (int i = 0; i &lt; n; i++) {
-      cin >> a[i];
-    }
+	while (t--) {
+		int n; // длина массива
+		cin >> n;
 
-    vector&lt;int&gt; ans(n);
+		vector&lt;int&gt; A(n);
+		for (int i = 0; i &lt; n; i++) {
+			cin >> A[i];
+		}
 
-    for (int i = 0; i &lt; n; i++) {
-      vector&lt;pair&lt;double, int&gt; &gt; events;
+		vector&lt;int&gt; B(n);
+		vector&lt;int&gt; C(n);
+		for (int i = n - 1; i >= 0; i--) {
+			B[i] = C[i] = 0;
+			for (int j = i + 1; j &lt; n; j++) {
+				B[i] += (A[i] > A[j]);
+				C[i] += (A[i] &lt; A[j]);
+			}
+			B[i] = max(B[i], C[i]);
+		}
 
-      int cnt_left = 0; // количество a_j &lt; a_i (побеждают при k -> -inf)
-      int cnt_right = 0; // количество a_j > a_i (побеждают при k -> +inf)
-
-      for (int j = i + 1; j &lt; n; j++) {
-        if (a[j] > a[i]) {
-          cnt_right++;
-          double mid = (a[i] + a[j]) / 2.0;
-          events.emplace_back(mid, +1); // при k > mid, этот j начинает побеждать
-        } else if (a[j] &lt; a[i]) {
-          cnt_left++;
-          double mid = (a[i] + a[j]) / 2.0;
-          events.emplace_back(mid, -1); // при k > mid, этот j перестает побеждать
-        }
-      }
-
-      // Начальное состояние: при k -> -inf побеждают все a_j &lt; a_i
-      int current = cnt_left;
-      int best = max(current, cnt_right);
-
-      sort(events.begin(), events.end());
-
-      for (size_t idx = 0; idx &lt; events.size(); ) {
-        double pos = events[idx].first;
-        int delta = 0;
-        while (idx &lt; events.size() && events[idx].first == pos) {
-          delta += events[idx].second;
-          idx++;
-        }
-        current += delta;
-        best = max(best, current);
-      }
-
-      ans[i] = best;
-    }
-
-    for (int i = 0; i &lt; n; i++) {
-      cout &lt;&lt; ans[i];
-      if (i &lt; n - 1) cout &lt;&lt; " ";
-    }
-    cout &lt;&lt; "\\n";
-  }
+		for (int i = 0; i &lt; n - 1; i++) {
+			cout &lt;&lt; B[i] &lt;&lt; ' ';
+		}
+		cout &lt;&lt; B[n - 1] &lt;&lt; '\\n';
+	}
 }
 </pre>
   </details>
@@ -51572,6 +51540,77 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Призрачные огни</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream>
+#include &lt;vector>
+
+using namespace std;
+
+int t, r, g, b, rb, gb, rg;
+
+int main() {
+  scanf("%d", &t);
+  while (t--) {
+    scanf("%d %d %d", &r, &g, &b);
+    while (((r > 0) + (g > 0) + (b > 0)) >> 1) {
+      if (r &lt;= g && r &lt;= b)
+        gb++, g--, b--;
+      else if (g &lt;= r && g &lt;= b)
+        rb++, r--, b--;
+      else if (b &lt;= r && b &lt;= g)
+        rg++, r--, g--;
+    }
+    if (g > 0) {
+      putchar('G');
+      while (rg > 0)
+        putchar('R'), putchar('G'), rg--;
+      bool flg = false;
+      while (gb > 0)
+        putchar('B'), putchar('G'), gb--, flg = true;
+      if (flg) {
+        while (rb > 0)
+          putchar('B'), putchar('R'), rb--;
+      } else {
+        while (rb > 0)
+          putchar('R'), putchar('B'), rb--;
+      }
+    } else if (r > 0) {
+      putchar('R');
+      while (rg > 0)
+        putchar('G'), putchar('R'), rg--;
+      bool flg = false;
+      while (rb > 0)
+        putchar('B'), putchar('R'), rb--, flg = true;
+      if (flg) {
+        while (gb > 0)
+          putchar('B'), putchar('G'), gb--;
+      } else {
+        while (gb > 0)
+          putchar('G'), putchar('B'), gb--;
+      }
+    } else {
+      if (b > 0)
+        putchar('B');
+      while (gb > 0)
+        putchar('G'), putchar('B'), gb--;
+      bool flg = false;
+      while (rb > 0)
+        putchar('R'), putchar('B'), rb--, flg = true;
+      if (flg) {
+        while (rg > 0)
+          putchar('R'), putchar('G'), rg--;
+      } else {
+        while (rg > 0)
+          putchar('G'), putchar('R'), rg--;
+      }
+    }
+    puts("");
+  }
+}
+</pre>
+  </details>
 </article>
 
 
