@@ -280,6 +280,85 @@ int main() {
   <div class="anchor" id="t5"></div>
   <h3>Задача E. Тривиальная задача на строки</h3>
 
+  <details>
+    <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+long long work(const string& s) {
+  int n = s.length();
+  vector&lt;int&gt; p(n, 0);
+  vector&lt;int&gt; b(n, 0);
+
+  // Построение префикс-функции
+  for (int i = 1; i &lt; n; i++) {
+    int j = p[i - 1];
+    while (j > 0 && s[i] != s[j]) {
+      j = p[j - 1];
+    }
+    if (s[i] == s[j]) {
+      j++;
+    }
+    p[i] = j;
+
+    if (j == 0) {
+      b[i] = 0;
+    } else if (p[j - 1] == 0) {
+      b[i] = j;
+    } else {
+      b[i] = b[j - 1];
+    }
+  }
+
+  // Подсчет ответа - используем long long для предотвращения переполнения
+  long long ans = 0;
+  vector&lt;long long&gt; dp(n, 0);
+
+  for (int i = 0; i &lt; n; i++) {
+    if (b[i] == 0) {
+      dp[i] = 1;
+    } else {
+      int prev_index = i - b[i];
+      if (prev_index >= 0) {
+        dp[i] = dp[prev_index] + 1;
+      } else {
+        dp[i] = 1;
+      }
+    }
+    ans += dp[i];
+  }
+
+  return ans;
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n, q;
+    cin >> n >> q;
+    string s;
+    cin >> s;
+
+    while (q--) {
+      int l, r;
+      cin >> l >> r;
+      cout &lt;&lt; work(s.substr(l - 1, r - l + 1)) &lt;&lt; '\n';
+    }
+  }
+
+  return 0;
+}
+</pre>
+  </details>
 </article>
 
 
