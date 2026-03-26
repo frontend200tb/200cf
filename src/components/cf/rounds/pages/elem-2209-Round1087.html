@@ -367,5 +367,244 @@ int main() {
   <div class="anchor" id="t6"></div>
   <h3>Задача F. Динамические значения и максимальный счёт</h3>
 
+  <details>
+    <summary>Решение</summary>
+    <p>Алгоритм находит максимальный возможный счёт после выполнения k операций, где каждая операция:</p>
+    <ol>
+      <li>Выбирает корень дерева</li>
+      <li>Добавляет значение корня к счёту и обнуляет его</li>
+      <li>Перераспределяет значения всех не-листовых вершин к листьям в их поддеревьях</li>
+    </ol>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstdio&gt;
+
+using namespace std;
+
+const int N = 300009;
+int n, k, t, a[N], tt[N];
+long long b[N], ans[N], sum, mxa;
+
+// FLONG используется в множестве для хранения вершин
+// с их накопленными значениями, отсортированных по убыванию.
+struct FLONG {
+  long long val; // накопленное значение в вершине
+  int nd; // номер вершины
+  FLONG(long long v = 0, int d = 0) : val(v), nd(d) {}
+
+  // Сортировка: сначала по убыванию val, при равенстве по возрастанию nd
+  bool operator&lt;(const FLONG& b) const {
+    return val > b.val || (val == b.val && nd &lt; b.nd);
+  }
+};
+
+set&lt;FLONG&gt; s;
+set&lt;FLONG&gt;::iterator o;
+
+// pir хранит информацию о самом дальнем листе:
+// to - индекс листа
+// len - расстояние до него
+// Сортировка : сначала по убыванию длины, при равенстве - по возрастанию индекса
+// mn[v] - самый дальний лист в поддереве v
+// se[v] - второй по дальности лист
+// lf[v] - самый дальний лист вне поддерева v
+struct pir {
+  int to, len; // to - вершина-лист, len - расстояние до неё
+  pir(int t = 0, int l = 0) : to(t), len(l) {}
+
+  bool operator&lt;(const pir& b) const {
+    return len > b.len || (len == b.len && to &lt; b.to);
+  }
+} mn[N], se[N], lf[N];
+
+vector&lt;int&gt; e[N];
+
+// Первый обход дерева (srh)
+// Для каждой вершины находит два самых удалённых листа
+// в её поддереве. Это нужно для быстрого определения,
+// куда будет перемещаться значение вершины при разных корнях.
+void srh(int v, int fa) {
+  mn[v] = pir(v, 0); // для листа - он сам
+  se[v] = pir(0, ~0x3f3f3f3f); // очень маленькое значение
+  lf[v] = pir(0, ~0x3f3f3f3f);
+
+  for (unsigned i = 0; i &lt; e[v].size(); i++) {
+    if (e[v][i] != fa) {
+      srh(e[v][i], v);
+      pir th = mn[e[v][i]];
+      th.len++; // увеличиваем расстояние на 1 (ребро до дочерней вершины)
+      // Обновляем два самых дальних листа
+      if (th &lt; se[v])
+        swap(th, se[v]);
+      if (se[v] &lt; mn[v])
+        swap(se[v], mn[v]);
+    }
+  }
+}
+
+// Инициализация для корня 1 (gt1)
+// Вычисляет счёт для случая, когда корень - вершина 1:
+// Добавляет значение корня
+// Определяет, куда перераспределятся значения остальных вершин
+// Выбирает k - 1 наибольших накопленных значений(плюс корень даёт всего k операций)
+void gt1() {
+  sum = ans[1] = 0;
+  ans[1] += a[1]; // добавляем значение корня
+
+  // Для каждой не-корневой вершины i, её значение пойдёт к mn[i].to
+  for (int i = 2; i &lt;= n; i++) {
+    b[mn[i].to] += a[i];
+    tt[i] = mn[i].to; // запоминаем, куда пойдёт значение
+  }
+
+  // Собираем все накопленные значения в множество
+  s.clear();
+  for (int i = 2; i &lt;= n; i++) {
+    s.insert(FLONG(b[i], i));
+  }
+
+  // Берём k-1 самых больших значений (k-1, потому что корень уже взят)
+  o = s.begin();
+  ans[1] += o->val;
+  sum += o->val;
+
+  for (int i = 1; i &lt; k - 1; i++) {
+    o++;
+    ans[1] += o->val;
+    sum += o->val;
+  }
+
+  s.insert(FLONG(-1ll, 0));
+  s.insert(FLONG(-2ll, 0));
+}
+
+// Функции для динамического обновления (era, ins, stp, sett)
+
+// era(x) - удаляет вершину x из множества
+void era(int x) {
+  FLONG u = FLONG(b[x], x);
+  if (!(*o &lt; u)) {
+    o++;
+    sum += o->val;
+    sum -= b[x];
+  }
+  s.erase(u);
+}
+
+// ins(x) - добавляет вершину x в множество
+void ins(int x) {
+  FLONG u = FLONG(b[x], x);
+  s.insert(u);
+  if (!(*o &lt; u)) {
+    sum -= o->val;
+    sum += b[x];
+    o--;
+  }
+}
+
+// stp(x) - перемещает значение вершины x
+// (удаляет из старого места, добавляет в новое)
+void stp(int x) {
+  era(tt[x]);
+  b[tt[x]] -= a[x];
+  ins(tt[x]);
+  tt[x] = 0;
+}
+
+// sett(x, ttp) - устанавливает новое назначение для вершины x
+void sett(int x, int ttp) {
+  tt[x] = ttp;
+  era(tt[x]);
+  b[tt[x]] += a[x];
+  ins(tt[x]);
+}
+
+// Второй обход для пересчёта всех корней (srho)
+// Обходит дерево, пересчитывая ответ для каждой вершины
+// как потенциального корня.При переходе к новому корню :
+// Обновляет информацию о том, куда перераспределяются значения
+// Поддерживает актуальное множество накопленных значений
+// Использует технику "переподвешивания" дерева для эффективного пересчёта
+void srho(int v, int fa) {
+  if (fa != 0) {
+    stp(v); // убираем v из старого назначения
+    era(v); // удаляем v из множества
+    ins(fa); // добавляем fa в множество
+    sett(fa, lf[fa].to); // обновляем назначение для fa
+    ans[v] = sum + a[v]; // считаем ответ для корня v
+  }
+
+  // Рекурсивно обрабатываем детей
+  for (unsigned i = 0; i &lt; e[v].size(); i++) {
+    if (e[v][i] != fa) {
+      pir u = lf[fa];
+      u.len++;
+      // Вычисляем самый дальний лист вне поддерева v
+      if (mn[v].to == mn[e[v][i]].to)
+        lf[v] = min(u, se[v]);
+      else
+        lf[v] = min(u, mn[v]);
+      srho(e[v][i], v);
+    }
+  }
+
+  // Откатываем изменения при возврате
+  if (fa != 0) {
+    ins(v);
+    sett(v, mn[v].to);
+    stp(fa);
+    era(fa);
+  }
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  cin >> t;
+
+  while (t--) {
+    cin >> n >> k;
+    mxa = 0;
+
+    for (int i = 1; i &lt;= n; i++) {
+      cin >> a[i];
+      mxa = max(mxa, 1ll * a[i]);
+      e[i].clear();
+      b[i] = 0;
+    }
+
+    for (int i = 1; i &lt; n; i++) {
+      int u, v;
+      cin >> u >> v;
+      e[u].push_back(v);
+      e[v].push_back(u);
+    }
+
+    if (k == 1) {
+      cout &lt;&lt; mxa &lt;&lt; "\n";
+      continue;
+    }
+
+    lf[0].len = ~0x3f3f3f3f;
+    srh(1, 0);
+    gt1();
+    srho(1, 0);
+
+    for (int i = 1; i &lt;= n; i++) {
+      mxa = max(mxa, ans[i]);
+    }
+
+    cout &lt;&lt; mxa &lt;&lt; "\n";
+  }
+
+  return 0;
+}
+</pre>
+  </details>
 </article>
 
