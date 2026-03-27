@@ -1023,4 +1023,129 @@ int main() {
   <p>Во втором примере при единственно возможном соединении появляется пересечение двух проводов, поэтому ответ равен 1.</p>
   <p>В третьем тестовом примере единственно возможное соединение состоит из одного провода, поэтому ответ равен 0.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Пересечение происходит, когда для двух проводов (i, a[i]) и (j, a[j]) выполняется условие: i &lt; j и a[i] > a[j] (инверсия) ИЛИ i &lt; j и a[i] &lt; a[j] (но при определенных условиях расположения точек на отрезках).</p>
+    <ol>
+      <li>
+        Подсчет инверсий (aInversion):
+        <ul>
+          <li>Используется сортировка слиянием для подсчета количества инверсий в массиве a</li>
+          <li>Инверсия — это пара индексов (i, j) где i &lt; j и a[i] > a[j]</li>
+          <li>Количество инверсий дает часть ответа</li>
+        </ul>
+      </li>
+      <li>
+        Подсчет повторяющихся элементов:
+        <ul>
+          <li>После сортировки массива, одинаковые элементы группируются</li>
+          <li>Для каждой группы из curr одинаковых элементов добавляется curr * (curr - 1) / 2 к ответу</li>
+          <li>Это количество способов выбрать пару из одинаковых элементов</li>
+        </ul>
+      </li>
+      <li>
+        Почему это работает:
+        <ul>
+          <li>Инверсии дают количество пар проводов, которые обязательно пересекутся</li>
+          <li>Одинаковые значения a[i] также могут создавать дополнительные пересечения при оптимальном расположении точек на отрезках</li>
+          <li>Формула (curr * (curr - 1)) / 2 — это количество пар из curr элементов</li>
+        </ul>
+      </li>
+    </ol>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+const int MAX = 200007;
+const int MOD = 1000000007;
+
+long long merge(vector&lt;int&gt;& a, vector&lt;int&gt;& temp, int left, int mid, int right) {
+  int i, j, k;
+  long long count = 0;
+  i = left;
+  j = mid;
+  k = left;
+  while ((i &lt;= mid - 1) && (j &lt;= right)) {
+    if (a[i] &lt;= a[j]) {
+      temp[k++] = a[i++];
+    } else {
+      temp[k++] = a[j++];
+      count += (mid - i);
+    }
+  }
+  while (i &lt;= mid - 1)
+    temp[k++] = a[i++];
+  while (j &lt;= right)
+    temp[k++] = a[j++];
+  for (i = left; i &lt;= right; i++)
+    a[i] = temp[i];
+  return count;
+}
+
+long long mergeSort(vector&lt;int&gt;& a, vector&lt;int&gt;& temp, int left, int right) {
+  int mid;
+  long long count = 0;
+  if (right > left) {
+    mid = (right + left) / 2;
+    count = mergeSort(a, temp, left, mid);
+    count += mergeSort(a, temp, mid + 1, right);
+    count += merge(a, temp, left, mid + 1, right);
+  }
+  return count;
+}
+
+long long countInversions(vector&lt;int&gt;& a) {
+  int n = a.size();
+  vector&lt;int&gt; temp(n);
+  return mergeSort(a, temp, 0, n - 1);
+}
+
+void solve() {
+  int n;
+  cin >> n;
+  vector&lt;int&gt; a(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> a[i];
+  }
+
+  // Подсчет количества инверсий в исходном массиве
+  long long res = countInversions(a);
+
+  // Сортируем массив для подсчета повторяющихся элементов
+  sort(a.begin(), a.end());
+
+  // Подсчет количества пар одинаковых элементов
+  long long curr = 1;
+  for (int i = 1; i &lt; n; i++) {
+    if (a[i] != a[i - 1]) {
+      res += (curr * (curr - 1)) / 2;
+      curr = 1;
+    } else {
+      curr++;
+    }
+  }
+  res += (curr * (curr - 1)) / 2;
+
+  cout &lt;&lt; res &lt;&lt; '\n';
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int tt; // число тестов
+  cin >> tt;
+
+  for (int i = 1; i &lt;= tt; i++) {
+    solve();
+  }
+  return 0;
+}
+</pre>
+  </details>
 </article>
