@@ -37,4 +37,84 @@
     <a href="https://codeforces.com/contest/3/problem/D" target="_blank">Задача 3D</a>
     <br><a href="https://codeforces.com/contest/3" target="_blank">Codeforces Beta Round 3 2010-03-07</a>
   </div>
+
+  <p>Жадный подход с приоритетной очередью.</p>
+  <p>Жадный подход: Все ? изначально заменяются на ) (самое дешёвое решение для сохранения баланса, но не всегда правильное)</p>
+  <p>Коррекция баланса: Как только баланс становится отрицательным, мы "исправляем" один из предыдущих ?, заменяя его с ) на (. Выбираем тот, у которого наибольшая экономия (минимальная разность lef - rig)</p>
+  <p>Почему это работает: Мы поддерживаем инвариант, что на каждом шаге баланс неотрицательный. Если он становится отрицательным, значит, где-то в прошлом нужно было поставить ( вместо ). Выбираем самый выгодный вариант.</p>
+  <p>Сложность: O(n log m), где m — количество вопросительных знаков</p>
+  <p>Это очень элегантное решение, которое проходит по строке один раз и сразу строит ответ!</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+struct Question {
+  int lef, rig, num;
+  Question(int aa = 0, int bb = 0, int cc = 0) {
+    lef = aa;
+    rig = bb;
+    num = cc;
+  }
+  bool operator &lt; (const Question& other) const {
+    return (lef - rig) > (other.lef - other.rig);
+  }
+};
+
+int main() {
+  string s;
+  cin >> s;
+
+  int n = s.size();
+  string result(n, ' ');
+
+  priority_queue&lt;Question&gt; pq;
+  int balance = 0;
+  long long total_cost = 0;
+
+  for (int i = 0; i &lt; n; i++) {
+    if (s[i] == '(') {
+      balance++;
+      result[i] = '(';
+    } else {
+      balance--;
+      result[i] = ')';
+
+      if (s[i] == '?') {
+        int a, b;
+        cin >> a >> b;
+        total_cost += b;
+        pq.push(Question(a, b, i));
+      }
+
+      if (balance &lt; 0) {
+        if (pq.empty()) {
+          cout &lt;&lt; -1 &lt;&lt; endl;
+          return 0;
+        }
+
+        balance += 2;
+        Question best = pq.top();
+        pq.pop();
+
+        result[best.num] = '(';
+        total_cost += (best.lef - best.rig);
+      }
+    }
+  }
+
+  if (balance != 0) {
+    cout &lt;&lt; -1 &lt;&lt; endl;
+  } else {
+    cout &lt;&lt; total_cost &lt;&lt; endl;
+    cout &lt;&lt; result &lt;&lt; endl;
+  }
+
+  return 0;
+}
+</pre>
 </details>
