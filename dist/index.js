@@ -8750,6 +8750,60 @@ var code = `<!-- Задача D. Загадочная посылка -->
     <br><a href="https://codeforces.com/contest/4" target="_blank">Codeforces Beta Round 4 (Дивизион 2) 2010-03-12</a>
   </div>
 
+  <h4>Тест 16</h4>
+<pre>
+45 6134 8495
+9045 8632
+4145 4991
+5368 5303
+6245 4894
+8529 6378
+5797 6165
+5444 6826
+7091 4030
+6680 9984
+4155 6711
+5100 5977
+7333 6514
+9729 4141
+8171 6185
+6146 6016
+4488 7588
+9333 4921
+7368 6350
+6552 8552
+9900 8327
+3310 7281
+6402 5749
+6124 4381
+8190 3834
+7421 3816
+3475 4977
+6239 6577
+9277 4139
+4037 5329
+6808 7446
+7679 5283
+6775 3023
+6777 8500
+5921 6975
+4501 4383
+4623 8409
+7070 6430
+9429 8736
+7353 7760
+3942 3683
+4859 8424
+6348 7379
+9043 9054
+9012 7114
+7050 9454
+</pre>
+<pre>
+3
+19 1 38
+</pre>
+
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -8757,14 +8811,14 @@ var code = `<!-- Задача D. Загадочная посылка -->
 
 using namespace std;
 
-bool cmp(const pair&lt;pair&lt;int, int&gt;, int&gt; a, const pair&lt;pair&lt;int, int&gt;, int&gt; b)
-{
-  if (a.first.first == b.first.first) return a.first.second &lt; b.first.second;
+bool cmp(const pair&lt;pair&lt;int, int&gt;, int&gt; &a, const pair&lt;pair&lt;int, int&gt;, int&gt; &b) {
+  if (a.first.first == b.first.first) {
+    return a.first.second &lt; b.first.second;
+  }
   return a.first.first &lt; b.first.first;
 }
 
 int main() {
-  // ввод данных
   int n; // число конвертов
   int w; // ширина открытки
   int h; // высота открытки
@@ -8772,31 +8826,73 @@ int main() {
   int a, b;
 
   // ширина, высота, номер конверта
-  vector&lt;pair&lt;pair&lt;int, int&gt;, int &gt; &gt; Konv(n);
+  vector&lt;pair&lt;pair&lt;int, int&gt;, int&gt; &gt; Konv;
   for (int i = 0; i &lt; n; i++) {
-    cin >> a >> b;
-    Konv[i] = make_pair(make_pair(a, b), i + 1);
-  }
-
-  // решение
-  int cnt = 0;
-  sort(Konv.begin(), Konv.end(), cmp);
-  vector&lt;int&gt; Nabor;
-  pair&lt;int, int&gt; prev = make_pair(w, h);
-
-  // соберем цепь конвертов
-  for (int i = 0; i &lt; n; i++) {
-    if (Konv[i].first.first > prev.first && Konv[i].first.second > prev.second) {
-      cnt++;
-      Nabor.push_back(Konv[i].second);
-      prev = Konv[i].first;
+    cin >> a >> b; // очередной конверт
+    if (a > w && b > h) {
+      // сохранаяем только те конверты, в который поместится открытка
+      Konv.push_back(make_pair(make_pair(a, b), i + 1));
     }
   }
 
-  // вывод результата
-  cout &lt;&lt; cnt &lt;&lt; '\\n';
-  for (int i = 0; i &lt; Nabor.size(); i++) {
-    cout &lt;&lt; Nabor[i] &lt;&lt; ' ';
+  int m = Konv.size();
+
+  // если нет ни одного подходящего конверта
+  if (m == 0) {
+    cout &lt;&lt; 0;
+    return 0;
+  }
+
+  // Сортируем конверты по ширине, а при равенстве - по высоте
+  sort(Konv.begin(), Konv.end(), cmp);
+
+  // dp[i] - максимальная длина цепи, заканчивающейся на i-м конверте
+  vector&lt;int&gt; dp(m, 1);
+  // prev[i] - индекс предыдущего конверта в оптимальной цепи для i-го конверта
+  vector&lt;int&gt; prev(m, -1);
+
+  // Находим самую длинную возрастающую последовательность
+  // Конверт j может предшествовать конверту i, если:
+  // ширина[j] &lt; ширина[i] И высота[j] &lt; высота[i]
+  for (int i = 0; i &lt; m; i++) {
+    for (int j = 0; j &lt; i; j++) {
+      if (Konv[j].first.first &lt; Konv[i].first.first &&
+        Konv[j].first.second &lt; Konv[i].first.second) {
+        // Если нашли более длинную цепь, обновляем
+        if (dp[j] + 1 > dp[i]) {
+          dp[i] = dp[j] + 1;
+          prev[i] = j;
+        }
+      }
+    }
+  }
+
+  // Находим конверт, на котором заканчивается максимальная цепь
+  int maxLen = 0;
+  int endIndex = -1;
+  for (int i = 0; i &lt; m; i++) {
+    if (dp[i] > maxLen) {
+      maxLen = dp[i];
+      endIndex = i;
+    }
+  }
+
+  // Восстанавливаем цепь, идя от последнего конверта к первому
+  vector&lt;int&gt; chain;
+  int current = endIndex;
+  while (current != -1) {
+    chain.push_back(Konv[current].second);
+    current = prev[current];
+  }
+  // Переворачиваем, чтобы получить цепь от меньшего к большему
+  reverse(chain.begin(), chain.end());
+
+  // Выводим результат
+  cout &lt;&lt; maxLen &lt;&lt; '\\n';
+  if (maxLen > 0) {
+    for (int i = 0; i &lt; chain.size(); i++) {
+      cout &lt;&lt; chain[i] &lt;&lt; ' ';
+    }
   }
 }
 </pre>
