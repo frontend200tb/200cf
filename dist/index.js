@@ -9210,6 +9210,77 @@ var code = `<!-- Задача C. Наибольшая правильная ск�
     <a href="https://codeforces.com/contest/5/problem/C" target="_blank">Задача 5C</a>
     <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces 5 Round 5 Beta 2010-03-20</a>
   </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;stack&gt;
+#include &lt;climits&gt;
+#include &lt;cstring&gt;
+
+using namespace std;
+
+typedef long long int lli;
+
+int main() {
+  string s;
+  cin >> s;
+
+  int n = s.length();
+  const int MAX_N = 1000100;
+
+  int* c = new int[MAX_N];
+  int* d = new int[MAX_N];
+
+  for (int i = 0; i &lt;= n; i++) {
+    c[i] = INT_MAX;
+    d[i] = INT_MAX;
+  }
+
+  stack&lt;int&gt; st;
+
+  for (int i = 0; i &lt; n; i++) {
+    if (s[i] == ')') {
+      if (!st.empty()) {
+        int top = st.top();
+        st.pop();
+        d[i] = top;
+        c[i] = top;
+        if (d[i] - 1 >= 0) {
+          c[i] = min(c[d[i] - 1], c[i]);
+        }
+      }
+    } else {
+      st.push(i);
+    }
+  }
+
+  int ans = 0, cnt = 1;
+
+  for (int i = 0; i &lt; n; i++) {
+    if (s[i] == ')') {
+      if (i - c[i] + 1 > ans) {
+        ans = i - c[i] + 1;
+        cnt = 1;
+      } else if (i - c[i] + 1 == ans) {
+        cnt++;
+      }
+    }
+  }
+
+  cout &lt;&lt; ans;
+  if (ans == 0) {
+    cout &lt;&lt; " " &lt;&lt; 1 &lt;&lt; endl;
+  } else {
+    cout &lt;&lt; " " &lt;&lt; cnt &lt;&lt; endl;
+  }
+
+  delete[] c;
+  delete[] d;
+
+  return 0;
+}
+</pre>
 </details>
 `;
 // Exports
