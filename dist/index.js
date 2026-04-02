@@ -8980,7 +8980,7 @@ Mike:Hi   I am here
 
   <div>
     <a href="https://codeforces.com/contest/5/problem/A" target="_blank">Задача 5A</a>
-    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces 5 Round 5 Beta 2010-03-20</a>
+    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces Beta Round 5 2010-03-20</a>
   </div>
 
 <pre>
@@ -9096,7 +9096,7 @@ good luck
 
   <div>
     <a href="https://codeforces.com/contest/5/problem/B" target="_blank">Задача 5B</a>
-    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces 5 Round 5 Beta 2010-03-20</a>
+    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces Beta Round 5 2010-03-20</a>
   </div>
 
   <p>Код читает строки, находит самую длинную, затем каждую строку дополняет пробелами слева и справа так, чтобы она оказалась по центру, и окружает всё рамкой из *.</p>
@@ -9208,7 +9208,7 @@ var code = `<!-- Задача C. Наибольшая правильная ск�
 
   <div>
     <a href="https://codeforces.com/contest/5/problem/C" target="_blank">Задача 5C</a>
-    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces 5 Round 5 Beta 2010-03-20</a>
+    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces Beta Round 5 2010-03-20</a>
   </div>
 
 <pre>
@@ -9337,7 +9337,7 @@ var code = `<!-- Задача D. Соблюдай правила -->
 
   <div>
     <a href="https://codeforces.com/contest/5/problem/D" target="_blank">Задача 5D</a>
-    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces 5 Round 5 Beta 2010-03-20</a>
+    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces Beta Round 5 2010-03-20</a>
   </div>
 
 <pre>
@@ -9349,29 +9349,29 @@ using namespace std;
 
 int main() {
   double a; // ускорение
-	double v; // максимальная скорость
-	double l; // длина дороги
-	double d; // расстояние до знака
-	double w; // ограничение скорости на знаке
-	cin >> a >> v >> l >> d >> w;
+  double v; // максимальная скорость
+  double l; // длина дороги
+  double d; // расстояние до знака
+  double w; // ограничение скорости на знаке
+  cin >> a >> v >> l >> d >> w;
 
-	double t = w / a;
-	w = min(min(w, v), sqrt(2 * a * d));
-	if (2 * a * d + w * w > 2 * v * v) {
-    t = (d - v * v / a + w * w / a / 2) / v + (2 * v - w) / a;
-	} else {
-    t = (2 * sqrt(a * d + w * w / 2) - w) / a;
-	}
+  double t = w / a;
+  w = min(min(w, v), sqrt(2 * a * d));
+  if (2 * a * d + w * w > 2 * v * v) {
+	  t = (d - v * v / a + w * w / a / 2) / v + (2 * v - w) / a;
+  } else {
+	  t = (2 * sqrt(a * d + w * w / 2) - w) / a;
+  }
 
-	l = l - d;
-	double t2 = (v - w) / a;
-	if (l - w * t2 - 0.5 * a * t2 * t2 > 0) {
-    t2 = t2 + (l - w * t2 - 0.5 * a * t2 * t2) / v;
-	} else {
-    t2 = (-w + sqrt(w * w + 2.0 * a * l)) / a;
-	}
+  l = l - d;
+  double t2 = (v - w) / a;
+  if (l - w * t2 - 0.5 * a * t2 * t2 > 0) {
+	  t2 = t2 + (l - w * t2 - 0.5 * a * t2 * t2) / v;
+  } else {
+	  t2 = (-w + sqrt(w * w + 2.0 * a * l)) / a;
+  }
 
-	cout &lt;&lt; fixed &lt;&lt; setprecision(7) &lt;&lt; t + t2;
+  cout &lt;&lt; fixed &lt;&lt; setprecision(7) &lt;&lt; t + t2;
 }
 </pre>
 </details>
@@ -9422,8 +9422,87 @@ var code = `<!-- Задача E. Передача сигналов по-бинд
 
   <div>
     <a href="https://codeforces.com/contest/5/problem/E" target="_blank">Задача 5E</a>
-    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces 5 Round 5 Beta 2010-03-20</a>
+    <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces Beta Round 5 2010-03-20</a>
   </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  cout.tie(0);
+
+  int n; // число холмов вокруг столицы
+  cin >> n;
+
+  vector&lt;int&gt; a(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> a[i]; // высота i-го холма
+  }
+
+  // Находим позицию максимального элемента
+  int max_val = a[0];
+  int pos = 0;
+  for (int i = 1; i &lt; n; i++) {
+    if (a[i] > max_val) {
+      max_val = a[i];
+      pos = i;
+    }
+  }
+
+  // Создаем массив b, начиная с максимального элемента
+  vector&lt;int&gt; b(n + 1);
+  for (int i = 0; i &lt; n; i++) {
+    b[i] = a[(pos + i) % n];
+  }
+  b[n] = b[0];
+
+  // Массивы для правых границ и счетчиков одинаковых элементов
+  vector&lt;int&gt; r(n), s(n, 0);
+
+  // Заполняем r и s справа налево
+  for (int i = n - 1; i >= 0; i--) {
+    r[i] = i + 1;
+    while (r[i] &lt; n && b[i] > b[r[i]]) {
+      r[i] = r[r[i]];
+    }
+    while (r[i] &lt; n && b[i] == b[r[i]]) {
+      s[i] = s[r[i]] + 1;
+      r[i] = r[r[i]];
+    }
+  }
+
+  // Массив для левых границ
+  vector&lt;int&gt; l(n, 0);
+  l[0] = 0;
+  for (int i = 1; i &lt; n; i++) {
+    l[i] = i - 1;
+    while (l[i] > 0 && b[i] >= b[l[i]]) {
+      l[i] = l[l[i]];
+    }
+  }
+
+  // Подсчитываем количество пар
+  long long res = 0;
+  for (int i = 0; i &lt; n; i++) {
+    res += s[i];
+    if (b[i] &lt; b[0]) {
+      if (l[i] == 0 && r[i] == n) {
+        res += 1;
+      } else {
+        res += 2;
+      }
+    }
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
 </details>
 `;
 // Exports
@@ -9470,7 +9549,44 @@ var code = `<!-- Задача A. Треугольник -->
   <code>3 5 9 1</code>
   <code>IMPOSSIBLE</code>
 </details>
-`;
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/6/problem/A" target="_blank">Задача 6A</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 6 (Дивизион 2) 2010-03-27</a>
+  </div>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// проверяем на треугольник
+bool tr(int x, int y, int z) {
+  return ((x + y) > z) && ((x + z) > y) && ((y + z) > x);
+}
+
+// проверяем на вырожденный треугольник
+bool seg(int x, int y, int z) {
+  return ((x + y) == z) || ((x + z) == y) || ((y + z) == x);
+}
+
+int main() {
+  int a, b, c, d; // длины палочек
+  cin >> a >> b >> c >> d;
+
+  if (tr(a, b, c) || tr(a, b, d) || tr(a, c, d) || tr(b, c, d)) {
+    cout &lt;&lt; "TRIANGLE";
+  } else if (seg(a, b, c) || seg(a, b, d) || seg(a, c, d) || seg(b, c, d)) {
+    cout &lt;&lt; "SEGMENT";
+  } else {
+    cout &lt;&lt; "IMPOSSIBLE";
+  }
+}
+</pre>
+</details>`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
