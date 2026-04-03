@@ -9586,7 +9586,8 @@ int main() {
   }
 }
 </pre>
-</details>`;
+</details>
+`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
