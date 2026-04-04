@@ -9678,6 +9678,57 @@ var code = `<!-- Задача C. Алиса, Боб и шоколад -->
 </pre>
   <code>2 3</code>
 </details>
+
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/6/problem/C" target="_blank">Задача 6C</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 6 (Дивизион 2) 2010-03-27</a>
+  </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число плиток шоколада
+  cin >> n;
+
+  vector&lt;int&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i]; // число секунд чтобы съесть i-ю плитку
+  }
+
+  int cntA = 0; // число плиток съеденных Алисой
+  int cntB = 0; // число плиток съеденных Бобом
+
+  // вначале Алиса и Боб не съели ни одной плитки
+  int pA = -1; // указатель на плитку которую съела Алиса
+  int pB = n; // указатель на плитку которую съел Боб
+
+  int timeA = 0; // время которое потратила Алиса
+  int timeB = 0; // время которое потратил Боб
+
+  while (pA + 1 &lt; pB) {
+    if (timeA &lt;= timeB) {
+      cntA++;
+      pA++;
+      timeA += A[pA];
+    } else {
+      cntB++;
+      pB--;
+      timeB += A[pB];
+    }
+  }
+
+  cout &lt;&lt; cntA &lt;&lt; ' ' &lt;&lt; cntB;
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
