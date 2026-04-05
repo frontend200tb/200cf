@@ -9638,7 +9638,65 @@ TTT.
 </pre>
   <code>0</code>
 </details>
-`;
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/6/problem/B" target="_blank">Задача 6B</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 6 (Дивизион 2) 2010-03-27</a>
+  </div>
+
+  <p>Напишем функцию isZam, которая проверяет что это стол зама. Для этого у клетки зама клетка слева, справа, снизу или сверху должен быть стол президента.</p>
+  <p>Пройдем по матрице для каждого символа проверим , что это не пустая клетка и что это не стол президента и что это стол зама. Добавим стол зама в сет. В сете хранятся только уникальные значения, а значит каждый стол зама будет добавляться только один раз.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+char A[102][102] = { '.' }; // комната президента
+char c; // цвет стола президента
+
+bool isZam(int x, int y) {
+  // если слева, справа, снизу или сверху
+  // есть стол президента, то это зам
+  if (A[x - 1][y] == c ||
+    A[x + 1][y] == c ||
+    A[x][y - 1] == c ||
+    A[x][y + 1] == c) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+int main() {
+  int n, m; // длина и ширина комнаты
+  cin >> n >> m >> c;
+
+  for (int i = 1; i &lt;= n; i++) {
+    for (int j = 1; j &lt;= m; j++) {
+      cin >> A[i][j];
+    }
+  }
+
+  set&lt;char&gt; zam;
+
+  for (int i = 1; i &lt;= n; i++) {
+    for (int j = 1; j &lt;= m; j++) {
+      if (A[i][j] != '.' && A[i][j] != c && isZam(i, j)) {
+        // если это не пустая клетка и не стол президента
+        // и если это зам, то добавляем его в сет с замами
+        zam.insert(A[i][j]);
+      }
+    }
+  }
+
+  cout &lt;&lt; zam.size();
+}
+</pre>
+</details>`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
@@ -9678,7 +9736,6 @@ var code = `<!-- Задача C. Алиса, Боб и шоколад -->
 </pre>
   <code>2 3</code>
 </details>
-
 
 <details>
   <summary>Решение</summary>
