@@ -46,3 +46,85 @@
 3 4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/6/problem/E" target="_blank">Задача 6E</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 6 (Дивизион 2) 2010-03-27</a>
+  </div>
+
+  <p>Скользящее окно (two pointers) — стандартный подход для задач, где нужно найти подотрезок с ограничением на разность между max и min. Мы двигаем правую границу, а если условие нарушается (max - min > k), двигаем левую.</p>
+
+  <p>Deque для минимумов и максимумов — позволяет получать текущие min и max в окне за O(1) (амортизированно). Структура поддерживается так:</p>
+
+  <p>Для минимумов: храним индексы в порядке возрастания значений (при добавлении нового элемента удаляем все, у которых значение больше или равно новому).</p>
+
+  <p>Для максимумов: храним индексы в порядке убывания значений (при добавлении удаляем все, у которых значение меньше или равно новому).</p>
+
+  <p>Обновление при сдвиге left — если индекс left совпадает с элементом в начале deque, удаляем его. Иначе он уже был удалён ранее.</p>
+
+  <p>Сохранение всех отрезков максимальной длины — при нахождении большей длины очищаем вектор и добавляем новый отрезок; при равной максимальной длине добавляем в вектор.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;deque&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число книг
+  int k; // максимальная высота
+  cin >> n >> k;
+
+  vector&lt;int&gt; h(n+1);
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> h[i]; // высота i-ой книги
+  }
+
+  deque&lt;int&gt; minDeq, maxDeq;
+  vector&lt;pair&lt;int, int&gt; &gt; period; // периоды с максимальным числом книг
+  int maxLen = 0;
+
+  int p1 = 1; // левый указатель
+
+  for (int p2 = 1; p2 &lt;= n; p2++) {
+    // Поддержка минимума
+    while (!minDeq.empty() && h[minDeq.back()] >= h[p2]) {
+      minDeq.pop_back();
+    }
+    minDeq.push_back(p2);
+
+    // Поддержка максимума
+    while (!maxDeq.empty() && h[maxDeq.back()] &lt;= h[p2]) {
+      maxDeq.pop_back();
+    }
+    maxDeq.push_back(p2);
+
+    // Сжимаем окно, если разница > k
+    while (h[maxDeq.front()] - h[minDeq.front()] > k) {
+      if (minDeq.front() == p1) minDeq.pop_front();
+      if (maxDeq.front() == p1) maxDeq.pop_front();
+      p1++;
+    }
+
+    int len = p2 - p1 + 1;
+    if (len > maxLen) {
+      maxLen = len;
+      period.clear();
+      period.push_back({ p1, p2 });
+    } else if (len == maxLen) {
+      period.push_back({ p1, p2 });
+    }
+  }
+
+  cout &lt;&lt; maxLen &lt;&lt; ' ' &lt;&lt; period.size() &lt;&lt; '\n';
+  for (auto& seg : period) {
+    cout &lt;&lt; seg.first &lt;&lt; ' ' &lt;&lt; seg.second &lt;&lt; '\n';
+  }
+
+}
+</pre>
+</details>
