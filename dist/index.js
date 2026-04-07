@@ -9847,6 +9847,115 @@ var code = `<!-- Задача D. Ящерицы и подвалы 2 -->
 2 2 3 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/6/problem/D" target="_blank">Задача 6D</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 6 (Дивизион 2) 2010-03-27</a>
+  </div>
+
+  <h4>Тест 19</h4>
+<pre>
+4 5 3
+5 10 7 7
+</pre>
+<pre>
+5
+2 2 3 3 3
+</pre>
+
+  <h4>Тест 21</h4>
+<pre>
+10 9 5
+12 14 11 11 14 14 12 15 14 12
+</pre>
+<pre>
+10
+2 2 2 4 5 6 7 9 9 9
+</pre>
+
+<h4>Тест 31</h4>
+<pre>
+10 4 3
+2 1 2 4 2 4 3 2 2 4
+</pre>
+<pre>
+6
+2 5 5 7 9 9
+</pre>
+
+  <p>Решение использует DFS с возвратом (backtracking) и обрабатывает лучников слева направо, начиная с позиции 2 и до n-1</p>
+  <p>Когда мы находимся на позиции t, лучник t-1 уже не может быть поражён позже (только из позиции t). Поэтому мы обязаны убить лучника t-1 именно сейчас, стреляя в лучника t.</p>
+  <p>Жёсткий порядок обработки — слева направо</p>
+  <p>Обязательное убийство левого соседа на текущем шаге</p>
+  <p>Backtracking для восстановления ответа</p>
+  <p>Отсечения для ускорения</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;climits&gt;
+
+using namespace std;
+
+int c[15], Min = 1e9;
+vector&lt;int&gt; vec, vec2;
+int n, a, b;
+
+void dfs(int t, int sum) {
+  // t - текущая позиция (2..n-1)
+  // sum - количество сделанных выстрелов
+  if (sum >= Min) return;
+  if (t == n) {
+    if (c[n] &lt; 0) {
+      Min = sum;
+      vec = vec2;
+    }
+    return;
+  }
+
+  int maxShots = max(max(c[t - 1] / b, c[t] / a), c[t + 1] / b) + 1;
+  for (int i = 0; i &lt;= maxShots; i++) {
+    if (c[t - 1] - b * i &lt; 0) {
+      c[t - 1] -= b * i;
+      c[t] -= a * i;
+      c[t + 1] -= b * i;
+
+      for (int j = 1; j &lt;= i; j++) {
+        vec2.push_back(t);
+      }
+
+      dfs(t + 1, sum + i);
+
+      c[t - 1] += b * i;
+      c[t] += a * i;
+      c[t + 1] += b * i;
+
+      for (int j = 1; j &lt;= i; j++) {
+        vec2.pop_back();
+      }
+    }
+  }
+}
+
+int main() {
+  cin >> n >> a >> b;
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> c[i];
+  }
+
+  dfs(2, 0);
+
+  cout &lt;&lt; Min &lt;&lt; endl;
+  for (auto i : vec) {
+    cout &lt;&lt; i &lt;&lt; " ";
+  }
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
@@ -13789,7 +13898,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: () => (/* binding */ asideThemes)
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)', '2193 Round 1076 (Div. 3)', '2209 Round 1087 (Div. 2)'];
+var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)', '2193 Round 1076 (Div. 3)', '2209 Round 1087 (Div. 2)', '2218 Round 1090 (Div. 4)'];
 
 /***/ }),
 
@@ -13965,6 +14074,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/pages/elem-2185-Round1074.html");
 /* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/pages/elem-2193-Round1076.html");
 /* harmony import */ var _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./../pages/elem-2209-Round1087.html */ "./src/components/cf/rounds/pages/elem-2209-Round1087.html");
+/* harmony import */ var _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./../pages/elem-2218-Round1090.html */ "./src/components/cf/rounds/pages/elem-2218-Round1090.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -14127,7 +14237,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var pages = [[_pages_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_15__["default"], 34], [_pages_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_16__["default"], 38], _pages_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_18__["default"], _pages_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_19__["default"], _pages_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_21__["default"], _pages_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_22__["default"], _pages_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_38__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_39__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_48__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_49__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_51__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_52__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_53__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__["default"], _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_159__["default"], _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_160__["default"]];
+
+var pages = [[_pages_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_15__["default"], 34], [_pages_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_16__["default"], 38], _pages_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_18__["default"], _pages_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_19__["default"], _pages_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_21__["default"], _pages_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_22__["default"], _pages_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_38__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_39__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_48__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_49__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_51__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_52__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_53__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_157__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_158__["default"], _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_159__["default"], _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_160__["default"], _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_161__["default"]];
 
 /***/ }),
 
@@ -52133,6 +52244,79 @@ var code = `<article class="article">
   <div class="anchor" id="t1"></div>
   <h3>Задача A. Шлёпки</h3>
 
+  <div class="time-memory">(Время 1с. Память 256мб)</div>
+
+  <p>OtterZ устроил битву с n монстрами, чтобы увеличить свою боевую мощь. У каждого монстра есть боевая мощь ai, а у OtterZ — боевая мощь c. У него есть k шлёпок, и он может выполнять следующие операции:</p>
+  <ol>
+    <li>Убить живого монстра i, если ai≤c; тогда c становится c+ai.</li>
+    <li>Бросить шлёпок в живого монстра i; шлёпок сломается, и монстр станет более злым, тогда ai станет ai+1.</li>
+  </ol>
+
+  <p>Помогите OtterZ получить максимальное возможное c
+  после битвы.</p>
+
+  <h4>Входные данные</h4>
+  <p>Каждый тест состоит из нескольких наборов входных данных. В первой строке находится одно целое число t (1≤t≤500) — количество наборов входных данных. Далее следует описание наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит три целых числа n, c и k (1≤n≤100, 0≤c,k≤10⁹).</p>
+
+  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤10⁹).</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите целое число — максимальную возможную боевую мощь.</p>
+
+  <details>
+    <summary>Пример</summary>
+<pre>
+10
+1 12 23
+21
+1 8 4
+5
+1 3 4
+16
+3 6 3
+14 9 11
+5 9 2
+20 16 18 16 11
+5 18 30
+1 2 93 84 2
+7 29 13
+2 9 38 4 7 1 6
+10 9 2
+8 1 8 11 17 3 14 16 20 10
+10 192 109
+1 9 20 9 829 3 87 1 283 7
+10 1000000000 1000000000
+19 1000000000 1 9 2 3 8 1 2 3
+</pre>
+<pre>
+12
+16
+3
+6
+9
+53
+109
+119
+721
+3000000048
+</pre>
+
+  <p>В первом наборе входных данных OtterZ наткнулся на слишком сильного монстра, он не совершает никаких операций и уходит с боевой мощью 12.</p>
+
+  <p>В шестом наборе входных данных OtterZ участвовал в битве:</p>
+  <ol>
+    <li>Бросил 10 шлёпков в монстра 2, боевая мощь монстра 2 становится 12.</li>
+    <li>Бросил 10 шлёпков в монстра 1, боевая мощь монстра 1 становится 11.</li>
+    <li>Убил монстра 1, боевая мощь OtterZ становится 29.</li>
+    <li>Бросил 10 шлёпков в монстра 5, боевая мощь монстра 5 становится 12.</li>
+    <li>Убил монстра 2, боевая мощь OtterZ становится 41.</li>
+    <li>Убил монстра 5, боевая мощь OtterZ становится 53.</li>
+    <li>OtterZ уходит с боевой мощью 53.</li>
+  </ol>
+  </details>
+
   <details>
     <summary>Решение</summary>
 <pre>
@@ -52720,6 +52904,99 @@ int main() {
   </details>
 </article>
 
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/pages/elem-2218-Round1090.html":
+/*!*****************************************************************!*\
+  !*** ./src/components/cf/rounds/pages/elem-2218-Round1090.html ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<article class="article">
+  <a href="https://codeforces.com/contest/2218" target="_blank">Codeforces 2218 Round 1090 (Div. 4) 2026.04.04</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. 67-я задача на целые числа</a>
+  <br><a href="#t2">Задача B. 67-я задача про 6-7 целых чисел</a>
+  <br><a href="#t3">Задача C. 67-я задача на перестановки</a>
+  <br><a href="#t4">Задача D. 67-я задача OEIS</a>
+  <br><a href="#t5">Задача E. 67-я задача про XOR</a>
+  <br><a href="#t6">Задача F. 67-я задача про дерево</a>
+  <br><a href="#t7">Задача G. 67-я итерация "Считать всегда весело"</a>
+</article>
+
+
+<!-- Задача A. 67-я задача на целые числа -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. 67-я задача на целые числа</h3>
+
+  <div class="time-memory">(Время 1с. Память 256мб)</div>
+
+</article>
+
+
+<!-- Задача B. 67-я задача про 6-7 целых чисел -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. 67-я задача про 6-7 целых чисел</h3>
+
+</article>
+
+
+<!-- Задача C. 67-я задача на перестановки -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. 67-я задача на перестановки</h3>
+
+</article>
+
+
+<!-- Задача D. 67-я задача OEIS -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. 67-я задача OEIS</h3>
+
+</article>
+
+
+<!-- Задача E. 67-я задача про XOR -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. 67-я задача про XOR</h3>
+
+</article>
+
+
+<!-- Задача F. 67-я задача про дерево -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F. 67-я задача про дерево</h3>
+
+</article>
+
+
+<!-- Задача G. 67-я итерация "Считать всегда весело" -->
+<article class="article">
+  <div class="anchor" id="t7"></div>
+  <h3>Задача G. 67-я итерация "Считать всегда весело"</h3>
+
+</article>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);

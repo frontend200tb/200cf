@@ -41,3 +41,112 @@
 2 2 3 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/6/problem/D" target="_blank">Задача 6D</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 6 (Дивизион 2) 2010-03-27</a>
+  </div>
+
+  <h4>Тест 19</h4>
+<pre>
+4 5 3
+5 10 7 7
+</pre>
+<pre>
+5
+2 2 3 3 3
+</pre>
+
+  <h4>Тест 21</h4>
+<pre>
+10 9 5
+12 14 11 11 14 14 12 15 14 12
+</pre>
+<pre>
+10
+2 2 2 4 5 6 7 9 9 9
+</pre>
+
+<h4>Тест 31</h4>
+<pre>
+10 4 3
+2 1 2 4 2 4 3 2 2 4
+</pre>
+<pre>
+6
+2 5 5 7 9 9
+</pre>
+
+  <p>Решение использует DFS с возвратом (backtracking) и обрабатывает лучников слева направо, начиная с позиции 2 и до n-1</p>
+  <p>Когда мы находимся на позиции t, лучник t-1 уже не может быть поражён позже (только из позиции t). Поэтому мы обязаны убить лучника t-1 именно сейчас, стреляя в лучника t.</p>
+  <p>Жёсткий порядок обработки — слева направо</p>
+  <p>Обязательное убийство левого соседа на текущем шаге</p>
+  <p>Backtracking для восстановления ответа</p>
+  <p>Отсечения для ускорения</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;climits&gt;
+
+using namespace std;
+
+int c[15], Min = 1e9;
+vector&lt;int&gt; vec, vec2;
+int n, a, b;
+
+void dfs(int t, int sum) {
+  // t - текущая позиция (2..n-1)
+  // sum - количество сделанных выстрелов
+  if (sum >= Min) return;
+  if (t == n) {
+    if (c[n] &lt; 0) {
+      Min = sum;
+      vec = vec2;
+    }
+    return;
+  }
+
+  int maxShots = max(max(c[t - 1] / b, c[t] / a), c[t + 1] / b) + 1;
+  for (int i = 0; i &lt;= maxShots; i++) {
+    if (c[t - 1] - b * i &lt; 0) {
+      c[t - 1] -= b * i;
+      c[t] -= a * i;
+      c[t + 1] -= b * i;
+
+      for (int j = 1; j &lt;= i; j++) {
+        vec2.push_back(t);
+      }
+
+      dfs(t + 1, sum + i);
+
+      c[t - 1] += b * i;
+      c[t] += a * i;
+      c[t + 1] += b * i;
+
+      for (int j = 1; j &lt;= i; j++) {
+        vec2.pop_back();
+      }
+    }
+  }
+}
+
+int main() {
+  cin >> n >> a >> b;
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> c[i];
+  }
+
+  dfs(2, 0);
+
+  cout &lt;&lt; Min &lt;&lt; endl;
+  for (auto i : vec) {
+    cout &lt;&lt; i &lt;&lt; " ";
+  }
+}
+</pre>
+</details>
