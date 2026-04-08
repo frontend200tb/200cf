@@ -15,6 +15,8 @@ export const asideThemes = [
   '13 Round 13',
   '14 Round 14 (Div. 2)',
   '15 Round 15',
+  '16 Round 16 (Div. 2)',
+  '17 Round 17',
   '34 Round 34 (Div. 2)',
   '38 ШИО 1 2010',
   '39 ШКО 1 2010',

@@ -14,6 +14,8 @@ import html12       from './../pages/elem-12-Round12.html';
 import html13       from './../pages/elem-13-Round13.html';
 import html14       from './../pages/elem-14-Round14.html';
 import html15       from './../pages/elem-15-Round15.html';
+import html16       from './../pages/elem-16-Round16.html';
+import html17       from './../pages/elem-17-Round17.html';
 import html34       from './../pages/elem-34-Round34.html';
 import html38       from './../pages/elem-38-sio1.html';
 import html39       from './../pages/elem-39-sko1.html';
@@ -178,10 +180,12 @@ export const pages = [
   [html13, 13],
   [html14, 14],
   [html15, 15],
+  [html16, 16],
+  [html17, 17],
   [html34, 34],
   [html38, 38],
-  html39,
-  html44,
+  [html39, 39],
+  [html44, 44],
   html45,
   html46,
   html48,

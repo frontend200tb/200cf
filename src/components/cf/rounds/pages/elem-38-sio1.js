@@ -1,11 +1,11 @@
-import a    from '../../el-cf/el-cf38a.html';
-import b    from '../../el-cf/el-cf38b.html';
-import c    from '../../el-cf/el-cf38c.html';
-import d    from '../../el-cf/el-cf38d.html';
-import e    from '../../el-cf/el-cf38e.html';
-import f    from '../../el-cf/el-cf38f.html';
-import g    from '../../el-cf/el-cf38g.html';
-import h    from '../../el-cf/el-cf38h.html';
+import a    from '../z/z38a.html';
+import b    from '../z/z38b.html';
+import c    from '../z/z38c.html';
+import d    from '../z/z38d.html';
+import e    from '../z/z38e.html';
+import f    from '../z/z38f.html';
+import g    from '../z/z38g.html';
+import h    from '../z/z38h.html';
 
 export default function inElem() {
 

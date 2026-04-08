@@ -1,8 +1,8 @@
-import a    from '../../el-cf/el-cf6a.html';
-import b    from '../../el-cf/el-cf6b.html';
-import c    from '../../el-cf/el-cf6c.html';
-import d    from '../../el-cf/el-cf6d.html';
-import e    from '../../el-cf/el-cf6e.html';
+import a    from '../z/z6a.html';
+import b    from '../z/z6b.html';
+import c    from '../z/z6c.html';
+import d    from '../z/z6d.html';
+import e    from '../z/z6e.html';
 
 export default function inElem() {
 

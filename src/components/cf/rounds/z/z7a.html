@@ -45,3 +45,103 @@ WWWWWWWW
 </pre>
   <code>1</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/7/problem/A" target="_blank">Задача 7A</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
+  </div>
+
+  <h4>Тест 3</h4>
+<pre>
+WWWWWWWW
+WWWWWWWW
+WWWWWWWW
+WWWWWWWW
+WWWWWWWW
+WWWWWWWW
+WWWWWWWW
+WWWWWWWW
+</pre>
+  <code>0</code>
+
+  <h4>Тест 4</h4>
+<pre>
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+</pre>
+  <code>8</code>
+
+  <h4>Тест 5</h4>
+<pre>
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBB
+BBBBBBBW
+</pre>
+  <code>14</code>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  vector&lt;vector&lt;char&gt; &gt; D(8, vector&lt;char&gt;(8));
+  for (int i = 0; i &lt; 8; i++) {
+    for (int j = 0; j &lt; 8; j++) {
+      cin >> D[i][j];
+    }
+  }
+
+  int col = 0; // число столбцов
+  int str = 0; // число строк
+
+  // считаем строки
+  for (int i = 0; i &lt; 8; i++) {
+    int cnt = 0; // число столбцов
+    for (int j = 0; j &lt; 8; j++) {
+      if (D[i][j] == 'B') {
+        cnt++;
+      }
+    }
+    if (cnt == 8) {
+      str++;
+    }
+  }
+
+  // считаем столбцы
+  for (int i = 0; i &lt; 8; i++) {
+    int cnt = 0; // число строк
+    for (int j = 0; j &lt; 8; j++) {
+      if (D[j][i] == 'B') {
+        cnt++;
+      }
+    }
+    if (cnt == 8) {
+      col++;
+    }
+  }
+
+  if (str == 8) {
+    // доска вся закрашена
+    cout &lt;&lt; 8;
+  } else {
+    cout &lt;&lt; col + str;
+  }
+}
+</pre>
+</details>

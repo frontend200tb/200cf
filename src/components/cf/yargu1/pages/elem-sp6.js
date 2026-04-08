@@ -1,4 +1,4 @@
-import p    from '../../el-cf/el-cf134b.html';
+import p    from '../../rounds/z/z134b.html';
 
 export default function inElem() {
 

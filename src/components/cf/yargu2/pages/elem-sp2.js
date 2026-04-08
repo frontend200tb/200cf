@@ -1,4 +1,4 @@
-import cf4a    from '../../el-cf/el-cf4a.html';
+import cf4a    from '../../rounds/z/z4a.html';
 
 export default function inElem() {
   const t2 = document.querySelector('.t2');
