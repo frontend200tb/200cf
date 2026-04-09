@@ -61005,7 +61005,133 @@ NULL
 3
 </pre>
 </details>
-`;
+
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/7/problem/B" target="_blank">Задача 7B</a>
+    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
+  </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+struct block {
+  int num;
+  int size;
+  int start;
+
+  bool operator&lt;(const block& other) const {
+    return num &lt; other.num;
+  }
+};
+
+int main() {
+  int t, m;
+  cin >> t >> m;
+
+  vector&lt;int&gt; A(m + 1, 0);
+  set&lt;block&gt; st;
+  int next_id = 1;
+
+  while (t--) {
+    string comand;
+    cin >> comand;
+
+    if (comand == "alloc") {
+      int n;
+      cin >> n;
+
+      // Поиск свободного блока
+      int cnt = 0;
+      int start = -1;
+      bool find = false;
+
+      for (int i = 1; i &lt;= m; i++) {
+        if (A[i] == 0) {
+          cnt++;
+          if (cnt == n) {
+            start = i - n + 1;
+            find = true;
+            break;
+          }
+        } else {
+          cnt = 0;
+        }
+      }
+
+      if (find) {
+        for (int i = start; i &lt; start + n; i++) {
+          A[i] = next_id;
+        }
+        block bl{ next_id, n, start };
+        st.insert(bl);
+        cout &lt;&lt; next_id &lt;&lt; '\\n';
+        next_id++;
+      } else {
+        cout &lt;&lt; "NULL\\n";
+      }
+    } else if (comand == "erase") {
+      int x;
+      cin >> x;
+
+      bool find = false;
+      for (auto it = st.begin(); it != st.end(); ) {
+        if (it->num == x) {
+          for (int i = it->start; i &lt; it->start + it->size; i++) {
+            A[i] = 0;
+          }
+          st.erase(it++);
+          find = true;
+          break;
+        } else {
+          ++it;
+        }
+      }
+
+      if (!find) {
+        cout &lt;&lt; "ILLEGAL_ERASE_ARGUMENT\\n";
+      }
+    } else if (comand == "defragment") {
+      if (st.empty()) continue;
+
+      // Сортируем блоки по начальной позиции
+      vector&lt;block&gt; blocks(st.begin(), st.end());
+      sort(blocks.begin(), blocks.end(),
+        [](const block& a, const block& b) {
+          return a.start &lt; b.start;
+        });
+
+      // Очищаем всю память
+      for (int i = 1; i &lt;= m; i++) {
+        A[i] = 0;
+      }
+
+      // Перемещаем блоки к началу
+      int p = 1;
+      st.clear();
+      for (auto& bl : blocks) {
+        bl.start = p;
+        for (int i = p; i &lt; p + bl.size; i++) {
+          A[i] = bl.num;
+        }
+        p += bl.size;
+        st.insert(bl);
+      }
+    }
+  }
+
+  return 0;
+}
+</pre>
+</details>`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
