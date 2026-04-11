@@ -1,39 +1,41 @@
 // Создаем массив pages со страницами из aside меню
-import html1        from './../pages/elem-1-Round1.html';
-import html2        from './../pages/elem-2-Round2.html';
-import html3        from './../pages/elem-3-Round3.html';
-import html4        from './../pages/elem-4-Round4.html';
-import html5        from './../pages/elem-5-Round5.html';
-import html6        from './../pages/elem-6-Round6.html';
-import html7        from './../pages/elem-7-Round7.html';
-import html8        from './../pages/elem-8-Round8.html';
-import html9        from './../pages/elem-9-Round9.html';
-import html10       from './../pages/elem-10-Round10.html';
-import html11       from './../pages/elem-11-Round11.html';
-import html12       from './../pages/elem-12-Round12.html';
-import html13       from './../pages/elem-13-Round13.html';
-import html14       from './../pages/elem-14-Round14.html';
-import html15       from './../pages/elem-15-Round15.html';
-import html16       from './../pages/elem-16-Round16.html';
-import html17       from './../pages/elem-17-Round17.html';
-import html34       from './../pages/elem-34-Round34.html';
-import html38       from './../pages/elem-38-sio1.html';
-import html39       from './../pages/elem-39-sko1.html';
-import html44       from './../pages/elem-44-sko2.html';
-import html45       from './../pages/elem-45-sko3.html';
-import html46       from './../pages/elem-46-sio2.html';
-import html48       from './../pages/elem-48-sio3.html';
-import html50       from './../pages/elem-50-Round47.html';
-import html52       from './../pages/elem-52-TRound1.html';
-import html59       from './../pages/elem-59-Round55.html';
-import html70       from './../pages/elem-70-Round64.html';
-import html71       from './../pages/elem-71-Round65.html';
-import html76       from './../pages/elem-76-vuos.html';
-import html81       from './../pages/elem-81-yandex-q1.html';
-import html82       from './../pages/elem-82-yandex-q2.html';
-import html85       from './../pages/elem-85-yandex-r1.html';
-import html86       from './../pages/elem-86-yandex-r2.html';
-import html97       from './../pages/elem-97-yandex-f.html';
+import html1        from './../pages/p100/elem-1-Round1.html';
+import html2        from './../pages/p100/elem-2-Round2.html';
+import html3        from './../pages/p100/elem-3-Round3.html';
+import html4        from './../pages/p100/elem-4-Round4.html';
+import html5        from './../pages/p100/elem-5-Round5.html';
+import html6        from './../pages/p100/elem-6-Round6.html';
+import html7        from './../pages/p100/elem-7-Round7.html';
+import html8        from './../pages/p100/elem-8-Round8.html';
+import html9        from './../pages/p100/elem-9-Round9.html';
+import html10       from './../pages/p100/elem-10-Round10.html';
+import html11       from './../pages/p100/elem-11-Round11.html';
+import html12       from './../pages/p100/elem-12-Round12.html';
+import html13       from './../pages/p100/elem-13-Round13.html';
+import html14       from './../pages/p100/elem-14-Round14.html';
+import html15       from './../pages/p100/elem-15-Round15.html';
+import html16       from './../pages/p100/elem-16-Round16.html';
+import html17       from './../pages/p100/elem-17-Round17.html';
+import html18       from './../pages/p100/elem-18-Round18.html';
+import html19       from './../pages/p100/elem-19-Round19.html';
+import html34       from './../pages/p100/elem-34-Round34.html';
+import html38       from './../pages/p100/elem-38-sio1.html';
+import html39       from './../pages/p100/elem-39-sko1.html';
+import html44       from './../pages/p100/elem-44-sko2.html';
+import html45       from './../pages/p100/elem-45-sko3.html';
+import html46       from './../pages/p100/elem-46-sio2.html';
+import html48       from './../pages/p100/elem-48-sio3.html';
+import html50       from './../pages/p100/elem-50-Round47.html';
+import html52       from './../pages/p100/elem-52-TRound1.html';
+import html59       from './../pages/p100/elem-59-Round55.html';
+import html70       from './../pages/p100/elem-70-Round64.html';
+import html71       from './../pages/p100/elem-71-Round65.html';
+import html76       from './../pages/p100/elem-76-vuos.html';
+import html81       from './../pages/p100/elem-81-yandex-q1.html';
+import html82       from './../pages/p100/elem-82-yandex-q2.html';
+import html85       from './../pages/p100/elem-85-yandex-r1.html';
+import html86       from './../pages/p100/elem-86-yandex-r2.html';
+import html97       from './../pages/p100/elem-97-yandex-f.html';
 import html106      from './../pages/elem-106-Round82.html';
 import html110      from './../pages/elem-110-Round84.html';
 import html112      from './../pages/elem-112-Round85.html';
@@ -182,6 +184,8 @@ export const pages = [
   [html15, 15],
   [html16, 16],
   [html17, 17],
+  [html18, 18],
+  [html19, 19],
   [html34, 34],
   [html38, 38],
   [html39, 39],

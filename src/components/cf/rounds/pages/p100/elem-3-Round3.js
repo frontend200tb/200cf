@@ -1,6 +1,7 @@
-import a    from '../z/z1a.html';
-import b    from '../z/z1b.html';
-import c    from '../z/z1c.html';
+import a    from '../../z/z100/z3a.html';
+import b    from '../../z/z100/z3b.html';
+import c    from '../../z/z100/z3c.html';
+import d    from '../../z/z100/z3d.html';
 
 export default function inElem() {
 
@@ -12,6 +13,9 @@ export default function inElem() {
   }
   if (document.querySelector('.t3')) {
     document.querySelector('.t3').innerHTML = c;
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = d;
   }
 
 }

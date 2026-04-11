@@ -1,14 +1,14 @@
-import a    from '../z/z39a.html';
-import b    from '../z/z39b.html';
-import c    from '../z/z39c.html';
-import d    from '../z/z39d.html';
-import e    from '../z/z39e.html';
-import f    from '../z/z39f.html';
-import g    from '../z/z39g.html';
-import h    from '../z/z39h.html';
-import i    from '../z/z39i.html';
-import j    from '../z/z39j.html';
-import k    from '../z/z39k.html';
+import a    from '../../z/z100/z39a.html';
+import b    from '../../z/z100/z39b.html';
+import c    from '../../z/z100/z39c.html';
+import d    from '../../z/z100/z39d.html';
+import e    from '../../z/z100/z39e.html';
+import f    from '../../z/z100/z39f.html';
+import g    from '../../z/z100/z39g.html';
+import h    from '../../z/z100/z39h.html';
+import i    from '../../z/z100/z39i.html';
+import j    from '../../z/z100/z39j.html';
+import k    from '../../z/z100/z39k.html';
 
 export default function inElem() {
 

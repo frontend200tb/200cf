@@ -1,8 +1,8 @@
-import a    from '../z/z11a.html';
-import b    from '../z/z11b.html';
-import c    from '../z/z11c.html';
-import d    from '../z/z11d.html';
-import e    from '../z/z11e.html';
+import a    from '../../z/z100/z13a.html';
+import b    from '../../z/z100/z13b.html';
+import c    from '../../z/z100/z13c.html';
+import d    from '../../z/z100/z13d.html';
+import e    from '../../z/z100/z13e.html';
 
 export default function inElem() {
 
