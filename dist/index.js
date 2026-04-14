@@ -5494,7 +5494,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: () => (/* binding */ asideThemes)
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)', '2193 Round 1076 (Div. 3)', '2209 Round 1087 (Div. 2)', '2218 Round 1090 (Div. 4)'];
+var asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '20 Round 20', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '509 Round 289 (Div. 2)', '492 Round 280 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)', '2193 Round 1076 (Div. 3)', '2209 Round 1087 (Div. 2)', '2218 Round 1090 (Div. 4)'];
 
 /***/ }),
 
@@ -5528,153 +5528,154 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../pages/p100/elem-17-Round17.html */ "./src/components/cf/rounds/pages/p100/elem-17-Round17.html");
 /* harmony import */ var _pages_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../pages/p100/elem-18-Round18.html */ "./src/components/cf/rounds/pages/p100/elem-18-Round18.html");
 /* harmony import */ var _pages_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../pages/p100/elem-19-Round19.html */ "./src/components/cf/rounds/pages/p100/elem-19-Round19.html");
-/* harmony import */ var _pages_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../pages/p100/elem-34-Round34.html */ "./src/components/cf/rounds/pages/p100/elem-34-Round34.html");
-/* harmony import */ var _pages_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../pages/p100/elem-38-sio1.html */ "./src/components/cf/rounds/pages/p100/elem-38-sio1.html");
-/* harmony import */ var _pages_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../pages/p100/elem-39-sko1.html */ "./src/components/cf/rounds/pages/p100/elem-39-sko1.html");
-/* harmony import */ var _pages_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../pages/p100/elem-44-sko2.html */ "./src/components/cf/rounds/pages/p100/elem-44-sko2.html");
-/* harmony import */ var _pages_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../pages/p100/elem-45-sko3.html */ "./src/components/cf/rounds/pages/p100/elem-45-sko3.html");
-/* harmony import */ var _pages_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../pages/p100/elem-46-sio2.html */ "./src/components/cf/rounds/pages/p100/elem-46-sio2.html");
-/* harmony import */ var _pages_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../pages/p100/elem-48-sio3.html */ "./src/components/cf/rounds/pages/p100/elem-48-sio3.html");
-/* harmony import */ var _pages_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../pages/p100/elem-50-Round47.html */ "./src/components/cf/rounds/pages/p100/elem-50-Round47.html");
-/* harmony import */ var _pages_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../pages/p100/elem-52-TRound1.html */ "./src/components/cf/rounds/pages/p100/elem-52-TRound1.html");
-/* harmony import */ var _pages_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../pages/p100/elem-59-Round55.html */ "./src/components/cf/rounds/pages/p100/elem-59-Round55.html");
-/* harmony import */ var _pages_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../pages/p100/elem-70-Round64.html */ "./src/components/cf/rounds/pages/p100/elem-70-Round64.html");
-/* harmony import */ var _pages_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../pages/p100/elem-71-Round65.html */ "./src/components/cf/rounds/pages/p100/elem-71-Round65.html");
-/* harmony import */ var _pages_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../pages/p100/elem-76-vuos.html */ "./src/components/cf/rounds/pages/p100/elem-76-vuos.html");
-/* harmony import */ var _pages_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../pages/p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/pages/p100/elem-81-yandex-q1.html");
-/* harmony import */ var _pages_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../pages/p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/pages/p100/elem-82-yandex-q2.html");
-/* harmony import */ var _pages_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../pages/p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/pages/p100/elem-85-yandex-r1.html");
-/* harmony import */ var _pages_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../pages/p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/pages/p100/elem-86-yandex-r2.html");
-/* harmony import */ var _pages_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../pages/p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/pages/p100/elem-97-yandex-f.html");
-/* harmony import */ var _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../pages/elem-106-Round82.html */ "./src/components/cf/rounds/pages/elem-106-Round82.html");
-/* harmony import */ var _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../pages/elem-110-Round84.html */ "./src/components/cf/rounds/pages/elem-110-Round84.html");
-/* harmony import */ var _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../pages/elem-112-Round85.html */ "./src/components/cf/rounds/pages/elem-112-Round85.html");
-/* harmony import */ var _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../pages/elem-116-Round87.html */ "./src/components/cf/rounds/pages/elem-116-Round87.html");
-/* harmony import */ var _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../pages/elem-118-Round89.html */ "./src/components/cf/rounds/pages/elem-118-Round89.html");
-/* harmony import */ var _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../pages/elem-120-kosSaratov.html */ "./src/components/cf/rounds/pages/elem-120-kosSaratov.html");
-/* harmony import */ var _pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./../pages/elem-134-TRound3.html */ "./src/components/cf/rounds/pages/elem-134-TRound3.html");
-/* harmony import */ var _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../pages/elem-136-Round97.html */ "./src/components/cf/rounds/pages/elem-136-Round97.html");
-/* harmony import */ var _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./../pages/elem-141-Round101.html */ "./src/components/cf/rounds/pages/elem-141-Round101.html");
-/* harmony import */ var _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./../pages/elem-155-Round109.html */ "./src/components/cf/rounds/pages/elem-155-Round109.html");
-/* harmony import */ var _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./../pages/elem-158-vk-q1.html */ "./src/components/cf/rounds/pages/elem-158-vk-q1.html");
-/* harmony import */ var _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./../pages/elem-159-vk-q2.html */ "./src/components/cf/rounds/pages/elem-159-vk-q2.html");
-/* harmony import */ var _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./../pages/elem-163-vk-r2.html */ "./src/components/cf/rounds/pages/elem-163-vk-r2.html");
-/* harmony import */ var _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./../pages/elem-169-vk-r2.html */ "./src/components/cf/rounds/pages/elem-169-vk-r2.html");
-/* harmony import */ var _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./../pages/elem-200-Round126.html */ "./src/components/cf/rounds/pages/elem-200-Round126.html");
-/* harmony import */ var _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./../pages/elem-228-Round141.html */ "./src/components/cf/rounds/pages/elem-228-Round141.html");
-/* harmony import */ var _pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./../pages/elem-230-Round142.html */ "./src/components/cf/rounds/pages/elem-230-Round142.html");
-/* harmony import */ var _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./../pages/elem-268-Round164.html */ "./src/components/cf/rounds/pages/elem-268-Round164.html");
-/* harmony import */ var _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./../pages/elem-278-Round170.html */ "./src/components/cf/rounds/pages/elem-278-Round170.html");
-/* harmony import */ var _pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./../pages/elem-313-Round186.html */ "./src/components/cf/rounds/pages/elem-313-Round186.html");
-/* harmony import */ var _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./../pages/elem-318-Round188.html */ "./src/components/cf/rounds/pages/elem-318-Round188.html");
-/* harmony import */ var _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./../pages/elem-339-Round197.html */ "./src/components/cf/rounds/pages/elem-339-Round197.html");
-/* harmony import */ var _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./../pages/elem-381-Round223.html */ "./src/components/cf/rounds/pages/elem-381-Round223.html");
-/* harmony import */ var _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./../pages/elem-427-Round244.html */ "./src/components/cf/rounds/pages/elem-427-Round244.html");
-/* harmony import */ var _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./../pages/elem-467-Round267.html */ "./src/components/cf/rounds/pages/elem-467-Round267.html");
-/* harmony import */ var _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./../pages/elem-469-Round268.html */ "./src/components/cf/rounds/pages/elem-469-Round268.html");
-/* harmony import */ var _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../pages/elem-490-Round279.html */ "./src/components/cf/rounds/pages/elem-490-Round279.html");
-/* harmony import */ var _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./../pages/elem-492-Round280.html */ "./src/components/cf/rounds/pages/elem-492-Round280.html");
-/* harmony import */ var _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./../pages/elem-509-Round289.html */ "./src/components/cf/rounds/pages/elem-509-Round289.html");
-/* harmony import */ var _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./../pages/elem-520-Round295.html */ "./src/components/cf/rounds/pages/elem-520-Round295.html");
-/* harmony import */ var _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../pages/elem-546-Round304.html */ "./src/components/cf/rounds/pages/elem-546-Round304.html");
-/* harmony import */ var _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../pages/elem-580-Round321.html */ "./src/components/cf/rounds/pages/elem-580-Round321.html");
-/* harmony import */ var _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../pages/elem-617-Round340.html */ "./src/components/cf/rounds/pages/elem-617-Round340.html");
-/* harmony import */ var _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../pages/elem-646-Techno1z.html */ "./src/components/cf/rounds/pages/elem-646-Techno1z.html");
-/* harmony import */ var _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../pages/elem-647-Techno2z.html */ "./src/components/cf/rounds/pages/elem-647-Techno2z.html");
-/* harmony import */ var _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../pages/elem-648-Techno1o.html */ "./src/components/cf/rounds/pages/elem-648-Techno1o.html");
-/* harmony import */ var _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../pages/elem-649-Techno2o.html */ "./src/components/cf/rounds/pages/elem-649-Techno2o.html");
-/* harmony import */ var _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../pages/elem-705-Round366.html */ "./src/components/cf/rounds/pages/elem-705-Round366.html");
-/* harmony import */ var _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../pages/elem-723-Round375.html */ "./src/components/cf/rounds/pages/elem-723-Round375.html");
-/* harmony import */ var _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../pages/elem-727-Techno2017o1.html */ "./src/components/cf/rounds/pages/elem-727-Techno2017o1.html");
-/* harmony import */ var _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../pages/elem-732-Round377.html */ "./src/components/cf/rounds/pages/elem-732-Round377.html");
-/* harmony import */ var _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../pages/elem-733-Round378.html */ "./src/components/cf/rounds/pages/elem-733-Round378.html");
-/* harmony import */ var _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./../pages/elem-743-Round384.html */ "./src/components/cf/rounds/pages/elem-743-Round384.html");
-/* harmony import */ var _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./../pages/elem-758-Round392.html */ "./src/components/cf/rounds/pages/elem-758-Round392.html");
-/* harmony import */ var _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./../pages/elem-791-Round405.html */ "./src/components/cf/rounds/pages/elem-791-Round405.html");
-/* harmony import */ var _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./../pages/elem-895-Round448.html */ "./src/components/cf/rounds/pages/elem-895-Round448.html");
-/* harmony import */ var _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./../pages/elem-1030-Techno2019o1.html */ "./src/components/cf/rounds/pages/elem-1030-Techno2019o1.html");
-/* harmony import */ var _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./../pages/elem-1041-Round509.html */ "./src/components/cf/rounds/pages/elem-1041-Round509.html");
-/* harmony import */ var _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./../pages/elem-1272-Round605.html */ "./src/components/cf/rounds/pages/elem-1272-Round605.html");
-/* harmony import */ var _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./../pages/elem-1296-Round617.html */ "./src/components/cf/rounds/pages/elem-1296-Round617.html");
-/* harmony import */ var _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./../pages/elem-1313-Round622.html */ "./src/components/cf/rounds/pages/elem-1313-Round622.html");
-/* harmony import */ var _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./../pages/elem-1325-Round628.html */ "./src/components/cf/rounds/pages/elem-1325-Round628.html");
-/* harmony import */ var _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./../pages/elem-1351-TRound16.html */ "./src/components/cf/rounds/pages/elem-1351-TRound16.html");
-/* harmony import */ var _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./../pages/elem-1352-Round640.html */ "./src/components/cf/rounds/pages/elem-1352-Round640.html");
-/* harmony import */ var _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./../pages/elem-1360-Round644.html */ "./src/components/cf/rounds/pages/elem-1360-Round644.html");
-/* harmony import */ var _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./../pages/elem-1367-Round650.html */ "./src/components/cf/rounds/pages/elem-1367-Round650.html");
-/* harmony import */ var _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./../pages/elem-1420-Round672.html */ "./src/components/cf/rounds/pages/elem-1420-Round672.html");
-/* harmony import */ var _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./../pages/elem-1490-Round702.html */ "./src/components/cf/rounds/pages/elem-1490-Round702.html");
-/* harmony import */ var _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./../pages/elem-1512-Round713.html */ "./src/components/cf/rounds/pages/elem-1512-Round713.html");
-/* harmony import */ var _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./../pages/elem-1520-Round719.html */ "./src/components/cf/rounds/pages/elem-1520-Round719.html");
-/* harmony import */ var _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./../pages/elem-1634-Round770.html */ "./src/components/cf/rounds/pages/elem-1634-Round770.html");
-/* harmony import */ var _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./../pages/elem-1669-Round784.html */ "./src/components/cf/rounds/pages/elem-1669-Round784.html");
-/* harmony import */ var _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./../pages/elem-1676-Round790.html */ "./src/components/cf/rounds/pages/elem-1676-Round790.html");
-/* harmony import */ var _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./../pages/elem-1692-Round799.html */ "./src/components/cf/rounds/pages/elem-1692-Round799.html");
-/* harmony import */ var _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./../pages/elem-1703-Round806.html */ "./src/components/cf/rounds/pages/elem-1703-Round806.html");
-/* harmony import */ var _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./../pages/elem-1722-Round817.html */ "./src/components/cf/rounds/pages/elem-1722-Round817.html");
-/* harmony import */ var _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./../pages/elem-1725-compfest.html */ "./src/components/cf/rounds/pages/elem-1725-compfest.html");
-/* harmony import */ var _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./../pages/elem-1726-Round819.html */ "./src/components/cf/rounds/pages/elem-1726-Round819.html");
-/* harmony import */ var _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./../pages/elem-1728-EdRound135.html */ "./src/components/cf/rounds/pages/elem-1728-EdRound135.html");
-/* harmony import */ var _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./../pages/elem-1729-Round820.html */ "./src/components/cf/rounds/pages/elem-1729-Round820.html");
-/* harmony import */ var _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./../pages/elem-1730-Round823.html */ "./src/components/cf/rounds/pages/elem-1730-Round823.html");
-/* harmony import */ var _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./../pages/elem-1733-Round821.html */ "./src/components/cf/rounds/pages/elem-1733-Round821.html");
-/* harmony import */ var _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./../pages/elem-1734-Round822.html */ "./src/components/cf/rounds/pages/elem-1734-Round822.html");
-/* harmony import */ var _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./../pages/elem-1738-GlRound22.html */ "./src/components/cf/rounds/pages/elem-1738-GlRound22.html");
-/* harmony import */ var _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./../pages/elem-1739-EdRound136.html */ "./src/components/cf/rounds/pages/elem-1739-EdRound136.html");
-/* harmony import */ var _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./../pages/elem-1740-Round831.html */ "./src/components/cf/rounds/pages/elem-1740-Round831.html");
-/* harmony import */ var _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./../pages/elem-1741-Round826.html */ "./src/components/cf/rounds/pages/elem-1741-Round826.html");
-/* harmony import */ var _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./../pages/elem-1742-Round827.html */ "./src/components/cf/rounds/pages/elem-1742-Round827.html");
-/* harmony import */ var _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./../pages/elem-1760-Round835.html */ "./src/components/cf/rounds/pages/elem-1760-Round835.html");
-/* harmony import */ var _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./../pages/elem-1789-Round853.html */ "./src/components/cf/rounds/pages/elem-1789-Round853.html");
-/* harmony import */ var _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./../pages/elem-1791-Round849.html */ "./src/components/cf/rounds/pages/elem-1791-Round849.html");
-/* harmony import */ var _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./../pages/elem-1798-Round860.html */ "./src/components/cf/rounds/pages/elem-1798-Round860.html");
-/* harmony import */ var _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./../pages/elem-1807-Round859.html */ "./src/components/cf/rounds/pages/elem-1807-Round859.html");
-/* harmony import */ var _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./../pages/elem-1824-Round872.html */ "./src/components/cf/rounds/pages/elem-1824-Round872.html");
-/* harmony import */ var _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./../pages/elem-1825-Round872.html */ "./src/components/cf/rounds/pages/elem-1825-Round872.html");
-/* harmony import */ var _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./../pages/elem-1829-Round871.html */ "./src/components/cf/rounds/pages/elem-1829-Round871.html");
-/* harmony import */ var _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./../pages/elem-1850-Round886.html */ "./src/components/cf/rounds/pages/elem-1850-Round886.html");
-/* harmony import */ var _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./../pages/elem-1873-Round898.html */ "./src/components/cf/rounds/pages/elem-1873-Round898.html");
-/* harmony import */ var _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./../pages/elem-1915-Round918.html */ "./src/components/cf/rounds/pages/elem-1915-Round918.html");
-/* harmony import */ var _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./../pages/elem-1926-Round928.html */ "./src/components/cf/rounds/pages/elem-1926-Round928.html");
-/* harmony import */ var _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./../pages/elem-1950-Round937.html */ "./src/components/cf/rounds/pages/elem-1950-Round937.html");
-/* harmony import */ var _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./../pages/elem-1971-Round944.html */ "./src/components/cf/rounds/pages/elem-1971-Round944.html");
-/* harmony import */ var _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./../pages/elem-1985-Round952.html */ "./src/components/cf/rounds/pages/elem-1985-Round952.html");
-/* harmony import */ var _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ./../pages/elem-1999-Round964.html */ "./src/components/cf/rounds/pages/elem-1999-Round964.html");
-/* harmony import */ var _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ./../pages/elem-2009-Round971.html */ "./src/components/cf/rounds/pages/elem-2009-Round971.html");
-/* harmony import */ var _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ./../pages/elem-2037-Round988.html */ "./src/components/cf/rounds/pages/elem-2037-Round988.html");
-/* harmony import */ var _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./../pages/elem-2044-Round993.html */ "./src/components/cf/rounds/pages/elem-2044-Round993.html");
-/* harmony import */ var _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./../pages/elem-2050-Round991.html */ "./src/components/cf/rounds/pages/elem-2050-Round991.html");
-/* harmony import */ var _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./../pages/elem-2051-Round995.html */ "./src/components/cf/rounds/pages/elem-2051-Round995.html");
-/* harmony import */ var _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./../pages/elem-2060-Round998.html */ "./src/components/cf/rounds/pages/elem-2060-Round998.html");
-/* harmony import */ var _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./../pages/elem-2065-Round1003.html */ "./src/components/cf/rounds/pages/elem-2065-Round1003.html");
-/* harmony import */ var _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./../pages/elem-2072-Round1006.html */ "./src/components/cf/rounds/pages/elem-2072-Round1006.html");
-/* harmony import */ var _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./../pages/elem-2091-Round1013.html */ "./src/components/cf/rounds/pages/elem-2091-Round1013.html");
-/* harmony import */ var _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./../pages/elem-2093-Round1016.html */ "./src/components/cf/rounds/pages/elem-2093-Round1016.html");
-/* harmony import */ var _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./../pages/elem-2094-Round1017.html */ "./src/components/cf/rounds/pages/elem-2094-Round1017.html");
-/* harmony import */ var _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./../pages/elem-2106-Round1020.html */ "./src/components/cf/rounds/pages/elem-2106-Round1020.html");
-/* harmony import */ var _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./../pages/elem-2114-Round1027.html */ "./src/components/cf/rounds/pages/elem-2114-Round1027.html");
-/* harmony import */ var _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./../pages/elem-2117-Round1029.html */ "./src/components/cf/rounds/pages/elem-2117-Round1029.html");
-/* harmony import */ var _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./../pages/elem-2119-Round1035.html */ "./src/components/cf/rounds/pages/elem-2119-Round1035.html");
-/* harmony import */ var _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./../pages/elem-2121-Round1032.html */ "./src/components/cf/rounds/pages/elem-2121-Round1032.html");
-/* harmony import */ var _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./../pages/elem-2123-Round1034.html */ "./src/components/cf/rounds/pages/elem-2123-Round1034.html");
-/* harmony import */ var _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./../pages/elem-2126-Round1037.html */ "./src/components/cf/rounds/pages/elem-2126-Round1037.html");
-/* harmony import */ var _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./../pages/elem-2131-Round1042.html */ "./src/components/cf/rounds/pages/elem-2131-Round1042.html");
-/* harmony import */ var _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./../pages/elem-2132-Round1043.html */ "./src/components/cf/rounds/pages/elem-2132-Round1043.html");
-/* harmony import */ var _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./../pages/elem-2133-Round1044.html */ "./src/components/cf/rounds/pages/elem-2133-Round1044.html");
-/* harmony import */ var _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./../pages/elem-2134-Round1045.html */ "./src/components/cf/rounds/pages/elem-2134-Round1045.html");
-/* harmony import */ var _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./../pages/elem-2136-Round1046.html */ "./src/components/cf/rounds/pages/elem-2136-Round1046.html");
-/* harmony import */ var _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./../pages/elem-2137-Round1047.html */ "./src/components/cf/rounds/pages/elem-2137-Round1047.html");
-/* harmony import */ var _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./../pages/elem-2148-Round1050.html */ "./src/components/cf/rounds/pages/elem-2148-Round1050.html");
-/* harmony import */ var _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./../pages/elem-2149-Round1054.html */ "./src/components/cf/rounds/pages/elem-2149-Round1054.html");
-/* harmony import */ var _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./../pages/elem-2152-Round1055.html */ "./src/components/cf/rounds/pages/elem-2152-Round1055.html");
-/* harmony import */ var _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./../pages/elem-2162-Round1059.html */ "./src/components/cf/rounds/pages/elem-2162-Round1059.html");
-/* harmony import */ var _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./../pages/elem-2166-Round1064.html */ "./src/components/cf/rounds/pages/elem-2166-Round1064.html");
-/* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/pages/elem-2167-Round1062.html");
-/* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/pages/elem-2171-Round1065.html");
-/* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/pages/elem-2185-Round1074.html");
-/* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/pages/elem-2193-Round1076.html");
-/* harmony import */ var _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ./../pages/elem-2209-Round1087.html */ "./src/components/cf/rounds/pages/elem-2209-Round1087.html");
-/* harmony import */ var _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ./../pages/elem-2218-Round1090.html */ "./src/components/cf/rounds/pages/elem-2218-Round1090.html");
+/* harmony import */ var _pages_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../pages/p100/elem-20-Round20.html */ "./src/components/cf/rounds/pages/p100/elem-20-Round20.html");
+/* harmony import */ var _pages_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../pages/p100/elem-34-Round34.html */ "./src/components/cf/rounds/pages/p100/elem-34-Round34.html");
+/* harmony import */ var _pages_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../pages/p100/elem-38-sio1.html */ "./src/components/cf/rounds/pages/p100/elem-38-sio1.html");
+/* harmony import */ var _pages_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../pages/p100/elem-39-sko1.html */ "./src/components/cf/rounds/pages/p100/elem-39-sko1.html");
+/* harmony import */ var _pages_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../pages/p100/elem-44-sko2.html */ "./src/components/cf/rounds/pages/p100/elem-44-sko2.html");
+/* harmony import */ var _pages_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../pages/p100/elem-45-sko3.html */ "./src/components/cf/rounds/pages/p100/elem-45-sko3.html");
+/* harmony import */ var _pages_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../pages/p100/elem-46-sio2.html */ "./src/components/cf/rounds/pages/p100/elem-46-sio2.html");
+/* harmony import */ var _pages_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../pages/p100/elem-48-sio3.html */ "./src/components/cf/rounds/pages/p100/elem-48-sio3.html");
+/* harmony import */ var _pages_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../pages/p100/elem-50-Round47.html */ "./src/components/cf/rounds/pages/p100/elem-50-Round47.html");
+/* harmony import */ var _pages_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../pages/p100/elem-52-TRound1.html */ "./src/components/cf/rounds/pages/p100/elem-52-TRound1.html");
+/* harmony import */ var _pages_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../pages/p100/elem-59-Round55.html */ "./src/components/cf/rounds/pages/p100/elem-59-Round55.html");
+/* harmony import */ var _pages_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../pages/p100/elem-70-Round64.html */ "./src/components/cf/rounds/pages/p100/elem-70-Round64.html");
+/* harmony import */ var _pages_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../pages/p100/elem-71-Round65.html */ "./src/components/cf/rounds/pages/p100/elem-71-Round65.html");
+/* harmony import */ var _pages_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../pages/p100/elem-76-vuos.html */ "./src/components/cf/rounds/pages/p100/elem-76-vuos.html");
+/* harmony import */ var _pages_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../pages/p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/pages/p100/elem-81-yandex-q1.html");
+/* harmony import */ var _pages_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../pages/p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/pages/p100/elem-82-yandex-q2.html");
+/* harmony import */ var _pages_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../pages/p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/pages/p100/elem-85-yandex-r1.html");
+/* harmony import */ var _pages_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../pages/p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/pages/p100/elem-86-yandex-r2.html");
+/* harmony import */ var _pages_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../pages/p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/pages/p100/elem-97-yandex-f.html");
+/* harmony import */ var _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../pages/elem-106-Round82.html */ "./src/components/cf/rounds/pages/elem-106-Round82.html");
+/* harmony import */ var _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../pages/elem-110-Round84.html */ "./src/components/cf/rounds/pages/elem-110-Round84.html");
+/* harmony import */ var _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../pages/elem-112-Round85.html */ "./src/components/cf/rounds/pages/elem-112-Round85.html");
+/* harmony import */ var _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../pages/elem-116-Round87.html */ "./src/components/cf/rounds/pages/elem-116-Round87.html");
+/* harmony import */ var _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../pages/elem-118-Round89.html */ "./src/components/cf/rounds/pages/elem-118-Round89.html");
+/* harmony import */ var _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./../pages/elem-120-kosSaratov.html */ "./src/components/cf/rounds/pages/elem-120-kosSaratov.html");
+/* harmony import */ var _pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../pages/elem-134-TRound3.html */ "./src/components/cf/rounds/pages/elem-134-TRound3.html");
+/* harmony import */ var _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./../pages/elem-136-Round97.html */ "./src/components/cf/rounds/pages/elem-136-Round97.html");
+/* harmony import */ var _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./../pages/elem-141-Round101.html */ "./src/components/cf/rounds/pages/elem-141-Round101.html");
+/* harmony import */ var _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./../pages/elem-155-Round109.html */ "./src/components/cf/rounds/pages/elem-155-Round109.html");
+/* harmony import */ var _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./../pages/elem-158-vk-q1.html */ "./src/components/cf/rounds/pages/elem-158-vk-q1.html");
+/* harmony import */ var _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./../pages/elem-159-vk-q2.html */ "./src/components/cf/rounds/pages/elem-159-vk-q2.html");
+/* harmony import */ var _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./../pages/elem-163-vk-r2.html */ "./src/components/cf/rounds/pages/elem-163-vk-r2.html");
+/* harmony import */ var _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./../pages/elem-169-vk-r2.html */ "./src/components/cf/rounds/pages/elem-169-vk-r2.html");
+/* harmony import */ var _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./../pages/elem-200-Round126.html */ "./src/components/cf/rounds/pages/elem-200-Round126.html");
+/* harmony import */ var _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./../pages/elem-228-Round141.html */ "./src/components/cf/rounds/pages/elem-228-Round141.html");
+/* harmony import */ var _pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./../pages/elem-230-Round142.html */ "./src/components/cf/rounds/pages/elem-230-Round142.html");
+/* harmony import */ var _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./../pages/elem-268-Round164.html */ "./src/components/cf/rounds/pages/elem-268-Round164.html");
+/* harmony import */ var _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./../pages/elem-278-Round170.html */ "./src/components/cf/rounds/pages/elem-278-Round170.html");
+/* harmony import */ var _pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./../pages/elem-313-Round186.html */ "./src/components/cf/rounds/pages/elem-313-Round186.html");
+/* harmony import */ var _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./../pages/elem-318-Round188.html */ "./src/components/cf/rounds/pages/elem-318-Round188.html");
+/* harmony import */ var _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./../pages/elem-339-Round197.html */ "./src/components/cf/rounds/pages/elem-339-Round197.html");
+/* harmony import */ var _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./../pages/elem-381-Round223.html */ "./src/components/cf/rounds/pages/elem-381-Round223.html");
+/* harmony import */ var _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./../pages/elem-427-Round244.html */ "./src/components/cf/rounds/pages/elem-427-Round244.html");
+/* harmony import */ var _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./../pages/elem-467-Round267.html */ "./src/components/cf/rounds/pages/elem-467-Round267.html");
+/* harmony import */ var _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../pages/elem-469-Round268.html */ "./src/components/cf/rounds/pages/elem-469-Round268.html");
+/* harmony import */ var _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./../pages/elem-490-Round279.html */ "./src/components/cf/rounds/pages/elem-490-Round279.html");
+/* harmony import */ var _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./../pages/elem-492-Round280.html */ "./src/components/cf/rounds/pages/elem-492-Round280.html");
+/* harmony import */ var _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./../pages/elem-509-Round289.html */ "./src/components/cf/rounds/pages/elem-509-Round289.html");
+/* harmony import */ var _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../pages/elem-520-Round295.html */ "./src/components/cf/rounds/pages/elem-520-Round295.html");
+/* harmony import */ var _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../pages/elem-546-Round304.html */ "./src/components/cf/rounds/pages/elem-546-Round304.html");
+/* harmony import */ var _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../pages/elem-580-Round321.html */ "./src/components/cf/rounds/pages/elem-580-Round321.html");
+/* harmony import */ var _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../pages/elem-617-Round340.html */ "./src/components/cf/rounds/pages/elem-617-Round340.html");
+/* harmony import */ var _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../pages/elem-646-Techno1z.html */ "./src/components/cf/rounds/pages/elem-646-Techno1z.html");
+/* harmony import */ var _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../pages/elem-647-Techno2z.html */ "./src/components/cf/rounds/pages/elem-647-Techno2z.html");
+/* harmony import */ var _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../pages/elem-648-Techno1o.html */ "./src/components/cf/rounds/pages/elem-648-Techno1o.html");
+/* harmony import */ var _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../pages/elem-649-Techno2o.html */ "./src/components/cf/rounds/pages/elem-649-Techno2o.html");
+/* harmony import */ var _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../pages/elem-705-Round366.html */ "./src/components/cf/rounds/pages/elem-705-Round366.html");
+/* harmony import */ var _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../pages/elem-723-Round375.html */ "./src/components/cf/rounds/pages/elem-723-Round375.html");
+/* harmony import */ var _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../pages/elem-727-Techno2017o1.html */ "./src/components/cf/rounds/pages/elem-727-Techno2017o1.html");
+/* harmony import */ var _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../pages/elem-732-Round377.html */ "./src/components/cf/rounds/pages/elem-732-Round377.html");
+/* harmony import */ var _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./../pages/elem-733-Round378.html */ "./src/components/cf/rounds/pages/elem-733-Round378.html");
+/* harmony import */ var _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./../pages/elem-743-Round384.html */ "./src/components/cf/rounds/pages/elem-743-Round384.html");
+/* harmony import */ var _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./../pages/elem-758-Round392.html */ "./src/components/cf/rounds/pages/elem-758-Round392.html");
+/* harmony import */ var _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./../pages/elem-791-Round405.html */ "./src/components/cf/rounds/pages/elem-791-Round405.html");
+/* harmony import */ var _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./../pages/elem-895-Round448.html */ "./src/components/cf/rounds/pages/elem-895-Round448.html");
+/* harmony import */ var _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./../pages/elem-1030-Techno2019o1.html */ "./src/components/cf/rounds/pages/elem-1030-Techno2019o1.html");
+/* harmony import */ var _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./../pages/elem-1041-Round509.html */ "./src/components/cf/rounds/pages/elem-1041-Round509.html");
+/* harmony import */ var _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./../pages/elem-1272-Round605.html */ "./src/components/cf/rounds/pages/elem-1272-Round605.html");
+/* harmony import */ var _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./../pages/elem-1296-Round617.html */ "./src/components/cf/rounds/pages/elem-1296-Round617.html");
+/* harmony import */ var _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./../pages/elem-1313-Round622.html */ "./src/components/cf/rounds/pages/elem-1313-Round622.html");
+/* harmony import */ var _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./../pages/elem-1325-Round628.html */ "./src/components/cf/rounds/pages/elem-1325-Round628.html");
+/* harmony import */ var _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./../pages/elem-1351-TRound16.html */ "./src/components/cf/rounds/pages/elem-1351-TRound16.html");
+/* harmony import */ var _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./../pages/elem-1352-Round640.html */ "./src/components/cf/rounds/pages/elem-1352-Round640.html");
+/* harmony import */ var _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./../pages/elem-1360-Round644.html */ "./src/components/cf/rounds/pages/elem-1360-Round644.html");
+/* harmony import */ var _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./../pages/elem-1367-Round650.html */ "./src/components/cf/rounds/pages/elem-1367-Round650.html");
+/* harmony import */ var _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./../pages/elem-1420-Round672.html */ "./src/components/cf/rounds/pages/elem-1420-Round672.html");
+/* harmony import */ var _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./../pages/elem-1490-Round702.html */ "./src/components/cf/rounds/pages/elem-1490-Round702.html");
+/* harmony import */ var _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./../pages/elem-1512-Round713.html */ "./src/components/cf/rounds/pages/elem-1512-Round713.html");
+/* harmony import */ var _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./../pages/elem-1520-Round719.html */ "./src/components/cf/rounds/pages/elem-1520-Round719.html");
+/* harmony import */ var _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./../pages/elem-1634-Round770.html */ "./src/components/cf/rounds/pages/elem-1634-Round770.html");
+/* harmony import */ var _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./../pages/elem-1669-Round784.html */ "./src/components/cf/rounds/pages/elem-1669-Round784.html");
+/* harmony import */ var _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./../pages/elem-1676-Round790.html */ "./src/components/cf/rounds/pages/elem-1676-Round790.html");
+/* harmony import */ var _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./../pages/elem-1692-Round799.html */ "./src/components/cf/rounds/pages/elem-1692-Round799.html");
+/* harmony import */ var _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./../pages/elem-1703-Round806.html */ "./src/components/cf/rounds/pages/elem-1703-Round806.html");
+/* harmony import */ var _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./../pages/elem-1722-Round817.html */ "./src/components/cf/rounds/pages/elem-1722-Round817.html");
+/* harmony import */ var _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./../pages/elem-1725-compfest.html */ "./src/components/cf/rounds/pages/elem-1725-compfest.html");
+/* harmony import */ var _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./../pages/elem-1726-Round819.html */ "./src/components/cf/rounds/pages/elem-1726-Round819.html");
+/* harmony import */ var _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./../pages/elem-1728-EdRound135.html */ "./src/components/cf/rounds/pages/elem-1728-EdRound135.html");
+/* harmony import */ var _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./../pages/elem-1729-Round820.html */ "./src/components/cf/rounds/pages/elem-1729-Round820.html");
+/* harmony import */ var _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./../pages/elem-1730-Round823.html */ "./src/components/cf/rounds/pages/elem-1730-Round823.html");
+/* harmony import */ var _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./../pages/elem-1733-Round821.html */ "./src/components/cf/rounds/pages/elem-1733-Round821.html");
+/* harmony import */ var _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./../pages/elem-1734-Round822.html */ "./src/components/cf/rounds/pages/elem-1734-Round822.html");
+/* harmony import */ var _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./../pages/elem-1738-GlRound22.html */ "./src/components/cf/rounds/pages/elem-1738-GlRound22.html");
+/* harmony import */ var _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./../pages/elem-1739-EdRound136.html */ "./src/components/cf/rounds/pages/elem-1739-EdRound136.html");
+/* harmony import */ var _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./../pages/elem-1740-Round831.html */ "./src/components/cf/rounds/pages/elem-1740-Round831.html");
+/* harmony import */ var _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./../pages/elem-1741-Round826.html */ "./src/components/cf/rounds/pages/elem-1741-Round826.html");
+/* harmony import */ var _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./../pages/elem-1742-Round827.html */ "./src/components/cf/rounds/pages/elem-1742-Round827.html");
+/* harmony import */ var _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./../pages/elem-1760-Round835.html */ "./src/components/cf/rounds/pages/elem-1760-Round835.html");
+/* harmony import */ var _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./../pages/elem-1789-Round853.html */ "./src/components/cf/rounds/pages/elem-1789-Round853.html");
+/* harmony import */ var _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./../pages/elem-1791-Round849.html */ "./src/components/cf/rounds/pages/elem-1791-Round849.html");
+/* harmony import */ var _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./../pages/elem-1798-Round860.html */ "./src/components/cf/rounds/pages/elem-1798-Round860.html");
+/* harmony import */ var _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./../pages/elem-1807-Round859.html */ "./src/components/cf/rounds/pages/elem-1807-Round859.html");
+/* harmony import */ var _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./../pages/elem-1824-Round872.html */ "./src/components/cf/rounds/pages/elem-1824-Round872.html");
+/* harmony import */ var _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./../pages/elem-1825-Round872.html */ "./src/components/cf/rounds/pages/elem-1825-Round872.html");
+/* harmony import */ var _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./../pages/elem-1829-Round871.html */ "./src/components/cf/rounds/pages/elem-1829-Round871.html");
+/* harmony import */ var _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./../pages/elem-1850-Round886.html */ "./src/components/cf/rounds/pages/elem-1850-Round886.html");
+/* harmony import */ var _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./../pages/elem-1873-Round898.html */ "./src/components/cf/rounds/pages/elem-1873-Round898.html");
+/* harmony import */ var _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./../pages/elem-1915-Round918.html */ "./src/components/cf/rounds/pages/elem-1915-Round918.html");
+/* harmony import */ var _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./../pages/elem-1926-Round928.html */ "./src/components/cf/rounds/pages/elem-1926-Round928.html");
+/* harmony import */ var _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./../pages/elem-1950-Round937.html */ "./src/components/cf/rounds/pages/elem-1950-Round937.html");
+/* harmony import */ var _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./../pages/elem-1971-Round944.html */ "./src/components/cf/rounds/pages/elem-1971-Round944.html");
+/* harmony import */ var _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ./../pages/elem-1985-Round952.html */ "./src/components/cf/rounds/pages/elem-1985-Round952.html");
+/* harmony import */ var _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ./../pages/elem-1999-Round964.html */ "./src/components/cf/rounds/pages/elem-1999-Round964.html");
+/* harmony import */ var _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ./../pages/elem-2009-Round971.html */ "./src/components/cf/rounds/pages/elem-2009-Round971.html");
+/* harmony import */ var _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./../pages/elem-2037-Round988.html */ "./src/components/cf/rounds/pages/elem-2037-Round988.html");
+/* harmony import */ var _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./../pages/elem-2044-Round993.html */ "./src/components/cf/rounds/pages/elem-2044-Round993.html");
+/* harmony import */ var _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./../pages/elem-2050-Round991.html */ "./src/components/cf/rounds/pages/elem-2050-Round991.html");
+/* harmony import */ var _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./../pages/elem-2051-Round995.html */ "./src/components/cf/rounds/pages/elem-2051-Round995.html");
+/* harmony import */ var _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./../pages/elem-2060-Round998.html */ "./src/components/cf/rounds/pages/elem-2060-Round998.html");
+/* harmony import */ var _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./../pages/elem-2065-Round1003.html */ "./src/components/cf/rounds/pages/elem-2065-Round1003.html");
+/* harmony import */ var _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./../pages/elem-2072-Round1006.html */ "./src/components/cf/rounds/pages/elem-2072-Round1006.html");
+/* harmony import */ var _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./../pages/elem-2091-Round1013.html */ "./src/components/cf/rounds/pages/elem-2091-Round1013.html");
+/* harmony import */ var _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./../pages/elem-2093-Round1016.html */ "./src/components/cf/rounds/pages/elem-2093-Round1016.html");
+/* harmony import */ var _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./../pages/elem-2094-Round1017.html */ "./src/components/cf/rounds/pages/elem-2094-Round1017.html");
+/* harmony import */ var _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./../pages/elem-2106-Round1020.html */ "./src/components/cf/rounds/pages/elem-2106-Round1020.html");
+/* harmony import */ var _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./../pages/elem-2114-Round1027.html */ "./src/components/cf/rounds/pages/elem-2114-Round1027.html");
+/* harmony import */ var _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./../pages/elem-2117-Round1029.html */ "./src/components/cf/rounds/pages/elem-2117-Round1029.html");
+/* harmony import */ var _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./../pages/elem-2119-Round1035.html */ "./src/components/cf/rounds/pages/elem-2119-Round1035.html");
+/* harmony import */ var _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./../pages/elem-2121-Round1032.html */ "./src/components/cf/rounds/pages/elem-2121-Round1032.html");
+/* harmony import */ var _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./../pages/elem-2123-Round1034.html */ "./src/components/cf/rounds/pages/elem-2123-Round1034.html");
+/* harmony import */ var _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./../pages/elem-2126-Round1037.html */ "./src/components/cf/rounds/pages/elem-2126-Round1037.html");
+/* harmony import */ var _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./../pages/elem-2131-Round1042.html */ "./src/components/cf/rounds/pages/elem-2131-Round1042.html");
+/* harmony import */ var _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./../pages/elem-2132-Round1043.html */ "./src/components/cf/rounds/pages/elem-2132-Round1043.html");
+/* harmony import */ var _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./../pages/elem-2133-Round1044.html */ "./src/components/cf/rounds/pages/elem-2133-Round1044.html");
+/* harmony import */ var _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./../pages/elem-2134-Round1045.html */ "./src/components/cf/rounds/pages/elem-2134-Round1045.html");
+/* harmony import */ var _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./../pages/elem-2136-Round1046.html */ "./src/components/cf/rounds/pages/elem-2136-Round1046.html");
+/* harmony import */ var _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./../pages/elem-2137-Round1047.html */ "./src/components/cf/rounds/pages/elem-2137-Round1047.html");
+/* harmony import */ var _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./../pages/elem-2148-Round1050.html */ "./src/components/cf/rounds/pages/elem-2148-Round1050.html");
+/* harmony import */ var _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./../pages/elem-2149-Round1054.html */ "./src/components/cf/rounds/pages/elem-2149-Round1054.html");
+/* harmony import */ var _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./../pages/elem-2152-Round1055.html */ "./src/components/cf/rounds/pages/elem-2152-Round1055.html");
+/* harmony import */ var _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./../pages/elem-2162-Round1059.html */ "./src/components/cf/rounds/pages/elem-2162-Round1059.html");
+/* harmony import */ var _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./../pages/elem-2166-Round1064.html */ "./src/components/cf/rounds/pages/elem-2166-Round1064.html");
+/* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/pages/elem-2167-Round1062.html");
+/* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/pages/elem-2171-Round1065.html");
+/* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/pages/elem-2185-Round1074.html");
+/* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/pages/elem-2193-Round1076.html");
+/* harmony import */ var _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ./../pages/elem-2209-Round1087.html */ "./src/components/cf/rounds/pages/elem-2209-Round1087.html");
+/* harmony import */ var _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_166__ = __webpack_require__(/*! ./../pages/elem-2218-Round1090.html */ "./src/components/cf/rounds/pages/elem-2218-Round1090.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -5842,7 +5843,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var pages = [[_pages_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_pages_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_pages_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_pages_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_pages_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_19__["default"], 34], [_pages_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_20__["default"], 38], [_pages_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_21__["default"], 39], [_pages_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_22__["default"], 44], _pages_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_38__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_39__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_42__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_43__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_48__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_49__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_51__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_52__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_53__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_55__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_56__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_157__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_158__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_159__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_160__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_161__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_162__["default"], _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_163__["default"], _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_164__["default"], _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_165__["default"]];
+
+var pages = [[_pages_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_pages_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_pages_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_pages_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_pages_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_pages_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_pages_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_pages_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_pages_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_pages_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_pages_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_pages_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_pages_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_pages_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_pages_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_pages_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_pages_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_pages_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_pages_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_pages_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__["default"], 20], [_pages_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_20__["default"], 34], [_pages_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_21__["default"], 38], [_pages_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_22__["default"], 39], [_pages_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_23__["default"], 44], [_pages_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_24__["default"], 45], _pages_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_30__["default"], _pages_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_31__["default"], _pages_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_38__["default"], _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_39__["default"], _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_43__["default"], [_pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_44__["default"], 134], _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_48__["default"], _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_49__["default"], _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_51__["default"], _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_52__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_53__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_54__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_56__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_57__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_129__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_130__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_131__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_132__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_133__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_134__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_135__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_136__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_137__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_138__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_139__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_140__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_141__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_142__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_143__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_144__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_145__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_146__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_147__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_148__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_149__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_150__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_151__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_152__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_153__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_154__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_155__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_156__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_157__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_158__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_159__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_160__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_161__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_162__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_163__["default"], _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_164__["default"], _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_165__["default"], _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_166__["default"]];
 
 /***/ }),
 
@@ -6001,16 +6003,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_p100_elem_17_Round17__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/p100/elem-17-Round17 */ "./src/components/cf/rounds/pages/p100/elem-17-Round17.js");
 /* harmony import */ var _pages_p100_elem_18_Round18__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/p100/elem-18-Round18 */ "./src/components/cf/rounds/pages/p100/elem-18-Round18.js");
 /* harmony import */ var _pages_p100_elem_19_Round19__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/p100/elem-19-Round19 */ "./src/components/cf/rounds/pages/p100/elem-19-Round19.js");
-/* harmony import */ var _pages_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/p100/elem-34-Round34 */ "./src/components/cf/rounds/pages/p100/elem-34-Round34.js");
-/* harmony import */ var _pages_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/p100/elem-38-sio1 */ "./src/components/cf/rounds/pages/p100/elem-38-sio1.js");
-/* harmony import */ var _pages_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/p100/elem-39-sko1 */ "./src/components/cf/rounds/pages/p100/elem-39-sko1.js");
-/* harmony import */ var _pages_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/p100/elem-44-sko2 */ "./src/components/cf/rounds/pages/p100/elem-44-sko2.js");
-/* harmony import */ var _pages_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/elem-134-TRound3 */ "./src/components/cf/rounds/pages/elem-134-TRound3.js");
-/* harmony import */ var _pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/elem-230-Round142 */ "./src/components/cf/rounds/pages/elem-230-Round142.js");
-/* harmony import */ var _pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pages/elem-313-Round186 */ "./src/components/cf/rounds/pages/elem-313-Round186.js");
+/* harmony import */ var _pages_p100_elem_20_Round20__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/p100/elem-20-Round20 */ "./src/components/cf/rounds/pages/p100/elem-20-Round20.js");
+/* harmony import */ var _pages_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/p100/elem-34-Round34 */ "./src/components/cf/rounds/pages/p100/elem-34-Round34.js");
+/* harmony import */ var _pages_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/p100/elem-38-sio1 */ "./src/components/cf/rounds/pages/p100/elem-38-sio1.js");
+/* harmony import */ var _pages_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/p100/elem-39-sko1 */ "./src/components/cf/rounds/pages/p100/elem-39-sko1.js");
+/* harmony import */ var _pages_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/p100/elem-44-sko2 */ "./src/components/cf/rounds/pages/p100/elem-44-sko2.js");
+/* harmony import */ var _pages_p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/p100/elem-45-sko3 */ "./src/components/cf/rounds/pages/p100/elem-45-sko3.js");
+/* harmony import */ var _pages_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pages/elem-134-TRound3 */ "./src/components/cf/rounds/pages/elem-134-TRound3.js");
+/* harmony import */ var _pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../pages/elem-230-Round142 */ "./src/components/cf/rounds/pages/elem-230-Round142.js");
+/* harmony import */ var _pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../pages/elem-313-Round186 */ "./src/components/cf/rounds/pages/elem-313-Round186.js");
 /************************
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
+
+
 
 
 
@@ -6107,26 +6113,32 @@ function pageLink(asideItems, currentContent) {
             case 19:
               (0,_pages_p100_elem_19_Round19__WEBPACK_IMPORTED_MODULE_19__["default"])();
               break;
+            case 20:
+              (0,_pages_p100_elem_20_Round20__WEBPACK_IMPORTED_MODULE_20__["default"])();
+              break;
             case 34:
-              (0,_pages_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_20__["default"])();
+              (0,_pages_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_21__["default"])();
               break;
             case 38:
-              (0,_pages_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_21__["default"])();
+              (0,_pages_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_22__["default"])();
               break;
             case 39:
-              (0,_pages_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_22__["default"])();
+              (0,_pages_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_23__["default"])();
               break;
             case 44:
-              (0,_pages_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_23__["default"])();
+              (0,_pages_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_24__["default"])();
+              break;
+            case 45:
+              (0,_pages_p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_25__["default"])();
               break;
             case 134:
-              (0,_pages_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_24__["default"])();
+              (0,_pages_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_26__["default"])();
               break;
             case 230:
-              (0,_pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_25__["default"])();
+              (0,_pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_27__["default"])();
               break;
             case 313:
-              (0,_pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_26__["default"])();
+              (0,_pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_28__["default"])();
               break;
           }
         } else {
@@ -48753,6 +48765,98 @@ function inElem() {
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/pages/p100/elem-20-Round20.html":
+/*!******************************************************************!*\
+  !*** ./src/components/cf/rounds/pages/p100/elem-20-Round20.html ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<article class="article">
+  <a href="https://codeforces.com/contest/20" target="_blank">Codeforces 20 Round 20 Alpha 2010.06.18</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. Файловая система BerOS</a>
+  <br><a href="#t2">Задача B. Уравнение</a>
+  <br><a href="#t3">Задача C. Алгоритм Дейкстры?</a>
+</article>
+
+
+<!-- Задача A. Файловая система BerOS -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. Файловая система BerOS</h3>
+
+  <div class="t1"></div>
+
+</article>
+
+
+<!-- Задача B. Уравнение -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Уравнение</h3>
+
+  <div class="t2"></div>
+
+</article>
+
+
+<!-- Задача C. Алгоритм Дейкстры? -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Алгоритм Дейкстры?</h3>
+
+  <div class="t3"></div>
+
+</article>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/pages/p100/elem-20-Round20.js":
+/*!****************************************************************!*\
+  !*** ./src/components/cf/rounds/pages/p100/elem-20-Round20.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ inElem)
+/* harmony export */ });
+/* harmony import */ var _z_z100_z20a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z20a.html */ "./src/components/cf/rounds/z/z100/z20a.html");
+/* harmony import */ var _z_z100_z20b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z20b.html */ "./src/components/cf/rounds/z/z100/z20b.html");
+/* harmony import */ var _z_z100_z20c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z20c.html */ "./src/components/cf/rounds/z/z100/z20c.html");
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z_z100_z20a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z_z100_z20b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z_z100_z20c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+}
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/pages/p100/elem-3-Round3.html":
 /*!****************************************************************!*\
   !*** ./src/components/cf/rounds/pages/p100/elem-3-Round3.html ***!
@@ -49825,6 +49929,72 @@ var code = `<article class="article">
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/pages/p100/elem-45-sko3.js":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/pages/p100/elem-45-sko3.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ inElem)
+/* harmony export */ });
+/* harmony import */ var _z_z100_z45a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z45a.html */ "./src/components/cf/rounds/z/z100/z45a.html");
+/* harmony import */ var _z_z100_z45b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z45b.html */ "./src/components/cf/rounds/z/z100/z45b.html");
+/* harmony import */ var _z_z100_z45c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z45c.html */ "./src/components/cf/rounds/z/z100/z45c.html");
+/* harmony import */ var _z_z100_z45d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z45d.html */ "./src/components/cf/rounds/z/z100/z45d.html");
+/* harmony import */ var _z_z100_z45e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z45e.html */ "./src/components/cf/rounds/z/z100/z45e.html");
+/* harmony import */ var _z_z100_z45f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z45f.html */ "./src/components/cf/rounds/z/z100/z45f.html");
+/* harmony import */ var _z_z100_z45g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z45g.html */ "./src/components/cf/rounds/z/z100/z45g.html");
+/* harmony import */ var _z_z100_z45h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z45h.html */ "./src/components/cf/rounds/z/z100/z45h.html");
+/* harmony import */ var _z_z100_z45i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../z/z100/z45i.html */ "./src/components/cf/rounds/z/z100/z45i.html");
+/* harmony import */ var _z_z100_z45j_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../z/z100/z45j.html */ "./src/components/cf/rounds/z/z100/z45j.html");
+
+
+
+
+
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z_z100_z45a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z_z100_z45b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z_z100_z45c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z_z100_z45d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z_z100_z45e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+  if (document.querySelector('.t6')) {
+    document.querySelector('.t6').innerHTML = _z_z100_z45f_html__WEBPACK_IMPORTED_MODULE_5__["default"];
+  }
+  if (document.querySelector('.t7')) {
+    document.querySelector('.t7').innerHTML = _z_z100_z45g_html__WEBPACK_IMPORTED_MODULE_6__["default"];
+  }
+  if (document.querySelector('.t8')) {
+    document.querySelector('.t8').innerHTML = _z_z100_z45h_html__WEBPACK_IMPORTED_MODULE_7__["default"];
+  }
+  if (document.querySelector('.t9')) {
+    document.querySelector('.t9').innerHTML = _z_z100_z45i_html__WEBPACK_IMPORTED_MODULE_8__["default"];
+  }
+  if (document.querySelector('.t10')) {
+    document.querySelector('.t10').innerHTML = _z_z100_z45j_html__WEBPACK_IMPORTED_MODULE_9__["default"];
+  }
+}
 
 /***/ }),
 
@@ -54724,6 +54894,151 @@ cout &lt;&lt; fixed &lt;&lt; setprecision(6) &lt;&lt; res;
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/z/z100/z20a.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z20a.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача A. Файловая система BerOS -->
+<div class="time-memory">(Время 2с. Память 64мб)</div>
+
+<p>В новой операционной системе BerOS (кроме нескучных обоев) была введена новая очень удобная возможность — в записи пути к директории можно использовать в качестве разделителя не один традиционный слэш, а любое количество. Например, записи //usr///local//nginx/sbin// и /usr/local/nginx///sbin эквивалентны. Символ '/' (или несколько таких символов) в конце записи пути к директории необходим только в случае записи пути к корневой директории, которая может быть задана одним символом '/'.</p>
+
+<p>Назовем нормализованной записью пути запись, в которой содержится наименьшее возможное количество символов '/'.</p>
+
+<p>Ваша задача — для заданной записи пути найти нормализованную запись этого же пути.</p>
+
+<h4>Входные данные</h4>
+<p>Одна строка, состоящая из маленьких латинских букв и символов '/' — путь к какой-либо директории. Все пути начинаются как минимум с одного символа '/'. Длина строки — не более 100 символов. Строка не пуста.</p>
+
+<h4>Выходные данные</h4>
+<p>Путь в нормализованном виде.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+//usr///local//nginx/sbin
+</pre>
+<pre>
+/usr/local/nginx/sbin
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z20b.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z20b.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача B. Уравнение -->
+<div class="time-memory">(Время 1с. Память 256мб)</div>
+
+<p>Задано уравнение вида Ax² + Bx + C = 0. Ваша задача найти все его вещественные корни.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке записаны через пробел целые числа A, B и C (-10⁵ ≤ A, B, C ≤ 10⁵). Любой из коэффициентов может обращаться в 0.</p>
+
+<h4>Выходные данные</h4>
+<p>Если корней бесконечно много, выводите -1. В противном случае в первую строку выведите неотрицательное целое число K — количество различных корней уравнения. Далее в K строках запишите все корни в строго возрастающем порядке (кратные корни выводить не следует), значения округляйте не менее чем к 5-му знаку. Если корней не существует, то K = 0.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+1 -5 6
+</pre>
+<pre>
+2
+2.0000000000
+3.0000000000
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z20c.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z20c.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача C. Алгоритм Дейкстры? -->
+<div class="time-memory">(Время 1с. Память 64мб)</div>
+
+<p>Задан неориентированный взвешенный граф, вершины которого пронумерованы от 1 до n. Ваша задача найти кратчайший путь из вершины 1 в вершину n.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке содержатся целые числа n и m (2 ≤ n ≤ 105, 0 ≤ m ≤ 105), где n — количество вершин, а m — количество ребер в графе. Далее в m строках содержатся сами ребра, по одному в строке. Каждое ребро задается тремя числами ai, bi, wi (1 ≤ ai, bi ≤ n, 1 ≤ wi ≤ 106), где ai, bi — это концы ребра, а wi — его длина.</p>
+
+<p>Граф может содержать кратные ребра и петли.</p>
+
+<h4>Выходные данные</h4>
+<p>Выведите число -1 если пути нет или сам кратчайший путь, если он существует.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+5 6
+1 2 2
+2 5 5
+2 3 4
+1 4 1
+4 3 3
+3 5 1
+</pre>
+<pre>
+1 4 3 5
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+5 6
+1 2 2
+2 5 5
+2 3 4
+1 4 1
+4 3 3
+3 5 1
+</pre>
+<pre>
+1 4 3 5
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/z/z100/z2a.html":
 /*!**************************************************!*\
   !*** ./src/components/cf/rounds/z/z100/z2a.html ***!
@@ -58430,6 +58745,574 @@ YES
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/z/z100/z45a.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45a.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача A. Codecraft III -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>Сегодня Вася зашел на всем известный сайт и узнал, что продолжение его любимой игры Codecraft II выходит ровно через k месяцев. Он посмотрел на календарь и выяснил, что сейчас идет месяц под названием s. Васе тут же стало интересно, в каком же месяце выйдет Codecraft III. Помогите ему понять это.</p>
+
+<p>Все двенадцать месяцев на Васином календаре записаны под своими обычными английскими названиями: January, February, March, April, May, June, July, August, September, October, November, December.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке записано название текущего месяца. Гарантируется, что это — корректное английское название одного из 12 месяцев. Первая буква — большая, а остальные — маленькие. Во второй строке записано целое число k (0 ≤ k ≤ 100) — число месяцев, оставшееся до выхода Codecraft III.</p>
+
+<h4>Выходные данные</h4>
+<p>Выведите с большой буквы название месяца, в который выйдет продолжение Codecraft II. Выведенное название должно содержаться в списке January, February, March, April, May, June, July, August, September, October, November, December.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+November
+3
+</pre>
+  <code>February</code>
+
+  <h4>Пример 2</h4>
+<pre>
+May
+24
+</pre>
+  <code>May</code>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45b.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45b.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача B. Школа -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>В 6Б классе берляндской средней школы учится n ребят. У каждого из них есть ровно один друг, которому он звонит, когда узнает новость. Обозначим друга i-ого человека через g(i). Обратите внимание, что дружбы не взаимны, т. е. g(g(i)) не обязательно равно i.</p>
+
+<p>В i-ый день человек с номером ai узнает новость с рейтингом bi (bi ≥ 1). Он тут же звонит своему другу и рассказывает ее. При этом новость устаревает, и ее рейтинг немного падает и становится bi - 1. Друг действует так же — он тоже звонит своему другу и тоже рассказывает новость. Друг друга получает новость уже с рейтингом bi - 2. Все это продолжается до тех пор, пока рейтинг новости не упадет до нуля — никто не захочет рассказывать новость с нулевым рейтингом.</p>
+
+<p>Более формально, все действуют следующим образом: если человек x узнал новость с ненулевым рейтингом y, он звонит своему другу g(i), и тот узнает новость с рейтингом y - 1 и, если возможно, продолжает процесс.</p>
+
+<p>Заметим, что в течение одного дня один и тот же человек может позвонить своему другу и рассказать ему одну и ту же новость с разными рейтингами. Таким образом, новость с рейтингом bi повлечет за собой ровно bi звонков.</p>
+
+<p>Ваша задача: посчитать величины resi — сколько учеников узнали свою первую новость в день i.</p>
+
+<p>Значения bi известны сразу, а вот ai вычисляются по следующей формуле:</p>
+
+<code>ai = ((vi + res<sup>i-1</sup> - 1) mod n) + 1</code>
+
+<p>где mod обозначает операцию взятия остатка от деления, res0 считается равным нулю, а vi — некоторые заданные целые числа.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке через пробел записано два целых числа n и m (2 ≤ n, m ≤ 10⁵) — количество учеников и количество дней. Во второй строке через пробел записано n целых чисел g(i) (1 ≤ g(i) ≤ n, g(i) ≠ i) — номер друга i-го ученика. В третьей строке через пробел записано m целых чисел vi (1 ≤ vi ≤ 10⁷). В четвертой строке через пробел записано m целых чисел bi (1 ≤ bi ≤ 10⁷).</p>
+
+<h4>Выходные данные</h4>
+<p>Выведите m строк по одному числу на каждой. i-ая строка должна содержать resi — для какого количества учеников первой новостью, которую они узнали за рассматриваемые m дней, была новость номер i. Номер новости — это номер дня, в который ее можно было узнать. Дни нумеруются с 1 в том порядке, в котором они заданы во входных данных. res0 выводить не следует.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+3 4
+2 3 1
+1 2 3 4
+1 2 3 4
+</pre>
+<pre>
+1
+1
+1
+0
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+8 6
+7 6 4 2 3 5 5 7
+10 4 3 8 9 1
+1 1 1 2 2 2
+</pre>
+<pre>
+1
+1
+1
+2
+1
+1
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45c.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45c.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача C. Танцевальный кружок -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>Танцевальный кружок посещает n человек. Каждый человек характеризуется своим умением танцевать ai. В начале занятия они выстраиваются в линию слева направо. Пока в линии присутствует хоть одна пара мальчик и девочка, повторяется следующий процесс: стоящие рядом мальчик и девочка, имеющие минимальную разницу умений, отправляются танцевать. Если таких пар несколько, танцевать отправляется самая левая пара. После того как ушла очередная пара, линия снова замыкается, т. е. получается, что линия всегда непрерывна. Под разницей умений имеется в виду модуль разности величин a двух танцоров. Ваша задача — узнать, какие пары и в каком порядке отправятся танцевать.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке записано целое число n (1 ≤ n ≤ 2·10⁵) — количество людей. Во второй строке без пробелов записано n символов B или G. B соответствует мальчику, G соответствует девочке. В третьей строке через пробел записано n целых чисел ai (1 ≤ ai ≤ 10⁷) — умения танцевать. Люди перечислены слева направо в том порядке, в котором они выстроились в линию.</p>
+
+<h4>Выходные данные</h4>
+<p>Выведите количество получившихся пар k. Далее выведите k строк по два числа в каждой — номера людей, входящих в очередную пару. Люди нумеруются целыми числами от 1 до n слева направо. Когда уходит очередная пара, перенумеровывать людей не нужно. Номера в одной паре упорядочивайте по возрастанию. Пары выводите в том порядке, в котором они отправляются танцевать.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+4
+BGBG
+4 2 4 3
+</pre>
+<pre>
+2
+3 4
+1 2
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+4
+BBGG
+4 6 1 5
+</pre>
+<pre>
+2
+2 3
+1 4
+</pre>
+
+  <h4>Пример 3</h4>
+<pre>
+4
+BGBB
+1 1 2 3
+</pre>
+<pre>
+1
+1 2
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45d.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45d.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача D. Даты событий -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>На уроке истории учитель попросил Васю назвать даты, когда произошли n известных событий. Он не помнит точные даты, но для каждого события он помнит отрезок дней [li, ri] (включительно), в которые оно могло произойти. Однако еще Вася помнит, что в один день могло произойти только одно событие. Помогите ему выбрать такие n дат известных событий, чтобы оба условия выполнялись. Гарантируется, что решение существует.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке записано целое число n (1 ≤ n ≤ 100) — количество известных событий. Далее следует n строк по два целых числа li и ri в каждой (1 ≤ li ≤ ri ≤ 10⁷) — самая ранняя допустимая дата и самая поздняя допустимая дата i-го события.</p>
+
+<h4>Выходные данные</h4>
+<p>Выведите n чисел — даты, в которые произошли события. Если решений несколько, выведите любое. Гарантируется, что решение существует.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+3
+1 2
+2 3
+3 4
+</pre>
+<pre>
+1 2 3
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+2
+1 3
+1 3
+</pre>
+<pre>
+1 2
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45e.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45e.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача E. Режиссер -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>Вася — известный берляндский кинорежиссер, сейчас он работает над новым блокбастером «Неожиданные». По собственному опыту Вася знает, как важно удачно подобрать имена и фамилии главных героев. Он составил список из n имен и n фамилий, которые хочет использовать. Вася еще не решил, как именно назовет героев, поэтому он может сопоставить любому имени любую фамилию. Теперь ему нужно составить список всех главных героев в формате: «Name1 Surname1, Name2 Surname2, ..., Namen Surnamen», то есть все пары имя-фамилия должны быть разделены ровно одной запятой и ровно одним пробелом, а имя и фамилия должны разделяться между собой ровно одним пробелом. В первую очередь Вася хочет максимизировать количество таких пар, в которых имя и фамилия начинаются с одной и той же буквы. Если таких списков несколько, Вася хочет получить лексикографически минимальный. Помогите ему.</p>
+
+<p>Как ответ будет проверяться строка в формате, как указано выше, включая необходимые запятые и пробелы. Именно лексикографическую минимальность такой строки нужно обеспечить. Выводимая строка не должна заканчиваться пробелом или запятой.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке записано число n (1 ≤ n ≤ 100) — количество имен и фамилий. Далее следует n строк — список имен. Далее следует n строк — список фамилий. Никакие две из этих 2n строк не совпадают. Каждое имя и фамилия — непустая строка не более чем из 10 латинских букв. Гарантируется, что первая буква — большая, а остальные — маленькие.</p>
+
+<h4>Выходные данные</h4>
+<p>Выходные данные состоят из единственной строки — искомого списка. Обратите внимание, что следует строго придерживаться формата выходных данных!</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+4
+Ann
+Anna
+Sabrina
+John
+Petrov
+Ivanova
+Stoltz
+Abacaba
+</pre>
+<pre>
+Ann Abacaba, Anna Ivanova, John Petrov, Sabrina Stoltz
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+4
+Aa
+Ab
+Ac
+Ba
+Ad
+Ae
+Bb
+Bc
+</pre>
+<pre>
+Aa Ad, Ab Ae, Ac Bb, Ba Bc
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45f.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45f.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача F. Козлы и волки -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>Однажды Васе понадобилось как можно скорее перевезти m козлов и m волков с одного берега реки на другой. Лодка может выдержать n зверей и Васю, при этом разрешается сажать в лодку меньше n зверей. Если вдруг в каком-либо месте (на одном из двух берегов или в лодке) волков оказывается строго больше чем козлов, волки съедают козлов, а Вася расстраивается. Когда Вася плывет на лодке с одного берега на другой, он должен везти с собой хотя бы одного зверя, иначе ему станет скучно, и он, опять же, расстроится. Когда лодка приплывает к берегу, сначала все звери одновременно сходят на берег, а потом выбранные Васей звери одновременно садятся в лодку. Это означает, что в момент когда только что приплывшие звери сошли на берег, а уплывающие звери еще не забрались в лодку, кто-то может кого-то съесть. Васе нужно перевезти всех зверей с одного берега на другой так, чтобы никто никого не съел, а сам Вася не расстроился. Какое наименьшее число раз ему потребуется переплыть реку?</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке через пробел записано два целых числа m и n (1 ≤ m, n ≤ 10⁵) — количество зверей и вместимость лодки.</p>
+
+<h4>Выходные данные</h4>
+<p>Если невозможно перевезти всех животных так, чтобы никто не расстроился, а все козлы остались живы, выведите -1. Иначе выведите одно целое число — сколько раз потребуется переплыть реку.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+3 2
+</pre>
+<pre>
+11
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+33 3
+</pre>
+<pre>
+-1
+</pre>
+  <p>Первый пример из условия соответствует известной детской задаче.</p>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45g.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45g.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача G. Простая задача -->
+<div class="time-memory">(Время 1с. Память 256мб)</div>
+
+<p>В Берляндии в моде простые числа — респектабельные горожане селятся только на этажах с номерами, которые являются простыми числами. Нумизматы особо ценят монеты с простыми номиналами. Все простые дни объявлены праздничными!</p>
+
+<p>Но и этого мало, чтобы сделать жителей Берляндии счастливыми. На главной улице столицы стоит n домов, пронумерованных от 1 до n. Правительство решило покрасить каждый дом в некоторый цвет так, что сумма номеров домов покрашенных в каждый из цветов является простым числом.</p>
+
+<p>Однако, оказалось, что не все жители поддерживают это решение — многие против по причине того, что не хотят большого количества разноцветных домов на главной улице столицы. Поэтому решено использовать минимальное количество цветов. Дома не обязательно красить подряд, но каждый из n домов должен быть покрашен в некоторый цвет. Одноцветные дома не обязательно должны идти подряд, допускается любая раскраска.</p>
+
+<p>До начала покраски осталось не более 5-ти часов, помогите правительству найти такой способ, чтобы сумма номеров домов для каждого цвета была простым числом, а количество использованных красок было минимальным.</p>
+
+<h4>Входные данные</h4>
+<p>Единственная строка входного файла содержит целое число n (2 ≤ n ≤ 6000) — количество домов на главной улице столицы.</p>
+
+<h4>Выходные данные</h4>
+<p>Выведите последовательность n чисел, где i-ое число обозначает номер цвета для дома номер i. Цвета нумеруйте последовательно, начиная с 1. Разрешается любой порядок покраски. Если решений несколько, выведите любое. Если такой покраски не существует, то выведите единственное число -1.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+8
+</pre>
+<pre>
+1 2 2 1 1 1 1 2
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45h.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45h.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача H. Дорожная задача -->
+<div class="time-memory">(Время 3с. Память 256мб)</div>
+
+<p>В столице Берляндии (как вы хорошо знаете) n перекрестков, некоторые пары из которых соединены двусторонними дорогами. К сожалению, количество пробок в столице резко возросло, поэтому решено построить несколько новых дорог. Каждая новая дорога также должна соединять два перекрестка.</p>
+
+<p>Городские власти заметили, что в городах всех развитых стран между любыми двумя перекрестками можно проехать как минимум двумя способами так, что способы не имеют общих дорог (но они могут проходить через общие перекрестки). Власти решили добавить наименьшее количество дорог так, чтобы и в столице Берляндии это правило соблюдалось.</p>
+
+<p>В городской сети дорог, как до реформы, так и после, между каждой парой перекрестков должно существовать не более одной дороги.</p>
+
+<h4>Входные данные</h4>
+<p>Первая строка входных данных содержит пару целых чисел n, m (2 ≤ n ≤ 900, 1 ≤ m ≤ 100000), где n — количество перекрестков, а m — количество дорог. Каждая из следующих m строк содержит описание одной дороги, которая задается номерами соединяемых перекрестков ai, bi (1 ≤ ai, bi ≤ n, ai ≠ bi). Перекрестки нумеруются от 1 до n. Из любого перекрестка города можно добраться в любой другой, передвигаясь по дорогам.</p>
+
+<h4>Выходные данные</h4>
+<p>В первую строку выведите t — количество добавленных дорог. Далее в t строках выведите описания добавленных дорог в формате входных данных. Вы можете использовать любой порядок для вывода как самих дорог, так и соединяемых каждой дорогой перекрестков. Если решений несколько, выведите любое.</p>
+
+<p>Если столица не нуждается в реформе, выведите единственное число 0.</p>
+
+<p>Если решения не существует, выведите единственное число -1.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+4 3
+1 2
+2 3
+3 4
+</pre>
+<pre>
+1
+1 4
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+4 4
+1 2
+2 3
+2 4
+3 4
+</pre>
+<pre>
+1
+1 3
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45i.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45i.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача I. TCMCF+++ -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>Недавно Вася участвовал в соревнованиях по программированию по правилам TCMCF+++. На соревновании предлагалось n задач, и у каждой задачи была цена — некоторое целое число баллов (возможно, отрицательное и даже нулевое). Согласно правилам TCMCF+++, по каждой задаче засчитывались только полные решения, а итоговое количество баллов у участника равнялось произведению цен всех задач, которые он решил. Если человек не решил ничего, то он даже не появлялся в итоговых результатах и не считался участником. Вася понял, что чтобы получать максимальное количество баллов, не всегда выгодно решать все задачи. К сожалению, понял он это только после конца соревнования. Теперь он просит вас помочь ему: выясните, какие задачи нужно было решать, чтобы набрать максимальное количество баллов.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке записано целое число n (1 ≤ n ≤ 100) — количество предложенных задач. В следующей строке через пробел записано n целых чисел ci (-100 ≤ ci ≤ 100) — цена i-ой задачи. Цены задач могут совпадать.</p>
+
+<h4>Выходные данные</h4>
+<p>Выведите через пробел цены задач, которые надо было решать, чтобы получить наибольшее возможное число баллов. Не забудьте, что нужно было решить хотя бы одну задачу. Если решений несколько, выведите любое.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+5
+1 2 -3 3 3
+</pre>
+<pre>
+3 1 2 3
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+13
+100 100 100 100 100 100 100 100 100 100 100 100 100
+</pre>
+<pre>
+100 100 100 100 100 100 100 100 100 100 100 100 100
+</pre>
+
+  <h4>Пример 3</h4>
+<pre>
+4
+-2 -2 -2 -2
+</pre>
+<pre>
+-2 -2 -2 -2
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/z/z100/z45j.html":
+/*!***************************************************!*\
+  !*** ./src/components/cf/rounds/z/z100/z45j.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = `<!-- Задача J. Посадка деревьев -->
+<div class="time-memory">(Время 2с. Память 256мб)</div>
+
+<p>Вася — активист общества охраны природы Greencode. Однажды, он нашел пустое никому не нужное поле, разбил его на n x m клеток, и решил посадить там лес. Вася посадит nm деревьев всех различных высот от 1 до nm. Чтобы его лес выглядел естественнее, он хочет, чтобы для любых двух деревьев, которые растут в соседних по стороне клетках, модуль разности высот был строго больше 1. Помогите Васе: составьте план посадки леса, для которого выполняется данное условие.</p>
+
+<h4>Входные данные</h4>
+<p>В первой строке через пробел записано два целых числа n и m (1 ≤ n, m ≤ 100) — количество строк и столбцов в Васином поле.</p>
+
+<h4>Выходные данные</h4>
+<p>Если решения не существует, выведите -1. Иначе выведите n строк по m чисел — план посадки деревьев. В каждой клетке плана должна быть записана высота дерева, которое нужно посадить в эту клетку. Если решений несколько, выведите любое.</p>
+
+<details>
+  <summary>Примеры</summary>
+  <h4>Пример 1</h4>
+<pre>
+2 3
+</pre>
+<pre>
+3 6 2
+5 1 4
+</pre>
+
+  <h4>Пример 2</h4>
+<pre>
+2 1
+</pre>
+<pre>
+-1
+</pre>
+</details>
+`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/z/z100/z4a.html":
 /*!**************************************************!*\
   !*** ./src/components/cf/rounds/z/z100/z4a.html ***!
@@ -60263,7 +61146,7 @@ WWWWWWWW
 
   <div>
     <a href="https://codeforces.com/contest/7/problem/A" target="_blank">Задача 7A</a>
-    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
+    <br><a href="https://codeforces.com/contest/7" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
   </div>
 
   <h4>Тест 3</h4>
@@ -60428,7 +61311,7 @@ NULL
 
   <div>
     <a href="https://codeforces.com/contest/7/problem/B" target="_blank">Задача 7B</a>
-    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
+    <br><a href="https://codeforces.com/contest/7" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
   </div>
 
 <pre>
@@ -60588,7 +61471,7 @@ var code = `<!-- Задача C. Прямая -->
 
   <div>
     <a href="https://codeforces.com/contest/7/problem/C" target="_blank">Задача 7C</a>
-    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
+    <br><a href="https://codeforces.com/contest/7" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
   </div>
 
   <p>Алгоритм основан на решении линейного диофантова уравнения через расширенный алгоритм Евклида.</p>
@@ -60759,7 +61642,7 @@ var code = `<!-- Задача D. Палиндромность -->
 
   <div>
     <a href="https://codeforces.com/contest/7/problem/D" target="_blank">Задача 7D</a>
-    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
+    <br><a href="https://codeforces.com/contest/7" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
   </div>
 
   <p>Палиндромность строки — это максимальное k, для которого строка является k-палиндромом:</p>
@@ -60958,7 +61841,7 @@ expr
 
   <div>
     <a href="https://codeforces.com/contest/7/problem/D" target="_blank">Задача 7D</a>
-    <br><a href="https://codeforces.com/contest/6" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
+    <br><a href="https://codeforces.com/contest/7" target="_blank">Codeforces Beta Round 7 2010-04-01</a>
   </div>
 
   <p>Код моделирует процесс подстановки макросов и определяет, не меняется ли порядок операций из-за отсутствия скобок. Он сравнивает два подхода:</p>
@@ -61136,6 +62019,71 @@ aa
   <code>both</code>
   <p>Считается, что поезд все время движется, так что один и тот же флаг невозможно увидеть два раза. На станциях А и Б флагов нет.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/8/problem/A" target="_blank">Задача 8A</a>
+    <br><a href="https://codeforces.com/contest/8" target="_blank">Codeforces Beta Round 8 2010-04-08</a>
+  </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+  string a; // цвета всех флагов
+  string b; // цвета в первый раз
+  string c; // цвета во второй раз
+  cin >> a >> b >> c;
+
+  bool forward = false;
+  bool backward = false;
+
+  // проверяем возможность в прямом направлении
+  int pa = 0; // указатель строки a
+  int pb = 0; // указатель строки b
+  int pc = 0; // указатель строки c
+
+  // в первый период
+  int p1 = a.find(b);
+  if (p1 &lt; a.size()) {
+    // во второй период
+    int p2 = a.find(c, p1 + b.size());
+    if (p2 &lt; a.size()) {
+      forward = true;
+    }
+  }
+
+  // проверяем возможность в обратном направлении
+  reverse(a.begin(), a.end());
+
+  // в первый период
+  p1 = a.find(b);
+  if (p1 &lt; a.size()) {
+    // во второй период
+    int p2 = a.find(c, p1 + b.size());
+    if (p2 &lt; a.size()) {
+      backward = true;
+    }
+  }
+
+  if (forward && backward) {
+    cout &lt;&lt; "both";
+  } else if (forward) {
+    cout &lt;&lt; "forward";
+  } else if (backward) {
+    cout &lt;&lt; "backward";
+  } else {
+    cout &lt;&lt; "fantasy";
+  }
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
@@ -61178,6 +62126,87 @@ var code = `<!-- Задача B. Роботомания -->
   <h4>Пример 2</h4>
   <code>RRUULLDD</code>
   <code>BUG</code>
+</details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/8/problem/B" target="_blank">Задача 8B</a>
+    <br><a href="https://codeforces.com/contest/8" target="_blank">Codeforces Beta Round 8 2010-04-08</a>
+  </div>
+
+  <p>Алгоритм проверяет, можно ли построить карту (расставить препятствия) так, чтобы заданный путь был кратчайшим между начальной и конечной точками.</p>
+  <p>Две ключевые проверки:</p>
+  <p>1. Отсутствие самопересечений. Если робот дважды посещает одну клетку, путь не может быть кратчайшим (можно было пойти напрямую).</p>
+  <p>2. Отсутствие "срезания углов". Проверяем всех соседей текущей клетки. Если какой-то сосед был посещён раньше, чем за 1 шаг до текущего, значит существует более короткий путь (можно было пойти через этого соседа).</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;array&gt;
+#include &lt;unordered_map&gt;
+
+using namespace std;
+
+// Направления движения: вверх, вниз, влево, вправо
+constexpr int dy[] = { -1, 1, 0, 0 };
+constexpr int dx[] = { 0, 0, -1, 1 };
+
+// Преобразование символа команды в смещение
+constexpr pair&lt;int, int&gt; charToDelta(char c) {
+  switch (c) {
+  case 'U': return { -1, 0 };
+  case 'D': return { 1, 0 };
+  case 'L': return { 0, -1 };
+  case 'R': return { 0, 1 };
+  default: return { 0, 0 };
+  }
+}
+
+int main() {
+  string commands;
+  cin >> commands;
+
+  // Используем словарь для хранения шагов, когда робот посетил клетку
+  // Ключ: координата (y, x), значение: номер шага (1-based)
+  unordered_map&lt;int, unordered_map&lt;int, int&gt; &gt; visited;
+
+  int y = 128, x = 128;  // Начальная позиция (центр поля)
+  int step = 1;
+  visited[y][x] = step++;
+
+  for (char cmd : commands) {
+    auto [dy_cmd, dx_cmd] = charToDelta(cmd);
+    y += dy_cmd;
+    x += dx_cmd;
+
+    // Проверка 1: если клетка уже посещена - путь самопересекается
+    if (visited[y][x] != 0) {
+      cout &lt;&lt; "BUG" &lt;&lt; endl;
+      return 0;
+    }
+
+    visited[y][x] = step++;
+
+    // Проверка 2: нет ли соседней посещенной клетки,
+    // которая не является предыдущей в пути
+    for (int dir = 0; dir &lt; 4; ++dir) {
+      int ny = y + dy[dir];
+      int nx = x + dx[dir];
+
+      // Если соседняя клетка посещена И это не предыдущая клетка
+      if (visited[ny][nx] != 0 &&
+        visited[ny][nx] &lt; visited[y][x] - 1) {
+        cout &lt;&lt; "BUG" &lt;&lt; endl;
+        return 0;
+      }
+    }
+  }
+
+  cout &lt;&lt; "OK" &lt;&lt; endl;
+  return 0;
+}
+</pre>
 </details>
 `;
 // Exports

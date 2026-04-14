@@ -23,3 +23,84 @@
   <code>RRUULLDD</code>
   <code>BUG</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/8/problem/B" target="_blank">Задача 8B</a>
+    <br><a href="https://codeforces.com/contest/8" target="_blank">Codeforces Beta Round 8 2010-04-08</a>
+  </div>
+
+  <p>Алгоритм проверяет, можно ли построить карту (расставить препятствия) так, чтобы заданный путь был кратчайшим между начальной и конечной точками.</p>
+  <p>Две ключевые проверки:</p>
+  <p>1. Отсутствие самопересечений. Если робот дважды посещает одну клетку, путь не может быть кратчайшим (можно было пойти напрямую).</p>
+  <p>2. Отсутствие "срезания углов". Проверяем всех соседей текущей клетки. Если какой-то сосед был посещён раньше, чем за 1 шаг до текущего, значит существует более короткий путь (можно было пойти через этого соседа).</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;array&gt;
+#include &lt;unordered_map&gt;
+
+using namespace std;
+
+// Направления движения: вверх, вниз, влево, вправо
+constexpr int dy[] = { -1, 1, 0, 0 };
+constexpr int dx[] = { 0, 0, -1, 1 };
+
+// Преобразование символа команды в смещение
+constexpr pair&lt;int, int&gt; charToDelta(char c) {
+  switch (c) {
+  case 'U': return { -1, 0 };
+  case 'D': return { 1, 0 };
+  case 'L': return { 0, -1 };
+  case 'R': return { 0, 1 };
+  default: return { 0, 0 };
+  }
+}
+
+int main() {
+  string commands;
+  cin >> commands;
+
+  // Используем словарь для хранения шагов, когда робот посетил клетку
+  // Ключ: координата (y, x), значение: номер шага (1-based)
+  unordered_map&lt;int, unordered_map&lt;int, int&gt; &gt; visited;
+
+  int y = 128, x = 128;  // Начальная позиция (центр поля)
+  int step = 1;
+  visited[y][x] = step++;
+
+  for (char cmd : commands) {
+    auto [dy_cmd, dx_cmd] = charToDelta(cmd);
+    y += dy_cmd;
+    x += dx_cmd;
+
+    // Проверка 1: если клетка уже посещена - путь самопересекается
+    if (visited[y][x] != 0) {
+      cout &lt;&lt; "BUG" &lt;&lt; endl;
+      return 0;
+    }
+
+    visited[y][x] = step++;
+
+    // Проверка 2: нет ли соседней посещенной клетки,
+    // которая не является предыдущей в пути
+    for (int dir = 0; dir &lt; 4; ++dir) {
+      int ny = y + dy[dir];
+      int nx = x + dx[dir];
+
+      // Если соседняя клетка посещена И это не предыдущая клетка
+      if (visited[ny][nx] != 0 &&
+        visited[ny][nx] &lt; visited[y][x] - 1) {
+        cout &lt;&lt; "BUG" &lt;&lt; endl;
+        return 0;
+      }
+    }
+  }
+
+  cout &lt;&lt; "OK" &lt;&lt; endl;
+  return 0;
+}
+</pre>
+</details>

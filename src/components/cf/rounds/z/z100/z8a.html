@@ -46,3 +46,68 @@ aa
   <code>both</code>
   <p>Считается, что поезд все время движется, так что один и тот же флаг невозможно увидеть два раза. На станциях А и Б флагов нет.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/8/problem/A" target="_blank">Задача 8A</a>
+    <br><a href="https://codeforces.com/contest/8" target="_blank">Codeforces Beta Round 8 2010-04-08</a>
+  </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+  string a; // цвета всех флагов
+  string b; // цвета в первый раз
+  string c; // цвета во второй раз
+  cin >> a >> b >> c;
+
+  bool forward = false;
+  bool backward = false;
+
+  // проверяем возможность в прямом направлении
+  int pa = 0; // указатель строки a
+  int pb = 0; // указатель строки b
+  int pc = 0; // указатель строки c
+
+  // в первый период
+  int p1 = a.find(b);
+  if (p1 &lt; a.size()) {
+    // во второй период
+    int p2 = a.find(c, p1 + b.size());
+    if (p2 &lt; a.size()) {
+      forward = true;
+    }
+  }
+
+  // проверяем возможность в обратном направлении
+  reverse(a.begin(), a.end());
+
+  // в первый период
+  p1 = a.find(b);
+  if (p1 &lt; a.size()) {
+    // во второй период
+    int p2 = a.find(c, p1 + b.size());
+    if (p2 &lt; a.size()) {
+      backward = true;
+    }
+  }
+
+  if (forward && backward) {
+    cout &lt;&lt; "both";
+  } else if (forward) {
+    cout &lt;&lt; "forward";
+  } else if (backward) {
+    cout &lt;&lt; "backward";
+  } else {
+    cout &lt;&lt; "fantasy";
+  }
+}
+</pre>
+</details>

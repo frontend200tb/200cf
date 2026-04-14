@@ -18,6 +18,7 @@ import html16       from './../pages/p100/elem-16-Round16.html';
 import html17       from './../pages/p100/elem-17-Round17.html';
 import html18       from './../pages/p100/elem-18-Round18.html';
 import html19       from './../pages/p100/elem-19-Round19.html';
+import html20       from './../pages/p100/elem-20-Round20.html';
 import html34       from './../pages/p100/elem-34-Round34.html';
 import html38       from './../pages/p100/elem-38-sio1.html';
 import html39       from './../pages/p100/elem-39-sko1.html';
@@ -186,11 +187,12 @@ export const pages = [
   [html17, 17],
   [html18, 18],
   [html19, 19],
+  [html20, 20],
   [html34, 34],
   [html38, 38],
   [html39, 39],
   [html44, 44],
-  html45,
+  [html45, 45],
   html46,
   html48,
   html50,
