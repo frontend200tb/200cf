@@ -62268,6 +62268,178 @@ var code = `<!-- Задача C. Нахождение порядка -->
 0 1 2 0 3 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/8/problem/C" target="_blank">Задача 8C</a>
+    <br><a href="https://codeforces.com/contest/8" target="_blank">Codeforces Beta Round 8 2010-04-08</a>
+  </div>
+
+  <p>Задача сводится к поиску оптимальной последовательности сборки предметов, где за один "рейс" Лена может взять 1 или 2 предмета (не больше, т.к. может нести только 2 вещи).</p>
+
+  <p>1. Динамическое программирование на подмножествах</p>
+  <ul>
+    <li>dp[mask] — минимальное время собрать предметы, обозначенные единичными битами в mask</li>
+    <li>mask — битовая маска из n битов (n ≤ 24, поэтому 2^24 ≈ 16 млн состояний)</li>
+    <li>lastMove[mask] — какие предметы были взяты последним рейсом для достижения mask</li>
+  </ul>
+  <p>2. Переходы состояния</p>
+  <p>Для текущего состояния mask:</p>
+  <ol>
+  <li>Находим первый невзятый предмет firstFree — это гарантирует, что каждое состояние достигается единственным способом (устраняет неоднозначность)</li>
+  <li>Рейс с одним предметом: Путь: сумка → предмет firstFree → сумка. Время: dist(сумка, item) * 2</li>
+  <li>Рейс с двумя предметами: Путь: сумка → предмет firstFree → предмет k → сумка. Время: dist(сумка, item1) + dist(item1, item2) + dist(item2, сумка). Перебираем все возможные вторые предметы k > firstFree</li>
+  </ol>
+  <p>3. Предвычисление расстояний</p>
+  <ul>
+    <li>distToBag[i] — квадрат расстояния от сумки до i-го предмета</li>
+    <li>distBetween[i][j] — квадрат расстояния между предметами i и j</li>
+  </ul>
+  <p>4. Восстановление ответа</p>
+  <ul>
+    <li>Идём от полной маски (1&lt;&lt;n)-1 к пустой</li>
+    <li>Для каждой маски смотрим, какие предметы были взяты последним рейсом</li>
+    <li>Добавляем в путь: сначала возврат к сумке (0), затем номера предметов</li>
+    <li>В конце переворачиваем путь (т.к. восстанавливали с конца)</li>
+  </ul>
+  <p>5. Почему это работает</p>
+  <ul>
+    <li>n ≤ 24 позволяет перебрать все 2^n подмножеств</li>
+    <li>Для каждого состояния мы рассматриваем O(n) переходов</li>
+    <li>Итоговая сложность: O(2^n * n), что для n=24 ≈ 400 млн операций, что укладывается в 4 секунды при оптимизациях</li>
+  </ul>
+  <p>6. Ключевая оптимизация в оригинальном коде</p>
+  <p>Фиксация firstFree (первого невзятого предмета) важна, чтобы каждое состояние достигалось единственным способом. Это позволяет не хранить дополнительную информацию и упрощает восстановление ответа.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;climits&gt;
+#include &lt;utility&gt;
+
+using namespace std;
+
+// Тип для хранения координат
+struct Point {
+  int x, y;
+};
+
+// Функция вычисления квадрата расстояния (время перемещения)
+int squaredDistance(const Point& a, const Point& b) {
+  int dx = a.x - b.x;
+  int dy = a.y - b.y;
+  return dx * dx + dy * dy;
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  // Чтение координат сумки
+  Point bag;
+  cin >> bag.x >> bag.y;
+
+  // Чтение количества вещей
+  int n;
+  cin >> n;
+
+  // Чтение координат вещей
+  vector&lt;Point&gt; items(n);
+  for (int i = 0; i &lt; n; ++i) {
+    cin >> items[i].x >> items[i].y;
+  }
+
+  // Предвычисление расстояний от сумки до вещей
+  vector&lt;int&gt; distToBag(n);
+  for (int i = 0; i &lt; n; ++i) {
+    distToBag[i] = squaredDistance(bag, items[i]);
+  }
+
+  // Предвычисление расстояний между вещами
+  vector&lt;vector&lt;int&gt; &gt; distBetween(n, vector&lt;int&gt;(n));
+  for (int i = 0; i &lt; n; ++i) {
+    for (int j = 0; j &lt; n; ++j) {
+      distBetween[i][j] = squaredDistance(items[i], items[j]);
+    }
+  }
+
+  // DP массивы
+  const int INF = 1e9;
+  vector&lt;int&gt; dp(1 &lt;&lt; n, INF);  // минимальное время для каждого подмножества
+  vector&lt;pair&lt;int, int&gt; &gt; lastMove(1 &lt;&lt; n, { -1, -1 });  // последние взятые предметы
+
+  // Базовый случай: пустое множество
+  dp[0] = 0;
+
+  // Основной цикл динамического программирования
+  for (int mask = 0; mask &lt; (1 &lt;&lt; n) - 1; ++mask) {
+    if (dp[mask] == INF) continue;
+
+    // Находим первый невзятый предмет (оптимизация для однозначности)
+    int firstFree = 0;
+    while (mask & (1 &lt;&lt; firstFree)) ++firstFree;
+
+    // Вариант 1: взять один предмет (сходить туда и обратно)
+    int newMask1 = mask | (1 &lt;&lt; firstFree);
+    int time1 = dp[mask] + 2 * distToBag[firstFree];
+    if (dp[newMask1] > time1) {
+      dp[newMask1] = time1;
+      lastMove[newMask1] = { firstFree, firstFree };  // оба индекса одинаковые
+    }
+
+    // Вариант 2: взять два предмета за один рейс
+    // Маршрут: сумка -> предмет firstFree -> предмет k -> сумка
+    for (int k = firstFree + 1; k &lt;n; ++k) {
+      if (mask & (1 &lt;&lt; k)) continue;  // предмет уже взят
+
+      int newMask2 = mask | (1 &lt;&lt; firstFree) | (1 &lt;&lt; k);
+      int time2 = dp[mask] +
+        distToBag[firstFree] +
+        distBetween[firstFree][k] +
+        distToBag[k];
+
+      if (dp[newMask2] > time2) {
+        dp[newMask2] = time2;
+        lastMove[newMask2] = { firstFree, k };
+      }
+    }
+  }
+
+  // Вывод результата
+  int fullMask = (1 &lt;&lt; n) - 1;
+  cout &lt;&lt; dp[fullMask] &lt;&lt; '\\n';
+
+  // Восстановление пути
+  vector&lt;int&gt; path;
+  int currentMask = fullMask;
+
+  while (currentMask > 0) {
+    auto [item1, item2] = lastMove[currentMask];
+    path.push_back(0);  // возврат к сумке
+    path.push_back(item1 + 1);  // номера вещей с 1
+
+    if (item1 != item2) {
+      path.push_back(item2 + 1);
+      currentMask ^= (1 &lt;&lt; item1) | (1 &lt;&lt; item2);
+    } else {
+      currentMask ^= (1 &lt;&lt; item1);
+    }
+  }
+  path.push_back(0);  // начальная позиция у сумки
+
+  // Выводим путь в обратном порядке (т.к. восстанавливали с конца)
+  reverse(path.begin(), path.end());
+  for (size_t i = 0; i &lt; path.size(); ++i) {
+    if (i > 0) cout &lt;&lt; ' ';
+    cout &lt;&lt; path[i];
+  }
+  cout &lt;&lt; '\\n';
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
