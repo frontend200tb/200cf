@@ -62497,6 +62497,172 @@ var code = `<!-- Задача D. Два товарища -->
 </pre>
   <code>2.0000000000</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/8/problem/D" target="_blank">Задача 8D</a>
+    <br><a href="https://codeforces.com/contest/8" target="_blank">Codeforces Beta Round 8 2010-04-08</a>
+  </div>
+
+  <p>У нас есть три точки:</p>
+
+  <p>C (кинотеатр) — старт для обоих</p>
+
+  <p>H (дом) — финиш для обоих</p>
+
+  <p>S (магазин) — Пете нужно зайти сюда</p>
+
+  <p>Код ищет максимальное расстояние от C до точки расставания P (обозначим его rC).</p>
+
+  <p>Точка P должна одновременно:</p>
+  <ul>
+    <li>Находиться на расстоянии ≤ rC от C</li>
+    <li>Находиться на расстоянии ≤ rH от H</li>
+    <li>Находиться на расстоянии ≤ rS от S</li>
+  </ul>
+
+  <p>Геометрически: P должна лежать в пересечении трёх кругов:</p>
+  <ul>
+    <li>Круг с центром C, радиусом rC</li>
+    <li>Круг с центром H, радиусом rH</li>
+    <li>Круг с центром S, радиусом rS</li>
+  </ul>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;cmath&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;numbers&gt;
+
+using namespace std;
+
+constexpr double EPS = 1e-10;
+
+struct Point {
+  double x = 0.0, y = 0.0;
+
+  constexpr Point() = default;
+  constexpr Point(double x_, double y_) : x(x_), y(y_) {}
+
+  Point operator+(const Point& other) const { return { x + other.x, y + other.y }; }
+  Point operator-(const Point& other) const { return { x - other.x, y - other.y }; }
+  Point operator*(double t) const { return { x * t, y * t }; }
+  Point operator/(double t) const { return { x / t, y / t }; }
+
+  double dot(const Point& other) const { return x * other.x + y * other.y; }
+  double cross(const Point& other) const { return x * other.y - y * other.x; }
+
+  double length() const { return hypot(x, y); }
+  double dist_to(const Point& other) const { return hypot(x - other.x, y - other.y); }
+
+  bool operator==(const Point& other) const {
+    return abs(x - other.x) &lt; EPS && abs(y - other.y) &lt; EPS;
+  }
+};
+
+vector&lt;Point&gt; intersect_circles(const Point& c1, double r1, const Point& c2, double r2) {
+  vector&lt;Point&gt; result;
+  double d = c1.dist_to(c2);
+
+  if (d > r1 + r2 + EPS || d &lt; abs(r1 - r2) - EPS || d &lt; EPS) {
+    return result;
+  }
+
+  double a = (r1 * r1 + d * d - r2 * r2) / (2.0 * d);
+  double h2 = r1 * r1 - a * a;
+
+  if (h2 &lt; -EPS) return result;
+
+  double h = (h2 > EPS) ? sqrt(h2) : 0.0;
+
+  Point dir = (c2 - c1) / d;
+  Point perp = { dir.y, -dir.x };
+
+  Point center = c1 + dir * a;
+
+  if (h &lt; EPS) {
+    result.push_back(center);
+  } else {
+    result.push_back(center + perp * h);
+    result.push_back(center - perp * h);
+  }
+
+  return result;
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout &lt;&lt; fixed &lt;&lt; setprecision(10);
+
+  double t1, t2;
+  cin >> t1 >> t2;
+
+  Point cinema, home, shop;
+  cin >> cinema.x >> cinema.y;
+  cin >> home.x >> home.y;
+  cin >> shop.x >> shop.y;
+
+  double shortest_petya = cinema.dist_to(shop) + shop.dist_to(home);
+  double shortest_vasya = cinema.dist_to(home);
+
+  double max_petya = shortest_petya + t1;
+  double max_vasya = shortest_vasya + t2;
+
+  // Binary search for maximum common path length
+  double low = 0.0;
+  double high = min(max_vasya, cinema.dist_to(shop) + t1);
+
+  for (int iter = 0; iter &lt; 100; ++iter) {
+    double r_cinema = (low + high) / 2.0;
+    double r_home = max_vasya - r_cinema;
+    double r_shop = cinema.dist_to(shop) + t1 - r_cinema;
+
+    vector&lt;Point&gt; test_points = { cinema, home, shop };
+
+    auto add_intersections = [&](const Point& p1, double r1, const Point& p2, double r2) {
+      auto intersections = intersect_circles(p1, r1, p2, r2);
+      test_points.insert(test_points.end(), intersections.begin(), intersections.end());
+      };
+
+    add_intersections(cinema, r_cinema, home, r_home);
+    add_intersections(cinema, r_cinema, shop, r_shop);
+    add_intersections(shop, r_shop, home, r_home);
+
+    bool has_feasible_point = false;
+    for (const auto& p : test_points) {
+      if (p.dist_to(cinema) &lt;= r_cinema + EPS &&
+        p.dist_to(shop) &lt;= r_shop + EPS &&
+        p.dist_to(home) &lt;= r_home + EPS) {
+        has_feasible_point = true;
+        break;
+      }
+    }
+
+    if (has_feasible_point) {
+      low = r_cinema;
+    } else {
+      high = r_cinema;
+    }
+  }
+
+  double answer = (low + high) / 2.0;
+
+  // Special case: Petya's path can be as short as Vasya's path
+  if (shortest_petya &lt;= max_vasya + EPS) {
+    answer = min(max_petya, max_vasya);
+  }
+
+  cout &lt;&lt; answer &lt;&lt; '\\n';
+
+  return 0;
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
