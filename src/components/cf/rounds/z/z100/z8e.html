@@ -22,3 +22,101 @@
   <code>0101</code>
   <p>Рассмотрим все бусы длины 4 — 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110. Цорг разобьет их на кучки: {0001, 0111, 1000, 1110}, {0010, 0100, 1011, 1101}, {0011, 1100}, {0101, 1010}, {0110, 1001}. Потом он оставляет по меньшей нитке бус из каждой кучки: 0001, 0010, 0011, 0101, 0110. Четвертая нитка — 0101.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/8/problem/E" target="_blank">Задача 8E</a>
+    <br><a href="https://codeforces.com/contest/8" target="_blank">Codeforces Beta Round 8 2010-04-08</a>
+  </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cstring&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+using ll = long long;
+
+// d[x][y][c0][c1] - количество способов
+ll d[64][64][2][2];
+
+ll count_ways(const vector&lt;int&gt;& know) {
+  memset(d, 0, sizeof(d));
+  int n = know.size();
+  ll res = 0;
+
+  d[0][n - 1][0][0] = 1;
+
+  for (int x = 0, y = n - 1; x &lt;= y; ++x, --y) {
+    for (int d1 : {0, 1}) {
+      if (know[x] != -1 && know[x] != d1) continue;
+      for (int d2 : {0, 1}) {
+        if (know[y] != -1 && know[y] != d2) continue;
+        if (x == y && d1 != d2) continue;
+
+        for (int c0 : {0, 1}) {
+          for (int c1 : {0, 1}) {
+            if (c0 == 0 && d1 > d2) continue;
+            if (c1 == 0 && d1 > !d2) continue;
+
+            int n0 = c0 || (d1 &lt; d2);
+            int n1 = c1 || (d1 &lt; !d2);
+
+            if (x + 1 &lt;= y - 1) {
+              d[x + 1][y - 1][n0][n1] += d[x][y][c0][c1];
+            } else {
+              res += d[x][y][c0][c1];
+            }
+          }
+        }
+      }
+    }
+  }
+  return res;
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+#ifdef LOCAL
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+#endif
+
+  int n;
+  ll k;
+  cin >> n >> k;
+
+  vector&lt;int&gt; know(n, -1);
+  know[0] = 0;
+
+  ++k; // переходим к k-й по счёту
+
+  if (count_ways(know) &lt; k) {
+    cout &lt;&lt; -1 &lt;&lt; '\n';
+  } else {
+    for (int i = 1; i &lt; n; ++i) {
+      know[i] = 0;
+      ll ways = count_ways(know);
+      if (ways &lt; k) {
+        k -= ways;
+        know[i] = 1;
+      }
+    }
+
+    for (int bit : know) {
+      cout &lt;&lt; bit;
+    }
+    cout &lt;&lt; '\n';
+  }
+
+  return 0;
+}
+</pre>
+</details>
