@@ -62846,6 +62846,44 @@ var code = `<!-- Задача A. Бросок кубика -->
 
   <p>Дот поедет в Трансильванию, если сможет выкинуть 4, 5 или 6 очков.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/9/problem/A" target="_blank">Задача 9A</a>
+    <br><a href="https://codeforces.com/contest/9" target="_blank">Codeforces Beta Round 9 2010-04-11</a>
+  </div>
+
+  <p>Пусть максимум из очков Якко и Вакко -- a. Тогда Дот выиграет, если выбросит не меньше a очков. Вероятность этого равна (6 - (a-1)) / 6. Поскольку a принимает всего 6 значений, ответы можно просто вычислить вручную.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  int a, b;
+  cin >> a >> b;
+
+  int c = max(a, b);
+  int up = 6 - (c - 1);
+  string res;
+
+  switch (up) {
+    case 1: res = "1/6"; break;
+    case 2: res = "1/3"; break;
+    case 3: res = "1/2"; break;
+    case 4: res = "2/3"; break;
+    case 5: res = "5/6"; break;
+    case 6: res = "1/1"; break;
+  }
+
+  cout &lt;&lt; res;
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
