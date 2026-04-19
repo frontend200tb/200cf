@@ -366,31 +366,24 @@ new_a = ( cos(-Θ) sin(-Θ)) (x)
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
+#include &lt;cmath&gt;
 #include &lt;iomanip&gt;
 
 using namespace std;
 
 int main() {
-  // ускорение ввода
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-
-  // работа с файлами
   freopen("angle1.in", "rt", stdin);
   freopen("angle1.out", "wt", stdout);
 
-  // ввод данных
   double x, y;
-  cin >> x, y;
+  cin >> x >> y;
 
-  // решение
   double res = atan2(y, x);
 
   if (res &lt; 0) {
     res += 2 * 3.14159265;
   }
 
-  // вывод результата
   cout &lt;&lt; fixed &lt;&lt; setprecision(10) &lt;&lt; res;
 }
 </pre>
