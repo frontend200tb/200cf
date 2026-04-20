@@ -365,7 +365,6 @@ new_a = ( cos(-Θ) sin(-Θ)) (x)
     <p>Есть короткое и красивое решение данной задачи при помощи функции atan2() из библиотеки cmath. Функция atan2 возвращает число в диапазоне от -пи до +пи, нам нужен ответ в диапазоне от 0 до 2пи. Поэтому если получится отрицательное число, то надо к нему прибавить 2пи.</p>
 <pre>
 #include &lt;iostream&gt;
-#include &lt;vector&gt;
 #include &lt;cmath&gt;
 #include &lt;iomanip&gt;
 
@@ -398,8 +397,8 @@ int main() {
 
   <div class="time-memory">(Время 1с. Память 64мб)</div>
 
-  <p>Входной файл angle1.in</p>
-  <p>Выходной файл angle1.out</p>
+  <p>Входной файл angle2.in</p>
+  <p>Выходной файл angle2.out</p>
 
   <h4>Входные данные</h4>
   <p>Четыре числа - координаты двух ненулевых векторов.</p>
@@ -419,6 +418,39 @@ int main() {
     <p>Второй вариант. Более простой. Использовать арктангенс. Функция <strong>atan2</strong> библиотеки <strong>cmath</strong> возвращает угол от -pi до pi [-pi, pi). При этом не нужно рассматривать каждую четверть по отдельности. Для решения нужно вычислить значение выражения</p>
     <code>atan2(cross(A, point(1,0)), dot(A, point(1,0))</code>
     <p>Если ответ получисля отрицательным, то к нему нужно прибавить pi.</p>
+
+<pre>
+#define _USE_MATH_DEFINES
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+int main() {
+  freopen("angle2.in", "rt", stdin);
+  freopen("angle2.out", "wt", stdout);
+
+  double x1, y1, x2, y2;
+  cin >> x1 >> y1 >> x2 >> y2;
+
+  // Вычисляем угол первого вектора
+  double angle1 = atan2(y1, x1);
+  // Вычисляем угол второго вектора
+  double angle2 = atan2(y2, x2);
+
+  // Разность углов
+  double res = fabs(angle1 - angle2);
+
+  // Приводим к интервалу [0, pi]
+  if (res > M_PI) {
+    res = 2 * M_PI - res;
+  }
+
+  cout &lt;&lt; fixed &lt;&lt; setprecision(10) &lt;&lt; res;
+}
+
+</pre>
   </details>
 </article>
 
