@@ -47,3 +47,52 @@
 
   <p>Как известно, студенты — люди особые, а маршрутки, обычно, никуда не спешат. Поэтому не нужно удивляться, если скорость студента будет больше или равна скорости маршрутки.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/9/problem/B" target="_blank">Задача 9B</a>
+    <br><a href="https://codeforces.com/contest/9" target="_blank">Codeforces Beta Round 9 2010-04-11</a>
+  </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число остановок
+  double vb; // скорость маршрутки
+  double vs; // скорость студента
+  cin >> n >> vb >> vs;
+
+  vector&lt;double&gt; A(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> A[i];
+  }
+
+  double x, y; // координаты университета
+  cin >> x >> y;
+
+  int m = 0, l, r, out;
+  double ti = 0xfffffff;
+
+  for (int i = 1; i &lt; n; i++) {
+    double tt = (A[i] - A[1]) / vb + sqrt((A[i] - x) * (A[i] - x) + y * y) / vs;
+
+    if (abs(tt - ti) &lt; 0.0000001) {
+      if (abs(A[i] - x) &lt; abs(A[out] - x))
+        out = i;
+    } else if (tt &lt; ti) {
+      ti = tt;
+      out = i;
+    }
+  }
+
+  cout &lt;&lt; out + 1;
+}
+</pre>
+</details>
