@@ -63039,6 +63039,37 @@ var code = `<!-- Задача C. Числа Хексадесимал -->
 
   <p>Для n = 10 в ответ входят числа 1 и 10.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/9/problem/C" target="_blank">Задача 9C</a>
+    <br><a href="https://codeforces.com/contest/9" target="_blank">Codeforces Beta Round 9 2010-04-11</a>
+  </div>
+
+  <p>Решение естественным образом обходит все числа, состоящие только из 0 и 1, как узлы бинарного дерева, где из каждого числа x можно получить x*10 и x*10+1</p>
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int n; // число натуральных чисел
+
+int count(long long cur) {
+  if (cur > n) {
+    return 0;
+  }
+  return 1 + count(cur * 10) + count(cur * 10 + 1);
+}
+
+int main() {
+  cin >> n;
+
+  cout &lt;&lt; count(1);
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
