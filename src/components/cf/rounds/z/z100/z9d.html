@@ -27,3 +27,80 @@
   <code>3 3</code>
   <code>4</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/9/problem/D" target="_blank">Задача 9D</a>
+    <br><a href="https://codeforces.com/contest/9" target="_blank">Codeforces Beta Round 9 2010-04-11</a>
+  </div>
+
+  <p>Нужно найти количество различных двоичных деревьев поиска (BST) с n вершинами (ключи 1..n), высота которых не меньше h.</p>
+  <p>Высота считается в вершинах: корень на высоте 1, его дети — высота 2 и т.д.</p>
+  <p>Нужны деревья, у которых максимальная глубина ≥ h</p>
+  <p>Функция cal(nodes, height) возвращает количество BST из nodes вершин, высота которых равна ровно height (высота считается в вершинах).</p>
+  <p>Затем суммируем по всем height >= h, чтобы получить "количество деревьев с высотой не меньше h".</p>
+  <p>Количество BST с n вершинами, имеющих высоту ровно H, обозначим как count[n][H].</p>
+  <p>Нам нужно: sum(count[n][H]) для H от h до n.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;functional&gt;
+
+using namespace std;
+
+int main() {
+  int n, h;
+  cin >> n >> h;
+
+  // DP таблица: [количество узлов][высота]
+  vector&lt;vector&lt;long long&gt; &gt; dp(n + 1, vector&lt;long long&gt;(n + 1, -1));
+
+  // Инициализация базовых случаев
+  dp[0][0] = 1;
+  for (int i = 1; i &lt;= n; i++) {
+    dp[i][0] = 0;
+    dp[0][i] = 0;
+  }
+
+  // Рекурсивная лямбда-функция
+  function&lt;long long(int, int)&gt; cal = [&](int nodes, int height) -> long long {
+    if (dp[nodes][height] != -1)
+      return dp[nodes][height];
+
+    long long total = 0;
+
+    for (int leftNodes = 1; leftNodes &lt;= nodes; leftNodes++) {
+      int rightNodes = nodes - leftNodes;
+
+      // Случай 1: корень на высоте height
+      long long sum1 = 0;
+      for (int h2 = 0; h2 &lt; height; h2++)
+        sum1 += cal(rightNodes, h2);
+      sum1 *= cal(leftNodes - 1, height - 1);
+
+      // Случай 2: другой вариант распределения
+      long long sum2 = 0;
+      for (int h2 = 0; h2 &lt; height - 1; h2++)
+        sum2 += cal(leftNodes - 1, h2);
+      sum2 *= cal(rightNodes, height - 1);
+
+      total += sum1 + sum2;
+    }
+
+    return dp[nodes][height] = total;
+    };
+
+  // Подсчет результата
+  long long result = 0;
+  for (int height = h; height &lt;= n; height++)
+    result += cal(n, height);
+
+  cout &lt;&lt; result &lt;&lt; endl;
+
+  return 0;
+}
+</pre>
+</details>
