@@ -98212,6 +98212,89 @@ int main() {
 
     <p>Город 5: Товары из городов 5 (0), 4 (1), 3 (2). Сумма 3.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Для каждого типа товара t запускаем BFS из всех городов, производящих этот товар. В результате dist[t][v] — минимальное расстояние от города v до ближайшего города с товаром t.</p>
+    <p>Для каждого города v собираем расстояния до всех типов товаров (dist[0..k-1][v]) в массив.</p>
+    <p>Сортируем расстояния и суммируем s наименьших — это и будет минимальная стоимость доставки товаров для проведения ярмарки в городе v.</p>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+const int INF = 1e9;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n, m, k, s;
+  cin >> n >> m >> k >> s;
+
+  vector&lt;int&gt; a(n);
+  for (int i = 0; i &lt; n; i++) {
+    cin >> a[i];
+    a[i]--; // переводим в 0-индексацию
+  }
+
+  vector&lt;vector&lt;int&gt; &gt; g(n);
+  for (int i = 0; i &lt; m; i++) {
+    int u, v;
+    cin >> u >> v;
+    u--; v--;
+    g[u].push_back(v);
+    g[v].push_back(u);
+  }
+
+  // dist[t][v] - минимальное расстояние от города v до любого города с товаром t
+  vector&lt;vector&lt;int&gt; &gt; dist(k, vector&lt;int&gt;(n, INF));
+
+  // Мультистартовый BFS для каждого товара
+  for (int t = 0; t &lt; k; t++) {
+    queue&lt;int> q;
+    for (int v = 0; v &lt; n; v++) {
+      if (a[v] == t) {
+        dist[t][v] = 0;
+        q.push(v);
+      }
+    }
+
+    while (!q.empty()) {
+      int v = q.front();
+      q.pop();
+
+      for (int to : g[v]) {
+        if (dist[t][to] > dist[t][v] + 1) {
+          dist[t][to] = dist[t][v] + 1;
+          q.push(to);
+        }
+      }
+    }
+  }
+
+  // Для каждого города выбираем s наименьших расстояний до разных товаров
+  for (int v = 0; v &lt; n; v++) {
+    vector&lt;int&gt; goods_dist;
+    for (int t = 0; t &lt; k; t++) {
+      goods_dist.push_back(dist[t][v]);
+    }
+    sort(goods_dist.begin(), goods_dist.end());
+
+    int ans = 0;
+    for (int i = 0; i &lt; s; i++) {
+      ans += goods_dist[i];
+    }
+    cout &lt;&lt; ans &lt;&lt; " ";
+  }
+
+  return 0;
+}
+</pre>
+  </details>
 </article>
 
 
