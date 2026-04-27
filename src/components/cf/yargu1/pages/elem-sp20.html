@@ -1684,6 +1684,12 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/987/problem/D" target="_blank">Задача D</a>
+      <br><a href="https://codeforces.com/contest/987" target="_blank">Codeforces Round 485 (Div. 2) 2018-05-29</a>
+    </div>
+
     <p>Для каждого типа товара t запускаем BFS из всех городов, производящих этот товар. В результате dist[t][v] — минимальное расстояние от города v до ближайшего города с товаром t.</p>
     <p>Для каждого города v собираем расстояния до всех типов товаров (dist[0..k-1][v]) в массив.</p>
     <p>Сортируем расстояния и суммируем s наименьших — это и будет минимальная стоимость доставки товаров для проведения ярмарки в городе v.</p>
@@ -1815,6 +1821,127 @@ int main() {
     </ul>
     <p>Во втором примере разложить пасьянс никак нельзя.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/208/problem/B" target="_blank">Задача B</a>
+      <br><a href="https://codeforces.com/contest/208" target="_blank">Codeforces Round 130 (Div. 2) 2012-07-23</a>
+    </div>
+
+    <p>Есть n стопок (в начале по 1 карте). За один ход можно переместить самую правую стопку (с номером x) на стопку x-1 или x-3, если:</p>
+    <ol>
+      <li>такие стопки существуют;</li>
+      <li>верхние карты этих стопок совпадают либо по масти, либо по достоинству.</li>
+    </ol>
+    <p>Цель — собрать все карты в одну стопку.</p>
+    <p>Так как мы всегда перекладываем целую правую стопку на другую, то стопка может быть представлена одной картой, определяющей, можно ли её на что-то положить — это её верхняя карта.</p>
+    <p>Если мы храним только верхние карты стопок (а остальные нас не интересуют для сравнения при ходах), то состояние — это просто последовательность из верхних карт слева направо.
+    Это отлично подходит для BFS — n ≤ 52, но стопок максимум 52, значит состояний теоретически много, но на практике меньше.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;set&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+// Кодируем карту в число 0..51
+int cardToInt(const string& card) {
+  string ranks = "23456789TJQKA";
+  string suits = "SDHC";
+  int r = ranks.find(card[0]);
+  int s = suits.find(card[1]);
+  return r * 4 + s;
+}
+
+// Можно ли положить карту a на карту b
+bool canPlace(int a, int b) {
+  int rankA = a / 4, suitA = a % 4;
+  int rankB = b / 4, suitB = b % 4;
+  return (rankA == rankB) || (suitA == suitB);
+}
+
+// Кодируем состояние в строку для set
+string encode(const vector&lt;int&gt;& state) {
+  string res;
+  for (int x : state) {
+    res.push_back((char)x);
+  }
+  return res;
+}
+
+int main() {
+  int n;
+  cin >> n;
+  vector&lt;int&gt; start(n);
+  for (int i = 0; i &lt; n; ++i) {
+    string s;
+    cin >> s;
+    start[i] = cardToInt(s);
+  }
+
+  if (n == 1) {
+    cout &lt;&lt; "YES" &lt;&lt; endl;
+    return 0;
+  }
+
+  queue&lt;vector&lt;int&gt; &gt; q;
+  set&lt;string&gt; visited;
+
+  q.push(start);
+  visited.insert(encode(start));
+
+  bool found = false;
+
+  while (!q.empty()) {
+    vector&lt;int&gt; cur = q.front();
+    q.pop();
+
+    int len = cur.size();
+    int lastIdx = len - 1;
+
+    // Перекладываем на x-1
+    if (lastIdx - 1 >= 0 && canPlace(cur[lastIdx], cur[lastIdx - 1])) {
+      vector&lt;int&gt; next = cur;
+      next[lastIdx - 1] = next[lastIdx]; // новая верхняя
+      next.pop_back(); // удаляем последнюю
+      string code = encode(next);
+      if (next.size() == 1) {
+        found = true;
+        break;
+      }
+      if (!visited.count(code)) {
+        visited.insert(code);
+        q.push(next);
+      }
+    }
+
+    // Перекладываем на x-3
+    if (lastIdx - 3 >= 0 && canPlace(cur[lastIdx], cur[lastIdx - 3])) {
+      vector&lt;int&gt; next = cur;
+      next[lastIdx - 3] = next[lastIdx];
+      next.pop_back();
+      string code = encode(next);
+      if (next.size() == 1) {
+        found = true;
+        break;
+      }
+      if (!visited.count(code)) {
+        visited.insert(code);
+        q.push(next);
+      }
+    }
+  }
+
+  cout &lt;&lt; (found ? "YES" : "NO") &lt;&lt; endl;
+
+  return 0;
+}
+</pre>
 </article>
 
 
