@@ -97627,6 +97627,12 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/116/problem/C" target="_blank">Задача C</a>
+      <br><a href="https://codeforces.com/contest/116" target="_blank">Codeforces Round 87 (Div. 2) 2011-09-15</a>
+    </div>
+
     <p>Нужно разбить граф на компоненты связности. В каждой компоненте посчитеть максимальную удаленность узла от корня. В одной компоненте связности можно объединять людей в группы по уровням (нулевой, первый и т.д.) в которых нет начальников. Группы из разных компонент связности тоже можно объединять, т.к. они не являются начальниками друг друга. Ответ будет максимальная удаленность узла от корня.</p>
     <p>Из входных данных соберем список смежности. Создадим вектор векторов, в котором будем хранить человка и его подчиненного или -1 если подчиненного нет.</p>
 <pre>
@@ -97750,6 +97756,12 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/1020/problem/B" target="_blank">Задача B</a>
+      <br><a href="https://codeforces.com/contest/1020" target="_blank">Codeforces Round 503 (по олимпиаде ЛКШ, Div. 2) 2018-08-11</a>
+    </div>
+
 <pre>
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -97843,6 +97855,12 @@ NO
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/1581/problem/B" target="_blank">Задача B</a>
+      <br><a href="https://codeforces.com/contest/1581" target="_blank">Codeforces Round 745 (Div. 2) 2021-09-30</a>
+    </div>
+
     <p>Граф должен быть связным (количество ребер m должно быть не меньше n-1)</p>
     <p>Максимальное количество ребер в простом графе на n вершинах - n(n-1)/2</p>
     <p>Нам нужен диаметр меньше k-1, то есть максимальное расстояние между вершинами должно быть не больше k-2</p>
@@ -97948,6 +97966,12 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/500/problem/A" target="_blank">Задача A</a>
+      <br><a href="https://codeforces.com/contest/500" target="_blank">Codeforces Good Bye 2014 2014-12-30</a>
+    </div>
+
     <p>Транспорт везет из вершины 0 только вперед на определенное число ячеек. Поэтому мы можем попасть в какую-то ячейку, а можем не попасть, то есть проехать мимо нее.</p>
 <pre>
 #include &lt;iostream&gt;
@@ -98520,6 +98544,101 @@ int main() {
 3 5
 </pre>
     <code>0 0 0 1 1 2</code>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/131/problem/D" target="_blank">Задача D</a>
+      <br><a href="https://codeforces.com/contest/131" target="_blank">Codeforces Round 95 (Div. 2) 2011-11-25</a>
+    </div>
+
+    <p>У нас есть n станций и n рёбер, граф связный, и в нём есть ровно один цикл (это следует из теоремы из условия). Значит, фактически граф — это один цикл и деревья, прицепленные к вершинам этого цикла.</p>
+    <p>Найти все вершины, входящие в единственный цикл.</p>
+    <p>Для каждой вершины вычислить минимальное расстояние до любой вершины из цикла (BFS или DFS от всех вершин цикла одновременно)</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  vector&lt;vector&lt;int&gt; &gt; g(n);
+  vector&lt;int&gt; degree(n, 0);
+
+  for (int i = 0; i &lt; n; i++) {
+    int x, y;
+    cin >> x >> y;
+    x--; y--;
+    g[x].push_back(y);
+    g[y].push_back(x);
+    degree[x]++;
+    degree[y]++;
+  }
+
+  // Найти цикл: удаляем листья (degree == 1)
+  queue&lt;int&gt; q;
+  for (int i = 0; i &lt; n; i++) {
+    if (degree[i] == 1) {
+      q.push(i);
+    }
+  }
+
+  while (!q.empty()) {
+    int u = q.front();
+    q.pop();
+    degree[u] = 0; // удаляем вершину
+    for (int v : g[u]) {
+      if (degree[v] > 1) {
+        degree[v]--;
+        if (degree[v] == 1) {
+          q.push(v);
+        }
+      }
+    }
+  }
+
+  // Теперь degree[i] > 1 для вершин цикла, degree[i] == 0 для удаленных листьев.
+  // Но степень могла стать 0 у листьев, а у цикла осталась >=2.
+  // Однако после удаления листьев степени вершин в цикле уменьшаются, но остаются >=2.
+  // Поэтому для поиска цикла берем degree[i] >= 2.
+
+  vector&lt;int&gt; dist(n, -1);
+  queue&lt;int&gt; bfs_q;
+
+  for (int i = 0; i &lt; n; i++) {
+    if (degree[i] >= 2) { // вершина цикла
+      dist[i] = 0;
+      bfs_q.push(i);
+    }
+  }
+
+  // BFS от всех вершин цикла
+  while (!bfs_q.empty()) {
+    int u = bfs_q.front();
+    bfs_q.pop();
+    for (int v : g[u]) {
+      if (dist[v] == -1) {
+        dist[v] = dist[u] + 1;
+        bfs_q.push(v);
+      }
+    }
+  }
+
+  for (int i = 0; i &lt; n; i++) {
+    cout &lt;&lt; dist[i] &lt;&lt; " ";
+  }
+  cout &lt;&lt; endl;
+
+  return 0;
+}
+</pre>
   </details>
 </article>
 
