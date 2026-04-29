@@ -63239,6 +63239,116 @@ YES
 1 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/9/problem/E" target="_blank">Задача 9E</a>
+    <br><a href="https://codeforces.com/contest/9" target="_blank">Codeforces Beta Round 9 2010-04-11</a>
+  </div>
+
+  <p>Нам нужно из имеющегося графа сделать интересный граф, то есть:</p>
+  <p>Каждая вершина принадлежит ровно одному циклу</p>
+  <p>Этот цикл проходит через все вершины графа ровно один раз</p>
+  <p>Степень каждой вершины в таком графе = 2 (ровно два ребра)</p>
+  <p>По сути, интересный граф — это один большой цикл, проходящий через все вершины.</p>
+  <p>Если рёбер больше, чем вершин, то в цикле неизбежно будут вершины со степенью >2 → сразу NO.</p>
+  <p>Каждая вершина не может иметь степень больше 2 (иначе она будет принадлежать нескольким циклам).</p>
+  <p>Если вершины уже в одной компоненте, добавление ребра создаст цикл → увеличиваем cycle_count. Иначе объединяем компоненты</p>
+  <p>Если есть ровно один цикл и количество рёбер = n (ровно столько нужно для цикла), то граф уже готов.</p>
+  <p>Первый проход — соединяем разные компоненты: Ищем вершины с degree &lt; 2 из разных компонент и соединяем их.</p>
+  <p>Второй проход — соединяем оставшиеся в одной компоненте:</p>
+  <p>Соединяем все вершины, у которых ещё degree < 2, в порядке от больших к меньшим для лексикографической минимальности.</p>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;functional&gt;
+using namespace std;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  vector&lt;int&gt; parent(n + 1), degree(n + 1);
+  for (int i = 1; i &lt;= n; ++i) {
+    parent[i] = i;
+  }
+
+  function&lt;int(int)&gt; find = [&](int x) -> int {
+    if (parent[x] != x) {
+      parent[x] = find(parent[x]);
+    }
+    return parent[x];
+    };
+
+  int cycle_count = 0;
+
+  // Проверка входных данных
+  if (n < m) {
+    cout << "NO\\n";
+    return 0;
+  }
+
+  for (int i = 0; i &lt; m; ++i) {
+    int a, b;
+    cin >> a >> b;
+    degree[a]++;
+    degree[b]++;
+
+    if (degree[a] > 2 || degree[b] > 2) {
+      cout &lt;&lt; "NO\\n";
+      return 0;
+    }
+
+    if (find(a) == find(b)) {
+      cycle_count++;
+    } else {
+      parent[find(a)] = find(b);
+    }
+  }
+
+  // Проверка циклов
+  if (cycle_count > 0) {
+    if (cycle_count == 1 && m == n) {
+      cout &lt;&lt; "YES\\n0\\n";
+    } else {
+      cout &lt;&lt; "NO\\n";
+    }
+    return 0;
+  }
+
+  // Построение ответа
+  cout &lt;&lt; "YES\\n" &lt;&lt; n - m &lt;&lt; "\\n";
+
+  // Соединяем разные компоненты
+  for (int i = 1; i &lt; n; ++i) {
+    for (int j = i + 1; j &lt;= n; ++j) {
+      if (degree[i] &lt; 2 && degree[j] &lt; 2 && find(i) != find(j)) {
+        cout &lt;&lt; i &lt;&lt; " " &lt;&lt; j &lt;&lt; "\\n";
+        degree[i]++;
+        degree[j]++;
+        parent[find(i)] = find(j);
+      }
+    }
+  }
+
+  // Соединяем оставшиеся вершины в одной компоненте
+  for (int i = 1; i &lt;= n; ++i) {
+    for (int j = n; j >= i; --j) {
+      if (degree[i] &lt; 2 && degree[j] &lt; 2) {
+        cout &lt;&lt; i &lt;&lt; " " &lt;&lt; j &lt;&lt; "\\n";
+        degree[i]++;
+        degree[j]++;
+      }
+    }
+  }
+
+  return 0;
+}
+</pre>
+</details>
 `;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
