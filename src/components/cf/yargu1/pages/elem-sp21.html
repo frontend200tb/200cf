@@ -1403,6 +1403,12 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/104/problem/C" target="_blank">Задача C</a>
+      <br><a href="https://codeforces.com/contest/104" target="_blank">Codeforces Beta Round 80 (Div. 2) 2011-08-07</a>
+    </div>
+
     <p>Мы должны найти как минимум три корневых дерева, вершины которого соединены в одном простом цикле. Мы должны проверить следующие два условия. 1. Граф должен быть связанным, то есть из любой вершины можно попасть в любую вершину. 2. В графе должен быть цикл с тремя или более элементами.</p>
 <pre>
 #include &lt;iostream&gt;
@@ -1430,11 +1436,6 @@ void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
 }
 
 int main() {
-  // ускорение ввода-вывода
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-
-  // ввод данных
   int n; // число вершин
   int m; // число ребер
   cin >> n >> m;
@@ -1476,7 +1477,7 @@ int main() {
 
   // вывод результата
   if (flag == true && count == n && n == m) {
-    cout &lt;&lt; "FHTANG!";
+    cout &lt;&lt; "FHTAGN!";
   } else {
     cout &lt;&lt; "NO";
   }

@@ -99032,6 +99032,7 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
     <div>
       <a href="https://codeforces.com/gym/104454/problem/G" target="_blank">Задача G</a>
       <br><a href="https://codeforces.com/gym/104454" target="_blank">ICPC Central Russia Regional Contest, 2021</a>
@@ -100940,6 +100941,12 @@ int main() {
 
   <details>
     <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/104/problem/C" target="_blank">Задача C</a>
+      <br><a href="https://codeforces.com/contest/104" target="_blank">Codeforces Beta Round 80 (Div. 2) 2011-08-07</a>
+    </div>
+
     <p>Мы должны найти как минимум три корневых дерева, вершины которого соединены в одном простом цикле. Мы должны проверить следующие два условия. 1. Граф должен быть связанным, то есть из любой вершины можно попасть в любую вершину. 2. В графе должен быть цикл с тремя или более элементами.</p>
 <pre>
 #include &lt;iostream&gt;
@@ -100967,11 +100974,6 @@ void dfs(vector&lt;vector&lt;int&gt; &gt;& G,
 }
 
 int main() {
-  // ускорение ввода-вывода
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-
-  // ввод данных
   int n; // число вершин
   int m; // число ребер
   cin >> n >> m;
@@ -101013,7 +101015,7 @@ int main() {
 
   // вывод результата
   if (flag == true && count == n && n == m) {
-    cout &lt;&lt; "FHTANG!";
+    cout &lt;&lt; "FHTAGN!";
   } else {
     cout &lt;&lt; "NO";
   }
@@ -134022,6 +134024,9 @@ var code = `<article class="article">
   <h2>Содержание</h2>
 
   <p><a href="#p1">Графы 7. Эйлеров цикл и путь</a></p>
+  <p>
+    <a href="#task1">Задача A. Проверка на эйлеровость</a>
+  </p>
 
 </article>
 
@@ -134162,7 +134167,99 @@ void delete_cycle(vector&lt;vector&lt;int&gt; &gt; &G,
 
   <p>2 способ. Можно сделать набор плохих ребер.</p>
   <code>set&lt;pair&lt;int, int&gt; &gt; set_bad;</code>
-</article>`;
+</article>
+
+
+<!-- Задача A. Проверка на эйлеровость -->
+<article class="article">
+  <div class="anchor" id="task1"></div>
+  <h3>Задача A. Проверка на эйлеровость</h3>
+
+<pre>
+int n, m;
+cin >> n >> m;
+vector&lt;int&gt; level(n+1);
+
+// список смежности
+vector&lt;vector&lt;int&gt; &gt; G(n+1);
+int a, b; // две вершины одного ребра
+
+// соберем список смежности
+for (int i = 0; i &lt; m; i++) {
+  cin >> a >> b;
+  level[a]++;
+  level[b]++;
+  G[a].push_back(b);
+  G[b].push_back(a);
+}
+
+queue&lt;int&gt; q;
+vector&lt;int&gt; Mark(n+1);
+
+// для построения Эйлерова цикла
+// можно начать с любой вершины
+q.push(1);
+Mark[1] = 1;
+
+// запускаем bfs
+while (q.size() > 0) {
+  int t = q.front();
+  q.pop();
+  for (int i = 0; G[t].size() > 0; i++) {
+    if (Mark[G[t][i]] == 0) {
+      Mark[G[t][i]] = 1;
+      q.push(G[t][i]);
+    }
+  }
+}
+
+int flag = 0;
+
+// проверим что все вершины достижимы
+// и их степень равна 2
+for (int i = 1; i &lt;= n; i++) {
+  if (Mark[i] == 0 || level[i] % 2 == 1) {
+    flag = 1;
+  }
+}
+
+if (flag) {
+  cout &lt;&lt; "NO\\n"; // эйлерова цикла нет
+} else {
+  cout &lt;&lt; "YES\\n"; // эйлеров цикл есть
+
+  // выведем эйлеров цикл в лексикографическом порядке
+  stack&lt;int&gt; st;
+  vector&lt;int&gt; res; // вектор ответа
+  st.push_back(1); // самый младший элемент
+  while(!st.size()) {
+    int v = st.top();
+    if (level[v] == 0) {
+      res.push_back(v);
+      st.pop();
+    } else {
+      // vector&lt;set&lt;int&gt; &gt;
+      int q = -1;
+      int index;
+      for (auto it = G[v].begin(); it != G[v].end; it++) {
+        q = *it;
+        break;
+      }
+      G[v].erase(q);
+      G[q].erase(v);
+      level[v]--;
+      level[q]--;
+      st.push(q);
+    }
+  }
+  for (int i = res.size() - 1; i >= 0; i--) {
+    cout &lt;&lt; res[i] &lt;&lt; ' ';
+  }
+}
+
+</pre>
+</article>
+`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 

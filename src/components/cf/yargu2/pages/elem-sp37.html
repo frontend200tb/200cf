@@ -17,6 +17,9 @@
   <h2>Содержание</h2>
 
   <p><a href="#p1">Графы 7. Эйлеров цикл и путь</a></p>
+  <p>
+    <a href="#task1">Задача A. Проверка на эйлеровость</a>
+  </p>
 
 </article>
 
@@ -157,4 +160,95 @@ void delete_cycle(vector&lt;vector&lt;int&gt; &gt; &G,
 
   <p>2 способ. Можно сделать набор плохих ребер.</p>
   <code>set&lt;pair&lt;int, int&gt; &gt; set_bad;</code>
+</article>
+
+
+<!-- Задача A. Проверка на эйлеровость -->
+<article class="article">
+  <div class="anchor" id="task1"></div>
+  <h3>Задача A. Проверка на эйлеровость</h3>
+
+<pre>
+int n, m;
+cin >> n >> m;
+vector&lt;int&gt; level(n+1);
+
+// список смежности
+vector&lt;vector&lt;int&gt; &gt; G(n+1);
+int a, b; // две вершины одного ребра
+
+// соберем список смежности
+for (int i = 0; i &lt; m; i++) {
+  cin >> a >> b;
+  level[a]++;
+  level[b]++;
+  G[a].push_back(b);
+  G[b].push_back(a);
+}
+
+queue&lt;int&gt; q;
+vector&lt;int&gt; Mark(n+1);
+
+// для построения Эйлерова цикла
+// можно начать с любой вершины
+q.push(1);
+Mark[1] = 1;
+
+// запускаем bfs
+while (q.size() > 0) {
+  int t = q.front();
+  q.pop();
+  for (int i = 0; G[t].size() > 0; i++) {
+    if (Mark[G[t][i]] == 0) {
+      Mark[G[t][i]] = 1;
+      q.push(G[t][i]);
+    }
+  }
+}
+
+int flag = 0;
+
+// проверим что все вершины достижимы
+// и их степень равна 2
+for (int i = 1; i &lt;= n; i++) {
+  if (Mark[i] == 0 || level[i] % 2 == 1) {
+    flag = 1;
+  }
+}
+
+if (flag) {
+  cout &lt;&lt; "NO\n"; // эйлерова цикла нет
+} else {
+  cout &lt;&lt; "YES\n"; // эйлеров цикл есть
+
+  // выведем эйлеров цикл в лексикографическом порядке
+  stack&lt;int&gt; st;
+  vector&lt;int&gt; res; // вектор ответа
+  st.push_back(1); // самый младший элемент
+  while(!st.size()) {
+    int v = st.top();
+    if (level[v] == 0) {
+      res.push_back(v);
+      st.pop();
+    } else {
+      // vector&lt;set&lt;int&gt; &gt;
+      int q = -1;
+      int index;
+      for (auto it = G[v].begin(); it != G[v].end; it++) {
+        q = *it;
+        break;
+      }
+      G[v].erase(q);
+      G[q].erase(v);
+      level[v]--;
+      level[q]--;
+      st.push(q);
+    }
+  }
+  for (int i = res.size() - 1; i >= 0; i--) {
+    cout &lt;&lt; res[i] &lt;&lt; ' ';
+  }
+}
+
+</pre>
 </article>
