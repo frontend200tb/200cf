@@ -100647,6 +100647,76 @@ int main() {
 
     <p>Во втором примере не существует способа раздать вершины так, чтобы удовлетворить и Пари, и Ария.</p>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/687/problem/A" target="_blank">Задача A</a>
+      <br><a href="https://codeforces.com/contest/687" target="_blank">Codeforces Round 360 (Div. 1)</a>
+    </div>
+
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+const int N = 120021;
+
+vector &lt;int&gt; vc[2];
+vector &lt;int&gt; g[N];
+int mark[N];
+
+bool dfs(int v, int color = 2) {
+	mark[v] = color;
+	vc[color - 1].push_back(v);
+	for (int u : g[v]) {
+		if (!mark[u] && dfs(u, 3 - color)) {
+			return 1;
+		}
+		if (mark[u] != 3 - color) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+int main() {
+	int n; // число вершин
+	int m; // числе ребер
+	cin >> n >> m;
+	int a, b; // две вершины одного ребра
+	for (int i = 0; i &lt; m; i++)	{
+		cin >> a >> b;
+		a--;
+		b--;
+		g[a].push_back(b);
+		g[b].push_back(a);
+	}
+
+	for (int i = 0; i &lt; n; i++) {
+		if (!mark[i]) {
+			if (g[i].empty()) {
+				continue;
+			}
+			if (dfs(i)) {
+				cout &lt;&lt; -1 &lt;&lt; endl;
+				return 0;
+			}
+		}
+	}
+
+	for (int i = 0; i &lt; 2; i++)	{
+		cout &lt;&lt; vc[i].size() &lt;&lt; endl;
+		for (int v : vc[i]) {
+			cout &lt;&lt; v + 1 &lt;&lt; " ";
+		}
+		cout &lt;&lt; endl;
+	}
+}
+</pre>
+  </details>
 </article>
 
 
@@ -100881,6 +100951,16 @@ int main() {
 </pre>
     <code>3</code>
     <p>Под условия задачи подходят две группы людей: 1,2,3 и 4,5, при этом ответом будет размер наибольшей из этих групп. Группа 6,7,8,9 не подходит, так как в ней есть люди 7 и 9, которые не нравятся друг другу. Группа 1,2,3,4,5 также не подходит, так как не все ее члены связаны цепью общих друзей (например, люди 2 и 5 не связаны).</p>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+
+    <div>
+      <a href="https://codeforces.com/contest/177/problem/C1" target="_blank">Задача C1</a>
+      <br><a href="https://codeforces.com/contest/177" target="_blank">ABBYY Cup 2.0 - Easy</a>
+    </div>
+
   </details>
 </article>
 
