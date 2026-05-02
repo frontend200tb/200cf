@@ -56,7 +56,7 @@
     <br><a href="https://codeforces.com/contest/9" target="_blank">Codeforces Beta Round 9 2010-04-11</a>
   </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;cmath&gt;
@@ -81,7 +81,8 @@ int main() {
   double ti = 0xfffffff;
 
   for (int i = 1; i &lt; n; i++) {
-    double tt = (A[i] - A[1]) / vb + sqrt((A[i] - x) * (A[i] - x) + y * y) / vs;
+    double tt = (A[i] - A[1]) / vb +
+      sqrt((A[i] - x) * (A[i] - x) + y * y) / vs;
 
     if (abs(tt - ti) &lt; 0.0000001) {
       if (abs(A[i] - x) &lt; abs(A[out] - x))

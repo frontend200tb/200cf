@@ -52,7 +52,7 @@
 
   <p>Если строка палиндром → палиндромность = 1 + палиндромность её половины</p>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;cstdio&gt;
 #include &lt;cstring&gt;
 #include &lt;algorithm&gt;
@@ -74,7 +74,9 @@ int main() {
   int l = 0, r = -1;
   for (int i = 0; i &lt; n; ++i) {
     int k = (i > r) ? 1 : min(d1[l + r - i], r - i + 1);
-    while (i - k >= 0 && i + k &lt; n && s[i - k] == s[i + k]) ++k;
+    while (i - k >= 0 && i + k &lt; n && s[i - k] == s[i + k]) {
+      ++k;
+    }
     d1[i] = k--;
     if (i + k > r) {
       l = i - k;
@@ -86,7 +88,9 @@ int main() {
   l = 0, r = -1;
   for (int i = 0; i &lt; n; ++i) {
     int k = (i > r) ? 0 : min(d2[l + r - i + 1], r - i + 1);
-    while (i - k - 1 >= 0 && i + k &lt; n && s[i - k - 1] == s[i + k]) ++k;
+    while (i - k - 1 >= 0 && i + k &lt; n && s[i - k - 1] == s[i + k]) {
+      ++k;
+    }
     d2[i] = k--;
     if (i + k > r) {
       l = i - k - 1;

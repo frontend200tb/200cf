@@ -30,6 +30,9 @@ import in45      from '../pages/p100/elem-45-sko3';
 import in134     from '../pages/elem-134-TRound3';
 import in230     from '../pages/elem-230-Round142';
 import in313     from '../pages/elem-313-Round186';
+import in381     from '../pages/elem-381-Round223';
+import in520     from '../pages/elem-520-Round295';
+import in580     from '../pages/elem-580-Round321';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -72,6 +75,10 @@ export default function pageLink(asideItems, currentContent) {
             case 134: in134(); break;
             case 230: in230(); break;
             case 313: in313(); break;
+            case 381: in381(); break;
+            case 520: in520(); break;
+            case 580: in580(); break;
+            default: break;
           }
         } else {
           // если задачи на странице
@@ -80,5 +87,5 @@ export default function pageLink(asideItems, currentContent) {
         }
       }
     });
-  })
+  });
 }

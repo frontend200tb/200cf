@@ -46,9 +46,10 @@
     <summary>Решение</summary>
 
     <div>
-      <a href="https://codeforces.com/contest/106/problem/C" target="_blank">Задача C</a>
-      <br><a href="https://codeforces.com/contest/106" target="_blank">Codeforces Beta Round 82 (Div. 2)</a>
+      <a href="https://codeforces.com/contest/106/problem/C" target="_blank">Задача 106C</a>
+      <br><a href="https://codeforces.com/contest/106" target="_blank">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>
     </div>
+
     <h4>Пример 3</h4>
 <pre>
 10 1 5 2
@@ -63,7 +64,7 @@
 </pre>
     <code>24</code>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -78,9 +79,12 @@ int main() {
   cin >> n >> m >> c0 >> d0;
 
   vector&lt;int&gt; A(m+1); // число грамм i-ой начинки
-  vector&lt;int&gt; B(m+1); // число грамм i-ой начинки для одной булочки
-  vector&lt;int&gt; C(m+1); // число грамм теста с i-ой начинкой для одной булочки
+  vector&lt;int&gt; B(m+1); // число грамм i-ой начинки
+                            // для одной булочки
+  vector&lt;int&gt; C(m+1); // число грамм теста с i-ой
+                            // начинкой для одной булочки
   vector&lt;int&gt; D(m+1); // цена булочки с i-ой начинкой
+
   for (int i = 1; i &lt;= m; i++) {
     cin >> A[i] >> B[i] >> C[i] >> D[i];
   }

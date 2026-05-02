@@ -44,7 +44,7 @@
   <p>Количество BST с n вершинами, имеющих высоту ровно H, обозначим как count[n][H].</p>
   <p>Нам нужно: sum(count[n][H]) для H от h до n.</p>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;functional&gt;
@@ -56,7 +56,8 @@ int main() {
   cin >> n >> h;
 
   // DP таблица: [количество узлов][высота]
-  vector&lt;vector&lt;long long&gt; &gt; dp(n + 1, vector&lt;long long&gt;(n + 1, -1));
+  vector&lt;vector&lt;long long&gt; &gt; dp(n + 1,
+    vector&lt;long long&gt;(n + 1, -1));
 
   // Инициализация базовых случаев
   dp[0][0] = 1;
@@ -66,7 +67,8 @@ int main() {
   }
 
   // Рекурсивная лямбда-функция
-  function&lt;long long(int, int)&gt; cal = [&](int nodes, int height) -> long long {
+  function&lt;long long(int, int)&gt; cal =
+    [&](int nodes, int height) -> long long {
     if (dp[nodes][height] != -1)
       return dp[nodes][height];
 

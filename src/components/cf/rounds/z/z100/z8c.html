@@ -85,7 +85,7 @@
   <p>6. Ключевая оптимизация в оригинальном коде</p>
   <p>Фиксация firstFree (первого невзятого предмета) важна, чтобы каждое состояние достигалось единственным способом. Это позволяет не хранить дополнительную информацию и упрощает восстановление ответа.</p>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -140,8 +140,10 @@ int main() {
 
   // DP массивы
   const int INF = 1e9;
-  vector&lt;int&gt; dp(1 &lt;&lt; n, INF);  // минимальное время для каждого подмножества
-  vector&lt;pair&lt;int, int&gt; &gt; lastMove(1 &lt;&lt; n, { -1, -1 });  // последние взятые предметы
+  // минимальное время для каждого подмножества
+  vector&lt;int&gt; dp(1 &lt;&lt; n, INF);
+  // последние взятые предметы
+  vector&lt;pair&lt;int, int&gt; &gt; lastMove(1 &lt;&lt; n, { -1, -1 });
 
   // Базовый случай: пустое множество
   dp[0] = 0;
@@ -150,7 +152,8 @@ int main() {
   for (int mask = 0; mask &lt; (1 &lt;&lt; n) - 1; ++mask) {
     if (dp[mask] == INF) continue;
 
-    // Находим первый невзятый предмет (оптимизация для однозначности)
+    // Находим первый невзятый предмет
+    // (оптимизация для однозначности)
     int firstFree = 0;
     while (mask & (1 &lt;&lt; firstFree)) ++firstFree;
 
@@ -159,7 +162,8 @@ int main() {
     int time1 = dp[mask] + 2 * distToBag[firstFree];
     if (dp[newMask1] > time1) {
       dp[newMask1] = time1;
-      lastMove[newMask1] = { firstFree, firstFree };  // оба индекса одинаковые
+      // оба индекса одинаковые
+      lastMove[newMask1] = { firstFree, firstFree };
     }
 
     // Вариант 2: взять два предмета за один рейс
@@ -202,7 +206,8 @@ int main() {
   }
   path.push_back(0);  // начальная позиция у сумки
 
-  // Выводим путь в обратном порядке (т.к. восстанавливали с конца)
+  // Выводим путь в обратном порядке
+  // (т.к. восстанавливали с конца)
   reverse(path.begin(), path.end());
   for (size_t i = 0; i &lt; path.size(); ++i) {
     if (i > 0) cout &lt;&lt; ' ';

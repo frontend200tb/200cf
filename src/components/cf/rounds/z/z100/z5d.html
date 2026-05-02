@@ -38,7 +38,7 @@
     <br><a href="https://codeforces.com/contest/5" target="_blank">Codeforces Beta Round 5 2010-03-20</a>
   </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;cmath&gt;
 #include &lt;iomanip&gt;
@@ -56,17 +56,17 @@ int main() {
   double t = w / a;
   w = min(min(w, v), sqrt(2 * a * d));
   if (2 * a * d + w * w > 2 * v * v) {
-	  t = (d - v * v / a + w * w / a / 2) / v + (2 * v - w) / a;
+    t = (d - v * v / a + w * w / a / 2) / v + (2 * v - w) / a;
   } else {
-	  t = (2 * sqrt(a * d + w * w / 2) - w) / a;
+    t = (2 * sqrt(a * d + w * w / 2) - w) / a;
   }
 
   l = l - d;
   double t2 = (v - w) / a;
   if (l - w * t2 - 0.5 * a * t2 * t2 > 0) {
-	  t2 = t2 + (l - w * t2 - 0.5 * a * t2 * t2) / v;
+    t2 = t2 + (l - w * t2 - 0.5 * a * t2 * t2) / v;
   } else {
-	  t2 = (-w + sqrt(w * w + 2.0 * a * l)) / a;
+    t2 = (-w + sqrt(w * w + 2.0 * a * l)) / a;
   }
 
   cout &lt;&lt; fixed &lt;&lt; setprecision(7) &lt;&lt; t + t2;

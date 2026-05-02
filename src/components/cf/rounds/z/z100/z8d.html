@@ -70,7 +70,7 @@
     <li>Круг с центром S, радиусом rS</li>
   </ul>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;iomanip&gt;
 #include &lt;cmath&gt;
@@ -88,16 +88,32 @@ struct Point {
   constexpr Point() = default;
   constexpr Point(double x_, double y_) : x(x_), y(y_) {}
 
-  Point operator+(const Point& other) const { return { x + other.x, y + other.y }; }
-  Point operator-(const Point& other) const { return { x - other.x, y - other.y }; }
-  Point operator*(double t) const { return { x * t, y * t }; }
-  Point operator/(double t) const { return { x / t, y / t }; }
+  Point operator+(const Point& other) const {
+    return { x + other.x, y + other.y };
+  }
+  Point operator-(const Point& other) const {
+    return { x - other.x, y - other.y };
+  }
+  Point operator*(double t) const {
+    return { x * t, y * t };
+  }
+  Point operator/(double t) const {
+    return { x / t, y / t };
+  }
 
-  double dot(const Point& other) const { return x * other.x + y * other.y; }
-  double cross(const Point& other) const { return x * other.y - y * other.x; }
+  double dot(const Point& other) const {
+    return x * other.x + y * other.y;
+  }
+  double cross(const Point& other) const {
+    return x * other.y - y * other.x;
+  }
 
-  double length() const { return hypot(x, y); }
-  double dist_to(const Point& other) const { return hypot(x - other.x, y - other.y); }
+  double length() const {
+    return hypot(x, y);
+  }
+  double dist_to(const Point& other) const {
+    return hypot(x - other.x, y - other.y);
+  }
 
   bool operator==(const Point& other) const {
     return abs(x - other.x) &lt; EPS && abs(y - other.y) &lt; EPS;
@@ -164,9 +180,11 @@ int main() {
 
     vector&lt;Point&gt; test_points = { cinema, home, shop };
 
-    auto add_intersections = [&](const Point& p1, double r1, const Point& p2, double r2) {
+    auto add_intersections = [&](const Point& p1,
+      double r1, const Point& p2, double r2) {
       auto intersections = intersect_circles(p1, r1, p2, r2);
-      test_points.insert(test_points.end(), intersections.begin(), intersections.end());
+      test_points.insert(test_points.end(),
+        intersections.begin(), intersections.end());
       };
 
     add_intersections(cinema, r_cinema, home, r_home);

@@ -1,6 +1,6 @@
-/*!******************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
-  \******************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \***************************************************************************************************************************************************/
 @charset "UTF-8";
 /*********************
 Global
@@ -87,13 +87,11 @@ Page
 
 a,
 a:visited {
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: #555;
 }
 
 a:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
   color: #865;
   cursor: pointer;
@@ -463,7 +461,6 @@ nav
 }
 .nav a {
   padding: 10px;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 1.2em;
   color: #fff;
@@ -606,7 +603,6 @@ Aside
   font-size: 1rem;
   border: 5px solid white;
   border-radius: 20px;
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
@@ -851,7 +847,6 @@ Article
 }
 .article__contents a {
   font-weight: 700;
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
 }
@@ -859,7 +854,6 @@ Article
   color: #222;
 }
 .article__contents a:hover {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 .article__contents ol {
@@ -994,9 +988,9 @@ Content
   }
 }
 /* Конец Content */
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/Main/Main.component.scss ***!
-  \*******************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Main/Main.component.scss ***!
+  \****************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*********************
 MAIN
@@ -1102,9 +1096,9 @@ main,
             transform: translateX(0);
   }
 }
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/Header/Header.component.scss ***!
-  \***********************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Header/Header.component.scss ***!
+  \********************************************************************************************************************************************************************************/
 @charset "UTF-8";
 .header-fixed {
   position: fixed;
@@ -1176,7 +1170,6 @@ header__1
   margin-left: 5px;
   padding-bottom: 3px;
   color: #fff;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -1216,9 +1209,9 @@ header__2
 }
 /*---------------*/
 /* Конец header__2 */
-/*!*******************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/Header/search-form/_search-form.scss ***!
-  \*******************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Header/search-form/_search-form.scss ***!
+  \****************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*********************
 search-form
@@ -1241,9 +1234,9 @@ search-form
 }
 
 /* Конец search-form */
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/Header/social-icons/_social-icons.scss ***!
-  \*********************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Header/social-icons/_social-icons.scss ***!
+  \******************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*********************
 _social-icons.scss
@@ -1290,13 +1283,13 @@ _social-icons.scss
 }
 
 .social__icon_cf {
-  background-image: url(assets/codeforces.svg);
+  background-image: url(images/codeforces.svg);
   background-repeat: no-repeat;
   background-color: #fff;
 }
 
 .social__icon_dc {
-  background-image: url(assets/discord.svg);
+  background-image: url(images/discord.svg);
   background-repeat: no-repeat;
   background-color: #fff;
 }
@@ -1306,7 +1299,7 @@ _social-icons.scss
 }
 
 .social__icon_lc {
-  background-image: url(assets/leetcode.svg);
+  background-image: url(images/leetcode.svg);
   background-repeat: no-repeat;
 }
 
@@ -1323,9 +1316,9 @@ _social-icons.scss
 }
 
 /* Конец _social-icons.scss */
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/Header/settings/_settings.scss ***!
-  \*************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Header/settings/_settings.scss ***!
+  \**********************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*********************
 set-btn.scss
@@ -1334,7 +1327,7 @@ set-btn.scss
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-image: url(assets/set_white.svg);
+  background-image: url(images/set_white.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1424,7 +1417,7 @@ theme-btn {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-image: url(assets/day_and_night.svg);
+  background-image: url(images/day_and_night.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1450,7 +1443,7 @@ snow-btn {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-image: url(assets/snowflake_white.svg);
+  background-image: url(images/snowflake_white.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1473,7 +1466,7 @@ snow-btn {
   }
 }
 .snow {
-  background-image: url(assets/snowflake.png), url(assets/snowflake3.png), url(assets/snowflake2.png);
+  background-image: url(images/snowflake.png), url(images/snowflake3.png), url(images/snowflake2.png);
   height: 100%;
   -webkit-animation: snow 20s linear infinite;
           animation: snow 20s linear infinite;
@@ -1494,7 +1487,7 @@ search-btn {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-image: url(assets/search-svgrepo-com.svg);
+  background-image: url(images/search-svgrepo-com.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1532,9 +1525,9 @@ settings
 }
 /*---------------*/
 /* Конец settings */
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/Footer/Footer.component.scss ***!
-  \***********************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Footer/Footer.component.scss ***!
+  \********************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*********************
 Footer
@@ -1560,9 +1553,146 @@ Footer
   }
 }
 /* Конец Footer */
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./src/components/BtnUp/BtnUp.component.scss ***!
-  \*********************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/highlight.js/styles/github-dark.css ***!
+  \*************************************************************************************************************************************************************************************/
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72;
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff;
+}
+
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff;
+}
+
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657;
+}
+
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e;
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787;
+}
+
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9;
+}
+
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
+  font-weight: bold;
+}
+
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60;
+}
+
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic;
+}
+
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}
+/*!******************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/BtnUp/BtnUp.component.scss ***!
+  \******************************************************************************************************************************************************************************/
 .btn-up {
   padding: 10px 20px;
   position: fixed;

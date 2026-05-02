@@ -39,7 +39,13 @@
 
 <details>
   <summary>Решение</summary>
-<pre>
+
+  <div>
+    <a href="https://codeforces.com/contest/38/problem/E" target="_blank">Задача 38E</a>
+    <br><a href="https://codeforces.com/contest/38" target="_blank">Codeforces Beta Round 38 2010-10-30</a>
+  </div>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;cmath&gt;
 #include &lt;algorithm&gt;
@@ -60,7 +66,8 @@ ll getans(int p, int l) {
   ll& ans = table[p][l];
   if (ans != -1)
     return ans;
-  ans = min(getans(p + 1, p) + mas[p].second, getans(p + 1, l) + mas[p].first - mas[l].first);
+  ans = min(getans(p + 1, p) + mas[p].second, getans(p + 1, l) +
+    mas[p].first - mas[l].first);
   return ans;
 }
 

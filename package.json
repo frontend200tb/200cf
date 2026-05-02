@@ -1,14 +1,49 @@
 {
-  "name": "200cf",
+  "name": "200tb-frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend проект 200TB Web Studio",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack server --mode development --open",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development"
+    "serve": "webpack serve --mode development --open",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Иван Каширин",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "postcss-preset-env": "^10.4.0",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "webpack": "^5.102.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "highlight.js": "^11.11.1"
+  }
 }

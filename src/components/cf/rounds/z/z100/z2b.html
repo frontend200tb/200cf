@@ -60,7 +60,8 @@ DDRR
       <li>Собирает путь в обратном порядке</li>
     </ul>
     <p>Из двух путей (с минимальными двойками и минимальными пятерками) выбирается тот, который дает меньшее количество нулей</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -85,13 +86,16 @@ int get_matrix(bool which, int r, int c) {
 }
 
 // 2 = false, 5 = true
-string find_path(int r, int c, bool which, vector&lt;vector&lt;int&gt; &gt;& mx) {
+string find_path(int r, int c, bool which,
+  vector&lt;vector&lt;int&gt; &gt;& mx) {
   string path = "";
   while (r || c) {
-    if (r > 0 && mx[r][c] - get_matrix(which, r, c) == mx[r - 1][c]) {
+    if (r > 0 && mx[r][c] -
+      get_matrix(which, r, c) == mx[r - 1][c]) {
       r--;
       path = "D" + path;
-    } else if (c > 0 && mx[r][c] - get_matrix(which, r, c) == mx[r][c - 1]) {
+    } else if (c > 0 && mx[r][c] -
+      get_matrix(which, r, c) == mx[r][c - 1]) {
       c--;
       path = "R" + path;
     }
@@ -107,7 +111,8 @@ int main() {
   bool zero = false;
   int zj;
 
-  matrix = vector&lt;vector&lt;pair&lt;int, int&gt; &gt; &gt;(n, vector&lt;pair&lt;int, int&gt; &gt;(n));
+  matrix = vector&lt;vector&lt;pair&lt;int, int&gt; &gt; &gt;(n,
+    vector&lt;pair&lt;int, int&gt; &gt;(n));
   vector&lt;vector&lt;int&gt; &gt; m2(n, vector&lt;int&gt;(n, MAX));
   vector&lt;vector&lt;int&gt; &gt; m5(n, vector&lt;int&gt;(n, MAX));
 
@@ -153,8 +158,11 @@ int main() {
       path = path + "R";
     }
   } else {
-    if (m5[n - 1][n - 1] == mini) path = find_path(n - 1, n - 1, true, m5);
-    else if (m2[n - 1][n - 1] == mini) path = find_path(n - 1, n - 1, false, m2);
+    if (m5[n - 1][n - 1] == mini) {
+      path = find_path(n - 1, n - 1, true, m5);
+    } else if (m2[n - 1][n - 1] == mini) {
+      path = find_path(n - 1, n - 1, false, m2);
+    }
   }
 
   if (mini &lt; 0) {

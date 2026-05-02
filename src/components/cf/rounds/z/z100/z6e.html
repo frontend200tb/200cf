@@ -67,7 +67,7 @@
 
   <p>Сохранение всех отрезков максимальной длины — при нахождении большей длины очищаем вектор и добавляем новый отрезок; при равной максимальной длине добавляем в вектор.</p>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;deque&gt;
@@ -85,7 +85,8 @@ int main() {
   }
 
   deque&lt;int&gt; minDeq, maxDeq;
-  vector&lt;pair&lt;int, int&gt; &gt; period; // периоды с максимальным числом книг
+  // периоды с максимальным числом книг
+  vector&lt;pair&lt;int, int&gt; &gt; period;
   int maxLen = 0;
 
   int p1 = 1; // левый указатель

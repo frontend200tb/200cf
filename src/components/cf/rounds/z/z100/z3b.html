@@ -35,11 +35,9 @@
     <br><a href="https://codeforces.com/contest/3" target="_blank">Codeforces Beta Round 3 2010-03-07</a>
   </div>
 
-  <details>
-    <summary>Решение</summary>
-<pre>
-#include &lt;iostream>
-#include &lt;algorithm>
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
 
 using namespace std;
 
@@ -50,7 +48,8 @@ struct Node {
   bool operator&lt;(Node a)const {
     return a.v &lt; v;
   }
-}vone[M], vtwo[M];
+} vone[M], vtwo[M];
+
 int so[M], st[M];
 
 int main() {
@@ -69,6 +68,7 @@ int main() {
       cin >> vtwo[ntwo++].v;
     }
   }
+
   if (none == 0 && v &lt; 2) {
     cout &lt;&lt; "0\n\n";
     return 0;
@@ -99,6 +99,7 @@ int main() {
     }
     now -= 2;
   }
+
   if (ma == 0)
     ma = so[none] + st[ntwo];
   cout &lt;&lt; ma &lt;&lt; '\n';
@@ -110,5 +111,4 @@ int main() {
   cout &lt;&lt; '\n';
 }
 </pre>
-  </details>
 </details>

@@ -51,7 +51,13 @@ First
 
 <details>
   <summary>Решение</summary>
-<pre>
+
+  <div>
+    <a href="https://codeforces.com/contest/38/problem/F" target="_blank">Задача 38F</a>
+    <br><a href="https://codeforces.com/contest/38" target="_blank">Codeforces Beta Round 38 2010-10-30</a>
+  </div>
+
+<pre class="language-cpp">
 #include &lt;iostream>
 #include &lt;vector>
 #include &lt;map>
@@ -118,7 +124,8 @@ iii getans(string s) {
       }
       bonus *= bm;
       bonus += z;
-      ans = max(ans, make(1 ^ o.first, -o.second.second + bonus, -o.second.first));
+      ans = max(ans, make(1 ^ o.first, -o.second.second +
+        bonus, -o.second.first));
     }
   }
 
