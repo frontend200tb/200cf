@@ -1402,6 +1402,63 @@ int main() {
 </pre>
     <code>1</code>
   </details>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Нам нужно найти количество связных компонент (преступных сообществ), размер которых больше 1, то есть в них хотя бы 2 преступника.</p>
+
+    <p>Один преступник сам по себе сообществом не считается.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+void dfs(int v, vector<bool>& visited,
+  const vector<vector<int>>& graph, int& count) {
+  visited[v] = true;
+  count++;
+  for (int to : graph[v]) {
+    if (!visited[to]) {
+      dfs(to, visited, graph, count);
+    }
+  }
+}
+
+int main() {
+  int N, M;
+  cin >> N >> M;
+
+  vector<vector<int>> graph(N);
+
+  for (int i = 0; i < M; i++) {
+    int x, y;
+    cin >> x >> y;
+    graph[x].push_back(y);
+    graph[y].push_back(x);
+  }
+
+  vector<bool> visited(N, false);
+  int stars = 0;
+
+  for (int i = 0; i < N; i++) {
+    if (!visited[i]) {
+      int componentSize = 0;
+      dfs(i, visited, graph, componentSize);
+      if (componentSize > 1) {
+        stars++;
+      }
+    }
+  }
+
+  cout << stars << endl;
+
+  return 0;
+}
+</pre>
+  </details>
 </article>
 
 
