@@ -38,7 +38,7 @@
 </details>
 
 <details>
-  <summary>Решение неправильный ответ на тесте 16</summary>
+  <summary>Решение</summary>
 
   <div>
     <a href="https://codeforces.com/contest/4/problem/D" target="_blank">Задача 4D</a>
@@ -100,17 +100,17 @@
 </pre>
 
 <pre class="language-cpp">
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;algorithm&gt;
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-bool cmp(const pair&lt;pair&lt;int, int&gt;, int&gt; &a, const pair&lt;pair&lt;int, int&gt;, int&gt; &b) {
+bool cmp(const pair<pair<int, int>, int> &a, const pair<pair<int, int>, int> &b) {
   if (a.first.first == b.first.first) {
-    return a.first.second &lt; b.first.second;
+    return a.first.second < b.first.second;
   }
-  return a.first.first &lt; b.first.first;
+  return a.first.first < b.first.first;
 }
 
 int main() {
@@ -121,8 +121,8 @@ int main() {
   int a, b;
 
   // ширина, высота, номер конверта
-  vector&lt;pair&lt;pair&lt;int, int&gt;, int&gt; &gt; Konv;
-  for (int i = 0; i &lt; n; i++) {
+  vector<pair<pair<int, int>, int > > Konv;
+  for (int i = 0; i < n; i++) {
     cin >> a >> b; // очередной конверт
     if (a > w && b > h) {
       // сохранаяем только те конверты, в который поместится открытка
@@ -134,7 +134,7 @@ int main() {
 
   // если нет ни одного подходящего конверта
   if (m == 0) {
-    cout &lt;&lt; 0;
+    cout << 0;
     return 0;
   }
 
@@ -142,17 +142,17 @@ int main() {
   sort(Konv.begin(), Konv.end(), cmp);
 
   // dp[i] - максимальная длина цепи, заканчивающейся на i-м конверте
-  vector&lt;int&gt; dp(m, 1);
+  vector<int> dp(m, 1);
   // prev[i] - индекс предыдущего конверта в оптимальной цепи для i-го конверта
-  vector&lt;int&gt; prev(m, -1);
+  vector<int> prev(m, -1);
 
   // Находим самую длинную возрастающую последовательность
   // Конверт j может предшествовать конверту i, если:
-  // ширина[j] &lt; ширина[i] И высота[j] &lt; высота[i]
-  for (int i = 0; i &lt; m; i++) {
-    for (int j = 0; j &lt; i; j++) {
-      if (Konv[j].first.first &lt; Konv[i].first.first &&
-        Konv[j].first.second &lt; Konv[i].first.second) {
+  // ширина[j] < ширина[i] И высота[j] < высота[i]
+  for (int i = 0; i < m; i++) {
+    for (int j = 0; j < i; j++) {
+      if (Konv[j].first.first < Konv[i].first.first &&
+        Konv[j].first.second < Konv[i].first.second) {
         // Если нашли более длинную цепь, обновляем
         if (dp[j] + 1 > dp[i]) {
           dp[i] = dp[j] + 1;
@@ -165,7 +165,7 @@ int main() {
   // Находим конверт, на котором заканчивается максимальная цепь
   int maxLen = 0;
   int endIndex = -1;
-  for (int i = 0; i &lt; m; i++) {
+  for (int i = 0; i < m; i++) {
     if (dp[i] > maxLen) {
       maxLen = dp[i];
       endIndex = i;
@@ -173,7 +173,7 @@ int main() {
   }
 
   // Восстанавливаем цепь, идя от последнего конверта к первому
-  vector&lt;int&gt; chain;
+  vector<int> chain;
   int current = endIndex;
   while (current != -1) {
     chain.push_back(Konv[current].second);
@@ -183,10 +183,10 @@ int main() {
   reverse(chain.begin(), chain.end());
 
   // Выводим результат
-  cout &lt;&lt; maxLen &lt;&lt; '\n';
+  cout << maxLen << '\n';
   if (maxLen > 0) {
-    for (int i = 0; i &lt; chain.size(); i++) {
-      cout &lt;&lt; chain[i] &lt;&lt; ' ';
+    for (int i = 0; i < chain.size(); i++) {
+      cout << chain[i] << ' ';
     }
   }
 }

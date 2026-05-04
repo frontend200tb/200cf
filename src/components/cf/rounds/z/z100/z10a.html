@@ -26,3 +26,62 @@
 </pre>
   <code>570</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/10/problem/A" target="_blank">Задача 10A</a>
+    <br><a href="https://codeforces.com/contest/10" target="_blank">Codeforces Beta Round 10 2010.04.15</a>
+  </div>
+
+  <p>Смоделируем процесс работы ноутбука и подсчитаем потребление на всех временных отрезках.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int n; // число временных отрезков
+  int p1, p2, p3; // потребление в режимах 1, 2, 3
+  int t1, t2; // время до следующего режима
+  cin >> n >> p1 >> p2 >> p3 >> t1 >> t2;
+
+  vector<pair<int, int> > A(n);
+  for (int i = 0; i < n; i++) {
+    cin >> A[i].first >> A[i].second;
+  }
+
+  int res = 0; // энергопотребление
+
+  for (int i = 0; i < n - 1; i++) {
+    // первый режим
+    res += p1 * (A[i].second - A[i].first);
+
+    if (A[i + 1].first - A[i].second > t1) {
+      res += p1 * t1;
+
+      // второй режим
+      if (A[i + 1].first - (A[i].second + t1) > t2) {
+        res += p2 * t2;
+
+        // третий режим
+        res += p3 * (A[i + 1].first - (A[i].second + t1 + t2));
+      } else {
+        res += p2 * (A[i + 1].first - (A[i].second + t1));
+      }
+    } else {
+      res += p1 * (A[i + 1].first - A[i].second);
+    }
+  }
+
+  // последний промежуток времени
+  res += p1 * (A[n-1].second - A[n-1].first);
+
+  cout << res;
+}
+</pre>
+</details>
