@@ -78,26 +78,28 @@
 
   <p>Подключение библиотек:</p>
   <code>#include &lt;имя библиотеки&gt;</code>
-  <code>#include &lt;iostream&gt;</code>
-  <code>#include &lt;cstdio&gt;</code>
+  <code class="language-cpp">#include &lt;iostream&gt;</code>
+  <code class="language-cpp">#include &lt;cstdio&gt;</code>
 
   <p>Собственные библиотеки и старые библиотеки формата C подключаются с добавлением .h.</p>
-  <code>#include &lt;cmath&gt;</code>
-  <code>#include &lt;math.h&gt;</code>
+  <code class="language-cpp">#include &lt;cmath&gt;</code>
+  <code class="language-cpp">#include &lt;math.h&gt;</code>
 
   <h4>Пространство имен</h4>
   <p>Пространство имён (англ. namespace) — это группа взаимосвязанных функций, переменных, констант, классов, объектов и других компонентов программы.</p>
   <p>Пространства имён нужны, чтобы логически связывать части программы. Например, математические функции, физические, бухгалтерские и так далее.</p>
-  <code>using namespace std;</code>
+  <code class="language-cpp">using namespace std;</code>
 
   <h4>main</h4>
   <p>Каждая программа на языке С++ должна иметь как минимум одну функцию - функцию main(). Именно с этой функции начинается выполнение приложения. Ее имя main фиксировано и для всех программ на С++ всегда одинаково.</p>
   <p>Функция также является блоком кода, поэтому ее тело обрамляется фигурными скобками, между которыми определяется набор инструкций.</p>
-<pre>
-int main(){
+
+<pre class="language-cpp">
+int main() {
   return 0;
 }
 </pre>
+
   <p>Если в функции main() не написать return, то компилятор в конце функции сам добавит return 0;</p>
 </article>
 
@@ -152,9 +154,9 @@ unsigned int	4 байт	0 … 2^32-1 	0 … 4*10^9
   <code>тип имя1, имя2, имя3;</code>
   <code>тип имя = значение;</code>
 
-  <code>double k1, k2, k3, k4;</code>
-  <code>int a = 10;</code>
-  <code>int b = 2 * a;</code>
+  <code class="language-cpp">double k1, k2, k3, k4;</code>
+  <code class="language-cpp">int a = 10;</code>
+  <code class="language-cpp">int b = 2 * a;</code>
 
   <h4>Правила именования переменной</h4>
   <ul>
@@ -188,8 +190,8 @@ unsigned int	4 байт	0 … 2^32-1 	0 … 4*10^9
   <p>Он обозначается знаком равенства = и имеет следующий синтаксис:</p>
   <code>переменная = значение;</code>
   <p>Значение в правой части будет присвоено переменной в левой части. Переменная и значение должны иметь один и тот же тип данных.</p>
-  <code>int a, b = 6;</code>
-  <code>a = 10 + (200 * 15) / 40 + b * b;</code>
+  <code class="language-cpp">int a, b = 6;</code>
+  <code class="language-cpp">a = 10 + (200 * 15) / 40 + b * b;</code>
 
   <h4>Арифметические операции</h4>
   <p>+	сложение;</p>
@@ -236,9 +238,9 @@ unsigned int	4 байт	0 … 2^32-1 	0 … 4*10^9
     <li>Явное преобразование также известное как приведение типов. Этот тип преобразования используется, когда пользователь вручную меняет данные с одного типа на другой.</li>
   </ol>
   <p>тип(значение)</p>
-  <code>double a = 1.0 * 678;</code>
-  <code>double c = 100;</code>
-  <code>int b = int(55.0 / 3);</code>
+  <code class="language-cpp">double a = 1.0 * 678;</code>
+  <code class="language-cpp">double c = 100;</code>
+  <code class="language-cpp">int b = int(55.0 / 3);</code>
 </article>
 
 
@@ -247,7 +249,7 @@ unsigned int	4 байт	0 … 2^32-1 	0 … 4*10^9
   <div class="anchor" id="p7"></div>
   <h3>Ввод/вывод информации</h3>
 
-  <code>#include &lt;iostream&gt;</code>
+  <code class="language-cpp">#include &lt;iostream&gt;</code>
   <p>Библиотека iostream определяет три стандартных потока:</p>
   <ol>
     <li>cin стандартный входной поток (stdin в С)</li>
@@ -256,7 +258,7 @@ unsigned int	4 байт	0 … 2^32-1 	0 … 4*10^9
   </ol>
 
   <p>Для их использования в Microsoft Visual Studio необходимо прописать строку:</p>
-  <code>using namespace std;</code>
+  <code class="language-cpp">using namespace std;</code>
 
   <p>В противном случае каждый вызов функций cin, cout будет дополняться пространством имен std и оператором разрешения контекста ::</p>
   <code>std::cin &gt;&gt; Имя;</code>
@@ -268,14 +270,14 @@ unsigned int	4 байт	0 … 2^32-1 	0 … 4*10^9
     <li>&lt;&lt; поместить в выходной поток</li>
   </ol>
 
-  <code>int a;</code>
-  <code>cin &gt;&gt; a;</code>
-  <code>cout &lt;&lt; 2 * a;</code>
+  <code class="language-cpp">int a;</code>
+  <code class="language-cpp">cin &gt;&gt; a;</code>
+  <code class="language-cpp">cout &lt;&lt; 2 * a;</code>
 
   <h4>Вывод информации</h4>
   <code>cout &lt;&lt; значение;</code>
   <p>Здесь значение преобразуется в последовательность символов и выводится в выходной поток:</p>
-  <code>cout &lt;&lt; n;</code>
+  <code class="language-cpp">cout &lt;&lt; n;</code>
   <p>Возможно многократное назначение потоков:</p>
   <code>cout &lt;&lt; "значение1" &lt;&lt; "значение2" &lt;&lt; ... &lt;&lt; "значение n";</code>
 
@@ -283,25 +285,25 @@ unsigned int	4 байт	0 … 2^32-1 	0 … 4*10^9
   <p>Один символ можно вывести через одинарные ковычки.</p>
   <p>Несколько символов можно вывести через двойные ковычки.</p>
 
-  <code>cout &lt;&lt; 15 &lt;&lt; 55;</code>
+  <code class="language-cpp">cout &lt;&lt; 15 &lt;&lt; 55;</code>
   <p>Результат 1555</p>
-  <code>cout &lt;&lt; 15 &lt;&lt; " " &lt;&lt; 55;</code>
+  <code class="language-cpp">cout &lt;&lt; 15 &lt;&lt; " " &lt;&lt; 55;</code>
   <p>Результат 15 55</p>
-  <code>cout &lt;&lt; 15 &lt;&lt; " + " &lt;&lt; 55 &lt;&lt;  " = " &lt;&lt; 70;</code>
+  <code class="language-cpp">cout &lt;&lt; 15 &lt;&lt; " + " &lt;&lt; 55 &lt;&lt;  " = " &lt;&lt; 70;</code>
   <p>Результат 15 + 55 = 70</p>
 
   <h4>Ввод информации</h4>
   <code>cin &gt;&gt; идентификатор;</code>
   <p>При этом из входного потока читается последовательность символов до пробела, затем эта последовательность преобразуется к типу идентификатора, и получаемое значение помещается в идентификатор:</p>
-  <code>int n;</code>
-  <code>cin &gt;&gt; n;</code>
+  <code class="language-cpp">int n;</code>
+  <code class="language-cpp">cin &gt;&gt; n;</code>
   <p>Возможно многократное назначение потоков:</p>
   <code>cin &gt;&gt; переменная1 &gt;&gt; переменная2 &gt;&gt; ... &gt;&gt; переменнаяn;</code>
 
   <p>При наборе данных на клавиатуре значения для такого оператора должны быть разделены символами (пробел, \n, \t).</p>
-  <code>int n;</code>
-  <code>char j;</code>
-  <code>cin &gt;&gt; n &gt;&gt; j;</code>
+  <code class="language-cpp">int n;</code>
+  <code class="language-cpp">char j;</code>
+  <code class="language-cpp">cin &gt;&gt; n &gt;&gt; j;</code>
 
   <h4>Символы разделители</h4>
   <p>пробел ' '</p>
@@ -361,18 +363,17 @@ if (условие1) {
   <code>==, !=, &lt;, &lt;=, &gt; и &gt;=</code>
   <p>Условия можно комбинировать с помощью логических операторов:</p>
   <code>&&(и), ||(или) и !(не)</code>
-<pre>
+
+<pre class="language-cpp">
 int a, b;
 cin &gt;&gt; a &gt;&gt; b;
-if(a &gt; 0 && b &gt; 0 && a * b &lt; 25)
-{
+if(a &gt; 0 && b &gt; 0 && a * b &lt; 25) {
   cout &lt;&lt; "Good";
+} else {
+  cout &lt;&lt; "Bad";
 }
-else
-{
-  cout &lt;&lt; "Bad";}
-
 </pre>
+
 <pre>
 if (условие1)
 {
@@ -432,12 +433,12 @@ while(условие)
   //тело цикла
 }
 </pre>
-<pre>
+
+<pre class="language-cpp">
 int sum = 0;
 int n = 100;
 int i =0;
-while(i &lt;= n)
-{
+while(i &lt;= n) {
   sum += i * i;
   i++;
 }
@@ -454,11 +455,10 @@ for (инициализация; условие; действие над пар�
   <p>Как правило, с циклом ассоциируется некоторый параметр, который меняется от итерации к итерации, а цикл выполняется до тех пор, пока некоторое условие на этот параметр истинно.</p>
   <p>Начальное значение такого параметра можно задать в разделе инициализация, условие проверяет окончание цикла, а действие над параметром, выполняется после каждой итерации.</p>
 
-<pre>
+<pre class="language-cpp">
 int sum = 0;
 int n = 100;
-for (int i = 0; i &lt;= n; i++)
-{
+for (int i = 0; i &lt;= n; i++) {
   int tmp = i * i;
   sum += tmp;
 }
@@ -514,7 +514,8 @@ cout &lt;&lt; sum;
     </div>
 
     <p>Каждая доминошка занимает 2 клетки. Поэтому максимальное количество доминошек, которое можно уложить на доску, равно половине площади доски с округлением вниз</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -561,7 +562,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Через N лет количество щупальцев будет равно A + K * N</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -613,7 +615,8 @@ int main() {
       <li>Если год делится на 100, проверить, делится ли он на 400.</li>
       <li>Если год делится на 4 и не делится на 100, или делится на 400, то он високосный.</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -682,7 +685,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;algorithm&gt;
 
@@ -694,16 +698,18 @@ int main() {
   cin >> n;
 
   // решение
-  int age;
-  cin >> age; // Считываем возраст первого брата
-  int minAge = age; // Инициализируем минимальный возраст
-  int maxAge = age; // Инициализируем максимальный возраст
+  int age; // возраст первого брата
+  cin >> age;
 
-  // Считываем возраст остальных братьев и обновляем minAge и maxAge
+  int minAge = age; // минимальный возраст
+  int maxAge = age; // максимальный возраст
+
+  // Считываем возраст остальных братьев
+  // и обновляем minAge и maxAge
   for (int i = 1; i &lt; N; i++) {
       cin >> age;
-      minAge = min(minAge, age); // Обновляем минимальный возраст
-      maxAge = max(maxAge, age); // Обновляем максимальный возраст
+      minAge = min(minAge, age);
+      maxAge = max(maxAge, age);
   }
 
   // вывод результата
@@ -762,7 +768,8 @@ int main() {
     </div>
 
     <p>Общая стоимость лопат должна удовлетворять условию min_count * k = 0 или min_count * k = r (mod 10)</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -824,7 +831,8 @@ int main() {
     </div>
 
     <p>Пусть price это цена за w бананов. Если у солдата меньше денег, то borrow это количество денег, которые нужно занять.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -898,7 +906,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/110" target="_blank">Codeforces Beta Round 84 (Div. 2 Only) 2011-08-29</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -991,7 +999,8 @@ int main() {
       <li>Если событие — это преступление: Если есть свободные полицейские, уменьшаем счётчик свободных полицейских (так как один полицейский расследует это преступление). Если свободных полицейских нет, увеличиваем счётчик нераскрытых преступлений.</li>
       <li>В конце выводим количество нераскрытых преступлений.</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1101,7 +1110,8 @@ Division 1
       <li>Для каждого набора входных данных проверяем, в какой диапазон попадает рейтинг.</li>
       <li>В зависимости от диапазона выводим соответствующий дивизион.</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1192,7 +1202,8 @@ NO
       <li>Вычисляем сумму первых трёх цифр и сумму последних трёх цифр.</li>
       <li>Если суммы равны, выводим "YES", иначе — "NO".</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1274,7 +1285,8 @@ int main() {
       <li>Добавляем это количество к общему количеству использованных кубиков.</li>
       <li>Если общее количество кубиков превышает n, откатываем последний уровень и завершаем.</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1289,6 +1301,7 @@ int main() {
   int i = 0;    // текущий кубик
   int need = 0; // нужно кубиков всего
   int level = 0; // кубиков на текущем уровне
+
   while (need &lt;= n) {
     i++;
     level = level + i;
@@ -1363,41 +1376,42 @@ int main() {
       <li>Для каждого дня, кроме первого и последнего, Василий должен был посетить все три трапезы (завтрак, обед, ужин). Если он пропустил какую-то трапезу, это считается пропуском.</li>
       <li>В первый и последний дни Василий мог пропустить трапезы в зависимости от времени приезда и отъезда.</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;algorithm&gt;
 
 using namespace std;
 
 int main() {
-    long long b; // число завтраков
-    long long d; // число обедов
-    long long s; // число ужинов
-    cin >> b >> d >> s;
+  long long b; // число завтраков
+  long long d; // число обедов
+  long long s; // число ужинов
+  cin >> b >> d >> s;
 
-    // Определяем количество дней
-    long long days = max({b, d, s});
+  // Определяем количество дней
+  long long days = max({b, d, s});
 
-    // Вычисляем минимальное количество пропущенных трапез
-    long long missed = 0;
+  // Вычисляем минимальное количество пропущенных трапез
+  long long missed = 0;
 
-    // Пропуски для завтраков
-    if (b &lt; days) {
-        missed += (days - 1) - b;
-    }
+  // Пропуски для завтраков
+  if (b &lt; days) {
+    missed += (days - 1) - b;
+  }
 
-    // Пропуски для обедов
-    if (d &lt; days) {
-        missed += (days - 1) - d;
-    }
+  // Пропуски для обедов
+  if (d &lt; days) {
+    missed += (days - 1) - d;
+  }
 
-    // Пропуски для ужинов
-    if (s &lt; days) {
-        missed += (days - 1) - s;
-    }
+  // Пропуски для ужинов
+  if (s &lt; days) {
+    missed += (days - 1) - s;
+  }
 
-    // Выводим результат
-    cout &lt;&lt; missed;
+  // Выводим результат
+  cout &lt;&lt; missed;
 }
 </pre>
   </details>
@@ -1478,7 +1492,8 @@ int main() {
       <li>Если условие не выполняется, увеличиваем количество прогулок в текущем дне b<sub>i</sub> на недостающее количество.</li>
       <li>После обработки всех дней выводим общее количество дополнительных прогулок и новое расписание.</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1495,8 +1510,7 @@ int main() {
   vector&lt;int&gt; A(n);
 
   for (int i = 0; i &lt; n; i++) {
-    cin >> A[i];
-    // A[i] это число прогулок в i-ый день
+    cin >> A[i]; // число прогулок в i-ый день
   }
 
   // решение
@@ -1595,7 +1609,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/895" target="_blank">Codeforces Round 448 (Div. 2) 2017-11-26</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1641,7 +1655,7 @@ int main() {
       } else {
         break;
       }
-   }
+    }
     max_sector = max(max_sector, sector);
   }
   // разница между углами секторов
@@ -1730,7 +1744,8 @@ int main() {
       <li>Найдём колонну, изменение шага в которой даст максимальное увеличение красоты.</li>
       <li>Если ни одна колонна не улучшает красоту, выводим 0.</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1804,39 +1819,47 @@ int main() {
 
   <details>
     <summary>Вариант решения</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;cmath&gt;
+
 using namespace std;
 
 int main() {
-  int n;
-  cin >> n; // Считываем количество колонн
+  int n; // число колонн
+  cin >> n;
 
-  vector&lt;pair&lt;int, int&gt;&gt; columns(n); // Пары (l_i, r_i) для каждой колонны
+  // Пары (l_i, r_i) для каждой колонны
+  vector&lt;pair&lt;int, int&gt;&gt; columns(n);
   int L = 0, R = 0; // Исходные значения L и R
 
   // Считываем данные и вычисляем L и R
   for (int i = 0; i &lt; n; i++) {
-      cin >> columns[i].first >> columns[i].second;
-      L += columns[i].first;
-      R += columns[i].second;
+    cin >> columns[i].first >> columns[i].second;
+    L += columns[i].first;
+    R += columns[i].second;
   }
 
   int maxBeauty = abs(L - R); // Исходная красота парада
-  int bestColumn = 0; // Номер колонны для изменения (0, если не нужно менять)
+  // Номер колонны для изменения
+  // (0, если не нужно менять)
+  int bestColumn = 0;
 
   // Перебираем все колонны и находим лучшую для изменения
   for (int i = 0; i &lt; n; i++) {
-      int newL = L - columns[i].first + columns[i].second; // Новое L после изменения
-      int newR = R - columns[i].second + columns[i].first; // Новое R после изменения
-      int newBeauty = abs(newL - newR); // Новая красота парада
+    // Новое L после изменения
+    int newL = L - columns[i].first + columns[i].second;
+    // Новое R после изменения
+    int newR = R - columns[i].second + columns[i].first;
+     // Новая красота парада
+    int newBeauty = abs(newL - newR);
 
-      if (newBeauty > maxBeauty) {
-          maxBeauty = newBeauty;
-          bestColumn = i + 1; // Нумерация колонн с 1
-      }
+    if (newBeauty > maxBeauty) {
+      maxBeauty = newBeauty;
+      bestColumn = i + 1; // Нумерация колонн с 1
+    }
   }
 
   // Выводим результат

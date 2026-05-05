@@ -67,21 +67,25 @@
   <ol>
     <li>
       <p>Создавать локальную переменную, копируя в нее значение передаваемого объекта.</p>
-<pre>
+
+<pre class="language-cpp">
 int sum(int a, int b) {
   return a + b;
 }
 </pre>
+
     </li>
     <li>
       <p>Использовать исходный объект с возможностью его изменять. Для этого надо передать аргументы через ссылку & или указатель *.</p>
-<pre>
+
+<pre class="language-cpp">
 void swap(int& a, int& b) {
   int c = a;
   a = b;
   b = c;
 }
 </pre>
+
     </li>
   </ol>
 </article>
@@ -93,7 +97,8 @@ void swap(int& a, int& b) {
   <h3>Рекурсия</h3>
 
   <p>Рекурсивные функции - это функции, которые вызывают сами себя. Такие функции довольно часто используются для обхода различных представлений. Например, если нам надо найти факториал числа n!. Так же факториал можно найти и при помощи циклов.</p>
-<pre>
+
+<pre class="language-cpp">
 long long factorial(long long n) {
   if (n == 1) {
     return 1;
@@ -111,7 +116,8 @@ long long factorial(long long n) {
   <h3>Числа Фибоначчи</h3>
 
   <p>Функция для подсчета чисел Фибоначчи, трудоемкость O(a<sup>n</sup>).</p>
-<pre>
+
+<pre class="language-cpp">
 int Fib(int n) {
   if (n &lt;= 2) {
     return 1;
@@ -129,7 +135,8 @@ int Fib(int n) {
   <h3>НОД</h3>
 
   <p>Функция для подсчета НОД. Медленная версия</p>
-<pre>
+
+<pre class="language-cpp">
 int gcd1(int a, int b) {
   while (a != 0 && b != 0) {
     if (a > b) {
@@ -143,7 +150,8 @@ int gcd1(int a, int b) {
 </pre>
 
 <p>Функция для подсчета НОД. Быстрая версия</p>
-<pre>
+
+<pre class="language-cpp">
 int gcd2(int a, int b) {
   while (a != 0 && b != 0) {
     if (a > b) {
@@ -157,7 +165,8 @@ int gcd2(int a, int b) {
 </pre>
 
 <p>Функция для подсчета НОД. Рекурсивная версия</p>
-<pre>
+
+<pre class="language-cpp">
 int gcd3(int a, int b) {
   if (b != 0) {
     return gcd3(b, a % b);
@@ -181,7 +190,8 @@ bool имя(аргумент1, аргумент2) {
   return результат;
 }
 </pre>
-<pre>
+
+<pre class="language-cpp">
 bool comp(int a, int b) {
   return a > b;
 }
@@ -190,11 +200,16 @@ int main() {
   int n;
   cin >> n;
   vector&lt;int&gt; A(n);
+
+  // ввод массива
   for (int i = 0; i &lt; n; i++) {
     cin >> A[i];
   }
 
+  // сортировка массива
   sort(A.begin(), A.end(), comp);
+
+  // вывод массива
   for (int i = 0; i &lt; n; i ++) {
     cout &lt;&lt; A[i] &lt;&lt; " ";
   }
@@ -212,7 +227,8 @@ int main() {
 
   <p>Для работы с файлами необходимо подключить заголовочный файл fstream. В fstream определены несколько классов и подключены заголовочные файлы ifstream — файловый ввод и ofstream — файловый вывод.
   </p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;fstream&gt;
 
 int main() {
@@ -236,7 +252,8 @@ int main() {
     <li>"w"	Открывает пустой файл для записи. Если указанный файл существует, его содержимое удаляется.</li>
     <li>"t"	Текстовый режим работы с файлом.</li>
   </ul>
-<pre>
+
+<pre class="language-cpp">
 #ifdef _DEBUG
   freopen("input.txt", "rt", stdin);
   freopen("output.txt", "wt", stdout);
@@ -266,7 +283,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -325,7 +343,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -376,7 +395,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -427,7 +447,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -484,7 +505,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;

@@ -50,16 +50,19 @@
   <h3>vector</h3>
 
   <h4>Новые библиотеки</h4>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;vector&gt;
 #include &lt;cmath&gt;
 #include &lt;algorithm&gt;
 </pre>
+
   <p>Библиотека vector это класс контейнер. В стандартной библиотеке C++ vector (std::vector) называется динамический массив, обеспечивающий быстрое добавление новых элементов в конец и меняющий свой размер при необходимости.</p>
   <p>В библиотеках cmath и algorithm определены математические функции и алгоритмы помогающие решать задачи.</p>
 
   <h4>Создание вектора</h4>
-<pre>
+
+<pre class="language-cpp">
 int n;
 cin >> n;
 
@@ -67,6 +70,7 @@ vector&lt;int&gt; V1;
 vector&lt;int&gt; V2(n);
 vector&lt;int&gt; V3(n, 5);
 </pre>
+
   <p>V1 пустой vector, в нем нет элементов</p>
   <p>V2 vector, в котором задан размер длины n</p>
   <p>V3 vector, в котором задан размер длины n и каждый элемент равняется 5</p>
@@ -79,11 +83,16 @@ vector&lt;int&gt; V3(n, 5);
 
   <p>Вектор это динамический массив, длину которого можно изменять во время выполнения программы.</p>
   <p>Создадим вектор целых чисел, изначально пустой</p>
-  <code>vector&lt;int&gt; A;</code>
+
+  <code class="language-cpp">vector&lt;int&gt; A;</code>
+
   <p>Создадим вектор целых чисел, содержащий n элементов, изначально равных нулю</p>
-  <code>vector&lt;int&gt; A(n);</code>
+
+  <code class="language-cpp">vector&lt;int&gt; A(n);</code>
+
   <p>Создадим вектор целых чисел, содержащий 10 элементов, изначально равных 5</p>
-  <code>vector&lt;int&gt; A(10, 5);</code>
+
+  <code class="language-cpp">vector&lt;int&gt; A(10, 5);</code>
 
   <h4>Методы вектора</h4>
   <p>Метод в С++ — это функция, которая принадлежит классу. Она может выполнять какие-либо действия над данными (свойствами) класса.</p>
@@ -121,7 +130,8 @@ vector&lt;int&gt; V3(n, 5);
   </ol>
 
   <h4>Программма выводит сумму квадратов чисел</h4>
-<pre>
+
+<pre class="language-cpp">
 int n;
 cin >> n;
 
@@ -177,11 +187,14 @@ cout &lt;&lt; sum;
 
   <p>Arg передается как радианы, не градус!</p>
   <p>Переведем grad градусов в arg радиан</p>
-  <code>int arg = (grad / 180) * pi;</code>
-  <p>В библиотеке нет котангенса, но его можно выразить через тангенс</p>
-  <code>int cotan = 1 / tan(arg);</code>
 
-<pre>
+  <code class="language-cpp">int arg = (grad / 180) * pi;</code>
+
+  <p>В библиотеке нет котангенса, но его можно выразить через тангенс</p>
+
+  <code class="language-cpp">int cotan = 1 / tan(arg);</code>
+
+<pre class="language-cpp">
 int a1 = abs(-100);      // 100
 int a2 = abs(99);        // 99
 double a3 = sqrt(25);    // 5
@@ -189,7 +202,8 @@ double a4 = sqrt(30);    // 5.47723
 double a5 = pow(2, 10);  // 1024
 double a6 = pow(7, 3.3); // 614.927
 </pre>
-<pre>
+
+<pre class="language-cpp">
 int a1 = round(7.4);   // 7
 int a2 = round(7.8);   // 8
 int a3 = ceil(7.4);    // 8
@@ -216,13 +230,15 @@ int a6 = floor(7.8);   // 7
   </ol>
 
   <p>Найдем число элементов, которые равны 5</p>
-<pre>
+
+<pre class="language-cpp">
 vector&lt;int&gt; A = {1, 2, 3, 5, 5, 4, 4};
 count(A.begin(), A.end(), 5); // 2
 </pre>
 
   <p>Найдем число элементов, которые равны 10</p>
-<pre>
+
+<pre class="language-cpp">
 int n;
 cin >> n;
 
@@ -236,7 +252,8 @@ cout &lt;&lt; res;
 </pre>
 
   <p>Найдем в массиве позицию элмента, равного 10. Если элемента равного 10 не будет, ответ будет равен значению параметра n.</p>
-<pre>
+
+<pre class="language-cpp">
 int n;
 cin >> n;
 
@@ -251,7 +268,8 @@ cout &lt;&lt; find(Vec.begin(), Vec.end(), 10) - Vec.begin();
 </pre>
 
   <p>Отсортируем массив и выведем его.</p>
-<pre>
+
+<pre class="language-cpp">
 int n;
 cin >> n;
 
@@ -275,10 +293,12 @@ for (int i = 0; i &lt; n; i++) {
 
   <h4>Задание матрицы через массивы:</h4>
   <p>Статическое создание матрицы</p>
-  <code>int Matrix1[100][100];</code>
+
+  <code class="language-cpp">int Matrix1[100][100];</code>
 
   <p>Динамическое создание матрицы. Создадим массив указателей</p>
-<pre>
+
+<pre class="language-cpp">
 int **Matrix2;
 int n, m;
 cin >> n >> m;
@@ -292,17 +312,26 @@ for (int i = 0; i &lt; n; i++) {
   <h4>Задание матрицы через vector:</h4>
 
   <p>Создадим двумерный вектор целых чисел, изначально пустой</p>
-  <code>vector&lt;vector&lt;int&gt; &gt; A;</code>
-  <p>Создадим двумерный вектор целых чисел, содержащий n пустых векторов</p>
-  <code>vector&lt;vector&lt;int&gt; &gt; A(n);</code>
-  <p>Создадим двумерный вектор целых чисел, содержащий n векторов, по m элементов, изначально равных нулю</p>
-  <code>vector&lt;vector&lt;int&gt; &gt; A(n, vector&lt;int&gt; (m));</code>
-  <p>Создадим двумерный вектор целых чисел, содержащий n векторов, по m элементов, изначально равных 100</p>
-  <code>vector&lt;vector&lt;int&gt; &gt; A(n, vector&lt;int&gt; (m, 100));</code>
-  <p>Создадим трехмерный вектор целых чисел, содержащий n векторов, по m векторов</p>
-  <code>vector&lt;vector&lt;vector&lt;int&gt; &gt; &gt; A(n, vector&lt;vector&lt;int&gt; &gt; (m));</code>
 
-<pre>
+  <code class="language-cpp">vector&lt;vector&lt;int&gt; &gt; A;</code>
+
+  <p>Создадим двумерный вектор целых чисел, содержащий n пустых векторов</p>
+
+  <code class="language-cpp">vector&lt;vector&lt;int&gt; &gt; A(n);</code>
+
+  <p>Создадим двумерный вектор целых чисел, содержащий n векторов, по m элементов, изначально равных нулю</p>
+
+  <code class="language-cpp">vector&lt;vector&lt;int&gt; &gt; A(n, vector&lt;int&gt; (m));</code>
+
+  <p>Создадим двумерный вектор целых чисел, содержащий n векторов, по m элементов, изначально равных 100</p>
+
+  <code class="language-cpp">vector&lt;vector&lt;int&gt; &gt; A(n, vector&lt;int&gt; (m, 100));</code>
+
+  <p>Создадим трехмерный вектор целых чисел, содержащий n векторов, по m векторов</p>
+
+  <code class="language-cpp">vector&lt;vector&lt;vector&lt;int&gt; &gt; &gt; A(n, vector&lt;vector&lt;int&gt; &gt; (m));</code>
+
+<pre class="language-cpp">
 int n, m;
 cin >> n >> m;
 
@@ -336,7 +365,8 @@ for (int i = 0; i &lt; n; i++) {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -419,7 +449,8 @@ int main() {
     </div>
 
     <p>Посчитаем общий объем газировки, объем газировки для одного тоста, число тостов с газировкой. Посчитаем общее число долек, число долек для одного тоста, число тостов с дольками. Посчитаем общее число граммов соли, число граммов соли для одного тоста, число тостов с солью. Выберем минимальное число тостов.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;algorithm&gt;
 
@@ -519,7 +550,8 @@ int main() {
     </div>
 
     <p>Если конфет 1 или 2 то поделить их нельзя. Если конфет четное число, то есть n/2 - 1 способ, потому что их не может быть поровну. Если конфет нечетное число, то есть n/2 способов округленное вниз.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -621,7 +653,8 @@ int main() {
     </div>
 
     <p>Чтобы последовательность из чисел от 0 до 2млрд. была строго возрастающая, как минимум, надо чтобы каждое i-ое число в массиве было не меньше i. Начиная с n-2 элемента массива будем проверять, что он меньше n-1 элемента и не меньше числа n - 2. Если больше n-1 элемента то делим его на 2, если меньше числа n - 2 то возвращаем -1. Считаем число делений на 2 и выводим как результат.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -738,7 +771,8 @@ int main() {
     </div>
 
     <p>Нужно найти самого богатого человека, и состояние всех остальных доводить до этого значения.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -821,7 +855,8 @@ int main() {
     </div>
 
     <p>Нужно отсортировать входной массив и объединять соседние элементы в одну команду. Разница между соседними элементами это количество задач, которые необходимо решить, чтобы попасть в команду.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -898,7 +933,8 @@ int main() {
     </div>
 
     <p>Если a делится на b без остатка то выводим 0. Если есть остаток от деления, то его нужно вычесть из b чтобы получить результат</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -983,7 +1019,8 @@ int main() {
     </div>
 
     <p>Массив можно сделать хорошим если число четных элементов на нечетных местах равно числу нечетных элементов на четных местах в массиве. Надо вернуть это число (четных элементов на нечентных местах) Иначе массив сделать хорошим нельзя и мы возвращаем -1.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1084,7 +1121,8 @@ int main() {
     </div>
 
     <p>Максимально возможное входное число содержит 5 цифр, поэтому для отевта заведем массив на 5 элементов. Если остаток от деления на 10 равен нулю, то увеличиваем счетчик нулей на 1, иначе записываем в массив остаток от деления с числом нулей из счетчика нулей, увеличиваем число нулей на 1 и число чисел в ответе на 1.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;cmath&gt;
@@ -1184,7 +1222,8 @@ int main() {
     </div>
 
     <p>Определяем последнюю цифру dig и количество цифр cnt в номере ответившей квартиры. Значит в 4 квартиры каждой предыдущей цифры уже звонили. Сумма цифр в этих 4 кварирах равна 1 + 2 + 3 + 4 = 10. Прибавим к этому цифры от 1 до cnt.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1278,7 +1317,8 @@ int main() {
     </div>
 
     <p>Нужно отсортировать координаты точек, проверить расстояние между каждыми двумя точками. Это цикл в цикле. Выбрать максимальное расстояние, меньшее или равно заданному диаметру. </p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1367,7 +1407,8 @@ int main() {
     </div>
 
     <p>Из двуx сторон n и m определяем длинную сторону. Меняем n и m так, чтобы в n была длинная сторона. Если короткая сторона 1, а длинная больше 2 то решения нет, возвращаем -1.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;cmath&gt;
 
@@ -1458,7 +1499,8 @@ int main() {
     </div>
 
     <p>К нам приходят два числа. n это число этажей, m это число квартир на этаже. В каждой квартире 2 соседних окна. Всего квартир в доме n * m. Мы можем принимать в цикле по два числа и проверять если одно из них равно 1 то в этой квартире горит свет и значит там не спят.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1540,7 +1582,8 @@ int main() {
     </div>
 
     <p>Найти индексы минимального и максимального элемента. Выбрать индекс ближайший краю. Найти максимум от индекса до края.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;algorithm&gt;
 
@@ -1638,7 +1681,8 @@ int main() {
     </div>
 
     <p>Создадим массив B размером такой же как входной массив A. В клетку B[i] будем записывать сумму из клеток массива A на диагоналях которой она находится.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1768,7 +1812,8 @@ int main() {
     </div>
 
     <p>Поскольку гравитация переключается вправо, то есть кубики падают на правую стенку, то достаточно входной массив отсортировать по возрастанию.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;

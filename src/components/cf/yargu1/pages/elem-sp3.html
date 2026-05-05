@@ -65,7 +65,8 @@
   <p>Статический массив — это массив фиксированной длины. Мы не можем изменять или обновлять размер этого массива.</p>
   <p>Конструкция создания:</p>
   <code>тип_данных имя_массива[константный_размер];</code>
-<pre>
+
+<pre class="language-cpp">
 int Arr1[100];
 int Arr2[3] = { 1,2,3 }
 const int count = 10;
@@ -76,7 +77,8 @@ int Arr3[count];
   <p>Динамический массив в С++ — это массив переменной длины.</p>
   <p>Сначала создается указатель определенного типа данных, который будет указывать на область памяти, где будет храниться массив. Следующим действием мы задаем нужный нам размер массива и в области памяти компьютера выделяется нужное количество подряд идущих ячеек.</p>
   <p>Оператор new выделяет память на определённое количество элементов заданного типа данных.</p>
-<pre>
+
+<pre class="language-cpp">
 int size;
 cin >> size;
 int * Array;
@@ -85,17 +87,21 @@ Array = new int[size];
 
   <h4>Ввод/вывод массива</h4>
   <p>Пример программы:</p>
-<pre>
+
+<pre class="language-cpp">
 int n;
 cin >> n;
 int *A;
 A = new int[n];
+
 for (int i = 0; i &lt; n; i ++) {
-  cin >> A[i];
+  cin >> A[i]; // ввод массива
 }
+
 // действия программы
+
 for (int i = 0; i &lt; n; i++) {
-  cout &lt;&lt; A[i] &lt;&lt; " ";
+  cout &lt;&lt; A[i] &lt;&lt; " "; // вывод массива
 }
 </pre>
 </article>
@@ -121,11 +127,11 @@ for (int i = 0; i &lt; n; i++) {
   <p>Пример:</p>
   <p>Сумма действий программы &lt; O(N<sup>2</sup>) &lt; const * N<sup>2</sup> &lt; 10 * N<sup>2</sup></p>
 <pre>
-N		O(N) 		O(N2) 		O(log2(N))  	O(N * log2(N))
-10		10		100		4		10 * 4
-102 		100		104		7		100 * 7
-103		1000		106		10		1000 * 10
-106  		106		1012		20		106 * 20
+N     O(N)   O(N2)   O(log2(N))   O(N * log2(N))
+10    10     100     4            10 * 4
+102   100    104     7            100 * 7
+103   1000   106     10           1000 * 10
+106   106    1012    20           106 * 20
 </pre>
 </article>
 
@@ -150,7 +156,8 @@ N		O(N) 		O(N2) 		O(log2(N))  	O(N * log2(N))
 
   <h4>Сортировка пузырьком</h4>
   <p>Сортировка пузырьком — один из самых известных алгоритмов сортировки. Мы последовательно сравниваем значения соседних элементов и меняем числа местами, если необходимо. Трудоемкость: O(n<sup>2</sup>).</p>
-<pre>
+
+<pre class="language-cpp">
 for (int i = 0; i &lt; n; i++) {
   for (int j = 1; j &lt; n; j++) {
     if (A[j] &lt; A[j-1]) {
@@ -171,7 +178,8 @@ for (int i = 0; i &lt; n; i++) {
 
   <h4>Улучшенная сортировка пузырьком</h4>
   <p>Улучшим реализацию добавив флаг проверки на swap. В худшем случае трудоемкость O(n<sup>2</sup>), в лучшем случае трудоемкость O(n).</p>
-<pre>
+
+<pre class="language-cpp">
 bool flag = true;
 for (int i = 0; i &lt; n && flag; i++) {
   flag = false;
@@ -188,13 +196,18 @@ for (int i = 0; i &lt; n && flag; i++) {
 
   <h4>Частотный массив</h4>
   <p>Частотный словарь Count_elem — это вспомогательный массив, в котором запоминается сколько раз встречались значения. В ячейке Count_elem[i] хранится сколько раз число i встречается в исходном массиве.</p>
-<pre>
+
+<pre class="language-cpp">
 int* Count_elem;
 Count_elem = new int[1000000];
+
+// инициализация нулями
 for (int i = 0; i &lt; 1000000; i++) {
   Count_elem[i] = 0;
 }
+
 int elem;
+// заполнение частотного словаря
 for (int i = 0; i &lt; n; i++) {
   cin >> elem;
   Count_elem[elem]++;
@@ -254,7 +267,7 @@ STAIR
       <br><a href="https://codeforces.com/contest/1950" target="_blank">Codeforces Round 937 (Div. 4) 2024-03-27</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -333,7 +346,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/1041" target="_blank">Codeforces Round 509 (Div. 2) 2018-09-16</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -425,7 +438,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/136" target="_blank">Codeforces Beta Round 97 (Div. 2) 2011-12-08</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -515,7 +528,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/1669" target="_blank">Codeforces Round 784 (Div. 4) 2022-04-19</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -626,7 +639,8 @@ int main() {
     </div>
 
     <p>Из всех чисел нужно найти два числа с минимальной разницей. Если есть два одинаковых числа, то ответ будет 0, иначе ответом будет модуль разницы двух самых близких чисел</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -738,7 +752,8 @@ NO
 
     <p>Сумма чет+чет делится на 2. Сумма нечет+нечет делится на 2. Сумма чет+нечет не делится на 2.</p>
     <p>Нужно узнать сколько нечетных чисел. Если все числа четные, то сумма будет четная при любых преобразованиях. Если все числа нечетные, то сумма будет четная если их четное количество, сумма будет нечетная если их нечетное количество. Если есть четные и нечетные числа, то преобразовывая нечетные в четные оставим одно нечетное число чтобы получить нечетную сумму.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -762,7 +777,8 @@ int main() {
     }
 
     // решение и вывод результата
-    if ((count > 0 && count &lt; n) || (count == n && n % 2 == 1)) {
+    if ((count > 0 && count &lt; n) ||
+        (count == n && n % 2 == 1)) {
       cout &lt;&lt; "YES\n";
     } else {
       cout &lt;&lt; "NO\n";
@@ -820,7 +836,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/200" target="_blank">Codeforces Round 126 (Div. 2) 2012-06-24</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -917,7 +933,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/278" target="_blank">Codeforces Round 170 (Div. 2) 2013-02-28</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1019,14 +1035,16 @@ NO
       <br><a href="https://codeforces.com/contest/1420" target="_blank">Codeforces Round 672 (Div. 2) 2020-09-24</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
 using namespace std;
 
-// Функция для подсчета инверсий с помощью сортировки слиянием
-long long mergeAndCount(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int left, int mid, int right) {
+// Функция для подсчета инверсий
+// с помощью сортировки слиянием
+long long mergeAndCount(vector&lt;int&gt;& arr,
+  vector&lt;int&gt;& temp, int left, int mid, int right) {
   int i = left;    // Индекс для левой половины
   int j = mid + 1; // Индекс для правой половины
   int k = left;    // Индекс для временного массива
@@ -1038,7 +1056,9 @@ long long mergeAndCount(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int lef
       temp[k++] = arr[i++];
     } else {
       temp[k++] = arr[j++];
-      invCount += (mid - i + 1); // Все элементы от i до mid образуют инверсии с arr[j]
+      invCount += (mid - i + 1);
+      // Все элементы от i до mid
+      // образуют инверсии с arr[j]
     }
   }
 
@@ -1052,7 +1072,8 @@ long long mergeAndCount(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int lef
     temp[k++] = arr[j++];
   }
 
-  // Копирование отсортированного временного массива обратно в arr
+  // Копирование отсортированного временного
+  // массива обратно в arr
   for (i = left; i &lt;= right; i++) {
     arr[i] = temp[i];
   }
@@ -1060,8 +1081,10 @@ long long mergeAndCount(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int lef
   return invCount;
 }
 
-// Рекурсивная функция для сортировки слиянием и подсчета инверсий
-long long countInversions(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int left, int right) {
+// Рекурсивная функция для сортировки
+// слиянием и подсчета инверсий
+long long countInversions(vector&lt;int&gt;& arr,
+  vector&lt;int&gt;& temp, int left, int right) {
   long long invCount = 0;
   if (left &lt; right) {
     int mid = left + (right - left) / 2;
@@ -1151,7 +1174,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/886" target="_blank">Технокубок 2018 - Отборочный Раунд 3 2017-11-12</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1233,7 +1256,8 @@ int main() {
     </div>
 
     <p>Заведем массив (на 200001 элементов потому что всего столовок может быть не больше 200000)для всех возможных номеров столовых. И будем для каждого номера записывать день, в который мы последний раз посещали эту столовую. Когда массив заполним, то найдем в нем столовую с наименьшим значением дня когда мы были в ней последний раз. Ответ всегда будет единственным, потому что в один день Влад ходил только в одну столовую.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1336,7 +1360,8 @@ int main() {
       <li>два разных числа</li>
       <li>три числа a > b > c таких, что a - b = b -c</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1443,9 +1468,11 @@ NO
     </div>
 
     <p>Функция canDivideStudents: Перебирает все возможные пары дней (всего 10 пар). Для каждой пары дней проверяет, можно ли разделить студентов на две равные группы: Считает количество студентов, которые могут посещать занятия только в первый день, только во второй день или в оба дня. Если количество студентов, которые могут посещать только один из дней, не превышает половину от общего числа студентов, то такая пара дней подходит.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
+
 using namespace std;
 
 // Функция для проверки возможности разделения студентов
@@ -1463,7 +1490,8 @@ string canDivideStudents(int n, vector&lt;vector&lt;int&gt; &gt;& preferences) {
         bool canD2 = preferences[i][d2];
 
         if (!canD1 && !canD2) {
-          valid = false; // Студент не может ни в один из выбранных дней
+          valid = false;
+          // Студент не может ни в один из выбранных дней
           break;
         }
 
@@ -1576,7 +1604,8 @@ int main() {
     <p>Подсчитаем количество инверсий в массиве a. Это даст нам количество пересечений, если все провода идут в разные отрезки на нижнем терминале.</p>
 
     <p>Если в массиве есть повторяющиеся элементы, то для каждого повторяющегося элемента x добавим количество способов расположить провода, идущие в x, так, чтобы они не пересекались. Это количество равно количеству сочетаний из k по 2, где k — количество вхождений x в массив a.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;map&gt;
@@ -1584,8 +1613,10 @@ int main() {
 
 using namespace std;
 
-// Функция для подсчета инверсий с использованием сортировки слиянием
-long long mergeAndCount(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int left, int mid, int right) {
+// Функция для подсчета инверсий
+// с использованием сортировки слиянием
+long long mergeAndCount(vector&lt;int&gt;& arr,
+  vector&lt;int&gt;& temp, int left, int mid, int right) {
   int i = left;
   int j = mid + 1;
   int k = left;
@@ -1615,7 +1646,8 @@ long long mergeAndCount(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int lef
   return invCount;
 }
 
-long long countInversions(vector&lt;int&gt;& arr, vector&lt;int&gt;& temp, int left, int right) {
+long long countInversions(vector&lt;int&gt;& arr,
+  vector&lt;int&gt;& temp, int left, int right) {
   long long invCount = 0;
   if (left &lt; right) {
     int mid = (left + right) / 2;
@@ -1757,7 +1789,8 @@ n = 4
     </div>
 
     <p>Цикл в цикле. Проходим по n строкам. Проходим по n столбцам. Если это четная строка (0,2,4...) и четный столбец, то выводим "##". Иначе выводим "..". После каждой строки выводим '\n' и повторяем вывод еще раз для следующей строки.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;

@@ -33,3 +33,83 @@
 2 1 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/10/problem/B" target="_blank">Задача 10B</a>
+    <br><a href="https://codeforces.com/contest/10" target="_blank">Codeforces Beta Round 10 2010.04.15</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <climits>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+  int n, k;
+  cin >> n >> k;
+
+  int center = (k + 1) / 2;  // центральный ряд и место (1-индексация)
+
+  vector<vector<bool>> occupied(k + 1, vector<bool>(k + 1, false));  // [ряд][место], 1..k
+
+  for (int query = 0; query < n; ++query) {
+    int m;
+    cin >> m;
+
+    int bestRow = -1, bestL = -1, bestR = -1;
+    int bestCost = INT_MAX;
+
+    // Перебираем все ряды
+    for (int row = 1; row <= k; ++row) {
+      // Перебираем все возможные отрезки длины m в этом ряду
+      for (int l = 1; l + m - 1 <= k; ++l) {
+        int r = l + m - 1;
+
+        // Проверяем, все ли места свободны
+        bool free = true;
+        for (int seat = l; seat <= r; ++seat) {
+          if (occupied[row][seat]) {
+            free = false;
+            break;
+          }
+        }
+
+        if (!free) continue;
+
+        // Считаем суммарную удаленность от центра
+        int cost = 0;
+        for (int seat = l; seat <= r; ++seat) {
+          cost += abs(row - center) + abs(seat - center);
+        }
+
+        // Выбираем лучший вариант
+        if (cost < bestCost) {
+          bestCost = cost;
+          bestRow = row;
+          bestL = l;
+          bestR = r;
+        }
+      }
+    }
+
+    if (bestRow == -1) {
+      cout << -1 << '\n';
+    } else {
+      // Занимаем места
+      for (int seat = bestL; seat <= bestR; ++seat) {
+        occupied[bestRow][seat] = true;
+      }
+      cout << bestRow << ' ' << bestL << ' ' << bestR << '\n';
+    }
+  }
+
+  return 0;
+}
+</pre>
+</details>

@@ -50,30 +50,42 @@
   <h3>string</h3>
 
   <p>Подключим библиотеку</p>
-  <code>#include &lt;string&gt;</code>
+  <code class="language-cpp">#include &lt;string&gt;</code>
 
   <p><strong>string</strong> - это более удобная альтернатива строкам в стиле С, которую можно использовать в C++. Внутреннее устройство string похоже на вектор символов, мы можем изменять строку и ее размер.</p>
-<pre>
+
+<pre class="language-cpp">
 string str1;                // пустая
 string str2 = "123";        // строка 123
 string str3 = str2 + "abc"; // строка 123abc
 string str4("new str");     // строка new str
+cin >> str1;
 </pre>
-  <code>cin >> str1;</code>
 
   <p>Создадим две строки</p>
-  <code>string s1 = "abb";</code>
-  <code>string s2 = "abc";</code>
+
+<pre class="language-cpp">
+string s1 = "abb";
+string s2 = "abc";
+</pre>
+
   <p>Строки можно сравнить между собой</p>
-  <code>"abc" > "abb";</code>
-  <code>"123" &lt; "12";</code>
+
+<pre class="language-cpp">
+"abc" > "abb";
+"123" &lt; "12";
+</pre>
 
   <p>Строки можно объединять</p>
-  <code>string s3 = s1 + s2;</code>
-  <code>"abc" + "123"; // "abc123"</code>
+
+<pre class="language-cpp">
+string s3 = s1 + s2;
+"abc" + "123"; // "abc123"
+</pre>
 
   <p>Обращаться к отдельным символам в строке можно как к элементам массива
-  <code>char c = str1[0]; // вернет первый символ строки</code>
+
+  <code class="language-cpp">char c = str1[0]; // вернет первый символ строки</code>
 
   <p><strong>Подстрока</strong> - это непрерывная последовательность символов строки.</p>
   <p><strong>Префикс</strong> - это подстрока, содержащая первый символ строки.</p>
@@ -108,43 +120,51 @@ string str4("new str");     // строка new str
   </ol>
 
   <h4>.append(str) .resize(count)</h4>
-<pre>
+
+<pre class="language-cpp">
 string str1 = "123";
 string str2 = "abc";
 str1.append(str2);  // 123abc
 </pre>
+
   <p>Методом append() мы добавили в конец строки str1 строку str2.</p>
 
-<pre>
+<pre class="language-cpp">
 string str1 = "abcdabc123abcfd";
 str1.resize(5);
 str1.resize(25);
 </pre>
+
   <p>.resize(5) изменил длину строки до размера 5, отбросив лишние символы.</p>
   <p>.resize(25) дополнил строку символами '\0' до длины 25.</p>
 
   <h4>.substr()</h4>
-<pre>
+
+<pre class="language-cpp">
 string str1 = "abcdabc123abcfd";
 string str2 = str1.substr(3);    // dabc123abcfd
 string str3 = str1.substr(3, 5); // dabc1
 </pre>
+
   <p>str1.substr(3) выделил подстроку в строке str1 с позиции до ее окончания, после чего результат был присвоен в строку str2.</p>
   <p>str1.substr(3, 5) выделил подстроку длины 5 в строке str1, после чего результат был присвоен в строку str2.</p>
 
   <h4>.find() .rfind()</h4>
-<pre>
+
+<pre class="language-cpp">
 string str1 = "abcdabc123abcfd";
 string str2 = "abc";
 int pos1 = str1.find(str2);  // 0
 int pos2 = str1.rfind(str2); // 10
 </pre>
+
   <p>В строке "abcdabc123abcfd", есть 3 позиции вхождения подстроки "abc".</p>
   <p>Методы find и rfind - поиск подстроки в строке, очень медленные. Они работают за O(N²). Для поиска они используют цикл в цикле. Перебирают первую строку и для каждого символа первой строки перебирают вторую строку.</p>
   <p>В спортивном программировании есть более быстрые методы: КМП (Кнута-Мориса-Прата) и Z-функция. Они работают за O(N).</p>
 
   <h4>.insert() .erase()</h4>
-<pre>
+
+<pre class="language-cpp">
 string str1 = "abcdefgh";
 string str2 = "123";
 str1.insert(4, str2);  // abcd123efgh
@@ -155,7 +175,8 @@ str1.erase(6, 2);      // abcd12fgh
   <p>Конкатенация строк — операция объединения двух или более строк для создания одной новой строки.</p>
   <p>Для конкатенации двух строк используется знак +.</p>
   <p>Пример: "значение1" + "значение2".</p>
-<pre>
+
+<pre class="language-cpp">
 string str1 = "abcd";
 string str2 = "1234";
 string str3 = str1 + str2;
@@ -166,7 +187,8 @@ str1 += str2;
   <p>К строкам в языке С++ можно применять операции сравнения.</p>
   <code>&gt; >= &lt; &lt;= == !=</code>
   <p>Эти операции сравнивают два объекта string. Во всех операциях операнды сравниваются посимвольно до тех пор, пока не будет найдена пара соответствующих символов, которые содержат разные символы, или пока не будет достигнут конец одного или обоих операндов.</p>
-<pre>
+
+<pre class="language-cpp">
 int n;
 cin >> n;
 vector&lt;string&gt; Arrstr(n);
@@ -178,14 +200,16 @@ sort(Arrstr.begin(), Arrstr.end());
 
   <h4>Переводы из числа в строку и обратно</h4>
   <p><strong>stoi(str)</strong> принимает строку в качестве параметра и возвращает её значение в виде целого числа.</p>
-<pre>
+
+<pre class="language-cpp">
 string s = "135";
 int number = stoi(s);
 cout &lt;&lt; number;
 </pre>
 
   <p><strong>to_string(num)</strong> принимает число любого типа и возвращает его в виде строки.</p>
-<pre>
+
+<pre class="language-cpp">
 int num = 135;
 string res = to_string(num);
 </pre>
@@ -214,22 +238,44 @@ string res = to_string(num);
   <div class="anchor" id="p3"></div>
   <h3>getline()</h3>
 
-  <p>Функция cin считывает не всю строку, а только до первого пробельного символа. Пробельные символы ' ', '\t', '\n' нельзя считать функцией cin.</p>
-  <code>string str1; // первый способ</code>
-  <code>cin >> str1; // считывает до пробельного символа</code>
-  <p>Строку содержащую пробельные символы надо считывать фуркцией getline</p>
+  <p>Рассмотрим четыре способа считать строку в переменную.</p>
+
+  <h4>Первый способ. Функция cin</h4>
+  <p>Функция cin считывает не всю строку, а только до первого пробельного символа.</p>
+
+<pre class="language-cpp">
+string str1; // первый способ
+cin >> str1;
+</pre>
+
+  <p>Пробельные символы ' ', '\t', '\n' нельзя считать функцией cin. Строку содержащую пробельные символы надо считывать функцией getline</p>
+
+  <h4>Второй способ. Функция getline</h4>
   <p>Функция getline считывает всю строку до символа '\n'.</p>
   <p>Она позволяет считывать строки, включая пробелы, и сохранять их в переменных типа string.</p>
-  <p>Первым аргументов функция getline принимает объект cin для считывания из входного потока. Кроме входного потока, можно считывать из файла, если первым аргументом будет указатель на файл.</p>
+  <p>Первым аргументом функция getline принимает объект cin для считывания из входного потока. Кроме входного потока, можно считывать из файла, если первым аргументом будет указатель на файл.</p>
   <p>Вторым аргументом функция getline принимает имя строки, куда нужно записать считанную строку.</p>
-  <code>getline(cin, str1); // считывает до '\n'</code>
-  <p>Третий аргумент необязательный. Он указывает символ-разделитель. Если указан символ-разделитель, то функция getline будет считывать не до конца строки, а до символа-разделителя. Если требуется больше одного символа-разделителя, то их можно перечислять в двойных кавычках.</p>
-  <code>string str2; // второй способ</code>
-  <code>getline(cin, str2, ':'); // считывает до символа ':'</code>
 
+<pre class="language-cpp">
+string str2; // второй способ
+getline(cin, str2); // считывает до '\n'
+</pre>
+
+  <h4>Третий способ. Третий аргумент функции getline</h4>
+  <p>Третий аргумент необязательный. Он указывает символ-разделитель. Если указан символ-разделитель, то функция getline будет считывать не до конца строки, а до символа-разделителя. Если требуется больше одного символа-разделителя, то их можно перечислять в двойных кавычках.</p>
+
+<pre class="language-cpp">
+string str3; // третий способ
+getline(cin, str3, ':'); // считывает до символа ':'
+</pre>
+
+  <h4>Четвертый способ. Функция getline с заданным числом символов</h4>
   <p>Если нужно считать заданное число символов, например 256</p>
-  <code>string str3; // третий способ</code>
-  <code>cin.getline(str3, 256, ':');</code>
+
+<pre class="language-cpp">
+string str4; // четвертый способ
+cin.getline(str4, 256, ':'); // считывает 256 символов
+</pre>
 </article>
 
 
@@ -269,7 +315,7 @@ string res = to_string(num);
       <br><a href="https://codeforces.com/contest/281" target="_blank">Codeforces Round 172 (Div. 2) 2013-03-05</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -319,7 +365,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -375,7 +422,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Заведем два указателя. p1 на начало строки, p2 на конец строки. Будем сравнивать символы строки и сдвигать указатели друг к другу.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -454,7 +502,7 @@ p43s
       <br><a href="https://codeforces.com/contest/71" target="_blank">Codeforces Beta Round 65 (Div. 2) 2011-03-29</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -524,7 +572,8 @@ keke
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -591,7 +640,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/236" target="_blank">Codeforces Round 146 (Div. 2) 2012-10-20</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;string&gt;
@@ -672,7 +721,8 @@ TheQuickBrownFoxJumpsOverTheLazyDog
     </div>
 
     <p>Переведем символы строки в нижний регистр и запишем в вектор. Сделаем сортировку векторов. Буквы будут соседние если разница между ними равна 1. Посчитаем число букв в векторе. Если ровно 26, то это панграмма</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
@@ -778,7 +828,8 @@ int main() {
     </div>
 
     <p>Отсортировать два массива. В цикле от 0 до k менять местами меньшие элементы массива A с большими элементами массива B если они больше.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -893,7 +944,7 @@ t                          g
       <br><a href="https://codeforces.com/contest/731" target="_blank">Codeforces Round 376 (Div. 2) 2016-10-16</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -988,7 +1039,8 @@ nutforajarofatuna
     </div>
 
     <p>Нужно букву 'a' поставить в слове так, чтобы зеркальная ей буква была не 'a'. Пойдем от начала слова и будем проверять каждую букву, запомним индекс ai первой буквы которая будет не 'a' и поставим в строку букву 'a' на расстоянии ai от конца слова</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1071,7 +1123,8 @@ int main() {
     </div>
 
     <p>В строке должно быть не менее 4 букв. Если это 2 разные буквы, то каждой из них должно быть не меньше двух. Если это 3 разные буквы, то одной из них должно быть не меньше двух. Если это 4 разные буквы то подходит. Более 4 разных букв не может быть.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1185,7 +1238,8 @@ abc
     </div>
 
     <p>Отсортировать пароли. Минимальное число попыток это до первого пароля нужной длины. Максимальное число попыток это то последнего пароля нужной длины. Осталось учиесть что через каждые k попыток +5 секунд</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1317,7 +1371,8 @@ xxx
     </div>
 
     <p>Сохраним входную матрицу в A, а матрицу для поддельной подписи будем создавать в CopyA. Потом проверим если матрицы совпадают, то выводим YES, иначе NO</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;string&gt;
@@ -1437,7 +1492,8 @@ xxxxxx
     </div>
 
     <p>Результат равен количеству различных символов, которых не более одного, поделить на 2. Плюс количество различных символов, которых 2 и более. Но не более половины строки.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
@@ -1678,7 +1734,8 @@ cacad
     </div>
 
     <p>Сортировать слова по соотношению букв А (B,C,D,E) к другим буквам. Напишем функцию compare для такой сортировки. Для сравнения используем разницу между буквой A и остальными буквами в слове.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
@@ -1950,7 +2007,8 @@ y
     </div>
 
     <p>Решение за O(n²). Цикл в цикле находим разницу между буквами по всем парам. Каждый раз определяя минимальную.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;vector&gt;
@@ -2068,7 +2126,8 @@ ababa
     </div>
 
     <p>Если в строке s есть одинаковые символы стоящие через 1 любой символ s[i] == s[i+2], то при удалении пары соседних символов (i и i+1) или (i+1 и i+2) приведет к одной и той же строке. Это единственное условие при котором получаются идентичные строки при удалении двух соседних символов. Осталось только подсчитать сколько есть таких вариантов, когда два одинаковых символа стоят через символ</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
