@@ -114,12 +114,34 @@
 
   <p>Массив A имеет длину 6 и хранит в себе набор элементов {4,1,4,2,5,3}:</p>
 
+<pre>
+           19
+        /     \
+     11          8
+   /   \       /   \
+  5     6     8     0
+ / \   / \   / \   / \
+4   1 4   2 5   3 0   0
+</pre>
+
   <p>Ряд красивых вещей:</p>
   <ol>
-    <li>Нумерация элементов левой ветки дерева 2ⁱ</li>
+    <li>Нумерация элементов левой ветки дерева 2ⁱ (1,2,4,8)</li>
     <li>Номер первого листа равняется 8 или 2ᶻ</li>
     <li>Количество листьев равняется 8 или 2ᶻ</li>
   </ol>
+
+  <p>Дерево отрезков храним в массиве. Нумерация элементов массива приведена в скобках.</p>
+
+<pre>
+                    19 (1)
+          /                       \
+      11 (2)                        8 (3)
+   /          \                /            \
+  5 (4)        6 (5)          8 (6)          0 (7)
+ /    \       /     \        /     \        /    \
+4 (8)  1 (9) 4 (10)  2 (11) 5 (12)  3 (13) 0 (14)  0 (15)
+</pre>
 
   <p>Разделим реализацию дерева отрезков на 4 части:</p>
   <ol>
@@ -132,20 +154,31 @@
   <h4>Инициализация дерева</h4>
 
   <p>Для инициализации дерева необходимо определить количество элементов в нем, количество листьев и номер первого листа. Обычно для определения количества элементов всегда берут величину с запасом 4 * n или 8 * n.</p>
-<pre>
-int n;
-cin >> n;
-vector&lt;long long&gt; Tree_sum(n * 4);
-int number_left_list = 1;
-int count_list  1;
 
+<pre class="language-cpp">
+int n; // число элементов
+cin >> n;
+
+// размер массива для хранения дерева отрезков
+// в 4 раза больше числа элементов
+vector&lt;long long&gt; Tree_sum(n * 4);
+
+int count_list = 1; // число листьев
+int number_left_list = 1; // номер левого листа
+
+// пока число листьев меньше числа элементов
 while (count_list &lt; n) {
+  // увеличиваем число листьев в 2 раза
   count_list *= 2;
+  // номер левого листа всегда равен числу листьев
   number_left_list *= 2;
 }
 
-int q;
-char type;
+int q; // число запросов
+char type; // тип запроса
+
+// если type == 1, считаем сумму элементов от l до r
+// если type == 2, обновляем элемент id до значения c
 int l, r, id, c;
 </pre>
 
@@ -155,12 +188,19 @@ int l, r, id, c;
 
   <p>Для обновления одного элемента необходимо определить номер листа,   которому соответствует номер из запроса. Далее обновить все элементы в   дереве которые зависят от листа. (пробег от листа к корню)</p>
 
-<pre>
+<pre class="language-cpp">
 void update_tree_sum(vector&lt;long long&gt; &Tree_sum,
   int number_list, long long data) {
+
+  // текущая вершина (обновленная)
   Tree_sum[number_list] = data;
+
+  // пока не дошли до корня
   while (number_list > 1) {
-    number_list /= 2;
+    number_list /= 2; // переходим в родителя
+
+    // обновляем родителя как сумму
+    // левого и правого сына
     Tree_sum[number_list] = Tree_sum[number_list * 2] +
     Tree_sum[number_list * 2 + 1];
   }
@@ -178,10 +218,14 @@ void update_tree_sum(vector&lt;long long&gt; &Tree_sum,
     <li>Использовать хранение ДО по максимуму T2 + T12</li>
   </ol>
 
-  <p>Будем бежать от корня к листам и смотреть на ячейку является ли она частью ответа, не является частью ответа или частично является ответом.</p>
+  <p>Будем бежать от корня к листам и смотреть на ячейку:</p>
+  <ul>
+    <li>является ли она частью ответа (все элементы хорошие)</li>
+    <li>не является частью ответа (все элементы плохие)</li>
+    <li>частично является ответом (есть хорошие и плохие элементы)</li>
+  </ul>
 
-  <p>Реализация</p>
-<pre>
+<pre class="language-cpp">
 long long Sum(vector&lt;long long&gt; Tree_sum,
   int id, int l, int r, int find_l, int find_r) {
 
@@ -198,7 +242,9 @@ long long Sum(vector&lt;long long&gt; Tree_sum,
   }
 
   // если есть хорошие и плохие элементы
+  // заходим в сыновей
   int mid = (l + r) / 2;
+
   // считаем сумму левого потомка
   long long sum1 = Sum(Tree_sum, id * 2, l, mid, find_l, find_r);
   // считаем сумму правого потомка
@@ -209,16 +255,17 @@ long long Sum(vector&lt;long long&gt; Tree_sum,
 
   <h4>Обработка запросов задачи</h4>
 
-  <p>Реализация:</p>
-<pre>
+<pre class="language-cpp">
 cin >> q;
 for (int i = 0; i &lt; q; i++) {
   cin >> type;
+
   // запрос на вывод суммы
   if (type == '?') {
     cin >> l >> r;
     l--;
     cout &lt;&lt; Sum(Tree_sum, 1, 0, count_list, l, r) &lt;&lt; '\n';
+
   // запрос на обновление элемента
   } else {
     cin >> id >> c;
@@ -1322,32 +1369,42 @@ using namespace std;
 
 void update(vector&lt;long long&gt;& Tree,
   int number_list, int data) {
-  // присвоим новый элемент
-  Tree[number_list] = data;
-  // идем от листа к корню
+  Tree[number_list] = data;  // новый элемент
+
+  // пока не дошли до корня
   while (number_list != 1) {
-    number_list /= 2;
+    number_list /= 2; // родитель
+
+    // родитель содержит сумму сыновей
     Tree[number_list] = Tree[number_list * 2] +
       Tree[number_list * 2 + 1];
-   }
+  }
 }
 
 long long SUM(vector&lt;long long&gt;& Tree,
   int id, int l, int r,
   int find_l, int find_r) {
+
   // 1 случай. Все ячейки хорошие
   if (find_l &lt;= l && r &lt;= find_r) {
     return Tree[id];
   }
+
   // 2 случай. Все ячейки плохие
   if (r &lt;= find_l || find_r &lt;= l) {
     return 0;
   }
+
   // 3 случай. Есть хорошие и плохие ячейки
   // Делим диапазон пополам и проверяем рекурсивно
   int mid = l + (r - l) / 2;
+
+  // сумма левого потомка
   long long sum1 = SUM(Tree, id * 2, l, mid, find_l, find_r);
+
+  // сумма правого потомка
   long long sum2 = SUM(Tree, id * 2 + 1, mid, r, find_l, find_r);
+
   return sum1 + sum2;
 }
 

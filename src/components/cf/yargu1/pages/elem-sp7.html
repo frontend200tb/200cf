@@ -74,15 +74,16 @@
 
   <h4>Использование файлов</h4>
   <p>Мы запускаем часть кода в Debug режиме. В Release он не будет виден, поэтому при запуске на сервере Codeforces не будет происходить подключение файлов</p>
-<pre>
-int main() {
 
+<pre class="language-cpp">
+int main() {
 #ifdef _DEBUG
   freopen("input1.txt", "rt", stdin);
   freopen("output1.txt", "wt", stdout);
 #endif
 }
 </pre>
+
   <p>Добавим файлы <strong>input1.txt</strong> и <strong>output1.txt</strong> в проект.</p>
   <ol>
     <li>
@@ -105,9 +106,10 @@ int main() {
 
   <p>Microsoft объявила ряд функций устаревшими (deprecated) - freopen, fopen, fscanf, chsize и т.д. Это связано с тем, что данные функции не проверяют возможности переполнения буфера. Например, может произойти запись за пределами выделенного буфера, что может привести к изменению значений других данных, затиранию информации на стеке - к трудно находимым ошибкам при выполнении программы. Для устранения этого недостатка были разработаны безопасные функции с суффиксом _s (freopen_s)</p>
   <p>Чтобы продолжать пользоваться старыми функциями, можно попробовать отключить сообщения с ошибкой C4996. Для этого объявите макросы <strong>перед заголовочными файлами</strong> стандартных библиотек. Мне помог первый макрос</p>
-  <code>#define _CRT_SECURE_NO_WARNINGS</code>
-  <code>#define _CRT_SECURE_NO_DEPRECATE</code>
-  <code>#define _CRT_NONSTDC_NO_DEPRECATE</code>
+
+  <code class="language-cpp">#define _CRT_SECURE_NO_WARNINGS</code>
+  <code class="language-cpp">#define _CRT_SECURE_NO_DEPRECATE</code>
+  <code class="language-cpp">#define _CRT_NONSTDC_NO_DEPRECATE</code>
 </article>
 
 
@@ -130,7 +132,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Чтобы быстрее было вводить 9 чисел. Сделаем задачу для 10 элементов</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -166,7 +169,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -217,7 +221,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -258,7 +263,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -308,7 +314,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -377,7 +384,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -425,7 +433,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -468,7 +477,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 int n = 10, m = 15, k = n + m;
 vector&lt;int&gt; A(n);
 vector&lt;int&gt; B(m);
@@ -521,7 +531,8 @@ while (pB &lt; m) {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 int cnt = 1;
 int elem = A[0];
 for (int i = 1; i &lt; n; i++) {
@@ -575,7 +586,8 @@ for (int i = 1; i &lt; n; i++) {
   <details>
     <summary>Решение</summary>
     <p>Начнем с предположения, что максимальная разница — это разница между вторым и первым элементами. Запомним эти индексы (1 и 2). Будем поддерживать индекс min_index, который указывает на минимальный элемент в пройденной части массива. Для каждого следующего элемента вычисляем разницу с этим минимальным элементом. Если текущая разница больше максимальной найденной, обновляем максимальную разницу и сохраняем индексы. При обновлении максимальной разницы всегда выбираем пару с наименьшим j, а при равенстве — с наименьшим i.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -655,7 +667,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Заведем два указателя id1 на первого грабителя и id2 на второго грабителя. Поставим первого грабителя на первую ячейку id1 = 0</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -728,7 +741,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -787,7 +801,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>По формуле Гаусса для суммы чисел от 1 до n находим сумму всех чисел массива. Вычитаем сумму чисел на входе и получаем отсутствующее число.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -850,7 +865,8 @@ int main() {
     </div>
 
     <p>Паттерн два указателя с двух сторон. Заведем левый и правый указатели. Пока левый указатель меньше правого, сравниваем буквы. Если буквы совпадают, то двигаем левый указатель вправо, правый влево. Если буквы не совпадают, то в правый указатель пишем букву из левого указателя и двигаем их.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -932,7 +948,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1022,7 +1039,8 @@ int main() {
     </div>
 
     <p>Цифры 0, 4, 6, 9 содержат одну замкнутую фигуру, а цифра 8 две.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1101,7 +1119,8 @@ int main() {
     </div>
 
     <p>Положим бетонного осла одним концом на первый элемент, потом на следующий не накрытый элемент и т.д.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1171,7 +1190,8 @@ int main() {
 2 4 2 4 2 4 2 4
 </pre>
   <code>6</code>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1273,7 +1293,8 @@ int main() {
 </pre>
   <code>6</code>
     <p>Если пара чисел делится на 14 то это хорошая пара. Хорошая пара образуется только в двух случаях. Если число делится на 14, с любым числом оно образует хорошую пару. Если число делится на 2, то любое число, которое делится на 7 образует с ним хорошую пару. Линейным алгоритмом переберем все числа. Будем считать сколько чисел делятся на 14, сколько на 2 и сколько на 7.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1347,7 +1368,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Будем сравнивать 4 буквы на которые указывают 4 указателя. Вначале поставим два указателя на первую и последнюю букву первой половины слова, и два указателя на первую и последнюю букву второй половины слова. Если какая-то буква повторяется дважды, то выбираем ее, иначе все равно какую. Заменяем остальные буквы в указателях на выбранную.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1435,7 +1457,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Будем отдельно считать длину плообразной последовательности для двух случаев: 1 когда в первой паре числа возрастают, 2 - убывают. Если в паре числа равны, то обе последователности прерываются.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1567,7 +1590,7 @@ int main() {
 </pre>
   <code>9</code>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1642,7 +1665,8 @@ int main() {
     </div>
 
     <p>Линейным алгоритмам пройдем по символам строки. Если встретим подряд идущие 7 одинаковых символов, то это опасно, иначе нет.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -1768,7 +1792,7 @@ int main() {
 </pre>
   <code>6</code>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1838,7 +1862,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1919,7 +1944,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/127" target="_blank">Codeforces Beta Round 93 (Div. 2 Only) 2011-11-09</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -2021,7 +2046,7 @@ BABCHRISTMASBONATALLEFATHER
       <br><a href="https://codeforces.com/contest/141A" target="_blank">Codeforces Round 101 (Div. 2) 2012-01-08</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -2323,7 +2348,8 @@ int main() {
     <p>Если с третьим способом никого нет, то людей можно рассадить только первым или только вторым, выбираем из них максимум.</p>
     <p>Если с третьим способом кто-нибудь есть, то нужно рассмотреть четыре варианта и выбрать из них максимум. Каждый вариант это простой проход по циклу, поэтому <strong>сложность O(n)</strong></p>
     <p>1 вариант. начинаем сажать слева первым способом учитывая занятые места</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -2548,7 +2574,7 @@ int main() {
       <br><a href="https://codeforces.com/gym/100187" target="_blank">2013, VI Самарская областная межвузовская олимпиада по программированию 2013-04-27</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -2689,7 +2715,7 @@ int main() {
     <p>Можно не рассматривать книги, чтение которых не дает никаких навыков. Это книги с двоичным кодом '00'</p>
     <p>Найдем все книги с кодами 01, 10, 11 и выберем из них те которые можно прочесть за минимальное время</p>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
