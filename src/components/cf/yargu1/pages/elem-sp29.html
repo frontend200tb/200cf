@@ -1043,8 +1043,8 @@ void update(vector&lt;long long&gt;& Tree,
   while (number_list != 1) {
     number_list /= 2;
     Tree[number_list] = Tree[number_list * 2] +
-      Tree[number_list * 2 + 1];
-   }
+    Tree[number_list * 2 + 1];
+  }
 }
 
 long long SUM(vector&lt;long long&gt;& Tree,
@@ -1122,8 +1122,8 @@ void update(int number_list, int data) {
   while (number_list != 1) {
     number_list /= 2;
     Tree[number_list] = Tree[number_list * 2] +
-      Tree[number_list * 2 + 1];
-   }
+    Tree[number_list * 2 + 1];
+  }
 }
 
 long long SUM(int id, int l, int r, int find_l, int find_r) {
