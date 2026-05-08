@@ -25,3 +25,66 @@
 </pre>
   <code>6</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/10/problem/E" target="_blank">Задача 10E</a>
+    <br><a href="https://codeforces.com/contest/10" target="_blank">Codeforces Beta Round 10 2010.04.15</a>
+  </div>
+
+  <p>Это решение ищет наименьшую сумму, для которой жадный алгоритм даёт неоптимальный результат.</p>
+  <p>Если жадный алгоритм всегда оптимален, то для любых сумм он даёт минимальное число монет. Чтобы опровергнуть это, достаточно найти контрпример: сумму, которую жадный алгоритм набирает хуже, чем оптимальный способ.</p>
+  <p>Сравним два способа набора суммы: жадный способ (начинается с самой большой монеты) и контрольный способ, который может оказаться лучше.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+int main() {
+  int n; // число номиналов монет
+  cin >> n;
+
+  vector<int> A(n);
+  for (int i = 0; i < n; i++) {
+    cin >> A[i]; // номиналы монет
+  }
+
+  int p, c, t;
+  int sum = -1;
+
+  for (int i = 0; i < n; i++) {
+    for (int j = i; j < n; j++) {
+      // оптимальная сумма
+      p = A[i] - 1;
+      c = 1;
+      t = A[j];
+
+      for (int k = 0; k <= j; k++) {
+        c += p / A[k];
+        t += p / A[k] * A[k];
+        p %= A[k];
+      }
+
+      // жадный алгоритм
+      p = t;
+
+      for (int k = 0; k < n; k++) {
+        c -= p / A[k];
+        p %= A[k];
+      }
+
+      if (c < 0 && (sum < 0 || sum > t)) {
+        sum = t;
+      }
+    }
+  }
+
+  cout << sum;
+}
+</pre>
+</details>
