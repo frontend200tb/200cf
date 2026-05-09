@@ -20,3 +20,43 @@
 </pre>
   <code>3</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/11/problem/A" target="_blank">Задача 11A</a>
+    <br><a href="https://codeforces.com/contest/10" target="_blank">Codeforces Beta Round 11 2010.04.26</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n; // число элементов
+  int d; // каждый ход 1 элемент увеличивается на d
+  cin >> n >> d;
+
+  int prev; // первый элемент
+  cin >> prev;
+  int next; // следующий элемент
+  int cnt = 0; // минимальное число ходов
+
+  for (int i = 1; i < n; i++) {
+    cin >> next;
+
+    if (prev >= next) {
+      int tmp = (prev - next) / d + 1;
+      cnt += tmp;
+      next += tmp * d;
+    }
+
+    prev = next;
+  }
+
+  cout << cnt;
+}
+</pre>
+</details>
