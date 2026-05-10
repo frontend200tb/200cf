@@ -25,3 +25,34 @@
   <code>0</code>
   <code>0</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/11/problem/B" target="_blank">Задача 11B</a>
+    <br><a href="https://codeforces.com/contest/10" target="_blank">Codeforces Beta Round 11 2010.04.26</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int x; // координата точки
+  cin >> x;
+
+  x = abs(x);
+  int step = 0; // число шагов
+  int next = 0; // следующий шаг
+
+  while (next < x || next % 2 != x % 2) {
+    step++;
+    next += step;
+  }
+
+  cout << step;
+}
+</pre>
+</details>
