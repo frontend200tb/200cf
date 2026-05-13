@@ -24,3 +24,84 @@
   <code>50.000000</code>
   <p>Во втором примере, если добавить две паузы, чтобы получить LXXRXR, то Джек будет маршировать: LXXRXRLXXRXRL... заместо LRLRLRLRLRLRL... и будет делать верный шаг в половине случаев. Если же не добавить пауз вообще, то получится некорректная последовательность шагов, так как Джек будет подряд делать шаг справа.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/11/problem/E" target="_blank">Задача 11E</a>
+    <br><a href="https://codeforces.com/contest/10" target="_blank">Codeforces Beta Round 11 2010.04.26</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+
+using namespace std;
+
+long double calculate(const string& str) {
+  int pairs = 0;
+  int total = 0;
+  int offset = 0;
+  bool flip = false;
+
+  for (size_t i = 0; i < str.length(); ++i) {
+    char expected = (total & 1) ? 'R' : 'L';
+
+    if (str[i] == 'X') {
+      total++;
+    } else if (str[i] == expected) {
+      pairs++;
+      total++;
+      flip = false;
+    } else {
+      pairs++;
+      total += 2;
+      offset += (flip ? 1 : 0);
+      flip = !flip;
+    }
+  }
+
+  if (total & 1) {
+    total++;
+    offset += (flip ? 1 : 0);
+  }
+
+  if (pairs * 2 > total) {
+    pairs -= offset;
+    total -= offset * 2;
+  }
+
+  return static_cast<long double>(pairs) / total;
+}
+
+int main() {
+  string input;
+  cin >> input;
+
+  string processed;
+  for (size_t i = 0; i < input.length(); ++i) {
+    if (i > 0 && input[i] == input[i - 1] && input[i] != 'X') {
+      processed += 'X';
+    }
+    processed += input[i];
+  }
+
+  long double result;
+  if (input[0] == input[input.size() - 1] && input[0] != 'X') {
+    result = max(calculate('X' + processed),
+      calculate(processed + 'X'));
+  } else {
+    result = calculate(processed);
+  }
+
+  result = floor(result * 1e8) / 1e8;
+  printf("%.6lf\n", static_cast<double>(result) * 100.0);
+
+  return 0;
+}
+</pre>
+</details>
