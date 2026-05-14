@@ -93,47 +93,8 @@ int main() {
   <div class="anchor" id="t3"></div>
   <h3>Задача C. Суперагент</h3>
 
-  <div class="time-memory">(Время 2с. Память 256мб)</div>
+  <div class="t3"></div>
 
-  <details>
-    <summary>Решение</summary>
-
-  <div>
-    <a href="https://codeforces.com/contest/12/problem/A" target="_blank">Задача 12А</a>
-    <br><a href="https://codeforces.com/contest/12" target="_blank">Codeforces Beta Round 12 (Div. 2) 2010-04-29</a>
-  </div>
-
-    <p>Создаем массив символов на 10 элементов, нулевой элемент инициализируем чем угодно. Введем 9 символов в элементы массива с 1 до 9. Для симметрии 5 элемент может быть любым. Проверим что равны элементы массива A[1] = A[9], A[2] = A[8], A[3] = A[7], A[4] = A[6].</p>
-<pre>
-#include &lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-  // ввод данных
-  char A[10];
-  A[0] = '0';
-  for (int i = 1; i &lt; 10; i++) {
-    cin >> A[i];
-  }
-
-  // решение
-  bool flag = true;
-  for (int i = 1; i &lt; 5; i++) {
-    if (A[i] != A[10 - i]) {
-      flag = false;
-    }
-  }
-
-  // вывод результата
-  if (flag) {
-    cout &lt;&lt; "YES";
-  } else {
-    cout &lt;&lt; "NO";
-  }
-}
-</pre>
-  </details>
 </article>
 
 
@@ -142,81 +103,8 @@ int main() {
   <div class="anchor" id="t4"></div>
   <h3>Задача D. Правильное решение?</h3>
 
-  <div class="time-memory">(Время 2с. Память 256мб)</div>
+  <div class="t4"></div>
 
-  <details>
-    <summary>Решение</summary>
-
-  <div>
-    <a href="https://codeforces.com/contest/12/problem/B" target="_blank">Задача 12B</a>
-    <br><a href="https://codeforces.com/contest/12" target="_blank">Codeforces Beta Round 12 (Div. 2) 2010-04-29</a>
-  </div>
-
-    <p>Поскольку ответ Валеры может содержать лидирующие нули, то примем два числа как строки. Сразу проверим, если у Валеры больше одного символа и первый символ 0, то это неправильный ответ. Соберем частотный массив для цифр от 0 до 9. Соберем свой правильный ответ. Первую цифру поставим наименьшую, но не 0. Следующие цифры должны идти от 0 до 9, чтобы получилось наименьшее число.</p>
-<pre>
-#include &lt;iostream&gt;
-#include &lt;string&gt;
-
-using namespace std;
-
-int main() {
-  // ввод данных
-  string sn; // целое число
-  string sm; // мин число
-  cin >> sn >> sm;
-
-  // решение
-  bool flag = true;
-
-  if (sm.size() > 1 && sm[0] == '0') {
-    flag = false;
-  }
-  long long n = stoll(sn);
-  long long m = stoll(sm);
-  // соберем частотный массив цифр числа
-  int F[10]{ 0 };
-  long long tmp = n;
-  while (tmp) {
-    int dig = tmp % 10;
-    F[dig]++;
-    tmp /= 10;
-  }
-
-  // соберем свое мин число k
-  // оно может и не влезть в int
-  // первая цифра мин, но не 0
-  long long k = 0;
-  int next = 1;
-  while (k == 0 && next &lt; 10) {
-    if (F[next] > 0) {
-      k = next;
-      F[next]--;
-    }
-    next++;
-  }
-
-  // остальные цифры мин начиная с нуля
-  for (int i = 0; i &lt; 10; i++) {
-    while (F[i]) {
-      k = k * 10 + i;
-      F[i]--;
-    }
-  }
-
-  // сравним результаты
-  if (k != m) {
-    flag = false;
-  }
-
-  // вывод результата
-  if (flag) {
-    cout &lt;&lt; "OK";
-  } else {
-    cout &lt;&lt; "WRONG_ANSWER";
-  }
-}
-</pre>
-  </details>
 </article>
 
 

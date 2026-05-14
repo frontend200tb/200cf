@@ -35,3 +35,90 @@ orange
 </pre>
   <code>11 30</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/12/problem/C" target="_blank">Задача 12C</a>
+    <br><a href="https://codeforces.com/contest/12" target="_blank">Codeforces Beta Round 12 (Div. 2) 2010-04-29</a>
+  </div>
+
+  <p>Алгоритм решения:</p>
+  <ol>
+    <li>Считываем количество ценников n и количество фруктов в списке m</li>
+    <li>Считываем цены всех фруктов в массив</li>
+    <li>Считываем названия фруктов из списка Валеры</li>
+    <li>Подсчитываем частоту каждого фрукта в списке с помощью map</li>
+    <li>Получаем вектор частот и сортируем его по убыванию</li>
+    <li>Сортируем цены по возрастанию</li>
+    <li>Для минимальной суммы: умножаем самые частые фрукты на самые дешевые цены и суммируем</li>
+    <li>Для максимальной суммы: умножаем самые частые фрукты на самые дорогие цены и суммируем</li>
+  </ol>
+  <p>Сложность: O(n log n + m log m) из-за сортировок, что вполне подходит для ограничений n, m ≤ 100.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <map>
+#include <functional>
+
+using namespace std;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  // Читаем цены
+  vector<int> prices(n);
+  for (int i = 0; i < n; i++) {
+    cin >> prices[i];
+  }
+
+  // Читаем названия фруктов
+  vector<string> fruits(m);
+  for (int i = 0; i < m; i++) {
+    cin >> fruits[i];
+  }
+
+  // Подсчитываем количество каждого фрукта в списке
+  map<string, int> fruitCount;
+  for (const string& fruit : fruits) {
+    fruitCount[fruit]++;
+  }
+
+  // Получаем частоты и сортируем их по убыванию
+  vector<int> frequencies;
+  for (const auto& pair : fruitCount) {
+    frequencies.push_back(pair.second);
+  }
+  sort(frequencies.begin(), frequencies.end(), greater<int>());
+
+  // Сортируем цены
+  sort(prices.begin(), prices.end());
+
+  // Функция для вычисления суммы
+  auto calculateSum = [](const vector<int>& freqs, const vector<int>& prices) -> int {
+    int sum = 0;
+    for (size_t i = 0; i < freqs.size(); i++) {
+      sum += freqs[i] * prices[i];
+    }
+    return sum;
+    };
+
+  // Минимальная сумма: самые частые фрукты с самыми дешевыми ценами
+  int minSum = calculateSum(frequencies, prices);
+
+  // Максимальная сумма: самые частые фрукты с самыми дорогими ценами
+  vector<int> reversedPrices = prices;
+  reverse(reversedPrices.begin(), reversedPrices.end());
+  int maxSum = calculateSum(frequencies, reversedPrices);
+
+  cout << minSum << " " << maxSum << endl;
+
+  return 0;
+}
+</pre>
+</details>
