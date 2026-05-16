@@ -1973,6 +1973,92 @@ int main() {
   </details>
 </article>
 
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/177/problem/C2" target="_blank">Задача C2</a>
+    <br><a href="https://codeforces.com/contest/177" target="_blank">ABBYY Cup 2.0 - Easy</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+
+class DSU {
+private:
+  std::vector<int> parent;
+  std::vector<int> rank;
+
+public:
+  DSU(int n) : parent(n), rank(n, 0) {
+    std::iota(parent.begin(), parent.end(), 0);
+  }
+
+  int find(int x) {
+    if (parent[x] != x) {
+      parent[x] = find(parent[x]);
+    }
+    return parent[x];
+  }
+
+  void unite(int x, int y) {
+    int rootX = find(x);
+    int rootY = find(y);
+
+    if (rootX != rootY) {
+      if (rank[rootX] < rank[rootY]) {
+        parent[rootX] = rootY;
+      } else if (rank[rootX] > rank[rootY]) {
+        parent[rootY] = rootX;
+      } else {
+        parent[rootY] = rootX;
+        rank[rootX]++;
+      }
+    }
+  }
+};
+
+int main() {
+  int n, m;
+
+  std::cin >> n;
+  DSU dsu(n + 1);  // 1-indexed
+
+  std::cin >> m;
+  for (int i = 0; i < m; ++i) {
+    int x, y;
+    std::cin >> x >> y;
+    dsu.unite(x, y);
+  }
+
+  std::vector<bool> hasSelfEdge(n + 1, false);
+  std::cin >> m;
+  for (int i = 0; i < m; ++i) {
+    int x, y;
+    std::cin >> x >> y;
+    if (dsu.find(x) == dsu.find(y)) {
+      hasSelfEdge[dsu.find(x)] = true;
+    }
+  }
+
+  std::vector<int> componentSize(n + 1, 0);
+  for (int i = 1; i <= n; ++i) {
+    int root = dsu.find(i);
+    if (!hasSelfEdge[root]) {
+      componentSize[root]++;
+    }
+  }
+
+  std::cout << *std::max_element(componentSize.begin(), componentSize.end()) << '\n';
+
+  return 0;
+}
+</pre>
+</details>
+
 
 <!-- Задача O. Племя тив -->
 <article class="article">
