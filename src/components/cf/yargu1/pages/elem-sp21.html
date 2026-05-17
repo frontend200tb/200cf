@@ -1804,6 +1804,60 @@ int main() {
 </pre>
     <code>4 4 1 4 4 2 2</code>
   </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/1167/problem/C" target="_blank">Задача 1167C</a>
+    <br><a href="https://codeforces.com/contest/1167" target="_blank">Educational Codeforces Round 65</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int N = 5e5 + 9;
+int U[N], W[N];
+
+int Find(int u) {
+  return U[u] == u ? u : U[u] = Find(U[u]);
+}
+
+void Union(int u, int v) {
+  u = Find(u), v = Find(v);
+  if (u != v) U[u] = v, W[v] += W[u];
+}
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+  for (int i = 1; i <= n; i++) {
+    U[i] = i, W[i] = 1;
+  }
+
+  while (m--) {
+    int len;
+    cin >> len;
+    vector<int> A(len);
+
+    for (int j = 0; j < len; j++) {
+      cin >> A[j];
+    }
+
+    for (int j = 1; j < len; j++) {
+      Union(A[j], A[0]);
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    cout << W[Find(i)] << " \n"[i == n];
+  }
+}
+</pre>
+</details>
 </article>
 
 
