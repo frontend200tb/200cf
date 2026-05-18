@@ -1922,6 +1922,73 @@ int main() {
 3 4 50
 </pre>
   </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/107/problem/A" target="_blank">Задача 107A</a>
+    <br><a href="https://codeforces.com/contest/107" target="_blank">Codeforces Beta Round 83 (Div. 1 Only)</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <set>
+
+using namespace std;
+
+int main() {
+  int n; // количество узлов
+  int p; // количество трубопроводов
+  int from, to, diameter; // временные переменные для ввода
+
+  set<tuple<int, int, int>> result; // (начало, конец, минимальный диаметр)
+
+  cin >> n >> p;
+
+  vector<int> nextNode(n + 1, 0);      // куда ведёт труба из узла
+  vector<int> inDegree(n + 1, 0);      // степень входа (0, 1, 2)
+  vector<int> pipeDiameter(n + 1, 0);  // диаметр трубы из узла
+
+  // Чтение трубопроводов
+  while (p--) {
+    cin >> from >> to >> diameter;
+    nextNode[from] = to;           // из from идёт труба в to
+    inDegree[from] += 1;           // из узла выходит труба
+    inDegree[to] += 2;             // в узел входит труба
+    pipeDiameter[from] = diameter; // запоминаем диаметр
+  }
+
+  // Поиск цепочек
+  for (int i = 1; i <= n; i++) {
+    // Проверяем, является ли узел началом цепочки
+    if (inDegree[i] == 1) {  // узел только с одной выходящей трубой
+      int start = i;
+      int currentNode = i;
+      int minDiameter = 1e7;
+
+      // Идём по цепочке до конца
+      while (nextNode[currentNode]) {
+        minDiameter = min(minDiameter, pipeDiameter[currentNode]);
+        currentNode = nextNode[currentNode];
+      }
+
+      // Сохраняем результат: начало, конец, минимальный диаметр
+      result.insert({ start, currentNode, minDiameter });
+    }
+  }
+
+  // Вывод результатов
+  cout << result.size() << endl;
+  for (auto& [start, end, minDiam] : result) {
+    cout << start << ' ' << end << ' ' << minDiam << endl;
+  }
+
+  return 0;
+}
+</pre>
+</details>
 </article>
 
 
