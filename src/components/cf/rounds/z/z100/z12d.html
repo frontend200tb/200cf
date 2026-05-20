@@ -20,3 +20,83 @@
 </pre>
   <code>1</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/12/problem/D" target="_blank">Задача 12D</a>
+    <br><a href="https://codeforces.com/contest/12" target="_blank">Codeforces Beta Round 12 (Div. 2) 2010-04-29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <set>
+#include <ranges>
+#include <tuple>
+
+int main() {
+  std::ios_base::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+
+  int n;
+  std::cin >> n;
+
+  // Используем tuple вместо array для лучшей семантики
+  std::vector<std::tuple<int, int, int>> data(n);
+
+  // Чтение данных: первое значение отрицательное, остальные с инкрементом
+  for (int i : {0, 1, 2}) {
+    for (auto& [a, b, c] : data) {
+      int val;
+      std::cin >> val;
+      if (i == 0) {
+        a = -val;
+      } else if (i == 1) {
+        b = val + 1;
+      } else {
+        c = val + 1;
+      }
+    }
+  }
+
+  // Сортировка по первому элементу (используем ranges)
+  std::ranges::sort(data);
+
+  // Множество для хранения пар (x, y)
+  std::set<std::pair<int, int>> points;
+  int answer = 0;
+
+  for (const auto& [_, x, y] : data) {
+    auto it = points.lower_bound({ x, y });
+
+    if (it != points.end() && it->second >= y) {
+      // Сравнение для обновления ответа
+      if (y < (x < it->first ? it->second :
+        (std::next(it) == points.end() ? 0 : std::next(it)->second))) {
+        ++answer;
+      }
+    } else {
+      // Вставка и удаление доминируемых точек
+      it = points.insert(it, { x, y });
+
+      // Удаляем предыдущие точки с меньшим или равным y
+      while (it != points.begin()) {
+        auto prev_it = std::prev(it);
+        if (prev_it->second <= y) {
+          it = points.erase(prev_it);
+        } else {
+          break;
+        }
+      }
+    }
+  }
+
+  std::cout << answer << '\n';
+
+  return 0;
+}
+</pre>
+</details>
