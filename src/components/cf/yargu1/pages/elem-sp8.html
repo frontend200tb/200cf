@@ -71,7 +71,8 @@
   <code>result = aₗ + aₗ₊₁ + ... + a<sub>r-1</sub> + a<sub>r</sub></code>
 
   <p>Если запрос единственный, то мы можем посчитать сумму элементов через цикл</p>
-<pre>
+
+<pre class="language-cpp">
 int result = 0;
 for (int i = l; i &lt;= r; i++) {
   result += A[i];
@@ -104,7 +105,8 @@ for (int i = l; i &lt;= r; i++) {
 
   <details>
     <summary>Код префикс-суммы</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -156,7 +158,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -266,7 +269,8 @@ b<sub>n0</sub>    b<sub>n1</sub>    b<sub>n2</sub>    b<sub>n3</sub>    b<sub>nn
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -305,7 +309,8 @@ int main() {
   cin >> q;
   for (int i = 0; i &lt; q; i++) {
     cin >> xl >> xr >> yl >> yr;
-    result = B[xr][yr] - B[xl - 1][yr] - B[xr][yl - 1] + B[xl - 1][yl - 1];
+    result = B[xr][yr] - B[xl - 1][yr] -
+            B[xr][yl - 1] + B[xl - 1][yl - 1];
 
     //вывод результата
     cout &lt;&lt; result &lt;&lt; '\n';
@@ -367,7 +372,7 @@ int main() {
       <br><a href="https://codeforces.com/gym/100090" target="_blank">2012, Отборочный контест СГАУ на четвертьфинал ACM ICPC 2012-10-06</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -434,7 +439,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -530,7 +536,8 @@ int main() {
   <code>1 3</code>
   <p>Сначала находим максимальное число. Если оно меньше или равно нулю, значит нет положительных чисел, и в ответ выводим индекс первого максимального (отрицательного или нуля).</p>
   <p>Правым указателем проходим и складываем по очереди числа и смотрим, если текущая сумма больше максимальной, то обновляем максимум и границы ответа. Если текущая сумма меньше или равна 0, то увеличиваем левый указатель.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -648,7 +655,8 @@ int main() {
       <li>Начальный массив должен быть неизменным</li>
       <li>Результат запрашивать только в самом конце</li>
     </ol>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -745,7 +753,8 @@ int main() {
 
   <details>
     <summary>Наивное решение - цикл в цикле</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -785,7 +794,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/313" target="_blank">Codeforces Round 186 (Div. 2) 2013-05-30</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -907,7 +916,8 @@ int main() {
 163 194 210 235 8 245 125 332 240 212 184 182 164 130 220 127 7 34 22 196 209 31 96 289 189 330 57 355 347 55 336 303 55 360 221 351 65 265 360 108 179 226 95 111 214 120 52 78 301 164 141 173 328 290 123
 </pre>
   <code>8758</code>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1001,12 +1011,14 @@ int main() {
     int right = left;
     tmp.first = NegA[left].first;
     tmp.second = NegA[right].second;
-    cur = prefB[tmp.first - 1] + (prefA[tmp.second] - prefA[tmp.first - 1]) + sufB[tmp.second + 1];
+    cur = prefB[tmp.first - 1] + (prefA[tmp.second] -
+          prefA[tmp.first - 1]) + sufB[tmp.second + 1];
     right++;
 
     while (right &lt; NegA.size()) {
       tmp.second = NegA[right].second;
-      next = prefB[tmp.first - 1] + (prefA[tmp.second] - prefA[tmp.first - 1]) + sufB[tmp.second + 1];
+      next = prefB[tmp.first - 1] + (prefA[tmp.second] -
+      prefA[tmp.first - 1]) + sufB[tmp.second + 1];
       if (next &lt; cur) {
         cur = next;
       }
@@ -1062,7 +1074,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Для каждого сектора, представленного точкой, посчитать количество секторов слева и справа до битого сектора, представленного звездочкой. Для хранения этой информации создадим два вспомогательных массива. Один для хранения расстояний слева, другой для хранения расстояний справа</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1196,7 +1209,7 @@ int main() {
 </pre>
   <code>2 5 2 5 3</code>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1344,7 +1357,8 @@ int main() {
   <details>
     <summary>Решение с TL</summary>
     <p>Решение в лоб. Без оптимизации. На 11 тесте превышнение по времени.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1417,7 +1431,8 @@ int main() {
     </div>
 
     <p>Чтобы избавиться от вложенных циклов, будем использовать префиксный массив дважды. Сначала для операций, потом для итогового массива. В префиксном массиве для операций prefB посчитаем сколько раз каждая операция выполняется. В префиксном итоговом массиве prefA посчитаем количество применений каждой операции.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1484,6 +1499,7 @@ int main() {
   }
   cout &lt;&lt; endl;
 }
+</pre>
   </details>
 </article>
 
@@ -1533,7 +1549,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Соберем решето Эратосфена от 1 до 10⁷. Создадим префикс-функцию, в которой для каждого числа i в этом диапазоне будет храниться количество простых чисел от 1 до i включительно.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1648,7 +1665,8 @@ int main() {
   <details>
     <summary>Решение с TL</summary>
     <p>Превышено ограничение времени на тесте 4</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1709,7 +1727,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/1491" target="_blank">Codeforces Global Round 13 2021-02-28</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -1824,7 +1842,8 @@ int main() {
     </div>
 
     <p>Создадим массив A для входных данных, массив B для префикс-сумм слева направо, массив C для префикс-сумм справа налево.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -1925,7 +1944,7 @@ int main() {
       <br><a href="https://codeforces.com/contest/276" target="_blank">Codeforces Round 169 (Div. 2) 2013-02-24</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -2023,7 +2042,8 @@ int main() {
 
   <details>
     <summary>Решение с TL</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;fstream&gt;
 #include &lt;vector&gt;
@@ -2074,7 +2094,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;fstream&gt;
 #include &lt;vector&gt;

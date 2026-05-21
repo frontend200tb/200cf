@@ -27,3 +27,36 @@
 2 3 1 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/12/problem/D" target="_blank">Задача 12D</a>
+    <br><a href="https://codeforces.com/contest/12" target="_blank">Codeforces Beta Round 12 (Div. 2) 2010-04-29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (i == j) {
+        cout << 0 << ' ';
+      } else {
+        int multiplier = (i == n - 1 || j == n - 1) ? 2 : 1;
+        cout << 1 + multiplier * (i + j) % (n - 1) << ' ';
+      }
+    }
+    cout << '\n';
+  }
+
+  return 0;
+}
+</pre>
+</details>
