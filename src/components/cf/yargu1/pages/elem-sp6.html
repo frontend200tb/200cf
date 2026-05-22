@@ -589,7 +589,7 @@ int main() {
 
     <div>
       <a href="https://codeforces.com/contest/1145/problem/A" target="_blank">Задача 1145A</a>
-      <br><a href="https://codeforces.com/contest/1145" target="_blank">Первоапрельский контест 2019 2019-03-29</a>
+      <br><a href="https://codeforces.com/contest/1145" target="_blank">Первоапрельский контест 2019 2019.03.29</a>
     </div>
 
 <pre class="language-cpp">
@@ -760,7 +760,7 @@ int main() {
 
     <div>
       <a href="https://codeforces.com/contest/166/problem/C" target="_blank">Задача 166C</a>
-      <br><a href="https://codeforces.com/contest/166" target="_blank">Codeforces Round 113 (Div. 2) 2012-03-23</a>
+      <br><a href="https://codeforces.com/contest/166" target="_blank">Codeforces Round 113 (Div. 2) 2012.03.23</a>
     </div>
 
 <pre class="language-cpp">
@@ -885,7 +885,7 @@ int main() {
 
     <div>
       <a href="https://codeforces.com/contest/119/problem/A" target="_blank">Задача 119A</a>
-      <br><a href="https://codeforces.com/contest/119" target="_blank">Codeforces Beta Round 90 2011-10-14</a>
+      <br><a href="https://codeforces.com/contest/119" target="_blank">Codeforces Beta Round 90 2011.10.14</a>
     </div>
 
 <pre class="language-cpp">
@@ -936,89 +936,8 @@ int main() {
   <div class="anchor" id="task9"></div>
   <h3>Задача I. Вор и спички</h3>
 
-  <div class="time-memory">(Время 0.5с. Память 64мб)</div>
+  <div class="t9"></div>
 
-  <p>Вор пробрался на склад спичек и хочет украсть как можно больше спичек. На складе находится m контейнеров, в контейнере номер i находится aᵢ коробок спичек, а в каждой коробке bᵢ спичек. Все коробки имеют одинаковый размер. В рюкзак вора помещается ровно n коробок. Ваша задача найти наибольшее количество спичек, которое сможет унести вор. У него нет времени на перекладывание спичек между коробками, поэтому он просто выбирает не более n коробок так, чтобы суммарное число спичек в них было максимальным.</p>
-
-  <h4>Входные данные</h4>
-  <p>В первой строке входных данных находится число n (1 ≤ n ≤ 2·10⁸) и число m (1 ≤ m ≤ 20). В i + 1 строке находится пара чисел aᵢ и bᵢ (1 ≤ aᵢ ≤ 10⁸, 1 ≤ bᵢ ≤ 10). Все числа во входных данных — целые.</p>
-
-  <h4>Выходные данные</h4>
-  <p>Выведите единственное число — ответ на задачу.</p>
-
-  <details>
-    <summary>Примеры</summary>
-    <h4>Пример 1</h4>
-<pre>
-7 3
-5 10
-2 5
-3 6
-</pre>
-    <code>62</code>
-
-    <h4>Пример 2</h4>
-<pre>
-3 3
-1 3
-2 2
-3 1
-</pre>
-    <code>7</code>
-  </details>
-
-  <details>
-    <summary>Решение</summary>
-
-    <div>
-      <a href="https://codeforces.com/contest/16/problem/B" target="_blank">Задача 16B</a>
-      <br><a href="https://codeforces.com/contest/16" target="_blank">Codeforces Beta Round 16 (Див. 2) 2010-06-03</a>
-    </div>
-
-<pre class="language-cpp">
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;algorithm&gt;
-
-using namespace std;
-
-bool compare(const pair&lt;int, int&gt;& a, const pair&lt;int, int&gt;& b) {
-  return a.second > b.second;
-}
-
-int main() {
-  // ввод данных
-  int n, m;
-  cin >> n >> m;
-
-  vector&lt;pair&lt;int, int&gt; &gt; A(m);
-  for (int i = 0; i &lt; m; i++) {
-    cin >> A[i].first >> A[i].second;
-  }
-
-  // решение
-  sort(A.begin(), A.end(), compare);
-  int res = 0;
-  int ost = n;
-
-  for (auto& cont : A) {
-    int a = cont.first;
-    int b = cont.second;
-
-    if (ost &lt;= 0) {
-      break;
-    }
-
-    int take = min(a, ost);
-    res += take * b;
-    ost -= take;
-  }
-
-  // вывод результата
-  cout &lt;&lt; res;
-}
-</pre>
-  </details>
 </article>
 
 
@@ -1086,7 +1005,7 @@ int main() {
 
     <div>
       <a href="https://codeforces.com/contest/507/problem/A" target="_blank">Задача 507A</a>
-      <br><a href="https://codeforces.com/contest/507" target="_blank">Codeforces Round 287 (Div. 2) 2015-01-21</a>
+      <br><a href="https://codeforces.com/contest/507" target="_blank">Codeforces Round 287 (Div. 2) 2015.01.21</a>
     </div>
 
 <pre class="language-cpp">
@@ -1192,7 +1111,7 @@ int main() {
 
     <div>
       <a href="https://codeforces.com/contest/186/problem/B" target="_blank">Задача 186B</a>
-      <br><a href="https://codeforces.com/contest/186" target="_blank">Codeforces Round 118 (Div. 2) 2012-05-04</a>
+      <br><a href="https://codeforces.com/contest/186" target="_blank">Codeforces Round 118 (Div. 2) 2012.05.04</a>
     </div>
 
     <p>Для каждого участника вычислим максимальную высоту гриба, рассчитанную для двух вариантов порядка скоростей. Отсортировать участников по убыванию высоты гриба, а при равенстве - по порядковым номерам</p>
@@ -1296,7 +1215,7 @@ int main() {
 
     <div>
       <a href="https://codeforces.com/contest/652/problem/B" target="_blank">Задача 652B</a>
-      <br><a href="https://codeforces.com/contest/652" target="_blank">Educational Codeforces Round 10 2016-03-25</a>
+      <br><a href="https://codeforces.com/contest/652" target="_blank">Educational Codeforces Round 10 2016.03.25</a>
     </div>
 
     <p>Нужно отсортировать массив. Завести два указателя на начало и конец массива. Потом в новый массив класть по очереди элементы то сначала, то с конца.</p>
@@ -1423,7 +1342,7 @@ int main() {
 
     <div>
       <a href="https://codeforces.com/contest/1579/problem/B" target="_blank">Задача 1579B</a>
-      <br><a href="https://codeforces.com/contest/1579" target="_blank">Codeforces Round 744 (Div. 3) 2021-09-26</a>
+      <br><a href="https://codeforces.com/contest/1579" target="_blank">Codeforces Round 744 (Div. 3) 2021.09.26</a>
     </div>
 
     <p>Для каждого элемента массива находим минимальный элемент в оставшейся части. Если минимальный элемент уже на месте, пропускаем итерацию. Иначе выполняем циклический сдвиг подмассива от текущей позиции до позиции минимального элемента так, чтобы минимальный элемент переместился на текущую позицию.</p>

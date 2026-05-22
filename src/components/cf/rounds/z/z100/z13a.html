@@ -24,3 +24,43 @@
   <code>2/1</code>
   <p>В первом примере число 5, записанное в системах исчисления по основаниям от 2 до 4 имеет вид: 101, 12, 11. Суммы цифр равны 2, 3 и 2, соответственно.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/13/problem/D" target="_blank">Задача 13D</a>
+    <br><a href="https://codeforces.com/contest/13" target="_blank">Codeforces Beta Round 13 2010.05.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <numeric>  // для gcd в C++17
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  int sum_of_digits = 0;
+  int count_of_bases = 0;
+
+  for (int base = 2; base < n; ++base) {
+    int temp = n;
+    while (temp > 0) {
+      sum_of_digits += temp % base;
+      temp /= base;
+    }
+    count_of_bases++;
+  }
+
+  // Для MSVC нужно включить C++17: /std:c++17
+  int gcd_value = gcd(sum_of_digits, count_of_bases);
+
+  cout << sum_of_digits / gcd_value << '/' << count_of_bases / gcd_value << '\n';
+
+  return 0;
+}
+</pre>
+</details>
