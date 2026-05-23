@@ -36,3 +36,82 @@ NO
 YES
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/13/problem/B" target="_blank">Задача 13B</a>
+    <br><a href="https://codeforces.com/contest/13" target="_blank">Codeforces Beta Round 13 2010.05.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+using ll = long long;
+
+struct Point {
+  ll x, y;
+  Point() : x(0), y(0) {}
+  Point(ll x, ll y) : x(x), y(y) {}
+  Point operator-(Point p) const { return { x - p.x, y - p.y }; }
+  ll dot(Point other) { return x * other.x + y * other.y; }
+  ll det(Point other) { return x * other.y - y * other.x; }
+};
+
+struct Segment {
+  Point A, B;
+  Segment(Point A, Point B) : A(A), B(B) {}
+  bool contain(Point C) {
+    ll det = (C - A).det(B - A);
+    if (det != 0) return 0;
+    return (C - A).dot(B - A) >= 0 && (C - B).dot(A - B) >= 0;
+  }
+};
+
+void solve() {
+  Point A, B, C, D, E, F;
+  cin >> A.x >> A.y >> B.x >> B.y >> C.x >> C.y >> D.x >> D.y >> E.x >> E.y >> F.x >> F.y;
+
+  for (int i = 0; i < 3; i++) {
+    swap(C, E); swap(D, F);
+    for (int j = 0; j < 2; j++) {
+      swap(A, B);
+      for (int k = 0; k < 2; k++) {
+        swap(C, D);
+        for (int l = 0; l < 2; l++) {
+          swap(E, F);
+          if (C.x != E.x || C.y != E.y) continue;
+          if (!Segment(C, D).contain(A)) continue;
+          if (!Segment(E, F).contain(B)) continue;
+
+          ll c = (A - C).dot(A - C);
+          ll d = (A - D).dot(A - D);
+          ll e = (B - E).dot(B - E);
+          ll f = (B - F).dot(B - F);
+
+          if (c > 16 * d || d > 16 * c) continue;
+          if (e > 16 * f || f > 16 * e) continue;
+          if ((D - C).dot(F - E) < 0) continue;
+          if ((D - C).det(F - E) == 0) continue;
+
+          cout << "YES\n";
+          return;
+        }
+      }
+    }
+    swap(A, C); swap(B, D);
+  }
+  cout << "NO\n";
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  int T; cin >> T;
+  while (T--) solve();
+  return 0;
+}
+</pre>
+</details>
