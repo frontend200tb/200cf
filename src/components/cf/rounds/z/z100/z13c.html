@@ -29,3 +29,41 @@
 </pre>
   <code>1</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/13/problem/C" target="_blank">Задача 13C</a>
+    <br><a href="https://codeforces.com/contest/13" target="_blank">Codeforces Beta Round 13 2010.05.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+int main() {
+  long long n; // длина последовательности
+  cin >> n;
+
+  long long next; // следующее число
+  long long res = 0;
+
+  priority_queue<int> q;
+
+  while (n--) {
+    cin >> next;
+    q.push(next);
+    if (q.top() > next) {
+      res += q.top() - next;
+      q.pop();
+      q.push(next);
+    }
+  }
+
+  cout << res;
+}
+</pre>
+</details>
