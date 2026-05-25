@@ -38,3 +38,57 @@
 </pre>
   <code>7</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/13/problem/D" target="_blank">Задача 13D</a>
+    <br><a href="https://codeforces.com/contest/13" target="_blank">Codeforces Beta Round 13 2010.05.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+long long a[501], b[501], c[501], d[501], f[501][501];
+
+int main() {
+  int n; // число красных точек
+  int m; // число синих точек
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i] >> b[i]; // координаты красных точек
+  }
+
+  for (int i = 1; i <= m; i++) {
+    cin >> c[i] >> d[i]; // координаты синих точек
+  }
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) {
+      if (a[i] < a[j]) {
+        long long u = b[j] - b[i], v = a[i] - a[j], w = -a[i] * u - b[i] * v;
+        for (int k = 1; k <= m; k++)
+          f[i][j] += (c[k] > a[i] && c[k] <= a[j] && u * c[k] + v * d[k] + w > 0);
+        f[j][i] = -f[i][j];
+      }
+    }
+  }
+
+  long long res = 0;
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = i + 1; j <= n; j++) {
+      for (int k = j + 1; k <= n; k++) {
+        res += (f[i][j] + f[j][k] + f[k][i] == 0);
+      }
+    }
+  }
+
+  cout << res;
+}
+</pre>
+</details>
