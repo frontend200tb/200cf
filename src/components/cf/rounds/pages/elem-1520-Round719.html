@@ -33,7 +33,7 @@
       <br><a href="https://codeforces.com/contest/1520" target="_blank">Codeforces Round 719 (Div. 3) 2021-05-05</a>
     </div>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;map&gt;
 
@@ -124,7 +124,7 @@ int main() {
 29
 </pre>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -241,7 +241,8 @@ int main() {
     </div>
 
     <p>В этом решении начинаем с первой клетки [0], она четная, идем через клетку до последней. В четные клетки кладем числа начиная с 1 и увеличивая их, в нечетные начиная с n и уменьшая их. Когда все заполним то последние два числа n и n-1 окажутся соседними. Чтобы исправить это меняем местами первое и последнее число</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -294,7 +295,8 @@ int main() {
   <details>
     <summary>Мое решение</summary>
     <p>В этом решении начинаем с первой клетки [0], она четная, идем через клетку до последней. В четные клетки кладем числа начиная с 1 и увеличивая их, в нечетные начиная с середины и увеличивая их. Определяем середину. Для четного и нечетного n она будет разная.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -337,7 +339,7 @@ int main() {
 
       for (int i = 0; i &lt; n; i++) {
         for (int j = 0; j &lt; n; j++) {
-           cout &lt;&lt; res[i][j] &lt;&lt; " ";
+          cout &lt;&lt; res[i][j] &lt;&lt; " ";
         }
         cout &lt;&lt; '\n';
       }

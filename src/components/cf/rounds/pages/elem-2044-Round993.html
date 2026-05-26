@@ -57,7 +57,8 @@
   <details>
     <summary>Решение</summary>
     <p>Количество пар на 1 меньше чем целое число n.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -125,7 +126,8 @@ pqpqpqpq
   <details>
     <summary>Решение</summary>
     <p>Символы p и q зеркальны друг другу, символ w зеркален самому себе. Поэтому будем идти с конца строки и заменять символы p на q, q на p.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -204,7 +206,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Будем считать занятые места и свободные места. Сначала заполним первый ряд обезьянами <strong>a</strong>, затем заполним второй ряд обезьянами <strong>b</strong>, затем на свободные места посадим обезьян <strong>c</strong>.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -312,7 +315,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;iomanip&gt;
 #include &lt;vector&gt;
@@ -464,7 +468,8 @@ r1 > r2
 l2        r2
 .__________.
 </pre>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;iomanip&gt;
 
@@ -616,7 +621,8 @@ YES
   <details>
     <summary>Решение</summary>
     <p>Задача по теории Графов на удаление циклов. Во втором тесте ориентированный граф, все ребра идут друг за другом. В третьем тесте есть цикл. Все элементы в цикле всегда имеют единицы. Все вершины которые ведут в циклы, нужно посчитать расстояние до цикла.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;bits/stdc++.h&gt;
 
 using namespace std;
@@ -631,59 +637,59 @@ const int N = 4e5 + 5;
 bool apos[N], aneg[N], bpos[N], bneg[N], posspos[N], possneg[N];
 
 signed main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    int n,m,q;
-    cin >> n >> m >> q;
-    vector&lt;int&gt; a(n), b(m);
-    int asum = 0, bsum = 0;
-    F0R(i, n) {
-        cin >> a[i];
-        asum += a[i];
+  ios_base::sync_with_stdio(false);
+  cin.tie(0);
+  int n,m,q;
+  cin >> n >> m >> q;
+  vector&lt;int&gt; a(n), b(m);
+  int asum = 0, bsum = 0;
+  F0R(i, n) {
+    cin >> a[i];
+    asum += a[i];
+  }
+  F0R(i, m) {
+    cin >> b[i];
+    bsum += b[i];
+  }
+  F0R(i, n) {
+    if(abs(asum-a[i]) &lt; N) {
+      if(asum-a[i] &lt; 0) aneg[a[i]-asum]=true;
+      else apos[asum-a[i]]=true;
     }
-    F0R(i, m) {
-        cin >> b[i];
-        bsum += b[i];
+  }
+  F0R(i, m) {
+    if(abs(bsum-b[i]) &lt; N) {
+      if(bsum-b[i] &lt; 0) bneg[b[i]-bsum]=true;
+      else bpos[bsum-b[i]]=true;
     }
-    F0R(i, n) {
-        if(abs(asum-a[i]) &lt; N) {
-            if(asum-a[i] &lt; 0) aneg[a[i]-asum]=true;
-            else apos[asum-a[i]]=true;
-        }
+  }
+  FOR(i, 1, N) {
+    FOR(j, 1, N) {
+      if(i * j > N) break;
+      if(apos[i]&&bpos[j]) posspos[i*j]=true;
+      if(apos[i]&&bneg[j]) possneg[i*j]=true;
+      if(aneg[i]&&bpos[j]) possneg[i*j]=true;
+      if(aneg[i]&&bneg[j]) posspos[i*j]=true;
     }
-    F0R(i, m) {
-        if(abs(bsum-b[i]) &lt; N) {
-            if(bsum-b[i] &lt; 0) bneg[b[i]-bsum]=true;
-            else bpos[bsum-b[i]]=true;
-        }
+  }
+  while(q--) {
+    int x;
+    cin >> x;
+    if(x>0) {
+      if(posspos[x]) {
+        cout &lt;&lt; "YES" &lt;&lt; endl;
+      } else {
+        cout &lt;&lt; "NO" &lt;&lt; endl;
+      }
+    } else {
+      if(possneg[-x]) {
+        cout &lt;&lt; "YES" &lt;&lt; endl;
+      } else {
+        cout &lt;&lt; "NO" &lt;&lt; endl;
+      }
     }
-    FOR(i, 1, N) {
-        FOR(j, 1, N) {
-            if(i * j > N) break;
-            if(apos[i]&&bpos[j]) posspos[i*j]=true;
-            if(apos[i]&&bneg[j]) possneg[i*j]=true;
-            if(aneg[i]&&bpos[j]) possneg[i*j]=true;
-            if(aneg[i]&&bneg[j]) posspos[i*j]=true;
-        }
-    }
-    while(q--) {
-        int x;
-        cin >> x;
-        if(x>0) {
-            if(posspos[x]) {
-                cout &lt;&lt; "YES" &lt;&lt; endl;
-            } else {
-                cout &lt;&lt; "NO" &lt;&lt; endl;
-            }
-        } else {
-            if(possneg[-x]) {
-                cout &lt;&lt; "YES" &lt;&lt; endl;
-            } else {
-                cout &lt;&lt; "NO" &lt;&lt; endl;
-            }
-        }
-    }
-    return 0;
+  }
+  return 0;
 }
 </pre>
   </details>
@@ -757,7 +763,8 @@ signed main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;iomanip&gt;
 #include &lt;vector&gt;
@@ -867,54 +874,51 @@ int main() {
 
   <details>
     <summary>Решение Codeforces</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;bits/stdc++.h&gt;
 #define ll long long
 using namespace std;
 
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  int tt;
+  cin>>tt;
 
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int tt;
-    cin>>tt;
-    while(tt--)
-    {
-        int n;
-        cin>>n;
-        vector&lt;int&gt; r(n+1),d(n+1);
-        for(int i=1;i &lt;=n;i++)
-        {
-            cin>>r[i];
-            d[r[i]]++;
-        }
-        set&lt;pair&lt;int,int&gt; &gt; s;
-        for(int i=1;i &lt;=n;i++)
-            s.insert({d[i],i});
-        int ans=2;
-        queue&lt;int&gt; q;
-        while(!s.empty()&&(*s.begin()).first==0)
-        {
-            while(!s.empty()&&(*s.begin()).first==0)
-            {
-                int k=(*s.begin()).second;
-                auto it=s.find({d[r[k]],r[k]});
-                d[r[k]]--;
-                if(it!=s.end())
-                {
-                    s.erase(it);
-                    q.push(r[k]);
-                }
-                s.erase(s.begin());
-            }
-            while(!q.empty())
-                s.insert({d[q.front()],q.front()}),q.pop();
-            ans++;
-        }
-        cout &lt;&lt; ans &lt;&lt; '\n';
+  while(tt--) {
+    int n;
+    cin>>n;
+    vector&lt;int&gt; r(n+1),d(n+1);
+    for(int i=1;i &lt;=n;i++) {
+      cin>>r[i];
+      d[r[i]]++;
     }
-    return 0;
+    set&lt;pair&lt;int,int&gt; &gt; s;
+    for(int i=1;i &lt;=n;i++) {
+      s.insert({d[i],i});
+    }
+    int ans=2;
+    queue&lt;int&gt; q;
+    while(!s.empty()&&(*s.begin()).first==0) {
+      while(!s.empty()&&(*s.begin()).first==0) {
+        int k=(*s.begin()).second;
+        auto it=s.find({d[r[k]],r[k]});
+        d[r[k]]--;
+        if(it!=s.end()) {
+          s.erase(it);
+          q.push(r[k]);
+        }
+        s.erase(s.begin());
+      }
+      while(!q.empty()) {
+        s.insert({d[q.front()],q.front()}),q.pop();
+      }
+      ans++;
+    }
+    cout &lt;&lt; ans &lt;&lt; '\n';
+  }
+  return 0;
 }
 </pre>
   </details>
@@ -988,7 +992,8 @@ int main()
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;stack&gt;
@@ -1113,56 +1118,50 @@ int main() {
 
   <details>
     <summary>Решение Codeforces</summary>
-<pre>
+
+<pre class="language-cpp">
 #include&lt;bits/stdc++.h&gt;
 #define ll long long
 using namespace std;
 
-
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int tt;
-    cin>>tt;
-    while(tt--)
-    {
-        int n;
-        cin>>n;
-        vector&lt;int&gt; r(n+1),d(n+1),v(n+1,1);
-        for(int i=1;i &lt;=n;i++)
-        {
-            cin>>r[i];
-            d[r[i]]++;
-        }
-        set&lt;pair&lt;int,int&gt; &gt; s;
-        for(int i=1;i &lt;=n;i++)
-        {
-            s.insert({d[i],i});
-        }
-        int ans=2;
-        queue&lt;int&gt; q;
-        while(!s.empty()&&(*s.begin()).first==0)
-        {
-            while(!s.empty()&&(*s.begin()).first==0)
-            {
-                int k=(*s.begin()).second;
-                ans=max(ans,v[k]+2);v[r[k]]+=v[k];
-                auto it=s.find({d[r[k]],r[k]});
-                d[r[k]]--;
-                if(it!=s.end())
-                {
-                    s.erase(it);
-                    q.push(r[k]);
-                }
-                s.erase(s.begin());
-            }
-            while(!q.empty())
-                s.insert({d[q.front()],q.front()}),q.pop();
-        }
-        cout &lt;&lt; ans &lt;&lt; '\n';
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  int tt;
+  cin>>tt;
+  while(tt--) {
+    int n;
+    cin>>n;
+    vector&lt;int&gt; r(n+1),d(n+1),v(n+1,1);
+    for(int i=1;i &lt;=n;i++) {
+      cin>>r[i];
+      d[r[i]]++;
     }
-    return 0;
+    set&lt;pair&lt;int,int&gt; &gt; s;
+    for(int i=1;i &lt;=n;i++) {
+      s.insert({d[i],i});
+    }
+    int ans=2;
+    queue&lt;int&gt; q;
+    while(!s.empty()&&(*s.begin()).first==0) {
+      while(!s.empty()&&(*s.begin()).first==0) {
+        int k=(*s.begin()).second;
+        ans=max(ans,v[k]+2);v[r[k]]+=v[k];
+        auto it=s.find({d[r[k]],r[k]});
+        d[r[k]]--;
+        if(it!=s.end()) {
+          s.erase(it);
+          q.push(r[k]);
+        }
+        s.erase(s.begin());
+      }
+      while(!q.empty()) {
+        s.insert({d[q.front()],q.front()}),q.pop();
+      }
+    }
+    cout &lt;&lt; ans &lt;&lt; '\n';
+  }
+  return 0;
 }
 </pre>
   </details>
@@ -1230,7 +1229,8 @@ int main()
 
   <details>
     <summary>Решение Codeforces</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 using ll = long long;
@@ -1239,61 +1239,61 @@ using ii = pair &lt;ll, ll&gt;;
 using vii = vector &lt;ii&gt;;
 
 void tc () {
-    ll n, Q;
-    cin >> n >> Q;
-    vector &lt;vll&gt; mat(n, vll(n));
-    for (vll &ve : mat) {
-        for (ll &i : ve) cin >> i;
+  ll n, Q;
+  cin >> n >> Q;
+  vector &lt;vll&gt; mat(n, vll(n));
+  for (vll &ve : mat) {
+    for (ll &i : ve) cin >> i;
+  }
+  vector &lt;vll&gt; psR(n, vll(n+1)), psRr(n, vll(n+1)), psRc(n+1, vll(n+1)), ps(n+1, vll(n+1)), psRrc(n+1, vll(n+1));
+  for (ll i = 0; i &lt; n; i++) {
+    for (ll j = 0; j &lt; n; j++) {
+      psR[i][j+1] = psR[i][j] + mat[i][j];
     }
-    vector &lt;vll&gt; psR(n, vll(n+1)), psRr(n, vll(n+1)), psRc(n+1, vll(n+1)), ps(n+1, vll(n+1)), psRrc(n+1, vll(n+1));
-    for (ll i = 0; i &lt; n; i++) {
-        for (ll j = 0; j &lt; n; j++) {
-            psR[i][j+1] = psR[i][j] + mat[i][j];
-        }
+  }
+  for (ll i = 0; i &lt; n; i++) {
+    for (ll j = 0; j &lt; n; j++) {
+      psRr[i][j+1] = psRr[i][j] + mat[i][j]*(j+1);
     }
-    for (ll i = 0; i &lt; n; i++) {
-        for (ll j = 0; j &lt; n; j++) {
-            psRr[i][j+1] = psRr[i][j] + mat[i][j]*(j+1);
-        }
+  }
+  for (ll i = 0; i &lt; n; i++) {
+    for (ll j = 0; j &lt;= n; j++) {
+      psRc[i+1][j] = psRc[i][j] + psR[i][j]*(i+1);
     }
-    for (ll i = 0; i &lt; n; i++) {
-        for (ll j = 0; j &lt;= n; j++) {
-            psRc[i+1][j] = psRc[i][j] + psR[i][j]*(i+1);
-        }
+  }
+  for (ll i = 0; i &lt; n; i++) {
+    for (ll j = 0; j &lt;= n; j++) {
+      psRrc[i+1][j] = psRrc[i][j] + psRr[i][j];
     }
-    for (ll i = 0; i &lt; n; i++) {
-        for (ll j = 0; j &lt;= n; j++) {
-            psRrc[i+1][j] = psRrc[i][j] + psRr[i][j];
-        }
+  }
+  for (ll i = 0; i &lt; n; i++) {
+    for (ll j = 0; j &lt;= n; j++) {
+      ps[i+1][j] = ps[i][j] + psR[i][j];
     }
-    for (ll i = 0; i &lt; n; i++) {
-        for (ll j = 0; j &lt;= n; j++) {
-            ps[i+1][j] = ps[i][j] + psR[i][j];
-        }
-    }
-    while (Q--) {
-        ll x1, y1, x2, y2;
-        cin >> x1 >> y1 >> x2 >> y2;
-        x1--; y1--; x2--; y2--;
-        ll ans = 0;
-        ans += -(ps[x2+1][y2+1]-ps[x2+1][y1]-ps[x1][y2+1]+ps[x1][y1])*x1*(y2-y1+1);
-        ans += (psRc[x2+1][y2+1] - psRc[x1][y2+1] - (ps[x2+1][y2+1]-ps[x1][y2+1]))*(y2-y1+1);
+  }
+  while (Q--) {
+    ll x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    x1--; y1--; x2--; y2--;
+    ll ans = 0;
+    ans += -(ps[x2+1][y2+1]-ps[x2+1][y1]-ps[x1][y2+1]+ps[x1][y1])*x1*(y2-y1+1);
+    ans += (psRc[x2+1][y2+1] - psRc[x1][y2+1] - (ps[x2+1][y2+1]-ps[x1][y2+1]))*(y2-y1+1);
 
-        ans += (psRc[x2+1][y1] - psRc[x1][y1] - (ps[x2+1][y1]-ps[x1][y1]))*-(y2-y1+1);
-        ans += (ps[x2+1][y2+1]-ps[x1][y2+1])*-y1;
-        ans += (ps[x2+1][y1]-ps[x1][y1])*y1;
+    ans += (psRc[x2+1][y1] - psRc[x1][y1] - (ps[x2+1][y1]-ps[x1][y1]))*-(y2-y1+1);
+    ans += (ps[x2+1][y2+1]-ps[x1][y2+1])*-y1;
+    ans += (ps[x2+1][y1]-ps[x1][y1])*y1;
 
-        ans += psRrc[x2+1][y2+1] - psRrc[x1][y2+1];
-        ans +=-(psRrc[x2+1][y1] - psRrc[x1][y1]);
-        cout &lt;&lt; ans &lt;&lt; ' ';
-    }
-    cout &lt;&lt; '\n';
+    ans += psRrc[x2+1][y2+1] - psRrc[x1][y2+1];
+    ans +=-(psRrc[x2+1][y1] - psRrc[x1][y1]);
+    cout &lt;&lt; ans &lt;&lt; ' ';
+  }
+  cout &lt;&lt; '\n';
 }
 
 int main () {
-    cin.tie(nullptr) -> sync_with_stdio(false);
-    ll T; cin >> T; while (T--) { tc(); }
-    return 0;
+  cin.tie(nullptr) -> sync_with_stdio(false);
+  ll T; cin >> T; while (T--) { tc(); }
+  return 0;
 }
 </pre>
   </details>
