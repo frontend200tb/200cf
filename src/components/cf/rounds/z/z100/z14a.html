@@ -42,3 +42,66 @@
 ***
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/14/problem/A" target="_blank">Задача 14A</a>
+    <br><a href="https://codeforces.com/contest/14" target="_blank">Codeforces Beta Round 14 2010.05.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  int n; // число строк
+  int m; // число столбцов
+  cin >> n >> m;
+  vector<vector<char> > A(n, vector<char>(m));
+
+  // ввод клеток
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      cin >> A[i][j];
+    }
+  }
+
+  int mini = n - 1;
+  int maxi = 0;
+  int minj = m - 1;
+  int maxj = 0;
+
+  // поиск прямоугольника
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      if (A[i][j] == '*') {
+        if (mini > i) {
+          mini = i;
+        }
+        if (maxi < i) {
+          maxi = i;
+        }
+        if (minj > j) {
+          minj = j;
+        }
+        if (maxj < j) {
+          maxj = j;
+        }
+      }
+    }
+  }
+
+  // вывод прямоугольника
+  for (int i = mini; i <= maxi; i++) {
+    for (int j = minj; j <= maxj; j++) {
+      cout << A[i][j];
+    }
+    cout << '\n';
+  }
+}
+</pre>
+</details>
