@@ -29,3 +29,40 @@
 </pre>
   <code>NO</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/14/problem/C" target="_blank">Задача 14C</a>
+    <br><a href="https://codeforces.com/contest/14" target="_blank">Codeforces Beta Round 14 2010.05.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+int main() {
+	map<pair<int, int>, int> m;
+	int x = 0, y = 0, x1, y1, x2, y2, a = 0;
+
+	while (a++ < 4) {
+		cin >> x1 >> y1 >> x2 >> y2;
+		x += ((x1 == x2) && (y1 != y2));
+		y += ((x1 != x2) && (y1 == y2));
+		m[{x1, y1}]++;
+		m[{x2, y2}]++;
+	}
+
+	a = ((x == 2) && (y == 2));
+	for (auto i : m) {
+		a &= (i.second == 2);
+	}
+
+	cout << (a == 1 ? "YES" : "NO");
+}
+
+</pre>
+</details>
