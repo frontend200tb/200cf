@@ -67,7 +67,8 @@ Bob
   <details>
     <summary>Решение</summary>
     <p>Если при делении n на 4 получаем остаток, то у Алисы есть возможность взять лишний нолик, а у Боба нет возможности взять соответствующее число с остатком на 3.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -155,7 +156,8 @@ NO
   <details>
     <summary>Решение</summary>
     <p>Если должно остаться 2 и более игрока, то ответ "YES". Если должен остаться только один игрок, то останется самый сильный.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -264,7 +266,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Преобразование массива в заданный элемент возможно только в том случае если слева от заданного элемента нет числа меньше, или справа нет числа больше. Соберем префикс минимумов и суффикс максимумов, чтобы проверять это условие для каждого числа из массива.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;string&gt;
@@ -392,7 +395,8 @@ Alice
   <details>
     <summary>Решение</summary>
     <p>Посчитаем число единиц cnt1 в бинарной строке. Если cnt1 ≤ k то выигрывает Алиса, потому что Алиса сразу преобразовывает все символы в нули. Иначе, смотрим на длину исходной строки. Если n ≥ 2 * k то выигрывает Боб, потому что боб может поочередно преобразовывать символы в единицы то из левой части массива, то из правой.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -498,7 +502,8 @@ int main() {
     <p>Найдем максимальное число в массиве.</p>
     <p>Определим MEX исходного массива как первое минимальное число mex в частотном словаре F, которое встречается 0 раз. При удалении элементов из массива, MEX может оставаться таким же или быть меньше, то есть принимать значения от 0 до mex. Значит, количество возможных значений MEX будет от 1 до mex+1.</p>
     <p>Допустим, в частотном словаре получилось два нуля. Это значит, чтобы получить MEX = 0 нужно удалить эти два нуля, то есть удалить два или более элементов. Чтобы получить MEX = i (i ≤ mex) нужно удалить все вхождения i в исходный массив, но не удалить ни одного элемента, меньшего чем i.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -608,7 +613,8 @@ i   pi   gcd(pi,i)
   <details>
     <summary>Решение</summary>
     <p>Найдем простые числа x в диапазоне от 1 до n. Будем переставлять их с числами 2*x, 3*x и т.д. которые меньше n.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;set&gt;
@@ -762,7 +768,8 @@ NO
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include&lt;iostream&gt;
 #include&lt;cstdio&gt;
 #include&lt;algorithm&gt;
@@ -787,32 +794,29 @@ int main() {
   freopen("input.txt", "rt", stdin);
   freopen("output.txt", "wt", stdout);
 #endif
+
   int test;
   cin >> test;
-  for (int t = 0; t &lt; test; t++)
-  {
+
+  for (int t = 0; t &lt; test; t++) {
     int n, m, q;
     cin >> n >> m >> q;
     vector&lt;int&gt; A(n);
-    for (int i = 0; i &lt; n; i++)
-    {
+    for (int i = 0; i &lt; n; i++) {
       cin >> A[i];
     }
     vector&lt;int&gt; Del;
     int count = 0;
     map&lt;int, int&gt; mp_number_del;
-    for (int i = 1; i*i &lt;= m; i++)
-    {
-      if (m % i == 0)
-      {
+    for (int i = 1; i*i &lt;= m; i++) {
+      if (m % i == 0) {
         Del.push_back(i);
         pair&lt;int, int&gt; tmp;
         tmp.first = i;
         tmp.second = count;
         mp_number_del.insert(tmp);
         count++;
-        if(i*i!=m)
-        {
+        if(i*i!=m) {
           Del.push_back(m/i);
           pair&lt;int, int&gt; tmp;
           tmp.first = m/i;
@@ -824,74 +828,58 @@ int main() {
     }
     vector&lt;vector&lt;int&gt; &gt; Dp(count, vector&lt;int&gt;(n));
     vector&lt;int&gt; Otrezkov(count,1);
-    for (int i = 0; i &lt; count; i++)
-    {
-      for (int j = 0; j &lt; n; j++)
-      {
+
+    for (int i = 0; i &lt; count; i++) {
+      for (int j = 0; j &lt; n; j++) {
         Dp[i][j] = A[j] % Del[i];
       }
     }
-    for (int i = 0; i &lt; count; i++)
-    {
-      for (int j = 1; j &lt; n; j++)
-      {
-        if (Dp[i][j - 1] > Dp[i][j])
-        {
+
+    for (int i = 0; i &lt; count; i++) {
+      for (int j = 1; j &lt; n; j++) {
+        if (Dp[i][j - 1] > Dp[i][j]) {
           Otrezkov[i]++;
         }
       }
     }
+
     int type, id, x, k;
-    for (int i = 0; i &lt; q; i++)
-    {
+    for (int i = 0; i &lt; q; i++) {
       cin >> type;
-      if (type == 1)
-      {
+      if (type == 1) {
         cin >> id >> x;
         id--;
-        for (int str = 0; str &lt; Del.size(); str++)
-        {
-          if (id != 0)
-          {
-            if (Dp[str][id - 1] > Dp[str][id])
-            {
+        for (int str = 0; str &lt; Del.size(); str++) {
+          if (id != 0) {
+            if (Dp[str][id - 1] > Dp[str][id]) {
               Otrezkov[str]--;
             }
           }
-          if (id != n-1)
-          {
-            if (Dp[str][id] > Dp[str][id+1])
-            {
+          if (id != n-1) {
+            if (Dp[str][id] > Dp[str][id+1]) {
               Otrezkov[str]--;
             }
           }
           Dp[str][id] = x % Del[str];
 
-          if (id != 0)
-          {
-            if (Dp[str][id - 1] > Dp[str][id])
-            {
+          if (id != 0) {
+            if (Dp[str][id - 1] > Dp[str][id]) {
               Otrezkov[str]++;
             }
           }
-          if (id != n - 1)
-          {
-            if (Dp[str][id] > Dp[str][id + 1])
-            {
+          if (id != n - 1) {
+            if (Dp[str][id] > Dp[str][id + 1]) {
               Otrezkov[str]++;
             }
           }
         }
-      }
-      else
-      {
+      } else {
         cin >> k;
         int gcd;
         int a, b;
         a = k;
         b = m;
-        while (a > 0 && b > 0)
-        {
+        while (a > 0 && b > 0) {
           if (a > b)
             a %= b;
           else

@@ -70,7 +70,8 @@
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;cmath&gt;
 
@@ -189,7 +190,8 @@ _-
   <details>
     <summary>Решение</summary>
     <p>Чтобы максимизировать количество подстрок -_-, надо для каждого символа _ максимизировать количество подстрок -_- с этим символом.  Это максимальное количество достигается, когда слева и справа от символа _ равное количество символов -.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -281,7 +283,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -419,7 +422,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -549,7 +553,8 @@ int main() {
     <p>Заметим, что р(а,б)==д(а,б) тогда и только тогда, когда у точек а и б равны координаты х или у также заметим, что среди н посохов с одинаковой координатой х и различными координатами у подходящих пар ровно н*(н-1)/2, при этом это максимальное значение, которое можно получить для н посохов представим данное число к в следующем виде</p>
     <code>k=x1*(x1-1)/2+x2*(x2-1)/2+x3*(x3-1)/2+...+xn*(xn-1)/2</code>
     <p>это можно сделать следующей рекуррсивной функцией найдём x1 как максимальное число такое, что x1*(x1-1)/2 &lt;= k добавим х1 в ответ и запустим эту функцию для k=(k-x1*(x1-1)/2) поиск х1 можно делать с помощью бинарного поиска зная разбиение x1...xn осталось вывести ответ в формате точек должно получиться n блоков, в блоке в номером i ровно i точек с одинаковой у координатой и различными х координатами</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;functional&gt;
@@ -669,7 +674,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>заметим, что число k не влияет на положение нулей/не нулей в ответе если вывести треугольник, заданный в условии, на экран , то можно заметить, что он имеет фрактальную структуру, т.е. самоподобен. (чем-то похож на треугольник Серпинского) фрактальную структуру можно реализовать с помощью рекуррсии</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;functional&gt;
@@ -796,7 +802,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;cmath&gt;
 

@@ -25,7 +25,8 @@
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;set&gt;
@@ -93,7 +94,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -166,7 +168,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -174,60 +177,60 @@ int main() {
 using namespace std;
 
 int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n;
-        cin >> n;
-        vector&lt;int&gt; d(n+1);
-        for (int i = 1; i &lt;= n; i++) {
-            cout &lt;&lt; "? " &lt;&lt; i &lt;&lt; " " &lt;&lt; n;
-            for (int j = 1; j &lt;= n; j++) {
-                cout &lt;&lt; " " &lt;&lt; j;
-            }
-            cout &lt;&lt; endl;
-            cin >> d[i];
-            if (d[i] == -1) {
-                return 0;
-            }
-        }
-
-        vector&lt;vector&lt;int&gt; &gt; groups(n+1);
-        int max_d = 0;
-        for (int i = 1; i &lt;= n; i++) {
-            if (d[i] > max_d) {
-                max_d = d[i];
-            }
-            groups[d[i]].push_back(i);
-        }
-
-        vector&lt;int&gt; path;
-        int current = groups[max_d][0];
-        path.push_back(current);
-
-        for (int l = max_d - 1; l >= 1; l--) {
-            for (int u : groups[l]) {
-                cout &lt;&lt; "? " &lt;&lt; current &lt;&lt; " 2 " &lt;&lt; current &lt;&lt; " " &lt;&lt; u &lt;&lt; endl;
-                int res;
-                cin >> res;
-                if (res == -1) {
-                    return 0;
-                }
-                if (res == 2) {
-                    current = u;
-                    path.push_back(u);
-                    break;
-                }
-            }
-        }
-
-        cout &lt;&lt; "! " &lt;&lt; path.size();
-        for (int node : path) {
-            cout &lt;&lt; " " &lt;&lt; node;
-        }
-        cout &lt;&lt; endl;
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    vector&lt;int&gt; d(n+1);
+    for (int i = 1; i &lt;= n; i++) {
+      cout &lt;&lt; "? " &lt;&lt; i &lt;&lt; " " &lt;&lt; n;
+      for (int j = 1; j &lt;= n; j++) {
+        cout &lt;&lt; " " &lt;&lt; j;
+      }
+      cout &lt;&lt; endl;
+      cin >> d[i];
+      if (d[i] == -1) {
+        return 0;
+      }
     }
-    return 0;
+
+    vector&lt;vector&lt;int&gt; &gt; groups(n+1);
+    int max_d = 0;
+    for (int i = 1; i &lt;= n; i++) {
+      if (d[i] > max_d) {
+        max_d = d[i];
+      }
+      groups[d[i]].push_back(i);
+    }
+
+    vector&lt;int&gt; path;
+    int current = groups[max_d][0];
+    path.push_back(current);
+
+    for (int l = max_d - 1; l >= 1; l--) {
+      for (int u : groups[l]) {
+        cout &lt;&lt; "? " &lt;&lt; current &lt;&lt; " 2 " &lt;&lt; current &lt;&lt; " " &lt;&lt; u &lt;&lt; endl;
+        int res;
+        cin >> res;
+        if (res == -1) {
+          return 0;
+        }
+        if (res == 2) {
+          current = u;
+          path.push_back(u);
+          break;
+        }
+      }
+    }
+
+    cout &lt;&lt; "! " &lt;&lt; path.size();
+    for (int node : path) {
+      cout &lt;&lt; " " &lt;&lt; node;
+    }
+    cout &lt;&lt; endl;
+  }
+  return 0;
 }
 </pre>
   </details>
@@ -243,7 +246,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;

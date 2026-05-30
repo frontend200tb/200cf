@@ -77,7 +77,8 @@ skibidi
   <details>
     <summary>Решение</summary>
     <p>элементарная задача. считываем строку и возвращаем её же, но с замененными последними символами</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -152,7 +153,8 @@ ohio
   <details>
     <summary>Решение</summary>
     <p>Нетрудно заметить, что если в строке есть два подряд идущих одинаковых символа, то всю строку можно сократить до 1 символа. этим циклом я просто ищу такуие два символа. вывожу единичку, если они находятся, и длину строки, если нет</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -252,7 +254,8 @@ YES
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -374,7 +377,8 @@ YES
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;set&gt;
@@ -438,7 +442,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Это решение не зашло на тесте 2</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -587,7 +592,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -646,7 +652,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -762,7 +769,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>обычная задача на составление строки. в самом начале проверяю, возмоэно ли вообще набрать такое k путем рассмотра модуля разности (очевидно), а затем (если это возможно) делаю строку с некоторым числом нулей/единиц в начале, чередующимися единицами и нолями и выставлением оставшихся символов</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;bits/stdc++.h&gt;
 
 using namespace std;
@@ -800,7 +808,8 @@ int main(){
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -948,7 +957,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Необходимо догадаться, что если существует путь длины n с мажорирующим элементом, то из него можно взять подпуть (кусок) состоящий из двух или трех вершин, такой что он тоже будет мажорирующим. догадавшись до этой идеи необходимо быстро научиться проверять пути длины 1 ребро и длины 2 ребра на мажорирование. проверка ребра на мажорирование означает что вершины в ребре имеют одинаковое значение. для проверки путей длины 3 будем проверять их через вершину в середине, пробежавшись по ее соседям</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;iomanip&gt;
@@ -1065,7 +1075,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;map&gt;
@@ -1100,20 +1111,19 @@ void solve() {
   // отсортируем начльные числа чтоб простые
 	// шли до чисел котрые они делят
 	sort(a.begin(), a.end());
-	for (int i = 0; i &lt; n; i++)
-	{
+
+	for (int i = 0; i &lt; n; i++) {
     // сюда запишем делители числа a[i]
 		vector&lt;ll&gt; t;
-		for (ll j = 2; j * j &lt;= a[i]; j++)
-		{
-			if (a[i] % j == 0)
-			{
+
+		for (ll j = 2; j * j &lt;= a[i]; j++)	{
+			if (a[i] % j == 0) {
 				t.push_back(j);
 				t.push_back(a[i] / j);
 			}
 		}
-		if (p[a[i]] == 1)
-		{
+
+		if (p[a[i]] == 1)	{
 			// число простое, а значит к нему в пару подойдут
 			// только простые которые мы обработали
 			// (заметим что до него нет чисел которые делились
@@ -1121,19 +1131,15 @@ void solve() {
 			an += col - q[a[i]];
 			col++;
 			q[a[i]]++;
-		} else
-		{
-			if (p[a[i]] == 2)
-			{
+		} else {
+			if (p[a[i]] == 2)	{
 				// число квадарат простого, а значит попдойдут
 				// такие же как оно, а также все эти простые числа
 				an += q[t[0]];
 				q[a[i]]++;
 				an += q[a[i]];
-			} else
-			{
-				if (t.size() == 2 && p[t[0]] == 1 && p[t[1]] == 1)
-				{
+			} else {
+				if (t.size() == 2 && p[t[0]] == 1 && p[t[1]] == 1) {
 					// сейчас у нас два делителя у числа а значит
 					// оно уже не лучше чем полупростое
 					// полупростое оно если оба его делителя простые
@@ -1150,22 +1156,22 @@ void solve() {
 	cout &lt;&lt; an &lt;&lt; endl;
 }
 
-int main()
-{
+int main() {
+	ios_base::sync_with_stdio(false);
+  cin.tie(0);
+  cout.tie(0);
 
-	ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 	ll t = 1;
 	cin >> t;
+
 	//решето эратосфена для заполнения глобального вектора
-	for (int i = 2; i &lt; p.size(); i++)
-	{
-
-		for (int j = 2 * i; j &lt; p.size(); j += i)
-			p[j] += p[i];
-
+	for (int i = 2; i &lt; p.size(); i++)	{
+		for (int j = 2 * i; j &lt; p.size(); j += i) {
+      p[j] += p[i];
+    }
 	}
-	while (t--)
-	{
+
+	while (t--)	{
 		solve();
 	}
 }
@@ -1175,7 +1181,8 @@ int main()
   <details>
     <summary>Решение</summary>
     <p>Неправильный ответ на тесте 2</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;set&gt;
@@ -1344,7 +1351,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;algorithm&gt;
 #include &lt;vector&gt;
@@ -1361,35 +1369,30 @@ ll mod = 998244353;
 ll bin_pow_m(ll x, ll y, ll mod) {
 	if (y == 0)
 		return 1;
-	if (y == 1)
-	{
+	if (y == 1)	{
 		return x % mod;
 	}
-	if (y % 2)
-	{
+	if (y % 2) {
 		return (bin_pow_m(x, y - 1, mod) * x) % mod;
-	} else
-	{
-
+	} else {
 		return bin_pow_m(x * x % mod, y / 2, mod);;
 	}
 }
 
 // узел кодирующий информацию про все
 // подпоследовательности какой-то подстроки
-struct node
-{
+struct node {
   //сумарное значение функции данной
 	// подстроки по всем подпоследовательностям
 	ll an = 0;
-  //колчество подпоследовательностей строки вида (0..0, 0..1, 1..0, 1..1)
+  //колчество подпоследовательностей строки
+  // вида (0..0, 0..1, 1..0, 1..1)
 	ll c00 = 0, c01 = 0, c10 = 0, c11 = 0;
-	ll ras = 0;//длина текущей подстроки
+	ll ras = 0; // длина текущей подстроки
 };
 
 // функция сливающая две соседние подстроки левую(а) и првую(b)
-node merg(node a, node b)
-{
+node merg(node a, node b) {
 	node c;//будущий результат
 
   //размер результирующей подстроки это сумма размеров дочерних
@@ -1450,20 +1453,20 @@ node merg(node a, node b)
 vector&lt;node&gt; tree;
 
 void build(ll id, ll tl, ll tr) {
-	if (tl + 1 == tr)//если в листе
-	{
+  //если в листе
+	if (tl + 1 == tr)	{
 		tree[id].an = 1;
 		tree[id].ras = 1;
     // в зависимости от символа в этой позиции
 		// устанавливаем ту самую единственную подпоследовательность
-		if (s[tl] == '0')
-		{
+		if (s[tl] == '0')	{
 			tree[id].c00 = 1;
-
-		} else
-			tree[id].c11 = 1;
+		} else {
+      tree[id].c11 = 1;
+    }
 		return;
 	}
+
 	//если нет то считаем детей и получем текущий узел их слиянием
 	ll mid = tl + tr >> 1;
 	build(id * 2, tl, mid);
@@ -1474,25 +1477,25 @@ void build(ll id, ll tl, ll tr) {
 //обновить лист
 void upd(ll id, ll tl, ll tr, ll x) {
   //если мы в листе меняем его на новое значение
-	if (tl + 1 == tr)
-	{
+	if (tl + 1 == tr)	{
 		tree[id].an = 1;
 		tree[id].c11 = 0;
 		tree[id].c00 = 0;
-		if (s[tl] == '0')
-		{
+		if (s[tl] == '0')	{
 			tree[id].c00 = 1;
-
-		} else
-			tree[id].c11 = 1;
+		} else {
+      tree[id].c11 = 1;
+    }
 		return;
 	}
 	//если нет то определяем в каком из сыновей нужный лист лежит
 	ll mid = tl + tr >> 1;
-	if (mid > x)
-		upd(id * 2, tl, mid, x);
-	else
-		upd(id * 2 + 1, mid, tr, x);
+	if (mid > x) {
+    upd(id * 2, tl, mid, x);
+  }	else {
+    upd(id * 2 + 1, mid, tr, x);
+  }
+
 	//обновляем текущий узел
 	tree[id] = merg(tree[id * 2], tree[id * 2 + 1]);
 }
@@ -1529,8 +1532,7 @@ int main() {
 	ll t = 1;
 	cin >> t;
 
-	while (t--)
-	{
+	while (t--)	{
 		solve();
 	}
 }

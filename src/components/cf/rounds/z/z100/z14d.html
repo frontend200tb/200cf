@@ -47,3 +47,57 @@
 </pre>
   <code>4</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/14/problem/D" target="_blank">Задача 14D</a>
+    <br><a href="https://codeforces.com/contest/14" target="_blank">Codeforces Beta Round 14 2010.05.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int N = 210;
+int res, u[N], v[N], dp[N];
+vector<int>g[N];
+
+void dfs(int u, int fa) {
+	dp[u] = 0;
+	for (int v : g[u]) {
+		if (v == fa) continue;
+		dfs(v, u);
+		res = max(res, dp[u] + dp[v] + 1);
+		dp[u] = max(dp[v] + 1, dp[u]);
+	}
+}
+
+int main() {
+	int n; // число городов
+	cin >> n;
+
+	for (int i = 1;i < n;i++) {
+		int x, y;cin >> x >> y;
+		u[i] = x, v[i] = y;
+		g[x].push_back(y);g[y].push_back(x);
+	}
+
+	int ans = 0;
+
+	for (int i = 1;i < n;i++) {
+		int ret = 1;res = 0;
+		dfs(u[i], v[i]);
+		ret *= res;res = 0;
+		dfs(v[i], u[i]);
+		ret *= res;
+		ans = max(ans, ret);
+	}
+
+	cout << ans;
+}
+</pre>
+</details>
