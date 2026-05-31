@@ -46,39 +46,39 @@
 using namespace std;
 
 bool compare(const pair&lt;int, int&gt;& a, const pair&lt;int, int&gt;& b) {
-return a.second > b.second;
+  return a.second > b.second;
 }
 
 int main() {
-// ввод данных
-int n, m;
-cin >> n >> m;
+  // ввод данных
+  int n, m;
+  cin >> n >> m;
 
-vector&lt;pair&lt;int, int&gt; &gt; A(m);
-for (int i = 0; i &lt; m; i++) {
-  cin >> A[i].first >> A[i].second;
-}
-
-// решение
-sort(A.begin(), A.end(), compare);
-int res = 0;
-int ost = n;
-
-for (auto& cont : A) {
-  int a = cont.first;
-  int b = cont.second;
-
-  if (ost &lt;= 0) {
-    break;
+  vector&lt;pair&lt;int, int&gt; &gt; A(m);
+  for (int i = 0; i &lt; m; i++) {
+    cin >> A[i].first >> A[i].second;
   }
 
-  int take = min(a, ost);
-  res += take * b;
-  ost -= take;
-}
+  // решение
+  sort(A.begin(), A.end(), compare);
+  int res = 0;
+  int ost = n;
 
-// вывод результата
-cout &lt;&lt; res;
+  for (auto& cont : A) {
+    int a = cont.first;
+    int b = cont.second;
+
+    if (ost &lt;= 0) {
+      break;
+    }
+
+    int take = min(a, ost);
+    res += take * b;
+    ost -= take;
+  }
+
+  // вывод результата
+  cout &lt;&lt; res;
 }
 </pre>
 </details>

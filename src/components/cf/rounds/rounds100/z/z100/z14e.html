@@ -28,3 +28,59 @@
 
 <p>В первом тесте последовательности y-координат у шести верблюдов равны: 123421, 123431, 123432, 124321, 134321 и 234321 (каждая цифра соответствует одному значению yi).</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/14/problem/E" target="_blank">Задача 14E</a>
+    <br><a href="https://codeforces.com/contest/14" target="_blank">Codeforces Beta Round 14 2010.05.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int f[21][5][5][11][11];
+
+int main() {
+  int t; // число вершин
+  int n; // число горбов
+  cin >> n >> t;
+
+  for (int i = 1; i <= 4; i++) {
+    for (int j = 1; j <= 4; j++) {
+      f[2][i][j][0][0] = i != j;
+    }
+  }
+
+  for (int i = 3; i <= n; i++) {
+    for (int j = 1; j <= 4; j++) {
+      for (int k = 1; k <= 4; k++) {
+        for (int x = 0; x <= t; x++) {
+          for (int y = 0; y <= t; y++) {
+            for (int l = 1; l <= 4; l++) {
+              if (k != l) {
+                f[i][k][l][x + (j < k && k > l)][y +
+                (j > k && k < l)] += f[i - 1][j][k][x][y];
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  int ans = 0;
+
+  for (int i = 1; i <= 4; i++) {
+    for (int j = 1; j <= 4; j++) {
+      ans += f[n][i][j][t][t - 1];
+    }
+  }
+
+  cout << ans;
+}
+</pre>
+</details>

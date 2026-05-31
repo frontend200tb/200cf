@@ -1,31 +1,45 @@
 /** *******************
 Скрипт из файла rounds.js
-Объект rounds содержит страницу alg-rounds
-Функция showRounds показывает страницу rounds
+Навигация по теме rounds
+rounds100
 ******************** */
-import './js/element-rounds';
-import {createAside, createMain} from './js/f-create-aside';
+import './element-rounds';
+import { dataRoundsNav } from './data-rounds-nav';
 
-// 1. Создаем объект rounds
-const rounds = {};
+// Создаем ссылки для меню mainnav
+createMainNav(dataRoundsNav);
 
-// 2. В объекте rounds создаем свойство aside
-rounds.aside = createAside();
+function createMainNav(navCode) {
+  navCode.forEach((el) => {
+    el.elem = document.createElement('a');
+    el.elem.href = '';
+    el.elem.innerHTML = el.text;
+    el.elem.addEventListener('click', (event) => {
+      const rounds = document.getElementById('rounds');
+      event.preventDefault();
+      // добавим class="active"
+      classActive(navCode, el.elem);
+      rounds.innerHTML = el.content;
+      el.act();
+    });
+  });
+}
 
-// 3. В объекте rounds создаем свойство main
-rounds.main = createMain();
+function classActive(menu, activElem) {
+  menu.forEach((el) => {
+    el.elem.classList.remove('active');
+  });
+  activElem.classList.add('active');
+}
 
-// 4. Экспортируем функцию showRounds()
 export default function showRounds() {
-  const mainAside = document.querySelector('.main__aside');
-
-  if (mainAside) {
-    mainAside.innerHTML = '';
-    mainAside.append(rounds.aside);
-    mainAside.append(rounds.main);
-
-    // 5. Создадим и вызовем событие click на первой ссылке aside элемента
-    const eventClick = new Event('click');
-    mainAside.firstElementChild.firstElementChild.dispatchEvent(eventClick);
-  }
+  const elemMainNav = document.getElementById('main-nav');
+  elemMainNav.innerHTML = '';
+  dataRoundsNav.forEach((el) => {
+    elemMainNav.appendChild(el.elem);
+    el.elem.classList.remove('active');
+  });
+  // 6. Создадим и вызовем событие click на первом main-nav эелементе
+  const eventClick = new Event('click');
+  dataRoundsNav[0].elem.dispatchEvent(eventClick);
 }

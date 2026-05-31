@@ -25,7 +25,8 @@
   <details>
     <summary>Решение</summary>
     <p>Чтобы получился квадрат, надо проверить что все стороны равны.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -58,7 +59,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Нужно отсортировать две строки и сравнить их.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -113,7 +115,7 @@ int main() {
     <summary>Решение</summary>
     <p>Если у всех элементов совпадает четность, то мы не можем ничего поменять местами. Если есть хоть одно число с другой четностью, то мы можем отсортировать массив как мы хотим. Начнем решение с того что посчитаем четные и нечетные числа.</p>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -166,7 +168,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Число с которым какое то число из массива будет иметь НОД равный 1, должно быть простым. Поэтому соберем Решето Эратосфена. И будем перебирвать все простые числа и считать НОД с каждым числом из массива, пока НОД не равен 1.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -239,7 +242,7 @@ int main() {
     <summary>Решение</summary>
     <p>k позиций телепортов будем выбирать так, чтобы они были максимально далеко от позиции слева и от позиции справа. Упорядочиваем позиции телепортов по удаленности. rbegin возвращает самую удаленную точку. bad_pos отслеживает что позиция повторно не добавляется. Сначала проверяем две крайние точки и расстояние от них до ближайшего друга. Потом берем пары отсортированных друзей и проверяем расстояние между ними.</p>
 
-<pre>
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;set&gt;
@@ -351,7 +354,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Это задача на DFS с DP. Собираем граф и идем в dfs. Там смотрим если это не наш предок, то идем в DP. Собираем ДП это сколько подчиненных с нашей стороны. Мы смотрим на ребро. dfs находит сына, дальше ДП смотрит сколько подчиненных у этого сына и добавляет их к своим подчиненным. Смотрим сколько у него подчиненных с одной стороны h1 и с другой стороны h2. Если h1 >= k, то LCA может быть одна из вершин. Если h2 >= k, то мы можем быть LCA для наших сыновей.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -417,7 +421,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Сложность O(n<sup>2</sup>)</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;

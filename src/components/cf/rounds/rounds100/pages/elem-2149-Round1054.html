@@ -25,7 +25,8 @@
   <details>
     <summary>Решение</summary>
     <p>К нам может придти только одно из трех чисел. Если 1, то ничего делать не нужно, потому что при умножении на 1 произведение не меняется. Если 0, то нужна одна операция чтобы к нему прибавить 1, чотбы произведение не стало равно 0. Если -1 пришла первый раз, то за две операции надо ее изменить на 1, если пришла второй раз, то нужно отменить две операции над первой единицей.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -76,7 +77,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Минимальная разница среди пар получится если массив отсортировать и взять соседние пары.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -128,7 +130,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Посчитаем, сколько различных чисел меньше MEX, которых нет в массиве. Посчитаем сколько чисел равно MEX. Большее из этих чисел будет ответом.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 
@@ -204,7 +207,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Посчитаем префиксные суммы спара и слева.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -305,7 +309,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;map&gt;
@@ -445,7 +450,8 @@ int main() {
     <p>Метод меняющегося окна. Если в map попало меньше k уникальных элементов, то двигаем правый указатель.</p>
     <p>Если в map ровно k уникальных элементов, прибавляе 1 к результату и двигаем правый указатель вправо пока в окне не станет r элементов.</p>
     <p>Двигаем левый указатель вправо на 1, правый указатель влево на позицию pl + l. Повторяем все сначала пока левый указатель не станет на l элементов левее конца массива.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;map&gt;
@@ -586,7 +592,6 @@ int main() {
 </article>
 
 
-
 <!-- Задача F. Незуко на поляне -->
 <article class="article">
   <div class="anchor" id="t6"></div>
@@ -601,8 +606,10 @@ int main() {
 100 5
 </pre>
     <code>5</code>
+
     <p>Бинарный поиск по ответу.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;

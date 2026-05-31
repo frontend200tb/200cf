@@ -1,6 +1,6 @@
-import b from '../../rounds/z/z100/z4a.html';
-import c from '../../rounds/z/z100/z12a.html';
-import d from '../../rounds/z/z100/z12b.html';
+import b from '../../rounds/rounds100/z/z100/z4a.html';
+import c from '../../rounds/rounds100/z/z100/z12a.html';
+import d from '../../rounds/rounds100/z/z100/z12b.html';
 
 export default function inElem() {
   if (document.querySelector('.t2')) {

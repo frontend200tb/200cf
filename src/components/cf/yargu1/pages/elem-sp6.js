@@ -1,5 +1,5 @@
-import i    from '../../rounds/z/z100/z16b.html';
-import p    from '../../rounds/z/z134b.html';
+import i    from '../../rounds/rounds100/z/z100/z16b.html';
+import p    from '../../rounds/rounds100/z/z134b.html';
 
 export default function inElem() {
 

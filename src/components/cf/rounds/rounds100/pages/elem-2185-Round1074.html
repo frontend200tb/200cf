@@ -62,7 +62,8 @@
   <details>
     <summary>Решение</summary>
     <p>Любое натуральное число является совершенным корнем какого-то натурального числа. Поэтому выводим n чисел начиная с 1.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -141,7 +142,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Чтобы все префиксы массива были максимальными, нужно максимальное значение поставить первым элементом массива. Тогда сумма максимумов всех префиксов будет равна произведению максимального элемента массива на его длину.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -234,7 +236,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Поскольку всю последовательность мы можем сдвинуть влево или вправо на любое расстояние, то максимально возможное значение минимального целого неотрицательного числа, которого нет в последовательности будет равно длине максимальной последовательности подряд идущих чисел.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -354,7 +357,8 @@ int main() {
   <details>
     <summary>Решение</summary>
     <p>Храним оригинальный массив, а ответ будем собирать в измененном массиве. Линейно проходим по всем операциям. Каждую операцию добавляем в очередь. Если результат превышает максимальное значение h, то отменяем все операции в очереди и очищаем очередь.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;queue&gt;
@@ -485,7 +489,8 @@ RRL
     <p>Отсортируем роботов и шипы на прямой. Используем метод двух указателей. Вначале указатель r указывает на первого робота, а указатель s указывает на первый шип. Используем два линейных прохода.</p>
     <p>Первый проход. Линейно проходим по всем роботам, подсчитывая расстояние от каждого робота до ближайшего шипа слева и справа.</p>
     <p>Второй проход. Линейно проходим по всем операциям i от 1 до k. Каждый раз уменьшая оставшихся в живых роботов, если робот доходит до шипа.</p>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -642,7 +647,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
@@ -789,7 +795,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;map&gt;
@@ -952,7 +959,8 @@ int main() {
 
   <details>
     <summary>Решение</summary>
-<pre>
+
+<pre class="language-cpp">
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;map&gt;
@@ -1049,4 +1057,3 @@ int main() {
 </pre>
   </details>
 </article>
-

@@ -1,4 +1,4 @@
-class CfRounds extends HTMLElement {
+class Rounds100 extends HTMLElement {
   constructor() {
     super();
   }
@@ -8,8 +8,8 @@ class CfRounds extends HTMLElement {
     <section class="main__aside">
     </section>
     `;
-    this.className = 'cf-rounds';
+    this.className = 'rounds-100';
   }
 }
 
-customElements.define('cf-rounds', CfRounds);
+customElements.define('rounds-100', Rounds100);

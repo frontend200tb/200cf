@@ -1580,10 +1580,118 @@ function showMirea() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/js/data-aside.js":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/js/data-aside.js ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/data-rounds-nav.js":
+/*!*****************************************************!*\
+  !*** ./src/components/cf/rounds/data-rounds-nav.js ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   dataRoundsNav: function() { return /* binding */ dataRoundsNav; }
+/* harmony export */ });
+/* harmony import */ var _rounds100_rounds100__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rounds100/rounds100 */ "./src/components/cf/rounds/rounds100/rounds100.js");
+
+const dataRoundsNav = [{
+  url: 'rounds100.html',
+  text: 'Rounds 100',
+  content: '<rounds-100></rounds-100>',
+  act() {
+    (0,_rounds100_rounds100__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  }
+}];
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/element-rounds.js":
+/*!****************************************************!*\
+  !*** ./src/components/cf/rounds/element-rounds.js ***!
+  \****************************************************/
+/***/ (function() {
+
+class CfRounds extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="cf-rounds" id="cf-rounds">
+      <h1>Rounds</h1>
+      <nav class="nav" id="main-nav"></nav>
+      <div id="rounds"></div>
+    </div>
+    `;
+    this.className = 'cf-rounds';
+  }
+}
+customElements.define('cf-rounds', CfRounds);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds.js":
+/*!********************************************!*\
+  !*** ./src/components/cf/rounds/rounds.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ showRounds; }
+/* harmony export */ });
+/* harmony import */ var _element_rounds__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./element-rounds */ "./src/components/cf/rounds/element-rounds.js");
+/* harmony import */ var _element_rounds__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_element_rounds__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_rounds_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data-rounds-nav */ "./src/components/cf/rounds/data-rounds-nav.js");
+/** *******************
+Скрипт из файла rounds.js
+Навигация по теме rounds
+rounds100
+******************** */
+
+
+
+// Создаем ссылки для меню mainnav
+createMainNav(_data_rounds_nav__WEBPACK_IMPORTED_MODULE_1__.dataRoundsNav);
+function createMainNav(navCode) {
+  navCode.forEach(el => {
+    el.elem = document.createElement('a');
+    el.elem.href = '';
+    el.elem.innerHTML = el.text;
+    el.elem.addEventListener('click', event => {
+      const rounds = document.getElementById('rounds');
+      event.preventDefault();
+      // добавим class="active"
+      classActive(navCode, el.elem);
+      rounds.innerHTML = el.content;
+      el.act();
+    });
+  });
+}
+function classActive(menu, activElem) {
+  menu.forEach(el => {
+    el.elem.classList.remove('active');
+  });
+  activElem.classList.add('active');
+}
+function showRounds() {
+  const elemMainNav = document.getElementById('main-nav');
+  elemMainNav.innerHTML = '';
+  _data_rounds_nav__WEBPACK_IMPORTED_MODULE_1__.dataRoundsNav.forEach(el => {
+    elemMainNav.appendChild(el.elem);
+    el.elem.classList.remove('active');
+  });
+  // 6. Создадим и вызовем событие click на первом main-nav эелементе
+  const eventClick = new Event('click');
+  _data_rounds_nav__WEBPACK_IMPORTED_MODULE_1__.dataRoundsNav[0].elem.dispatchEvent(eventClick);
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/js/data-aside.js":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/js/data-aside.js ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1596,10 +1704,10 @@ const asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)'
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/js/data-pages.js":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/js/data-pages.js ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/js/data-pages.js":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/js/data-pages.js ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1607,173 +1715,173 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   pages: function() { return /* binding */ pages; }
 /* harmony export */ });
-/* harmony import */ var _pages_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../pages/p100/elem-1-Round1.html */ "./src/components/cf/rounds/pages/p100/elem-1-Round1.html");
-/* harmony import */ var _pages_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../pages/p100/elem-2-Round2.html */ "./src/components/cf/rounds/pages/p100/elem-2-Round2.html");
-/* harmony import */ var _pages_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../pages/p100/elem-3-Round3.html */ "./src/components/cf/rounds/pages/p100/elem-3-Round3.html");
-/* harmony import */ var _pages_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../pages/p100/elem-4-Round4.html */ "./src/components/cf/rounds/pages/p100/elem-4-Round4.html");
-/* harmony import */ var _pages_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../pages/p100/elem-5-Round5.html */ "./src/components/cf/rounds/pages/p100/elem-5-Round5.html");
-/* harmony import */ var _pages_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../pages/p100/elem-6-Round6.html */ "./src/components/cf/rounds/pages/p100/elem-6-Round6.html");
-/* harmony import */ var _pages_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../pages/p100/elem-7-Round7.html */ "./src/components/cf/rounds/pages/p100/elem-7-Round7.html");
-/* harmony import */ var _pages_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../pages/p100/elem-8-Round8.html */ "./src/components/cf/rounds/pages/p100/elem-8-Round8.html");
-/* harmony import */ var _pages_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../pages/p100/elem-9-Round9.html */ "./src/components/cf/rounds/pages/p100/elem-9-Round9.html");
-/* harmony import */ var _pages_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../pages/p100/elem-10-Round10.html */ "./src/components/cf/rounds/pages/p100/elem-10-Round10.html");
-/* harmony import */ var _pages_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../pages/p100/elem-11-Round11.html */ "./src/components/cf/rounds/pages/p100/elem-11-Round11.html");
-/* harmony import */ var _pages_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../pages/p100/elem-12-Round12.html */ "./src/components/cf/rounds/pages/p100/elem-12-Round12.html");
-/* harmony import */ var _pages_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../pages/p100/elem-13-Round13.html */ "./src/components/cf/rounds/pages/p100/elem-13-Round13.html");
-/* harmony import */ var _pages_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../pages/p100/elem-14-Round14.html */ "./src/components/cf/rounds/pages/p100/elem-14-Round14.html");
-/* harmony import */ var _pages_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../pages/p100/elem-15-Round15.html */ "./src/components/cf/rounds/pages/p100/elem-15-Round15.html");
-/* harmony import */ var _pages_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../pages/p100/elem-16-Round16.html */ "./src/components/cf/rounds/pages/p100/elem-16-Round16.html");
-/* harmony import */ var _pages_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../pages/p100/elem-17-Round17.html */ "./src/components/cf/rounds/pages/p100/elem-17-Round17.html");
-/* harmony import */ var _pages_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../pages/p100/elem-18-Round18.html */ "./src/components/cf/rounds/pages/p100/elem-18-Round18.html");
-/* harmony import */ var _pages_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../pages/p100/elem-19-Round19.html */ "./src/components/cf/rounds/pages/p100/elem-19-Round19.html");
-/* harmony import */ var _pages_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../pages/p100/elem-20-Round20.html */ "./src/components/cf/rounds/pages/p100/elem-20-Round20.html");
-/* harmony import */ var _pages_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../pages/p100/elem-34-Round34.html */ "./src/components/cf/rounds/pages/p100/elem-34-Round34.html");
-/* harmony import */ var _pages_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../pages/p100/elem-38-sio1.html */ "./src/components/cf/rounds/pages/p100/elem-38-sio1.html");
-/* harmony import */ var _pages_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../pages/p100/elem-39-sko1.html */ "./src/components/cf/rounds/pages/p100/elem-39-sko1.html");
-/* harmony import */ var _pages_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../pages/p100/elem-44-sko2.html */ "./src/components/cf/rounds/pages/p100/elem-44-sko2.html");
-/* harmony import */ var _pages_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../pages/p100/elem-45-sko3.html */ "./src/components/cf/rounds/pages/p100/elem-45-sko3.html");
-/* harmony import */ var _pages_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../pages/p100/elem-46-sio2.html */ "./src/components/cf/rounds/pages/p100/elem-46-sio2.html");
-/* harmony import */ var _pages_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../pages/p100/elem-48-sio3.html */ "./src/components/cf/rounds/pages/p100/elem-48-sio3.html");
-/* harmony import */ var _pages_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../pages/p100/elem-50-Round47.html */ "./src/components/cf/rounds/pages/p100/elem-50-Round47.html");
-/* harmony import */ var _pages_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../pages/p100/elem-52-TRound1.html */ "./src/components/cf/rounds/pages/p100/elem-52-TRound1.html");
-/* harmony import */ var _pages_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../pages/p100/elem-59-Round55.html */ "./src/components/cf/rounds/pages/p100/elem-59-Round55.html");
-/* harmony import */ var _pages_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../pages/p100/elem-70-Round64.html */ "./src/components/cf/rounds/pages/p100/elem-70-Round64.html");
-/* harmony import */ var _pages_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../pages/p100/elem-71-Round65.html */ "./src/components/cf/rounds/pages/p100/elem-71-Round65.html");
-/* harmony import */ var _pages_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../pages/p100/elem-76-vuos.html */ "./src/components/cf/rounds/pages/p100/elem-76-vuos.html");
-/* harmony import */ var _pages_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../pages/p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/pages/p100/elem-81-yandex-q1.html");
-/* harmony import */ var _pages_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../pages/p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/pages/p100/elem-82-yandex-q2.html");
-/* harmony import */ var _pages_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../pages/p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/pages/p100/elem-85-yandex-r1.html");
-/* harmony import */ var _pages_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../pages/p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/pages/p100/elem-86-yandex-r2.html");
-/* harmony import */ var _pages_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../pages/p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/pages/p100/elem-97-yandex-f.html");
-/* harmony import */ var _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../pages/elem-106-Round82.html */ "./src/components/cf/rounds/pages/elem-106-Round82.html");
-/* harmony import */ var _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../pages/elem-110-Round84.html */ "./src/components/cf/rounds/pages/elem-110-Round84.html");
-/* harmony import */ var _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../pages/elem-112-Round85.html */ "./src/components/cf/rounds/pages/elem-112-Round85.html");
-/* harmony import */ var _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../pages/elem-116-Round87.html */ "./src/components/cf/rounds/pages/elem-116-Round87.html");
-/* harmony import */ var _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../pages/elem-118-Round89.html */ "./src/components/cf/rounds/pages/elem-118-Round89.html");
-/* harmony import */ var _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./../pages/elem-120-kosSaratov.html */ "./src/components/cf/rounds/pages/elem-120-kosSaratov.html");
-/* harmony import */ var _pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../pages/elem-134-TRound3.html */ "./src/components/cf/rounds/pages/elem-134-TRound3.html");
-/* harmony import */ var _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./../pages/elem-136-Round97.html */ "./src/components/cf/rounds/pages/elem-136-Round97.html");
-/* harmony import */ var _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./../pages/elem-141-Round101.html */ "./src/components/cf/rounds/pages/elem-141-Round101.html");
-/* harmony import */ var _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./../pages/elem-155-Round109.html */ "./src/components/cf/rounds/pages/elem-155-Round109.html");
-/* harmony import */ var _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./../pages/elem-158-vk-q1.html */ "./src/components/cf/rounds/pages/elem-158-vk-q1.html");
-/* harmony import */ var _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./../pages/elem-159-vk-q2.html */ "./src/components/cf/rounds/pages/elem-159-vk-q2.html");
-/* harmony import */ var _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./../pages/elem-163-vk-r2.html */ "./src/components/cf/rounds/pages/elem-163-vk-r2.html");
-/* harmony import */ var _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./../pages/elem-169-vk-r2.html */ "./src/components/cf/rounds/pages/elem-169-vk-r2.html");
-/* harmony import */ var _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./../pages/elem-200-Round126.html */ "./src/components/cf/rounds/pages/elem-200-Round126.html");
-/* harmony import */ var _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./../pages/elem-228-Round141.html */ "./src/components/cf/rounds/pages/elem-228-Round141.html");
-/* harmony import */ var _pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./../pages/elem-230-Round142.html */ "./src/components/cf/rounds/pages/elem-230-Round142.html");
-/* harmony import */ var _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./../pages/elem-268-Round164.html */ "./src/components/cf/rounds/pages/elem-268-Round164.html");
-/* harmony import */ var _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./../pages/elem-278-Round170.html */ "./src/components/cf/rounds/pages/elem-278-Round170.html");
-/* harmony import */ var _pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./../pages/elem-313-Round186.html */ "./src/components/cf/rounds/pages/elem-313-Round186.html");
-/* harmony import */ var _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./../pages/elem-318-Round188.html */ "./src/components/cf/rounds/pages/elem-318-Round188.html");
-/* harmony import */ var _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./../pages/elem-339-Round197.html */ "./src/components/cf/rounds/pages/elem-339-Round197.html");
-/* harmony import */ var _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./../pages/elem-381-Round223.html */ "./src/components/cf/rounds/pages/elem-381-Round223.html");
-/* harmony import */ var _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./../pages/elem-427-Round244.html */ "./src/components/cf/rounds/pages/elem-427-Round244.html");
-/* harmony import */ var _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./../pages/elem-467-Round267.html */ "./src/components/cf/rounds/pages/elem-467-Round267.html");
-/* harmony import */ var _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../pages/elem-469-Round268.html */ "./src/components/cf/rounds/pages/elem-469-Round268.html");
-/* harmony import */ var _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./../pages/elem-490-Round279.html */ "./src/components/cf/rounds/pages/elem-490-Round279.html");
-/* harmony import */ var _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./../pages/elem-492-Round280.html */ "./src/components/cf/rounds/pages/elem-492-Round280.html");
-/* harmony import */ var _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./../pages/elem-509-Round289.html */ "./src/components/cf/rounds/pages/elem-509-Round289.html");
-/* harmony import */ var _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../pages/elem-520-Round295.html */ "./src/components/cf/rounds/pages/elem-520-Round295.html");
-/* harmony import */ var _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../pages/elem-546-Round304.html */ "./src/components/cf/rounds/pages/elem-546-Round304.html");
-/* harmony import */ var _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../pages/elem-580-Round321.html */ "./src/components/cf/rounds/pages/elem-580-Round321.html");
-/* harmony import */ var _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../pages/elem-617-Round340.html */ "./src/components/cf/rounds/pages/elem-617-Round340.html");
-/* harmony import */ var _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../pages/elem-646-Techno1z.html */ "./src/components/cf/rounds/pages/elem-646-Techno1z.html");
-/* harmony import */ var _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../pages/elem-647-Techno2z.html */ "./src/components/cf/rounds/pages/elem-647-Techno2z.html");
-/* harmony import */ var _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../pages/elem-648-Techno1o.html */ "./src/components/cf/rounds/pages/elem-648-Techno1o.html");
-/* harmony import */ var _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../pages/elem-649-Techno2o.html */ "./src/components/cf/rounds/pages/elem-649-Techno2o.html");
-/* harmony import */ var _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../pages/elem-705-Round366.html */ "./src/components/cf/rounds/pages/elem-705-Round366.html");
-/* harmony import */ var _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../pages/elem-723-Round375.html */ "./src/components/cf/rounds/pages/elem-723-Round375.html");
-/* harmony import */ var _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../pages/elem-727-Techno2017o1.html */ "./src/components/cf/rounds/pages/elem-727-Techno2017o1.html");
-/* harmony import */ var _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../pages/elem-732-Round377.html */ "./src/components/cf/rounds/pages/elem-732-Round377.html");
-/* harmony import */ var _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./../pages/elem-733-Round378.html */ "./src/components/cf/rounds/pages/elem-733-Round378.html");
-/* harmony import */ var _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./../pages/elem-743-Round384.html */ "./src/components/cf/rounds/pages/elem-743-Round384.html");
-/* harmony import */ var _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./../pages/elem-758-Round392.html */ "./src/components/cf/rounds/pages/elem-758-Round392.html");
-/* harmony import */ var _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./../pages/elem-791-Round405.html */ "./src/components/cf/rounds/pages/elem-791-Round405.html");
-/* harmony import */ var _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./../pages/elem-895-Round448.html */ "./src/components/cf/rounds/pages/elem-895-Round448.html");
-/* harmony import */ var _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./../pages/elem-1030-Techno2019o1.html */ "./src/components/cf/rounds/pages/elem-1030-Techno2019o1.html");
-/* harmony import */ var _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./../pages/elem-1041-Round509.html */ "./src/components/cf/rounds/pages/elem-1041-Round509.html");
-/* harmony import */ var _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./../pages/elem-1272-Round605.html */ "./src/components/cf/rounds/pages/elem-1272-Round605.html");
-/* harmony import */ var _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./../pages/elem-1296-Round617.html */ "./src/components/cf/rounds/pages/elem-1296-Round617.html");
-/* harmony import */ var _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./../pages/elem-1313-Round622.html */ "./src/components/cf/rounds/pages/elem-1313-Round622.html");
-/* harmony import */ var _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./../pages/elem-1325-Round628.html */ "./src/components/cf/rounds/pages/elem-1325-Round628.html");
-/* harmony import */ var _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./../pages/elem-1351-TRound16.html */ "./src/components/cf/rounds/pages/elem-1351-TRound16.html");
-/* harmony import */ var _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./../pages/elem-1352-Round640.html */ "./src/components/cf/rounds/pages/elem-1352-Round640.html");
-/* harmony import */ var _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./../pages/elem-1360-Round644.html */ "./src/components/cf/rounds/pages/elem-1360-Round644.html");
-/* harmony import */ var _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./../pages/elem-1367-Round650.html */ "./src/components/cf/rounds/pages/elem-1367-Round650.html");
-/* harmony import */ var _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./../pages/elem-1420-Round672.html */ "./src/components/cf/rounds/pages/elem-1420-Round672.html");
-/* harmony import */ var _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./../pages/elem-1490-Round702.html */ "./src/components/cf/rounds/pages/elem-1490-Round702.html");
-/* harmony import */ var _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./../pages/elem-1512-Round713.html */ "./src/components/cf/rounds/pages/elem-1512-Round713.html");
-/* harmony import */ var _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./../pages/elem-1520-Round719.html */ "./src/components/cf/rounds/pages/elem-1520-Round719.html");
-/* harmony import */ var _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./../pages/elem-1634-Round770.html */ "./src/components/cf/rounds/pages/elem-1634-Round770.html");
-/* harmony import */ var _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./../pages/elem-1669-Round784.html */ "./src/components/cf/rounds/pages/elem-1669-Round784.html");
-/* harmony import */ var _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./../pages/elem-1676-Round790.html */ "./src/components/cf/rounds/pages/elem-1676-Round790.html");
-/* harmony import */ var _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./../pages/elem-1692-Round799.html */ "./src/components/cf/rounds/pages/elem-1692-Round799.html");
-/* harmony import */ var _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./../pages/elem-1703-Round806.html */ "./src/components/cf/rounds/pages/elem-1703-Round806.html");
-/* harmony import */ var _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./../pages/elem-1722-Round817.html */ "./src/components/cf/rounds/pages/elem-1722-Round817.html");
-/* harmony import */ var _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./../pages/elem-1725-compfest.html */ "./src/components/cf/rounds/pages/elem-1725-compfest.html");
-/* harmony import */ var _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./../pages/elem-1726-Round819.html */ "./src/components/cf/rounds/pages/elem-1726-Round819.html");
-/* harmony import */ var _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./../pages/elem-1728-EdRound135.html */ "./src/components/cf/rounds/pages/elem-1728-EdRound135.html");
-/* harmony import */ var _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./../pages/elem-1729-Round820.html */ "./src/components/cf/rounds/pages/elem-1729-Round820.html");
-/* harmony import */ var _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./../pages/elem-1730-Round823.html */ "./src/components/cf/rounds/pages/elem-1730-Round823.html");
-/* harmony import */ var _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./../pages/elem-1733-Round821.html */ "./src/components/cf/rounds/pages/elem-1733-Round821.html");
-/* harmony import */ var _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./../pages/elem-1734-Round822.html */ "./src/components/cf/rounds/pages/elem-1734-Round822.html");
-/* harmony import */ var _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./../pages/elem-1738-GlRound22.html */ "./src/components/cf/rounds/pages/elem-1738-GlRound22.html");
-/* harmony import */ var _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./../pages/elem-1739-EdRound136.html */ "./src/components/cf/rounds/pages/elem-1739-EdRound136.html");
-/* harmony import */ var _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./../pages/elem-1740-Round831.html */ "./src/components/cf/rounds/pages/elem-1740-Round831.html");
-/* harmony import */ var _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./../pages/elem-1741-Round826.html */ "./src/components/cf/rounds/pages/elem-1741-Round826.html");
-/* harmony import */ var _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./../pages/elem-1742-Round827.html */ "./src/components/cf/rounds/pages/elem-1742-Round827.html");
-/* harmony import */ var _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./../pages/elem-1760-Round835.html */ "./src/components/cf/rounds/pages/elem-1760-Round835.html");
-/* harmony import */ var _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./../pages/elem-1789-Round853.html */ "./src/components/cf/rounds/pages/elem-1789-Round853.html");
-/* harmony import */ var _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./../pages/elem-1791-Round849.html */ "./src/components/cf/rounds/pages/elem-1791-Round849.html");
-/* harmony import */ var _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./../pages/elem-1798-Round860.html */ "./src/components/cf/rounds/pages/elem-1798-Round860.html");
-/* harmony import */ var _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./../pages/elem-1807-Round859.html */ "./src/components/cf/rounds/pages/elem-1807-Round859.html");
-/* harmony import */ var _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./../pages/elem-1824-Round872.html */ "./src/components/cf/rounds/pages/elem-1824-Round872.html");
-/* harmony import */ var _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./../pages/elem-1825-Round872.html */ "./src/components/cf/rounds/pages/elem-1825-Round872.html");
-/* harmony import */ var _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./../pages/elem-1829-Round871.html */ "./src/components/cf/rounds/pages/elem-1829-Round871.html");
-/* harmony import */ var _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./../pages/elem-1850-Round886.html */ "./src/components/cf/rounds/pages/elem-1850-Round886.html");
-/* harmony import */ var _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./../pages/elem-1873-Round898.html */ "./src/components/cf/rounds/pages/elem-1873-Round898.html");
-/* harmony import */ var _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./../pages/elem-1915-Round918.html */ "./src/components/cf/rounds/pages/elem-1915-Round918.html");
-/* harmony import */ var _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./../pages/elem-1926-Round928.html */ "./src/components/cf/rounds/pages/elem-1926-Round928.html");
-/* harmony import */ var _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./../pages/elem-1950-Round937.html */ "./src/components/cf/rounds/pages/elem-1950-Round937.html");
-/* harmony import */ var _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./../pages/elem-1971-Round944.html */ "./src/components/cf/rounds/pages/elem-1971-Round944.html");
-/* harmony import */ var _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ./../pages/elem-1985-Round952.html */ "./src/components/cf/rounds/pages/elem-1985-Round952.html");
-/* harmony import */ var _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ./../pages/elem-1999-Round964.html */ "./src/components/cf/rounds/pages/elem-1999-Round964.html");
-/* harmony import */ var _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ./../pages/elem-2009-Round971.html */ "./src/components/cf/rounds/pages/elem-2009-Round971.html");
-/* harmony import */ var _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./../pages/elem-2037-Round988.html */ "./src/components/cf/rounds/pages/elem-2037-Round988.html");
-/* harmony import */ var _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./../pages/elem-2044-Round993.html */ "./src/components/cf/rounds/pages/elem-2044-Round993.html");
-/* harmony import */ var _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./../pages/elem-2050-Round991.html */ "./src/components/cf/rounds/pages/elem-2050-Round991.html");
-/* harmony import */ var _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./../pages/elem-2051-Round995.html */ "./src/components/cf/rounds/pages/elem-2051-Round995.html");
-/* harmony import */ var _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./../pages/elem-2060-Round998.html */ "./src/components/cf/rounds/pages/elem-2060-Round998.html");
-/* harmony import */ var _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./../pages/elem-2065-Round1003.html */ "./src/components/cf/rounds/pages/elem-2065-Round1003.html");
-/* harmony import */ var _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./../pages/elem-2072-Round1006.html */ "./src/components/cf/rounds/pages/elem-2072-Round1006.html");
-/* harmony import */ var _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./../pages/elem-2091-Round1013.html */ "./src/components/cf/rounds/pages/elem-2091-Round1013.html");
-/* harmony import */ var _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./../pages/elem-2093-Round1016.html */ "./src/components/cf/rounds/pages/elem-2093-Round1016.html");
-/* harmony import */ var _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./../pages/elem-2094-Round1017.html */ "./src/components/cf/rounds/pages/elem-2094-Round1017.html");
-/* harmony import */ var _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./../pages/elem-2106-Round1020.html */ "./src/components/cf/rounds/pages/elem-2106-Round1020.html");
-/* harmony import */ var _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./../pages/elem-2114-Round1027.html */ "./src/components/cf/rounds/pages/elem-2114-Round1027.html");
-/* harmony import */ var _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./../pages/elem-2117-Round1029.html */ "./src/components/cf/rounds/pages/elem-2117-Round1029.html");
-/* harmony import */ var _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./../pages/elem-2119-Round1035.html */ "./src/components/cf/rounds/pages/elem-2119-Round1035.html");
-/* harmony import */ var _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./../pages/elem-2121-Round1032.html */ "./src/components/cf/rounds/pages/elem-2121-Round1032.html");
-/* harmony import */ var _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./../pages/elem-2123-Round1034.html */ "./src/components/cf/rounds/pages/elem-2123-Round1034.html");
-/* harmony import */ var _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./../pages/elem-2126-Round1037.html */ "./src/components/cf/rounds/pages/elem-2126-Round1037.html");
-/* harmony import */ var _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./../pages/elem-2131-Round1042.html */ "./src/components/cf/rounds/pages/elem-2131-Round1042.html");
-/* harmony import */ var _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./../pages/elem-2132-Round1043.html */ "./src/components/cf/rounds/pages/elem-2132-Round1043.html");
-/* harmony import */ var _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./../pages/elem-2133-Round1044.html */ "./src/components/cf/rounds/pages/elem-2133-Round1044.html");
-/* harmony import */ var _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./../pages/elem-2134-Round1045.html */ "./src/components/cf/rounds/pages/elem-2134-Round1045.html");
-/* harmony import */ var _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./../pages/elem-2136-Round1046.html */ "./src/components/cf/rounds/pages/elem-2136-Round1046.html");
-/* harmony import */ var _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./../pages/elem-2137-Round1047.html */ "./src/components/cf/rounds/pages/elem-2137-Round1047.html");
-/* harmony import */ var _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./../pages/elem-2148-Round1050.html */ "./src/components/cf/rounds/pages/elem-2148-Round1050.html");
-/* harmony import */ var _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./../pages/elem-2149-Round1054.html */ "./src/components/cf/rounds/pages/elem-2149-Round1054.html");
-/* harmony import */ var _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./../pages/elem-2152-Round1055.html */ "./src/components/cf/rounds/pages/elem-2152-Round1055.html");
-/* harmony import */ var _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./../pages/elem-2162-Round1059.html */ "./src/components/cf/rounds/pages/elem-2162-Round1059.html");
-/* harmony import */ var _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./../pages/elem-2166-Round1064.html */ "./src/components/cf/rounds/pages/elem-2166-Round1064.html");
-/* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/pages/elem-2167-Round1062.html");
-/* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/pages/elem-2171-Round1065.html");
-/* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/pages/elem-2185-Round1074.html");
-/* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/pages/elem-2193-Round1076.html");
-/* harmony import */ var _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ./../pages/elem-2209-Round1087.html */ "./src/components/cf/rounds/pages/elem-2209-Round1087.html");
-/* harmony import */ var _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_166__ = __webpack_require__(/*! ./../pages/elem-2218-Round1090.html */ "./src/components/cf/rounds/pages/elem-2218-Round1090.html");
+/* harmony import */ var _pages_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../pages/p100/elem-1-Round1.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-1-Round1.html");
+/* harmony import */ var _pages_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../pages/p100/elem-2-Round2.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-2-Round2.html");
+/* harmony import */ var _pages_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../pages/p100/elem-3-Round3.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-3-Round3.html");
+/* harmony import */ var _pages_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../pages/p100/elem-4-Round4.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-4-Round4.html");
+/* harmony import */ var _pages_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../pages/p100/elem-5-Round5.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-5-Round5.html");
+/* harmony import */ var _pages_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../pages/p100/elem-6-Round6.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-6-Round6.html");
+/* harmony import */ var _pages_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../pages/p100/elem-7-Round7.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-7-Round7.html");
+/* harmony import */ var _pages_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../pages/p100/elem-8-Round8.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-8-Round8.html");
+/* harmony import */ var _pages_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../pages/p100/elem-9-Round9.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-9-Round9.html");
+/* harmony import */ var _pages_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../pages/p100/elem-10-Round10.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-10-Round10.html");
+/* harmony import */ var _pages_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../pages/p100/elem-11-Round11.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-11-Round11.html");
+/* harmony import */ var _pages_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../pages/p100/elem-12-Round12.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-12-Round12.html");
+/* harmony import */ var _pages_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../pages/p100/elem-13-Round13.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-13-Round13.html");
+/* harmony import */ var _pages_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../pages/p100/elem-14-Round14.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-14-Round14.html");
+/* harmony import */ var _pages_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../pages/p100/elem-15-Round15.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-15-Round15.html");
+/* harmony import */ var _pages_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../pages/p100/elem-16-Round16.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-16-Round16.html");
+/* harmony import */ var _pages_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../pages/p100/elem-17-Round17.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-17-Round17.html");
+/* harmony import */ var _pages_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../pages/p100/elem-18-Round18.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-18-Round18.html");
+/* harmony import */ var _pages_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../pages/p100/elem-19-Round19.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-19-Round19.html");
+/* harmony import */ var _pages_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../pages/p100/elem-20-Round20.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-20-Round20.html");
+/* harmony import */ var _pages_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../pages/p100/elem-34-Round34.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-34-Round34.html");
+/* harmony import */ var _pages_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../pages/p100/elem-38-sio1.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-38-sio1.html");
+/* harmony import */ var _pages_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../pages/p100/elem-39-sko1.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-39-sko1.html");
+/* harmony import */ var _pages_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../pages/p100/elem-44-sko2.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-44-sko2.html");
+/* harmony import */ var _pages_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../pages/p100/elem-45-sko3.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-45-sko3.html");
+/* harmony import */ var _pages_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../pages/p100/elem-46-sio2.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-46-sio2.html");
+/* harmony import */ var _pages_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../pages/p100/elem-48-sio3.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-48-sio3.html");
+/* harmony import */ var _pages_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../pages/p100/elem-50-Round47.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-50-Round47.html");
+/* harmony import */ var _pages_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../pages/p100/elem-52-TRound1.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-52-TRound1.html");
+/* harmony import */ var _pages_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../pages/p100/elem-59-Round55.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-59-Round55.html");
+/* harmony import */ var _pages_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../pages/p100/elem-70-Round64.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-70-Round64.html");
+/* harmony import */ var _pages_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../pages/p100/elem-71-Round65.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-71-Round65.html");
+/* harmony import */ var _pages_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../pages/p100/elem-76-vuos.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-76-vuos.html");
+/* harmony import */ var _pages_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../pages/p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-81-yandex-q1.html");
+/* harmony import */ var _pages_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../pages/p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-82-yandex-q2.html");
+/* harmony import */ var _pages_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../pages/p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-85-yandex-r1.html");
+/* harmony import */ var _pages_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../pages/p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-86-yandex-r2.html");
+/* harmony import */ var _pages_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../pages/p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/rounds100/pages/p100/elem-97-yandex-f.html");
+/* harmony import */ var _pages_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../pages/elem-106-Round82.html */ "./src/components/cf/rounds/rounds100/pages/elem-106-Round82.html");
+/* harmony import */ var _pages_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../pages/elem-110-Round84.html */ "./src/components/cf/rounds/rounds100/pages/elem-110-Round84.html");
+/* harmony import */ var _pages_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../pages/elem-112-Round85.html */ "./src/components/cf/rounds/rounds100/pages/elem-112-Round85.html");
+/* harmony import */ var _pages_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../pages/elem-116-Round87.html */ "./src/components/cf/rounds/rounds100/pages/elem-116-Round87.html");
+/* harmony import */ var _pages_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../pages/elem-118-Round89.html */ "./src/components/cf/rounds/rounds100/pages/elem-118-Round89.html");
+/* harmony import */ var _pages_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./../pages/elem-120-kosSaratov.html */ "./src/components/cf/rounds/rounds100/pages/elem-120-kosSaratov.html");
+/* harmony import */ var _pages_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../pages/elem-134-TRound3.html */ "./src/components/cf/rounds/rounds100/pages/elem-134-TRound3.html");
+/* harmony import */ var _pages_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./../pages/elem-136-Round97.html */ "./src/components/cf/rounds/rounds100/pages/elem-136-Round97.html");
+/* harmony import */ var _pages_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./../pages/elem-141-Round101.html */ "./src/components/cf/rounds/rounds100/pages/elem-141-Round101.html");
+/* harmony import */ var _pages_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./../pages/elem-155-Round109.html */ "./src/components/cf/rounds/rounds100/pages/elem-155-Round109.html");
+/* harmony import */ var _pages_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./../pages/elem-158-vk-q1.html */ "./src/components/cf/rounds/rounds100/pages/elem-158-vk-q1.html");
+/* harmony import */ var _pages_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./../pages/elem-159-vk-q2.html */ "./src/components/cf/rounds/rounds100/pages/elem-159-vk-q2.html");
+/* harmony import */ var _pages_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./../pages/elem-163-vk-r2.html */ "./src/components/cf/rounds/rounds100/pages/elem-163-vk-r2.html");
+/* harmony import */ var _pages_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./../pages/elem-169-vk-r2.html */ "./src/components/cf/rounds/rounds100/pages/elem-169-vk-r2.html");
+/* harmony import */ var _pages_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./../pages/elem-200-Round126.html */ "./src/components/cf/rounds/rounds100/pages/elem-200-Round126.html");
+/* harmony import */ var _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./../pages/elem-228-Round141.html */ "./src/components/cf/rounds/rounds100/pages/elem-228-Round141.html");
+/* harmony import */ var _pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./../pages/elem-230-Round142.html */ "./src/components/cf/rounds/rounds100/pages/elem-230-Round142.html");
+/* harmony import */ var _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./../pages/elem-268-Round164.html */ "./src/components/cf/rounds/rounds100/pages/elem-268-Round164.html");
+/* harmony import */ var _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./../pages/elem-278-Round170.html */ "./src/components/cf/rounds/rounds100/pages/elem-278-Round170.html");
+/* harmony import */ var _pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./../pages/elem-313-Round186.html */ "./src/components/cf/rounds/rounds100/pages/elem-313-Round186.html");
+/* harmony import */ var _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./../pages/elem-318-Round188.html */ "./src/components/cf/rounds/rounds100/pages/elem-318-Round188.html");
+/* harmony import */ var _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./../pages/elem-339-Round197.html */ "./src/components/cf/rounds/rounds100/pages/elem-339-Round197.html");
+/* harmony import */ var _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./../pages/elem-381-Round223.html */ "./src/components/cf/rounds/rounds100/pages/elem-381-Round223.html");
+/* harmony import */ var _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./../pages/elem-427-Round244.html */ "./src/components/cf/rounds/rounds100/pages/elem-427-Round244.html");
+/* harmony import */ var _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./../pages/elem-467-Round267.html */ "./src/components/cf/rounds/rounds100/pages/elem-467-Round267.html");
+/* harmony import */ var _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../pages/elem-469-Round268.html */ "./src/components/cf/rounds/rounds100/pages/elem-469-Round268.html");
+/* harmony import */ var _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./../pages/elem-490-Round279.html */ "./src/components/cf/rounds/rounds100/pages/elem-490-Round279.html");
+/* harmony import */ var _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./../pages/elem-492-Round280.html */ "./src/components/cf/rounds/rounds100/pages/elem-492-Round280.html");
+/* harmony import */ var _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./../pages/elem-509-Round289.html */ "./src/components/cf/rounds/rounds100/pages/elem-509-Round289.html");
+/* harmony import */ var _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../pages/elem-520-Round295.html */ "./src/components/cf/rounds/rounds100/pages/elem-520-Round295.html");
+/* harmony import */ var _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../pages/elem-546-Round304.html */ "./src/components/cf/rounds/rounds100/pages/elem-546-Round304.html");
+/* harmony import */ var _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../pages/elem-580-Round321.html */ "./src/components/cf/rounds/rounds100/pages/elem-580-Round321.html");
+/* harmony import */ var _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../pages/elem-617-Round340.html */ "./src/components/cf/rounds/rounds100/pages/elem-617-Round340.html");
+/* harmony import */ var _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../pages/elem-646-Techno1z.html */ "./src/components/cf/rounds/rounds100/pages/elem-646-Techno1z.html");
+/* harmony import */ var _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../pages/elem-647-Techno2z.html */ "./src/components/cf/rounds/rounds100/pages/elem-647-Techno2z.html");
+/* harmony import */ var _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../pages/elem-648-Techno1o.html */ "./src/components/cf/rounds/rounds100/pages/elem-648-Techno1o.html");
+/* harmony import */ var _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../pages/elem-649-Techno2o.html */ "./src/components/cf/rounds/rounds100/pages/elem-649-Techno2o.html");
+/* harmony import */ var _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../pages/elem-705-Round366.html */ "./src/components/cf/rounds/rounds100/pages/elem-705-Round366.html");
+/* harmony import */ var _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../pages/elem-723-Round375.html */ "./src/components/cf/rounds/rounds100/pages/elem-723-Round375.html");
+/* harmony import */ var _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../pages/elem-727-Techno2017o1.html */ "./src/components/cf/rounds/rounds100/pages/elem-727-Techno2017o1.html");
+/* harmony import */ var _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../pages/elem-732-Round377.html */ "./src/components/cf/rounds/rounds100/pages/elem-732-Round377.html");
+/* harmony import */ var _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./../pages/elem-733-Round378.html */ "./src/components/cf/rounds/rounds100/pages/elem-733-Round378.html");
+/* harmony import */ var _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./../pages/elem-743-Round384.html */ "./src/components/cf/rounds/rounds100/pages/elem-743-Round384.html");
+/* harmony import */ var _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./../pages/elem-758-Round392.html */ "./src/components/cf/rounds/rounds100/pages/elem-758-Round392.html");
+/* harmony import */ var _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./../pages/elem-791-Round405.html */ "./src/components/cf/rounds/rounds100/pages/elem-791-Round405.html");
+/* harmony import */ var _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./../pages/elem-895-Round448.html */ "./src/components/cf/rounds/rounds100/pages/elem-895-Round448.html");
+/* harmony import */ var _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./../pages/elem-1030-Techno2019o1.html */ "./src/components/cf/rounds/rounds100/pages/elem-1030-Techno2019o1.html");
+/* harmony import */ var _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./../pages/elem-1041-Round509.html */ "./src/components/cf/rounds/rounds100/pages/elem-1041-Round509.html");
+/* harmony import */ var _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./../pages/elem-1272-Round605.html */ "./src/components/cf/rounds/rounds100/pages/elem-1272-Round605.html");
+/* harmony import */ var _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./../pages/elem-1296-Round617.html */ "./src/components/cf/rounds/rounds100/pages/elem-1296-Round617.html");
+/* harmony import */ var _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./../pages/elem-1313-Round622.html */ "./src/components/cf/rounds/rounds100/pages/elem-1313-Round622.html");
+/* harmony import */ var _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./../pages/elem-1325-Round628.html */ "./src/components/cf/rounds/rounds100/pages/elem-1325-Round628.html");
+/* harmony import */ var _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./../pages/elem-1351-TRound16.html */ "./src/components/cf/rounds/rounds100/pages/elem-1351-TRound16.html");
+/* harmony import */ var _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./../pages/elem-1352-Round640.html */ "./src/components/cf/rounds/rounds100/pages/elem-1352-Round640.html");
+/* harmony import */ var _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./../pages/elem-1360-Round644.html */ "./src/components/cf/rounds/rounds100/pages/elem-1360-Round644.html");
+/* harmony import */ var _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./../pages/elem-1367-Round650.html */ "./src/components/cf/rounds/rounds100/pages/elem-1367-Round650.html");
+/* harmony import */ var _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./../pages/elem-1420-Round672.html */ "./src/components/cf/rounds/rounds100/pages/elem-1420-Round672.html");
+/* harmony import */ var _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./../pages/elem-1490-Round702.html */ "./src/components/cf/rounds/rounds100/pages/elem-1490-Round702.html");
+/* harmony import */ var _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./../pages/elem-1512-Round713.html */ "./src/components/cf/rounds/rounds100/pages/elem-1512-Round713.html");
+/* harmony import */ var _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./../pages/elem-1520-Round719.html */ "./src/components/cf/rounds/rounds100/pages/elem-1520-Round719.html");
+/* harmony import */ var _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./../pages/elem-1634-Round770.html */ "./src/components/cf/rounds/rounds100/pages/elem-1634-Round770.html");
+/* harmony import */ var _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./../pages/elem-1669-Round784.html */ "./src/components/cf/rounds/rounds100/pages/elem-1669-Round784.html");
+/* harmony import */ var _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./../pages/elem-1676-Round790.html */ "./src/components/cf/rounds/rounds100/pages/elem-1676-Round790.html");
+/* harmony import */ var _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./../pages/elem-1692-Round799.html */ "./src/components/cf/rounds/rounds100/pages/elem-1692-Round799.html");
+/* harmony import */ var _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./../pages/elem-1703-Round806.html */ "./src/components/cf/rounds/rounds100/pages/elem-1703-Round806.html");
+/* harmony import */ var _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./../pages/elem-1722-Round817.html */ "./src/components/cf/rounds/rounds100/pages/elem-1722-Round817.html");
+/* harmony import */ var _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./../pages/elem-1725-compfest.html */ "./src/components/cf/rounds/rounds100/pages/elem-1725-compfest.html");
+/* harmony import */ var _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./../pages/elem-1726-Round819.html */ "./src/components/cf/rounds/rounds100/pages/elem-1726-Round819.html");
+/* harmony import */ var _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./../pages/elem-1728-EdRound135.html */ "./src/components/cf/rounds/rounds100/pages/elem-1728-EdRound135.html");
+/* harmony import */ var _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./../pages/elem-1729-Round820.html */ "./src/components/cf/rounds/rounds100/pages/elem-1729-Round820.html");
+/* harmony import */ var _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./../pages/elem-1730-Round823.html */ "./src/components/cf/rounds/rounds100/pages/elem-1730-Round823.html");
+/* harmony import */ var _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./../pages/elem-1733-Round821.html */ "./src/components/cf/rounds/rounds100/pages/elem-1733-Round821.html");
+/* harmony import */ var _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./../pages/elem-1734-Round822.html */ "./src/components/cf/rounds/rounds100/pages/elem-1734-Round822.html");
+/* harmony import */ var _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./../pages/elem-1738-GlRound22.html */ "./src/components/cf/rounds/rounds100/pages/elem-1738-GlRound22.html");
+/* harmony import */ var _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./../pages/elem-1739-EdRound136.html */ "./src/components/cf/rounds/rounds100/pages/elem-1739-EdRound136.html");
+/* harmony import */ var _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./../pages/elem-1740-Round831.html */ "./src/components/cf/rounds/rounds100/pages/elem-1740-Round831.html");
+/* harmony import */ var _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./../pages/elem-1741-Round826.html */ "./src/components/cf/rounds/rounds100/pages/elem-1741-Round826.html");
+/* harmony import */ var _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./../pages/elem-1742-Round827.html */ "./src/components/cf/rounds/rounds100/pages/elem-1742-Round827.html");
+/* harmony import */ var _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./../pages/elem-1760-Round835.html */ "./src/components/cf/rounds/rounds100/pages/elem-1760-Round835.html");
+/* harmony import */ var _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./../pages/elem-1789-Round853.html */ "./src/components/cf/rounds/rounds100/pages/elem-1789-Round853.html");
+/* harmony import */ var _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./../pages/elem-1791-Round849.html */ "./src/components/cf/rounds/rounds100/pages/elem-1791-Round849.html");
+/* harmony import */ var _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./../pages/elem-1798-Round860.html */ "./src/components/cf/rounds/rounds100/pages/elem-1798-Round860.html");
+/* harmony import */ var _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./../pages/elem-1807-Round859.html */ "./src/components/cf/rounds/rounds100/pages/elem-1807-Round859.html");
+/* harmony import */ var _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./../pages/elem-1824-Round872.html */ "./src/components/cf/rounds/rounds100/pages/elem-1824-Round872.html");
+/* harmony import */ var _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./../pages/elem-1825-Round872.html */ "./src/components/cf/rounds/rounds100/pages/elem-1825-Round872.html");
+/* harmony import */ var _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./../pages/elem-1829-Round871.html */ "./src/components/cf/rounds/rounds100/pages/elem-1829-Round871.html");
+/* harmony import */ var _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./../pages/elem-1850-Round886.html */ "./src/components/cf/rounds/rounds100/pages/elem-1850-Round886.html");
+/* harmony import */ var _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./../pages/elem-1873-Round898.html */ "./src/components/cf/rounds/rounds100/pages/elem-1873-Round898.html");
+/* harmony import */ var _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./../pages/elem-1915-Round918.html */ "./src/components/cf/rounds/rounds100/pages/elem-1915-Round918.html");
+/* harmony import */ var _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./../pages/elem-1926-Round928.html */ "./src/components/cf/rounds/rounds100/pages/elem-1926-Round928.html");
+/* harmony import */ var _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./../pages/elem-1950-Round937.html */ "./src/components/cf/rounds/rounds100/pages/elem-1950-Round937.html");
+/* harmony import */ var _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./../pages/elem-1971-Round944.html */ "./src/components/cf/rounds/rounds100/pages/elem-1971-Round944.html");
+/* harmony import */ var _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ./../pages/elem-1985-Round952.html */ "./src/components/cf/rounds/rounds100/pages/elem-1985-Round952.html");
+/* harmony import */ var _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ./../pages/elem-1999-Round964.html */ "./src/components/cf/rounds/rounds100/pages/elem-1999-Round964.html");
+/* harmony import */ var _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ./../pages/elem-2009-Round971.html */ "./src/components/cf/rounds/rounds100/pages/elem-2009-Round971.html");
+/* harmony import */ var _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./../pages/elem-2037-Round988.html */ "./src/components/cf/rounds/rounds100/pages/elem-2037-Round988.html");
+/* harmony import */ var _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./../pages/elem-2044-Round993.html */ "./src/components/cf/rounds/rounds100/pages/elem-2044-Round993.html");
+/* harmony import */ var _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./../pages/elem-2050-Round991.html */ "./src/components/cf/rounds/rounds100/pages/elem-2050-Round991.html");
+/* harmony import */ var _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./../pages/elem-2051-Round995.html */ "./src/components/cf/rounds/rounds100/pages/elem-2051-Round995.html");
+/* harmony import */ var _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./../pages/elem-2060-Round998.html */ "./src/components/cf/rounds/rounds100/pages/elem-2060-Round998.html");
+/* harmony import */ var _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./../pages/elem-2065-Round1003.html */ "./src/components/cf/rounds/rounds100/pages/elem-2065-Round1003.html");
+/* harmony import */ var _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./../pages/elem-2072-Round1006.html */ "./src/components/cf/rounds/rounds100/pages/elem-2072-Round1006.html");
+/* harmony import */ var _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./../pages/elem-2091-Round1013.html */ "./src/components/cf/rounds/rounds100/pages/elem-2091-Round1013.html");
+/* harmony import */ var _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./../pages/elem-2093-Round1016.html */ "./src/components/cf/rounds/rounds100/pages/elem-2093-Round1016.html");
+/* harmony import */ var _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./../pages/elem-2094-Round1017.html */ "./src/components/cf/rounds/rounds100/pages/elem-2094-Round1017.html");
+/* harmony import */ var _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./../pages/elem-2106-Round1020.html */ "./src/components/cf/rounds/rounds100/pages/elem-2106-Round1020.html");
+/* harmony import */ var _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./../pages/elem-2114-Round1027.html */ "./src/components/cf/rounds/rounds100/pages/elem-2114-Round1027.html");
+/* harmony import */ var _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./../pages/elem-2117-Round1029.html */ "./src/components/cf/rounds/rounds100/pages/elem-2117-Round1029.html");
+/* harmony import */ var _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./../pages/elem-2119-Round1035.html */ "./src/components/cf/rounds/rounds100/pages/elem-2119-Round1035.html");
+/* harmony import */ var _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./../pages/elem-2121-Round1032.html */ "./src/components/cf/rounds/rounds100/pages/elem-2121-Round1032.html");
+/* harmony import */ var _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./../pages/elem-2123-Round1034.html */ "./src/components/cf/rounds/rounds100/pages/elem-2123-Round1034.html");
+/* harmony import */ var _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./../pages/elem-2126-Round1037.html */ "./src/components/cf/rounds/rounds100/pages/elem-2126-Round1037.html");
+/* harmony import */ var _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./../pages/elem-2131-Round1042.html */ "./src/components/cf/rounds/rounds100/pages/elem-2131-Round1042.html");
+/* harmony import */ var _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./../pages/elem-2132-Round1043.html */ "./src/components/cf/rounds/rounds100/pages/elem-2132-Round1043.html");
+/* harmony import */ var _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./../pages/elem-2133-Round1044.html */ "./src/components/cf/rounds/rounds100/pages/elem-2133-Round1044.html");
+/* harmony import */ var _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./../pages/elem-2134-Round1045.html */ "./src/components/cf/rounds/rounds100/pages/elem-2134-Round1045.html");
+/* harmony import */ var _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./../pages/elem-2136-Round1046.html */ "./src/components/cf/rounds/rounds100/pages/elem-2136-Round1046.html");
+/* harmony import */ var _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./../pages/elem-2137-Round1047.html */ "./src/components/cf/rounds/rounds100/pages/elem-2137-Round1047.html");
+/* harmony import */ var _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./../pages/elem-2148-Round1050.html */ "./src/components/cf/rounds/rounds100/pages/elem-2148-Round1050.html");
+/* harmony import */ var _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./../pages/elem-2149-Round1054.html */ "./src/components/cf/rounds/rounds100/pages/elem-2149-Round1054.html");
+/* harmony import */ var _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./../pages/elem-2152-Round1055.html */ "./src/components/cf/rounds/rounds100/pages/elem-2152-Round1055.html");
+/* harmony import */ var _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./../pages/elem-2162-Round1059.html */ "./src/components/cf/rounds/rounds100/pages/elem-2162-Round1059.html");
+/* harmony import */ var _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./../pages/elem-2166-Round1064.html */ "./src/components/cf/rounds/rounds100/pages/elem-2166-Round1064.html");
+/* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_161__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/rounds100/pages/elem-2167-Round1062.html");
+/* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_162__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/rounds100/pages/elem-2171-Round1065.html");
+/* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_163__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/rounds100/pages/elem-2185-Round1074.html");
+/* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_164__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/rounds100/pages/elem-2193-Round1076.html");
+/* harmony import */ var _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_165__ = __webpack_require__(/*! ./../pages/elem-2209-Round1087.html */ "./src/components/cf/rounds/rounds100/pages/elem-2209-Round1087.html");
+/* harmony import */ var _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_166__ = __webpack_require__(/*! ./../pages/elem-2218-Round1090.html */ "./src/components/cf/rounds/rounds100/pages/elem-2218-Round1090.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -1946,13 +2054,13 @@ const pages = [[_pages_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["def
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/js/element-rounds.js":
-/*!*******************************************************!*\
-  !*** ./src/components/cf/rounds/js/element-rounds.js ***!
-  \*******************************************************/
+/***/ "./src/components/cf/rounds/rounds100/js/element-rounds100.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/js/element-rounds100.js ***!
+  \********************************************************************/
 /***/ (function() {
 
-class CfRounds extends HTMLElement {
+class Rounds100 extends HTMLElement {
   constructor() {
     super();
   }
@@ -1961,17 +2069,17 @@ class CfRounds extends HTMLElement {
     <section class="main__aside">
     </section>
     `;
-    this.className = 'cf-rounds';
+    this.className = 'rounds-100';
   }
 }
-customElements.define('cf-rounds', CfRounds);
+customElements.define('rounds-100', Rounds100);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/js/f-create-aside.js":
-/*!*******************************************************!*\
-  !*** ./src/components/cf/rounds/js/f-create-aside.js ***!
-  \*******************************************************/
+/***/ "./src/components/cf/rounds/rounds100/js/f-create-aside.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/js/f-create-aside.js ***!
+  \*****************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1980,8 +2088,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   createAside: function() { return /* binding */ createAside; },
 /* harmony export */   createMain: function() { return /* binding */ createMain; }
 /* harmony export */ });
-/* harmony import */ var _data_aside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-aside */ "./src/components/cf/rounds/js/data-aside.js");
-/* harmony import */ var _pages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages */ "./src/components/cf/rounds/js/pages.js");
+/* harmony import */ var _data_aside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-aside */ "./src/components/cf/rounds/rounds100/js/data-aside.js");
+/* harmony import */ var _pages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages */ "./src/components/cf/rounds/rounds100/js/pages.js");
 /** ***************
 Функция createInput создает inputArray
 **************** */
@@ -2024,7 +2132,7 @@ aside.classList.add('aside');
 aside.append(...asideDiv);
 const main = document.createElement('main');
 main.classList.add('main');
-main.id = 'rounds'; // эта строчка отличается
+main.id = 'rounds-100'; // эта строчка отличается
 
 (0,_pages__WEBPACK_IMPORTED_MODULE_1__["default"])(asideDiv, main);
 function createAside() {
@@ -2036,10 +2144,10 @@ function createMain() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/js/pages.js":
-/*!**********************************************!*\
-  !*** ./src/components/cf/rounds/js/pages.js ***!
-  \**********************************************/
+/***/ "./src/components/cf/rounds/rounds100/js/pages.js":
+/*!********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/js/pages.js ***!
+  \********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2047,40 +2155,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ pageLink; }
 /* harmony export */ });
-/* harmony import */ var _data_pages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-pages */ "./src/components/cf/rounds/js/data-pages.js");
-/* harmony import */ var _pages_p100_elem_1_Round1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/p100/elem-1-Round1 */ "./src/components/cf/rounds/pages/p100/elem-1-Round1.js");
-/* harmony import */ var _pages_p100_elem_2_Round2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/p100/elem-2-Round2 */ "./src/components/cf/rounds/pages/p100/elem-2-Round2.js");
-/* harmony import */ var _pages_p100_elem_3_Round3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/p100/elem-3-Round3 */ "./src/components/cf/rounds/pages/p100/elem-3-Round3.js");
-/* harmony import */ var _pages_p100_elem_4_Round4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/p100/elem-4-Round4 */ "./src/components/cf/rounds/pages/p100/elem-4-Round4.js");
-/* harmony import */ var _pages_p100_elem_5_Round5__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/p100/elem-5-Round5 */ "./src/components/cf/rounds/pages/p100/elem-5-Round5.js");
-/* harmony import */ var _pages_p100_elem_6_Round6__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/p100/elem-6-Round6 */ "./src/components/cf/rounds/pages/p100/elem-6-Round6.js");
-/* harmony import */ var _pages_p100_elem_7_Round7__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/p100/elem-7-Round7 */ "./src/components/cf/rounds/pages/p100/elem-7-Round7.js");
-/* harmony import */ var _pages_p100_elem_8_Round8__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/p100/elem-8-Round8 */ "./src/components/cf/rounds/pages/p100/elem-8-Round8.js");
-/* harmony import */ var _pages_p100_elem_9_Round9__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/p100/elem-9-Round9 */ "./src/components/cf/rounds/pages/p100/elem-9-Round9.js");
-/* harmony import */ var _pages_p100_elem_10_Round10__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/p100/elem-10-Round10 */ "./src/components/cf/rounds/pages/p100/elem-10-Round10.js");
-/* harmony import */ var _pages_p100_elem_11_Round11__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/p100/elem-11-Round11 */ "./src/components/cf/rounds/pages/p100/elem-11-Round11.js");
-/* harmony import */ var _pages_p100_elem_12_Round12__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/p100/elem-12-Round12 */ "./src/components/cf/rounds/pages/p100/elem-12-Round12.js");
-/* harmony import */ var _pages_p100_elem_13_Round13__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/p100/elem-13-Round13 */ "./src/components/cf/rounds/pages/p100/elem-13-Round13.js");
-/* harmony import */ var _pages_p100_elem_14_Round14__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/p100/elem-14-Round14 */ "./src/components/cf/rounds/pages/p100/elem-14-Round14.js");
-/* harmony import */ var _pages_p100_elem_15_Round15__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/p100/elem-15-Round15 */ "./src/components/cf/rounds/pages/p100/elem-15-Round15.js");
-/* harmony import */ var _pages_p100_elem_16_Round16__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/p100/elem-16-Round16 */ "./src/components/cf/rounds/pages/p100/elem-16-Round16.js");
-/* harmony import */ var _pages_p100_elem_17_Round17__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/p100/elem-17-Round17 */ "./src/components/cf/rounds/pages/p100/elem-17-Round17.js");
-/* harmony import */ var _pages_p100_elem_18_Round18__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/p100/elem-18-Round18 */ "./src/components/cf/rounds/pages/p100/elem-18-Round18.js");
-/* harmony import */ var _pages_p100_elem_19_Round19__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/p100/elem-19-Round19 */ "./src/components/cf/rounds/pages/p100/elem-19-Round19.js");
-/* harmony import */ var _pages_p100_elem_20_Round20__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/p100/elem-20-Round20 */ "./src/components/cf/rounds/pages/p100/elem-20-Round20.js");
-/* harmony import */ var _pages_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/p100/elem-34-Round34 */ "./src/components/cf/rounds/pages/p100/elem-34-Round34.js");
-/* harmony import */ var _pages_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/p100/elem-38-sio1 */ "./src/components/cf/rounds/pages/p100/elem-38-sio1.js");
-/* harmony import */ var _pages_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/p100/elem-39-sko1 */ "./src/components/cf/rounds/pages/p100/elem-39-sko1.js");
-/* harmony import */ var _pages_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/p100/elem-44-sko2 */ "./src/components/cf/rounds/pages/p100/elem-44-sko2.js");
-/* harmony import */ var _pages_p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/p100/elem-45-sko3 */ "./src/components/cf/rounds/pages/p100/elem-45-sko3.js");
-/* harmony import */ var _pages_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pages/elem-134-TRound3 */ "./src/components/cf/rounds/pages/elem-134-TRound3.js");
-/* harmony import */ var _pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../pages/elem-230-Round142 */ "./src/components/cf/rounds/pages/elem-230-Round142.js");
-/* harmony import */ var _pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../pages/elem-313-Round186 */ "./src/components/cf/rounds/pages/elem-313-Round186.js");
-/* harmony import */ var _pages_elem_381_Round223__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../pages/elem-381-Round223 */ "./src/components/cf/rounds/pages/elem-381-Round223.js");
-/* harmony import */ var _pages_elem_520_Round295__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../pages/elem-520-Round295 */ "./src/components/cf/rounds/pages/elem-520-Round295.js");
-/* harmony import */ var _pages_elem_580_Round321__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../pages/elem-580-Round321 */ "./src/components/cf/rounds/pages/elem-580-Round321.js");
-/* harmony import */ var _pages_elem_1030_Techno2019o1__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../pages/elem-1030-Techno2019o1 */ "./src/components/cf/rounds/pages/elem-1030-Techno2019o1.js");
-/* harmony import */ var _pages_elem_1352_Round640__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../pages/elem-1352-Round640 */ "./src/components/cf/rounds/pages/elem-1352-Round640.js");
+/* harmony import */ var _data_pages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-pages */ "./src/components/cf/rounds/rounds100/js/data-pages.js");
+/* harmony import */ var _pages_p100_elem_1_Round1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/p100/elem-1-Round1 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-1-Round1.js");
+/* harmony import */ var _pages_p100_elem_2_Round2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/p100/elem-2-Round2 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-2-Round2.js");
+/* harmony import */ var _pages_p100_elem_3_Round3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/p100/elem-3-Round3 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-3-Round3.js");
+/* harmony import */ var _pages_p100_elem_4_Round4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/p100/elem-4-Round4 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-4-Round4.js");
+/* harmony import */ var _pages_p100_elem_5_Round5__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/p100/elem-5-Round5 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-5-Round5.js");
+/* harmony import */ var _pages_p100_elem_6_Round6__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/p100/elem-6-Round6 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-6-Round6.js");
+/* harmony import */ var _pages_p100_elem_7_Round7__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/p100/elem-7-Round7 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-7-Round7.js");
+/* harmony import */ var _pages_p100_elem_8_Round8__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/p100/elem-8-Round8 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-8-Round8.js");
+/* harmony import */ var _pages_p100_elem_9_Round9__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/p100/elem-9-Round9 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-9-Round9.js");
+/* harmony import */ var _pages_p100_elem_10_Round10__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/p100/elem-10-Round10 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-10-Round10.js");
+/* harmony import */ var _pages_p100_elem_11_Round11__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/p100/elem-11-Round11 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-11-Round11.js");
+/* harmony import */ var _pages_p100_elem_12_Round12__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/p100/elem-12-Round12 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-12-Round12.js");
+/* harmony import */ var _pages_p100_elem_13_Round13__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/p100/elem-13-Round13 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-13-Round13.js");
+/* harmony import */ var _pages_p100_elem_14_Round14__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/p100/elem-14-Round14 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-14-Round14.js");
+/* harmony import */ var _pages_p100_elem_15_Round15__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/p100/elem-15-Round15 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-15-Round15.js");
+/* harmony import */ var _pages_p100_elem_16_Round16__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/p100/elem-16-Round16 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-16-Round16.js");
+/* harmony import */ var _pages_p100_elem_17_Round17__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/p100/elem-17-Round17 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-17-Round17.js");
+/* harmony import */ var _pages_p100_elem_18_Round18__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/p100/elem-18-Round18 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-18-Round18.js");
+/* harmony import */ var _pages_p100_elem_19_Round19__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/p100/elem-19-Round19 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-19-Round19.js");
+/* harmony import */ var _pages_p100_elem_20_Round20__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/p100/elem-20-Round20 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-20-Round20.js");
+/* harmony import */ var _pages_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/p100/elem-34-Round34 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-34-Round34.js");
+/* harmony import */ var _pages_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/p100/elem-38-sio1 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-38-sio1.js");
+/* harmony import */ var _pages_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/p100/elem-39-sko1 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-39-sko1.js");
+/* harmony import */ var _pages_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/p100/elem-44-sko2 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-44-sko2.js");
+/* harmony import */ var _pages_p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/p100/elem-45-sko3 */ "./src/components/cf/rounds/rounds100/pages/p100/elem-45-sko3.js");
+/* harmony import */ var _pages_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pages/elem-134-TRound3 */ "./src/components/cf/rounds/rounds100/pages/elem-134-TRound3.js");
+/* harmony import */ var _pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../pages/elem-230-Round142 */ "./src/components/cf/rounds/rounds100/pages/elem-230-Round142.js");
+/* harmony import */ var _pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../pages/elem-313-Round186 */ "./src/components/cf/rounds/rounds100/pages/elem-313-Round186.js");
+/* harmony import */ var _pages_elem_381_Round223__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../pages/elem-381-Round223 */ "./src/components/cf/rounds/rounds100/pages/elem-381-Round223.js");
+/* harmony import */ var _pages_elem_520_Round295__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../pages/elem-520-Round295 */ "./src/components/cf/rounds/rounds100/pages/elem-520-Round295.js");
+/* harmony import */ var _pages_elem_580_Round321__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../pages/elem-580-Round321 */ "./src/components/cf/rounds/rounds100/pages/elem-580-Round321.js");
+/* harmony import */ var _pages_elem_1030_Techno2019o1__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../pages/elem-1030-Techno2019o1 */ "./src/components/cf/rounds/rounds100/pages/elem-1030-Techno2019o1.js");
+/* harmony import */ var _pages_elem_1352_Round640__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../pages/elem-1352-Round640 */ "./src/components/cf/rounds/rounds100/pages/elem-1352-Round640.js");
 /************************
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
@@ -2244,10 +2352,10 @@ function pageLink(asideItems, currentContent) {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1030-Techno2019o1.js":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1030-Techno2019o1.js ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1030-Techno2019o1.js":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1030-Techno2019o1.js ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2255,13 +2363,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z1030a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1030a.html */ "./src/components/cf/rounds/z/z1030a.html");
-/* harmony import */ var _z_z1030b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1030b.html */ "./src/components/cf/rounds/z/z1030b.html");
-/* harmony import */ var _z_z1030c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1030c.html */ "./src/components/cf/rounds/z/z1030c.html");
-/* harmony import */ var _z_z1030d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1030d.html */ "./src/components/cf/rounds/z/z1030d.html");
-/* harmony import */ var _z_z1030e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1030e.html */ "./src/components/cf/rounds/z/z1030e.html");
-/* harmony import */ var _z_z1030f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1030f.html */ "./src/components/cf/rounds/z/z1030f.html");
-/* harmony import */ var _z_z1030g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1030g.html */ "./src/components/cf/rounds/z/z1030g.html");
+/* harmony import */ var _z_z1030a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1030a.html */ "./src/components/cf/rounds/rounds100/z/z1030a.html");
+/* harmony import */ var _z_z1030b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1030b.html */ "./src/components/cf/rounds/rounds100/z/z1030b.html");
+/* harmony import */ var _z_z1030c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1030c.html */ "./src/components/cf/rounds/rounds100/z/z1030c.html");
+/* harmony import */ var _z_z1030d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1030d.html */ "./src/components/cf/rounds/rounds100/z/z1030d.html");
+/* harmony import */ var _z_z1030e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1030e.html */ "./src/components/cf/rounds/rounds100/z/z1030e.html");
+/* harmony import */ var _z_z1030f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1030f.html */ "./src/components/cf/rounds/rounds100/z/z1030f.html");
+/* harmony import */ var _z_z1030g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1030g.html */ "./src/components/cf/rounds/rounds100/z/z1030g.html");
 
 
 
@@ -2295,10 +2403,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-134-TRound3.js":
-/*!************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-134-TRound3.js ***!
-  \************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-134-TRound3.js":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-134-TRound3.js ***!
+  \**********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2306,9 +2414,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z134a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z134a.html */ "./src/components/cf/rounds/z/z134a.html");
-/* harmony import */ var _z_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z134b.html */ "./src/components/cf/rounds/z/z134b.html");
-/* harmony import */ var _z_z134c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z134c.html */ "./src/components/cf/rounds/z/z134c.html");
+/* harmony import */ var _z_z134a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z134a.html */ "./src/components/cf/rounds/rounds100/z/z134a.html");
+/* harmony import */ var _z_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z134b.html */ "./src/components/cf/rounds/rounds100/z/z134b.html");
+/* harmony import */ var _z_z134c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z134c.html */ "./src/components/cf/rounds/rounds100/z/z134c.html");
 
 
 
@@ -2326,10 +2434,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1352-Round640.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1352-Round640.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1352-Round640.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1352-Round640.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2337,13 +2445,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z1352a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1352a.html */ "./src/components/cf/rounds/z/z1352a.html");
-/* harmony import */ var _z_z1352b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1352b.html */ "./src/components/cf/rounds/z/z1352b.html");
-/* harmony import */ var _z_z1352c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1352c.html */ "./src/components/cf/rounds/z/z1352c.html");
-/* harmony import */ var _z_z1352d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1352d.html */ "./src/components/cf/rounds/z/z1352d.html");
-/* harmony import */ var _z_z1352e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1352e.html */ "./src/components/cf/rounds/z/z1352e.html");
-/* harmony import */ var _z_z1352f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1352f.html */ "./src/components/cf/rounds/z/z1352f.html");
-/* harmony import */ var _z_z1352g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1352g.html */ "./src/components/cf/rounds/z/z1352g.html");
+/* harmony import */ var _z_z1352a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1352a.html */ "./src/components/cf/rounds/rounds100/z/z1352a.html");
+/* harmony import */ var _z_z1352b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1352b.html */ "./src/components/cf/rounds/rounds100/z/z1352b.html");
+/* harmony import */ var _z_z1352c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1352c.html */ "./src/components/cf/rounds/rounds100/z/z1352c.html");
+/* harmony import */ var _z_z1352d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1352d.html */ "./src/components/cf/rounds/rounds100/z/z1352d.html");
+/* harmony import */ var _z_z1352e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1352e.html */ "./src/components/cf/rounds/rounds100/z/z1352e.html");
+/* harmony import */ var _z_z1352f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1352f.html */ "./src/components/cf/rounds/rounds100/z/z1352f.html");
+/* harmony import */ var _z_z1352g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1352g.html */ "./src/components/cf/rounds/rounds100/z/z1352g.html");
 
 
 
@@ -2377,10 +2485,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-230-Round142.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-230-Round142.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-230-Round142.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-230-Round142.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2388,11 +2496,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z230a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z230a.html */ "./src/components/cf/rounds/z/z230a.html");
-/* harmony import */ var _z_z230b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z230b.html */ "./src/components/cf/rounds/z/z230b.html");
-/* harmony import */ var _z_z230c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z230c.html */ "./src/components/cf/rounds/z/z230c.html");
-/* harmony import */ var _z_z230d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z230d.html */ "./src/components/cf/rounds/z/z230d.html");
-/* harmony import */ var _z_z230e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z230e.html */ "./src/components/cf/rounds/z/z230e.html");
+/* harmony import */ var _z_z230a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z230a.html */ "./src/components/cf/rounds/rounds100/z/z230a.html");
+/* harmony import */ var _z_z230b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z230b.html */ "./src/components/cf/rounds/rounds100/z/z230b.html");
+/* harmony import */ var _z_z230c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z230c.html */ "./src/components/cf/rounds/rounds100/z/z230c.html");
+/* harmony import */ var _z_z230d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z230d.html */ "./src/components/cf/rounds/rounds100/z/z230d.html");
+/* harmony import */ var _z_z230e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z230e.html */ "./src/components/cf/rounds/rounds100/z/z230e.html");
 
 
 
@@ -2418,10 +2526,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-313-Round186.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-313-Round186.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-313-Round186.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-313-Round186.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2429,11 +2537,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z313a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z313a.html */ "./src/components/cf/rounds/z/z313a.html");
-/* harmony import */ var _z_z313b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z313b.html */ "./src/components/cf/rounds/z/z313b.html");
-/* harmony import */ var _z_z313c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z313c.html */ "./src/components/cf/rounds/z/z313c.html");
-/* harmony import */ var _z_z313d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z313d.html */ "./src/components/cf/rounds/z/z313d.html");
-/* harmony import */ var _z_z313e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z313e.html */ "./src/components/cf/rounds/z/z313e.html");
+/* harmony import */ var _z_z313a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z313a.html */ "./src/components/cf/rounds/rounds100/z/z313a.html");
+/* harmony import */ var _z_z313b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z313b.html */ "./src/components/cf/rounds/rounds100/z/z313b.html");
+/* harmony import */ var _z_z313c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z313c.html */ "./src/components/cf/rounds/rounds100/z/z313c.html");
+/* harmony import */ var _z_z313d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z313d.html */ "./src/components/cf/rounds/rounds100/z/z313d.html");
+/* harmony import */ var _z_z313e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z313e.html */ "./src/components/cf/rounds/rounds100/z/z313e.html");
 
 
 
@@ -2459,10 +2567,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-381-Round223.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-381-Round223.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-381-Round223.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-381-Round223.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2470,11 +2578,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z381a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z381a.html */ "./src/components/cf/rounds/z/z381a.html");
-/* harmony import */ var _z_z381b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z381b.html */ "./src/components/cf/rounds/z/z381b.html");
-/* harmony import */ var _z_z381c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z381c.html */ "./src/components/cf/rounds/z/z381c.html");
-/* harmony import */ var _z_z381d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z381d.html */ "./src/components/cf/rounds/z/z381d.html");
-/* harmony import */ var _z_z381e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z381e.html */ "./src/components/cf/rounds/z/z381e.html");
+/* harmony import */ var _z_z381a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z381a.html */ "./src/components/cf/rounds/rounds100/z/z381a.html");
+/* harmony import */ var _z_z381b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z381b.html */ "./src/components/cf/rounds/rounds100/z/z381b.html");
+/* harmony import */ var _z_z381c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z381c.html */ "./src/components/cf/rounds/rounds100/z/z381c.html");
+/* harmony import */ var _z_z381d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z381d.html */ "./src/components/cf/rounds/rounds100/z/z381d.html");
+/* harmony import */ var _z_z381e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z381e.html */ "./src/components/cf/rounds/rounds100/z/z381e.html");
 
 
 
@@ -2500,10 +2608,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-520-Round295.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-520-Round295.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-520-Round295.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-520-Round295.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2511,11 +2619,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z520a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z520a.html */ "./src/components/cf/rounds/z/z520a.html");
-/* harmony import */ var _z_z520b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z520b.html */ "./src/components/cf/rounds/z/z520b.html");
-/* harmony import */ var _z_z520c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z520c.html */ "./src/components/cf/rounds/z/z520c.html");
-/* harmony import */ var _z_z520d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z520d.html */ "./src/components/cf/rounds/z/z520d.html");
-/* harmony import */ var _z_z520e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z520e.html */ "./src/components/cf/rounds/z/z520e.html");
+/* harmony import */ var _z_z520a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z520a.html */ "./src/components/cf/rounds/rounds100/z/z520a.html");
+/* harmony import */ var _z_z520b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z520b.html */ "./src/components/cf/rounds/rounds100/z/z520b.html");
+/* harmony import */ var _z_z520c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z520c.html */ "./src/components/cf/rounds/rounds100/z/z520c.html");
+/* harmony import */ var _z_z520d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z520d.html */ "./src/components/cf/rounds/rounds100/z/z520d.html");
+/* harmony import */ var _z_z520e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z520e.html */ "./src/components/cf/rounds/rounds100/z/z520e.html");
 
 
 
@@ -2541,10 +2649,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-580-Round321.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-580-Round321.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-580-Round321.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-580-Round321.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2552,11 +2660,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z580a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z580a.html */ "./src/components/cf/rounds/z/z580a.html");
-/* harmony import */ var _z_z580b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z580b.html */ "./src/components/cf/rounds/z/z580b.html");
-/* harmony import */ var _z_z580c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z580c.html */ "./src/components/cf/rounds/z/z580c.html");
-/* harmony import */ var _z_z580d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z580d.html */ "./src/components/cf/rounds/z/z580d.html");
-/* harmony import */ var _z_z580e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z580e.html */ "./src/components/cf/rounds/z/z580e.html");
+/* harmony import */ var _z_z580a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z580a.html */ "./src/components/cf/rounds/rounds100/z/z580a.html");
+/* harmony import */ var _z_z580b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z580b.html */ "./src/components/cf/rounds/rounds100/z/z580b.html");
+/* harmony import */ var _z_z580c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z580c.html */ "./src/components/cf/rounds/rounds100/z/z580c.html");
+/* harmony import */ var _z_z580d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z580d.html */ "./src/components/cf/rounds/rounds100/z/z580d.html");
+/* harmony import */ var _z_z580e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z580e.html */ "./src/components/cf/rounds/rounds100/z/z580e.html");
 
 
 
@@ -2582,10 +2690,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-1-Round1.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-1-Round1.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-1-Round1.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-1-Round1.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2593,9 +2701,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z1a.html */ "./src/components/cf/rounds/z/z100/z1a.html");
-/* harmony import */ var _z_z100_z1b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z1b.html */ "./src/components/cf/rounds/z/z100/z1b.html");
-/* harmony import */ var _z_z100_z1c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z1c.html */ "./src/components/cf/rounds/z/z100/z1c.html");
+/* harmony import */ var _z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z1a.html */ "./src/components/cf/rounds/rounds100/z/z100/z1a.html");
+/* harmony import */ var _z_z100_z1b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z1b.html */ "./src/components/cf/rounds/rounds100/z/z100/z1b.html");
+/* harmony import */ var _z_z100_z1c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z1c.html */ "./src/components/cf/rounds/rounds100/z/z100/z1c.html");
 
 
 
@@ -2613,10 +2721,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-10-Round10.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-10-Round10.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-10-Round10.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-10-Round10.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2624,11 +2732,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z10a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z10a.html */ "./src/components/cf/rounds/z/z100/z10a.html");
-/* harmony import */ var _z_z100_z10b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z10b.html */ "./src/components/cf/rounds/z/z100/z10b.html");
-/* harmony import */ var _z_z100_z10c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z10c.html */ "./src/components/cf/rounds/z/z100/z10c.html");
-/* harmony import */ var _z_z100_z10d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z10d.html */ "./src/components/cf/rounds/z/z100/z10d.html");
-/* harmony import */ var _z_z100_z10e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z10e.html */ "./src/components/cf/rounds/z/z100/z10e.html");
+/* harmony import */ var _z_z100_z10a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z10a.html */ "./src/components/cf/rounds/rounds100/z/z100/z10a.html");
+/* harmony import */ var _z_z100_z10b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z10b.html */ "./src/components/cf/rounds/rounds100/z/z100/z10b.html");
+/* harmony import */ var _z_z100_z10c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z10c.html */ "./src/components/cf/rounds/rounds100/z/z100/z10c.html");
+/* harmony import */ var _z_z100_z10d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z10d.html */ "./src/components/cf/rounds/rounds100/z/z100/z10d.html");
+/* harmony import */ var _z_z100_z10e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z10e.html */ "./src/components/cf/rounds/rounds100/z/z100/z10e.html");
 
 
 
@@ -2654,10 +2762,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-11-Round11.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-11-Round11.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-11-Round11.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-11-Round11.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2665,11 +2773,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z11a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z11a.html */ "./src/components/cf/rounds/z/z100/z11a.html");
-/* harmony import */ var _z_z100_z11b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z11b.html */ "./src/components/cf/rounds/z/z100/z11b.html");
-/* harmony import */ var _z_z100_z11c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z11c.html */ "./src/components/cf/rounds/z/z100/z11c.html");
-/* harmony import */ var _z_z100_z11d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z11d.html */ "./src/components/cf/rounds/z/z100/z11d.html");
-/* harmony import */ var _z_z100_z11e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z11e.html */ "./src/components/cf/rounds/z/z100/z11e.html");
+/* harmony import */ var _z_z100_z11a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z11a.html */ "./src/components/cf/rounds/rounds100/z/z100/z11a.html");
+/* harmony import */ var _z_z100_z11b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z11b.html */ "./src/components/cf/rounds/rounds100/z/z100/z11b.html");
+/* harmony import */ var _z_z100_z11c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z11c.html */ "./src/components/cf/rounds/rounds100/z/z100/z11c.html");
+/* harmony import */ var _z_z100_z11d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z11d.html */ "./src/components/cf/rounds/rounds100/z/z100/z11d.html");
+/* harmony import */ var _z_z100_z11e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z11e.html */ "./src/components/cf/rounds/rounds100/z/z100/z11e.html");
 
 
 
@@ -2695,10 +2803,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-12-Round12.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-12-Round12.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-12-Round12.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-12-Round12.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2706,11 +2814,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z12a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z12a.html */ "./src/components/cf/rounds/z/z100/z12a.html");
-/* harmony import */ var _z_z100_z12b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z12b.html */ "./src/components/cf/rounds/z/z100/z12b.html");
-/* harmony import */ var _z_z100_z12c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z12c.html */ "./src/components/cf/rounds/z/z100/z12c.html");
-/* harmony import */ var _z_z100_z12d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z12d.html */ "./src/components/cf/rounds/z/z100/z12d.html");
-/* harmony import */ var _z_z100_z12e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z12e.html */ "./src/components/cf/rounds/z/z100/z12e.html");
+/* harmony import */ var _z_z100_z12a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z12a.html */ "./src/components/cf/rounds/rounds100/z/z100/z12a.html");
+/* harmony import */ var _z_z100_z12b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z12b.html */ "./src/components/cf/rounds/rounds100/z/z100/z12b.html");
+/* harmony import */ var _z_z100_z12c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z12c.html */ "./src/components/cf/rounds/rounds100/z/z100/z12c.html");
+/* harmony import */ var _z_z100_z12d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z12d.html */ "./src/components/cf/rounds/rounds100/z/z100/z12d.html");
+/* harmony import */ var _z_z100_z12e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z12e.html */ "./src/components/cf/rounds/rounds100/z/z100/z12e.html");
 
 
 
@@ -2736,10 +2844,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-13-Round13.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-13-Round13.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-13-Round13.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-13-Round13.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2747,11 +2855,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z13a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z13a.html */ "./src/components/cf/rounds/z/z100/z13a.html");
-/* harmony import */ var _z_z100_z13b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z13b.html */ "./src/components/cf/rounds/z/z100/z13b.html");
-/* harmony import */ var _z_z100_z13c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z13c.html */ "./src/components/cf/rounds/z/z100/z13c.html");
-/* harmony import */ var _z_z100_z13d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z13d.html */ "./src/components/cf/rounds/z/z100/z13d.html");
-/* harmony import */ var _z_z100_z13e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z13e.html */ "./src/components/cf/rounds/z/z100/z13e.html");
+/* harmony import */ var _z_z100_z13a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z13a.html */ "./src/components/cf/rounds/rounds100/z/z100/z13a.html");
+/* harmony import */ var _z_z100_z13b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z13b.html */ "./src/components/cf/rounds/rounds100/z/z100/z13b.html");
+/* harmony import */ var _z_z100_z13c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z13c.html */ "./src/components/cf/rounds/rounds100/z/z100/z13c.html");
+/* harmony import */ var _z_z100_z13d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z13d.html */ "./src/components/cf/rounds/rounds100/z/z100/z13d.html");
+/* harmony import */ var _z_z100_z13e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z13e.html */ "./src/components/cf/rounds/rounds100/z/z100/z13e.html");
 
 
 
@@ -2777,10 +2885,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-14-Round14.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-14-Round14.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-14-Round14.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-14-Round14.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2788,11 +2896,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z14a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z14a.html */ "./src/components/cf/rounds/z/z100/z14a.html");
-/* harmony import */ var _z_z100_z14b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z14b.html */ "./src/components/cf/rounds/z/z100/z14b.html");
-/* harmony import */ var _z_z100_z14c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z14c.html */ "./src/components/cf/rounds/z/z100/z14c.html");
-/* harmony import */ var _z_z100_z14d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z14d.html */ "./src/components/cf/rounds/z/z100/z14d.html");
-/* harmony import */ var _z_z100_z14e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z14e.html */ "./src/components/cf/rounds/z/z100/z14e.html");
+/* harmony import */ var _z_z100_z14a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z14a.html */ "./src/components/cf/rounds/rounds100/z/z100/z14a.html");
+/* harmony import */ var _z_z100_z14b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z14b.html */ "./src/components/cf/rounds/rounds100/z/z100/z14b.html");
+/* harmony import */ var _z_z100_z14c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z14c.html */ "./src/components/cf/rounds/rounds100/z/z100/z14c.html");
+/* harmony import */ var _z_z100_z14d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z14d.html */ "./src/components/cf/rounds/rounds100/z/z100/z14d.html");
+/* harmony import */ var _z_z100_z14e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z14e.html */ "./src/components/cf/rounds/rounds100/z/z100/z14e.html");
 
 
 
@@ -2818,10 +2926,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-15-Round15.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-15-Round15.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-15-Round15.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-15-Round15.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2829,11 +2937,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z15a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z15a.html */ "./src/components/cf/rounds/z/z100/z15a.html");
-/* harmony import */ var _z_z100_z15b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z15b.html */ "./src/components/cf/rounds/z/z100/z15b.html");
-/* harmony import */ var _z_z100_z15c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z15c.html */ "./src/components/cf/rounds/z/z100/z15c.html");
-/* harmony import */ var _z_z100_z15d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z15d.html */ "./src/components/cf/rounds/z/z100/z15d.html");
-/* harmony import */ var _z_z100_z15e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z15e.html */ "./src/components/cf/rounds/z/z100/z15e.html");
+/* harmony import */ var _z_z100_z15a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z15a.html */ "./src/components/cf/rounds/rounds100/z/z100/z15a.html");
+/* harmony import */ var _z_z100_z15b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z15b.html */ "./src/components/cf/rounds/rounds100/z/z100/z15b.html");
+/* harmony import */ var _z_z100_z15c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z15c.html */ "./src/components/cf/rounds/rounds100/z/z100/z15c.html");
+/* harmony import */ var _z_z100_z15d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z15d.html */ "./src/components/cf/rounds/rounds100/z/z100/z15d.html");
+/* harmony import */ var _z_z100_z15e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z15e.html */ "./src/components/cf/rounds/rounds100/z/z100/z15e.html");
 
 
 
@@ -2859,10 +2967,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-16-Round16.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-16-Round16.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-16-Round16.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-16-Round16.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2870,11 +2978,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z16a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z16a.html */ "./src/components/cf/rounds/z/z100/z16a.html");
-/* harmony import */ var _z_z100_z16b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z16b.html */ "./src/components/cf/rounds/z/z100/z16b.html");
-/* harmony import */ var _z_z100_z16c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z16c.html */ "./src/components/cf/rounds/z/z100/z16c.html");
-/* harmony import */ var _z_z100_z16d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z16d.html */ "./src/components/cf/rounds/z/z100/z16d.html");
-/* harmony import */ var _z_z100_z16e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z16e.html */ "./src/components/cf/rounds/z/z100/z16e.html");
+/* harmony import */ var _z_z100_z16a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z16a.html */ "./src/components/cf/rounds/rounds100/z/z100/z16a.html");
+/* harmony import */ var _z_z100_z16b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z16b.html */ "./src/components/cf/rounds/rounds100/z/z100/z16b.html");
+/* harmony import */ var _z_z100_z16c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z16c.html */ "./src/components/cf/rounds/rounds100/z/z100/z16c.html");
+/* harmony import */ var _z_z100_z16d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z16d.html */ "./src/components/cf/rounds/rounds100/z/z100/z16d.html");
+/* harmony import */ var _z_z100_z16e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z16e.html */ "./src/components/cf/rounds/rounds100/z/z100/z16e.html");
 
 
 
@@ -2900,10 +3008,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-17-Round17.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-17-Round17.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-17-Round17.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-17-Round17.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2911,11 +3019,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z17a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z17a.html */ "./src/components/cf/rounds/z/z100/z17a.html");
-/* harmony import */ var _z_z100_z17b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z17b.html */ "./src/components/cf/rounds/z/z100/z17b.html");
-/* harmony import */ var _z_z100_z17c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z17c.html */ "./src/components/cf/rounds/z/z100/z17c.html");
-/* harmony import */ var _z_z100_z17d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z17d.html */ "./src/components/cf/rounds/z/z100/z17d.html");
-/* harmony import */ var _z_z100_z17e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z17e.html */ "./src/components/cf/rounds/z/z100/z17e.html");
+/* harmony import */ var _z_z100_z17a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z17a.html */ "./src/components/cf/rounds/rounds100/z/z100/z17a.html");
+/* harmony import */ var _z_z100_z17b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z17b.html */ "./src/components/cf/rounds/rounds100/z/z100/z17b.html");
+/* harmony import */ var _z_z100_z17c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z17c.html */ "./src/components/cf/rounds/rounds100/z/z100/z17c.html");
+/* harmony import */ var _z_z100_z17d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z17d.html */ "./src/components/cf/rounds/rounds100/z/z100/z17d.html");
+/* harmony import */ var _z_z100_z17e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z17e.html */ "./src/components/cf/rounds/rounds100/z/z100/z17e.html");
 
 
 
@@ -2941,10 +3049,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-18-Round18.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-18-Round18.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-18-Round18.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-18-Round18.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2952,11 +3060,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z18a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z18a.html */ "./src/components/cf/rounds/z/z100/z18a.html");
-/* harmony import */ var _z_z100_z18b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z18b.html */ "./src/components/cf/rounds/z/z100/z18b.html");
-/* harmony import */ var _z_z100_z18c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z18c.html */ "./src/components/cf/rounds/z/z100/z18c.html");
-/* harmony import */ var _z_z100_z18d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z18d.html */ "./src/components/cf/rounds/z/z100/z18d.html");
-/* harmony import */ var _z_z100_z18e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z18e.html */ "./src/components/cf/rounds/z/z100/z18e.html");
+/* harmony import */ var _z_z100_z18a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z18a.html */ "./src/components/cf/rounds/rounds100/z/z100/z18a.html");
+/* harmony import */ var _z_z100_z18b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z18b.html */ "./src/components/cf/rounds/rounds100/z/z100/z18b.html");
+/* harmony import */ var _z_z100_z18c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z18c.html */ "./src/components/cf/rounds/rounds100/z/z100/z18c.html");
+/* harmony import */ var _z_z100_z18d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z18d.html */ "./src/components/cf/rounds/rounds100/z/z100/z18d.html");
+/* harmony import */ var _z_z100_z18e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z18e.html */ "./src/components/cf/rounds/rounds100/z/z100/z18e.html");
 
 
 
@@ -2982,10 +3090,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-19-Round19.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-19-Round19.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-19-Round19.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-19-Round19.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2993,11 +3101,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z19a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z19a.html */ "./src/components/cf/rounds/z/z100/z19a.html");
-/* harmony import */ var _z_z100_z19b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z19b.html */ "./src/components/cf/rounds/z/z100/z19b.html");
-/* harmony import */ var _z_z100_z19c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z19c.html */ "./src/components/cf/rounds/z/z100/z19c.html");
-/* harmony import */ var _z_z100_z19d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z19d.html */ "./src/components/cf/rounds/z/z100/z19d.html");
-/* harmony import */ var _z_z100_z19e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z19e.html */ "./src/components/cf/rounds/z/z100/z19e.html");
+/* harmony import */ var _z_z100_z19a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z19a.html */ "./src/components/cf/rounds/rounds100/z/z100/z19a.html");
+/* harmony import */ var _z_z100_z19b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z19b.html */ "./src/components/cf/rounds/rounds100/z/z100/z19b.html");
+/* harmony import */ var _z_z100_z19c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z19c.html */ "./src/components/cf/rounds/rounds100/z/z100/z19c.html");
+/* harmony import */ var _z_z100_z19d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z19d.html */ "./src/components/cf/rounds/rounds100/z/z100/z19d.html");
+/* harmony import */ var _z_z100_z19e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z19e.html */ "./src/components/cf/rounds/rounds100/z/z100/z19e.html");
 
 
 
@@ -3023,10 +3131,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-2-Round2.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-2-Round2.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-2-Round2.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-2-Round2.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3034,9 +3142,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z2a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z2a.html */ "./src/components/cf/rounds/z/z100/z2a.html");
-/* harmony import */ var _z_z100_z2b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z2b.html */ "./src/components/cf/rounds/z/z100/z2b.html");
-/* harmony import */ var _z_z100_z2c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z2c.html */ "./src/components/cf/rounds/z/z100/z2c.html");
+/* harmony import */ var _z_z100_z2a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z2a.html */ "./src/components/cf/rounds/rounds100/z/z100/z2a.html");
+/* harmony import */ var _z_z100_z2b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z2b.html */ "./src/components/cf/rounds/rounds100/z/z100/z2b.html");
+/* harmony import */ var _z_z100_z2c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z2c.html */ "./src/components/cf/rounds/rounds100/z/z100/z2c.html");
 
 
 
@@ -3054,10 +3162,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-20-Round20.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-20-Round20.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-20-Round20.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-20-Round20.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3065,9 +3173,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z20a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z20a.html */ "./src/components/cf/rounds/z/z100/z20a.html");
-/* harmony import */ var _z_z100_z20b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z20b.html */ "./src/components/cf/rounds/z/z100/z20b.html");
-/* harmony import */ var _z_z100_z20c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z20c.html */ "./src/components/cf/rounds/z/z100/z20c.html");
+/* harmony import */ var _z_z100_z20a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z20a.html */ "./src/components/cf/rounds/rounds100/z/z100/z20a.html");
+/* harmony import */ var _z_z100_z20b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z20b.html */ "./src/components/cf/rounds/rounds100/z/z100/z20b.html");
+/* harmony import */ var _z_z100_z20c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z20c.html */ "./src/components/cf/rounds/rounds100/z/z100/z20c.html");
 
 
 
@@ -3085,10 +3193,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-3-Round3.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-3-Round3.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-3-Round3.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-3-Round3.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3096,10 +3204,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z3a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z3a.html */ "./src/components/cf/rounds/z/z100/z3a.html");
-/* harmony import */ var _z_z100_z3b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z3b.html */ "./src/components/cf/rounds/z/z100/z3b.html");
-/* harmony import */ var _z_z100_z3c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z3c.html */ "./src/components/cf/rounds/z/z100/z3c.html");
-/* harmony import */ var _z_z100_z3d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z3d.html */ "./src/components/cf/rounds/z/z100/z3d.html");
+/* harmony import */ var _z_z100_z3a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z3a.html */ "./src/components/cf/rounds/rounds100/z/z100/z3a.html");
+/* harmony import */ var _z_z100_z3b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z3b.html */ "./src/components/cf/rounds/rounds100/z/z100/z3b.html");
+/* harmony import */ var _z_z100_z3c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z3c.html */ "./src/components/cf/rounds/rounds100/z/z100/z3c.html");
+/* harmony import */ var _z_z100_z3d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z3d.html */ "./src/components/cf/rounds/rounds100/z/z100/z3d.html");
 
 
 
@@ -3121,10 +3229,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-34-Round34.js":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-34-Round34.js ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-34-Round34.js":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-34-Round34.js ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3132,11 +3240,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z34a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z34a.html */ "./src/components/cf/rounds/z/z100/z34a.html");
-/* harmony import */ var _z_z100_z34b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z34b.html */ "./src/components/cf/rounds/z/z100/z34b.html");
-/* harmony import */ var _z_z100_z34c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z34c.html */ "./src/components/cf/rounds/z/z100/z34c.html");
-/* harmony import */ var _z_z100_z34d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z34d.html */ "./src/components/cf/rounds/z/z100/z34d.html");
-/* harmony import */ var _z_z100_z34e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z34e.html */ "./src/components/cf/rounds/z/z100/z34e.html");
+/* harmony import */ var _z_z100_z34a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z34a.html */ "./src/components/cf/rounds/rounds100/z/z100/z34a.html");
+/* harmony import */ var _z_z100_z34b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z34b.html */ "./src/components/cf/rounds/rounds100/z/z100/z34b.html");
+/* harmony import */ var _z_z100_z34c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z34c.html */ "./src/components/cf/rounds/rounds100/z/z100/z34c.html");
+/* harmony import */ var _z_z100_z34d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z34d.html */ "./src/components/cf/rounds/rounds100/z/z100/z34d.html");
+/* harmony import */ var _z_z100_z34e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z34e.html */ "./src/components/cf/rounds/rounds100/z/z100/z34e.html");
 
 
 
@@ -3162,10 +3270,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-38-sio1.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-38-sio1.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-38-sio1.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-38-sio1.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3173,14 +3281,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z38a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z38a.html */ "./src/components/cf/rounds/z/z100/z38a.html");
-/* harmony import */ var _z_z100_z38b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z38b.html */ "./src/components/cf/rounds/z/z100/z38b.html");
-/* harmony import */ var _z_z100_z38c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z38c.html */ "./src/components/cf/rounds/z/z100/z38c.html");
-/* harmony import */ var _z_z100_z38d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z38d.html */ "./src/components/cf/rounds/z/z100/z38d.html");
-/* harmony import */ var _z_z100_z38e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z38e.html */ "./src/components/cf/rounds/z/z100/z38e.html");
-/* harmony import */ var _z_z100_z38f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z38f.html */ "./src/components/cf/rounds/z/z100/z38f.html");
-/* harmony import */ var _z_z100_z38g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z38g.html */ "./src/components/cf/rounds/z/z100/z38g.html");
-/* harmony import */ var _z_z100_z38h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z38h.html */ "./src/components/cf/rounds/z/z100/z38h.html");
+/* harmony import */ var _z_z100_z38a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z38a.html */ "./src/components/cf/rounds/rounds100/z/z100/z38a.html");
+/* harmony import */ var _z_z100_z38b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z38b.html */ "./src/components/cf/rounds/rounds100/z/z100/z38b.html");
+/* harmony import */ var _z_z100_z38c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z38c.html */ "./src/components/cf/rounds/rounds100/z/z100/z38c.html");
+/* harmony import */ var _z_z100_z38d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z38d.html */ "./src/components/cf/rounds/rounds100/z/z100/z38d.html");
+/* harmony import */ var _z_z100_z38e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z38e.html */ "./src/components/cf/rounds/rounds100/z/z100/z38e.html");
+/* harmony import */ var _z_z100_z38f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z38f.html */ "./src/components/cf/rounds/rounds100/z/z100/z38f.html");
+/* harmony import */ var _z_z100_z38g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z38g.html */ "./src/components/cf/rounds/rounds100/z/z100/z38g.html");
+/* harmony import */ var _z_z100_z38h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z38h.html */ "./src/components/cf/rounds/rounds100/z/z100/z38h.html");
 
 
 
@@ -3218,10 +3326,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-39-sko1.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-39-sko1.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-39-sko1.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-39-sko1.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3229,17 +3337,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z39a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z39a.html */ "./src/components/cf/rounds/z/z100/z39a.html");
-/* harmony import */ var _z_z100_z39b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z39b.html */ "./src/components/cf/rounds/z/z100/z39b.html");
-/* harmony import */ var _z_z100_z39c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z39c.html */ "./src/components/cf/rounds/z/z100/z39c.html");
-/* harmony import */ var _z_z100_z39d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z39d.html */ "./src/components/cf/rounds/z/z100/z39d.html");
-/* harmony import */ var _z_z100_z39e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z39e.html */ "./src/components/cf/rounds/z/z100/z39e.html");
-/* harmony import */ var _z_z100_z39f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z39f.html */ "./src/components/cf/rounds/z/z100/z39f.html");
-/* harmony import */ var _z_z100_z39g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z39g.html */ "./src/components/cf/rounds/z/z100/z39g.html");
-/* harmony import */ var _z_z100_z39h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z39h.html */ "./src/components/cf/rounds/z/z100/z39h.html");
-/* harmony import */ var _z_z100_z39i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../z/z100/z39i.html */ "./src/components/cf/rounds/z/z100/z39i.html");
-/* harmony import */ var _z_z100_z39j_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../z/z100/z39j.html */ "./src/components/cf/rounds/z/z100/z39j.html");
-/* harmony import */ var _z_z100_z39k_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../z/z100/z39k.html */ "./src/components/cf/rounds/z/z100/z39k.html");
+/* harmony import */ var _z_z100_z39a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z39a.html */ "./src/components/cf/rounds/rounds100/z/z100/z39a.html");
+/* harmony import */ var _z_z100_z39b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z39b.html */ "./src/components/cf/rounds/rounds100/z/z100/z39b.html");
+/* harmony import */ var _z_z100_z39c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z39c.html */ "./src/components/cf/rounds/rounds100/z/z100/z39c.html");
+/* harmony import */ var _z_z100_z39d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z39d.html */ "./src/components/cf/rounds/rounds100/z/z100/z39d.html");
+/* harmony import */ var _z_z100_z39e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z39e.html */ "./src/components/cf/rounds/rounds100/z/z100/z39e.html");
+/* harmony import */ var _z_z100_z39f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z39f.html */ "./src/components/cf/rounds/rounds100/z/z100/z39f.html");
+/* harmony import */ var _z_z100_z39g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z39g.html */ "./src/components/cf/rounds/rounds100/z/z100/z39g.html");
+/* harmony import */ var _z_z100_z39h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z39h.html */ "./src/components/cf/rounds/rounds100/z/z100/z39h.html");
+/* harmony import */ var _z_z100_z39i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../z/z100/z39i.html */ "./src/components/cf/rounds/rounds100/z/z100/z39i.html");
+/* harmony import */ var _z_z100_z39j_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../z/z100/z39j.html */ "./src/components/cf/rounds/rounds100/z/z100/z39j.html");
+/* harmony import */ var _z_z100_z39k_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../z/z100/z39k.html */ "./src/components/cf/rounds/rounds100/z/z100/z39k.html");
 
 
 
@@ -3289,10 +3397,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-4-Round4.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-4-Round4.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-4-Round4.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-4-Round4.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3300,10 +3408,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z4a.html */ "./src/components/cf/rounds/z/z100/z4a.html");
-/* harmony import */ var _z_z100_z4b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z4b.html */ "./src/components/cf/rounds/z/z100/z4b.html");
-/* harmony import */ var _z_z100_z4c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z4c.html */ "./src/components/cf/rounds/z/z100/z4c.html");
-/* harmony import */ var _z_z100_z4d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z4d.html */ "./src/components/cf/rounds/z/z100/z4d.html");
+/* harmony import */ var _z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z4a.html */ "./src/components/cf/rounds/rounds100/z/z100/z4a.html");
+/* harmony import */ var _z_z100_z4b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z4b.html */ "./src/components/cf/rounds/rounds100/z/z100/z4b.html");
+/* harmony import */ var _z_z100_z4c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z4c.html */ "./src/components/cf/rounds/rounds100/z/z100/z4c.html");
+/* harmony import */ var _z_z100_z4d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z4d.html */ "./src/components/cf/rounds/rounds100/z/z100/z4d.html");
 
 
 
@@ -3325,10 +3433,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-44-sko2.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-44-sko2.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-44-sko2.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-44-sko2.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3336,16 +3444,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z44a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z44a.html */ "./src/components/cf/rounds/z/z100/z44a.html");
-/* harmony import */ var _z_z100_z44b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z44b.html */ "./src/components/cf/rounds/z/z100/z44b.html");
-/* harmony import */ var _z_z100_z44c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z44c.html */ "./src/components/cf/rounds/z/z100/z44c.html");
-/* harmony import */ var _z_z100_z44d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z44d.html */ "./src/components/cf/rounds/z/z100/z44d.html");
-/* harmony import */ var _z_z100_z44e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z44e.html */ "./src/components/cf/rounds/z/z100/z44e.html");
-/* harmony import */ var _z_z100_z44f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z44f.html */ "./src/components/cf/rounds/z/z100/z44f.html");
-/* harmony import */ var _z_z100_z44g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z44g.html */ "./src/components/cf/rounds/z/z100/z44g.html");
-/* harmony import */ var _z_z100_z44h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z44h.html */ "./src/components/cf/rounds/z/z100/z44h.html");
-/* harmony import */ var _z_z100_z44i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../z/z100/z44i.html */ "./src/components/cf/rounds/z/z100/z44i.html");
-/* harmony import */ var _z_z100_z44j_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../z/z100/z44j.html */ "./src/components/cf/rounds/z/z100/z44j.html");
+/* harmony import */ var _z_z100_z44a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z44a.html */ "./src/components/cf/rounds/rounds100/z/z100/z44a.html");
+/* harmony import */ var _z_z100_z44b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z44b.html */ "./src/components/cf/rounds/rounds100/z/z100/z44b.html");
+/* harmony import */ var _z_z100_z44c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z44c.html */ "./src/components/cf/rounds/rounds100/z/z100/z44c.html");
+/* harmony import */ var _z_z100_z44d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z44d.html */ "./src/components/cf/rounds/rounds100/z/z100/z44d.html");
+/* harmony import */ var _z_z100_z44e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z44e.html */ "./src/components/cf/rounds/rounds100/z/z100/z44e.html");
+/* harmony import */ var _z_z100_z44f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z44f.html */ "./src/components/cf/rounds/rounds100/z/z100/z44f.html");
+/* harmony import */ var _z_z100_z44g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z44g.html */ "./src/components/cf/rounds/rounds100/z/z100/z44g.html");
+/* harmony import */ var _z_z100_z44h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z44h.html */ "./src/components/cf/rounds/rounds100/z/z100/z44h.html");
+/* harmony import */ var _z_z100_z44i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../z/z100/z44i.html */ "./src/components/cf/rounds/rounds100/z/z100/z44i.html");
+/* harmony import */ var _z_z100_z44j_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../z/z100/z44j.html */ "./src/components/cf/rounds/rounds100/z/z100/z44j.html");
 
 
 
@@ -3391,10 +3499,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-45-sko3.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-45-sko3.js ***!
-  \*************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-45-sko3.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-45-sko3.js ***!
+  \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3402,16 +3510,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z45a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z45a.html */ "./src/components/cf/rounds/z/z100/z45a.html");
-/* harmony import */ var _z_z100_z45b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z45b.html */ "./src/components/cf/rounds/z/z100/z45b.html");
-/* harmony import */ var _z_z100_z45c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z45c.html */ "./src/components/cf/rounds/z/z100/z45c.html");
-/* harmony import */ var _z_z100_z45d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z45d.html */ "./src/components/cf/rounds/z/z100/z45d.html");
-/* harmony import */ var _z_z100_z45e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z45e.html */ "./src/components/cf/rounds/z/z100/z45e.html");
-/* harmony import */ var _z_z100_z45f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z45f.html */ "./src/components/cf/rounds/z/z100/z45f.html");
-/* harmony import */ var _z_z100_z45g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z45g.html */ "./src/components/cf/rounds/z/z100/z45g.html");
-/* harmony import */ var _z_z100_z45h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z45h.html */ "./src/components/cf/rounds/z/z100/z45h.html");
-/* harmony import */ var _z_z100_z45i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../z/z100/z45i.html */ "./src/components/cf/rounds/z/z100/z45i.html");
-/* harmony import */ var _z_z100_z45j_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../z/z100/z45j.html */ "./src/components/cf/rounds/z/z100/z45j.html");
+/* harmony import */ var _z_z100_z45a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z45a.html */ "./src/components/cf/rounds/rounds100/z/z100/z45a.html");
+/* harmony import */ var _z_z100_z45b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z45b.html */ "./src/components/cf/rounds/rounds100/z/z100/z45b.html");
+/* harmony import */ var _z_z100_z45c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z45c.html */ "./src/components/cf/rounds/rounds100/z/z100/z45c.html");
+/* harmony import */ var _z_z100_z45d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z45d.html */ "./src/components/cf/rounds/rounds100/z/z100/z45d.html");
+/* harmony import */ var _z_z100_z45e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z45e.html */ "./src/components/cf/rounds/rounds100/z/z100/z45e.html");
+/* harmony import */ var _z_z100_z45f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../z/z100/z45f.html */ "./src/components/cf/rounds/rounds100/z/z100/z45f.html");
+/* harmony import */ var _z_z100_z45g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../z/z100/z45g.html */ "./src/components/cf/rounds/rounds100/z/z100/z45g.html");
+/* harmony import */ var _z_z100_z45h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../z/z100/z45h.html */ "./src/components/cf/rounds/rounds100/z/z100/z45h.html");
+/* harmony import */ var _z_z100_z45i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../z/z100/z45i.html */ "./src/components/cf/rounds/rounds100/z/z100/z45i.html");
+/* harmony import */ var _z_z100_z45j_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../z/z100/z45j.html */ "./src/components/cf/rounds/rounds100/z/z100/z45j.html");
 
 
 
@@ -3457,10 +3565,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-5-Round5.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-5-Round5.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-5-Round5.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-5-Round5.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3468,11 +3576,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z5a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z5a.html */ "./src/components/cf/rounds/z/z100/z5a.html");
-/* harmony import */ var _z_z100_z5b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z5b.html */ "./src/components/cf/rounds/z/z100/z5b.html");
-/* harmony import */ var _z_z100_z5c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z5c.html */ "./src/components/cf/rounds/z/z100/z5c.html");
-/* harmony import */ var _z_z100_z5d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z5d.html */ "./src/components/cf/rounds/z/z100/z5d.html");
-/* harmony import */ var _z_z100_z5e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z5e.html */ "./src/components/cf/rounds/z/z100/z5e.html");
+/* harmony import */ var _z_z100_z5a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z5a.html */ "./src/components/cf/rounds/rounds100/z/z100/z5a.html");
+/* harmony import */ var _z_z100_z5b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z5b.html */ "./src/components/cf/rounds/rounds100/z/z100/z5b.html");
+/* harmony import */ var _z_z100_z5c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z5c.html */ "./src/components/cf/rounds/rounds100/z/z100/z5c.html");
+/* harmony import */ var _z_z100_z5d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z5d.html */ "./src/components/cf/rounds/rounds100/z/z100/z5d.html");
+/* harmony import */ var _z_z100_z5e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z5e.html */ "./src/components/cf/rounds/rounds100/z/z100/z5e.html");
 
 
 
@@ -3498,10 +3606,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-6-Round6.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-6-Round6.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-6-Round6.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-6-Round6.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3509,11 +3617,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z6a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z6a.html */ "./src/components/cf/rounds/z/z100/z6a.html");
-/* harmony import */ var _z_z100_z6b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z6b.html */ "./src/components/cf/rounds/z/z100/z6b.html");
-/* harmony import */ var _z_z100_z6c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z6c.html */ "./src/components/cf/rounds/z/z100/z6c.html");
-/* harmony import */ var _z_z100_z6d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z6d.html */ "./src/components/cf/rounds/z/z100/z6d.html");
-/* harmony import */ var _z_z100_z6e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z6e.html */ "./src/components/cf/rounds/z/z100/z6e.html");
+/* harmony import */ var _z_z100_z6a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z6a.html */ "./src/components/cf/rounds/rounds100/z/z100/z6a.html");
+/* harmony import */ var _z_z100_z6b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z6b.html */ "./src/components/cf/rounds/rounds100/z/z100/z6b.html");
+/* harmony import */ var _z_z100_z6c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z6c.html */ "./src/components/cf/rounds/rounds100/z/z100/z6c.html");
+/* harmony import */ var _z_z100_z6d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z6d.html */ "./src/components/cf/rounds/rounds100/z/z100/z6d.html");
+/* harmony import */ var _z_z100_z6e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z6e.html */ "./src/components/cf/rounds/rounds100/z/z100/z6e.html");
 
 
 
@@ -3539,10 +3647,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-7-Round7.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-7-Round7.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-7-Round7.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-7-Round7.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3550,11 +3658,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z7a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z7a.html */ "./src/components/cf/rounds/z/z100/z7a.html");
-/* harmony import */ var _z_z100_z7b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z7b.html */ "./src/components/cf/rounds/z/z100/z7b.html");
-/* harmony import */ var _z_z100_z7c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z7c.html */ "./src/components/cf/rounds/z/z100/z7c.html");
-/* harmony import */ var _z_z100_z7d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z7d.html */ "./src/components/cf/rounds/z/z100/z7d.html");
-/* harmony import */ var _z_z100_z7e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z7e.html */ "./src/components/cf/rounds/z/z100/z7e.html");
+/* harmony import */ var _z_z100_z7a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z7a.html */ "./src/components/cf/rounds/rounds100/z/z100/z7a.html");
+/* harmony import */ var _z_z100_z7b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z7b.html */ "./src/components/cf/rounds/rounds100/z/z100/z7b.html");
+/* harmony import */ var _z_z100_z7c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z7c.html */ "./src/components/cf/rounds/rounds100/z/z100/z7c.html");
+/* harmony import */ var _z_z100_z7d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z7d.html */ "./src/components/cf/rounds/rounds100/z/z100/z7d.html");
+/* harmony import */ var _z_z100_z7e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z7e.html */ "./src/components/cf/rounds/rounds100/z/z100/z7e.html");
 
 
 
@@ -3580,10 +3688,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-8-Round8.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-8-Round8.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-8-Round8.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-8-Round8.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3591,11 +3699,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z8a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z8a.html */ "./src/components/cf/rounds/z/z100/z8a.html");
-/* harmony import */ var _z_z100_z8b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z8b.html */ "./src/components/cf/rounds/z/z100/z8b.html");
-/* harmony import */ var _z_z100_z8c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z8c.html */ "./src/components/cf/rounds/z/z100/z8c.html");
-/* harmony import */ var _z_z100_z8d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z8d.html */ "./src/components/cf/rounds/z/z100/z8d.html");
-/* harmony import */ var _z_z100_z8e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z8e.html */ "./src/components/cf/rounds/z/z100/z8e.html");
+/* harmony import */ var _z_z100_z8a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z8a.html */ "./src/components/cf/rounds/rounds100/z/z100/z8a.html");
+/* harmony import */ var _z_z100_z8b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z8b.html */ "./src/components/cf/rounds/rounds100/z/z100/z8b.html");
+/* harmony import */ var _z_z100_z8c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z8c.html */ "./src/components/cf/rounds/rounds100/z/z100/z8c.html");
+/* harmony import */ var _z_z100_z8d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z8d.html */ "./src/components/cf/rounds/rounds100/z/z100/z8d.html");
+/* harmony import */ var _z_z100_z8e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z8e.html */ "./src/components/cf/rounds/rounds100/z/z100/z8e.html");
 
 
 
@@ -3621,10 +3729,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-9-Round9.js":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-9-Round9.js ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-9-Round9.js":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-9-Round9.js ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3632,11 +3740,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z100_z9a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z9a.html */ "./src/components/cf/rounds/z/z100/z9a.html");
-/* harmony import */ var _z_z100_z9b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z9b.html */ "./src/components/cf/rounds/z/z100/z9b.html");
-/* harmony import */ var _z_z100_z9c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z9c.html */ "./src/components/cf/rounds/z/z100/z9c.html");
-/* harmony import */ var _z_z100_z9d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z9d.html */ "./src/components/cf/rounds/z/z100/z9d.html");
-/* harmony import */ var _z_z100_z9e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z9e.html */ "./src/components/cf/rounds/z/z100/z9e.html");
+/* harmony import */ var _z_z100_z9a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z100/z9a.html */ "./src/components/cf/rounds/rounds100/z/z100/z9a.html");
+/* harmony import */ var _z_z100_z9b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z100/z9b.html */ "./src/components/cf/rounds/rounds100/z/z100/z9b.html");
+/* harmony import */ var _z_z100_z9c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z100/z9c.html */ "./src/components/cf/rounds/rounds100/z/z100/z9c.html");
+/* harmony import */ var _z_z100_z9d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z100/z9d.html */ "./src/components/cf/rounds/rounds100/z/z100/z9d.html");
+/* harmony import */ var _z_z100_z9e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z100/z9e.html */ "./src/components/cf/rounds/rounds100/z/z100/z9e.html");
 
 
 
@@ -3662,44 +3770,44 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds.js":
-/*!********************************************!*\
-  !*** ./src/components/cf/rounds/rounds.js ***!
-  \********************************************/
+/***/ "./src/components/cf/rounds/rounds100/rounds100.js":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/rounds100.js ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ showRounds; }
+/* harmony export */   "default": function() { return /* binding */ showRounds100; }
 /* harmony export */ });
-/* harmony import */ var _js_element_rounds__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/element-rounds */ "./src/components/cf/rounds/js/element-rounds.js");
-/* harmony import */ var _js_element_rounds__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_element_rounds__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/f-create-aside */ "./src/components/cf/rounds/js/f-create-aside.js");
+/* harmony import */ var _js_element_rounds100__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/element-rounds100 */ "./src/components/cf/rounds/rounds100/js/element-rounds100.js");
+/* harmony import */ var _js_element_rounds100__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_element_rounds100__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/f-create-aside */ "./src/components/cf/rounds/rounds100/js/f-create-aside.js");
 /** *******************
-Скрипт из файла rounds.js
-Объект rounds содержит страницу alg-rounds
-Функция showRounds показывает страницу rounds
+Скрипт из файла rounds100.js
+Объект rounds содержит страницу rounds100
+Функция showRounds100 показывает страницу rounds100
 ******************** */
 
 
 
-// 1. Создаем объект rounds
-const rounds = {};
+// 1. Создаем объект rounds100
+const rounds100 = {};
 
 // 2. В объекте rounds создаем свойство aside
-rounds.aside = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createAside)();
+rounds100.aside = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createAside)();
 
 // 3. В объекте rounds создаем свойство main
-rounds.main = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createMain)();
+rounds100.main = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createMain)();
 
-// 4. Экспортируем функцию showRounds()
-function showRounds() {
+// 4. Экспортируем функцию showRounds100()
+function showRounds100() {
   const mainAside = document.querySelector('.main__aside');
   if (mainAside) {
     mainAside.innerHTML = '';
-    mainAside.append(rounds.aside);
-    mainAside.append(rounds.main);
+    mainAside.append(rounds100.aside);
+    mainAside.append(rounds100.main);
 
     // 5. Создадим и вызовем событие click на первой ссылке aside элемента
     const eventClick = new Event('click');
@@ -3932,21 +4040,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z4a.html */ "./src/components/cf/rounds/z/z100/z4a.html");
-/* harmony import */ var _rounds_z_z100_z12a_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../rounds/z/z100/z12a.html */ "./src/components/cf/rounds/z/z100/z12a.html");
-/* harmony import */ var _rounds_z_z100_z12b_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../rounds/z/z100/z12b.html */ "./src/components/cf/rounds/z/z100/z12b.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z4a.html */ "./src/components/cf/rounds/rounds100/z/z100/z4a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z12a_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z12a.html */ "./src/components/cf/rounds/rounds100/z/z100/z12a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z12b_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z12b.html */ "./src/components/cf/rounds/rounds100/z/z100/z12b.html");
 
 
 
 function inElem() {
   if (document.querySelector('.t2')) {
-    document.querySelector('.t2').innerHTML = _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    document.querySelector('.t2').innerHTML = _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
   if (document.querySelector('.t3')) {
-    document.querySelector('.t3').innerHTML = _rounds_z_z100_z12a_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    document.querySelector('.t3').innerHTML = _rounds_rounds100_z_z100_z12a_html__WEBPACK_IMPORTED_MODULE_1__["default"];
   }
   if (document.querySelector('.t4')) {
-    document.querySelector('.t4').innerHTML = _rounds_z_z100_z12b_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+    document.querySelector('.t4').innerHTML = _rounds_rounds100_z_z100_z12b_html__WEBPACK_IMPORTED_MODULE_2__["default"];
   }
 }
 
@@ -3963,11 +4071,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z4a.html */ "./src/components/cf/rounds/z/z100/z4a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z4a.html */ "./src/components/cf/rounds/rounds100/z/z100/z4a.html");
 
 function inElem() {
   if (document.querySelector('.t2')) {
-    document.querySelector('.t2').innerHTML = _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    document.querySelector('.t2').innerHTML = _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
 }
 
@@ -3984,11 +4092,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z1a.html */ "./src/components/cf/rounds/z/z100/z1a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z1a.html */ "./src/components/cf/rounds/rounds100/z/z100/z1a.html");
 
 function inElem() {
   if (document.querySelector('.t3')) {
-    document.querySelector('.t3').innerHTML = _rounds_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    document.querySelector('.t3').innerHTML = _rounds_rounds100_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
 }
 
@@ -4788,11 +4896,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z4a.html */ "./src/components/cf/rounds/z/z100/z4a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z4a.html */ "./src/components/cf/rounds/rounds100/z/z100/z4a.html");
 
 function inElem() {
   if (document.querySelector('.t1')) {
-    document.querySelector('.t1').innerHTML = _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    document.querySelector('.t1').innerHTML = _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
 }
 
@@ -4809,11 +4917,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z1a.html */ "./src/components/cf/rounds/z/z100/z1a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z1a.html */ "./src/components/cf/rounds/rounds100/z/z100/z1a.html");
 
 function inElem() {
   const t4 = document.querySelector('.t4');
-  t4.innerHTML = _rounds_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  t4.innerHTML = _rounds_rounds100_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
 }
 
 /***/ }),
@@ -4829,16 +4937,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z16b_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z16b.html */ "./src/components/cf/rounds/z/z100/z16b.html");
-/* harmony import */ var _rounds_z_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../rounds/z/z134b.html */ "./src/components/cf/rounds/z/z134b.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z16b_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z16b.html */ "./src/components/cf/rounds/rounds100/z/z100/z16b.html");
+/* harmony import */ var _rounds_rounds100_z_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../rounds/rounds100/z/z134b.html */ "./src/components/cf/rounds/rounds100/z/z134b.html");
 
 
 function inElem() {
   if (document.querySelector('.t9')) {
-    document.querySelector('.t9').innerHTML = _rounds_z_z100_z16b_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    document.querySelector('.t9').innerHTML = _rounds_rounds100_z_z100_z16b_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
   if (document.querySelector('.t16')) {
-    document.querySelector('.t16').innerHTML = _rounds_z_z134b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    document.querySelector('.t16').innerHTML = _rounds_rounds100_z_z134b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
   }
 }
 
@@ -5145,11 +5253,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z1a.html */ "./src/components/cf/rounds/z/z100/z1a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z1a.html */ "./src/components/cf/rounds/rounds100/z/z100/z1a.html");
 
 function inElem() {
   const t4 = document.querySelector('.t4');
-  t4.innerHTML = _rounds_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  t4.innerHTML = _rounds_rounds100_z_z100_z1a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
 }
 
 /***/ }),
@@ -5165,11 +5273,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/z/z100/z4a.html */ "./src/components/cf/rounds/z/z100/z4a.html");
+/* harmony import */ var _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z/z100/z4a.html */ "./src/components/cf/rounds/rounds100/z/z100/z4a.html");
 
 function inElem() {
   const t2 = document.querySelector('.t2');
-  t2.innerHTML = _rounds_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  t2.innerHTML = _rounds_rounds100_z_z100_z4a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
 }
 
 /***/ }),
@@ -5825,10 +5933,10 @@ var code = "<article class=\"article\">\r\n  <strong>Олимпиадное пр
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1030-Techno2019o1.html":
-/*!********************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1030-Techno2019o1.html ***!
-  \********************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1030-Techno2019o1.html":
+/*!******************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1030-Techno2019o1.html ***!
+  \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5840,10 +5948,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1041-Round509.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1041-Round509.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1041-Round509.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1041-Round509.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5855,25 +5963,25 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-106-Round82.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-106-Round82.html ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-106-Round82.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-106-Round82.html ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Дурак</a>\r\n  <br><a href=\"#t2\">Задача B. Выбор ноутбука</a>\r\n  <br><a href=\"#t3\">Задача C. Булочки</a>\r\n  <br><a href=\"#t4\">Задача D. Остров сокровищ</a>\r\n  <br><a href=\"#t5\">Задача E. Космические спасатели</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Дурак -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Дурак</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Выбор ноутбука -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Выбор ноутбука</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Булочки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Булочки</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/106/problem/C\" target=\"_blank\">Задача 106C</a>\r\n      <br><a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n    </div>\r\n\r\n    <h4>Пример 3</h4>\r\n<pre>\r\n10 1 5 2\r\n100 1 2 3\r\n</pre>\r\n    <code>15</code>\r\n\r\n    <h4>Пример 4</h4>\r\n<pre>\r\n10 1 5 11\r\n3 1 3 8\r\n</pre>\r\n    <code>24</code>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int n; // число грамм теста\r\n  int m; // число видов начинки\r\n  int c0; // число грамм теста на булочку без начинки\r\n  int d0; // цена булочки без начинки\r\n  cin &gt;&gt; n &gt;&gt; m &gt;&gt; c0 &gt;&gt; d0;\r\n\r\n  vector&lt;int&gt; A(m+1); // число грамм i-ой начинки\r\n  vector&lt;int&gt; B(m+1); // число грамм i-ой начинки\r\n                            // для одной булочки\r\n  vector&lt;int&gt; C(m+1); // число грамм теста с i-ой\r\n                            // начинкой для одной булочки\r\n  vector&lt;int&gt; D(m+1); // цена булочки с i-ой начинкой\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    cin &gt;&gt; A[i] &gt;&gt; B[i] &gt;&gt; C[i] &gt;&gt; D[i];\r\n  }\r\n\r\n  // DP[i] максимальное количество денег,\r\n  // которое мы получим если используем i грамм теста\r\n  vector&lt;int&gt; DP(n+1,0);\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    int maxb = A[i] / B[i]; // максимум булочек из i-ой начинки\r\n    for (int j = 1; j &lt;= maxb; j++) {\r\n      for (int k = 0; k &lt;= n - C[i]; k++) {\r\n        DP[k] = max(DP[k + C[i]] + D[i], DP[k]);\r\n      }\r\n    }\r\n  }\r\n\r\n  int res = 0;\r\n  for (int i = 0; i &lt;= n; i++) {\r\n    res = max(res, DP[i] + i / c0 * d0);\r\n  }\r\n\r\n  cout &lt;&lt; res;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Остров сокровищ -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Остров сокровищ</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Космические спасатели -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Космические спасатели</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Дурак</a>\r\n  <br><a href=\"#t2\">Задача B. Выбор ноутбука</a>\r\n  <br><a href=\"#t3\">Задача C. Булочки</a>\r\n  <br><a href=\"#t4\">Задача D. Остров сокровищ</a>\r\n  <br><a href=\"#t5\">Задача E. Космические спасатели</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Дурак -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Дурак</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Выбор ноутбука -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Выбор ноутбука</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Булочки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Булочки</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/106/problem/C\" target=\"_blank\">Задача 106C</a>\r\n      <br><a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n    </div>\r\n\r\n    <h4>Пример 3</h4>\r\n<pre>\r\n10 1 5 2\r\n100 1 2 3\r\n</pre>\r\n    <code>15</code>\r\n\r\n    <h4>Пример 4</h4>\r\n<pre>\r\n10 1 5 11\r\n3 1 3 8\r\n</pre>\r\n    <code>24</code>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int n; // число грамм теста\r\n  int m; // число видов начинки\r\n  int c0; // число грамм теста на булочку без начинки\r\n  int d0; // цена булочки без начинки\r\n  cin &gt;&gt; n &gt;&gt; m &gt;&gt; c0 &gt;&gt; d0;\r\n\r\n  // число грамм i-ой начинки\r\n  vector&lt;int&gt; A(m+1);\r\n\r\n  // число грамм i-ой начинки для одной булочки\r\n  vector&lt;int&gt; B(m+1);\r\n\r\n  // число грамм теста с i-ой начинкой для одной булочки\r\n  vector&lt;int&gt; C(m+1);\r\n\r\n  // цена булочки с i-ой начинкой\r\n  vector&lt;int&gt; D(m+1);\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    cin &gt;&gt; A[i] &gt;&gt; B[i] &gt;&gt; C[i] &gt;&gt; D[i];\r\n  }\r\n\r\n  // DP[i] максимальное количество денег,\r\n  // которое мы получим если используем i грамм теста\r\n  vector&lt;int&gt; DP(n+1,0);\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    int maxb = A[i] / B[i]; // максимум булочек из i-ой начинки\r\n    for (int j = 1; j &lt;= maxb; j++) {\r\n      for (int k = 0; k &lt;= n - C[i]; k++) {\r\n        DP[k] = max(DP[k + C[i]] + D[i], DP[k]);\r\n      }\r\n    }\r\n  }\r\n\r\n  int res = 0;\r\n  for (int i = 0; i &lt;= n; i++) {\r\n    res = max(res, DP[i] + i / c0 * d0);\r\n  }\r\n\r\n  cout &lt;&lt; res;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Остров сокровищ -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Остров сокровищ</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Космические спасатели -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Космические спасатели</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-110-Round84.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-110-Round84.html ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-110-Round84.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-110-Round84.html ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5885,10 +5993,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-112-Round85.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-112-Round85.html ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-112-Round85.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-112-Round85.html ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5900,10 +6008,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-116-Round87.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-116-Round87.html ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-116-Round87.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-116-Round87.html ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5915,25 +6023,25 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-118-Round89.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-118-Round89.html ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-118-Round89.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-118-Round89.html ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.07</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Упражнение на строки</a>\r\n  <br><a href=\"#t2\">Задача B. Подарок от Лены</a>\r\n  <br><a href=\"#t3\">Задача C. Модный номер</a>\r\n  <br><a href=\"#t4\">Задача D. Легионы Цезаря</a>\r\n  <br><a href=\"#t5\">Задача E. Дороги в Бертауне</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Упражнение на строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Упражнение на строки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/118/problem/A\" target=\"_blank\">Задача 118A</a>\r\n      <br><a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.27</a>\r\n    </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  vector&lt;char&gt; res;\r\n  vector&lt;char&gt; vow{ 'a','A','o','O','y','Y','e','E','u','U','i','I' };\r\n\r\n  string s;\r\n  cin &gt;&gt; s;\r\n  for (int i = 0; i &lt; s.size(); i++) {\r\n    if (find(vow.begin(), vow.end(), s[i]) == vow.end()) {\r\n      res.push_back('.');\r\n      res.push_back(tolower(s[i]));\r\n    }\r\n  }\r\n\r\n  for (int i = 0; i &lt; res.size(); i++) {\r\n    cout &lt;&lt; res[i];\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Подарок от Лены -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Подарок от Лены</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Модный номер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Модный номер</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Легионы Цезаря -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Легионы Цезаря</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Дороги в Бертауне -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Дороги в Бертауне</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.07</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Упражнение на строки</a>\r\n  <br><a href=\"#t2\">Задача B. Подарок от Лены</a>\r\n  <br><a href=\"#t3\">Задача C. Модный номер</a>\r\n  <br><a href=\"#t4\">Задача D. Легионы Цезаря</a>\r\n  <br><a href=\"#t5\">Задача E. Дороги в Бертауне</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Упражнение на строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Упражнение на строки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/118/problem/A\" target=\"_blank\">Задача 118A</a>\r\n      <br><a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.27</a>\r\n    </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  vector&lt;char&gt; res;\r\n  vector&lt;char&gt; vow{ 'a','A','o','O','y','Y','e','E','u','U','i','I' };\r\n\r\n  string s;\r\n  cin &gt;&gt; s;\r\n\r\n  for (int i = 0; i &lt; s.size(); i++) {\r\n    if (find(vow.begin(), vow.end(), s[i]) == vow.end()) {\r\n      res.push_back('.');\r\n      res.push_back(tolower(s[i]));\r\n    }\r\n  }\r\n\r\n  for (int i = 0; i &lt; res.size(); i++) {\r\n    cout &lt;&lt; res[i];\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Подарок от Лены -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Подарок от Лены</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Модный номер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Модный номер</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Легионы Цезаря -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Легионы Цезаря</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Дороги в Бертауне -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Дороги в Бертауне</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-120-kosSaratov.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-120-kosSaratov.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-120-kosSaratov.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-120-kosSaratov.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5945,10 +6053,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1272-Round605.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1272-Round605.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1272-Round605.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1272-Round605.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5960,10 +6068,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1296-Round617.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1296-Round617.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1296-Round617.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1296-Round617.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5975,10 +6083,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1313-Round622.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1313-Round622.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1313-Round622.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1313-Round622.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5990,10 +6098,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1325-Round628.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1325-Round628.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1325-Round628.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1325-Round628.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6005,10 +6113,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-134-TRound3.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-134-TRound3.html ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-134-TRound3.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-134-TRound3.html ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6020,10 +6128,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1351-TRound16.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1351-TRound16.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1351-TRound16.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1351-TRound16.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6035,10 +6143,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1352-Round640.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1352-Round640.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1352-Round640.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1352-Round640.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6050,10 +6158,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-136-Round97.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-136-Round97.html ***!
-  \**************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-136-Round97.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-136-Round97.html ***!
+  \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6065,10 +6173,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1360-Round644.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1360-Round644.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1360-Round644.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1360-Round644.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6080,10 +6188,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1367-Round650.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1367-Round650.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1367-Round650.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1367-Round650.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6095,10 +6203,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-141-Round101.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-141-Round101.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-141-Round101.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-141-Round101.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6110,10 +6218,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1420-Round672.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1420-Round672.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1420-Round672.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1420-Round672.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6125,10 +6233,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1490-Round702.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1490-Round702.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1490-Round702.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1490-Round702.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6140,10 +6248,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1512-Round713.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1512-Round713.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1512-Round713.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1512-Round713.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6155,10 +6263,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1520-Round719.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1520-Round719.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1520-Round719.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1520-Round719.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6170,10 +6278,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-155-Round109.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-155-Round109.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-155-Round109.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-155-Round109.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6185,10 +6293,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-158-vk-q1.html":
-/*!************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-158-vk-q1.html ***!
-  \************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-158-vk-q1.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-158-vk-q1.html ***!
+  \**********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6200,10 +6308,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-159-vk-q2.html":
-/*!************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-159-vk-q2.html ***!
-  \************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-159-vk-q2.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-159-vk-q2.html ***!
+  \**********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6215,10 +6323,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-163-vk-r2.html":
-/*!************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-163-vk-r2.html ***!
-  \************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-163-vk-r2.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-163-vk-r2.html ***!
+  \**********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6230,10 +6338,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1634-Round770.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1634-Round770.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1634-Round770.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1634-Round770.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6245,10 +6353,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1669-Round784.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1669-Round784.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1669-Round784.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1669-Round784.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6260,10 +6368,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1676-Round790.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1676-Round790.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1676-Round790.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1676-Round790.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6275,10 +6383,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-169-vk-r2.html":
-/*!************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-169-vk-r2.html ***!
-  \************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-169-vk-r2.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-169-vk-r2.html ***!
+  \**********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6290,10 +6398,10 @@ var code = "<article class=\"article\">\r\n  <br><a href=\"https://codeforces.co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1692-Round799.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1692-Round799.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1692-Round799.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1692-Round799.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6305,10 +6413,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1703-Round806.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1703-Round806.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1703-Round806.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1703-Round806.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6320,10 +6428,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1722-Round817.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1722-Round817.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1722-Round817.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1722-Round817.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6335,10 +6443,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1725-compfest.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1725-compfest.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1725-compfest.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1725-compfest.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6350,10 +6458,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1726-Round819.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1726-Round819.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1726-Round819.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1726-Round819.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6365,10 +6473,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1728-EdRound135.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1728-EdRound135.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1728-EdRound135.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1728-EdRound135.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6380,10 +6488,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1729-Round820.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1729-Round820.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1729-Round820.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1729-Round820.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6395,10 +6503,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1730-Round823.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1730-Round823.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1730-Round823.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1730-Round823.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6410,10 +6518,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1733-Round821.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1733-Round821.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1733-Round821.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1733-Round821.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6425,10 +6533,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1734-Round822.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1734-Round822.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1734-Round822.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1734-Round822.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6440,10 +6548,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1738-GlRound22.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1738-GlRound22.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1738-GlRound22.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1738-GlRound22.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6455,10 +6563,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1739-EdRound136.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1739-EdRound136.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1739-EdRound136.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1739-EdRound136.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6470,10 +6578,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1740-Round831.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1740-Round831.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1740-Round831.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1740-Round831.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6485,10 +6593,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1741-Round826.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1741-Round826.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1741-Round826.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1741-Round826.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6500,10 +6608,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1742-Round827.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1742-Round827.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1742-Round827.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1742-Round827.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6515,10 +6623,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1760-Round835.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1760-Round835.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1760-Round835.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1760-Round835.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6530,10 +6638,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1789-Round853.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1789-Round853.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1789-Round853.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1789-Round853.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6545,10 +6653,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1791-Round849.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1791-Round849.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1791-Round849.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1791-Round849.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6560,10 +6668,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1798-Round860.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1798-Round860.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1798-Round860.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1798-Round860.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6575,10 +6683,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1807-Round859.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1807-Round859.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1807-Round859.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1807-Round859.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6590,10 +6698,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1824-Round872.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1824-Round872.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1824-Round872.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1824-Round872.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6605,10 +6713,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1825-Round872.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1825-Round872.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1825-Round872.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1825-Round872.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6620,10 +6728,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1829-Round871.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1829-Round871.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1829-Round871.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1829-Round871.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6635,10 +6743,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1850-Round886.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1850-Round886.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1850-Round886.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1850-Round886.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6650,10 +6758,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1873-Round898.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1873-Round898.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1873-Round898.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1873-Round898.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6665,10 +6773,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1915-Round918.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1915-Round918.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1915-Round918.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1915-Round918.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6680,10 +6788,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1926-Round928.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1926-Round928.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1926-Round928.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1926-Round928.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6695,10 +6803,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1950-Round937.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1950-Round937.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1950-Round937.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1950-Round937.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6710,10 +6818,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1971-Round944.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1971-Round944.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1971-Round944.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1971-Round944.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6725,10 +6833,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1985-Round952.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1985-Round952.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1985-Round952.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1985-Round952.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6740,10 +6848,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-1999-Round964.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-1999-Round964.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-1999-Round964.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-1999-Round964.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6755,10 +6863,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-200-Round126.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-200-Round126.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-200-Round126.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-200-Round126.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6770,10 +6878,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2009-Round971.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2009-Round971.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2009-Round971.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2009-Round971.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6785,10 +6893,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2037-Round988.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2037-Round988.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2037-Round988.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2037-Round988.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6800,10 +6908,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2044-Round993.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2044-Round993.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2044-Round993.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2044-Round993.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6815,10 +6923,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2050-Round991.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2050-Round991.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2050-Round991.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2050-Round991.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6830,10 +6938,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2051-Round995.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2051-Round995.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2051-Round995.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2051-Round995.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6845,10 +6953,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2060-Round998.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2060-Round998.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2060-Round998.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2060-Round998.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6860,10 +6968,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2065-Round1003.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2065-Round1003.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2065-Round1003.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2065-Round1003.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6875,10 +6983,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2072-Round1006.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2072-Round1006.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2072-Round1006.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2072-Round1006.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6890,10 +6998,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2091-Round1013.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2091-Round1013.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2091-Round1013.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2091-Round1013.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6905,10 +7013,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2093-Round1016.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2093-Round1016.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2093-Round1016.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2093-Round1016.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6920,10 +7028,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2094-Round1017.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2094-Round1017.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2094-Round1017.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2094-Round1017.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6935,10 +7043,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2106-Round1020.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2106-Round1020.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2106-Round1020.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2106-Round1020.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6950,10 +7058,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2114-Round1027.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2114-Round1027.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2114-Round1027.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2114-Round1027.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6965,10 +7073,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2117-Round1029.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2117-Round1029.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2117-Round1029.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2117-Round1029.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6980,10 +7088,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2119-Round1035.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2119-Round1035.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2119-Round1035.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2119-Round1035.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6995,10 +7103,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2121-Round1032.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2121-Round1032.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2121-Round1032.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2121-Round1032.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7010,10 +7118,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2123-Round1034.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2123-Round1034.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2123-Round1034.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2123-Round1034.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7025,10 +7133,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2126-Round1037.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2126-Round1037.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2126-Round1037.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2126-Round1037.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7040,10 +7148,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2131-Round1042.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2131-Round1042.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2131-Round1042.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2131-Round1042.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7055,10 +7163,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2132-Round1043.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2132-Round1043.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2132-Round1043.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2132-Round1043.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7070,10 +7178,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2133-Round1044.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2133-Round1044.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2133-Round1044.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2133-Round1044.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7085,10 +7193,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2134-Round1045.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2134-Round1045.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2134-Round1045.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2134-Round1045.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7100,10 +7208,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2136-Round1046.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2136-Round1046.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2136-Round1046.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2136-Round1046.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7115,70 +7223,70 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2137-Round1047.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2137-Round1047.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2137-Round1047.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2137-Round1047.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2137\" target=\"_blank\">Codeforces 2137 Round 1047 (Div. 3) 2025.09.07</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Гипотеза Коллатца</a>\r\n  <br><a href=\"#t2\">Задача B. Веселая перестановка</a>\r\n  <br><a href=\"#t3\">Задача C. Максимальная четная сумма</a>\r\n  <br><a href=\"#t4\">Задача D. Замена по вхождениям</a>\r\n  <br><a href=\"#t5\">Задача E. Мексификация</a>\r\n  <br><a href=\"#t6\">Задача F. Префиксная максимальная инвариантность</a>\r\n  <br><a href=\"#t7\">Задача G. Плачь, река</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Гипотеза Коллатца -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Гипотеза Коллатца</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\ntypedef long double ld;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n  cout.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int k; // число повторений\r\n    int x; // конечное число\r\n    cin >> k >> x;\r\n\r\n    // решение\r\n    while (k--) {\r\n      x *= 2;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; x &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Веселая перестановка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Веселая перестановка</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n  cout.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // размер перестановки\r\n    cin >> n;\r\n    vector&lt;int&gt; p(n + 1);\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin >> p[i];\r\n    }\r\n\r\n    // решение\r\n    vector&lt;int&gt; q(n + 1);\r\n\r\n    // обратная перестановка\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      q[i] = n - p[i] + 1;\r\n    }\r\n\r\n    // вывод результата\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cout &lt;&lt; q[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Максимальная четная сумма -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Максимальная четная сумма</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n  cout.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    ll a, b; // два целых числа\r\n    cin >> a >> b;\r\n\r\n    // решение\r\n    ll res = -1;\r\n\r\n    if (a * b % 2 == 1) {\r\n      res = a * b + 1;\r\n    } else if (b % 2 == 0 && a * b % 4 == 0) {\r\n      res = a * b / 2 + 2;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Замена по вхождениям -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Замена по вхождениям</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Мексификация -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Мексификация</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Префиксная максимальная инвариантность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Префиксная максимальная инвариантность</h3>\r\n\r\n  <div class=\"t6\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Плачь, река -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Плачь, река</h3>\r\n\r\n  <div class=\"t7\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2137\" target=\"_blank\">Codeforces 2137 Round 1047 (Div. 3) 2025.09.07</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Гипотеза Коллатца</a>\r\n  <br><a href=\"#t2\">Задача B. Веселая перестановка</a>\r\n  <br><a href=\"#t3\">Задача C. Максимальная четная сумма</a>\r\n  <br><a href=\"#t4\">Задача D. Замена по вхождениям</a>\r\n  <br><a href=\"#t5\">Задача E. Мексификация</a>\r\n  <br><a href=\"#t6\">Задача F. Префиксная максимальная инвариантность</a>\r\n  <br><a href=\"#t7\">Задача G. Плачь, река</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Гипотеза Коллатца -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Гипотеза Коллатца</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\ntypedef long double ld;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n  cout.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int k; // число повторений\r\n    int x; // конечное число\r\n    cin &gt;&gt; k &gt;&gt; x;\r\n\r\n    // решение\r\n    while (k--) {\r\n      x *= 2;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; x &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Веселая перестановка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Веселая перестановка</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n  cout.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // размер перестановки\r\n    cin &gt;&gt; n;\r\n    vector&lt;int&gt; p(n + 1);\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin &gt;&gt; p[i];\r\n    }\r\n\r\n    // решение\r\n    vector&lt;int&gt; q(n + 1);\r\n\r\n    // обратная перестановка\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      q[i] = n - p[i] + 1;\r\n    }\r\n\r\n    // вывод результата\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cout &lt;&lt; q[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Максимальная четная сумма -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Максимальная четная сумма</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n  cout.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    ll a, b; // два целых числа\r\n    cin &gt;&gt; a &gt;&gt; b;\r\n\r\n    // решение\r\n    ll res = -1;\r\n\r\n    if (a * b % 2 == 1) {\r\n      res = a * b + 1;\r\n    } else if (b % 2 == 0 && a * b % 4 == 0) {\r\n      res = a * b / 2 + 2;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Замена по вхождениям -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Замена по вхождениям</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Мексификация -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Мексификация</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Префиксная максимальная инвариантность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Префиксная максимальная инвариантность</h3>\r\n\r\n  <div class=\"t6\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Плачь, река -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Плачь, река</h3>\r\n\r\n  <div class=\"t7\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2148-Round1050.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2148-Round1050.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2148-Round1050.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2148-Round1050.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2148\" target=\"_blank\">Codeforces 2148 Round 1050 (Div. 4) 2025.09.13</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Возвышенная последовательность</a>\r\n  <br><a href=\"#t2\">Задача B. Лазеры</a>\r\n  <br><a href=\"#t3\">Задача C. Тест на выносливость</a>\r\n  <br><a href=\"#t4\">Задача D. Уничтожение полей одуванчиков</a>\r\n  <br><a href=\"#t5\">Задача E. Разделение</a>\r\n  <br><a href=\"#t6\">Задача F. Гравити Фолз</a>\r\n  <br><a href=\"#t7\">Задача G. Последнее желание фермера Джона</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Возвышенная последовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Возвышенная последовательность</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int x; // целое число\r\n    int n; // длина последовательности\r\n    cin >> x >> n;\r\n\r\n    // решение и вывод результата\r\n    if (n % 2 == 0) {\r\n      cout &lt;&lt; 0 &lt;&lt; '\\n';\r\n    } else {\r\n      cout &lt;&lt; x &lt;&lt; '\\n';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Лазеры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Лазеры</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число горизонтальных лазеров\r\n    int m; // число вертикальных лазеров\r\n    int x, y; // координаты конечной точки\r\n    cin >> n >> m >> x >> y;\r\n    int tmp;\r\n\r\n    // нам не важны координаты лазеров,\r\n    // потому что мы должны пересечь их все\r\n    // поэтому просто считываем их во временную переменную\r\n    for (int i = 0; i &lt; n + m; i++) {\r\n      cin >> tmp;\r\n    }\r\n\r\n    // решение и вывод результата\r\n    cout &lt;&lt; n + m &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Тест на выносливость -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Тест на выносливость</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n  cout.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число требований\r\n    int m; // число минут\r\n    cin >> n >> m;\r\n\r\n    vector&lt;int&gt; A(n+1);\r\n    // A[i] - минута команды i\r\n    vector&lt;int&gt; B(n+1);\r\n    // B[i] - на какой стороне надо находиться в минуту A[i]\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin >> A[i] >> B[i];\r\n    }\r\n\r\n    // решение\r\n    bool side = 0; // на какоей стороне зала Фермер Джон\r\n    int cnt = 0; // число баллов\r\n    int minute = 0; // текущая минута\r\n\r\n    // переберем все команды\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      if ( (A[i] - minute) % 2 == 0) {\r\n        // если до следующей команды четное число минут\r\n        if (side == B[i]) {\r\n          // если ФД уже на той стороне на которую должен попасть\r\n          // добавляем все минуты\r\n          cnt += A[i] - minute;\r\n        } else {\r\n          // если ФД на другой стороне\r\n          // одну минуту придется подождать\r\n          cnt += A[i] - minute - 1;\r\n          side = !side;\r\n        }\r\n      } else {\r\n        // если до следующей команды нечетное число минут\r\n        if (side == B[i]) {\r\n          // если ФД уже на той стороне на которую должен попасть\r\n          // одну минуту придется подождать\r\n          cnt += A[i] - minute - 1;\r\n        } else {\r\n          // если ФД на другой стороне\r\n          // добавляем все минуты\r\n          cnt += A[i] - minute;\r\n          side = !side;\r\n        }\r\n      }\r\n      minute = A[i];\r\n    }\r\n\r\n    // если еще остались минуты\r\n    cnt += m - A[n];\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Уничтожение полей одуванчиков -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Уничтожение полей одуванчиков</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <h4>Пример 2</h4>\r\n<pre>\r\n1\r\n8\r\n1 3 5 7 9 11 13 15\r\n</pre>\r\n    <code>48</code>\r\n\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n  cout.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число полей\r\n    cin >> n;\r\n\r\n    vector&lt;long long&gt; A; // поля с четным числом одуванчиков\r\n    // A[i] - число одуванчиков на i-м поле\r\n    vector&lt;long long&gt; B; // поля с нечетным числом одуванчиков\r\n    // B[i] - число одуванчиков на i-м поле\r\n    long long in; // число одуванчиков на следующем поле\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> in;\r\n      if (in % 2 == 0) {\r\n        A.push_back(in);\r\n      } else {\r\n        B.push_back(in);\r\n      }\r\n    }\r\n\r\n    // решение\r\n    bool mode = 0;\r\n    // состояние газонокосилки\r\n    // 0 - выключенная\r\n    // 1 - включенная\r\n    long long cnt = 0; // число срезанных одуванчиков\r\n\r\n    // отсортируем поля B, потому что газонокосилка\r\n    // на одном поле будет включаться, на другом выключаться\r\n    // пусть выключалается на полях с минимальным числом одуванчиков\r\n    sort(B.begin(), B.end());\r\n\r\n    // сначала нужно включить газонокасилку\r\n    // для этого надо посетить поле B с макс числом одуванчиков\r\n    if (B.size() > 0) {\r\n      cnt += B[B.size() - 1];\r\n      mode = !mode;\r\n    }\r\n\r\n    // пока газонокосилка включена срежем все одуванчики на полях A\r\n    for (int i = 0; mode && i &lt; A.size(); i++) {\r\n      cnt += A[i];\r\n    }\r\n\r\n    // метод двух указателей\r\n    int p1 = 0;\r\n    int p2 = B.size() - 2;\r\n    while (p2 >= p1) {\r\n      if (mode) {\r\n        p1++;\r\n      } else {\r\n        cnt += B[p2--];\r\n      }\r\n      mode = !mode;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Разделение -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Разделение</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // число мультимножеств\r\n    cin >> n >> k;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    // решение\r\n    long long cnt = 0; // число потрясающих подмассивов\r\n    bool flag = true; // можно собрать подмассив\r\n    map&lt;int, int&gt; Freq;\r\n    pair&lt;int, int&gt; tmp;\r\n\r\n    // сохраним массив в частотный словарь\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (Freq.find(A[i]) == Freq.end()) {\r\n        tmp.first = A[i];\r\n        tmp.second = 1;\r\n        Freq.insert(tmp);\r\n      } else {\r\n        Freq[A[i]]++;\r\n      }\r\n    }\r\n\r\n    // макс число одинаковых элементов в подмассиве\r\n    vector&lt;int&gt; Count_el_ok(n + 1);\r\n\r\n    // чтобы можно было создать потрясающий подмассив\r\n    // каждое число в массиве должно встречаться\r\n    // число раз которое делится на k\r\n    for (auto el : Freq) {\r\n      if (el.second % k != 0) {\r\n        flag = false;\r\n      }\r\n      Count_el_ok[el.first] = el.second / k;\r\n    }\r\n\r\n    vector&lt;long long&gt; Buf(n + 1);\r\n    // метод двух указателей\r\n    int l = 0;\r\n    for (int r = 0; flag && r &lt; n; r++) {\r\n      Buf[A[r]]++;\r\n      while (Buf[A[r]] > Count_el_ok[A[r]]) {\r\n        Buf[A[l]]--;\r\n        l++;\r\n      }\r\n      cnt += r - l + 1;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Гравити Фолз -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Гравити Фолз</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число массивов\r\n    cin >> n;\r\n    int k = 0; // длина массива, для каждого разная\r\n    int k_max = 0; // максимальная длина массива\r\n\r\n    vector&lt;vector&lt;int&gt; &gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> k;\r\n      if (k > k_max) {\r\n        k_max = k;\r\n      }\r\n      A[i].resize(k);\r\n      for (int j = 0; j &lt; k; j++) {\r\n        cin >> A[i][j];\r\n      }\r\n    }\r\n\r\n    // решение\r\n    vector&lt;int&gt; Res;\r\n    bool flag = true;\r\n\r\n    while (flag) {\r\n      flag = false;\r\n      vector&lt;vector&lt;int&gt; &gt; Buf;\r\n      vector&lt;int&gt; H;\r\n      for (int i = 0; i &lt; n; i++) {\r\n        if (A[i].size() > Res.size()) {\r\n          Buf.push_back(H);\r\n          for (int j = Res.size(); j &lt; A[i].size(); j++) {\r\n            Buf[Buf.size() - 1].push_back(A[i][j]);\r\n          }\r\n        }\r\n      }\r\n      if (Buf.size() != 0) {\r\n        flag = true;\r\n        sort(Buf.begin(), Buf.end());\r\n        for (int i = 0; i &lt; Buf[0].size(); i++) {\r\n          Res.push_back(Buf[0][i]);\r\n        }\r\n      }\r\n    }\r\n\r\n\r\n    // вывод результата\r\n    for (int i = 0; i &lt; Res.size(); i++) {\r\n      cout &lt;&lt; Res[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Последнее желание фермера Джона -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Последнее желание фермера Джона</h3>\r\n\r\n  <div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n#include &lt;set&gt;\r\n\r\nusing namespace std;\r\nusing ll = long long;\r\nconst int NMAX = 2 * 1e5 + 10;\r\nint lp[NMAX];\r\n\r\nvoid f() {\r\n  // с помощью решета эратосфена найдем для каждого i, число p[i], которое будет содержать минимальный простой делитель числа i\r\n  for (int i = 2; i &lt; NMAX; i++) {\r\n    if (lp[i] == 0) {\r\n      lp[i] = i;\r\n      for (int j = i; j &lt; NMAX; j += i) {\r\n        if (lp[j] == 0) {\r\n          lp[j] = i;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\nvoid solve() {\r\n  ll n;\r\n  cin >> n;\r\n  vector&lt;int&gt; ar(n);\r\n  map&lt;pair&lt;int, int&gt;, int&gt; sl;\r\n  for (int i = 0; i &lt; n; i++) {\r\n    cin >> ar[i];\r\n  }\r\n  int maxi = 0;\r\n  bool pflag = false;\r\n  set&lt;pair&lt;int, int&gt; &gt; hh;\r\n  // про GCD удобно думать про функцию с точки зрения простых делителей, то есть если мы знаем разложение двух чисел на простые множители и в первом числе простое число p входит в степени a1, а во второе в степени в a2, то в GCD оно будет входить в степени min(a1,a2)\r\n\r\n  // тогда верен следующий факт, GCD на следующем префиксе стал меньше  степень какого-то простого делителя изменилась в нем(повыситься она не могла)\r\n  // тогда пусть у нас есть какое то p^t которое встречается в k числах, мы можем поставить их все на префиксе, а дальше поставить какое то число, где p встречается в более меньшей степени и это нам подойдет так как GCD уменьшится\r\n\r\n\r\n  // заметим что нам выгодно брать число p^t которое встречается в как можно большем колиечстве чисел, за исключением случая, когда оно встречается во всех числах, потому что тогда не будет момента, когда оно исчезнет\r\n\r\n  for (int i = 0; i &lt; n; i++) {\r\n    while (ar[i] != 1) {\r\n      // быстро разложим число на простые множиели за O(количество простых множителей) с помощью массива lp\r\n      int st = 0;\r\n      int pr = lp[ar[i]];\r\n      while (pr == lp[ar[i]]) {\r\n        st++;\r\n        ar[i] /= lp[ar[i]];\r\n      }\r\n      // далее обновивм в словаре для каждой пары p^t(храним ее как (p,t)) сколько раз она встречается(более того если встречается пара p^t, то мы будет считать что встретились и все меньшие пары p^0, p^1, ... , p^t-1, так как с помощью p^t, можно образовывать и такие цепочки тоже)\r\n      for (int j = 0; j &lt;= st; j++) {\r\n        sl[{pr, j}]++;\r\n        if (sl[{pr, j}] != (i + 1)) {\r\n          maxi = max(sl[{pr, j}], maxi);\r\n        } else {\r\n          hh.insert({ pr, j });\r\n        }\r\n      }\r\n      // отдельно заведем set пар hh, который будет хранить те пары которые встретились настолько много раз, чтомы не можем их использовать на данном шаге(то есть i + 1 раз)\r\n      // заметим что их будет не очень много так как это могут быть только степени простых делителей числа ar[0])\r\n    }\r\n    // обновим также ответ из set'а пар с максимальными значениями\r\n    for (auto c : hh) {\r\n      if (sl[{c.first, c.second}] != (i + 1)) {\r\n        maxi = max(sl[{c.first, c.second}], maxi);\r\n      }\r\n    }\r\n    cout &lt;&lt; maxi &lt;&lt; ' ';\r\n  }\r\n  cout &lt;&lt; '\\n';\r\n}\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(0);\r\n  cout.tie(0);\r\n  int t;\r\n  cin >> t;\r\n  f();\r\n  //   t=1;\r\n  while (t--) {\r\n    solve();\r\n  }\r\n  return 0;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2148\" target=\"_blank\">Codeforces 2148 Round 1050 (Div. 4) 2025.09.13</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Возвышенная последовательность</a>\r\n  <br><a href=\"#t2\">Задача B. Лазеры</a>\r\n  <br><a href=\"#t3\">Задача C. Тест на выносливость</a>\r\n  <br><a href=\"#t4\">Задача D. Уничтожение полей одуванчиков</a>\r\n  <br><a href=\"#t5\">Задача E. Разделение</a>\r\n  <br><a href=\"#t6\">Задача F. Гравити Фолз</a>\r\n  <br><a href=\"#t7\">Задача G. Последнее желание фермера Джона</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Возвышенная последовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Возвышенная последовательность</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int x; // целое число\r\n    int n; // длина последовательности\r\n    cin &gt;&gt; x &gt;&gt; n;\r\n\r\n    // решение и вывод результата\r\n    if (n % 2 == 0) {\r\n      cout &lt;&lt; 0 &lt;&lt; '\\n';\r\n    } else {\r\n      cout &lt;&lt; x &lt;&lt; '\\n';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Лазеры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Лазеры</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число горизонтальных лазеров\r\n    int m; // число вертикальных лазеров\r\n    int x, y; // координаты конечной точки\r\n    cin &gt;&gt; n &gt;&gt; m &gt;&gt; x &gt;&gt; y;\r\n    int tmp;\r\n\r\n    // нам не важны координаты лазеров,\r\n    // потому что мы должны пересечь их все\r\n    // поэтому просто считываем их во временную переменную\r\n    for (int i = 0; i &lt; n + m; i++) {\r\n      cin &gt;&gt; tmp;\r\n    }\r\n\r\n    // решение и вывод результата\r\n    cout &lt;&lt; n + m &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Тест на выносливость -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Тест на выносливость</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n  cout.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число требований\r\n    int m; // число минут\r\n    cin &gt;&gt; n &gt;&gt; m;\r\n\r\n    vector&lt;int&gt; A(n+1);\r\n    // A[i] - минута команды i\r\n    vector&lt;int&gt; B(n+1);\r\n    // B[i] - на какой стороне надо находиться в минуту A[i]\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin &gt;&gt; A[i] &gt;&gt; B[i];\r\n    }\r\n\r\n    // решение\r\n    bool side = 0; // на какоей стороне зала Фермер Джон\r\n    int cnt = 0; // число баллов\r\n    int minute = 0; // текущая минута\r\n\r\n    // переберем все команды\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      if ( (A[i] - minute) % 2 == 0) {\r\n        // если до следующей команды четное число минут\r\n        if (side == B[i]) {\r\n          // если ФД уже на той стороне на которую должен попасть\r\n          // добавляем все минуты\r\n          cnt += A[i] - minute;\r\n        } else {\r\n          // если ФД на другой стороне\r\n          // одну минуту придется подождать\r\n          cnt += A[i] - minute - 1;\r\n          side = !side;\r\n        }\r\n      } else {\r\n        // если до следующей команды нечетное число минут\r\n        if (side == B[i]) {\r\n          // если ФД уже на той стороне на которую должен попасть\r\n          // одну минуту придется подождать\r\n          cnt += A[i] - minute - 1;\r\n        } else {\r\n          // если ФД на другой стороне\r\n          // добавляем все минуты\r\n          cnt += A[i] - minute;\r\n          side = !side;\r\n        }\r\n      }\r\n      minute = A[i];\r\n    }\r\n\r\n    // если еще остались минуты\r\n    cnt += m - A[n];\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Уничтожение полей одуванчиков -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Уничтожение полей одуванчиков</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <h4>Пример 2</h4>\r\n<pre>\r\n1\r\n8\r\n1 3 5 7 9 11 13 15\r\n</pre>\r\n    <code>48</code>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода-вывода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n  cout.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число полей\r\n    cin &gt;&gt; n;\r\n\r\n    vector&lt;long long&gt; A; // поля с четным числом одуванчиков\r\n    // A[i] - число одуванчиков на i-м поле\r\n    vector&lt;long long&gt; B; // поля с нечетным числом одуванчиков\r\n    // B[i] - число одуванчиков на i-м поле\r\n    long long in; // число одуванчиков на следующем поле\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; in;\r\n      if (in % 2 == 0) {\r\n        A.push_back(in);\r\n      } else {\r\n        B.push_back(in);\r\n      }\r\n    }\r\n\r\n    // решение\r\n    bool mode = 0;\r\n    // состояние газонокосилки\r\n    // 0 - выключенная\r\n    // 1 - включенная\r\n    long long cnt = 0; // число срезанных одуванчиков\r\n\r\n    // отсортируем поля B, потому что газонокосилка\r\n    // на одном поле будет включаться, на другом выключаться\r\n    // пусть выключалается на полях с минимальным числом одуванчиков\r\n    sort(B.begin(), B.end());\r\n\r\n    // сначала нужно включить газонокасилку\r\n    // для этого надо посетить поле B с макс числом одуванчиков\r\n    if (B.size() &gt; 0) {\r\n      cnt += B[B.size() - 1];\r\n      mode = !mode;\r\n    }\r\n\r\n    // пока газонокосилка включена срежем все одуванчики на полях A\r\n    for (int i = 0; mode && i &lt; A.size(); i++) {\r\n      cnt += A[i];\r\n    }\r\n\r\n    // метод двух указателей\r\n    int p1 = 0;\r\n    int p2 = B.size() - 2;\r\n    while (p2 &gt;= p1) {\r\n      if (mode) {\r\n        p1++;\r\n      } else {\r\n        cnt += B[p2--];\r\n      }\r\n      mode = !mode;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Разделение -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Разделение</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // число мультимножеств\r\n    cin &gt;&gt; n &gt;&gt; k;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    // решение\r\n    long long cnt = 0; // число потрясающих подмассивов\r\n    bool flag = true; // можно собрать подмассив\r\n    map&lt;int, int&gt; Freq;\r\n    pair&lt;int, int&gt; tmp;\r\n\r\n    // сохраним массив в частотный словарь\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (Freq.find(A[i]) == Freq.end()) {\r\n        tmp.first = A[i];\r\n        tmp.second = 1;\r\n        Freq.insert(tmp);\r\n      } else {\r\n        Freq[A[i]]++;\r\n      }\r\n    }\r\n\r\n    // макс число одинаковых элементов в подмассиве\r\n    vector&lt;int&gt; Count_el_ok(n + 1);\r\n\r\n    // чтобы можно было создать потрясающий подмассив\r\n    // каждое число в массиве должно встречаться\r\n    // число раз которое делится на k\r\n    for (auto el : Freq) {\r\n      if (el.second % k != 0) {\r\n        flag = false;\r\n      }\r\n      Count_el_ok[el.first] = el.second / k;\r\n    }\r\n\r\n    vector&lt;long long&gt; Buf(n + 1);\r\n    // метод двух указателей\r\n    int l = 0;\r\n    for (int r = 0; flag && r &lt; n; r++) {\r\n      Buf[A[r]]++;\r\n      while (Buf[A[r]] &gt; Count_el_ok[A[r]]) {\r\n        Buf[A[l]]--;\r\n        l++;\r\n      }\r\n      cnt += r - l + 1;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Гравити Фолз -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Гравити Фолз</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // число массивов\r\n    cin &gt;&gt; n;\r\n    int k = 0; // длина массива, для каждого разная\r\n    int k_max = 0; // максимальная длина массива\r\n\r\n    vector&lt;vector&lt;int&gt; &gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; k;\r\n      if (k &gt; k_max) {\r\n        k_max = k;\r\n      }\r\n      A[i].resize(k);\r\n      for (int j = 0; j &lt; k; j++) {\r\n        cin &gt;&gt; A[i][j];\r\n      }\r\n    }\r\n\r\n    // решение\r\n    vector&lt;int&gt; Res;\r\n    bool flag = true;\r\n\r\n    while (flag) {\r\n      flag = false;\r\n      vector&lt;vector&lt;int&gt; &gt; Buf;\r\n      vector&lt;int&gt; H;\r\n      for (int i = 0; i &lt; n; i++) {\r\n        if (A[i].size() &gt; Res.size()) {\r\n          Buf.push_back(H);\r\n          for (int j = Res.size(); j &lt; A[i].size(); j++) {\r\n            Buf[Buf.size() - 1].push_back(A[i][j]);\r\n          }\r\n        }\r\n      }\r\n      if (Buf.size() != 0) {\r\n        flag = true;\r\n        sort(Buf.begin(), Buf.end());\r\n        for (int i = 0; i &lt; Buf[0].size(); i++) {\r\n          Res.push_back(Buf[0][i]);\r\n        }\r\n      }\r\n    }\r\n\r\n\r\n    // вывод результата\r\n    for (int i = 0; i &lt; Res.size(); i++) {\r\n      cout &lt;&lt; Res[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Последнее желание фермера Джона -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Последнее желание фермера Джона</h3>\r\n\r\n  <div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n#include &lt;set&gt;\r\n\r\nusing namespace std;\r\nusing ll = long long;\r\nconst int NMAX = 2 * 1e5 + 10;\r\nint lp[NMAX];\r\n\r\nvoid f() {\r\n  // с помощью решета эратосфена найдем для каждого i,\r\n  // число p[i], которое будет содержать\r\n  // минимальный простой делитель числа i\r\n  for (int i = 2; i &lt; NMAX; i++) {\r\n    if (lp[i] == 0) {\r\n      lp[i] = i;\r\n      for (int j = i; j &lt; NMAX; j += i) {\r\n        if (lp[j] == 0) {\r\n          lp[j] = i;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\nvoid solve() {\r\n  ll n;\r\n  cin &gt;&gt; n;\r\n  vector&lt;int&gt; ar(n);\r\n  map&lt;pair&lt;int, int&gt;, int&gt; sl;\r\n  for (int i = 0; i &lt; n; i++) {\r\n    cin &gt;&gt; ar[i];\r\n  }\r\n  int maxi = 0;\r\n  bool pflag = false;\r\n  set&lt;pair&lt;int, int&gt; &gt; hh;\r\n  // про GCD удобно думать про функцию с точки зрения\r\n  // простых делителей, то есть если мы знаем разложение\r\n  // двух чисел на простые множители и в первом числе\r\n  // простое число p входит в степени a1,\r\n  // а во второе в степени в a2, то в GCD оно\r\n  // будет входить в степени min(a1,a2)\r\n\r\n  // тогда верен следующий факт, GCD на следующем префиксе\r\n  // стал меньше  степень какого-то простого делителя\r\n  // изменилась в нем(повыситься она не могла)\r\n  // тогда пусть у нас есть какое то p^t которое встречается\r\n  // в k числах, мы можем поставить их все на префиксе,\r\n  // а дальше поставить какое то число, где p встречается\r\n  // в более меньшей степени и это нам подойдет так как GCD уменьшится\r\n\r\n\r\n  // заметим что нам выгодно брать число p^t которое\r\n  // встречается в как можно большем колиечстве чисел,\r\n  // за исключением случая, когда оно встречается во\r\n  // всех числах, потому что тогда не будет момента,\r\n  // когда оно исчезнет\r\n\r\n  for (int i = 0; i &lt; n; i++) {\r\n    while (ar[i] != 1) {\r\n      // быстро разложим число на простые множиели\r\n      // за O(количество простых множителей) с помощью массива lp\r\n      int st = 0;\r\n      int pr = lp[ar[i]];\r\n      while (pr == lp[ar[i]]) {\r\n        st++;\r\n        ar[i] /= lp[ar[i]];\r\n      }\r\n      // далее обновивм в словаре для каждой пары p^t\r\n      // (храним ее как (p,t)) сколько раз она встречается\r\n      // (более того если встречается пара p^t, то мы будет\r\n      // считать что встретились и все меньшие пары\r\n      // p^0, p^1, ... , p^t-1, так как с помощью p^t,\r\n      // можно образовывать и такие цепочки тоже)\r\n      for (int j = 0; j &lt;= st; j++) {\r\n        sl[{pr, j}]++;\r\n        if (sl[{pr, j}] != (i + 1)) {\r\n          maxi = max(sl[{pr, j}], maxi);\r\n        } else {\r\n          hh.insert({ pr, j });\r\n        }\r\n      }\r\n      // отдельно заведем set пар hh, который будет хранить\r\n      // те пары которые встретились настолько много раз,\r\n      // чтомы не можем их использовать на данном шаге\r\n      // (то есть i + 1 раз)\r\n      // заметим что их будет не очень много так как это\r\n      // могут быть только степени простых делителей числа ar[0])\r\n    }\r\n    // обновим также ответ из set'а пар с максимальными\r\n    // значениями\r\n    for (auto c : hh) {\r\n      if (sl[{c.first, c.second}] != (i + 1)) {\r\n        maxi = max(sl[{c.first, c.second}], maxi);\r\n      }\r\n    }\r\n    cout &lt;&lt; maxi &lt;&lt; ' ';\r\n  }\r\n  cout &lt;&lt; '\\n';\r\n}\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(0);\r\n  cout.tie(0);\r\n  int t;\r\n  cin &gt;&gt; t;\r\n  f();\r\n  //   t=1;\r\n  while (t--) {\r\n    solve();\r\n  }\r\n  return 0;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2149-Round1054.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2149-Round1054.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2149-Round1054.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2149-Round1054.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2149\" target=\"_blank\">Codeforces 2149 Round 1054 (Div. 3) 2025.09.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Будь позитивным</a>\r\n  <br><a href=\"#t2\">Задача B. Неклассические пары</a>\r\n  <br><a href=\"#t3\">Задача C. MEX rose</a>\r\n  <br><a href=\"#t4\">Задача D. А и В</a>\r\n  <br><a href=\"#t5\">Задача E. Скрытые знания древних</a>\r\n  <br><a href=\"#t6\">Задача F. Незуко на поляне</a>\r\n  <br><a href=\"#t7\">Задача G. Buratsuta 3</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Будь позитивным -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Будь позитивным</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>К нам может придти только одно из трех чисел. Если 1, то ничего делать не нужно, потому что при умножении на 1 произведение не меняется. Если 0, то нужна одна операция чтобы к нему прибавить 1, чотбы произведение не стало равно 0. Если -1 пришла первый раз, то за две операции надо ее изменить на 1, если пришла второй раз, то нужно отменить две операции над первой единицей.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    cin >> n;\r\n\r\n    // решение\r\n    int cnt = 0;\r\n    int tmp;\r\n    bool prev_neg = false;\r\n\r\n    while (n--) {\r\n      cin >> tmp;\r\n      switch (tmp) {\r\n      case 0: cnt++; break;\r\n      case -1: if (prev_neg) {\r\n          cnt -= 2;\r\n        } else {\r\n          cnt += 2;\r\n        }\r\n        prev_neg = !prev_neg;\r\n        break;\r\n      }\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Неклассические пары -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Неклассические пары</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Минимальная разница среди пар получится если массив отсортировать и взять соседние пары.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    cin >> n;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    // решение\r\n    int res = 0;\r\n    int dif = 0;\r\n    sort(A.begin(), A.end());\r\n\r\n    for (int i = 0; i &lt; n - 1; i += 2) {\r\n      dif = A[i + 1] - A[i];\r\n      res = max(res, dif);\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. MEX rose -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. MEX rose</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Посчитаем, сколько различных чисел меньше MEX, которых нет в массиве. Посчитаем сколько чисел равно MEX. Большее из этих чисел будет ответом.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // MEX минимальное исключенное\r\n    cin >> n >> k;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    // решение\r\n    // для подсчета чисел меньше MEX\r\n    vector&lt;int&gt; F(k, 0);\r\n    int lt_mex_cnt = 0;\r\n\r\n    // для подсчета чисел равных MEX\r\n    int mex_cnt = 0;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (A[i] &lt; k && F[A[i]] == 0) {\r\n        lt_mex_cnt++;\r\n        F[A[i]] = 1;\r\n      }\r\n      if (A[i] == k) {\r\n        mex_cnt++;\r\n      }\r\n    }\r\n\r\n    // сколько нужно еще чисел меньше MEX\r\n    int d = k - lt_mex_cnt;\r\n\r\n    int res = 0;\r\n    if (mex_cnt > d) {\r\n      res = mex_cnt;\r\n    } else {\r\n      res = d;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. А и В -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. А и В</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Посчитаем префиксные суммы спара и слева.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина строки\r\n    cin >> n;\r\n    vector&lt;char&gt; A(n + 1);\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    // решение\r\n    vector&lt;long long&gt; A_count_left(n + 2);\r\n    vector&lt;long long&gt; A_count_right(n + 2);\r\n    vector&lt;long long&gt; A_sum_left(n + 2);\r\n    vector&lt;long long&gt; A_sum_right(n + 2);\r\n    vector&lt;long long&gt; B_count_left(n + 2);\r\n    vector&lt;long long&gt; B_count_right(n + 2);\r\n    vector&lt;long long&gt; B_sum_left(n + 2);\r\n    vector&lt;long long&gt; B_sum_right(n + 2);\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      A_sum_left[i] = A_sum_left[i - 1] + A_count_left[i - 1];\r\n      A_count_left[i] = A_count_left[i - 1];\r\n      if (A[i] == 'a') {\r\n        A_count_left[i]++;\r\n      }\r\n    }\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      B_sum_left[i] = B_sum_left[i - 1] + B_count_left[i - 1];\r\n      B_count_left[i] = B_count_left[i - 1];\r\n      if (A[i] == 'b') {\r\n        B_count_left[i]++;\r\n      }\r\n    }\r\n\r\n    for (int i = n; i >= 1; i--) {\r\n      A_sum_right[i] = A_sum_right[i + 1] + A_count_right[i + 1];\r\n      A_count_right[i] = A_count_right[i + 1];\r\n      if (A[i] == 'a') {\r\n        A_count_right[i]++;\r\n      }\r\n    }\r\n\r\n    for (int i = n; i >= 1; i--) {\r\n      B_sum_right[i] = B_sum_right[i + 1] + B_count_right[i + 1];\r\n      B_count_right[i] = B_count_right[i + 1];\r\n      if (A[i] == 'b') {\r\n        B_count_right[i]++;\r\n      }\r\n    }\r\n\r\n    long long res = 1e12;\r\n    long long buf = 0;\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      if (A[i] == 'a') {\r\n        buf = A_sum_left[i] + A_sum_right[i];\r\n        buf = buf - (A_count_left[i - 1] * (A_count_left[i - 1] + 1) / 2) -\r\n          (A_count_right[i + 1] * (A_count_right[i + 1] + 1) / 2);\r\n      } else {\r\n        buf = B_sum_left[i] + B_sum_right[i];\r\n        buf = buf - (B_count_left[i - 1] * (B_count_left[i - 1] + 1) / 2) -\r\n          (B_count_right[i + 1] * (B_count_right[i + 1] + 1) / 2);\r\n      }\r\n      res = min(buf, res);\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Скрытые знания древних -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Скрытые знания древних</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // число различных чисел\r\n    int l; // мин длина таблички\r\n    int r; // макс длина таблички\r\n    cin >> n >> k >> l >> r;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    // решение\r\n    vector&lt;int&gt; Mark(n);\r\n    map&lt;int, int&gt; mp;\r\n    int uk = 0;\r\n\r\n    while (uk != n && mp.size() != k) {\r\n      mp[A[uk]]++;\r\n      uk++;\r\n    }\r\n\r\n    vector&lt;int&gt; Pos_left(n);\r\n    for (int id = 0; id &lt; n; id++) {\r\n\r\n      if (mp.size() == k) {\r\n        Pos_left[id] = uk;\r\n      } else {\r\n        Mark[id] = -1;\r\n      }\r\n\r\n      mp[A[id]]--;\r\n\r\n      if (mp[A[id]] == 0) {\r\n        mp.erase(A[id]);\r\n      }\r\n\r\n      while (uk != n && mp.size() != k) {\r\n        mp[A[uk]]++;\r\n        uk++;\r\n      }\r\n    }\r\n\r\n    uk = 0;\r\n    bool flag = true;\r\n    map&lt;int, int&gt; mp2;\r\n    while (flag) {\r\n      if (uk != n && mp2.size() &lt; k) {\r\n        mp2[A[uk]]++;\r\n        uk++;\r\n      } else {\r\n        if (uk != n && mp2.size() == k) {\r\n          if (mp2.find(A[uk]) != mp2.end()) {\r\n            mp2[A[uk]]++;\r\n            uk++;\r\n          } else {\r\n            flag = false;\r\n          }\r\n        } else {\r\n          flag = false;\r\n        }\r\n      }\r\n    }\r\n\r\n    vector&lt;int&gt; Pos_right(n);\r\n    for (int id = 0; id &lt; n; id++) {\r\n      if (mp2.size() == k) {\r\n        Pos_right[id] = uk;\r\n      } else {\r\n        Mark[id] = -1;\r\n      }\r\n      mp2[A[id]]--;\r\n      if (mp2[A[id]] == 0) {\r\n        mp2.erase(A[id]);\r\n      }\r\n      bool flag = true;\r\n      while (flag) {\r\n        if (uk != n && mp2.size() &lt; k) {\r\n          mp2[A[uk]]++;\r\n          uk++;\r\n        } else {\r\n          if (uk != n && mp2.size() == k) {\r\n            if (mp2.find(A[uk]) != mp2.end()) {\r\n              mp2[A[uk]]++;\r\n              uk++;\r\n            } else {\r\n              flag = false;\r\n            }\r\n          } else {\r\n            flag = false;\r\n          }\r\n        }\r\n      }\r\n    }\r\n\r\n    long long res = 0;\r\n    long long abs_l, abs_r;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      abs_l = max(l + i, Pos_left[i]);\r\n      abs_r = min(r + i, Pos_right[i]);\r\n\r\n      if (abs_r >= abs_l) {\r\n        res += abs_r - abs_l + 1;\r\n      }\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n\r\n  <details>\r\n    <summary>Мое решение</summary>\r\n    <p>Метод двух указателей. Ставим левый и правый указатели на нулевой элемент. Правым проходим l элементов и заносим элементы в map.</p>\r\n    <p>Метод скользящего окна. Если в map попало больше k уникальных элементов, то двигаем окно из l элементов вправо.</p>\r\n    <p>Метод меняющегося окна. Если в map попало меньше k уникальных элементов, то двигаем правый указатель.</p>\r\n    <p>Если в map ровно k уникальных элементов, прибавляе 1 к результату и двигаем правый указатель вправо пока в окне не станет r элементов.</p>\r\n    <p>Двигаем левый указатель вправо на 1, правый указатель влево на позицию pl + l. Повторяем все сначала пока левый указатель не станет на l элементов левее конца массива.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // число различных чисел\r\n    int l; // мин длина таблички\r\n    int r; // макс длина таблички\r\n    cin >> n >> k >> l >> r;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    // решение\r\n    int res = 0;\r\n    map&lt;int, int&gt; mp;\r\n\r\n    // метод двух указателей\r\n    int pl = 0;\r\n    int pr = pl;\r\n\r\n    // набираем l элементов\r\n    while (pl + l > pr && pr &lt; n) {\r\n\r\n      // добавляем элемент в map\r\n      if (mp.find(A[pr]) == mp.end()) {\r\n        mp[A[pr]] = 1;\r\n      } else {\r\n        mp[A[pr]]++;\r\n      }\r\n\r\n      pr++;\r\n    }\r\n\r\n    // пока pl не дошел до n-l элемента\r\n    while (n >= pl + l) {\r\n\r\n      // пока в map больше k уникальных элементов\r\n      // двигаем окно из l элементов вправо\r\n      while (mp.size() > k && pr &lt; n) {\r\n\r\n        // удаляем элемент с начала\r\n        mp[A[pl]]--;\r\n        if (mp[A[pl]] == 0) {\r\n          mp.erase(A[pl]);\r\n        }\r\n        pl++;\r\n\r\n        // добавляем элемент в map\r\n        if (mp.find(A[pr]) == mp.end()) {\r\n          mp[A[pr]] = 1;\r\n        } else {\r\n          mp[A[pr]]++;\r\n        }\r\n        pr++;\r\n\r\n      }\r\n\r\n      // пока в map меньше k уникальных элементов\r\n      // набираем элементы от l до r\r\n      while (mp.size() &lt; k && pr - pl &lt; r && pr &lt; n) {\r\n\r\n        // добавляем элементв map\r\n        if (mp.find(A[pr]) == mp.end()) {\r\n          mp[A[pr]] = 1;\r\n        } else {\r\n          mp[A[pr]]++;\r\n        }\r\n        pr++;\r\n      }\r\n\r\n      // если набралось ровно k уникальных элементов\r\n      if (mp.size() == k) {\r\n        res++;\r\n      }\r\n\r\n      // пока в map ровно k уникальных элементов\r\n      // набираем до r элементов\r\n      while (mp.size() == k && pr - pl &lt; r && pr &lt; n) {\r\n\r\n        // добавляем элемент в map\r\n        if (mp.find(A[pr]) == mp.end()) {\r\n          mp[A[pr]] = 1;\r\n        } else {\r\n          mp[A[pr]]++;\r\n        }\r\n\r\n        // если все еще ровно k уникальных элементов\r\n        if (mp.size() == k) {\r\n          res++;\r\n        }\r\n\r\n        pr++;\r\n      }\r\n\r\n      // двигаем pl на 1 вправо\r\n      mp[A[pl]]--;\r\n      if (mp[A[pl]] == 0) {\r\n        mp.erase(A[pl]);\r\n      }\r\n      pl++;\r\n\r\n      // двигаем pr на r - l влево\r\n      while (pr > pl + l) {\r\n        pr--;\r\n        // удаляем элемент с конца\r\n        mp[A[pr]]--;\r\n        if (mp[A[pr]] == 0) {\r\n          mp.erase(A[pr]);\r\n        }\r\n\r\n      }\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n\r\n<!-- Задача F. Незуко на поляне -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Незуко на поляне</h3>\r\n\r\n  <p>Примечание от меня: нельзя закончить со здоровьем 0 или меньше.</p>\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <h4>Пример 2</h4>\r\n<pre>\r\n1\r\n100 5\r\n</pre>\r\n    <code>5</code>\r\n    <p>Бинарный поиск по ответу.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    long long h; // число здоровья\r\n    long long d; // конечная точка\r\n    cin >> h >> d;\r\n\r\n    // решение\r\n    long long l = 0;\r\n    long long r = 1e9;\r\n    long long mid;\r\n\r\n    // бинарный поиск по ответу\r\n    while (r - l > 1) {\r\n      mid = l + (r - l) / 2;\r\n      long long HP = h + mid;\r\n      long long damage;\r\n      long long count_pusk = mid + 1;\r\n      if (d % count_pusk == 0) {\r\n        long long step = d / count_pusk;\r\n        damage = (step * (step + 1) / 2) * count_pusk;\r\n      } else {\r\n        long long step = d / count_pusk;\r\n        damage = (step * (step + 1) / 2) * count_pusk;\r\n        long long f = d - step * count_pusk;\r\n        damage += f * (step + 1);\r\n      }\r\n      if (damage >= HP) {\r\n        l = mid;\r\n      } else {\r\n        r = mid;\r\n      }\r\n    }\r\n\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; r + d &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2149\" target=\"_blank\">Codeforces 2149 Round 1054 (Div. 3) 2025.09.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Будь позитивным</a>\r\n  <br><a href=\"#t2\">Задача B. Неклассические пары</a>\r\n  <br><a href=\"#t3\">Задача C. MEX rose</a>\r\n  <br><a href=\"#t4\">Задача D. А и В</a>\r\n  <br><a href=\"#t5\">Задача E. Скрытые знания древних</a>\r\n  <br><a href=\"#t6\">Задача F. Незуко на поляне</a>\r\n  <br><a href=\"#t7\">Задача G. Buratsuta 3</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Будь позитивным -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Будь позитивным</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>К нам может придти только одно из трех чисел. Если 1, то ничего делать не нужно, потому что при умножении на 1 произведение не меняется. Если 0, то нужна одна операция чтобы к нему прибавить 1, чотбы произведение не стало равно 0. Если -1 пришла первый раз, то за две операции надо ее изменить на 1, если пришла второй раз, то нужно отменить две операции над первой единицей.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    cin &gt;&gt; n;\r\n\r\n    // решение\r\n    int cnt = 0;\r\n    int tmp;\r\n    bool prev_neg = false;\r\n\r\n    while (n--) {\r\n      cin &gt;&gt; tmp;\r\n      switch (tmp) {\r\n      case 0: cnt++; break;\r\n      case -1: if (prev_neg) {\r\n          cnt -= 2;\r\n        } else {\r\n          cnt += 2;\r\n        }\r\n        prev_neg = !prev_neg;\r\n        break;\r\n      }\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Неклассические пары -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Неклассические пары</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Минимальная разница среди пар получится если массив отсортировать и взять соседние пары.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    cin &gt;&gt; n;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    // решение\r\n    int res = 0;\r\n    int dif = 0;\r\n    sort(A.begin(), A.end());\r\n\r\n    for (int i = 0; i &lt; n - 1; i += 2) {\r\n      dif = A[i + 1] - A[i];\r\n      res = max(res, dif);\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. MEX rose -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. MEX rose</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Посчитаем, сколько различных чисел меньше MEX, которых нет в массиве. Посчитаем сколько чисел равно MEX. Большее из этих чисел будет ответом.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ускорение ввода\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // MEX минимальное исключенное\r\n    cin &gt;&gt; n &gt;&gt; k;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    // решение\r\n    // для подсчета чисел меньше MEX\r\n    vector&lt;int&gt; F(k, 0);\r\n    int lt_mex_cnt = 0;\r\n\r\n    // для подсчета чисел равных MEX\r\n    int mex_cnt = 0;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (A[i] &lt; k && F[A[i]] == 0) {\r\n        lt_mex_cnt++;\r\n        F[A[i]] = 1;\r\n      }\r\n      if (A[i] == k) {\r\n        mex_cnt++;\r\n      }\r\n    }\r\n\r\n    // сколько нужно еще чисел меньше MEX\r\n    int d = k - lt_mex_cnt;\r\n\r\n    int res = 0;\r\n    if (mex_cnt &gt; d) {\r\n      res = mex_cnt;\r\n    } else {\r\n      res = d;\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. А и В -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. А и В</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Посчитаем префиксные суммы спара и слева.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина строки\r\n    cin &gt;&gt; n;\r\n    vector&lt;char&gt; A(n + 1);\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    // решение\r\n    vector&lt;long long&gt; A_count_left(n + 2);\r\n    vector&lt;long long&gt; A_count_right(n + 2);\r\n    vector&lt;long long&gt; A_sum_left(n + 2);\r\n    vector&lt;long long&gt; A_sum_right(n + 2);\r\n    vector&lt;long long&gt; B_count_left(n + 2);\r\n    vector&lt;long long&gt; B_count_right(n + 2);\r\n    vector&lt;long long&gt; B_sum_left(n + 2);\r\n    vector&lt;long long&gt; B_sum_right(n + 2);\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      A_sum_left[i] = A_sum_left[i - 1] + A_count_left[i - 1];\r\n      A_count_left[i] = A_count_left[i - 1];\r\n      if (A[i] == 'a') {\r\n        A_count_left[i]++;\r\n      }\r\n    }\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      B_sum_left[i] = B_sum_left[i - 1] + B_count_left[i - 1];\r\n      B_count_left[i] = B_count_left[i - 1];\r\n      if (A[i] == 'b') {\r\n        B_count_left[i]++;\r\n      }\r\n    }\r\n\r\n    for (int i = n; i &gt;= 1; i--) {\r\n      A_sum_right[i] = A_sum_right[i + 1] + A_count_right[i + 1];\r\n      A_count_right[i] = A_count_right[i + 1];\r\n      if (A[i] == 'a') {\r\n        A_count_right[i]++;\r\n      }\r\n    }\r\n\r\n    for (int i = n; i &gt;= 1; i--) {\r\n      B_sum_right[i] = B_sum_right[i + 1] + B_count_right[i + 1];\r\n      B_count_right[i] = B_count_right[i + 1];\r\n      if (A[i] == 'b') {\r\n        B_count_right[i]++;\r\n      }\r\n    }\r\n\r\n    long long res = 1e12;\r\n    long long buf = 0;\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      if (A[i] == 'a') {\r\n        buf = A_sum_left[i] + A_sum_right[i];\r\n        buf = buf - (A_count_left[i - 1] * (A_count_left[i - 1] + 1) / 2) -\r\n          (A_count_right[i + 1] * (A_count_right[i + 1] + 1) / 2);\r\n      } else {\r\n        buf = B_sum_left[i] + B_sum_right[i];\r\n        buf = buf - (B_count_left[i - 1] * (B_count_left[i - 1] + 1) / 2) -\r\n          (B_count_right[i + 1] * (B_count_right[i + 1] + 1) / 2);\r\n      }\r\n      res = min(buf, res);\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Скрытые знания древних -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Скрытые знания древних</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // число различных чисел\r\n    int l; // мин длина таблички\r\n    int r; // макс длина таблички\r\n    cin &gt;&gt; n &gt;&gt; k &gt;&gt; l &gt;&gt; r;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    // решение\r\n    vector&lt;int&gt; Mark(n);\r\n    map&lt;int, int&gt; mp;\r\n    int uk = 0;\r\n\r\n    while (uk != n && mp.size() != k) {\r\n      mp[A[uk]]++;\r\n      uk++;\r\n    }\r\n\r\n    vector&lt;int&gt; Pos_left(n);\r\n    for (int id = 0; id &lt; n; id++) {\r\n\r\n      if (mp.size() == k) {\r\n        Pos_left[id] = uk;\r\n      } else {\r\n        Mark[id] = -1;\r\n      }\r\n\r\n      mp[A[id]]--;\r\n\r\n      if (mp[A[id]] == 0) {\r\n        mp.erase(A[id]);\r\n      }\r\n\r\n      while (uk != n && mp.size() != k) {\r\n        mp[A[uk]]++;\r\n        uk++;\r\n      }\r\n    }\r\n\r\n    uk = 0;\r\n    bool flag = true;\r\n    map&lt;int, int&gt; mp2;\r\n    while (flag) {\r\n      if (uk != n && mp2.size() &lt; k) {\r\n        mp2[A[uk]]++;\r\n        uk++;\r\n      } else {\r\n        if (uk != n && mp2.size() == k) {\r\n          if (mp2.find(A[uk]) != mp2.end()) {\r\n            mp2[A[uk]]++;\r\n            uk++;\r\n          } else {\r\n            flag = false;\r\n          }\r\n        } else {\r\n          flag = false;\r\n        }\r\n      }\r\n    }\r\n\r\n    vector&lt;int&gt; Pos_right(n);\r\n    for (int id = 0; id &lt; n; id++) {\r\n      if (mp2.size() == k) {\r\n        Pos_right[id] = uk;\r\n      } else {\r\n        Mark[id] = -1;\r\n      }\r\n      mp2[A[id]]--;\r\n      if (mp2[A[id]] == 0) {\r\n        mp2.erase(A[id]);\r\n      }\r\n      bool flag = true;\r\n      while (flag) {\r\n        if (uk != n && mp2.size() &lt; k) {\r\n          mp2[A[uk]]++;\r\n          uk++;\r\n        } else {\r\n          if (uk != n && mp2.size() == k) {\r\n            if (mp2.find(A[uk]) != mp2.end()) {\r\n              mp2[A[uk]]++;\r\n              uk++;\r\n            } else {\r\n              flag = false;\r\n            }\r\n          } else {\r\n            flag = false;\r\n          }\r\n        }\r\n      }\r\n    }\r\n\r\n    long long res = 0;\r\n    long long abs_l, abs_r;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      abs_l = max(l + i, Pos_left[i]);\r\n      abs_r = min(r + i, Pos_right[i]);\r\n\r\n      if (abs_r &gt;= abs_l) {\r\n        res += abs_r - abs_l + 1;\r\n      }\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n\r\n  <details>\r\n    <summary>Мое решение</summary>\r\n    <p>Метод двух указателей. Ставим левый и правый указатели на нулевой элемент. Правым проходим l элементов и заносим элементы в map.</p>\r\n    <p>Метод скользящего окна. Если в map попало больше k уникальных элементов, то двигаем окно из l элементов вправо.</p>\r\n    <p>Метод меняющегося окна. Если в map попало меньше k уникальных элементов, то двигаем правый указатель.</p>\r\n    <p>Если в map ровно k уникальных элементов, прибавляе 1 к результату и двигаем правый указатель вправо пока в окне не станет r элементов.</p>\r\n    <p>Двигаем левый указатель вправо на 1, правый указатель влево на позицию pl + l. Повторяем все сначала пока левый указатель не станет на l элементов левее конца массива.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива\r\n    int k; // число различных чисел\r\n    int l; // мин длина таблички\r\n    int r; // макс длина таблички\r\n    cin &gt;&gt; n &gt;&gt; k &gt;&gt; l &gt;&gt; r;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    // решение\r\n    int res = 0;\r\n    map&lt;int, int&gt; mp;\r\n\r\n    // метод двух указателей\r\n    int pl = 0;\r\n    int pr = pl;\r\n\r\n    // набираем l элементов\r\n    while (pl + l &gt; pr && pr &lt; n) {\r\n\r\n      // добавляем элемент в map\r\n      if (mp.find(A[pr]) == mp.end()) {\r\n        mp[A[pr]] = 1;\r\n      } else {\r\n        mp[A[pr]]++;\r\n      }\r\n\r\n      pr++;\r\n    }\r\n\r\n    // пока pl не дошел до n-l элемента\r\n    while (n &gt;= pl + l) {\r\n\r\n      // пока в map больше k уникальных элементов\r\n      // двигаем окно из l элементов вправо\r\n      while (mp.size() &gt; k && pr &lt; n) {\r\n\r\n        // удаляем элемент с начала\r\n        mp[A[pl]]--;\r\n        if (mp[A[pl]] == 0) {\r\n          mp.erase(A[pl]);\r\n        }\r\n        pl++;\r\n\r\n        // добавляем элемент в map\r\n        if (mp.find(A[pr]) == mp.end()) {\r\n          mp[A[pr]] = 1;\r\n        } else {\r\n          mp[A[pr]]++;\r\n        }\r\n        pr++;\r\n\r\n      }\r\n\r\n      // пока в map меньше k уникальных элементов\r\n      // набираем элементы от l до r\r\n      while (mp.size() &lt; k && pr - pl &lt; r && pr &lt; n) {\r\n\r\n        // добавляем элементв map\r\n        if (mp.find(A[pr]) == mp.end()) {\r\n          mp[A[pr]] = 1;\r\n        } else {\r\n          mp[A[pr]]++;\r\n        }\r\n        pr++;\r\n      }\r\n\r\n      // если набралось ровно k уникальных элементов\r\n      if (mp.size() == k) {\r\n        res++;\r\n      }\r\n\r\n      // пока в map ровно k уникальных элементов\r\n      // набираем до r элементов\r\n      while (mp.size() == k && pr - pl &lt; r && pr &lt; n) {\r\n\r\n        // добавляем элемент в map\r\n        if (mp.find(A[pr]) == mp.end()) {\r\n          mp[A[pr]] = 1;\r\n        } else {\r\n          mp[A[pr]]++;\r\n        }\r\n\r\n        // если все еще ровно k уникальных элементов\r\n        if (mp.size() == k) {\r\n          res++;\r\n        }\r\n\r\n        pr++;\r\n      }\r\n\r\n      // двигаем pl на 1 вправо\r\n      mp[A[pl]]--;\r\n      if (mp[A[pl]] == 0) {\r\n        mp.erase(A[pl]);\r\n      }\r\n      pl++;\r\n\r\n      // двигаем pr на r - l влево\r\n      while (pr &gt; pl + l) {\r\n        pr--;\r\n        // удаляем элемент с конца\r\n        mp[A[pr]]--;\r\n        if (mp[A[pr]] == 0) {\r\n          mp.erase(A[pr]);\r\n        }\r\n\r\n      }\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Незуко на поляне -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Незуко на поляне</h3>\r\n\r\n  <p>Примечание от меня: нельзя закончить со здоровьем 0 или меньше.</p>\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <h4>Пример 2</h4>\r\n<pre>\r\n1\r\n100 5\r\n</pre>\r\n    <code>5</code>\r\n\r\n    <p>Бинарный поиск по ответу.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    long long h; // число здоровья\r\n    long long d; // конечная точка\r\n    cin &gt;&gt; h &gt;&gt; d;\r\n\r\n    // решение\r\n    long long l = 0;\r\n    long long r = 1e9;\r\n    long long mid;\r\n\r\n    // бинарный поиск по ответу\r\n    while (r - l &gt; 1) {\r\n      mid = l + (r - l) / 2;\r\n      long long HP = h + mid;\r\n      long long damage;\r\n      long long count_pusk = mid + 1;\r\n      if (d % count_pusk == 0) {\r\n        long long step = d / count_pusk;\r\n        damage = (step * (step + 1) / 2) * count_pusk;\r\n      } else {\r\n        long long step = d / count_pusk;\r\n        damage = (step * (step + 1) / 2) * count_pusk;\r\n        long long f = d - step * count_pusk;\r\n        damage += f * (step + 1);\r\n      }\r\n      if (damage &gt;= HP) {\r\n        l = mid;\r\n      } else {\r\n        r = mid;\r\n      }\r\n    }\r\n\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; r + d &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2152-Round1055.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2152-Round1055.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2152-Round1055.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2152-Round1055.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces 2152 Round 1055, Div. 1 + Div. 2) 2025.10.03</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Увеличить или разбить</a>\r\n  <br><a href=\"#t2\">Задача B. Поймать Кругу</a>\r\n  <br><a href=\"#t3\">Задача C. Удаление троек</a>\r\n  <br><a href=\"#t4\">Задача D. Деление против сложения</a>\r\n  <br><a href=\"#t5\">Задача E. Монотонная подпоследовательность</a>\r\n  <br><a href=\"#t6\">Задача F. Тройная атака</a>\r\n  <br><a href=\"#t7\">Задача G. Запросные джунгли</a>\r\n  <br><a href=\"#t8\">Задача H1. Победоносная раскраска (простая версия)</a>\r\n  <br><a href=\"#t9\">Задача H2. Победоносная раскраска (сложная версия)</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Увеличить или разбить -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Увеличить или разбить</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/A\" target=\"_blank\">Задача 2152A</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива из нулей\r\n    cin >> n;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    // решение\r\n    int res = 0;\r\n    // ответ будет равен числу различных чисел\r\n    // плюс число обнулений, которых на 1 меньше чем различных чисел\r\n    // соберем частотный массив\r\n    vector&lt;int&gt; F(101);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      F[A[i]]++;\r\n    }\r\n\r\n    for (int i = 1; i &lt; 101; i++) {\r\n      if (F[i]) {\r\n        res++;\r\n      }\r\n    }\r\n\r\n    res = 2 * res - 1;\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Поймать Кругу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Поймать Кругу</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/B\" target=\"_blank\">Задача 2152B</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // размер доски n+1 на n+1\r\n    int rk, ck; // координаты Круги\r\n    int rd, cd; // коориднаты Дорана\r\n    cin >> n >> rk>> ck>> rd >> cd;\r\n\r\n    // решение\r\n    int res = 0; // число ходов Дорана\r\n    int r; // расстояние по рядам\r\n    int c; // расстояние по колонкам\r\n\r\n    // Доран должен идти в сторону Круги\r\n    // число его ходов равно числу клеток до края\r\n    if (rd > rk) {\r\n      r = rd;\r\n    } else {\r\n      r = n - rd;\r\n    }\r\n\r\n    if (cd > ck) {\r\n      c = cd;\r\n    } else {\r\n      c = n - cd;\r\n    }\r\n\r\n    if (rd == rk) {\r\n      res = c;\r\n    } else if (cd == ck) {\r\n      res = r;\r\n    } else {\r\n      res = max(r, c);\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Удаление троек -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Удаление троек</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/C\" target=\"_blank\">Задача 2152C</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Деление против сложения -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Деление против сложения</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/D\" target=\"_blank\">Задача 2152D</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Монотонная подпоследовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Монотонная подпоследовательность</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/E\" target=\"_blank\">Задача 2152E</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Тройная атака -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Тройная атака</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/F\" target=\"_blank\">Задача 2152F</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Запросные джунгли -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Запросные джунгли</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/G\" target=\"_blank\">Задача 2152G</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача H1. Победоносная раскраска (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H1. Победоносная раскраска (простая версия)</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/H1\" target=\"_blank\">Задача 2152H1</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача H2. Победоносная раскраска (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t9\"></div>\r\n  <h3>Задача H2. Победоносная раскраска (сложная версия)</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/H2\" target=\"_blank\">Задача 2152H2</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces 2152 Round 1055, Div. 1 + Div. 2) 2025.10.03</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Увеличить или разбить</a>\r\n  <br><a href=\"#t2\">Задача B. Поймать Кругу</a>\r\n  <br><a href=\"#t3\">Задача C. Удаление троек</a>\r\n  <br><a href=\"#t4\">Задача D. Деление против сложения</a>\r\n  <br><a href=\"#t5\">Задача E. Монотонная подпоследовательность</a>\r\n  <br><a href=\"#t6\">Задача F. Тройная атака</a>\r\n  <br><a href=\"#t7\">Задача G. Запросные джунгли</a>\r\n  <br><a href=\"#t8\">Задача H1. Победоносная раскраска (простая версия)</a>\r\n  <br><a href=\"#t9\">Задача H2. Победоносная раскраска (сложная версия)</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Увеличить или разбить -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Увеличить или разбить</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/A\" target=\"_blank\">Задача 2152A</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // длина массива из нулей\r\n    cin &gt;&gt; n;\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    // решение\r\n    int res = 0;\r\n    // ответ будет равен числу различных чисел\r\n    // плюс число обнулений, которых на 1 меньше чем различных чисел\r\n    // соберем частотный массив\r\n    vector&lt;int&gt; F(101);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      F[A[i]]++;\r\n    }\r\n\r\n    for (int i = 1; i &lt; 101; i++) {\r\n      if (F[i]) {\r\n        res++;\r\n      }\r\n    }\r\n\r\n    res = 2 * res - 1;\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Поймать Кругу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Поймать Кругу</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/B\" target=\"_blank\">Задача 2152B</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // число тестов\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    // ввод данных\r\n    int n; // размер доски n+1 на n+1\r\n    int rk, ck; // координаты Круги\r\n    int rd, cd; // коориднаты Дорана\r\n    cin &gt;&gt; n &gt;&gt; rk&gt;&gt; ck&gt;&gt; rd &gt;&gt; cd;\r\n\r\n    // решение\r\n    int res = 0; // число ходов Дорана\r\n    int r; // расстояние по рядам\r\n    int c; // расстояние по колонкам\r\n\r\n    // Доран должен идти в сторону Круги\r\n    // число его ходов равно числу клеток до края\r\n    if (rd &gt; rk) {\r\n      r = rd;\r\n    } else {\r\n      r = n - rd;\r\n    }\r\n\r\n    if (cd &gt; ck) {\r\n      c = cd;\r\n    } else {\r\n      c = n - cd;\r\n    }\r\n\r\n    if (rd == rk) {\r\n      res = c;\r\n    } else if (cd == ck) {\r\n      res = r;\r\n    } else {\r\n      res = max(r, c);\r\n    }\r\n\r\n    // вывод результата\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Удаление троек -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Удаление троек</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/C\" target=\"_blank\">Задача 2152C</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Деление против сложения -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Деление против сложения</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/D\" target=\"_blank\">Задача 2152D</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Монотонная подпоследовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Монотонная подпоследовательность</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/E\" target=\"_blank\">Задача 2152E</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Тройная атака -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Тройная атака</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/F\" target=\"_blank\">Задача 2152F</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Запросные джунгли -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Запросные джунгли</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/G\" target=\"_blank\">Задача 2152G</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача H1. Победоносная раскраска (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H1. Победоносная раскраска (простая версия)</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/H1\" target=\"_blank\">Задача 2152H1</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача H2. Победоносная раскраска (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t9\"></div>\r\n  <h3>Задача H2. Победоносная раскраска (сложная версия)</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/2152/problem/H2\" target=\"_blank\">Задача 2152H2</a>\r\n      <br><a href=\"https://codeforces.com/contest/2152\" target=\"_blank\">Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2) 2025-10-03</a>\r\n    </div>\r\n  </details>\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2162-Round1059.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2162-Round1059.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2162-Round1059.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2162-Round1059.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7190,100 +7298,100 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2166-Round1064.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2166-Round1064.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2166-Round1064.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2166-Round1064.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2166\" target=\"_blank\">Codeforces 2166 Round 1064 (Div. 2) 2025.11.16</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Одинаковая разница</a>\r\n  <br><a href=\"#t2\">Задача B. Закрытие вкладок</a>\r\n  <br><a href=\"#t3\">Задача C. Циклическое слияние</a>\r\n  <br><a href=\"#t4\">Задача D. Совет мрамора</a>\r\n  <br><a href=\"#t5\">Задача E. Бинарное вино</a>\r\n  <br><a href=\"#t6\">Задача F. Разделение пути</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Одинаковая разница -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Одинаковая разница</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;string&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n// условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // длина строки\r\n    cin >> n;\r\n    string s; // строка\r\n    cin >> s;\r\n\r\n    int res = 0;\r\n    for (int i = n - 1; i > 0; i--) {\r\n      if (s[i] != s[i - 1]) {\r\n        s[i - 1] = s[i];\r\n        res++;\r\n      }\r\n    }\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Закрытие вкладок -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Закрытие вкладок</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Циклическое слияние -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Циклическое слияние</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Совет мрамора -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Совет мрамора</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Бинарное вино -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Бинарное вино</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Разделение пути -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Разделение пути</h3>\r\n\r\n</article>\r\n\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2166\" target=\"_blank\">Codeforces 2166 Round 1064 (Div. 2) 2025.11.16</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Одинаковая разница</a>\r\n  <br><a href=\"#t2\">Задача B. Закрытие вкладок</a>\r\n  <br><a href=\"#t3\">Задача C. Циклическое слияние</a>\r\n  <br><a href=\"#t4\">Задача D. Совет мрамора</a>\r\n  <br><a href=\"#t5\">Задача E. Бинарное вино</a>\r\n  <br><a href=\"#t6\">Задача F. Разделение пути</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Одинаковая разница -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Одинаковая разница</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;string&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n// условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // длина строки\r\n    cin &gt;&gt; n;\r\n    string s; // строка\r\n    cin &gt;&gt; s;\r\n\r\n    int res = 0;\r\n    for (int i = n - 1; i &gt; 0; i--) {\r\n      if (s[i] != s[i - 1]) {\r\n        s[i - 1] = s[i];\r\n        res++;\r\n      }\r\n    }\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Закрытие вкладок -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Закрытие вкладок</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Циклическое слияние -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Циклическое слияние</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Совет мрамора -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Совет мрамора</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Бинарное вино -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Бинарное вино</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Разделение пути -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Разделение пути</h3>\r\n\r\n</article>\r\n\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2167-Round1062.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2167-Round1062.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2167-Round1062.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2167-Round1062.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2167\" target=\"_blank\">Codeforces 2167 Round 1062 (Div. 4) 2025.10.28</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Квадрат?</a>\r\n  <br><a href=\"#t2\">Задача B. Твоё имя</a>\r\n  <br><a href=\"#t3\">Задача C. Исаматдин и его волшебная палочка!</a>\r\n  <br><a href=\"#t4\">Задача D. Еще одна задача с массивами</a>\r\n  <br><a href=\"#t5\">Задача E. khba любит спать!</a>\r\n  <br><a href=\"#t6\">Задача F. Дерево, ДЕРЕВО!!!</a>\r\n  <br><a href=\"#t7\">Задача G. Мухаммадали и гладкий массив</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Квадрат? -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Квадрат?</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Чтобы получился квадрат, надо проверить что все стороны равны.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int a, b, c, d; // длины палочек\r\n    cin >> a >> b >> c >> d;\r\n\r\n    if (a == b && a == c && a == d) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Твоё имя -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Твоё имя</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Нужно отсортировать две строки и сравнить их.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int q;\r\n  cin >> q;\r\n\r\n  while (q--) {\r\n    int n; // длины строки\r\n    cin >> n;\r\n    string s, t;\r\n    cin >> s >> t;\r\n\r\n    vector&lt;char&gt; A(n);\r\n    vector&lt;char&gt; B(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      A[i] = s[i];\r\n      B[i] = t[i];\r\n    }\r\n\r\n    sort(A.begin(), A.end());\r\n    sort(B.begin(), B.end());\r\n    bool flag = true;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (A[i] != B[i]) {\r\n        flag = false;\r\n      }\r\n    }\r\n\r\n    if (flag) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Исаматдин и его волшебная палочка! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Исаматдин и его волшебная палочка!</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Если у всех элементов совпадает четность, то мы не можем ничего поменять местами. Если есть хоть одно число с другой четностью, то мы можем отсортировать массив как мы хотим. Начнем решение с того что посчитаем четные и нечетные числа.</p>\r\n\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // число игрушек\r\n    cin >> n;\r\n\r\n    vector&lt;int&gt; A(n);\r\n    int cnt1 = 0; // число нечетных чисел\r\n    int cnt2 = 0; // число четный чисел\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n\r\n      if (A[i] % 2 == 0) {\r\n        cnt2++;\r\n      } else {\r\n        cnt1++;\r\n      }\r\n    }\r\n\r\n    if (cnt1 == 0 || cnt2 == 0) {\r\n    } else {\r\n      sort(A.begin(), A.end());\r\n    }\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cout &lt;&lt; A[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Еще одна задача с массивами -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Еще одна задача с массивами</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Число с которым какое то число из массива будет иметь НОД равный 1, должно быть простым. Поэтому соберем Решето Эратосфена. И будем перебирвать все простые числа и считать НОД с каждым числом из массива, пока НОД не равен 1.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n\r\n  vector&lt;int&gt; Simple;\r\n  vector&lt;int&gt; Resh(1e6);\r\n\r\n  for (int i = 2; i &lt; Resh.size(); i++) {\r\n    if (Resh[i] == 0) {\r\n      Simple.push_back(i);\r\n      for (int j = 2 * i; j &lt; Resh.size(); j += i) {\r\n        Resh[j] = 1;\r\n      }\r\n    }\r\n  }\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin >> n;\r\n    vector&lt;long long&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n    bool flag = false;\r\n    int res;\r\n    int uk = 0;\r\n    while(flag == false) {\r\n      res = Simple[uk];\r\n      uk++;\r\n      long long t1;\r\n      long long t2;\r\n\r\n      for (int i = 0; i &lt; n; i++) {\r\n        t1 = res;\r\n        t2 = A[i];\r\n        while (t1 > 0 && t2 > 0) {\r\n          if (t1 > t2) {\r\n            t1 = t1 % t2;\r\n          } else {\r\n            t2 = t2 % t1;\r\n          }\r\n        }\r\n        if (t1 + t2 == 1) {\r\n          flag = true;\r\n        }\r\n      }\r\n    }\r\n\r\n    if (flag) {\r\n      cout &lt;&lt; res &lt;&lt; '\\n';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. khba любит спать! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. khba любит спать!</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>k позиций телепортов будем выбирать так, чтобы они были максимально далеко от позиции слева и от позиции справа. Упорядочиваем позиции телепортов по удаленности. rbegin возвращает самую удаленную точку. bad_pos отслеживает что позиция повторно не добавляется. Сначала проверяем две крайние точки и расстояние от них до ближайшего друга. Потом берем пары отсортированных друзей и проверяем расстояние между ними.</p>\r\n\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;set&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n, k, x;\r\n    cin >> n >> k >> x;\r\n\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n    set&lt;int&gt; bad_pos;\r\n    sort(A.begin(), A.end());\r\n\r\n    // first - расстояние,\r\n    // second.first позиция соседа слева\r\n    // second.second позиция соседа справа\r\n    set&lt;pair&lt;int, pair&lt;int, int&gt; &gt; &gt; st;\r\n    pair&lt;int, pair&lt;int, int&gt; &gt; tmp;\r\n    vector&lt;int&gt; Result;\r\n\r\n    // расстояние от нуля\r\n    tmp.first = A[0] - 0;\r\n    tmp.second.first = 0;\r\n    tmp.second.second = A[0];\r\n    st.insert(tmp);\r\n\r\n    // расстояние от x\r\n    tmp.first = x - A[n-1];\r\n    tmp.second.first = x;\r\n    tmp.second.second = A[n-1];\r\n    st.insert(tmp);\r\n\r\n    for (int i = 0; i &lt; n - 1; i++) {\r\n      // для каждой пары друзей\r\n      if ((A[i + 1] - A[i]) % 2 == 0) {\r\n        // если расстояние между ними четное\r\n        tmp.first = (A[i + 1] + A[i]) / 2 - A[i];\r\n        tmp.second.first = (A[i + 1] + A[i]) / 2;\r\n        tmp.second.second = A[i];\r\n        st.insert(tmp);\r\n\r\n        tmp.first = A[i + 1] -(A[i+1] + A[i]) / 2;\r\n        tmp.second.first = (A[i + 1] + A[i]) / 2;\r\n        tmp.second.second = A[i+1];\r\n        st.insert(tmp);\r\n      } else {\r\n        // если расстояние между ними нечетное\r\n        tmp.first = (A[i + 1] + A[i]) / 2 - A[i];\r\n        tmp.second.first = (A[i + 1] + A[i]) / 2;\r\n        tmp.second.second = A[i];\r\n        st.insert(tmp);\r\n\r\n        tmp.first = A[i + 1] -(A[i+1] + A[i] + 1) / 2;\r\n        tmp.second.first = (A[i + 1] + A[i] + 1) / 2;\r\n        tmp.second.second = A[i+1];\r\n        st.insert(tmp);\r\n      }\r\n    }\r\n\r\n    while (Result.size() != k) {\r\n      tmp = *st.rbegin();\r\n      st.erase(*st.rbegin());\r\n      if (bad_pos.find(tmp.second.first) == bad_pos.end()) {\r\n        bad_pos.insert(tmp.second.first);\r\n        Result.push_back(tmp.second.first);\r\n      }\r\n      tmp.first--;\r\n      if (tmp.second.first >= tmp.second.second) {\r\n        tmp.second.first--;\r\n      } else {\r\n        tmp.second.first++;\r\n      }\r\n      st.insert(tmp);\r\n    }\r\n\r\n    sort(Result.begin(), Result.end());\r\n\r\n    for (int i = 0; i &lt; Result.size(); i++) {\r\n      cout &lt;&lt; Result[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Дерево, ДЕРЕВО!!! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Дерево, ДЕРЕВО!!!</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Это задача на DFS с DP. Собираем граф и идем в dfs. Там смотрим если это не наш предок, то идем в DP. Собираем ДП это сколько подчиненных с нашей стороны. Мы смотрим на ребро. dfs находит сына, дальше ДП смотрит сколько подчиненных у этого сына и добавляет их к своим подчиненным. Смотрим сколько у него подчиненных с одной стороны h1 и с другой стороны h2. Если h1 >= k, то LCA может быть одна из вершин. Если h2 >= k, то мы можем быть LCA для наших сыновей.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nlong long res;\r\nint n, k;\r\n\r\nvoid dfs(vector&lt;vector&lt;int&gt; &gt;& G,\r\n  vector&lt;int&gt;& DP, int pos, int y) {\r\n  for (int i = 0; i &lt; G[pos].size(); i++) {\r\n    if (G[pos][i] != y) {\r\n      dfs(G, DP, G[pos][i], pos);\r\n      DP[pos] += DP[G[pos][i]];\r\n      int h1 = DP[G[pos][i]];\r\n      int h2 = n - h1;\r\n      if (h1 >= k) {\r\n        res += h2;\r\n      }\r\n      if (h2 >= k) {\r\n        res += h1;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    res = 0;\r\n    cin >> n >> k;\r\n    vector&lt;vector&lt;int&gt; &gt; G(n + 1);\r\n    vector&lt;int&gt; DP(n + 1, 1);\r\n    int x, y;\r\n    for (int i = 0; i &lt; n - 1; i++) {\r\n      cin >> x >> y;\r\n      G[x].push_back(y);\r\n      G[y].push_back(x);\r\n    }\r\n    dfs(G, DP, 1, 0);\r\n\r\n    cout &lt;&lt; res + n &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Мухаммадали и гладкий массив -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Мухаммадали и гладкий массив</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Сложность O(n<sup>2</sup>)</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin >> n;\r\n    vector&lt;long long&gt; A(n);\r\n    vector&lt;long long&gt; B(n);\r\n    vector&lt;long long&gt; C(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n      B[i] = A[i];\r\n    }\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> C[i];\r\n    }\r\n    sort(B.begin(), B.end());\r\n    vector &lt;long long&gt; Sloy1(n + 1);\r\n    vector &lt;long long&gt; Sloy2(n + 1);\r\n    long long buf = 1e15;\r\n    int tmp = 0;\r\n    for (int j = 1; j &lt;= n; j++) {\r\n      buf = 1e15;\r\n      for (int i = 1; i &lt;= n; i++) {\r\n        if (B[i - 1] != A[j - 1]) {\r\n          tmp = C[j - 1];\r\n        } else {\r\n          tmp = 0;\r\n        }\r\n        buf = min(buf, Sloy1[i]);\r\n        Sloy2[i] = buf + tmp;\r\n      }\r\n      for (int i = 0; i &lt;= n; i++) {\r\n        Sloy1[i] = Sloy2[i];\r\n        Sloy2[i] = 0;\r\n      }\r\n    }\r\n\r\n    long long res = 1e15;\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      res = min(res, Sloy1[i]);\r\n    }\r\n\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2167\" target=\"_blank\">Codeforces 2167 Round 1062 (Div. 4) 2025.10.28</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Квадрат?</a>\r\n  <br><a href=\"#t2\">Задача B. Твоё имя</a>\r\n  <br><a href=\"#t3\">Задача C. Исаматдин и его волшебная палочка!</a>\r\n  <br><a href=\"#t4\">Задача D. Еще одна задача с массивами</a>\r\n  <br><a href=\"#t5\">Задача E. khba любит спать!</a>\r\n  <br><a href=\"#t6\">Задача F. Дерево, ДЕРЕВО!!!</a>\r\n  <br><a href=\"#t7\">Задача G. Мухаммадали и гладкий массив</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Квадрат? -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Квадрат?</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Чтобы получился квадрат, надо проверить что все стороны равны.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int a, b, c, d; // длины палочек\r\n    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d;\r\n\r\n    if (a == b && a == c && a == d) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Твоё имя -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Твоё имя</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Нужно отсортировать две строки и сравнить их.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int q;\r\n  cin &gt;&gt; q;\r\n\r\n  while (q--) {\r\n    int n; // длины строки\r\n    cin &gt;&gt; n;\r\n    string s, t;\r\n    cin &gt;&gt; s &gt;&gt; t;\r\n\r\n    vector&lt;char&gt; A(n);\r\n    vector&lt;char&gt; B(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      A[i] = s[i];\r\n      B[i] = t[i];\r\n    }\r\n\r\n    sort(A.begin(), A.end());\r\n    sort(B.begin(), B.end());\r\n    bool flag = true;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (A[i] != B[i]) {\r\n        flag = false;\r\n      }\r\n    }\r\n\r\n    if (flag) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Исаматдин и его волшебная палочка! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Исаматдин и его волшебная палочка!</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Если у всех элементов совпадает четность, то мы не можем ничего поменять местами. Если есть хоть одно число с другой четностью, то мы можем отсортировать массив как мы хотим. Начнем решение с того что посчитаем четные и нечетные числа.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // число игрушек\r\n    cin &gt;&gt; n;\r\n\r\n    vector&lt;int&gt; A(n);\r\n    int cnt1 = 0; // число нечетных чисел\r\n    int cnt2 = 0; // число четный чисел\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n\r\n      if (A[i] % 2 == 0) {\r\n        cnt2++;\r\n      } else {\r\n        cnt1++;\r\n      }\r\n    }\r\n\r\n    if (cnt1 == 0 || cnt2 == 0) {\r\n    } else {\r\n      sort(A.begin(), A.end());\r\n    }\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cout &lt;&lt; A[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Еще одна задача с массивами -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Еще одна задача с массивами</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Число с которым какое то число из массива будет иметь НОД равный 1, должно быть простым. Поэтому соберем Решето Эратосфена. И будем перебирвать все простые числа и считать НОД с каждым числом из массива, пока НОД не равен 1.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n\r\n  vector&lt;int&gt; Simple;\r\n  vector&lt;int&gt; Resh(1e6);\r\n\r\n  for (int i = 2; i &lt; Resh.size(); i++) {\r\n    if (Resh[i] == 0) {\r\n      Simple.push_back(i);\r\n      for (int j = 2 * i; j &lt; Resh.size(); j += i) {\r\n        Resh[j] = 1;\r\n      }\r\n    }\r\n  }\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin &gt;&gt; n;\r\n    vector&lt;long long&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n    bool flag = false;\r\n    int res;\r\n    int uk = 0;\r\n    while(flag == false) {\r\n      res = Simple[uk];\r\n      uk++;\r\n      long long t1;\r\n      long long t2;\r\n\r\n      for (int i = 0; i &lt; n; i++) {\r\n        t1 = res;\r\n        t2 = A[i];\r\n        while (t1 &gt; 0 && t2 &gt; 0) {\r\n          if (t1 &gt; t2) {\r\n            t1 = t1 % t2;\r\n          } else {\r\n            t2 = t2 % t1;\r\n          }\r\n        }\r\n        if (t1 + t2 == 1) {\r\n          flag = true;\r\n        }\r\n      }\r\n    }\r\n\r\n    if (flag) {\r\n      cout &lt;&lt; res &lt;&lt; '\\n';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. khba любит спать! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. khba любит спать!</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>k позиций телепортов будем выбирать так, чтобы они были максимально далеко от позиции слева и от позиции справа. Упорядочиваем позиции телепортов по удаленности. rbegin возвращает самую удаленную точку. bad_pos отслеживает что позиция повторно не добавляется. Сначала проверяем две крайние точки и расстояние от них до ближайшего друга. Потом берем пары отсортированных друзей и проверяем расстояние между ними.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;set&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n, k, x;\r\n    cin &gt;&gt; n &gt;&gt; k &gt;&gt; x;\r\n\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n    set&lt;int&gt; bad_pos;\r\n    sort(A.begin(), A.end());\r\n\r\n    // first - расстояние,\r\n    // second.first позиция соседа слева\r\n    // second.second позиция соседа справа\r\n    set&lt;pair&lt;int, pair&lt;int, int&gt; &gt; &gt; st;\r\n    pair&lt;int, pair&lt;int, int&gt; &gt; tmp;\r\n    vector&lt;int&gt; Result;\r\n\r\n    // расстояние от нуля\r\n    tmp.first = A[0] - 0;\r\n    tmp.second.first = 0;\r\n    tmp.second.second = A[0];\r\n    st.insert(tmp);\r\n\r\n    // расстояние от x\r\n    tmp.first = x - A[n-1];\r\n    tmp.second.first = x;\r\n    tmp.second.second = A[n-1];\r\n    st.insert(tmp);\r\n\r\n    for (int i = 0; i &lt; n - 1; i++) {\r\n      // для каждой пары друзей\r\n      if ((A[i + 1] - A[i]) % 2 == 0) {\r\n        // если расстояние между ними четное\r\n        tmp.first = (A[i + 1] + A[i]) / 2 - A[i];\r\n        tmp.second.first = (A[i + 1] + A[i]) / 2;\r\n        tmp.second.second = A[i];\r\n        st.insert(tmp);\r\n\r\n        tmp.first = A[i + 1] -(A[i+1] + A[i]) / 2;\r\n        tmp.second.first = (A[i + 1] + A[i]) / 2;\r\n        tmp.second.second = A[i+1];\r\n        st.insert(tmp);\r\n      } else {\r\n        // если расстояние между ними нечетное\r\n        tmp.first = (A[i + 1] + A[i]) / 2 - A[i];\r\n        tmp.second.first = (A[i + 1] + A[i]) / 2;\r\n        tmp.second.second = A[i];\r\n        st.insert(tmp);\r\n\r\n        tmp.first = A[i + 1] -(A[i+1] + A[i] + 1) / 2;\r\n        tmp.second.first = (A[i + 1] + A[i] + 1) / 2;\r\n        tmp.second.second = A[i+1];\r\n        st.insert(tmp);\r\n      }\r\n    }\r\n\r\n    while (Result.size() != k) {\r\n      tmp = *st.rbegin();\r\n      st.erase(*st.rbegin());\r\n      if (bad_pos.find(tmp.second.first) == bad_pos.end()) {\r\n        bad_pos.insert(tmp.second.first);\r\n        Result.push_back(tmp.second.first);\r\n      }\r\n      tmp.first--;\r\n      if (tmp.second.first &gt;= tmp.second.second) {\r\n        tmp.second.first--;\r\n      } else {\r\n        tmp.second.first++;\r\n      }\r\n      st.insert(tmp);\r\n    }\r\n\r\n    sort(Result.begin(), Result.end());\r\n\r\n    for (int i = 0; i &lt; Result.size(); i++) {\r\n      cout &lt;&lt; Result[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Дерево, ДЕРЕВО!!! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Дерево, ДЕРЕВО!!!</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Это задача на DFS с DP. Собираем граф и идем в dfs. Там смотрим если это не наш предок, то идем в DP. Собираем ДП это сколько подчиненных с нашей стороны. Мы смотрим на ребро. dfs находит сына, дальше ДП смотрит сколько подчиненных у этого сына и добавляет их к своим подчиненным. Смотрим сколько у него подчиненных с одной стороны h1 и с другой стороны h2. Если h1 >= k, то LCA может быть одна из вершин. Если h2 >= k, то мы можем быть LCA для наших сыновей.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nlong long res;\r\nint n, k;\r\n\r\nvoid dfs(vector&lt;vector&lt;int&gt; &gt;& G,\r\n  vector&lt;int&gt;& DP, int pos, int y) {\r\n  for (int i = 0; i &lt; G[pos].size(); i++) {\r\n    if (G[pos][i] != y) {\r\n      dfs(G, DP, G[pos][i], pos);\r\n      DP[pos] += DP[G[pos][i]];\r\n      int h1 = DP[G[pos][i]];\r\n      int h2 = n - h1;\r\n      if (h1 &gt;= k) {\r\n        res += h2;\r\n      }\r\n      if (h2 &gt;= k) {\r\n        res += h1;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    res = 0;\r\n    cin &gt;&gt; n &gt;&gt; k;\r\n    vector&lt;vector&lt;int&gt; &gt; G(n + 1);\r\n    vector&lt;int&gt; DP(n + 1, 1);\r\n    int x, y;\r\n    for (int i = 0; i &lt; n - 1; i++) {\r\n      cin &gt;&gt; x &gt;&gt; y;\r\n      G[x].push_back(y);\r\n      G[y].push_back(x);\r\n    }\r\n    dfs(G, DP, 1, 0);\r\n\r\n    cout &lt;&lt; res + n &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Мухаммадали и гладкий массив -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Мухаммадали и гладкий массив</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Сложность O(n<sup>2</sup>)</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin &gt;&gt; n;\r\n    vector&lt;long long&gt; A(n);\r\n    vector&lt;long long&gt; B(n);\r\n    vector&lt;long long&gt; C(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n      B[i] = A[i];\r\n    }\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; C[i];\r\n    }\r\n    sort(B.begin(), B.end());\r\n    vector &lt;long long&gt; Sloy1(n + 1);\r\n    vector &lt;long long&gt; Sloy2(n + 1);\r\n    long long buf = 1e15;\r\n    int tmp = 0;\r\n    for (int j = 1; j &lt;= n; j++) {\r\n      buf = 1e15;\r\n      for (int i = 1; i &lt;= n; i++) {\r\n        if (B[i - 1] != A[j - 1]) {\r\n          tmp = C[j - 1];\r\n        } else {\r\n          tmp = 0;\r\n        }\r\n        buf = min(buf, Sloy1[i]);\r\n        Sloy2[i] = buf + tmp;\r\n      }\r\n      for (int i = 0; i &lt;= n; i++) {\r\n        Sloy1[i] = Sloy2[i];\r\n        Sloy2[i] = 0;\r\n      }\r\n    }\r\n\r\n    long long res = 1e15;\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      res = min(res, Sloy1[i]);\r\n    }\r\n\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2171-Round1065.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2171-Round1065.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2171-Round1065.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2171-Round1065.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2171\" target=\"_blank\">Codeforces 2171 Round 1065 (Div. 3) 2025.11.20</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Сизуку Хошикава и ноги на ферме</a>\r\n  <br><a href=\"#t2\">Задача B. Юу Които и минимальная абсолютная сумма</a>\r\n  <br><a href=\"#t3\">Задача C1. Ренака Амаори и XOR-игра (простая версия)</a>\r\n  <br><a href=\"#t4\">Задача C2. Ренака Амаори и XOR-игра (сложная версия)</a>\r\n  <br><a href=\"#t5\">Задача D. Рэй Тейлор и деревья (простая версия)</a>\r\n  <br><a href=\"#t6\">Задача E. Анисфия Уинн Палеттия и хорошие перестановки</a>\r\n  <br><a href=\"#t7\">Задача F. Рей Тейлор и деревья (сложная версия)</a>\r\n  <br><a href=\"#t8\">Задача G. Сакура Адачи и оптимальные последовательности</a>\r\n  <br><a href=\"#t9\">Задача H. Сиори Мияги и максимальный балл массивов</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Сизуку Хошикава и ноги на ферме -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Сизуку Хошикава и ноги на ферме</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin >> n;\r\n\r\n    if (n % 2 == 1) {\r\n      cout &lt;&lt; 0 &lt;&lt; '\\n';\r\n    } else {\r\n      cout &lt;&lt; n / 4 + 1 &lt;&lt; '\\n';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Юу Които и минимальная абсолютная сумма -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Юу Които и минимальная абсолютная сумма</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C1. Ренака Амаори и XOR-игра (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C1. Ренака Амаори и XOR-игра (простая версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C2. Ренака Амаори и XOR-игра (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача C2. Ренака Амаори и XOR-игра (сложная версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Рэй Тейлор и деревья (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача D. Рэй Тейлор и деревья (простая версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Анисфия Уинн Палеттия и хорошие перестановки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача E. Анисфия Уинн Палеттия и хорошие перестановки</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Рей Тейлор и деревья (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача F. Рей Тейлор и деревья (сложная версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Сакура Адачи и оптимальные последовательности -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача G. Сакура Адачи и оптимальные последовательности</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача H. Сиори Мияги и максимальный балл массивов -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t9\"></div>\r\n  <h3>Задача H. Сиори Мияги и максимальный балл массивов</h3>\r\n\r\n</article>\r\n\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2171\" target=\"_blank\">Codeforces 2171 Round 1065 (Div. 3) 2025.11.20</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Сизуку Хошикава и ноги на ферме</a>\r\n  <br><a href=\"#t2\">Задача B. Юу Които и минимальная абсолютная сумма</a>\r\n  <br><a href=\"#t3\">Задача C1. Ренака Амаори и XOR-игра (простая версия)</a>\r\n  <br><a href=\"#t4\">Задача C2. Ренака Амаори и XOR-игра (сложная версия)</a>\r\n  <br><a href=\"#t5\">Задача D. Рэй Тейлор и деревья (простая версия)</a>\r\n  <br><a href=\"#t6\">Задача E. Анисфия Уинн Палеттия и хорошие перестановки</a>\r\n  <br><a href=\"#t7\">Задача F. Рей Тейлор и деревья (сложная версия)</a>\r\n  <br><a href=\"#t8\">Задача G. Сакура Адачи и оптимальные последовательности</a>\r\n  <br><a href=\"#t9\">Задача H. Сиори Мияги и максимальный балл массивов</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Сизуку Хошикава и ноги на ферме -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Сизуку Хошикава и ноги на ферме</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n // условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin &gt;&gt; n;\r\n\r\n    if (n % 2 == 1) {\r\n      cout &lt;&lt; 0 &lt;&lt; '\\n';\r\n    } else {\r\n      cout &lt;&lt; n / 4 + 1 &lt;&lt; '\\n';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Юу Които и минимальная абсолютная сумма -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Юу Които и минимальная абсолютная сумма</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C1. Ренака Амаори и XOR-игра (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C1. Ренака Амаори и XOR-игра (простая версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C2. Ренака Амаори и XOR-игра (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача C2. Ренака Амаори и XOR-игра (сложная версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Рэй Тейлор и деревья (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача D. Рэй Тейлор и деревья (простая версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Анисфия Уинн Палеттия и хорошие перестановки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача E. Анисфия Уинн Палеттия и хорошие перестановки</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Рей Тейлор и деревья (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача F. Рей Тейлор и деревья (сложная версия)</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Сакура Адачи и оптимальные последовательности -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача G. Сакура Адачи и оптимальные последовательности</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача H. Сиори Мияги и максимальный балл массивов -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t9\"></div>\r\n  <h3>Задача H. Сиори Мияги и максимальный балл массивов</h3>\r\n\r\n</article>\r\n\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2185-Round1074.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2185-Round1074.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2185-Round1074.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2185-Round1074.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2185\" target=\"_blank\">Codeforces 2185 Round 1074 (Div. 4) 2026.01.18</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Совершенный корень</a>\r\n  <br><a href=\"#t2\">Задача B. Префиксный максимум</a>\r\n  <br><a href=\"#t3\">Задача C. Сдвинутый MEX</a>\r\n  <br><a href=\"#t4\">Задача D. OutOfMemoryError</a>\r\n  <br><a href=\"#t5\">Задача E. Роботизированная спешка</a>\r\n  <br><a href=\"#t6\">Задача F. BattleCows</a>\r\n  <br><a href=\"#t7\">Задача G. Смешивание MEXов</a>\r\n  <br><a href=\"#t8\">Задача H. BattleCows 2</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Совершенный корень -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Совершенный корень</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <p>Положительное целое число x является совершенным корнем, если существует целое число y, такое что √y=x. Например, 5 является совершенным корнем, потому что √25=5.</p>\r\n\r\n  <p>Для каждого набора входных данных выведите n различных совершенных корней. Обратите внимание, что значения должны быть различными только в пределах каждого набора входных данных; вы можете использовать одно и то же значение в разных наборах.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1 ≤ t ≤ 20) — количество наборов входных данных.</p>\r\n\r\n  <p>Единственная строка каждого набора входных данных содержит целое число n (1 ≤ n ≤ 20) — количество совершенных корней для вывода.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите n различных совершенных корней. Каждый совершенный корень x должен находиться в диапазоне 1 ≤ x ≤ 10<sup>9</sup>.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n1\r\n2\r\n5\r\n</pre>\r\n<pre>\r\n1\r\n2 4\r\n2 102 43 1 21\r\n</pre>\r\n  </details>\r\n  <p>Для первого набора входных данных:</p>\r\n  <p>1 является совершенным корнем, потому что √1=1.</p>\r\n\r\n  <p>Для второго набора входных данных:</p>\r\n  <p>2 является совершенным корнем, потому что √4=2.</p>\r\n  <p>4 является совершенным корнем, потому что √16=4.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Любое натуральное число является совершенным корнем какого-то натурального числа. Поэтому выводим n чисел начиная с 1.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // число совершенных корней\r\n    cin >> n;\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cout &lt;&lt; i &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Префиксный максимум -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Префиксный максимум</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1.5с. Память 256мб)</div>\r\n\r\n  <p>Дан массив из n целых чисел a1, a2, …, an.</p>\r\n\r\n  <p>Значение массива — это сумма максимумов каждого префикса массива. Более формально, значение массива a равно ∑(n,i=1) max(a1,…,ai). Например, значение массива [1,2,1] равно max(1)+max(1,2)+max(1,2,1)=1+2+2=5.</p>\r\n\r\n  <p>Вы можете выбрать два индекса i и j и поменять местами элементы ai и aj; эта операция может быть выполнена не более одного раза.</p>\r\n\r\n  <p>Найдите максимальное возможное значение массива a\r\n  после выполнения не более одной операции.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1 ≤ t ≤ 100) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит одно целое число n (2 ≤ n ≤ 50) — длину массива a.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1, a2, …, an (1 ≤ ai ≤ 10<sup>4</sup>) — массив a.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите максимальное возможное значение массива a после выполнения обмена.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n5\r\n2 1 4 5 3\r\n2\r\n5 1\r\n3\r\n3 2 1\r\n2\r\n6 7\r\n</pre>\r\n<pre>\r\n25\r\n10\r\n9\r\n14\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных мы можем поменять местами a1 с a4, чтобы получить массив [5,1,4,2,3], который имеет значение max(5)+max(5,1)+max(5,1,4)+max(5,1,4,2)+max(5,1,4,2,3)=25.</p>\r\n\r\n  <p>Для второго набора входных данных текущее значение массива равно max(5)+max(5,1)=10. Если мы поменяем местами a1 и a2, то a будет равно [1,5], что имеет значение max(1)+max(1,5)=6, что означает, что лучший вариант — не выполнять обмен.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Чтобы все префиксы массива были максимальными, нужно максимальное значение поставить первым элементом массива. Тогда сумма максимумов всех префиксов будет равна произведению максимального элемента массива на его длину.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    cin >> n;\r\n\r\n    int maxi = 1; // максимальный элемент массива\r\n    int in; // входной элемент массива\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> in;\r\n      if (in > maxi) {\r\n        maxi = in;\r\n      }\r\n    }\r\n\r\n    cout &lt;&lt; n * maxi &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Сдвинутый MEX -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Сдвинутый MEX</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>Вам дан массив из n целых чисел a1, a2, …, an. Вам разрешено выполнить следующую операцию один раз.</p>\r\n\r\n  <p>Выберите целое число x (которое может быть отрицательным), и для каждого значения i (1≤i≤n) присвойте ai=ai+x.</p>\r\n\r\n  <p>Например, если a=[1,3,4,2], и вы выполните операцию с x=3, то a теперь равен [4,6,7,5].</p>\r\n\r\n  <p>Выведите максимальное возможное значение MEX(a) * после выполнения операции.</p>\r\n\r\n  <p>* MEX(a) определяется как наименьшее неотрицательное целое число, которое отсутствует в массиве. Например, MEX([1,2,0,5]) равно 3, а MEX([1,2,4,9]) равно 0.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤1000) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит одно целое число n (1≤n≤3000) — длину массива a.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1, a2, …, an (-10<sup>9</sup> ≤ ai ≤ 10<sup>9</sup>) — массив a.</p>\r\n\r\n  <p>Гарантируется, что сумма n по всем наборам входных данных не превышает 3000.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите максимальное возможное значение MEX(a) после выполнения операции.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n6\r\n1\r\n4\r\n5\r\n0 1 1 2 3\r\n2\r\n1 1\r\n4\r\n4 2 3 6\r\n5\r\n2 4 1 0 -1\r\n6\r\n-1 1 2 3 5 6\r\n</pre>\r\n<pre>\r\n1\r\n4\r\n1\r\n3\r\n4\r\n3\r\n</pre>\r\n  </details>\r\n  <p>Для первого набора входных данных выполнение операции с x = -4 делает a=[0], и MEX([0])=1.</p>\r\n\r\n  <p>Для второго набора входных данных MEX уже равен 4, что является максимальным возможным значением, поэтому мы можем выполнить операцию с x=0, что не изменит массив.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Поскольку всю последовательность мы можем сдвинуть влево или вправо на любое расстояние, то максимально возможное значение минимального целого неотрицательного числа, которого нет в последовательности будет равно длине максимальной последовательности подряд идущих чисел.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    cin >> n;\r\n\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    sort(A.begin(), A.end());\r\n    int dlin = 1;\r\n    int max_dlin = 1;\r\n\r\n    // найдем максимальную длину подряд идущих чисел\r\n    for (int i = 1; i &lt; n; i++) {\r\n      if (A[i] == A[i - 1] + 1) {\r\n        dlin++;\r\n      } else if (A[i] > A[i - 1] + 1) {\r\n        max_dlin = max(max_dlin, dlin);\r\n        dlin = 1;\r\n      } else {\r\n        max_dlin = max(max_dlin, dlin);\r\n      }\r\n    }\r\n    max_dlin = max(max_dlin, dlin);\r\n\r\n    cout &lt;&lt; max_dlin &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. OutOfMemoryError -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. OutOfMemoryError</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>У Бесси есть массив из n целых чисел a1, a2, …, an. Бесси выполняет m операций над массивом. i-я операция устанавливает abi=abi+ci.</p>\r\n\r\n  <p>К сожалению, из-за растущих затрат на оперативную память компьютер Бесси имеет ограниченную память, и каждый раз, когда любой элемент массива превышает h, её компьютер зависает, и каждый элемент массива сбрасывается на своё исходное значение.</p>\r\n\r\n  <p>После выполнения всех операций выведите массив a.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит три целых числа n,m,h (1≤n,m≤2⋅10⁵, 1≤h≤10⁹) — длину массива a, количество выполненных операций и максимальное значение, которое компьютер Бесси может хранить без зависания.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤h) — массив a.</p>\r\n\r\n  <p>Следующие m строк содержат по два целых числа bi,ci (1≤bi≤n, 0≤ci≤10⁹) — операции, которые Бесси выполняет над массивом.</p>\r\n\r\n  <p>Гарантируется, что сумма n и сумма m по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите массив a после выполнения всех операций.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n3 4 5\r\n1 2 1\r\n1 4\r\n2 4\r\n3 3\r\n2 0\r\n5 3 1\r\n1 1 1 1 1\r\n1 1\r\n1 1\r\n2 1\r\n4 4 1\r\n1 0 0 0\r\n1 1\r\n4 4\r\n3 3\r\n4 4\r\n</pre>\r\n<pre>\r\n1 2 4\r\n1 1 1 1 1\r\n1 0 0 0\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных массив a изменяется следующим образом:</p>\r\n  <ul>\r\n    <li>Перед всеми операциями, a=[1,2,1].</li>\r\n    <li>После первой операции, a=[5,2,1].</li>\r\n    <li>После второй операции, a=[5,6,1], но так как 6>h, компьютер зависает, и a=[1,2,1].</li>\r\n    <li>После третьей операции, a=[1,2,4].</li>\r\n    <li>После четвертой операции, a=[1,2,4].</li>\r\n  </ul>\r\n  <p>Для третьего набора входных данных каждая операция вызывает зависание компьютера, поэтому a=[1,0,0,0].</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Храним оригинальный массив, а ответ будем собирать в измененном массиве. Линейно проходим по всем операциям. Каждую операцию добавляем в очередь. Если результат превышает максимальное значение h, то отменяем все операции в очереди и очищаем очередь.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;queue&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    int m; // число операций\r\n    int h; // максимальное значение\r\n    cin >> n >> m >> h;\r\n\r\n    vector&lt;int&gt; A(n + 1); // оригинальный массив\r\n    vector&lt;int&gt; B(n + 1); // измененный массив\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin >> A[i];\r\n      B[i] = A[i];\r\n    }\r\n\r\n    queue&lt;int&gt; q; // очередь изменений\r\n    int pos; // индекс массива\r\n    int c; // слагаемое\r\n\r\n    for (int i = 0; i &lt; m; i++) {\r\n      // считываем каждую операцию\r\n      cin >> pos >> c;\r\n\r\n      B[pos] = B[pos] + c;\r\n      q.push(pos);\r\n      if (B[pos] > h) {\r\n        while (q.size() > 0) {\r\n          pos = q.front();\r\n          q.pop();\r\n          B[pos] = A[pos];\r\n        }\r\n      }\r\n    }\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cout &lt;&lt; B[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Роботизированная спешка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Роботизированная спешка</h3>\r\n\r\n  <div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n  <p>Существует бесконечно длинная числовая прямая.</p>\r\n\r\n  <p>На числовой прямой находятся n роботов и m шипов, каждый из которых расположен в определенной точке на числовой прямой. i-й робот находится на позиции ai, а i-й шип расположен на позиции bi. Если робот касается шипа, он погибает.</p>\r\n\r\n  <p>Роботам передаются k инструкций, каждая из которых заключается в том, чтобы либо переместиться влево на одну единицу, либо переместиться вправо на одну единицу.</p>\r\n\r\n  <p>Для каждого значения i (1≤i≤k) выведите, сколько роботов все еще живы после обработки первых i инструкций.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит три целых числа n,m,k (1≤n,m,k≤2⋅10⁵) — количество роботов, шипов и инструкций соответственно.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤10⁹) — расположение роботов. Гарантируется, что все элементы a различны.</p>\r\n\r\n  <p>Третья строка содержит m целых чисел b1,b2,…,bm (0≤bi≤10⁹) — расположение шипов. Гарантируется, что все элементы b различны.</p>\r\n\r\n  <p>Четвертая строка содержит строку длины k — инструкции, переданные роботам. Каждый символ является либо L, представляющим инструкцию переместиться влево, либо R, представляющим инструкцию переместиться вправо.</p>\r\n\r\n  <p>Гарантируется, что сумма каждого из n,m,k по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <p>Дополнительное ограничение: гарантируется, что нет роботов и шипов на одной позиции.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Выведите k целых чисел, где i-е целое число указывает, сколько роботов живы после обработки первых i инструкций.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n2 1 3\r\n0 1\r\n2\r\nLRR\r\n2 3 3\r\n2 4\r\n1 3 5\r\nLRL\r\n3 2 3\r\n1 3 7\r\n9 6\r\nRRL\r\n</pre>\r\n<pre>\r\n2 2 1\r\n0 0 0\r\n3 2 2\r\n</pre>\r\n  </details>\r\n  <p>Для первого набора входных данных:</p>\r\n\r\n  <p>Первый робот переместится на позиции 0→-1→0→1, так что он не погибнет.</p>\r\n  <p>Второй робот переместится на позиции 1→0→1→2, так что он погибнет после обработки третьей инструкции, так как на позиции 2 находится шип.</p>\r\n  <p>Для второго набора входных данных оба робота погибнут после одного перемещения.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Если слева от робота нет шипа, то при движении влево он никогда не погибнет. Если справа от робота нет шипа, то при движении вправо он никогда не погибнет.</p>\r\n    <p>Отсортируем роботов и шипы на прямой. Используем метод двух указателей. Вначале указатель r указывает на первого робота, а указатель s указывает на первый шип. Используем два линейных прохода.</p>\r\n    <p>Первый проход. Линейно проходим по всем роботам, подсчитывая расстояние от каждого робота до ближайшего шипа слева и справа.</p>\r\n    <p>Второй проход. Линейно проходим по всем операциям i от 1 до k. Каждый раз уменьшая оставшихся в живых роботов, если робот доходит до шипа.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n, m, k;\r\n    cin >> n >> m >> k;\r\n\r\n    vector&lt;int&gt; robots(n); for (auto& x : robots) cin >> x;\r\n\r\n    vector&lt;int&gt; lava(m); for (auto& x : lava) cin >> x;\r\n\r\n    vector&lt;bool&gt; dead(n);\r\n    map&lt;int, vector&lt;int&gt; &gt; death_locations;\r\n\r\n    string instructions;\r\n    cin >> instructions;\r\n\r\n    sort(lava.begin(), lava.end());\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (lava[0] &lt; robots[i]) {\r\n        int left_dist = robots[i] - (*(lower_bound(lava.begin(), lava.end(), robots[i]) - 1));\r\n        death_locations[-left_dist].push_back(i);\r\n      }\r\n      if (lava[m - 1] > robots[i]) {\r\n        int right_dist = *lower_bound(lava.begin(), lava.end(), robots[i]) - robots[i];\r\n        death_locations[right_dist].push_back(i);\r\n      }\r\n\r\n    }\r\n\r\n    int current_pos = 0;\r\n    int alive = n;\r\n\r\n    for (auto& x : instructions) {\r\n      if (x == 'L') current_pos--;\r\n      else current_pos++;\r\n\r\n      for (int i : death_locations[current_pos]) {\r\n\r\n        if (dead[i]) continue;\r\n        dead[i] = true;\r\n        alive--;\r\n      }\r\n      death_locations[current_pos].clear();\r\n      cout &lt;&lt; alive &lt;&lt; \" \";\r\n    }\r\n\r\n    cout &lt;&lt; \"\\n\";\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. BattleCows -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. BattleCows</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>Фермер Джон отправляет корову участвовать в Международной Коровьей Олимпиаде, но ему слишком лень писать задачи для конкурса, поэтому он делает следующее самое разумное: организует турнир по борьбе!</p>\r\n\r\n  <p>У фермера Джона есть 2<sup>n</sup> коров, стоящих в ряд, при этом i-я корова имеет уровень навыка ai. Каждая корова начинает в стопке, содержащей только её саму, и уровень навыка стопки равен XOR-сумме∗ уровней навыка всех коров в ней. Например, если стопка состоит из коров с уровнями навыка 1,3,9 снизу вверх, то уровень навыка стопки равен 1⊕3⊕9=11.</p>\r\n\r\n  <p>Следующий процесс повторяется до тех пор, пока не останется только одна стопка.</p>\r\n  <ul>\r\n    <li>Каждая стопка на нечётной позиции (1-я, 3-я и т.д.) начинает бой со стопкой справа от неё. Например, 1-я стопка будет сражаться с 2-й стопкой, 3-я стопка будет сражаться с 4-й стопкой и т.д.</li>\r\n    <li>Стопка с более высоким уровнем навыка выиграет матч, при равенстве выигрывает левая стопка.</li>\r\n    <li>Выигравшая стопка перепрыгнет на верх проигравшей стопки и сдвинет себя так, чтобы не осталось пробелов от побеждённых стопок.</li>\r\n  </ul>\r\n  <p>Чтобы сделать это более захватывающим, фермер Джон создал q   зелий, так что i-е зелье делает уровень навыка коровы, которая его выпьет, равным ci. Фермер Джон хочет протестировать свои зелья на коровах, поэтому он даёт i-е зелье корове bi, а затем проводит турнир. Для каждого испытания фермер Джон хочет знать, сколько коров находится выше коровы, которая получила зелье, в финальной стопке.</p>\r\n\r\n  <p>Зелья фермера Джона быстро теряют свою силу, поэтому, когда турнир заканчивается, корова, которая получила зелье, вернёт свой уровень навыка к тому, каким он был изначально. Другими словами, все запросы независимы.</p>\r\n\r\n  <p>* XOR-сумма массива x1,x2,…,xy равна x1⊕x2⊕x3…xy-1⊕xy, где ⊕ обозначает побитовую операцию XOR.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора содержит два целых числа n и q (1≤n≤18, 1≤q≤2⋅10⁵) — где 2<sup>n</sup> равно количеству коров в турнире, а q — количество зелий.</p>\r\n\r\n  <p>Вторая строка содержит 2<sup>n</sup> целых чисел a1,a2,…,a2n (1≤ai≤2³⁰) — уровни навыка коров.</p>\r\n\r\n  <p>Следующие q строк содержат по два целых числа bi и ci (1≤bi≤2<sup>n</sup>, 1≤ci≤2³⁰) — индекс коровы, которая получает зелье, и новый уровень навыка коровы.</p>\r\n\r\n  <p>Гарантируется, что сумма 2<sup>n</sup> по всем наборам не превышает 2¹⁸=262144, а сумма q по всем наборам не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого испытания выведите, сколько коров находится выше коровы, которая получила зелье, в финальной стопке.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n2 2\r\n1 3 5 7\r\n1 1\r\n4 8\r\n1 2\r\n1 3\r\n1 4\r\n1 2\r\n3 4\r\n1 8 3 10 2 5 7 1\r\n5 3\r\n8 12\r\n1 9\r\n2 1\r\n2 1\r\n1 2 3 4\r\n3 1\r\n</pre>\r\n<pre>\r\n1\r\n0\r\n0\r\n1\r\n5\r\n0\r\n2\r\n3\r\n1\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого раунда первого примера уровни навыка коров не меняются, и матчи проходят следующим образом:</p>\r\n  <ul>\r\n    <li>Коровы 1 и 2 сражаются. Поскольку уровень навыка коровы 2 выше, чем уровень навыка коровы 1, корова 2 выигрывает бой, поэтому её стопка теперь содержит коров 1,2 в этом порядке, а уровень навыка стопки теперь 3⊕1=2.</li>\r\n    <li>Коровы 3 и 4 сражаются. Поскольку уровень навыка коровы 4 выше, чем уровень навыка коровы 3, корова 4 выигрывает бой, поэтому её стопка теперь содержит коров 3,4 в этом порядке, а уровень навыка стопки теперь 7⊕5=2.</li>\r\n    <li>Две оставшиеся стопки сражаются. Поскольку уровень навыка первой стопки равен уровню навыка второй стопки, первая стопка выигрывает бой, так как её индекс ниже, чем у второй стопки, поэтому финальная стопка содержит коров 3,4,1,2 в этом порядке, а её уровень навыка теперь 2⊕2=0.</li>\r\n  </ul>\r\n  <p>Поскольку мы дали зелье корове 1, наш ответ равен 1, так как над коровой 1 находится одна корова.</p>\r\n  <p>Визуализация раунда показана ниже.</p>\r\n\r\n  <p>Для второго раунда первого примера уровень навыка коровы 4 теперь 8, и матчи проходят следующим образом:</p>\r\n  <ul>\r\n    <li>Коровы 1 и 2 сражаются. Поскольку уровень навыка коровы 2 выше, чем уровень навыка коровы 1, корова 2 выигрывает бой, поэтому её стопка теперь содержит коров 1,2 в этом порядке, а уровень навыка стопки теперь 3⊕1=2.</li>\r\n    <li>Коровы 3 и 4 сражаются. Поскольку уровень навыка коровы 4 выше, чем уровень навыка коровы 3, корова 4 выигрывает бой, поэтому её стопка теперь содержит коров 3,4 в этом порядке, а уровень навыка стопки теперь 8⊕5=13.</li>\r\n    <li>Две оставшиеся стопки сражаются. Поскольку уровень навыка второй стопки выше, чем уровень навыка первой стопки, вторая стопка выигрывает бой, поэтому финальная стопка содержит коров 1,2,3,4 в этом порядке, а её уровень навыка теперь 2⊕15=13.</li>\r\n  </ul>\r\n  <p>Поскольку мы дали зелье корове 4, наш ответ равен 0, так как над коровой 4 нет коров.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n, q;\r\n    cin >> n >> q;\r\n\r\n    int num_cows = (1 &lt;&lt; n);\r\n    vector&lt;int&gt; cows(num_cows); for (auto& x : cows) cin >> x;\r\n\r\n    vector&lt;int&gt; prefix(num_cows); prefix[0] = cows[0];\r\n    for (int i = 1; i &lt; num_cows; i++) {\r\n      prefix[i] = cows[i] ^ prefix[i - 1];\r\n    }\r\n\r\n    while (q--) {\r\n      int cow_idx, skill_level;\r\n      cin >> cow_idx >> skill_level;\r\n      cow_idx--;\r\n\r\n      int curr_position = 0;\r\n      for (int i = 0; i &lt; n; i++) {\r\n        int size = (1 &lt;&lt; i);\r\n        int leader_idx = cow_idx / size;\r\n\r\n        int leader_value = prefix[(size) * (leader_idx + 1) - 1] ^ (leader_idx == 0 ? 0 : prefix[(size) * (leader_idx)-1]);\r\n        leader_value ^= cows[cow_idx];\r\n        leader_value ^= skill_level;\r\n\r\n        int enemy_value;\r\n        if (leader_idx % 2 == 0) {\r\n          enemy_value = prefix[(size) * (leader_idx + 2) - 1] ^ prefix[(size) * (leader_idx + 1) - 1];\r\n        } else {\r\n          enemy_value = prefix[(size) * (leader_idx)-1] ^ ((leader_idx - 1) == 0 ? 0 : prefix[(size) * (leader_idx - 1) - 1]);\r\n        }\r\n        if (leader_value &lt; enemy_value || (leader_value == enemy_value && leader_idx % 2 == 1)) {\r\n          curr_position += size;\r\n        }\r\n      }\r\n\r\n      cout &lt;&lt; curr_position &lt;&lt; \"\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Смешивание MEXов -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Смешивание MEXов</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>Вам даны n массивов a1, a2, …, an.</p>\r\n\r\n  <p>Следующая операция выполняется ровно один раз:</p>\r\n  <ul>\r\n    <li>Выберите любой массив из a1, a2, …, an. Предположим, вы выбрали массив ai (1≤i≤n).</li>\r\n    <li>Выберите любой элемент в массиве ai. Предположим, вы выбрали j-й элемент массива ai, обозначенный как ai,j (1≤j≤|ai|, где |ai| обозначает длину массива ai).</li>\r\n    <li>Выберите любой другой массив из a1, a2, … an который не является ai. Предположим, вы выбрали ak (1≤k≤n,k≠i).</li>\r\n    <li>Добавьте ai,j в конец массива ak. Затем удалите ai,j из ai.</li>\r\n    <li>Значение этой операции (i,j,k) определяется как сумма MEX каждого массива после выполнения операции. Более формально, значение операции после выполнения операции равно ∑ni=1MEX(ai).</li>\r\n  </ul>\r\n\r\n  <p>Найдите сумму значений всех возможных различных независимых операций. Две операции различны, если упорядоченная тройка целых чисел (i,j,k) различна.</p>\r\n\r\n  <p>MEX(a) определяется как наименьшее неотрицательное целое число, которое отсутствует в массиве. Например, MEX([1,2,0,5]) равно 3, а MEX([1,2,4,9]) равно 0.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит одно целое число n (2≤n≤2⋅10⁵) — количество массивов.</p>\r\n\r\n  <p>Следующие n строк начинаются с li(1≤li≤10⁵) — длины i-го массива — затем содержат li целых числа a1,a2,…,ali (0≤aij≤10⁶) — массив ai.</p>\r\n\r\n  <p>Гарантируется, что сумма li по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите сумму значений всех возможных различных операций.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n6\r\n2\r\n1 0\r\n2 1 2\r\n3\r\n1 1\r\n2 2 3\r\n3 4 5 6\r\n5\r\n4 1 7 8 10\r\n2 5 6\r\n2 0 7\r\n2 6 6\r\n2 6 8\r\n2\r\n1 3\r\n3 0 1 2\r\n2\r\n6 0 0 1 2 2 3\r\n3 0 2 3\r\n10\r\n1 0\r\n9 7 8 0 1 5 6 4 3 2\r\n8 4 3 8 6 2 5 0 1\r\n7 2 3 0 1 0 4 0\r\n2 3 1\r\n9 2 0 5 4 1 3 0 0 0\r\n7 6 3 2 4 1 8 0\r\n5 3 2 4 1 0\r\n4 0 3 1 1\r\n3 0 3 2\r\n</pre>\r\n<pre>\r\n6\r\n0\r\n50\r\n8\r\n43\r\n19202\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных у нас есть 3 возможные различные операции:</p>\r\n  <ul>\r\n    <li>i=1,j=1,k=2: Массивы теперь [] и [0,1,2], которые имеют mex равный 0 и 3 соответственно, так что значение операции равно 3.</li>\r\n    <li>i=2,j=1,k=1: Массивы теперь [0,1] и [2], которые имеют mex равный 2 и 0 соответственно, так что значение операции равно 2.</li>\r\n    <li>i=2,j=2,k=1: Массивы теперь [0,2] и [1], которые имеют mex равный 1 и 0 соответственно, так что значение операции равно 1.</li>\r\n  </ul>\r\n  <p>Для второго набора входных данных, поскольку ни один массив не содержит нуля, значение всех операций будет 0.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\n\r\nint main() {\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin >> n;\r\n    vector&lt;int&gt; l(n);\r\n    vector&lt;vector&lt;int&gt; &gt; a(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> l[i];\r\n      a[i].resize(l[i]);\r\n      for (int &x : a[i]) cin >> x;\r\n      sort(a[i].begin(), a[i].end());\r\n    }\r\n    vector&lt;int&gt; v(n), v_new(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      int mex = 0;\r\n      for (int x : a[i]) {\r\n        if (x == mex) mex++;\r\n      }\r\n      v[i] = mex;\r\n      mex++;\r\n      for (int x : a[i]) {\r\n        if (x == mex) mex++;\r\n      }\r\n      v_new[i] = mex;\r\n    }\r\n    ll score = 0;\r\n    for (int i = 0; i &lt; n; i++) {\r\n      score += v[i];\r\n    }\r\n    ll ans = 0;\r\n    map&lt;int, int&gt; score_delta;\r\n    for (int i = 0; i &lt; n; i++) {\r\n      score_delta[v[i]] += v_new[i] - v[i];\r\n    }\r\n    for (int i = 0; i &lt; n; i++) {\r\n      int my_mex = 0;\r\n      map&lt;int, int&gt; mp;\r\n      map&lt;int, int&gt; lst;\r\n      vector&lt;int&gt; l(a[i].size());\r\n      for (int j = (int) a[i].size() - 1; j >= 0; j--) {\r\n        if (mp.count(a[i][j] + 1)) {\r\n          l[j] = l[mp[a[i][j] + 1]] + 1;\r\n        } else {\r\n          l[j] = 1;\r\n        }\r\n        if (!lst.count(a[i][j])) {\r\n          lst[a[i][j]] = j;\r\n        }\r\n        mp[a[i][j]] = j;\r\n      }\r\n      int ptr = 0;\r\n      for (int x : a[i]) {\r\n        ll new_score = (n - 1) * (ll) (score - v[i]) + score_delta[x];\r\n        int cur = lst[my_mex];\r\n        int new_mex = my_mex;\r\n        if (cur > ptr) {\r\n          new_mex += l[cur];\r\n        }\r\n        new_score += new_mex * (ll) (n - 1);\r\n        ans += new_score;\r\n        if (x == my_mex) my_mex++;\r\n        ptr++;\r\n      }\r\n    }\r\n    cout &lt;&lt; ans &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача H. BattleCows 2 -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H. BattleCows 2</h3>\r\n\r\n  <div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n  <p>Фермер Джон хочет провести еще один турнир с n коровами, где i-я корова имеет уровень навыка ai. Следующий процесс повторяется, пока в очереди не останется только одна корова.</p>\r\n  <ul>\r\n    <li>Первая корова в очереди сражается со второй коровой в очереди, и корова с более высоким уровнем навыка побеждает. Если есть ничья, побеждает первая корова.</li>\r\n    <li>Уровень навыка победившей коровы устанавливается равным x+y, где x — уровень навыка победившей коровы, а y — уровень навыка проигравшей коровы.</li>\r\n    <li>Проигравшая корова покидает очередь.</li>\r\n  </ul>\r\n\r\n  <p>Однако, чтобы сохранить точность к настоящему соревнованию USACOW, корова может жульничать до k раз. Это означает, что даже если она проигрывает матч, фермер Джон будет считать, что проигравшая корова выиграла матч, что означает, что уровень навыка проигравшей коровы будет установлен равным x+y, где x — уровень навыка победившей коровы, а y — уровень навыка проигравшей коровы, и победившая корова покинет очередь.</p>\r\n\r\n  <p>Позиция x хороша для коровы i, если корова i может быть удалена из своего первоначального положения и вставлена на индекс x без изменения порядка других коров и быть единственной коровой, оставшейся в очереди, когда турнир закончится, при условии, что ни одна другая корова не жульничает.</p>\r\n\r\n  <p>Для каждой коровы в очереди вычислите количество хороших позиций для этой коровы.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит два целых числа n и k (2≤n≤2⋅10⁵, 0 ≤ k &lt; n) — количество коров и количество жульничеств, которые может использовать корова.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (1≤ai≤10⁹) — уровни навыка коров.</p>\r\n\r\n  <p>Гарантируется, что сумма n по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите n целых чисел, где i-е целое число обозначает количество хороших позиций для коровы i.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n7\r\n2 0\r\n2 1\r\n2 0\r\n1 1\r\n3 1\r\n1 1 3\r\n3 0\r\n2 1 1\r\n3 1\r\n1 3 1\r\n4 1\r\n1 2 1 3\r\n7 2\r\n1 3 3 17 39 3 12\r\n</pre>\r\n<pre>\r\n2 0\r\n1 1\r\n2 2 3\r\n2 0 0\r\n3 3 2\r\n4 4 4 4\r\n4 6 6 7 7 5 7\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных корова 2 проиграет, независимо от того, где она будет расположена, а корова 1 выиграет, независимо от того, где она будет расположена.</p>\r\n\r\n  <p>Для второго набора входных данных обе коровы могут выиграть, находясь на позиции 1, но не могут на позиции 2, что означает, что у каждой из них есть 1 хорошая позиция.</p>\r\n\r\n  <p>Для третьего набора входных данных давайте посмотрим на корову 1.</p>\r\n  <ul>\r\n    <li>Если корова 1 будет на позиции 1, то она выиграет свой первый матч, сделав ее уровень навыка равным 2, и сможет жульничать, чтобы выиграть свой второй матч.</li>\r\n    <li>Если корова 1 будет на позиции 2, то ей придется жульничать, чтобы выиграть свой первый матч, но затем она проиграет свой второй матч.</li>\r\n    <li>Если корова 1 будет на позиции 3, то ей придется жульничать, чтобы выиграть свой первый матч, и у нее не будет больше матчей.</li>\r\n  </ul>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\n\r\nint main() {\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n, k;\r\n    cin >> n >> k;\r\n    vector&lt;ll&gt; a(n);\r\n    vector&lt;ll&gt; p(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> a[i];\r\n      p[i] = (i ? p[i - 1] : 0ll) + a[i];\r\n    }\r\n    vector&lt;int&gt; els;\r\n    for (int t = 0; t &lt; 32; t++) {\r\n      vector&lt;int&gt; arr;\r\n      for (int i = 0; i &lt; n; i++) {\r\n        if (a[i] >= (1ll &lt;&lt; t) && a[i] &lt; (1ll &lt;&lt; (t + 1))) {\r\n          if ((int) arr.size() &lt;= 2) {\r\n            arr.push_back(i);\r\n          }\r\n        }\r\n      }\r\n      for (int x : arr) els.push_back(x);\r\n    }\r\n\r\n    sort(els.begin(), els.end());\r\n    for (int i = 0; i &lt; n; i++) {\r\n      vector&lt;pair&lt;int, int&gt; &gt; evs;\r\n      auto add = [&] (int l, int r, int cnt) {\r\n        evs.push_back({l, 1});\r\n        evs.push_back({r + 1, -1});\r\n      };\r\n      auto real_s = [&] (int j) {\r\n        if (j &lt; 0) return 0ll;\r\n        ll cur = p[j];\r\n        if (i &lt;= j) cur -= a[i];\r\n        return cur;\r\n      };\r\n      for (int j : els) {\r\n        if (j != i) {\r\n          ll total = real_s(j - 1) + a[i];\r\n          if (a[j] > total) {\r\n            int real_pos = j;\r\n            if (i &lt;= j) real_pos--;\r\n            add(0, real_pos, 1);\r\n          }\r\n        }\r\n      }\r\n      auto if_pos = [&] (int x) {\r\n        int pref = x;\r\n        if (i &lt;= x) pref++;\r\n        return real_s(pref - 1);\r\n      };\r\n      int l = -1, r = n;\r\n      while (l &lt; r - 1) {\r\n        int mid = (l + r) / 2;\r\n        if (if_pos(mid) >= a[i]) {\r\n          r = mid;\r\n        } else {\r\n          l = mid;\r\n        }\r\n      }\r\n      add(r, n - 1, 1);\r\n      evs.push_back({0, 0});\r\n      evs.push_back({n, 0});\r\n      sort(evs.begin(), evs.end());\r\n      int bal = 0;\r\n      int ans = 0;\r\n      for (int i = 0; i &lt; (int) evs.size(); i++) {\r\n        bal += evs[i].second;\r\n        if (i + 1 &lt; (int) evs.size() && evs[i + 1].first != evs[i].first) {\r\n          if (bal &lt;= k) {\r\n            ans += evs[i + 1].first - evs[i].first;\r\n          }\r\n        }\r\n      }\r\n      cout &lt;&lt; ans &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2185\" target=\"_blank\">Codeforces 2185 Round 1074 (Div. 4) 2026.01.18</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Совершенный корень</a>\r\n  <br><a href=\"#t2\">Задача B. Префиксный максимум</a>\r\n  <br><a href=\"#t3\">Задача C. Сдвинутый MEX</a>\r\n  <br><a href=\"#t4\">Задача D. OutOfMemoryError</a>\r\n  <br><a href=\"#t5\">Задача E. Роботизированная спешка</a>\r\n  <br><a href=\"#t6\">Задача F. BattleCows</a>\r\n  <br><a href=\"#t7\">Задача G. Смешивание MEXов</a>\r\n  <br><a href=\"#t8\">Задача H. BattleCows 2</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Совершенный корень -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Совершенный корень</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <p>Положительное целое число x является совершенным корнем, если существует целое число y, такое что √y=x. Например, 5 является совершенным корнем, потому что √25=5.</p>\r\n\r\n  <p>Для каждого набора входных данных выведите n различных совершенных корней. Обратите внимание, что значения должны быть различными только в пределах каждого набора входных данных; вы можете использовать одно и то же значение в разных наборах.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1 ≤ t ≤ 20) — количество наборов входных данных.</p>\r\n\r\n  <p>Единственная строка каждого набора входных данных содержит целое число n (1 ≤ n ≤ 20) — количество совершенных корней для вывода.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите n различных совершенных корней. Каждый совершенный корень x должен находиться в диапазоне 1 ≤ x ≤ 10<sup>9</sup>.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n1\r\n2\r\n5\r\n</pre>\r\n<pre>\r\n1\r\n2 4\r\n2 102 43 1 21\r\n</pre>\r\n  </details>\r\n  <p>Для первого набора входных данных:</p>\r\n  <p>1 является совершенным корнем, потому что √1=1.</p>\r\n\r\n  <p>Для второго набора входных данных:</p>\r\n  <p>2 является совершенным корнем, потому что √4=2.</p>\r\n  <p>4 является совершенным корнем, потому что √16=4.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Любое натуральное число является совершенным корнем какого-то натурального числа. Поэтому выводим n чисел начиная с 1.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // число совершенных корней\r\n    cin &gt;&gt; n;\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cout &lt;&lt; i &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Префиксный максимум -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Префиксный максимум</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1.5с. Память 256мб)</div>\r\n\r\n  <p>Дан массив из n целых чисел a1, a2, …, an.</p>\r\n\r\n  <p>Значение массива — это сумма максимумов каждого префикса массива. Более формально, значение массива a равно ∑(n,i=1) max(a1,…,ai). Например, значение массива [1,2,1] равно max(1)+max(1,2)+max(1,2,1)=1+2+2=5.</p>\r\n\r\n  <p>Вы можете выбрать два индекса i и j и поменять местами элементы ai и aj; эта операция может быть выполнена не более одного раза.</p>\r\n\r\n  <p>Найдите максимальное возможное значение массива a\r\n  после выполнения не более одной операции.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1 ≤ t ≤ 100) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит одно целое число n (2 ≤ n ≤ 50) — длину массива a.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1, a2, …, an (1 ≤ ai ≤ 10<sup>4</sup>) — массив a.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите максимальное возможное значение массива a после выполнения обмена.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n5\r\n2 1 4 5 3\r\n2\r\n5 1\r\n3\r\n3 2 1\r\n2\r\n6 7\r\n</pre>\r\n<pre>\r\n25\r\n10\r\n9\r\n14\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных мы можем поменять местами a1 с a4, чтобы получить массив [5,1,4,2,3], который имеет значение max(5)+max(5,1)+max(5,1,4)+max(5,1,4,2)+max(5,1,4,2,3)=25.</p>\r\n\r\n  <p>Для второго набора входных данных текущее значение массива равно max(5)+max(5,1)=10. Если мы поменяем местами a1 и a2, то a будет равно [1,5], что имеет значение max(1)+max(1,5)=6, что означает, что лучший вариант — не выполнять обмен.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Чтобы все префиксы массива были максимальными, нужно максимальное значение поставить первым элементом массива. Тогда сумма максимумов всех префиксов будет равна произведению максимального элемента массива на его длину.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    cin &gt;&gt; n;\r\n\r\n    int maxi = 1; // максимальный элемент массива\r\n    int in; // входной элемент массива\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; in;\r\n      if (in &gt; maxi) {\r\n        maxi = in;\r\n      }\r\n    }\r\n\r\n    cout &lt;&lt; n * maxi &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Сдвинутый MEX -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Сдвинутый MEX</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>Вам дан массив из n целых чисел a1, a2, …, an. Вам разрешено выполнить следующую операцию один раз.</p>\r\n\r\n  <p>Выберите целое число x (которое может быть отрицательным), и для каждого значения i (1≤i≤n) присвойте ai=ai+x.</p>\r\n\r\n  <p>Например, если a=[1,3,4,2], и вы выполните операцию с x=3, то a теперь равен [4,6,7,5].</p>\r\n\r\n  <p>Выведите максимальное возможное значение MEX(a) * после выполнения операции.</p>\r\n\r\n  <p>* MEX(a) определяется как наименьшее неотрицательное целое число, которое отсутствует в массиве. Например, MEX([1,2,0,5]) равно 3, а MEX([1,2,4,9]) равно 0.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤1000) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит одно целое число n (1≤n≤3000) — длину массива a.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1, a2, …, an (-10<sup>9</sup> ≤ ai ≤ 10<sup>9</sup>) — массив a.</p>\r\n\r\n  <p>Гарантируется, что сумма n по всем наборам входных данных не превышает 3000.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите максимальное возможное значение MEX(a) после выполнения операции.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n6\r\n1\r\n4\r\n5\r\n0 1 1 2 3\r\n2\r\n1 1\r\n4\r\n4 2 3 6\r\n5\r\n2 4 1 0 -1\r\n6\r\n-1 1 2 3 5 6\r\n</pre>\r\n<pre>\r\n1\r\n4\r\n1\r\n3\r\n4\r\n3\r\n</pre>\r\n  </details>\r\n  <p>Для первого набора входных данных выполнение операции с x = -4 делает a=[0], и MEX([0])=1.</p>\r\n\r\n  <p>Для второго набора входных данных MEX уже равен 4, что является максимальным возможным значением, поэтому мы можем выполнить операцию с x=0, что не изменит массив.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Поскольку всю последовательность мы можем сдвинуть влево или вправо на любое расстояние, то максимально возможное значение минимального целого неотрицательного числа, которого нет в последовательности будет равно длине максимальной последовательности подряд идущих чисел.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    cin &gt;&gt; n;\r\n\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    sort(A.begin(), A.end());\r\n    int dlin = 1;\r\n    int max_dlin = 1;\r\n\r\n    // найдем максимальную длину подряд идущих чисел\r\n    for (int i = 1; i &lt; n; i++) {\r\n      if (A[i] == A[i - 1] + 1) {\r\n        dlin++;\r\n      } else if (A[i] &gt; A[i - 1] + 1) {\r\n        max_dlin = max(max_dlin, dlin);\r\n        dlin = 1;\r\n      } else {\r\n        max_dlin = max(max_dlin, dlin);\r\n      }\r\n    }\r\n    max_dlin = max(max_dlin, dlin);\r\n\r\n    cout &lt;&lt; max_dlin &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. OutOfMemoryError -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. OutOfMemoryError</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>У Бесси есть массив из n целых чисел a1, a2, …, an. Бесси выполняет m операций над массивом. i-я операция устанавливает abi=abi+ci.</p>\r\n\r\n  <p>К сожалению, из-за растущих затрат на оперативную память компьютер Бесси имеет ограниченную память, и каждый раз, когда любой элемент массива превышает h, её компьютер зависает, и каждый элемент массива сбрасывается на своё исходное значение.</p>\r\n\r\n  <p>После выполнения всех операций выведите массив a.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит три целых числа n,m,h (1≤n,m≤2⋅10⁵, 1≤h≤10⁹) — длину массива a, количество выполненных операций и максимальное значение, которое компьютер Бесси может хранить без зависания.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤h) — массив a.</p>\r\n\r\n  <p>Следующие m строк содержат по два целых числа bi,ci (1≤bi≤n, 0≤ci≤10⁹) — операции, которые Бесси выполняет над массивом.</p>\r\n\r\n  <p>Гарантируется, что сумма n и сумма m по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите массив a после выполнения всех операций.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n3 4 5\r\n1 2 1\r\n1 4\r\n2 4\r\n3 3\r\n2 0\r\n5 3 1\r\n1 1 1 1 1\r\n1 1\r\n1 1\r\n2 1\r\n4 4 1\r\n1 0 0 0\r\n1 1\r\n4 4\r\n3 3\r\n4 4\r\n</pre>\r\n<pre>\r\n1 2 4\r\n1 1 1 1 1\r\n1 0 0 0\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных массив a изменяется следующим образом:</p>\r\n  <ul>\r\n    <li>Перед всеми операциями, a=[1,2,1].</li>\r\n    <li>После первой операции, a=[5,2,1].</li>\r\n    <li>После второй операции, a=[5,6,1], но так как 6>h, компьютер зависает, и a=[1,2,1].</li>\r\n    <li>После третьей операции, a=[1,2,4].</li>\r\n    <li>После четвертой операции, a=[1,2,4].</li>\r\n  </ul>\r\n  <p>Для третьего набора входных данных каждая операция вызывает зависание компьютера, поэтому a=[1,0,0,0].</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Храним оригинальный массив, а ответ будем собирать в измененном массиве. Линейно проходим по всем операциям. Каждую операцию добавляем в очередь. Если результат превышает максимальное значение h, то отменяем все операции в очереди и очищаем очередь.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;queue&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    int m; // число операций\r\n    int h; // максимальное значение\r\n    cin &gt;&gt; n &gt;&gt; m &gt;&gt; h;\r\n\r\n    vector&lt;int&gt; A(n + 1); // оригинальный массив\r\n    vector&lt;int&gt; B(n + 1); // измененный массив\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin &gt;&gt; A[i];\r\n      B[i] = A[i];\r\n    }\r\n\r\n    queue&lt;int&gt; q; // очередь изменений\r\n    int pos; // индекс массива\r\n    int c; // слагаемое\r\n\r\n    for (int i = 0; i &lt; m; i++) {\r\n      // считываем каждую операцию\r\n      cin &gt;&gt; pos &gt;&gt; c;\r\n\r\n      B[pos] = B[pos] + c;\r\n      q.push(pos);\r\n      if (B[pos] &gt; h) {\r\n        while (q.size() &gt; 0) {\r\n          pos = q.front();\r\n          q.pop();\r\n          B[pos] = A[pos];\r\n        }\r\n      }\r\n    }\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cout &lt;&lt; B[i] &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Роботизированная спешка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Роботизированная спешка</h3>\r\n\r\n  <div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n  <p>Существует бесконечно длинная числовая прямая.</p>\r\n\r\n  <p>На числовой прямой находятся n роботов и m шипов, каждый из которых расположен в определенной точке на числовой прямой. i-й робот находится на позиции ai, а i-й шип расположен на позиции bi. Если робот касается шипа, он погибает.</p>\r\n\r\n  <p>Роботам передаются k инструкций, каждая из которых заключается в том, чтобы либо переместиться влево на одну единицу, либо переместиться вправо на одну единицу.</p>\r\n\r\n  <p>Для каждого значения i (1≤i≤k) выведите, сколько роботов все еще живы после обработки первых i инструкций.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит три целых числа n,m,k (1≤n,m,k≤2⋅10⁵) — количество роботов, шипов и инструкций соответственно.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤10⁹) — расположение роботов. Гарантируется, что все элементы a различны.</p>\r\n\r\n  <p>Третья строка содержит m целых чисел b1,b2,…,bm (0≤bi≤10⁹) — расположение шипов. Гарантируется, что все элементы b различны.</p>\r\n\r\n  <p>Четвертая строка содержит строку длины k — инструкции, переданные роботам. Каждый символ является либо L, представляющим инструкцию переместиться влево, либо R, представляющим инструкцию переместиться вправо.</p>\r\n\r\n  <p>Гарантируется, что сумма каждого из n,m,k по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <p>Дополнительное ограничение: гарантируется, что нет роботов и шипов на одной позиции.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Выведите k целых чисел, где i-е целое число указывает, сколько роботов живы после обработки первых i инструкций.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n2 1 3\r\n0 1\r\n2\r\nLRR\r\n2 3 3\r\n2 4\r\n1 3 5\r\nLRL\r\n3 2 3\r\n1 3 7\r\n9 6\r\nRRL\r\n</pre>\r\n<pre>\r\n2 2 1\r\n0 0 0\r\n3 2 2\r\n</pre>\r\n  </details>\r\n  <p>Для первого набора входных данных:</p>\r\n\r\n  <p>Первый робот переместится на позиции 0→-1→0→1, так что он не погибнет.</p>\r\n  <p>Второй робот переместится на позиции 1→0→1→2, так что он погибнет после обработки третьей инструкции, так как на позиции 2 находится шип.</p>\r\n  <p>Для второго набора входных данных оба робота погибнут после одного перемещения.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Если слева от робота нет шипа, то при движении влево он никогда не погибнет. Если справа от робота нет шипа, то при движении вправо он никогда не погибнет.</p>\r\n    <p>Отсортируем роботов и шипы на прямой. Используем метод двух указателей. Вначале указатель r указывает на первого робота, а указатель s указывает на первый шип. Используем два линейных прохода.</p>\r\n    <p>Первый проход. Линейно проходим по всем роботам, подсчитывая расстояние от каждого робота до ближайшего шипа слева и справа.</p>\r\n    <p>Второй проход. Линейно проходим по всем операциям i от 1 до k. Каждый раз уменьшая оставшихся в живых роботов, если робот доходит до шипа.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n, m, k;\r\n    cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;\r\n\r\n    vector&lt;int&gt; robots(n); for (auto& x : robots) cin &gt;&gt; x;\r\n\r\n    vector&lt;int&gt; lava(m); for (auto& x : lava) cin &gt;&gt; x;\r\n\r\n    vector&lt;bool&gt; dead(n);\r\n    map&lt;int, vector&lt;int&gt; &gt; death_locations;\r\n\r\n    string instructions;\r\n    cin &gt;&gt; instructions;\r\n\r\n    sort(lava.begin(), lava.end());\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      if (lava[0] &lt; robots[i]) {\r\n        int left_dist = robots[i] - (*(lower_bound(lava.begin(), lava.end(), robots[i]) - 1));\r\n        death_locations[-left_dist].push_back(i);\r\n      }\r\n      if (lava[m - 1] &gt; robots[i]) {\r\n        int right_dist = *lower_bound(lava.begin(), lava.end(), robots[i]) - robots[i];\r\n        death_locations[right_dist].push_back(i);\r\n      }\r\n\r\n    }\r\n\r\n    int current_pos = 0;\r\n    int alive = n;\r\n\r\n    for (auto& x : instructions) {\r\n      if (x == 'L') current_pos--;\r\n      else current_pos++;\r\n\r\n      for (int i : death_locations[current_pos]) {\r\n\r\n        if (dead[i]) continue;\r\n        dead[i] = true;\r\n        alive--;\r\n      }\r\n      death_locations[current_pos].clear();\r\n      cout &lt;&lt; alive &lt;&lt; \" \";\r\n    }\r\n\r\n    cout &lt;&lt; \"\\n\";\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. BattleCows -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. BattleCows</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>Фермер Джон отправляет корову участвовать в Международной Коровьей Олимпиаде, но ему слишком лень писать задачи для конкурса, поэтому он делает следующее самое разумное: организует турнир по борьбе!</p>\r\n\r\n  <p>У фермера Джона есть 2<sup>n</sup> коров, стоящих в ряд, при этом i-я корова имеет уровень навыка ai. Каждая корова начинает в стопке, содержащей только её саму, и уровень навыка стопки равен XOR-сумме∗ уровней навыка всех коров в ней. Например, если стопка состоит из коров с уровнями навыка 1,3,9 снизу вверх, то уровень навыка стопки равен 1⊕3⊕9=11.</p>\r\n\r\n  <p>Следующий процесс повторяется до тех пор, пока не останется только одна стопка.</p>\r\n  <ul>\r\n    <li>Каждая стопка на нечётной позиции (1-я, 3-я и т.д.) начинает бой со стопкой справа от неё. Например, 1-я стопка будет сражаться с 2-й стопкой, 3-я стопка будет сражаться с 4-й стопкой и т.д.</li>\r\n    <li>Стопка с более высоким уровнем навыка выиграет матч, при равенстве выигрывает левая стопка.</li>\r\n    <li>Выигравшая стопка перепрыгнет на верх проигравшей стопки и сдвинет себя так, чтобы не осталось пробелов от побеждённых стопок.</li>\r\n  </ul>\r\n  <p>Чтобы сделать это более захватывающим, фермер Джон создал q   зелий, так что i-е зелье делает уровень навыка коровы, которая его выпьет, равным ci. Фермер Джон хочет протестировать свои зелья на коровах, поэтому он даёт i-е зелье корове bi, а затем проводит турнир. Для каждого испытания фермер Джон хочет знать, сколько коров находится выше коровы, которая получила зелье, в финальной стопке.</p>\r\n\r\n  <p>Зелья фермера Джона быстро теряют свою силу, поэтому, когда турнир заканчивается, корова, которая получила зелье, вернёт свой уровень навыка к тому, каким он был изначально. Другими словами, все запросы независимы.</p>\r\n\r\n  <p>* XOR-сумма массива x1,x2,…,xy равна x1⊕x2⊕x3…xy-1⊕xy, где ⊕ обозначает побитовую операцию XOR.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора содержит два целых числа n и q (1≤n≤18, 1≤q≤2⋅10⁵) — где 2<sup>n</sup> равно количеству коров в турнире, а q — количество зелий.</p>\r\n\r\n  <p>Вторая строка содержит 2<sup>n</sup> целых чисел a1,a2,…,a2n (1≤ai≤2³⁰) — уровни навыка коров.</p>\r\n\r\n  <p>Следующие q строк содержат по два целых числа bi и ci (1≤bi≤2<sup>n</sup>, 1≤ci≤2³⁰) — индекс коровы, которая получает зелье, и новый уровень навыка коровы.</p>\r\n\r\n  <p>Гарантируется, что сумма 2<sup>n</sup> по всем наборам не превышает 2¹⁸=262144, а сумма q по всем наборам не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого испытания выведите, сколько коров находится выше коровы, которая получила зелье, в финальной стопке.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n2 2\r\n1 3 5 7\r\n1 1\r\n4 8\r\n1 2\r\n1 3\r\n1 4\r\n1 2\r\n3 4\r\n1 8 3 10 2 5 7 1\r\n5 3\r\n8 12\r\n1 9\r\n2 1\r\n2 1\r\n1 2 3 4\r\n3 1\r\n</pre>\r\n<pre>\r\n1\r\n0\r\n0\r\n1\r\n5\r\n0\r\n2\r\n3\r\n1\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого раунда первого примера уровни навыка коров не меняются, и матчи проходят следующим образом:</p>\r\n  <ul>\r\n    <li>Коровы 1 и 2 сражаются. Поскольку уровень навыка коровы 2 выше, чем уровень навыка коровы 1, корова 2 выигрывает бой, поэтому её стопка теперь содержит коров 1,2 в этом порядке, а уровень навыка стопки теперь 3⊕1=2.</li>\r\n    <li>Коровы 3 и 4 сражаются. Поскольку уровень навыка коровы 4 выше, чем уровень навыка коровы 3, корова 4 выигрывает бой, поэтому её стопка теперь содержит коров 3,4 в этом порядке, а уровень навыка стопки теперь 7⊕5=2.</li>\r\n    <li>Две оставшиеся стопки сражаются. Поскольку уровень навыка первой стопки равен уровню навыка второй стопки, первая стопка выигрывает бой, так как её индекс ниже, чем у второй стопки, поэтому финальная стопка содержит коров 3,4,1,2 в этом порядке, а её уровень навыка теперь 2⊕2=0.</li>\r\n  </ul>\r\n  <p>Поскольку мы дали зелье корове 1, наш ответ равен 1, так как над коровой 1 находится одна корова.</p>\r\n  <p>Визуализация раунда показана ниже.</p>\r\n\r\n  <p>Для второго раунда первого примера уровень навыка коровы 4 теперь 8, и матчи проходят следующим образом:</p>\r\n  <ul>\r\n    <li>Коровы 1 и 2 сражаются. Поскольку уровень навыка коровы 2 выше, чем уровень навыка коровы 1, корова 2 выигрывает бой, поэтому её стопка теперь содержит коров 1,2 в этом порядке, а уровень навыка стопки теперь 3⊕1=2.</li>\r\n    <li>Коровы 3 и 4 сражаются. Поскольку уровень навыка коровы 4 выше, чем уровень навыка коровы 3, корова 4 выигрывает бой, поэтому её стопка теперь содержит коров 3,4 в этом порядке, а уровень навыка стопки теперь 8⊕5=13.</li>\r\n    <li>Две оставшиеся стопки сражаются. Поскольку уровень навыка второй стопки выше, чем уровень навыка первой стопки, вторая стопка выигрывает бой, поэтому финальная стопка содержит коров 1,2,3,4 в этом порядке, а её уровень навыка теперь 2⊕15=13.</li>\r\n  </ul>\r\n  <p>Поскольку мы дали зелье корове 4, наш ответ равен 0, так как над коровой 4 нет коров.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n, q;\r\n    cin &gt;&gt; n &gt;&gt; q;\r\n\r\n    int num_cows = (1 &lt;&lt; n);\r\n    vector&lt;int&gt; cows(num_cows); for (auto& x : cows) cin &gt;&gt; x;\r\n\r\n    vector&lt;int&gt; prefix(num_cows); prefix[0] = cows[0];\r\n    for (int i = 1; i &lt; num_cows; i++) {\r\n      prefix[i] = cows[i] ^ prefix[i - 1];\r\n    }\r\n\r\n    while (q--) {\r\n      int cow_idx, skill_level;\r\n      cin &gt;&gt; cow_idx &gt;&gt; skill_level;\r\n      cow_idx--;\r\n\r\n      int curr_position = 0;\r\n      for (int i = 0; i &lt; n; i++) {\r\n        int size = (1 &lt;&lt; i);\r\n        int leader_idx = cow_idx / size;\r\n\r\n        int leader_value = prefix[(size) * (leader_idx + 1) - 1] ^ (leader_idx == 0 ? 0 : prefix[(size) * (leader_idx)-1]);\r\n        leader_value ^= cows[cow_idx];\r\n        leader_value ^= skill_level;\r\n\r\n        int enemy_value;\r\n        if (leader_idx % 2 == 0) {\r\n          enemy_value = prefix[(size) * (leader_idx + 2) - 1] ^ prefix[(size) * (leader_idx + 1) - 1];\r\n        } else {\r\n          enemy_value = prefix[(size) * (leader_idx)-1] ^ ((leader_idx - 1) == 0 ? 0 : prefix[(size) * (leader_idx - 1) - 1]);\r\n        }\r\n        if (leader_value &lt; enemy_value || (leader_value == enemy_value && leader_idx % 2 == 1)) {\r\n          curr_position += size;\r\n        }\r\n      }\r\n\r\n      cout &lt;&lt; curr_position &lt;&lt; \"\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Смешивание MEXов -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Смешивание MEXов</h3>\r\n\r\n  <div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n  <p>Вам даны n массивов a1, a2, …, an.</p>\r\n\r\n  <p>Следующая операция выполняется ровно один раз:</p>\r\n  <ul>\r\n    <li>Выберите любой массив из a1, a2, …, an. Предположим, вы выбрали массив ai (1≤i≤n).</li>\r\n    <li>Выберите любой элемент в массиве ai. Предположим, вы выбрали j-й элемент массива ai, обозначенный как ai,j (1≤j≤|ai|, где |ai| обозначает длину массива ai).</li>\r\n    <li>Выберите любой другой массив из a1, a2, … an который не является ai. Предположим, вы выбрали ak (1≤k≤n,k≠i).</li>\r\n    <li>Добавьте ai,j в конец массива ak. Затем удалите ai,j из ai.</li>\r\n    <li>Значение этой операции (i,j,k) определяется как сумма MEX каждого массива после выполнения операции. Более формально, значение операции после выполнения операции равно ∑ni=1MEX(ai).</li>\r\n  </ul>\r\n\r\n  <p>Найдите сумму значений всех возможных различных независимых операций. Две операции различны, если упорядоченная тройка целых чисел (i,j,k) различна.</p>\r\n\r\n  <p>MEX(a) определяется как наименьшее неотрицательное целое число, которое отсутствует в массиве. Например, MEX([1,2,0,5]) равно 3, а MEX([1,2,4,9]) равно 0.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит одно целое число n (2≤n≤2⋅10⁵) — количество массивов.</p>\r\n\r\n  <p>Следующие n строк начинаются с li(1≤li≤10⁵) — длины i-го массива — затем содержат li целых числа a1,a2,…,ali (0≤aij≤10⁶) — массив ai.</p>\r\n\r\n  <p>Гарантируется, что сумма li по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите сумму значений всех возможных различных операций.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n6\r\n2\r\n1 0\r\n2 1 2\r\n3\r\n1 1\r\n2 2 3\r\n3 4 5 6\r\n5\r\n4 1 7 8 10\r\n2 5 6\r\n2 0 7\r\n2 6 6\r\n2 6 8\r\n2\r\n1 3\r\n3 0 1 2\r\n2\r\n6 0 0 1 2 2 3\r\n3 0 2 3\r\n10\r\n1 0\r\n9 7 8 0 1 5 6 4 3 2\r\n8 4 3 8 6 2 5 0 1\r\n7 2 3 0 1 0 4 0\r\n2 3 1\r\n9 2 0 5 4 1 3 0 0 0\r\n7 6 3 2 4 1 8 0\r\n5 3 2 4 1 0\r\n4 0 3 1 1\r\n3 0 3 2\r\n</pre>\r\n<pre>\r\n6\r\n0\r\n50\r\n8\r\n43\r\n19202\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных у нас есть 3 возможные различные операции:</p>\r\n  <ul>\r\n    <li>i=1,j=1,k=2: Массивы теперь [] и [0,1,2], которые имеют mex равный 0 и 3 соответственно, так что значение операции равно 3.</li>\r\n    <li>i=2,j=1,k=1: Массивы теперь [0,1] и [2], которые имеют mex равный 2 и 0 соответственно, так что значение операции равно 2.</li>\r\n    <li>i=2,j=2,k=1: Массивы теперь [0,2] и [1], которые имеют mex равный 1 и 0 соответственно, так что значение операции равно 1.</li>\r\n  </ul>\r\n  <p>Для второго набора входных данных, поскольку ни один массив не содержит нуля, значение всех операций будет 0.</p>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\n\r\nint main() {\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n;\r\n    cin &gt;&gt; n;\r\n    vector&lt;int&gt; l(n);\r\n    vector&lt;vector&lt;int&gt; &gt; a(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; l[i];\r\n      a[i].resize(l[i]);\r\n      for (int &x : a[i]) cin &gt;&gt; x;\r\n      sort(a[i].begin(), a[i].end());\r\n    }\r\n    vector&lt;int&gt; v(n), v_new(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      int mex = 0;\r\n      for (int x : a[i]) {\r\n        if (x == mex) mex++;\r\n      }\r\n      v[i] = mex;\r\n      mex++;\r\n      for (int x : a[i]) {\r\n        if (x == mex) mex++;\r\n      }\r\n      v_new[i] = mex;\r\n    }\r\n    ll score = 0;\r\n    for (int i = 0; i &lt; n; i++) {\r\n      score += v[i];\r\n    }\r\n    ll ans = 0;\r\n    map&lt;int, int&gt; score_delta;\r\n    for (int i = 0; i &lt; n; i++) {\r\n      score_delta[v[i]] += v_new[i] - v[i];\r\n    }\r\n    for (int i = 0; i &lt; n; i++) {\r\n      int my_mex = 0;\r\n      map&lt;int, int&gt; mp;\r\n      map&lt;int, int&gt; lst;\r\n      vector&lt;int&gt; l(a[i].size());\r\n      for (int j = (int) a[i].size() - 1; j &gt;= 0; j--) {\r\n        if (mp.count(a[i][j] + 1)) {\r\n          l[j] = l[mp[a[i][j] + 1]] + 1;\r\n        } else {\r\n          l[j] = 1;\r\n        }\r\n        if (!lst.count(a[i][j])) {\r\n          lst[a[i][j]] = j;\r\n        }\r\n        mp[a[i][j]] = j;\r\n      }\r\n      int ptr = 0;\r\n      for (int x : a[i]) {\r\n        ll new_score = (n - 1) * (ll) (score - v[i]) + score_delta[x];\r\n        int cur = lst[my_mex];\r\n        int new_mex = my_mex;\r\n        if (cur &gt; ptr) {\r\n          new_mex += l[cur];\r\n        }\r\n        new_score += new_mex * (ll) (n - 1);\r\n        ans += new_score;\r\n        if (x == my_mex) my_mex++;\r\n        ptr++;\r\n      }\r\n    }\r\n    cout &lt;&lt; ans &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача H. BattleCows 2 -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H. BattleCows 2</h3>\r\n\r\n  <div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n  <p>Фермер Джон хочет провести еще один турнир с n коровами, где i-я корова имеет уровень навыка ai. Следующий процесс повторяется, пока в очереди не останется только одна корова.</p>\r\n  <ul>\r\n    <li>Первая корова в очереди сражается со второй коровой в очереди, и корова с более высоким уровнем навыка побеждает. Если есть ничья, побеждает первая корова.</li>\r\n    <li>Уровень навыка победившей коровы устанавливается равным x+y, где x — уровень навыка победившей коровы, а y — уровень навыка проигравшей коровы.</li>\r\n    <li>Проигравшая корова покидает очередь.</li>\r\n  </ul>\r\n\r\n  <p>Однако, чтобы сохранить точность к настоящему соревнованию USACOW, корова может жульничать до k раз. Это означает, что даже если она проигрывает матч, фермер Джон будет считать, что проигравшая корова выиграла матч, что означает, что уровень навыка проигравшей коровы будет установлен равным x+y, где x — уровень навыка победившей коровы, а y — уровень навыка проигравшей коровы, и победившая корова покинет очередь.</p>\r\n\r\n  <p>Позиция x хороша для коровы i, если корова i может быть удалена из своего первоначального положения и вставлена на индекс x без изменения порядка других коров и быть единственной коровой, оставшейся в очереди, когда турнир закончится, при условии, что ни одна другая корова не жульничает.</p>\r\n\r\n  <p>Для каждой коровы в очереди вычислите количество хороших позиций для этой коровы.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Первая строка входных данных содержит одно целое число t (1≤t≤10⁴) — количество наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит два целых числа n и k (2≤n≤2⋅10⁵, 0 ≤ k &lt; n) — количество коров и количество жульничеств, которые может использовать корова.</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (1≤ai≤10⁹) — уровни навыка коров.</p>\r\n\r\n  <p>Гарантируется, что сумма n по всем наборам входных данных не превышает 2⋅10⁵.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите n целых чисел, где i-е целое число обозначает количество хороших позиций для коровы i.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n7\r\n2 0\r\n2 1\r\n2 0\r\n1 1\r\n3 1\r\n1 1 3\r\n3 0\r\n2 1 1\r\n3 1\r\n1 3 1\r\n4 1\r\n1 2 1 3\r\n7 2\r\n1 3 3 17 39 3 12\r\n</pre>\r\n<pre>\r\n2 0\r\n1 1\r\n2 2 3\r\n2 0 0\r\n3 3 2\r\n4 4 4 4\r\n4 6 6 7 7 5 7\r\n</pre>\r\n  </details>\r\n\r\n  <p>Для первого набора входных данных корова 2 проиграет, независимо от того, где она будет расположена, а корова 1 выиграет, независимо от того, где она будет расположена.</p>\r\n\r\n  <p>Для второго набора входных данных обе коровы могут выиграть, находясь на позиции 1, но не могут на позиции 2, что означает, что у каждой из них есть 1 хорошая позиция.</p>\r\n\r\n  <p>Для третьего набора входных данных давайте посмотрим на корову 1.</p>\r\n  <ul>\r\n    <li>Если корова 1 будет на позиции 1, то она выиграет свой первый матч, сделав ее уровень навыка равным 2, и сможет жульничать, чтобы выиграть свой второй матч.</li>\r\n    <li>Если корова 1 будет на позиции 2, то ей придется жульничать, чтобы выиграть свой первый матч, но затем она проиграет свой второй матч.</li>\r\n    <li>Если корова 1 будет на позиции 3, то ей придется жульничать, чтобы выиграть свой первый матч, и у нее не будет больше матчей.</li>\r\n  </ul>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\n\r\nint main() {\r\n  ios::sync_with_stdio(0);\r\n  cin.tie(0);\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n, k;\r\n    cin &gt;&gt; n &gt;&gt; k;\r\n    vector&lt;ll&gt; a(n);\r\n    vector&lt;ll&gt; p(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; a[i];\r\n      p[i] = (i ? p[i - 1] : 0ll) + a[i];\r\n    }\r\n    vector&lt;int&gt; els;\r\n    for (int t = 0; t &lt; 32; t++) {\r\n      vector&lt;int&gt; arr;\r\n      for (int i = 0; i &lt; n; i++) {\r\n        if (a[i] &gt;= (1ll &lt;&lt; t) && a[i] &lt; (1ll &lt;&lt; (t + 1))) {\r\n          if ((int) arr.size() &lt;= 2) {\r\n            arr.push_back(i);\r\n          }\r\n        }\r\n      }\r\n      for (int x : arr) els.push_back(x);\r\n    }\r\n\r\n    sort(els.begin(), els.end());\r\n    for (int i = 0; i &lt; n; i++) {\r\n      vector&lt;pair&lt;int, int&gt; &gt; evs;\r\n      auto add = [&] (int l, int r, int cnt) {\r\n        evs.push_back({l, 1});\r\n        evs.push_back({r + 1, -1});\r\n      };\r\n      auto real_s = [&] (int j) {\r\n        if (j &lt; 0) return 0ll;\r\n        ll cur = p[j];\r\n        if (i &lt;= j) cur -= a[i];\r\n        return cur;\r\n      };\r\n      for (int j : els) {\r\n        if (j != i) {\r\n          ll total = real_s(j - 1) + a[i];\r\n          if (a[j] &gt; total) {\r\n            int real_pos = j;\r\n            if (i &lt;= j) real_pos--;\r\n            add(0, real_pos, 1);\r\n          }\r\n        }\r\n      }\r\n      auto if_pos = [&] (int x) {\r\n        int pref = x;\r\n        if (i &lt;= x) pref++;\r\n        return real_s(pref - 1);\r\n      };\r\n      int l = -1, r = n;\r\n      while (l &lt; r - 1) {\r\n        int mid = (l + r) / 2;\r\n        if (if_pos(mid) &gt;= a[i]) {\r\n          r = mid;\r\n        } else {\r\n          l = mid;\r\n        }\r\n      }\r\n      add(r, n - 1, 1);\r\n      evs.push_back({0, 0});\r\n      evs.push_back({n, 0});\r\n      sort(evs.begin(), evs.end());\r\n      int bal = 0;\r\n      int ans = 0;\r\n      for (int i = 0; i &lt; (int) evs.size(); i++) {\r\n        bal += evs[i].second;\r\n        if (i + 1 &lt; (int) evs.size() && evs[i + 1].first != evs[i].first) {\r\n          if (bal &lt;= k) {\r\n            ans += evs[i + 1].first - evs[i].first;\r\n          }\r\n        }\r\n      }\r\n      cout &lt;&lt; ans &lt;&lt; ' ';\r\n    }\r\n    cout &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2193-Round1076.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2193-Round1076.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2193-Round1076.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2193-Round1076.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2193\" target=\"_blank\">Codeforces 2193 Round 1076 (Div. 3) 2026.01.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. DBMB и массив</a>\r\n  <br><a href=\"#t2\">Задача B. Перевернуть перестановку</a>\r\n  <br><a href=\"#t3\">Задача C. Заменяй и суммируй</a>\r\n  <br><a href=\"#t4\">Задача D. Игра с монстрами</a>\r\n  <br><a href=\"#t5\">Задача E. Запросы произведения</a>\r\n  <br><a href=\"#t6\">Задача F. Доставка пиццы</a>\r\n  <br><a href=\"#t7\">Задача G. Пути в дереве</a>\r\n  <br><a href=\"#t8\">Задача H. Удалить Граильское дерево</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. DBMB и массив -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. DBMB и массив</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <p>У DBMB вчера был день рождения. Ему подарили массив a из n элементов и число x. Но есть одна проблема, ему нравятся только те массивы, у которых сумма элементов равна s. Чтобы ему понравился массив, вы можете делать следующую операцию сколько угодно раз:</p>\r\n  <ul>\r\n    <li>Выбрать индекс i (1≤i≤n) и прибавить x к числу ai.</li>\r\n  </ul>\r\n\r\n  <p>К примеру, если ему подарили массив [1,2,3,5] и x=2, вы можете выбрать индекс 3 и получить массив [1,2,5,5]. Ваша задача — выяснить, может ли массив понравиться DBMB после любого количества операций.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Каждый тест состоит из нескольких наборов входных данных. Первая строка содержит одно целое число t (1≤t≤1000) — количество наборов входных данных. Далее следует описание наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора содержит три целых числа n, s, x (1≤n,x≤10, 1≤s≤100).</p>\r\n\r\n  <p>Вторая строка каждого набора содержит n целых чисел a1,a2,…an (1≤ai≤10) — элементы массива, подаренного DBMB.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите «YES», если массив может понравиться DBMB. В противном случае выведите «NO».</p>\r\n\r\n  <p>Вы можете выводить каждую букву в любом регистре (строчную или заглавную). Например, строки «yEs», «yes», «Yes» и «YES» будут приняты как положительный ответ.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n    <h4>Пример 1</h4>\r\n<pre>\r\n6\r\n3 3 5\r\n1 1 1\r\n3 8 2\r\n1 2 3\r\n4 7 2\r\n1 1 1 1\r\n3 15 1\r\n2 4 10\r\n2 100 5\r\n4 6\r\n5 12 1\r\n1 2 2 3 2\r\n</pre>\r\n<pre>\r\nYES\r\nYES\r\nNO\r\nNO\r\nYES\r\nYES\r\n</pre>\r\n  <p>Во втором наборе входных данных a=[1,2,3], применим операцию на a2 и получим a=[1,4,3]. Сумма массива равна s.</p>\r\n  </details>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Найдем сумму sum элементов массива. Нельзя получить нужную сумму s только в двух случаях: если sum > s и если s - sum не делится на x.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t; // число тестов\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    int s; // необходимая сумма элементов массива\r\n    int x; // слагаемое\r\n    cin >> n >> s >> x;\r\n\r\n    int sum = 0; // сумма элементов массива\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n      sum += A[i];\r\n    }\r\n\r\n    bool res = true;\r\n\r\n    if (sum > s) {\r\n      res = false;\r\n    } else if ((s - sum) % x > 0) {\r\n      res = false;\r\n    }\r\n\r\n    if (res) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Перевернуть перестановку -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Перевернуть перестановку</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Заменяй и суммируй -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Заменяй и суммируй</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Игра с монстрами -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Игра с монстрами</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Запросы произведения -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Запросы произведения</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Доставка пиццы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Доставка пиццы</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Пути в дереве -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Пути в дереве</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача H. Удалить Граильское дерево -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H. Удалить Граильское дерево</h3>\r\n\r\n</article>\r\n\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2193\" target=\"_blank\">Codeforces 2193 Round 1076 (Div. 3) 2026.01.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. DBMB и массив</a>\r\n  <br><a href=\"#t2\">Задача B. Перевернуть перестановку</a>\r\n  <br><a href=\"#t3\">Задача C. Заменяй и суммируй</a>\r\n  <br><a href=\"#t4\">Задача D. Игра с монстрами</a>\r\n  <br><a href=\"#t5\">Задача E. Запросы произведения</a>\r\n  <br><a href=\"#t6\">Задача F. Доставка пиццы</a>\r\n  <br><a href=\"#t7\">Задача G. Пути в дереве</a>\r\n  <br><a href=\"#t8\">Задача H. Удалить Граильское дерево</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. DBMB и массив -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. DBMB и массив</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <p>У DBMB вчера был день рождения. Ему подарили массив a из n элементов и число x. Но есть одна проблема, ему нравятся только те массивы, у которых сумма элементов равна s. Чтобы ему понравился массив, вы можете делать следующую операцию сколько угодно раз:</p>\r\n  <ul>\r\n    <li>Выбрать индекс i (1≤i≤n) и прибавить x к числу ai.</li>\r\n  </ul>\r\n\r\n  <p>К примеру, если ему подарили массив [1,2,3,5] и x=2, вы можете выбрать индекс 3 и получить массив [1,2,5,5]. Ваша задача — выяснить, может ли массив понравиться DBMB после любого количества операций.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Каждый тест состоит из нескольких наборов входных данных. Первая строка содержит одно целое число t (1≤t≤1000) — количество наборов входных данных. Далее следует описание наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора содержит три целых числа n, s, x (1≤n,x≤10, 1≤s≤100).</p>\r\n\r\n  <p>Вторая строка каждого набора содержит n целых чисел a1,a2,…an (1≤ai≤10) — элементы массива, подаренного DBMB.</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите «YES», если массив может понравиться DBMB. В противном случае выведите «NO».</p>\r\n\r\n  <p>Вы можете выводить каждую букву в любом регистре (строчную или заглавную). Например, строки «yEs», «yes», «Yes» и «YES» будут приняты как положительный ответ.</p>\r\n\r\n  <details>\r\n    <summary>Примеры</summary>\r\n    <h4>Пример 1</h4>\r\n<pre>\r\n6\r\n3 3 5\r\n1 1 1\r\n3 8 2\r\n1 2 3\r\n4 7 2\r\n1 1 1 1\r\n3 15 1\r\n2 4 10\r\n2 100 5\r\n4 6\r\n5 12 1\r\n1 2 2 3 2\r\n</pre>\r\n<pre>\r\nYES\r\nYES\r\nNO\r\nNO\r\nYES\r\nYES\r\n</pre>\r\n  <p>Во втором наборе входных данных a=[1,2,3], применим операцию на a2 и получим a=[1,4,3]. Сумма массива равна s.</p>\r\n  </details>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Найдем сумму sum элементов массива. Нельзя получить нужную сумму s только в двух случаях: если sum > s и если s - sum не делится на x.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t; // число тестов\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // длина массива\r\n    int s; // необходимая сумма элементов массива\r\n    int x; // слагаемое\r\n    cin &gt;&gt; n &gt;&gt; s &gt;&gt; x;\r\n\r\n    int sum = 0; // сумма элементов массива\r\n    vector&lt;int&gt; A(n);\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n      sum += A[i];\r\n    }\r\n\r\n    bool res = true;\r\n\r\n    if (sum &gt; s) {\r\n      res = false;\r\n    } else if ((s - sum) % x &gt; 0) {\r\n      res = false;\r\n    }\r\n\r\n    if (res) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Перевернуть перестановку -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Перевернуть перестановку</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Заменяй и суммируй -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Заменяй и суммируй</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Игра с монстрами -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Игра с монстрами</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Запросы произведения -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Запросы произведения</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Доставка пиццы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Доставка пиццы</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Пути в дереве -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Пути в дереве</h3>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача H. Удалить Граильское дерево -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H. Удалить Граильское дерево</h3>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2209-Round1087.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2209-Round1087.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2209-Round1087.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2209-Round1087.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2209\" target=\"_blank\">Codeforces 2209 Round 1087 (Div. 2) 2026.03.21</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Шлёпки</a>\r\n  <br><a href=\"#t2\">Задача B. Массив</a>\r\n  <br><a href=\"#t3\">Задача C. Найдите ноль</a>\r\n  <br><a href=\"#t4\">Задача D. Призрачные огни</a>\r\n  <br><a href=\"#t5\">Задача E. Тривиальная задача на строки</a>\r\n  <br><a href=\"#t6\">Задача F. Динамические значения и максимальный счёт</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Шлёпки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Шлёпки</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <p>OtterZ устроил битву с n монстрами, чтобы увеличить свою боевую мощь. У каждого монстра есть боевая мощь ai, а у OtterZ — боевая мощь c. У него есть k шлёпок, и он может выполнять следующие операции:</p>\r\n  <ol>\r\n    <li>Убить живого монстра i, если ai≤c; тогда c становится c+ai.</li>\r\n    <li>Бросить шлёпок в живого монстра i; шлёпок сломается, и монстр станет более злым, тогда ai станет ai+1.</li>\r\n  </ol>\r\n\r\n  <p>Помогите OtterZ получить максимальное возможное c\r\n  после битвы.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Каждый тест состоит из нескольких наборов входных данных. В первой строке находится одно целое число t (1≤t≤500) — количество наборов входных данных. Далее следует описание наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит три целых числа n, c и k (1≤n≤100, 0≤c,k≤10⁹).</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤10⁹).</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите целое число — максимальную возможную боевую мощь.</p>\r\n\r\n  <details>\r\n    <summary>Пример</summary>\r\n<pre>\r\n10\r\n1 12 23\r\n21\r\n1 8 4\r\n5\r\n1 3 4\r\n16\r\n3 6 3\r\n14 9 11\r\n5 9 2\r\n20 16 18 16 11\r\n5 18 30\r\n1 2 93 84 2\r\n7 29 13\r\n2 9 38 4 7 1 6\r\n10 9 2\r\n8 1 8 11 17 3 14 16 20 10\r\n10 192 109\r\n1 9 20 9 829 3 87 1 283 7\r\n10 1000000000 1000000000\r\n19 1000000000 1 9 2 3 8 1 2 3\r\n</pre>\r\n<pre>\r\n12\r\n16\r\n3\r\n6\r\n9\r\n53\r\n109\r\n119\r\n721\r\n3000000048\r\n</pre>\r\n\r\n  <p>В первом наборе входных данных OtterZ наткнулся на слишком сильного монстра, он не совершает никаких операций и уходит с боевой мощью 12.</p>\r\n\r\n  <p>В шестом наборе входных данных OtterZ участвовал в битве:</p>\r\n  <ol>\r\n    <li>Бросил 10 шлёпков в монстра 2, боевая мощь монстра 2 становится 12.</li>\r\n    <li>Бросил 10 шлёпков в монстра 1, боевая мощь монстра 1 становится 11.</li>\r\n    <li>Убил монстра 1, боевая мощь OtterZ становится 29.</li>\r\n    <li>Бросил 10 шлёпков в монстра 5, боевая мощь монстра 5 становится 12.</li>\r\n    <li>Убил монстра 2, боевая мощь OtterZ становится 41.</li>\r\n    <li>Убил монстра 5, боевая мощь OtterZ становится 53.</li>\r\n    <li>OtterZ уходит с боевой мощью 53.</li>\r\n  </ol>\r\n  </details>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t; // число тестов\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n; // число монстров\r\n    long long c; // наша боевая мощь\r\n    int k; // число шлепок\r\n    cin >> n >> c >> k;\r\n\r\n    vector&lt;int&gt; A(n); // боевая мощь монстров\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin >> A[i];\r\n    }\r\n\r\n    sort(A.begin(), A.end());\r\n\r\n    int next = 0; // следующий монстр\r\n    while (k > 0 && next &lt; n) {\r\n      if (c > A[next]) {\r\n        int dif = c - A[next];\r\n        if (k > dif) {\r\n          c += dif + A[next];\r\n          k -= dif;\r\n        } else {\r\n          c += k + A[next];\r\n          k = 0;\r\n        }\r\n        next++;\r\n      } else if (c == A[next]) {\r\n        c += A[next];\r\n        next++;\r\n      } else {\r\n        break;\r\n      }\r\n    }\r\n\r\n    while (next &lt; n) {\r\n      if (c >= A[next]) {\r\n        c += A[next];\r\n        next++;\r\n      } else {\r\n        break;\r\n      }\r\n    }\r\n\r\n    cout &lt;&lt; c &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Массив -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Массив</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n\tint t; // число тестов\r\n\tcin >> t;\r\n\r\n\twhile (t--) {\r\n\t\tint n; // длина массива\r\n\t\tcin >> n;\r\n\r\n\t\tvector&lt;int&gt; A(n);\r\n\t\tfor (int i = 0; i &lt; n; i++) {\r\n\t\t\tcin >> A[i];\r\n\t\t}\r\n\r\n\t\tvector&lt;int&gt; B(n);\r\n\t\tvector&lt;int&gt; C(n);\r\n\t\tfor (int i = n - 1; i >= 0; i--) {\r\n\t\t\tB[i] = C[i] = 0;\r\n\t\t\tfor (int j = i + 1; j &lt; n; j++) {\r\n\t\t\t\tB[i] += (A[i] > A[j]);\r\n\t\t\t\tC[i] += (A[i] &lt; A[j]);\r\n\t\t\t}\r\n\t\t\tB[i] = max(B[i], C[i]);\r\n\t\t}\r\n\r\n\t\tfor (int i = 0; i &lt; n - 1; i++) {\r\n\t\t\tcout &lt;&lt; B[i] &lt;&lt; ' ';\r\n\t\t}\r\n\t\tcout &lt;&lt; B[n - 1] &lt;&lt; '\\n';\r\n\t}\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Найдите ноль -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Найдите ноль</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>В массиве длины 2n есть n нулей и n различных ненулевых чисел (от 1 до n). Если два элемента равны, то они обязательно оба нули (так как ненулевые числа уникальны).</p>\r\n    <p>Следовательно, если мы найдём любую пару индексов (i, j), для которой query(i, j) = 1, то оба элемента — нули, и мы можем вывести любой из них.</p>\r\n    <p>Алгоритм гарантированно находит ноль за n+1 запросов, используя простую логику проверки пар и небольшой fallback для первых двух элементов.</p>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin >> t;\r\n  while (t--) {\r\n    int n;\r\n    cin >> n;\r\n    int ans = -1;\r\n\r\n    // проверка пар среди первых 2n-2 элементов\r\n    for (int i = 1; i &lt; n; ++i) {\r\n      cout &lt;&lt; \"? \" &lt;&lt; 2 * i + 1\r\n      &lt;&lt; \" \" &lt;&lt; 2 * i + 2 &lt;&lt; endl;\r\n      int resp;\r\n      cin >> resp;\r\n      if (resp == 1) {\r\n        ans = 2 * i + 1;\r\n        break;\r\n      }\r\n    }\r\n\r\n    // обработка случая, когда не нашли пару нулей\r\n    if (ans == -1) {\r\n      cout &lt;&lt; \"? 1 3\" &lt;&lt; endl;\r\n      int resp;\r\n      cin >> resp;\r\n      if (resp == 1) {\r\n        ans = 1;\r\n      } else {\r\n        cout &lt;&lt; \"? 1 4\" &lt;&lt; endl;\r\n        cin >> resp;\r\n        if (resp == 1) {\r\n          ans = 1;\r\n        } else {\r\n          ans = 2;\r\n        }\r\n      }\r\n    }\r\n\r\n    cout &lt;&lt; \"! \" &lt;&lt; ans &lt;&lt; endl;\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Призрачные огни -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Призрачные огни</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream>\r\n#include &lt;vector>\r\n\r\nusing namespace std;\r\n\r\nint t, r, g, b, rb, gb, rg;\r\n\r\nint main() {\r\n  scanf(\"%d\", &t);\r\n  while (t--) {\r\n    scanf(\"%d %d %d\", &r, &g, &b);\r\n    while (((r > 0) + (g > 0) + (b > 0)) >> 1) {\r\n      if (r &lt;= g && r &lt;= b)\r\n        gb++, g--, b--;\r\n      else if (g &lt;= r && g &lt;= b)\r\n        rb++, r--, b--;\r\n      else if (b &lt;= r && b &lt;= g)\r\n        rg++, r--, g--;\r\n    }\r\n    if (g > 0) {\r\n      putchar('G');\r\n      while (rg > 0)\r\n        putchar('R'), putchar('G'), rg--;\r\n      bool flg = false;\r\n      while (gb > 0)\r\n        putchar('B'), putchar('G'), gb--, flg = true;\r\n      if (flg) {\r\n        while (rb > 0)\r\n          putchar('B'), putchar('R'), rb--;\r\n      } else {\r\n        while (rb > 0)\r\n          putchar('R'), putchar('B'), rb--;\r\n      }\r\n    } else if (r > 0) {\r\n      putchar('R');\r\n      while (rg > 0)\r\n        putchar('G'), putchar('R'), rg--;\r\n      bool flg = false;\r\n      while (rb > 0)\r\n        putchar('B'), putchar('R'), rb--, flg = true;\r\n      if (flg) {\r\n        while (gb > 0)\r\n          putchar('B'), putchar('G'), gb--;\r\n      } else {\r\n        while (gb > 0)\r\n          putchar('G'), putchar('B'), gb--;\r\n      }\r\n    } else {\r\n      if (b > 0)\r\n        putchar('B');\r\n      while (gb > 0)\r\n        putchar('G'), putchar('B'), gb--;\r\n      bool flg = false;\r\n      while (rb > 0)\r\n        putchar('R'), putchar('B'), rb--, flg = true;\r\n      if (flg) {\r\n        while (rg > 0)\r\n          putchar('R'), putchar('G'), rg--;\r\n      } else {\r\n        while (rg > 0)\r\n          putchar('G'), putchar('R'), rg--;\r\n      }\r\n    }\r\n    puts(\"\");\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Тривиальная задача на строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Тривиальная задача на строки</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;string&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nlong long work(const string& s) {\r\n  int n = s.length();\r\n  vector&lt;int&gt; p(n, 0);\r\n  vector&lt;int&gt; b(n, 0);\r\n\r\n  // Построение префикс-функции\r\n  for (int i = 1; i &lt; n; i++) {\r\n    int j = p[i - 1];\r\n    while (j > 0 && s[i] != s[j]) {\r\n      j = p[j - 1];\r\n    }\r\n    if (s[i] == s[j]) {\r\n      j++;\r\n    }\r\n    p[i] = j;\r\n\r\n    if (j == 0) {\r\n      b[i] = 0;\r\n    } else if (p[j - 1] == 0) {\r\n      b[i] = j;\r\n    } else {\r\n      b[i] = b[j - 1];\r\n    }\r\n  }\r\n\r\n  // Подсчет ответа - используем long long для предотвращения переполнения\r\n  long long ans = 0;\r\n  vector&lt;long long&gt; dp(n, 0);\r\n\r\n  for (int i = 0; i &lt; n; i++) {\r\n    if (b[i] == 0) {\r\n      dp[i] = 1;\r\n    } else {\r\n      int prev_index = i - b[i];\r\n      if (prev_index >= 0) {\r\n        dp[i] = dp[prev_index] + 1;\r\n      } else {\r\n        dp[i] = 1;\r\n      }\r\n    }\r\n    ans += dp[i];\r\n  }\r\n\r\n  return ans;\r\n}\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t;\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    int n, q;\r\n    cin >> n >> q;\r\n    string s;\r\n    cin >> s;\r\n\r\n    while (q--) {\r\n      int l, r;\r\n      cin >> l >> r;\r\n      cout &lt;&lt; work(s.substr(l - 1, r - l + 1)) &lt;&lt; '\\n';\r\n    }\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Динамические значения и максимальный счёт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Динамические значения и максимальный счёт</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Алгоритм находит максимальный возможный счёт после выполнения k операций, где каждая операция:</p>\r\n    <ol>\r\n      <li>Выбирает корень дерева</li>\r\n      <li>Добавляет значение корня к счёту и обнуляет его</li>\r\n      <li>Перераспределяет значения всех не-листовых вершин к листьям в их поддеревьях</li>\r\n    </ol>\r\n\r\n<pre>\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;set&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;cstdio&gt;\r\n\r\nusing namespace std;\r\n\r\nconst int N = 300009;\r\nint n, k, t, a[N], tt[N];\r\nlong long b[N], ans[N], sum, mxa;\r\n\r\n// FLONG используется в множестве для хранения вершин\r\n// с их накопленными значениями, отсортированных по убыванию.\r\nstruct FLONG {\r\n  long long val; // накопленное значение в вершине\r\n  int nd; // номер вершины\r\n  FLONG(long long v = 0, int d = 0) : val(v), nd(d) {}\r\n\r\n  // Сортировка: сначала по убыванию val, при равенстве по возрастанию nd\r\n  bool operator&lt;(const FLONG& b) const {\r\n    return val > b.val || (val == b.val && nd &lt; b.nd);\r\n  }\r\n};\r\n\r\nset&lt;FLONG&gt; s;\r\nset&lt;FLONG&gt;::iterator o;\r\n\r\n// pir хранит информацию о самом дальнем листе:\r\n// to - индекс листа\r\n// len - расстояние до него\r\n// Сортировка : сначала по убыванию длины, при равенстве - по возрастанию индекса\r\n// mn[v] - самый дальний лист в поддереве v\r\n// se[v] - второй по дальности лист\r\n// lf[v] - самый дальний лист вне поддерева v\r\nstruct pir {\r\n  int to, len; // to - вершина-лист, len - расстояние до неё\r\n  pir(int t = 0, int l = 0) : to(t), len(l) {}\r\n\r\n  bool operator&lt;(const pir& b) const {\r\n    return len > b.len || (len == b.len && to &lt; b.to);\r\n  }\r\n} mn[N], se[N], lf[N];\r\n\r\nvector&lt;int&gt; e[N];\r\n\r\n// Первый обход дерева (srh)\r\n// Для каждой вершины находит два самых удалённых листа\r\n// в её поддереве. Это нужно для быстрого определения,\r\n// куда будет перемещаться значение вершины при разных корнях.\r\nvoid srh(int v, int fa) {\r\n  mn[v] = pir(v, 0); // для листа - он сам\r\n  se[v] = pir(0, ~0x3f3f3f3f); // очень маленькое значение\r\n  lf[v] = pir(0, ~0x3f3f3f3f);\r\n\r\n  for (unsigned i = 0; i &lt; e[v].size(); i++) {\r\n    if (e[v][i] != fa) {\r\n      srh(e[v][i], v);\r\n      pir th = mn[e[v][i]];\r\n      th.len++; // увеличиваем расстояние на 1 (ребро до дочерней вершины)\r\n      // Обновляем два самых дальних листа\r\n      if (th &lt; se[v])\r\n        swap(th, se[v]);\r\n      if (se[v] &lt; mn[v])\r\n        swap(se[v], mn[v]);\r\n    }\r\n  }\r\n}\r\n\r\n// Инициализация для корня 1 (gt1)\r\n// Вычисляет счёт для случая, когда корень - вершина 1:\r\n// Добавляет значение корня\r\n// Определяет, куда перераспределятся значения остальных вершин\r\n// Выбирает k - 1 наибольших накопленных значений(плюс корень даёт всего k операций)\r\nvoid gt1() {\r\n  sum = ans[1] = 0;\r\n  ans[1] += a[1]; // добавляем значение корня\r\n\r\n  // Для каждой не-корневой вершины i, её значение пойдёт к mn[i].to\r\n  for (int i = 2; i &lt;= n; i++) {\r\n    b[mn[i].to] += a[i];\r\n    tt[i] = mn[i].to; // запоминаем, куда пойдёт значение\r\n  }\r\n\r\n  // Собираем все накопленные значения в множество\r\n  s.clear();\r\n  for (int i = 2; i &lt;= n; i++) {\r\n    s.insert(FLONG(b[i], i));\r\n  }\r\n\r\n  // Берём k-1 самых больших значений (k-1, потому что корень уже взят)\r\n  o = s.begin();\r\n  ans[1] += o->val;\r\n  sum += o->val;\r\n\r\n  for (int i = 1; i &lt; k - 1; i++) {\r\n    o++;\r\n    ans[1] += o->val;\r\n    sum += o->val;\r\n  }\r\n\r\n  s.insert(FLONG(-1ll, 0));\r\n  s.insert(FLONG(-2ll, 0));\r\n}\r\n\r\n// Функции для динамического обновления (era, ins, stp, sett)\r\n\r\n// era(x) - удаляет вершину x из множества\r\nvoid era(int x) {\r\n  FLONG u = FLONG(b[x], x);\r\n  if (!(*o &lt; u)) {\r\n    o++;\r\n    sum += o->val;\r\n    sum -= b[x];\r\n  }\r\n  s.erase(u);\r\n}\r\n\r\n// ins(x) - добавляет вершину x в множество\r\nvoid ins(int x) {\r\n  FLONG u = FLONG(b[x], x);\r\n  s.insert(u);\r\n  if (!(*o &lt; u)) {\r\n    sum -= o->val;\r\n    sum += b[x];\r\n    o--;\r\n  }\r\n}\r\n\r\n// stp(x) - перемещает значение вершины x\r\n// (удаляет из старого места, добавляет в новое)\r\nvoid stp(int x) {\r\n  era(tt[x]);\r\n  b[tt[x]] -= a[x];\r\n  ins(tt[x]);\r\n  tt[x] = 0;\r\n}\r\n\r\n// sett(x, ttp) - устанавливает новое назначение для вершины x\r\nvoid sett(int x, int ttp) {\r\n  tt[x] = ttp;\r\n  era(tt[x]);\r\n  b[tt[x]] += a[x];\r\n  ins(tt[x]);\r\n}\r\n\r\n// Второй обход для пересчёта всех корней (srho)\r\n// Обходит дерево, пересчитывая ответ для каждой вершины\r\n// как потенциального корня.При переходе к новому корню :\r\n// Обновляет информацию о том, куда перераспределяются значения\r\n// Поддерживает актуальное множество накопленных значений\r\n// Использует технику \"переподвешивания\" дерева для эффективного пересчёта\r\nvoid srho(int v, int fa) {\r\n  if (fa != 0) {\r\n    stp(v); // убираем v из старого назначения\r\n    era(v); // удаляем v из множества\r\n    ins(fa); // добавляем fa в множество\r\n    sett(fa, lf[fa].to); // обновляем назначение для fa\r\n    ans[v] = sum + a[v]; // считаем ответ для корня v\r\n  }\r\n\r\n  // Рекурсивно обрабатываем детей\r\n  for (unsigned i = 0; i &lt; e[v].size(); i++) {\r\n    if (e[v][i] != fa) {\r\n      pir u = lf[fa];\r\n      u.len++;\r\n      // Вычисляем самый дальний лист вне поддерева v\r\n      if (mn[v].to == mn[e[v][i]].to)\r\n        lf[v] = min(u, se[v]);\r\n      else\r\n        lf[v] = min(u, mn[v]);\r\n      srho(e[v][i], v);\r\n    }\r\n  }\r\n\r\n  // Откатываем изменения при возврате\r\n  if (fa != 0) {\r\n    ins(v);\r\n    sett(v, mn[v].to);\r\n    stp(fa);\r\n    era(fa);\r\n  }\r\n}\r\n\r\nint main() {\r\n  ios::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  cin >> t;\r\n\r\n  while (t--) {\r\n    cin >> n >> k;\r\n    mxa = 0;\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin >> a[i];\r\n      mxa = max(mxa, 1ll * a[i]);\r\n      e[i].clear();\r\n      b[i] = 0;\r\n    }\r\n\r\n    for (int i = 1; i &lt; n; i++) {\r\n      int u, v;\r\n      cin >> u >> v;\r\n      e[u].push_back(v);\r\n      e[v].push_back(u);\r\n    }\r\n\r\n    if (k == 1) {\r\n      cout &lt;&lt; mxa &lt;&lt; \"\\n\";\r\n      continue;\r\n    }\r\n\r\n    lf[0].len = ~0x3f3f3f3f;\r\n    srh(1, 0);\r\n    gt1();\r\n    srho(1, 0);\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      mxa = max(mxa, ans[i]);\r\n    }\r\n\r\n    cout &lt;&lt; mxa &lt;&lt; \"\\n\";\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2209\" target=\"_blank\">Codeforces 2209 Round 1087 (Div. 2) 2026.03.21</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Шлёпки</a>\r\n  <br><a href=\"#t2\">Задача B. Массив</a>\r\n  <br><a href=\"#t3\">Задача C. Найдите ноль</a>\r\n  <br><a href=\"#t4\">Задача D. Призрачные огни</a>\r\n  <br><a href=\"#t5\">Задача E. Тривиальная задача на строки</a>\r\n  <br><a href=\"#t6\">Задача F. Динамические значения и максимальный счёт</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Шлёпки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Шлёпки</h3>\r\n\r\n  <div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n  <p>OtterZ устроил битву с n монстрами, чтобы увеличить свою боевую мощь. У каждого монстра есть боевая мощь ai, а у OtterZ — боевая мощь c. У него есть k шлёпок, и он может выполнять следующие операции:</p>\r\n  <ol>\r\n    <li>Убить живого монстра i, если ai≤c; тогда c становится c+ai.</li>\r\n    <li>Бросить шлёпок в живого монстра i; шлёпок сломается, и монстр станет более злым, тогда ai станет ai+1.</li>\r\n  </ol>\r\n\r\n  <p>Помогите OtterZ получить максимальное возможное c\r\n  после битвы.</p>\r\n\r\n  <h4>Входные данные</h4>\r\n  <p>Каждый тест состоит из нескольких наборов входных данных. В первой строке находится одно целое число t (1≤t≤500) — количество наборов входных данных. Далее следует описание наборов входных данных.</p>\r\n\r\n  <p>Первая строка каждого набора входных данных содержит три целых числа n, c и k (1≤n≤100, 0≤c,k≤10⁹).</p>\r\n\r\n  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤10⁹).</p>\r\n\r\n  <h4>Выходные данные</h4>\r\n  <p>Для каждого набора входных данных выведите целое число — максимальную возможную боевую мощь.</p>\r\n\r\n  <details>\r\n    <summary>Пример</summary>\r\n<pre>\r\n10\r\n1 12 23\r\n21\r\n1 8 4\r\n5\r\n1 3 4\r\n16\r\n3 6 3\r\n14 9 11\r\n5 9 2\r\n20 16 18 16 11\r\n5 18 30\r\n1 2 93 84 2\r\n7 29 13\r\n2 9 38 4 7 1 6\r\n10 9 2\r\n8 1 8 11 17 3 14 16 20 10\r\n10 192 109\r\n1 9 20 9 829 3 87 1 283 7\r\n10 1000000000 1000000000\r\n19 1000000000 1 9 2 3 8 1 2 3\r\n</pre>\r\n<pre>\r\n12\r\n16\r\n3\r\n6\r\n9\r\n53\r\n109\r\n119\r\n721\r\n3000000048\r\n</pre>\r\n\r\n  <p>В первом наборе входных данных OtterZ наткнулся на слишком сильного монстра, он не совершает никаких операций и уходит с боевой мощью 12.</p>\r\n\r\n  <p>В шестом наборе входных данных OtterZ участвовал в битве:</p>\r\n  <ol>\r\n    <li>Бросил 10 шлёпков в монстра 2, боевая мощь монстра 2 становится 12.</li>\r\n    <li>Бросил 10 шлёпков в монстра 1, боевая мощь монстра 1 становится 11.</li>\r\n    <li>Убил монстра 1, боевая мощь OtterZ становится 29.</li>\r\n    <li>Бросил 10 шлёпков в монстра 5, боевая мощь монстра 5 становится 12.</li>\r\n    <li>Убил монстра 2, боевая мощь OtterZ становится 41.</li>\r\n    <li>Убил монстра 5, боевая мощь OtterZ становится 53.</li>\r\n    <li>OtterZ уходит с боевой мощью 53.</li>\r\n  </ol>\r\n  </details>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t; // число тестов\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n; // число монстров\r\n    long long c; // наша боевая мощь\r\n    int k; // число шлепок\r\n    cin &gt;&gt; n &gt;&gt; c &gt;&gt; k;\r\n\r\n    vector&lt;int&gt; A(n); // боевая мощь монстров\r\n    for (int i = 0; i &lt; n; i++) {\r\n      cin &gt;&gt; A[i];\r\n    }\r\n\r\n    sort(A.begin(), A.end());\r\n\r\n    int next = 0; // следующий монстр\r\n    while (k &gt; 0 && next &lt; n) {\r\n      if (c &gt; A[next]) {\r\n        int dif = c - A[next];\r\n        if (k &gt; dif) {\r\n          c += dif + A[next];\r\n          k -= dif;\r\n        } else {\r\n          c += k + A[next];\r\n          k = 0;\r\n        }\r\n        next++;\r\n      } else if (c == A[next]) {\r\n        c += A[next];\r\n        next++;\r\n      } else {\r\n        break;\r\n      }\r\n    }\r\n\r\n    while (next &lt; n) {\r\n      if (c &gt;= A[next]) {\r\n        c += A[next];\r\n        next++;\r\n      } else {\r\n        break;\r\n      }\r\n    }\r\n\r\n    cout &lt;&lt; c &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Массив -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Массив</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n\tint t; // число тестов\r\n\tcin &gt;&gt; t;\r\n\r\n\twhile (t--) {\r\n\t\tint n; // длина массива\r\n\t\tcin &gt;&gt; n;\r\n\r\n\t\tvector&lt;int&gt; A(n);\r\n\t\tfor (int i = 0; i &lt; n; i++) {\r\n\t\t\tcin &gt;&gt; A[i];\r\n\t\t}\r\n\r\n\t\tvector&lt;int&gt; B(n);\r\n\t\tvector&lt;int&gt; C(n);\r\n\t\tfor (int i = n - 1; i &gt;= 0; i--) {\r\n\t\t\tB[i] = C[i] = 0;\r\n\t\t\tfor (int j = i + 1; j &lt; n; j++) {\r\n\t\t\t\tB[i] += (A[i] &gt; A[j]);\r\n\t\t\t\tC[i] += (A[i] &lt; A[j]);\r\n\t\t\t}\r\n\t\t\tB[i] = max(B[i], C[i]);\r\n\t\t}\r\n\r\n\t\tfor (int i = 0; i &lt; n - 1; i++) {\r\n\t\t\tcout &lt;&lt; B[i] &lt;&lt; ' ';\r\n\t\t}\r\n\t\tcout &lt;&lt; B[n - 1] &lt;&lt; '\\n';\r\n\t}\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Найдите ноль -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Найдите ноль</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>В массиве длины 2n есть n нулей и n различных ненулевых чисел (от 1 до n). Если два элемента равны, то они обязательно оба нули (так как ненулевые числа уникальны).</p>\r\n    <p>Следовательно, если мы найдём любую пару индексов (i, j), для которой query(i, j) = 1, то оба элемента — нули, и мы можем вывести любой из них.</p>\r\n    <p>Алгоритм гарантированно находит ноль за n+1 запросов, используя простую логику проверки пар и небольшой fallback для первых двух элементов.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n  while (t--) {\r\n    int n;\r\n    cin &gt;&gt; n;\r\n    int ans = -1;\r\n\r\n    // проверка пар среди первых 2n-2 элементов\r\n    for (int i = 1; i &lt; n; ++i) {\r\n      cout &lt;&lt; \"? \" &lt;&lt; 2 * i + 1\r\n      &lt;&lt; \" \" &lt;&lt; 2 * i + 2 &lt;&lt; endl;\r\n      int resp;\r\n      cin &gt;&gt; resp;\r\n      if (resp == 1) {\r\n        ans = 2 * i + 1;\r\n        break;\r\n      }\r\n    }\r\n\r\n    // обработка случая, когда не нашли пару нулей\r\n    if (ans == -1) {\r\n      cout &lt;&lt; \"? 1 3\" &lt;&lt; endl;\r\n      int resp;\r\n      cin &gt;&gt; resp;\r\n      if (resp == 1) {\r\n        ans = 1;\r\n      } else {\r\n        cout &lt;&lt; \"? 1 4\" &lt;&lt; endl;\r\n        cin &gt;&gt; resp;\r\n        if (resp == 1) {\r\n          ans = 1;\r\n        } else {\r\n          ans = 2;\r\n        }\r\n      }\r\n    }\r\n\r\n    cout &lt;&lt; \"! \" &lt;&lt; ans &lt;&lt; endl;\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Призрачные огни -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Призрачные огни</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint t, r, g, b, rb, gb, rg;\r\n\r\nint main() {\r\n  scanf(\"%d\", &t);\r\n  while (t--) {\r\n    scanf(\"%d %d %d\", &r, &g, &b);\r\n    while (((r &gt; 0) + (g &gt; 0) + (b &gt; 0)) &gt;&gt; 1) {\r\n      if (r &lt;= g && r &lt;= b)\r\n        gb++, g--, b--;\r\n      else if (g &lt;= r && g &lt;= b)\r\n        rb++, r--, b--;\r\n      else if (b &lt;= r && b &lt;= g)\r\n        rg++, r--, g--;\r\n    }\r\n    if (g &gt; 0) {\r\n      putchar('G');\r\n      while (rg &gt; 0)\r\n        putchar('R'), putchar('G'), rg--;\r\n      bool flg = false;\r\n      while (gb &gt; 0)\r\n        putchar('B'), putchar('G'), gb--, flg = true;\r\n      if (flg) {\r\n        while (rb &gt; 0)\r\n          putchar('B'), putchar('R'), rb--;\r\n      } else {\r\n        while (rb &gt; 0)\r\n          putchar('R'), putchar('B'), rb--;\r\n      }\r\n    } else if (r &gt; 0) {\r\n      putchar('R');\r\n      while (rg &gt; 0)\r\n        putchar('G'), putchar('R'), rg--;\r\n      bool flg = false;\r\n      while (rb &gt; 0)\r\n        putchar('B'), putchar('R'), rb--, flg = true;\r\n      if (flg) {\r\n        while (gb &gt; 0)\r\n          putchar('B'), putchar('G'), gb--;\r\n      } else {\r\n        while (gb &gt; 0)\r\n          putchar('G'), putchar('B'), gb--;\r\n      }\r\n    } else {\r\n      if (b &gt; 0)\r\n        putchar('B');\r\n      while (gb &gt; 0)\r\n        putchar('G'), putchar('B'), gb--;\r\n      bool flg = false;\r\n      while (rb &gt; 0)\r\n        putchar('R'), putchar('B'), rb--, flg = true;\r\n      if (flg) {\r\n        while (rg &gt; 0)\r\n          putchar('R'), putchar('G'), rg--;\r\n      } else {\r\n        while (rg &gt; 0)\r\n          putchar('G'), putchar('R'), rg--;\r\n      }\r\n    }\r\n    puts(\"\");\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Тривиальная задача на строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Тривиальная задача на строки</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;string&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nlong long work(const string& s) {\r\n  int n = s.length();\r\n  vector&lt;int&gt; p(n, 0);\r\n  vector&lt;int&gt; b(n, 0);\r\n\r\n  // Построение префикс-функции\r\n  for (int i = 1; i &lt; n; i++) {\r\n    int j = p[i - 1];\r\n    while (j &gt; 0 && s[i] != s[j]) {\r\n      j = p[j - 1];\r\n    }\r\n    if (s[i] == s[j]) {\r\n      j++;\r\n    }\r\n    p[i] = j;\r\n\r\n    if (j == 0) {\r\n      b[i] = 0;\r\n    } else if (p[j - 1] == 0) {\r\n      b[i] = j;\r\n    } else {\r\n      b[i] = b[j - 1];\r\n    }\r\n  }\r\n\r\n  // Подсчет ответа - используем long long для предотвращения переполнения\r\n  long long ans = 0;\r\n  vector&lt;long long&gt; dp(n, 0);\r\n\r\n  for (int i = 0; i &lt; n; i++) {\r\n    if (b[i] == 0) {\r\n      dp[i] = 1;\r\n    } else {\r\n      int prev_index = i - b[i];\r\n      if (prev_index &gt;= 0) {\r\n        dp[i] = dp[prev_index] + 1;\r\n      } else {\r\n        dp[i] = 1;\r\n      }\r\n    }\r\n    ans += dp[i];\r\n  }\r\n\r\n  return ans;\r\n}\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    int n, q;\r\n    cin &gt;&gt; n &gt;&gt; q;\r\n    string s;\r\n    cin &gt;&gt; s;\r\n\r\n    while (q--) {\r\n      int l, r;\r\n      cin &gt;&gt; l &gt;&gt; r;\r\n      cout &lt;&lt; work(s.substr(l - 1, r - l + 1)) &lt;&lt; '\\n';\r\n    }\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача F. Динамические значения и максимальный счёт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Динамические значения и максимальный счёт</h3>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n    <p>Алгоритм находит максимальный возможный счёт после выполнения k операций, где каждая операция:</p>\r\n    <ol>\r\n      <li>Выбирает корень дерева</li>\r\n      <li>Добавляет значение корня к счёту и обнуляет его</li>\r\n      <li>Перераспределяет значения всех не-листовых вершин к листьям в их поддеревьях</li>\r\n    </ol>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;set&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;cstdio&gt;\r\n\r\nusing namespace std;\r\n\r\nconst int N = 300009;\r\nint n, k, t, a[N], tt[N];\r\nlong long b[N], ans[N], sum, mxa;\r\n\r\n// FLONG используется в множестве для хранения вершин\r\n// с их накопленными значениями, отсортированных по убыванию.\r\nstruct FLONG {\r\n  long long val; // накопленное значение в вершине\r\n  int nd; // номер вершины\r\n  FLONG(long long v = 0, int d = 0) : val(v), nd(d) {}\r\n\r\n  // Сортировка: сначала по убыванию val, при равенстве по возрастанию nd\r\n  bool operator&lt;(const FLONG& b) const {\r\n    return val &gt; b.val || (val == b.val && nd &lt; b.nd);\r\n  }\r\n};\r\n\r\nset&lt;FLONG&gt; s;\r\nset&lt;FLONG&gt;::iterator o;\r\n\r\n// pir хранит информацию о самом дальнем листе:\r\n// to - индекс листа\r\n// len - расстояние до него\r\n// Сортировка : сначала по убыванию длины, при равенстве - по возрастанию индекса\r\n// mn[v] - самый дальний лист в поддереве v\r\n// se[v] - второй по дальности лист\r\n// lf[v] - самый дальний лист вне поддерева v\r\nstruct pir {\r\n  int to, len; // to - вершина-лист, len - расстояние до неё\r\n  pir(int t = 0, int l = 0) : to(t), len(l) {}\r\n\r\n  bool operator&lt;(const pir& b) const {\r\n    return len &gt; b.len || (len == b.len && to &lt; b.to);\r\n  }\r\n} mn[N], se[N], lf[N];\r\n\r\nvector&lt;int&gt; e[N];\r\n\r\n// Первый обход дерева (srh)\r\n// Для каждой вершины находит два самых удалённых листа\r\n// в её поддереве. Это нужно для быстрого определения,\r\n// куда будет перемещаться значение вершины при разных корнях.\r\nvoid srh(int v, int fa) {\r\n  mn[v] = pir(v, 0); // для листа - он сам\r\n  se[v] = pir(0, ~0x3f3f3f3f); // очень маленькое значение\r\n  lf[v] = pir(0, ~0x3f3f3f3f);\r\n\r\n  for (unsigned i = 0; i &lt; e[v].size(); i++) {\r\n    if (e[v][i] != fa) {\r\n      srh(e[v][i], v);\r\n      pir th = mn[e[v][i]];\r\n      th.len++; // увеличиваем расстояние на 1 (ребро до дочерней вершины)\r\n      // Обновляем два самых дальних листа\r\n      if (th &lt; se[v])\r\n        swap(th, se[v]);\r\n      if (se[v] &lt; mn[v])\r\n        swap(se[v], mn[v]);\r\n    }\r\n  }\r\n}\r\n\r\n// Инициализация для корня 1 (gt1)\r\n// Вычисляет счёт для случая, когда корень - вершина 1:\r\n// Добавляет значение корня\r\n// Определяет, куда перераспределятся значения остальных вершин\r\n// Выбирает k - 1 наибольших накопленных значений(плюс корень даёт всего k операций)\r\nvoid gt1() {\r\n  sum = ans[1] = 0;\r\n  ans[1] += a[1]; // добавляем значение корня\r\n\r\n  // Для каждой не-корневой вершины i, её значение пойдёт к mn[i].to\r\n  for (int i = 2; i &lt;= n; i++) {\r\n    b[mn[i].to] += a[i];\r\n    tt[i] = mn[i].to; // запоминаем, куда пойдёт значение\r\n  }\r\n\r\n  // Собираем все накопленные значения в множество\r\n  s.clear();\r\n  for (int i = 2; i &lt;= n; i++) {\r\n    s.insert(FLONG(b[i], i));\r\n  }\r\n\r\n  // Берём k-1 самых больших значений (k-1, потому что корень уже взят)\r\n  o = s.begin();\r\n  ans[1] += o-&gt;val;\r\n  sum += o-&gt;val;\r\n\r\n  for (int i = 1; i &lt; k - 1; i++) {\r\n    o++;\r\n    ans[1] += o-&gt;val;\r\n    sum += o-&gt;val;\r\n  }\r\n\r\n  s.insert(FLONG(-1ll, 0));\r\n  s.insert(FLONG(-2ll, 0));\r\n}\r\n\r\n// Функции для динамического обновления (era, ins, stp, sett)\r\n\r\n// era(x) - удаляет вершину x из множества\r\nvoid era(int x) {\r\n  FLONG u = FLONG(b[x], x);\r\n  if (!(*o &lt; u)) {\r\n    o++;\r\n    sum += o-&gt;val;\r\n    sum -= b[x];\r\n  }\r\n  s.erase(u);\r\n}\r\n\r\n// ins(x) - добавляет вершину x в множество\r\nvoid ins(int x) {\r\n  FLONG u = FLONG(b[x], x);\r\n  s.insert(u);\r\n  if (!(*o &lt; u)) {\r\n    sum -= o-&gt;val;\r\n    sum += b[x];\r\n    o--;\r\n  }\r\n}\r\n\r\n// stp(x) - перемещает значение вершины x\r\n// (удаляет из старого места, добавляет в новое)\r\nvoid stp(int x) {\r\n  era(tt[x]);\r\n  b[tt[x]] -= a[x];\r\n  ins(tt[x]);\r\n  tt[x] = 0;\r\n}\r\n\r\n// sett(x, ttp) - устанавливает новое назначение для вершины x\r\nvoid sett(int x, int ttp) {\r\n  tt[x] = ttp;\r\n  era(tt[x]);\r\n  b[tt[x]] += a[x];\r\n  ins(tt[x]);\r\n}\r\n\r\n// Второй обход для пересчёта всех корней (srho)\r\n// Обходит дерево, пересчитывая ответ для каждой вершины\r\n// как потенциального корня.При переходе к новому корню :\r\n// Обновляет информацию о том, куда перераспределяются значения\r\n// Поддерживает актуальное множество накопленных значений\r\n// Использует технику \"переподвешивания\" дерева для эффективного пересчёта\r\nvoid srho(int v, int fa) {\r\n  if (fa != 0) {\r\n    stp(v); // убираем v из старого назначения\r\n    era(v); // удаляем v из множества\r\n    ins(fa); // добавляем fa в множество\r\n    sett(fa, lf[fa].to); // обновляем назначение для fa\r\n    ans[v] = sum + a[v]; // считаем ответ для корня v\r\n  }\r\n\r\n  // Рекурсивно обрабатываем детей\r\n  for (unsigned i = 0; i &lt; e[v].size(); i++) {\r\n    if (e[v][i] != fa) {\r\n      pir u = lf[fa];\r\n      u.len++;\r\n      // Вычисляем самый дальний лист вне поддерева v\r\n      if (mn[v].to == mn[e[v][i]].to)\r\n        lf[v] = min(u, se[v]);\r\n      else\r\n        lf[v] = min(u, mn[v]);\r\n      srho(e[v][i], v);\r\n    }\r\n  }\r\n\r\n  // Откатываем изменения при возврате\r\n  if (fa != 0) {\r\n    ins(v);\r\n    sett(v, mn[v].to);\r\n    stp(fa);\r\n    era(fa);\r\n  }\r\n}\r\n\r\nint main() {\r\n  ios::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    cin &gt;&gt; n &gt;&gt; k;\r\n    mxa = 0;\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      cin &gt;&gt; a[i];\r\n      mxa = max(mxa, 1ll * a[i]);\r\n      e[i].clear();\r\n      b[i] = 0;\r\n    }\r\n\r\n    for (int i = 1; i &lt; n; i++) {\r\n      int u, v;\r\n      cin &gt;&gt; u &gt;&gt; v;\r\n      e[u].push_back(v);\r\n      e[v].push_back(u);\r\n    }\r\n\r\n    if (k == 1) {\r\n      cout &lt;&lt; mxa &lt;&lt; \"\\n\";\r\n      continue;\r\n    }\r\n\r\n    lf[0].len = ~0x3f3f3f3f;\r\n    srh(1, 0);\r\n    gt1();\r\n    srho(1, 0);\r\n\r\n    for (int i = 1; i &lt;= n; i++) {\r\n      mxa = max(mxa, ans[i]);\r\n    }\r\n\r\n    cout &lt;&lt; mxa &lt;&lt; \"\\n\";\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-2218-Round1090.html":
-/*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-2218-Round1090.html ***!
-  \*****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-2218-Round1090.html":
+/*!***************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-2218-Round1090.html ***!
+  \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7295,10 +7403,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-228-Round141.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-228-Round141.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-228-Round141.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-228-Round141.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7310,10 +7418,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-230-Round142.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-230-Round142.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-230-Round142.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-230-Round142.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7325,10 +7433,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-268-Round164.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-268-Round164.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-268-Round164.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-268-Round164.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7340,10 +7448,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-278-Round170.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-278-Round170.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-278-Round170.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-278-Round170.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7355,10 +7463,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-313-Round186.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-313-Round186.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-313-Round186.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-313-Round186.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7370,10 +7478,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-318-Round188.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-318-Round188.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-318-Round188.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-318-Round188.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7385,10 +7493,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-339-Round197.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-339-Round197.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-339-Round197.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-339-Round197.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7400,10 +7508,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-381-Round223.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-381-Round223.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-381-Round223.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-381-Round223.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7415,10 +7523,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-427-Round244.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-427-Round244.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-427-Round244.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-427-Round244.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7430,10 +7538,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-467-Round267.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-467-Round267.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-467-Round267.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-467-Round267.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7445,10 +7553,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-469-Round268.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-469-Round268.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-469-Round268.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-469-Round268.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7460,10 +7568,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-490-Round279.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-490-Round279.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-490-Round279.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-490-Round279.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7475,10 +7583,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-492-Round280.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-492-Round280.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-492-Round280.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-492-Round280.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7490,10 +7598,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-509-Round289.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-509-Round289.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-509-Round289.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-509-Round289.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7505,10 +7613,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-520-Round295.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-520-Round295.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-520-Round295.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-520-Round295.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7520,10 +7628,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-546-Round304.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-546-Round304.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-546-Round304.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-546-Round304.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7535,10 +7643,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-580-Round321.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-580-Round321.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-580-Round321.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-580-Round321.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7550,10 +7658,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-617-Round340.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-617-Round340.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-617-Round340.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-617-Round340.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7565,10 +7673,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-646-Techno1z.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-646-Techno1z.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-646-Techno1z.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-646-Techno1z.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7580,10 +7688,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-647-Techno2z.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-647-Techno2z.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-647-Techno2z.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-647-Techno2z.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7595,10 +7703,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-648-Techno1o.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-648-Techno1o.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-648-Techno1o.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-648-Techno1o.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7610,10 +7718,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-649-Techno2o.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-649-Techno2o.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-649-Techno2o.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-649-Techno2o.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7625,10 +7733,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-705-Round366.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-705-Round366.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-705-Round366.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-705-Round366.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7640,10 +7748,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-723-Round375.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-723-Round375.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-723-Round375.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-723-Round375.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7655,10 +7763,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-727-Techno2017o1.html":
-/*!*******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-727-Techno2017o1.html ***!
-  \*******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-727-Techno2017o1.html":
+/*!*****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-727-Techno2017o1.html ***!
+  \*****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7670,10 +7778,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-732-Round377.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-732-Round377.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-732-Round377.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-732-Round377.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7685,10 +7793,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-733-Round378.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-733-Round378.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-733-Round378.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-733-Round378.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7700,10 +7808,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-743-Round384.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-743-Round384.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-743-Round384.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-743-Round384.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7715,10 +7823,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-758-Round392.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-758-Round392.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-758-Round392.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-758-Round392.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7730,10 +7838,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-791-Round405.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-791-Round405.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-791-Round405.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-791-Round405.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7745,10 +7853,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/elem-895-Round448.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/elem-895-Round448.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/elem-895-Round448.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/elem-895-Round448.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7760,10 +7868,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-1-Round1.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-1-Round1.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-1-Round1.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-1-Round1.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7775,10 +7883,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-10-Round10.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-10-Round10.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-10-Round10.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-10-Round10.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7790,10 +7898,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-11-Round11.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-11-Round11.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-11-Round11.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-11-Round11.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7805,10 +7913,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-12-Round12.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-12-Round12.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-12-Round12.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-12-Round12.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7820,10 +7928,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-13-Round13.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-13-Round13.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-13-Round13.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-13-Round13.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7835,10 +7943,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-14-Round14.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-14-Round14.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-14-Round14.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-14-Round14.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7850,10 +7958,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-15-Round15.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-15-Round15.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-15-Round15.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-15-Round15.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7865,10 +7973,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-16-Round16.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-16-Round16.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-16-Round16.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-16-Round16.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7880,10 +7988,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-17-Round17.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-17-Round17.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-17-Round17.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-17-Round17.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7895,10 +8003,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-18-Round18.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-18-Round18.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-18-Round18.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-18-Round18.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7910,10 +8018,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-19-Round19.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-19-Round19.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-19-Round19.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-19-Round19.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7925,10 +8033,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-2-Round2.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-2-Round2.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-2-Round2.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-2-Round2.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7940,10 +8048,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-20-Round20.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-20-Round20.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-20-Round20.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-20-Round20.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7955,10 +8063,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-3-Round3.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-3-Round3.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-3-Round3.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-3-Round3.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7970,10 +8078,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-34-Round34.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-34-Round34.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-34-Round34.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-34-Round34.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7985,10 +8093,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-38-sio1.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-38-sio1.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-38-sio1.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-38-sio1.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8000,10 +8108,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-39-sko1.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-39-sko1.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-39-sko1.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-39-sko1.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8015,10 +8123,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-4-Round4.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-4-Round4.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-4-Round4.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-4-Round4.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8030,10 +8138,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-44-sko2.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-44-sko2.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-44-sko2.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-44-sko2.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8045,10 +8153,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-45-sko3.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-45-sko3.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-45-sko3.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-45-sko3.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8060,10 +8168,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-46-sio2.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-46-sio2.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-46-sio2.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-46-sio2.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8075,10 +8183,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-48-sio3.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-48-sio3.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-48-sio3.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-48-sio3.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8090,10 +8198,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-5-Round5.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-5-Round5.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-5-Round5.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-5-Round5.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8105,10 +8213,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-50-Round47.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-50-Round47.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-50-Round47.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-50-Round47.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8120,10 +8228,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-52-TRound1.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-52-TRound1.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-52-TRound1.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-52-TRound1.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8135,10 +8243,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-59-Round55.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-59-Round55.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-59-Round55.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-59-Round55.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8150,10 +8258,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-6-Round6.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-6-Round6.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-6-Round6.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-6-Round6.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8165,10 +8273,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-7-Round7.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-7-Round7.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-7-Round7.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-7-Round7.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8180,10 +8288,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-70-Round64.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-70-Round64.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-70-Round64.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-70-Round64.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8195,10 +8303,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-71-Round65.html":
-/*!******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-71-Round65.html ***!
-  \******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-71-Round65.html":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-71-Round65.html ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8210,10 +8318,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-76-vuos.html":
-/*!***************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-76-vuos.html ***!
-  \***************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-76-vuos.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-76-vuos.html ***!
+  \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8225,10 +8333,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-8-Round8.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-8-Round8.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-8-Round8.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-8-Round8.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8240,10 +8348,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-81-yandex-q1.html":
-/*!********************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-81-yandex-q1.html ***!
-  \********************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-81-yandex-q1.html":
+/*!******************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-81-yandex-q1.html ***!
+  \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8255,10 +8363,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-82-yandex-q2.html":
-/*!********************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-82-yandex-q2.html ***!
-  \********************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-82-yandex-q2.html":
+/*!******************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-82-yandex-q2.html ***!
+  \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8270,10 +8378,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-85-yandex-r1.html":
-/*!********************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-85-yandex-r1.html ***!
-  \********************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-85-yandex-r1.html":
+/*!******************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-85-yandex-r1.html ***!
+  \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8285,10 +8393,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-86-yandex-r2.html":
-/*!********************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-86-yandex-r2.html ***!
-  \********************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-86-yandex-r2.html":
+/*!******************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-86-yandex-r2.html ***!
+  \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8300,10 +8408,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-9-Round9.html":
-/*!****************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-9-Round9.html ***!
-  \****************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-9-Round9.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-9-Round9.html ***!
+  \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8315,10 +8423,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/pages/p100/elem-97-yandex-f.html":
-/*!*******************************************************************!*\
-  !*** ./src/components/cf/rounds/pages/p100/elem-97-yandex-f.html ***!
-  \*******************************************************************/
+/***/ "./src/components/cf/rounds/rounds100/pages/p100/elem-97-yandex-f.html":
+/*!*****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/pages/p100/elem-97-yandex-f.html ***!
+  \*****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8330,10 +8438,10 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z10a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z10a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z10a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z10a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8345,10 +8453,10 @@ var code = "<!-- Задача A. Учет энергопотребления -->
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z10b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z10b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z10b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z10b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8360,10 +8468,10 @@ var code = "<!-- Задача B. Кассир в кинотеатре -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z10c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z10c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z10c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z10c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8375,10 +8483,10 @@ var code = "<!-- Задача C. Цифровой корень -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z10d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z10d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z10d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z10d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8390,10 +8498,10 @@ var code = "<!-- Задача D. НОВП -->\r\n<div class=\"time-memory\">(В�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z10e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z10e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z10e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z10e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8405,10 +8513,10 @@ var code = "<!-- Задача E. Жадный выбор -->\r\n<div class=\"tim
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z11a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z11a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z11a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z11a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8420,10 +8528,10 @@ var code = "<!-- Задача A. Возрастающая последовате
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z11b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z11b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z11b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z11b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8435,10 +8543,10 @@ var code = "<!-- Задача B. Джек-попрыгунчик -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z11c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z11c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z11c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z11c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8450,10 +8558,10 @@ var code = "<!-- Задача C. Сколько квадратов? -->\r\n<div 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z11d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z11d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z11d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z11d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8465,10 +8573,10 @@ var code = "<!-- Задача D. Простая задача -->\r\n<div class=\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z11e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z11e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z11e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z11e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8480,10 +8588,10 @@ var code = "<!-- Задача E. Шагом марш! -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z12a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z12a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z12a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z12a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8495,10 +8603,10 @@ var code = "<!-- Задача A. Суперагент -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z12b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z12b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z12b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z12b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8510,10 +8618,10 @@ var code = "<!-- Задача B. Правильное решение? -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z12c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z12c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z12c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z12c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8525,10 +8633,10 @@ var code = "<!-- Задача C. Фрукты -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z12d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z12d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z12d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z12d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8540,10 +8648,10 @@ var code = "<!-- Задача D. Бал -->\r\n<div class=\"time-memory\">(Вр�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z12e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z12e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z12e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z12e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8555,10 +8663,10 @@ var code = "<!-- Задача E. Старт сезона -->\r\n<div class=\"tim
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z13a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z13a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z13a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z13a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8570,10 +8678,10 @@ var code = "<!-- Задача A. Числа -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z13b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z13b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z13b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z13b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8585,10 +8693,10 @@ var code = "<!-- Задача B. Буква А -->\r\n<div class=\"time-memory\"
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z13c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z13c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z13c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z13c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8600,10 +8708,10 @@ var code = "<!-- Задача C. Последовательность -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z13d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z13d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z13d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z13d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8615,10 +8723,10 @@ var code = "<!-- Задача D. Треугольники -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z13e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z13e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z13e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z13e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8630,10 +8738,10 @@ var code = "<!-- Задача E. Лунки -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z14a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z14a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z14a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z14a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8645,10 +8753,10 @@ var code = "<!-- Задача A. Письмо -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z14b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z14b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z14b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z14b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8660,55 +8768,55 @@ var code = "<!-- Задача B. Юный фотограф -->\r\n<div class=\"t
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z14c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z14c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z14c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z14c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!-- Задача C. Четыре отрезка -->\r\n<div class=\"time-memory\">(Время 2с. Память 64мб)</div>\r\n\r\n<p>Несколько месяцев спустя Лёня всё-таки получил творение брата Вани по почте. И теперь Лёня решил сам похвастаться чем-нибудь перед братом. Немного подумав он понял, что у него нет готовых творений и решил написать программу распознавания прямоугольников. По его замыслу программа по четырём заданным отрезкам определяет образуют ли эти отрезки прямоугольник положительной площади со сторонами параллельными осям координат. Так как Лёня плохо учится в школе и сам не может написать такую программу, он попросил вас помочь ему в этом.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Входные данные состоят из четырёх строк. Каждая строка состоит из четырёх целых чисел x1, y1, x2, y2 (- 10<sup>9</sup> ≤ x1, y1, x2, y2 ≤ 10<sup>9</sup>) координаты начала и конца отрезка. Заданные отрезки могут вырождаться в точки.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите слово «YES» если данные четыре отрезка образуют искомый прямоугольник и «NO» в противном случае.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n1 1 6 1\r\n1 0 6 0\r\n6 0 6 1\r\n1 1 1 0\r\n</pre>\r\n  <code>YES</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n0 0 0 3\r\n2 0 0 0\r\n2 2 2 0\r\n0 2 2 2\r\n</pre>\r\n  <code>NO</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/14/problem/C\" target=\"_blank\">Задача 14C</a>\r\n    <br><a href=\"https://codeforces.com/contest/14\" target=\"_blank\">Codeforces Beta Round 14 2010.05.19</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n\tmap&lt;pair&lt;int, int&gt;, int&gt; m;\r\n\tint x = 0, y = 0, x1, y1, x2, y2, a = 0;\r\n\r\n\twhile (a++ &lt; 4) {\r\n\t\tcin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;\r\n\t\tx += ((x1 == x2) && (y1 != y2));\r\n\t\ty += ((x1 != x2) && (y1 == y2));\r\n\t\tm[{x1, y1}]++;\r\n\t\tm[{x2, y2}]++;\r\n\t}\r\n\r\n\ta = ((x == 2) && (y == 2));\r\n\tfor (auto i : m) {\r\n\t\ta &= (i.second == 2);\r\n\t}\r\n\r\n\tcout &lt;&lt; (a == 1 ? \"YES\" : \"NO\");\r\n}\r\n\r\n</pre>\r\n</details>\r\n";
+var code = "<!-- Задача C. Четыре отрезка -->\r\n<div class=\"time-memory\">(Время 2с. Память 64мб)</div>\r\n\r\n<p>Несколько месяцев спустя Лёня всё-таки получил творение брата Вани по почте. И теперь Лёня решил сам похвастаться чем-нибудь перед братом. Немного подумав он понял, что у него нет готовых творений и решил написать программу распознавания прямоугольников. По его замыслу программа по четырём заданным отрезкам определяет образуют ли эти отрезки прямоугольник положительной площади со сторонами параллельными осям координат. Так как Лёня плохо учится в школе и сам не может написать такую программу, он попросил вас помочь ему в этом.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Входные данные состоят из четырёх строк. Каждая строка состоит из четырёх целых чисел x1, y1, x2, y2 (- 10<sup>9</sup> ≤ x1, y1, x2, y2 ≤ 10<sup>9</sup>) координаты начала и конца отрезка. Заданные отрезки могут вырождаться в точки.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите слово «YES» если данные четыре отрезка образуют искомый прямоугольник и «NO» в противном случае.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n1 1 6 1\r\n1 0 6 0\r\n6 0 6 1\r\n1 1 1 0\r\n</pre>\r\n  <code>YES</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n0 0 0 3\r\n2 0 0 0\r\n2 2 2 0\r\n0 2 2 2\r\n</pre>\r\n  <code>NO</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/14/problem/C\" target=\"_blank\">Задача 14C</a>\r\n    <br><a href=\"https://codeforces.com/contest/14\" target=\"_blank\">Codeforces Beta Round 14 2010.05.19</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  map&lt;pair&lt;int, int&gt;, int&gt; m;\r\n  int x = 0, y = 0, x1, y1, x2, y2, a = 0;\r\n\r\n  while (a++ &lt; 4) {\r\n    cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;\r\n    x += ((x1 == x2) && (y1 != y2));\r\n    y += ((x1 != x2) && (y1 == y2));\r\n    m[{x1, y1}]++;\r\n    m[{x2, y2}]++;\r\n  }\r\n\r\n  a = ((x == 2) && (y == 2));\r\n  for (auto i : m) {\r\n    a &= (i.second == 2);\r\n  }\r\n\r\n  cout &lt;&lt; (a == 1 ? \"YES\" : \"NO\");\r\n}\r\n\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z14d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z14d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z14d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z14d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!-- Задача D. Два пути -->\r\n<div class=\"time-memory\">(Время 2с. Память 64мб)</div>\r\n\r\n<p>Как вы знаете, Васин брат живет во Флатландии. Во Флатландии n городов, соединенных n - 1 двусторонней дорогой. Города пронумерованы от 1 до n. Из любого города можно добраться до любого другого двигаясь по дорогам.</p>\r\n\r\n<p>Компания «Два пути», в которой работает Васин брат, выиграла тендер на ремонт двух путей во Флатландии. Путем называется последовательность различных городов, последовательно соединенных дорогами. Пути, которые надо отремонтировать, компания может выбрать самостоятельно. Единственное условие, накладываемое тендером — они не должны пересекаться (то есть иметь общих городов).</p>\r\n\r\n<p>Известно, что прибыль, которую получит компания «Два пути», равна произведению длин выбранных двух путей. Считая длину каждой дороги равной 1, а длину пути равной количеству дорог в ней, найдите максимальную возможную прибыль компании.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (2 ≤ n ≤ 200), где n — количество городов в стране. Далее в n - 1 строке записаны сами дороги. Каждая строка содержит пару номеров соединяемых городов ai, bi (1 ≤ ai, bi ≤ n).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите максимальную возможную прибыль.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n1 2\r\n2 3\r\n3 4\r\n</pre>\r\n  <code>1</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n7\r\n1 2\r\n1 3\r\n1 4\r\n1 5\r\n1 6\r\n1 7\r\n</pre>\r\n  <code>0</code>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n6\r\n1 2\r\n2 3\r\n2 4\r\n5 4\r\n6 4\r\n</pre>\r\n  <code>4</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/14/problem/D\" target=\"_blank\">Задача 14D</a>\r\n    <br><a href=\"https://codeforces.com/contest/14\" target=\"_blank\">Codeforces Beta Round 14 2010.05.19</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nconst int N = 210;\r\nint res, u[N], v[N], dp[N];\r\nvector&lt;int&gt;g[N];\r\n\r\nvoid dfs(int u, int fa) {\r\n\tdp[u] = 0;\r\n\tfor (int v : g[u]) {\r\n\t\tif (v == fa) continue;\r\n\t\tdfs(v, u);\r\n\t\tres = max(res, dp[u] + dp[v] + 1);\r\n\t\tdp[u] = max(dp[v] + 1, dp[u]);\r\n\t}\r\n}\r\n\r\nint main() {\r\n\tint n; // число городов\r\n\tcin &gt;&gt; n;\r\n\r\n\tfor (int i = 1;i &lt; n;i++) {\r\n\t\tint x, y;cin &gt;&gt; x &gt;&gt; y;\r\n\t\tu[i] = x, v[i] = y;\r\n\t\tg[x].push_back(y);g[y].push_back(x);\r\n\t}\r\n\r\n\tint ans = 0;\r\n\r\n\tfor (int i = 1;i &lt; n;i++) {\r\n\t\tint ret = 1;res = 0;\r\n\t\tdfs(u[i], v[i]);\r\n\t\tret *= res;res = 0;\r\n\t\tdfs(v[i], u[i]);\r\n\t\tret *= res;\r\n\t\tans = max(ans, ret);\r\n\t}\r\n\r\n\tcout &lt;&lt; ans;\r\n}\r\n</pre>\r\n</details>\r\n";
+var code = "<!-- Задача D. Два пути -->\r\n<div class=\"time-memory\">(Время 2с. Память 64мб)</div>\r\n\r\n<p>Как вы знаете, Васин брат живет во Флатландии. Во Флатландии n городов, соединенных n - 1 двусторонней дорогой. Города пронумерованы от 1 до n. Из любого города можно добраться до любого другого двигаясь по дорогам.</p>\r\n\r\n<p>Компания «Два пути», в которой работает Васин брат, выиграла тендер на ремонт двух путей во Флатландии. Путем называется последовательность различных городов, последовательно соединенных дорогами. Пути, которые надо отремонтировать, компания может выбрать самостоятельно. Единственное условие, накладываемое тендером — они не должны пересекаться (то есть иметь общих городов).</p>\r\n\r\n<p>Известно, что прибыль, которую получит компания «Два пути», равна произведению длин выбранных двух путей. Считая длину каждой дороги равной 1, а длину пути равной количеству дорог в ней, найдите максимальную возможную прибыль компании.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (2 ≤ n ≤ 200), где n — количество городов в стране. Далее в n - 1 строке записаны сами дороги. Каждая строка содержит пару номеров соединяемых городов ai, bi (1 ≤ ai, bi ≤ n).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите максимальную возможную прибыль.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n1 2\r\n2 3\r\n3 4\r\n</pre>\r\n  <code>1</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n7\r\n1 2\r\n1 3\r\n1 4\r\n1 5\r\n1 6\r\n1 7\r\n</pre>\r\n  <code>0</code>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n6\r\n1 2\r\n2 3\r\n2 4\r\n5 4\r\n6 4\r\n</pre>\r\n  <code>4</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/14/problem/D\" target=\"_blank\">Задача 14D</a>\r\n    <br><a href=\"https://codeforces.com/contest/14\" target=\"_blank\">Codeforces Beta Round 14 2010.05.19</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nconst int N = 210;\r\nint res, u[N], v[N], dp[N];\r\nvector&lt;int&gt;g[N];\r\n\r\nvoid dfs(int u, int fa) {\r\n  dp[u] = 0;\r\n  for (int v : g[u]) {\r\n    if (v == fa) continue;\r\n    dfs(v, u);\r\n    res = max(res, dp[u] + dp[v] + 1);\r\n    dp[u] = max(dp[v] + 1, dp[u]);\r\n  }\r\n}\r\n\r\nint main() {\r\n  int n; // число городов\r\n  cin &gt;&gt; n;\r\n\r\n  for (int i = 1;i &lt; n;i++) {\r\n    int x, y;cin &gt;&gt; x &gt;&gt; y;\r\n    u[i] = x, v[i] = y;\r\n    g[x].push_back(y);g[y].push_back(x);\r\n  }\r\n\r\n  int ans = 0;\r\n\r\n  for (int i = 1;i &lt; n;i++) {\r\n    int ret = 1;res = 0;\r\n    dfs(u[i], v[i]);\r\n    ret *= res;res = 0;\r\n    dfs(v[i], u[i]);\r\n    ret *= res;\r\n    ans = max(ans, ret);\r\n  }\r\n\r\n  cout &lt;&lt; ans;\r\n}\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z14e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z14e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z14e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z14e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!-- Задача E. Верблюды -->\r\n<div class=\"time-memory\">(Время 2с. Память 64мб)</div>\r\n\r\n<p>Вася очень любит рисовать верблюдов: одногорбых, двугорбых, трехгорбых и так далее. Верблюда он рисует соединяя точки на координатной плоскости. Сейчас он рисует t-горбых верблюдов, изображая их ломанными на плоскости. Каждая ломанная состоит из n вершин с координатами (x1, y1), (x2, y2), ..., (xn, yn). Первая вершина имеет координату x1 = 1, вторая x2 = 2 и т.д. Координаты yi могут быть любыми, но должны удовлетворять следующим условиям:</p>\r\n<ul>\r\n  <li>должно существовать ровно t горбов, то есть таких индексов j (2 ≤ j ≤ n - 1), что yj - 1 &lt; yj > yj + 1,</li>\r\n  <li>должно существовать ровно t - 1 таких индексов j (2 ≤ j ≤ n - 1), что yj - 1 > yj &lt; yj + 1,</li>\r\n  <li>никакой отрезок ломанной не должен быть параллелен оси Ox,</li>\r\n  <li>все yi — целые числа от 1 до 4.</li>\r\n</ul>\r\n<p>Для серии рисунков с изображением t-горбых верблюдов Вася хочет купить блокнот, но не знает сколько страниц ему понадобится. Выведите количество различных ломанных для изображения t-горбых верблюдов для заданного числа n.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Первая строка содержит пару целых чисел n и t (3 ≤ n ≤ 20, 1 ≤ t ≤ 10).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите искомое количество t-горбых верблюдов.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n  <code>6 1</code>\r\n  <code>6</code>\r\n\r\n  <h4>Пример 2</h4>\r\n  <code>4 2</code>\r\n  <code>0</code>\r\n\r\n<p>В первом тесте последовательности y-координат у шести верблюдов равны: 123421, 123431, 123432, 124321, 134321 и 234321 (каждая цифра соответствует одному значению yi).</p>\r\n</details>\r\n";
+var code = "<!-- Задача E. Верблюды -->\r\n<div class=\"time-memory\">(Время 2с. Память 64мб)</div>\r\n\r\n<p>Вася очень любит рисовать верблюдов: одногорбых, двугорбых, трехгорбых и так далее. Верблюда он рисует соединяя точки на координатной плоскости. Сейчас он рисует t-горбых верблюдов, изображая их ломанными на плоскости. Каждая ломанная состоит из n вершин с координатами (x1, y1), (x2, y2), ..., (xn, yn). Первая вершина имеет координату x1 = 1, вторая x2 = 2 и т.д. Координаты yi могут быть любыми, но должны удовлетворять следующим условиям:</p>\r\n<ul>\r\n  <li>должно существовать ровно t горбов, то есть таких индексов j (2 ≤ j ≤ n - 1), что yj - 1 &lt; yj > yj + 1,</li>\r\n  <li>должно существовать ровно t - 1 таких индексов j (2 ≤ j ≤ n - 1), что yj - 1 > yj &lt; yj + 1,</li>\r\n  <li>никакой отрезок ломанной не должен быть параллелен оси Ox,</li>\r\n  <li>все yi — целые числа от 1 до 4.</li>\r\n</ul>\r\n<p>Для серии рисунков с изображением t-горбых верблюдов Вася хочет купить блокнот, но не знает сколько страниц ему понадобится. Выведите количество различных ломанных для изображения t-горбых верблюдов для заданного числа n.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Первая строка содержит пару целых чисел n и t (3 ≤ n ≤ 20, 1 ≤ t ≤ 10).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите искомое количество t-горбых верблюдов.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n  <code>6 1</code>\r\n  <code>6</code>\r\n\r\n  <h4>Пример 2</h4>\r\n  <code>4 2</code>\r\n  <code>0</code>\r\n\r\n<p>В первом тесте последовательности y-координат у шести верблюдов равны: 123421, 123431, 123432, 124321, 134321 и 234321 (каждая цифра соответствует одному значению yi).</p>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/14/problem/E\" target=\"_blank\">Задача 14E</a>\r\n    <br><a href=\"https://codeforces.com/contest/14\" target=\"_blank\">Codeforces Beta Round 14 2010.05.19</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint f[21][5][5][11][11];\r\n\r\nint main() {\r\n  int t; // число вершин\r\n  int n; // число горбов\r\n  cin &gt;&gt; n &gt;&gt; t;\r\n\r\n  for (int i = 1; i &lt;= 4; i++) {\r\n    for (int j = 1; j &lt;= 4; j++) {\r\n      f[2][i][j][0][0] = i != j;\r\n    }\r\n  }\r\n\r\n  for (int i = 3; i &lt;= n; i++) {\r\n    for (int j = 1; j &lt;= 4; j++) {\r\n      for (int k = 1; k &lt;= 4; k++) {\r\n        for (int x = 0; x &lt;= t; x++) {\r\n          for (int y = 0; y &lt;= t; y++) {\r\n            for (int l = 1; l &lt;= 4; l++) {\r\n              if (k != l) {\r\n                f[i][k][l][x + (j &lt; k && k &gt; l)][y +\r\n                (j &gt; k && k &lt; l)] += f[i - 1][j][k][x][y];\r\n              }\r\n            }\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  int ans = 0;\r\n\r\n  for (int i = 1; i &lt;= 4; i++) {\r\n    for (int j = 1; j &lt;= 4; j++) {\r\n      ans += f[n][i][j][t][t - 1];\r\n    }\r\n  }\r\n\r\n  cout &lt;&lt; ans;\r\n}\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z15a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z15a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z15a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z15a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8720,10 +8828,10 @@ var code = "<!-- Задача A. Коттеджный городок -->\r\n<div
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z15b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z15b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z15b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z15b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8735,10 +8843,10 @@ var code = "<!-- Задача B. Лазер -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z15c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z15c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z15c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z15c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8750,10 +8858,10 @@ var code = "<!-- Задача C. Промышленный Ним -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z15d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z15d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z15d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z15d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8765,10 +8873,10 @@ var code = "<!-- Задача D. Карта -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z15e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z15e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z15e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z15e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8780,10 +8888,10 @@ var code = "<!-- Задача E. Треугольники -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z16a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z16a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z16a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z16a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8795,25 +8903,25 @@ var code = "<!-- Задача A. Флаг -->\r\n<div class=\"time-memory\">(В�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z16b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z16b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z16b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z16b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!-- Задача B. Вор и спички -->\r\n<div class=\"time-memory\">(Время 0.5с. Память 64мб)</div>\r\n\r\n<p>Вор пробрался на склад спичек и хочет украсть как можно больше спичек. На складе находится m контейнеров, в контейнере номер i находится ai коробок спичек, а в каждой коробке bi спичек. Все коробки имеют одинаковый размер. В рюкзак вора помещается ровно n коробок. Ваша задача найти наибольшее количество спичек, которое сможет унести вор. У него нет времени на перекладывание спичек между коробками, поэтому он просто выбирает не более n коробок так, чтобы суммарное число спичек в них было максимальным.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входных данных находится число n (1 ≤ n ≤ 2·108) и число m (1 ≤ m ≤ 20). В i + 1 строке находится пара чисел ai и bi (1 ≤ ai ≤ 108, 1 ≤ bi ≤ 10). Все числа во входных данных — целые.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите единственное число — ответ на задачу.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n7 3\r\n5 10\r\n2 5\r\n3 6\r\n</pre>\r\n  <code>62</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3 3\r\n1 3\r\n2 2\r\n3 1\r\n</pre>\r\n  <code>7</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/16/problem/B\" target=\"_blank\">Задача 16B</a>\r\n    <br><a href=\"https://codeforces.com/contest/16\" target=\"_blank\">Codeforces Beta Round 16 (Див. 2) 2010.06.03</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nbool compare(const pair&lt;int, int&gt;& a, const pair&lt;int, int&gt;& b) {\r\nreturn a.second &gt; b.second;\r\n}\r\n\r\nint main() {\r\n// ввод данных\r\nint n, m;\r\ncin &gt;&gt; n &gt;&gt; m;\r\n\r\nvector&lt;pair&lt;int, int&gt; &gt; A(m);\r\nfor (int i = 0; i &lt; m; i++) {\r\n  cin &gt;&gt; A[i].first &gt;&gt; A[i].second;\r\n}\r\n\r\n// решение\r\nsort(A.begin(), A.end(), compare);\r\nint res = 0;\r\nint ost = n;\r\n\r\nfor (auto& cont : A) {\r\n  int a = cont.first;\r\n  int b = cont.second;\r\n\r\n  if (ost &lt;= 0) {\r\n    break;\r\n  }\r\n\r\n  int take = min(a, ost);\r\n  res += take * b;\r\n  ost -= take;\r\n}\r\n\r\n// вывод результата\r\ncout &lt;&lt; res;\r\n}\r\n</pre>\r\n</details>\r\n";
+var code = "<!-- Задача B. Вор и спички -->\r\n<div class=\"time-memory\">(Время 0.5с. Память 64мб)</div>\r\n\r\n<p>Вор пробрался на склад спичек и хочет украсть как можно больше спичек. На складе находится m контейнеров, в контейнере номер i находится ai коробок спичек, а в каждой коробке bi спичек. Все коробки имеют одинаковый размер. В рюкзак вора помещается ровно n коробок. Ваша задача найти наибольшее количество спичек, которое сможет унести вор. У него нет времени на перекладывание спичек между коробками, поэтому он просто выбирает не более n коробок так, чтобы суммарное число спичек в них было максимальным.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входных данных находится число n (1 ≤ n ≤ 2·108) и число m (1 ≤ m ≤ 20). В i + 1 строке находится пара чисел ai и bi (1 ≤ ai ≤ 108, 1 ≤ bi ≤ 10). Все числа во входных данных — целые.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите единственное число — ответ на задачу.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n7 3\r\n5 10\r\n2 5\r\n3 6\r\n</pre>\r\n  <code>62</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3 3\r\n1 3\r\n2 2\r\n3 1\r\n</pre>\r\n  <code>7</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/16/problem/B\" target=\"_blank\">Задача 16B</a>\r\n    <br><a href=\"https://codeforces.com/contest/16\" target=\"_blank\">Codeforces Beta Round 16 (Див. 2) 2010.06.03</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nbool compare(const pair&lt;int, int&gt;& a, const pair&lt;int, int&gt;& b) {\r\n  return a.second &gt; b.second;\r\n}\r\n\r\nint main() {\r\n  // ввод данных\r\n  int n, m;\r\n  cin &gt;&gt; n &gt;&gt; m;\r\n\r\n  vector&lt;pair&lt;int, int&gt; &gt; A(m);\r\n  for (int i = 0; i &lt; m; i++) {\r\n    cin &gt;&gt; A[i].first &gt;&gt; A[i].second;\r\n  }\r\n\r\n  // решение\r\n  sort(A.begin(), A.end(), compare);\r\n  int res = 0;\r\n  int ost = n;\r\n\r\n  for (auto& cont : A) {\r\n    int a = cont.first;\r\n    int b = cont.second;\r\n\r\n    if (ost &lt;= 0) {\r\n      break;\r\n    }\r\n\r\n    int take = min(a, ost);\r\n    res += take * b;\r\n    ost -= take;\r\n  }\r\n\r\n  // вывод результата\r\n  cout &lt;&lt; res;\r\n}\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z16c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z16c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z16c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z16c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8825,10 +8933,10 @@ var code = "<!-- Задача C. Монитор -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z16d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z16d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z16d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z16d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8840,10 +8948,10 @@ var code = "<!-- Задача D. Журналирование -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z16e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z16e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z16e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z16e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8855,10 +8963,10 @@ var code = "<!-- Задача E. Рыбы -->\r\n<div class=\"time-memory\">(В�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z17a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z17a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z17a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z17a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8870,10 +8978,10 @@ var code = "<!-- Задача A. Проблема Нольдбаха -->\r\n<div
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z17b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z17b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z17b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z17b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8885,10 +8993,10 @@ var code = "<!-- Задача B. Иерархия -->\r\n<div class=\"time-memor
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z17c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z17c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z17c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z17c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8900,10 +9008,10 @@ var code = "<!-- Задача C. Баланс -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z17d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z17d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z17d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z17d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8915,10 +9023,10 @@ var code = "<!-- Задача D. Блокнот -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z17e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z17e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z17e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z17e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8930,10 +9038,10 @@ var code = "<!-- Задача E. Палисечение -->\r\n<div class=\"time
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z18a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z18a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z18a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z18a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8945,10 +9053,10 @@ var code = "<!-- Задача A. Треугольник -->\r\n<div class=\"time
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z18b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z18b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z18b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z18b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8960,10 +9068,10 @@ var code = "<!-- Задача B. Платформы -->\r\n<div class=\"time-mem
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z18c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z18c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z18c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z18c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8975,10 +9083,10 @@ var code = "<!-- Задача C. Полоска -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z18d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z18d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z18d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z18d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8990,10 +9098,10 @@ var code = "<!-- Задача D. Продавец Вася -->\r\n<div class=\"t
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z18e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z18e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z18e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z18e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9005,10 +9113,10 @@ var code = "<!-- Задача E. Флаг 2 -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z19a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z19a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z19a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z19a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9020,10 +9128,10 @@ var code = "<!-- Задача A. Чемпионат мира по футболу
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z19b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z19b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z19b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z19b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9035,10 +9143,10 @@ var code = "<!-- Задача B. Кассир -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z19c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z19c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z19c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z19c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9050,10 +9158,10 @@ var code = "<!-- Задача C. Удаление повторов -->\r\n<div c
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z19d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z19d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z19d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z19d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9065,10 +9173,10 @@ var code = "<!-- Задача D. Точки -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z19e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z19e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z19e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z19e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9080,10 +9188,10 @@ var code = "<!-- Задача E. Фея -->\r\n<div class=\"time-memory\">(Вр�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z1a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z1a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z1a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z1a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9095,10 +9203,10 @@ var code = "<!-- Задача A. Театральная площадь -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z1b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z1b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z1b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z1b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9110,10 +9218,10 @@ var code = "<!-- Задача B. Электронные таблицы -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z1c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z1c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z1c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z1c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9125,10 +9233,10 @@ var code = "<!-- Задача C. Древнеберляндский цирк -->
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z20a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z20a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z20a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z20a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9140,10 +9248,10 @@ var code = "<!-- Задача A. Файловая система BerOS -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z20b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z20b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z20b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z20b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9155,10 +9263,10 @@ var code = "<!-- Задача B. Уравнение -->\r\n<div class=\"time-mem
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z20c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z20c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z20c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z20c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9170,10 +9278,10 @@ var code = "<!-- Задача C. Алгоритм Дейкстры? -->\r\n<div 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z2a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z2a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z2a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z2a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9185,10 +9293,10 @@ var code = "<!-- Задача A. Победитель -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z2b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z2b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z2b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z2b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9200,10 +9308,10 @@ var code = "<!-- Задача B. Наименее круглый путь -->\r\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z2c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z2c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z2c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z2c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9215,10 +9323,10 @@ var code = "<!-- Задача C. Задача комментатора -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z34a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z34a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z34a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z34a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9230,10 +9338,10 @@ var code = "<!-- Задача A. Разведка 2 -->\r\n<div class=\"time-mem
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z34b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z34b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z34b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z34b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9245,10 +9353,10 @@ var code = "<!-- Задача B. Распродажа -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z34c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z34c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z34c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z34c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9260,10 +9368,10 @@ var code = "<!-- Задача C. Список -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z34d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z34d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z34d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z34d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9275,10 +9383,10 @@ var code = "<!-- Задача D. Карта дорог -->\r\n<div class=\"time-
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z34e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z34e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z34e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z34e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9290,25 +9398,25 @@ var code = "<!-- Задача E. Столкновения -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!-- Задача A. Армия -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Система Вооруженных Сил Берляндии состоит из n званий, которые пронумерованы натуральными числами от 1 до n, где 1 — самое младшее звание, а n — самое старшее.</p>\r\n\r\n<p>Чтобы дослужиться от звания номер i до звания номер i + 1, требуется ровно di лет. Получить некоторое звание i, не получив до этого все предыдущие i - 1 званий, невозможно.</p>\r\n\r\n<p>Буквально только что Вася получил новое звание a, но он мечтает служить в звании b. Найдите, какое количество лет Васе еще нужно служить в армии Берляндии, чтобы осуществить свою мечту.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входных данных находится целое число n (2 ≤ n ≤ 100). Во второй строке находятся n - 1 целых чисел di (1 ≤ di ≤ 100). В третьей строке входного файла находятся два целых числа a и b (1 ≤ a &lt; b ≤ n). Числа в строках разделены пробелами.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите единственное число — количество лет, которое потребуется Васе, чтобы дослужиться от звания a до звания b.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n5 6\r\n1 2\r\n</pre>\r\n  <code>5</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3\r\n5 6\r\n1 3\r\n</pre>\r\n  <code>11</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/38/problem/A\" target=\"_blank\">Задача 38A</a>\r\n    <br><a href=\"https://codeforces.com/contest/38\" target=\"_blank\">Codeforces Beta Round 38 2010.10.30</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n\tint n; // число званий\r\n  cin &gt;&gt; n;\r\n  vector&lt;int&gt; D(n);\r\n  for (int i = 1; i &lt; n; i++) {\r\n    cin &gt;&gt; D[i];\r\n  }\r\n  int a, b;\r\n  cin &gt;&gt; a &gt;&gt; b;\r\n\r\n  int res = 0;\r\n  for (int i = a; i &lt; b; i++) {\r\n    res += D[i];\r\n  }\r\n\r\n  cout &lt;&lt; res;\r\n}\r\n</pre>\r\n</details>\r\n";
+var code = "<!-- Задача A. Армия -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Система Вооруженных Сил Берляндии состоит из n званий, которые пронумерованы натуральными числами от 1 до n, где 1 — самое младшее звание, а n — самое старшее.</p>\r\n\r\n<p>Чтобы дослужиться от звания номер i до звания номер i + 1, требуется ровно di лет. Получить некоторое звание i, не получив до этого все предыдущие i - 1 званий, невозможно.</p>\r\n\r\n<p>Буквально только что Вася получил новое звание a, но он мечтает служить в звании b. Найдите, какое количество лет Васе еще нужно служить в армии Берляндии, чтобы осуществить свою мечту.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входных данных находится целое число n (2 ≤ n ≤ 100). Во второй строке находятся n - 1 целых чисел di (1 ≤ di ≤ 100). В третьей строке входного файла находятся два целых числа a и b (1 ≤ a &lt; b ≤ n). Числа в строках разделены пробелами.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите единственное число — количество лет, которое потребуется Васе, чтобы дослужиться от звания a до звания b.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n5 6\r\n1 2\r\n</pre>\r\n  <code>5</code>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3\r\n5 6\r\n1 3\r\n</pre>\r\n  <code>11</code>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/38/problem/A\" target=\"_blank\">Задача 38A</a>\r\n    <br><a href=\"https://codeforces.com/contest/38\" target=\"_blank\">Codeforces Beta Round 38 2010.10.30</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int n; // число званий\r\n  cin &gt;&gt; n;\r\n  vector&lt;int&gt; D(n);\r\n  for (int i = 1; i &lt; n; i++) {\r\n    cin &gt;&gt; D[i];\r\n  }\r\n  int a, b;\r\n  cin &gt;&gt; a &gt;&gt; b;\r\n\r\n  int res = 0;\r\n  for (int i = a; i &lt; b; i++) {\r\n    res += D[i];\r\n  }\r\n\r\n  cout &lt;&lt; res;\r\n}\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9320,10 +9428,10 @@ var code = "<!-- Задача B. Ладья, Конь... и снова Конь 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9335,10 +9443,10 @@ var code = "<!-- Задача C. Жалюзи -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9350,10 +9458,10 @@ var code = "<!-- Задача D. Архитектор Вася -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9365,10 +9473,10 @@ var code = "<!-- Задача E. Ну-ка, покатились! -->\r\n<div cl
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38f.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38f.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38f.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38f.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9380,10 +9488,10 @@ var code = "<!-- Задача F. Умный мальчик -->\r\n<div class=\"t
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38g.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38g.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38g.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38g.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9395,10 +9503,10 @@ var code = "<!-- Задача G. Очередь -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z38h.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z38h.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z38h.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z38h.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9410,10 +9518,10 @@ var code = "<!-- Задача H. Великий марафон -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9425,10 +9533,10 @@ var code = "<!-- Задача A. Вычисления в C*++ -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9440,10 +9548,10 @@ var code = "<!-- Задача B. Рост прибыли компании -->\r\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9455,10 +9563,10 @@ var code = "<!-- Задача C. Кратеры на Луне -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9470,10 +9578,10 @@ var code = "<!-- Задача D. Кубическая планета -->\r\n<div
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9485,10 +9593,10 @@ var code = "<!-- Задача E. При чем тут Дирихле? -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39f.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39f.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39f.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39f.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9500,10 +9608,10 @@ var code = "<!-- Задача F. Лягушки-пацифисты -->\r\n<div c
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39g.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39g.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39g.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39g.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9515,10 +9623,10 @@ var code = "<!-- Задача G. Обратная функция -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39h.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39h.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39h.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39h.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9530,10 +9638,10 @@ var code = "<!-- Задача H. Таблица умножения -->\r\n<div c
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39i.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39i.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39i.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39i.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9545,10 +9653,10 @@ var code = "<!-- Задача I. Трамвай -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39j.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39j.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39j.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39j.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9560,10 +9668,10 @@ var code = "<!-- Задача J. Проверка правописания -->\r
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z39k.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z39k.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z39k.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z39k.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9575,10 +9683,10 @@ var code = "<!-- Задача K. Испытания -->\r\n<div class=\"time-mem
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z3a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z3a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z3a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z3a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9590,10 +9698,10 @@ var code = "<!-- Задача A. Кратчайший путь короля -->\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z3b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z3b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z3b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z3b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9605,10 +9713,10 @@ var code = "<!-- Задача B. Грузовик -->\r\n<div class=\"time-memor
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z3c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z3c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z3c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z3c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9620,10 +9728,10 @@ var code = "<!-- Задача C. Крестики-нолики -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z3d.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z3d.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z3d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z3d.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9635,10 +9743,10 @@ var code = "<!-- Задача D. Скобочная последовательн
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9650,10 +9758,10 @@ var code = "<!-- Задача A. Золотая осень -->\r\n<div class=\"t
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9665,10 +9773,10 @@ var code = "<!-- Задача B. Кола -->\r\n<div class=\"time-memory\">(В�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9680,10 +9788,10 @@ var code = "<!-- Задача C. Каникулы -->\r\n<div class=\"time-memor
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9695,10 +9803,10 @@ var code = "<!-- Задача D. Гипердвигатель -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9710,10 +9818,10 @@ var code = "<!-- Задача E. Обезьянка Анфиса -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44f.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44f.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44f.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44f.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9725,10 +9833,10 @@ var code = "<!-- Задача F. BerPaint -->\r\n<div class=\"time-memory\">(В�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44g.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44g.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44g.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44g.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9740,10 +9848,10 @@ var code = "<!-- Задача G. Тир -->\r\n<div class=\"time-memory\">(Вр�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44h.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44h.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44h.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44h.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9755,10 +9863,10 @@ var code = "<!-- Задача H. Номер телефона -->\r\n<div class=\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44i.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44i.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44i.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44i.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9770,10 +9878,10 @@ var code = "<!-- Задача I. Игрушки -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z44j.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z44j.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z44j.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z44j.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9785,10 +9893,10 @@ var code = "<!-- Задача J. Триминошки -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45a.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45a.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45a.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45a.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9800,10 +9908,10 @@ var code = "<!-- Задача A. Codecraft III -->\r\n<div class=\"time-memory\"
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45b.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45b.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45b.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45b.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9815,10 +9923,10 @@ var code = "<!-- Задача B. Школа -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45c.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45c.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45c.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45c.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9830,10 +9938,10 @@ var code = "<!-- Задача C. Танцевальный кружок -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45d.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45d.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45d.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45d.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9845,10 +9953,10 @@ var code = "<!-- Задача D. Даты событий -->\r\n<div class=\"tim
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45e.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45e.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45e.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45e.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9860,10 +9968,10 @@ var code = "<!-- Задача E. Режиссер -->\r\n<div class=\"time-memor
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45f.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45f.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45f.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45f.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9875,10 +9983,10 @@ var code = "<!-- Задача F. Козлы и волки -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45g.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45g.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45g.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45g.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9890,10 +9998,10 @@ var code = "<!-- Задача G. Простая задача -->\r\n<div class=\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45h.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45h.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45h.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45h.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9905,10 +10013,10 @@ var code = "<!-- Задача H. Дорожная задача -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45i.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45i.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45i.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45i.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9920,10 +10028,10 @@ var code = "<!-- Задача I. TCMCF+++ -->\r\n<div class=\"time-memory\">(В�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z45j.html":
-/*!***************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z45j.html ***!
-  \***************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z45j.html":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z45j.html ***!
+  \*************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9935,10 +10043,10 @@ var code = "<!-- Задача J. Посадка деревьев -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z4a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z4a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z4a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z4a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9950,10 +10058,10 @@ var code = "<!-- Задача A. Арбуз -->\r\n<div class=\"time-memory\">(�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z4b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z4b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z4b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z4b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9965,10 +10073,10 @@ var code = "<!-- Задача B. Перед экзаменом -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z4c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z4c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z4c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z4c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9980,10 +10088,10 @@ var code = "<!-- Задача C. Система регистрации -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z4d.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z4d.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z4d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z4d.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9995,10 +10103,10 @@ var code = "<!-- Задача D. Загадочная посылка -->\r\n<div
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z5a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z5a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z5a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z5a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10010,10 +10118,10 @@ var code = "<!-- Задача A. Исходящий трафик чата -->\r\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z5b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z5b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z5b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z5b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10025,10 +10133,10 @@ var code = "<!-- Задача B. Выравнивание по центру -->\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z5c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z5c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z5c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z5c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10040,10 +10148,10 @@ var code = "<!-- Задача C. Наибольшая правильная ск�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z5d.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z5d.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z5d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z5d.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10055,10 +10163,10 @@ var code = "<!-- Задача D. Соблюдай правила -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z5e.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z5e.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z5e.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z5e.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10070,10 +10178,10 @@ var code = "<!-- Задача E. Передача сигналов по-бинд
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z6a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z6a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z6a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z6a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10085,10 +10193,10 @@ var code = "<!-- Задача A. Треугольник -->\r\n<div class=\"time
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z6b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z6b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z6b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z6b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10100,10 +10208,10 @@ var code = "<!-- Задача B. Кабинет президента -->\r\n<div
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z6c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z6c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z6c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z6c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10115,10 +10223,10 @@ var code = "<!-- Задача C. Алиса, Боб и шоколад -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z6d.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z6d.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z6d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z6d.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10130,10 +10238,10 @@ var code = "<!-- Задача D. Ящерицы и подвалы 2 -->\r\n<div 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z6e.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z6e.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z6e.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z6e.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10145,10 +10253,10 @@ var code = "<!-- Задача E. Экспозиция -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z7a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z7a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z7a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z7a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10160,10 +10268,10 @@ var code = "<!-- Задача A. Калевич и шахматы -->\r\n<div cl
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z7b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z7b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z7b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z7b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10175,10 +10283,10 @@ var code = "<!-- Задача B. Менеджер памяти -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z7c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z7c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z7c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z7c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10190,10 +10298,10 @@ var code = "<!-- Задача C. Прямая -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z7d.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z7d.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z7d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z7d.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10205,10 +10313,10 @@ var code = "<!-- Задача D. Палиндромность -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z7e.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z7e.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z7e.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z7e.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10220,10 +10328,10 @@ var code = "<!-- Задача E. Проверка макросов -->\r\n<div c
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z8a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z8a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z8a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z8a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10235,10 +10343,10 @@ var code = "<!-- Задача A. Поезд и Петя -->\r\n<div class=\"time
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z8b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z8b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z8b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z8b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10250,10 +10358,10 @@ var code = "<!-- Задача B. Роботомания -->\r\n<div class=\"time
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z8c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z8c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z8c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z8c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10265,10 +10373,10 @@ var code = "<!-- Задача C. Нахождение порядка -->\r\n<div
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z8d.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z8d.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z8d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z8d.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10280,10 +10388,10 @@ var code = "<!-- Задача D. Два товарища -->\r\n<div class=\"tim
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z8e.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z8e.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z8e.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z8e.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10295,10 +10403,10 @@ var code = "<!-- Задача E. Бусы -->\r\n<div class=\"time-memory\">(В�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z9a.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z9a.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z9a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z9a.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10310,10 +10418,10 @@ var code = "<!-- Задача A. Бросок кубика -->\r\n<div class=\"t
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z9b.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z9b.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z9b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z9b.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10325,10 +10433,10 @@ var code = "<!-- Задача B. Бегущий Студент -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z9c.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z9c.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z9c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z9c.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10340,10 +10448,10 @@ var code = "<!-- Задача C. Числа Хексадесимал -->\r\n<div
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z9d.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z9d.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z9d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z9d.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10355,10 +10463,10 @@ var code = "<!-- Задача D. Сколько деревьев? -->\r\n<div cl
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z100/z9e.html":
-/*!**************************************************!*\
-  !*** ./src/components/cf/rounds/z/z100/z9e.html ***!
-  \**************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z100/z9e.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z100/z9e.html ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10370,10 +10478,10 @@ var code = "<!-- Задача E. Интересный граф и яблоки -
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1030a.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1030a.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1030a.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1030a.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10385,10 +10493,10 @@ var code = "<!-- Задача A. В поисках простой задачи -
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1030b.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1030b.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1030b.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1030b.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10400,10 +10508,10 @@ var code = "<!-- Задача B. Вася и кукурузное поле -->\r
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1030c.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1030c.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1030c.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1030c.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10415,10 +10523,10 @@ var code = "<!-- Задача C. Вася и золотой билет -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1030d.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1030d.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1030d.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1030d.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10430,10 +10538,10 @@ var code = "<!-- Задача D. Вася и треугольник -->\r\n<div 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1030e.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1030e.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1030e.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1030e.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10445,10 +10553,10 @@ var code = "<!-- Задача E. Вася и хорошие последоват
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1030f.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1030f.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1030f.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1030f.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10460,10 +10568,10 @@ var code = "<!-- Задача F. Сдвигаем ящики -->\r\n<div class=\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1030g.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1030g.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1030g.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1030g.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10475,10 +10583,10 @@ var code = "<!-- Задача G. Линейный конгруэнтный ге�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z134a.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z134a.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z134a.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z134a.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10490,10 +10598,10 @@ var code = "<!-- Задача A. Среднестатистические эле
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z134b.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z134b.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z134b.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z134b.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10505,10 +10613,10 @@ var code = "<!-- Задача B. Пары чисел -->\r\n<div class=\"time-me
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z134c.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z134c.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z134c.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z134c.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10520,10 +10628,10 @@ var code = "<!-- Задача C. Обмены -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1352a.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1352a.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1352a.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1352a.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10535,10 +10643,10 @@ var code = "<!-- Задача A. Сумма круглых чисел -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1352b.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1352b.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1352b.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1352b.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10550,10 +10658,10 @@ var code = "<!-- Задача B. Сумма слагаемых одинаков�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1352c.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1352c.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1352c.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1352c.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10565,10 +10673,10 @@ var code = "<!-- Задача C. K-е неделящееся на n -->\r\n<div 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1352d.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1352d.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1352d.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1352d.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10580,10 +10688,10 @@ var code = "<!-- Задача D. Алиса, Боб и конфеты -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1352e.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1352e.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1352e.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1352e.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10595,10 +10703,10 @@ var code = "<!-- Задача E. Особые элементы -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1352f.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1352f.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1352f.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1352f.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10610,10 +10718,10 @@ var code = "<!-- Задача F. Восстановление 01-строки --
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z1352g.html":
-/*!************************************************!*\
-  !*** ./src/components/cf/rounds/z/z1352g.html ***!
-  \************************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z1352g.html":
+/*!**********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z1352g.html ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10625,10 +10733,10 @@ var code = "<!-- Задача G. Особая перестановка -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z230a.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z230a.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z230a.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z230a.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10640,10 +10748,10 @@ var code = "<!-- Задача A. Драконы -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z230b.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z230b.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z230b.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z230b.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10655,10 +10763,10 @@ var code = "<!-- Задача B. Т-простые числа -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z230c.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z230c.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z230c.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z230c.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10670,10 +10778,10 @@ var code = "<!-- Задача C. Сдвиги -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z230d.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z230d.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z230d.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z230d.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10685,10 +10793,10 @@ var code = "<!-- Задача D. Планеты -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z230e.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z230e.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z230e.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z230e.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10700,10 +10808,10 @@ var code = "<!-- Задача E. Треугольники -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z313a.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z313a.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z313a.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z313a.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10715,10 +10823,10 @@ var code = "<!-- Задача A. Илья и банковский счет -->\r
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z313b.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z313b.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z313b.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z313b.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10730,10 +10838,10 @@ var code = "<!-- Задача B. Илья и запросы -->\r\n<div class=\"
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z313c.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z313c.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z313c.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z313c.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10745,10 +10853,10 @@ var code = "<!-- Задача C. Илья и матрица -->\r\n<div class=\"
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z313d.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z313d.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z313d.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z313d.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10760,10 +10868,10 @@ var code = "<!-- Задача D. Илья и дороги -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z313e.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z313e.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z313e.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z313e.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10775,10 +10883,10 @@ var code = "<!-- Задача E. Илья и два числа -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z381a.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z381a.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z381a.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z381a.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10790,10 +10898,10 @@ var code = "<!-- Задача A. Сережа и Дима -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z381b.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z381b.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z381b.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z381b.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10805,10 +10913,10 @@ var code = "<!-- Задача B. Сережа и лесенка -->\r\n<div clas
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z381c.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z381c.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z381c.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z381c.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10820,10 +10928,10 @@ var code = "<!-- Задача C. Сережа и префиксы -->\r\n<div cl
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z381d.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z381d.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z381d.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z381d.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10835,10 +10943,10 @@ var code = "<!-- Задача D. Сережа и дерево -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z381e.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z381e.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z381e.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z381e.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10850,10 +10958,10 @@ var code = "<!-- Задача E. Сережа и скобочки -->\r\n<div cl
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z520a.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z520a.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z520a.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z520a.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10865,10 +10973,10 @@ var code = "<!-- Задача A. Панграмма -->\r\n<div class=\"time-mem
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z520b.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z520b.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z520b.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z520b.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10880,10 +10988,10 @@ var code = "<!-- Задача B. Две кнопки -->\r\n<div class=\"time-me
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z520c.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z520c.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z520c.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z520c.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10895,10 +11003,10 @@ var code = "<!-- Задача C. Выравнивание ДНК -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z520d.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z520d.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z520d.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z520d.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10910,10 +11018,10 @@ var code = "<!-- Задача D. Кубики -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z520e.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z520e.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z520e.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z520e.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10925,10 +11033,10 @@ var code = "<!-- E. Сплошные плюсы -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z580a.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z580a.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z580a.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z580a.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10940,10 +11048,10 @@ var code = "<!-- Задача A. Кефа и первые шаги -->\r\n<div c
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z580b.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z580b.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z580b.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z580b.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10955,10 +11063,10 @@ var code = "<!-- Задача B. Кефа и компания -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z580c.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z580c.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z580c.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z580c.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10970,10 +11078,10 @@ var code = "<!-- Задача C. Кефа и парк -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z580d.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z580d.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z580d.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z580d.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10985,10 +11093,10 @@ var code = "<!-- Задача D. Кефа и блюда -->\r\n<div class=\"time
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/z/z580e.html":
-/*!***********************************************!*\
-  !*** ./src/components/cf/rounds/z/z580e.html ***!
-  \***********************************************/
+/***/ "./src/components/cf/rounds/rounds100/z/z580e.html":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z/z580e.html ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

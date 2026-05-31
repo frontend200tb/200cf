@@ -1,4 +1,4 @@
-import c    from '../../rounds/z/z100/z1a.html';
+import c    from '../../rounds/rounds100/z/z100/z1a.html';
 
 export default function inElem() {
 
