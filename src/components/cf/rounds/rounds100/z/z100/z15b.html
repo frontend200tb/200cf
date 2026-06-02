@@ -30,3 +30,38 @@
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/15/problem/B" target="_blank">Задача 15B</a>
+    <br><a href="https://codeforces.com/contest/15" target="_blank">Codeforces Beta Round 15 2010.05.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  long long n, m, x1, y1, x2, y2;
+
+  while (t--) {
+    cin >> n >> m >> x1 >> y1 >> x2 >> y2;
+    x1 = abs(x1 - x2);
+    y1 = abs(y1 - y2);
+
+    long long a = m * n - 2 * (n - x1) * (m - y1);
+    long long b = max(n - 2 * x1, (long long)0);
+    long long c = max(m - 2 * y1, (long long)0);
+
+    cout <<  a + b * c << '\n';
+  }
+}
+</pre>
+</details>

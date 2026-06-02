@@ -45,8 +45,8 @@
   <summary>Решение</summary>
 
   <div>
-    <a href="https://codeforces.com/contest/14/problem/A" target="_blank">Задача 14A</a>
-    <br><a href="https://codeforces.com/contest/14" target="_blank">Codeforces Beta Round 14 2010.05.19</a>
+    <a href="https://codeforces.com/contest/15/problem/A" target="_blank">Задача 15A</a>
+    <br><a href="https://codeforces.com/contest/15" target="_blank">Codeforces Beta Round 15 2010.05.29</a>
   </div>
 
 <pre class="language-cpp">
@@ -57,33 +57,33 @@
 using namespace std;
 
 int main() {
-	int n; // число домов
-	int t; // сторона дома
-	cin >> n >> t;
+  int n; // число домов
+  int t; // сторона дома
+  cin >> n >> t;
 
-	vector<pair<int, int> > A(n);
-	for (int i = 0; i < n; i++) {
-		cin >> A[i].first >> A[i].second;
-	}
+  vector<pair<int, int> > A(n);
+  for (int i = 0; i < n; i++) {
+    cin >> A[i].first >> A[i].second;
+  }
 
-	sort(A.begin(), A.end());
+  sort(A.begin(), A.end());
 
-	int res = 2; // 1 положение перед первым и 1 после последнего
-	double dist; // расстояние между соседними домами
-	double p1, p2; // границы домов
+  int res = 2; // 1 положение перед первым и 1 после последнего
+  double dist; // расстояние между соседними домами
+  double p1, p2; // границы домов
 
-	for (int i = 1; i < n; i++) {
-		p1 = A[i].first - A[i].second / 2.0;
-		p2 = A[i - 1].first + A[i - 1].second / 2.0;
-		dist =  p1 - p2;
-		if (dist > t) {
-			res += 2; // может быть 2 положение
-		} else if (dist == t) {
-			res++; // может быть 1 положение
-		}
-	}
+  for (int i = 1; i < n; i++) {
+    p1 = A[i].first - A[i].second / 2.0;
+    p2 = A[i - 1].first + A[i - 1].second / 2.0;
+    dist =  p1 - p2;
+    if (dist > t) {
+      res += 2; // может быть 2 положение
+    } else if (dist == t) {
+      res++; // может быть 1 положение
+    }
+  }
 
-	cout << res;
+  cout << res;
 }
 </pre>
 </details>
