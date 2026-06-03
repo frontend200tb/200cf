@@ -35,3 +35,44 @@
 </pre>
   <code>bolik</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/15/problem/C" target="_blank">Задача 15C</a>
+    <br><a href="https://codeforces.com/contest/15" target="_blank">Codeforces Beta Round 15 2010.05.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+typedef long long ll;
+
+ll ff(ll a) {
+  return (a % 2) * a - a % 2 + (a % 4) / 2;
+}
+
+int main() {
+  int n; // число предприятий
+  cin >> n;
+
+  ll x; // число камней
+  ll m; // число самосвалов
+  ll s = 0;
+
+  while (n--) {
+    cin >> x >> m;
+    s ^= ff(x) ^ ff(x + m);
+  }
+
+  if (s) {
+    cout << "tolik";
+  } else {
+    cout << "bolik";
+  }
+}
+</pre>
+</details>
