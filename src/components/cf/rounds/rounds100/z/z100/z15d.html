@@ -40,3 +40,136 @@
 1 2 9
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/15/problem/D" target="_blank">Задача 15D</a>
+    <br><a href="https://codeforces.com/contest/15" target="_blank">Codeforces Beta Round 15 2010.05.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <deque>
+#include <algorithm>
+#include <tuple>
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n, m, a, b;
+  cin >> n >> m >> a >> b;
+
+  // Исходная матрица (1-indexed для удобства сумм)
+  vector<vector<int>> A(n + 1, vector<int>(m + 1, 0));
+  vector<vector<long long>> prefixSum(n + 1, vector<long long>(m + 1, 0));
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> A[i][j];
+      prefixSum[i][j] = A[i][j] + prefixSum[i - 1][j] +
+        prefixSum[i][j - 1] - prefixSum[i - 1][j - 1];
+    }
+  }
+
+  // Шаг 1: минимум в окне по строкам (ширина b)
+  vector<vector<int>> rowMin(n + 1, vector<int>(m - b + 2, 0));
+
+  for (int i = 1; i <= n; ++i) {
+    deque<int> dq;
+    for (int j = 1; j <= m; ++j) {
+      while (!dq.empty() && A[i][dq.back()] > A[i][j]) {
+        dq.pop_back();
+      }
+      while (!dq.empty() && dq.front() <= j - b) {
+        dq.pop_front();
+      }
+      dq.push_back(j);
+      if (j >= b) {
+        rowMin[i][j - b + 1] = A[i][dq.front()];
+      }
+    }
+  }
+
+  // Шаг 2: минимум в окне по столбцам (высота a) от rowMin
+  vector<vector<int>> minInRect(n - a + 2, vector<int>(m - b + 2, 0));
+
+  for (int j = 1; j <= m - b + 1; ++j) {
+    deque<int> dq;
+    for (int i = 1; i <= n; ++i) {
+      while (!dq.empty() && rowMin[dq.back()][j] > rowMin[i][j]) {
+        dq.pop_back();
+      }
+      while (!dq.empty() && dq.front() <= i - a) {
+        dq.pop_front();
+      }
+      dq.push_back(i);
+      if (i >= a) {
+        minInRect[i - a + 1][j] = rowMin[dq.front()][j];
+      }
+    }
+  }
+
+  // Шаг 3: вычисление ценности каждого прямоугольника
+  vector<vector<long long>> value(n - a + 2, vector<long long>(m - b + 2, 0));
+
+  for (int i = 1; i <= n - a + 1; ++i) {
+    for (int j = 1; j <= m - b + 1; ++j) {
+      long long sum = prefixSum[i + a - 1][j + b - 1] -
+        prefixSum[i - 1][j + b - 1] -
+        prefixSum[i + a - 1][j - 1] +
+        prefixSum[i - 1][j - 1];
+      value[i][j] = sum - static_cast<long long>(minInRect[i][j]) * a * b;
+    }
+  }
+
+  // Шаг 4: сбор координат всех прямоугольников
+  vector<pair<int, int>> rectangles;
+  for (int i = 1; i <= n - a + 1; ++i) {
+    for (int j = 1; j <= m - b + 1; ++j) {
+      rectangles.emplace_back(i, j);
+    }
+  }
+
+  // Сортировка по ценности (и по координатам при равенстве)
+  sort(rectangles.begin(), rectangles.end(),
+    [&](const pair<int, int>& p1, const pair<int, int>& p2) {
+      if (value[p1.first][p1.second] != value[p2.first][p2.second]) {
+        return value[p1.first][p1.second] < value[p2.first][p2.second];
+      }
+      return p1 < p2;
+    });
+
+  // Шаг 5: выбор непересекающихся прямоугольников
+  vector<vector<bool>> used(n + 1, vector<bool>(m + 1, false));
+  vector<tuple<int, int, long long>> answer;
+
+  for (const auto& [x, y] : rectangles) {
+    if (!used[x][y] && !used[x + a - 1][y] &&
+      !used[x][y + b - 1] && !used[x + a - 1][y + b - 1]) {
+
+      // Занять область
+      for (int i = 0; i < a; ++i) {
+        for (int j = 0; j < b; ++j) {
+          used[x + i][y + j] = true;
+        }
+      }
+      answer.emplace_back(x, y, value[x][y]);
+    }
+  }
+
+  // Вывод результата
+  cout << answer.size() << '\n';
+  for (const auto& [x, y, val] : answer) {
+    cout << x << ' ' << y << ' ' << val << '\n';
+  }
+
+  return 0;
+}
+</pre>
+</details>
