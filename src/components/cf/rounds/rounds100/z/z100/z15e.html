@@ -34,3 +34,36 @@
   <code>4</code>
   <code>74</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/15/problem/E" target="_blank">Задача 15E</a>
+    <br><a href="https://codeforces.com/contest/15" target="_blank">Codeforces Beta Round 15 2010.05.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  long long n; // четное число уровней
+  cin >> n;
+
+  long long a = 2;
+  long long b = 2;
+  long long c = 4;
+  long long mod = 1e9 + 9;
+
+  while (n -= 2) {
+    a = a * 2 % mod;
+    c = c * (a - 3) % mod;
+    b = (b + c) % mod;
+  }
+
+  cout << (b * b + 1) * 2 % mod;
+}
+</pre>
+</details>
