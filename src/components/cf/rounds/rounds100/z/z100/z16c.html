@@ -29,3 +29,45 @@
 </pre>
   <code>0 0</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/16/problem/A" target="_blank">Задача 16A</a>
+    <br><a href="https://codeforces.com/contest/16" target="_blank">Codeforces Beta Round 16 2010.06.03</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int gcd(int a, int b) {
+  while (a != 0 && b != 0) {
+    if (a > b) {
+      a = a % b;
+    } else {
+      b = b % a;
+    }
+  }
+  return a + b;
+}
+
+int main() {
+  int a, b; // размер сторон
+  int x, y; // соотношение сторон
+  cin >> a >> b >> x >> y;
+
+  int g = gcd(x, y);
+  x /= g;
+  y /= g;
+
+  int ratio = min(a / x, b / y);
+  int new_a = ratio * x;
+  int new_b = ratio * y;
+
+  cout << new_a << ' ' << new_b;
+}
+</pre>
+</details>
