@@ -1,0 +1,687 @@
+<article class="article">
+  <a href="https://codeforces.com/contest/2209" target="_blank">Codeforces 2209 Round 1087 (Div. 2) 2026.03.21</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. Шлёпки</a>
+  <br><a href="#t2">Задача B. Массив</a>
+  <br><a href="#t3">Задача C. Найдите ноль</a>
+  <br><a href="#t4">Задача D. Призрачные огни</a>
+  <br><a href="#t5">Задача E. Тривиальная задача на строки</a>
+  <br><a href="#t6">Задача F. Динамические значения и максимальный счёт</a>
+</article>
+
+
+<!-- Задача A. Шлёпки -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. Шлёпки</h3>
+
+  <div class="time-memory">(Время 1с. Память 256мб)</div>
+
+  <p>OtterZ устроил битву с n монстрами, чтобы увеличить свою боевую мощь. У каждого монстра есть боевая мощь ai, а у OtterZ — боевая мощь c. У него есть k шлёпок, и он может выполнять следующие операции:</p>
+  <ol>
+    <li>Убить живого монстра i, если ai≤c; тогда c становится c+ai.</li>
+    <li>Бросить шлёпок в живого монстра i; шлёпок сломается, и монстр станет более злым, тогда ai станет ai+1.</li>
+  </ol>
+
+  <p>Помогите OtterZ получить максимальное возможное c
+  после битвы.</p>
+
+  <h4>Входные данные</h4>
+  <p>Каждый тест состоит из нескольких наборов входных данных. В первой строке находится одно целое число t (1≤t≤500) — количество наборов входных данных. Далее следует описание наборов входных данных.</p>
+
+  <p>Первая строка каждого набора входных данных содержит три целых числа n, c и k (1≤n≤100, 0≤c,k≤10⁹).</p>
+
+  <p>Вторая строка содержит n целых чисел a1,a2,…,an (0≤ai≤10⁹).</p>
+
+  <h4>Выходные данные</h4>
+  <p>Для каждого набора входных данных выведите целое число — максимальную возможную боевую мощь.</p>
+
+  <details>
+    <summary>Пример</summary>
+<pre>
+10
+1 12 23
+21
+1 8 4
+5
+1 3 4
+16
+3 6 3
+14 9 11
+5 9 2
+20 16 18 16 11
+5 18 30
+1 2 93 84 2
+7 29 13
+2 9 38 4 7 1 6
+10 9 2
+8 1 8 11 17 3 14 16 20 10
+10 192 109
+1 9 20 9 829 3 87 1 283 7
+10 1000000000 1000000000
+19 1000000000 1 9 2 3 8 1 2 3
+</pre>
+<pre>
+12
+16
+3
+6
+9
+53
+109
+119
+721
+3000000048
+</pre>
+
+  <p>В первом наборе входных данных OtterZ наткнулся на слишком сильного монстра, он не совершает никаких операций и уходит с боевой мощью 12.</p>
+
+  <p>В шестом наборе входных данных OtterZ участвовал в битве:</p>
+  <ol>
+    <li>Бросил 10 шлёпков в монстра 2, боевая мощь монстра 2 становится 12.</li>
+    <li>Бросил 10 шлёпков в монстра 1, боевая мощь монстра 1 становится 11.</li>
+    <li>Убил монстра 1, боевая мощь OtterZ становится 29.</li>
+    <li>Бросил 10 шлёпков в монстра 5, боевая мощь монстра 5 становится 12.</li>
+    <li>Убил монстра 2, боевая мощь OtterZ становится 41.</li>
+    <li>Убил монстра 5, боевая мощь OtterZ становится 53.</li>
+    <li>OtterZ уходит с боевой мощью 53.</li>
+  </ol>
+  </details>
+
+  <details>
+    <summary>Решение</summary>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // число монстров
+    long long c; // наша боевая мощь
+    int k; // число шлепок
+    cin >> n >> c >> k;
+
+    vector&lt;int&gt; A(n); // боевая мощь монстров
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+
+    sort(A.begin(), A.end());
+
+    int next = 0; // следующий монстр
+    while (k > 0 && next &lt; n) {
+      if (c > A[next]) {
+        int dif = c - A[next];
+        if (k > dif) {
+          c += dif + A[next];
+          k -= dif;
+        } else {
+          c += k + A[next];
+          k = 0;
+        }
+        next++;
+      } else if (c == A[next]) {
+        c += A[next];
+        next++;
+      } else {
+        break;
+      }
+    }
+
+    while (next &lt; n) {
+      if (c >= A[next]) {
+        c += A[next];
+        next++;
+      } else {
+        break;
+      }
+    }
+
+    cout &lt;&lt; c &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача B. Массив -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Массив</h3>
+
+  <details>
+    <summary>Решение</summary>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // длина массива
+    cin >> n;
+
+    vector&lt;int&gt; A(n);
+    for (int i = 0; i &lt; n; i++) {
+      cin >> A[i];
+    }
+
+    vector&lt;int&gt; B(n);
+    vector&lt;int&gt; C(n);
+    for (int i = n - 1; i >= 0; i--) {
+      B[i] = C[i] = 0;
+      for (int j = i + 1; j &lt; n; j++) {
+        B[i] += (A[i] > A[j]);
+        C[i] += (A[i] &lt; A[j]);
+      }
+      B[i] = max(B[i], C[i]);
+    }
+
+    for (int i = 0; i &lt; n - 1; i++) {
+      cout &lt;&lt; B[i] &lt;&lt; ' ';
+    }
+    cout &lt;&lt; B[n - 1] &lt;&lt; '\n';
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача C. Найдите ноль -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Найдите ноль</h3>
+
+  <details>
+    <summary>Решение</summary>
+    <p>В массиве длины 2n есть n нулей и n различных ненулевых чисел (от 1 до n). Если два элемента равны, то они обязательно оба нули (так как ненулевые числа уникальны).</p>
+    <p>Следовательно, если мы найдём любую пару индексов (i, j), для которой query(i, j) = 1, то оба элемента — нули, и мы можем вывести любой из них.</p>
+    <p>Алгоритм гарантированно находит ноль за n+1 запросов, используя простую логику проверки пар и небольшой fallback для первых двух элементов.</p>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    int ans = -1;
+
+    // проверка пар среди первых 2n-2 элементов
+    for (int i = 1; i &lt; n; ++i) {
+      cout &lt;&lt; "? " &lt;&lt; 2 * i + 1
+      &lt;&lt; " " &lt;&lt; 2 * i + 2 &lt;&lt; endl;
+      int resp;
+      cin >> resp;
+      if (resp == 1) {
+        ans = 2 * i + 1;
+        break;
+      }
+    }
+
+    // обработка случая, когда не нашли пару нулей
+    if (ans == -1) {
+      cout &lt;&lt; "? 1 3" &lt;&lt; endl;
+      int resp;
+      cin >> resp;
+      if (resp == 1) {
+        ans = 1;
+      } else {
+        cout &lt;&lt; "? 1 4" &lt;&lt; endl;
+        cin >> resp;
+        if (resp == 1) {
+          ans = 1;
+        } else {
+          ans = 2;
+        }
+      }
+    }
+
+    cout &lt;&lt; "! " &lt;&lt; ans &lt;&lt; endl;
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача D. Призрачные огни -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. Призрачные огни</h3>
+
+  <details>
+    <summary>Решение</summary>
+
+<pre class="language-cpp">
+#include &lt;iostream>
+#include &lt;vector>
+
+using namespace std;
+
+int t, r, g, b, rb, gb, rg;
+
+int main() {
+  scanf("%d", &t);
+  while (t--) {
+    scanf("%d %d %d", &r, &g, &b);
+    while (((r > 0) + (g > 0) + (b > 0)) >> 1) {
+      if (r &lt;= g && r &lt;= b)
+        gb++, g--, b--;
+      else if (g &lt;= r && g &lt;= b)
+        rb++, r--, b--;
+      else if (b &lt;= r && b &lt;= g)
+        rg++, r--, g--;
+    }
+    if (g > 0) {
+      putchar('G');
+      while (rg > 0)
+        putchar('R'), putchar('G'), rg--;
+      bool flg = false;
+      while (gb > 0)
+        putchar('B'), putchar('G'), gb--, flg = true;
+      if (flg) {
+        while (rb > 0)
+          putchar('B'), putchar('R'), rb--;
+      } else {
+        while (rb > 0)
+          putchar('R'), putchar('B'), rb--;
+      }
+    } else if (r > 0) {
+      putchar('R');
+      while (rg > 0)
+        putchar('G'), putchar('R'), rg--;
+      bool flg = false;
+      while (rb > 0)
+        putchar('B'), putchar('R'), rb--, flg = true;
+      if (flg) {
+        while (gb > 0)
+          putchar('B'), putchar('G'), gb--;
+      } else {
+        while (gb > 0)
+          putchar('G'), putchar('B'), gb--;
+      }
+    } else {
+      if (b > 0)
+        putchar('B');
+      while (gb > 0)
+        putchar('G'), putchar('B'), gb--;
+      bool flg = false;
+      while (rb > 0)
+        putchar('R'), putchar('B'), rb--, flg = true;
+      if (flg) {
+        while (rg > 0)
+          putchar('R'), putchar('G'), rg--;
+      } else {
+        while (rg > 0)
+          putchar('G'), putchar('R'), rg--;
+      }
+    }
+    puts("");
+  }
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача E. Тривиальная задача на строки -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. Тривиальная задача на строки</h3>
+
+  <details>
+    <summary>Решение</summary>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+long long work(const string& s) {
+  int n = s.length();
+  vector&lt;int&gt; p(n, 0);
+  vector&lt;int&gt; b(n, 0);
+
+  // Построение префикс-функции
+  for (int i = 1; i &lt; n; i++) {
+    int j = p[i - 1];
+    while (j > 0 && s[i] != s[j]) {
+      j = p[j - 1];
+    }
+    if (s[i] == s[j]) {
+      j++;
+    }
+    p[i] = j;
+
+    if (j == 0) {
+      b[i] = 0;
+    } else if (p[j - 1] == 0) {
+      b[i] = j;
+    } else {
+      b[i] = b[j - 1];
+    }
+  }
+
+  // Подсчет ответа - используем long long для предотвращения переполнения
+  long long ans = 0;
+  vector&lt;long long&gt; dp(n, 0);
+
+  for (int i = 0; i &lt; n; i++) {
+    if (b[i] == 0) {
+      dp[i] = 1;
+    } else {
+      int prev_index = i - b[i];
+      if (prev_index >= 0) {
+        dp[i] = dp[prev_index] + 1;
+      } else {
+        dp[i] = 1;
+      }
+    }
+    ans += dp[i];
+  }
+
+  return ans;
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n, q;
+    cin >> n >> q;
+    string s;
+    cin >> s;
+
+    while (q--) {
+      int l, r;
+      cin >> l >> r;
+      cout &lt;&lt; work(s.substr(l - 1, r - l + 1)) &lt;&lt; '\n';
+    }
+  }
+
+  return 0;
+}
+</pre>
+  </details>
+</article>
+
+
+<!-- Задача F. Динамические значения и максимальный счёт -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F. Динамические значения и максимальный счёт</h3>
+
+  <details>
+    <summary>Решение</summary>
+    <p>Алгоритм находит максимальный возможный счёт после выполнения k операций, где каждая операция:</p>
+    <ol>
+      <li>Выбирает корень дерева</li>
+      <li>Добавляет значение корня к счёту и обнуляет его</li>
+      <li>Перераспределяет значения всех не-листовых вершин к листьям в их поддеревьях</li>
+    </ol>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstdio&gt;
+
+using namespace std;
+
+const int N = 300009;
+int n, k, t, a[N], tt[N];
+long long b[N], ans[N], sum, mxa;
+
+// FLONG используется в множестве для хранения вершин
+// с их накопленными значениями, отсортированных по убыванию.
+struct FLONG {
+  long long val; // накопленное значение в вершине
+  int nd; // номер вершины
+  FLONG(long long v = 0, int d = 0) : val(v), nd(d) {}
+
+  // Сортировка: сначала по убыванию val, при равенстве по возрастанию nd
+  bool operator&lt;(const FLONG& b) const {
+    return val > b.val || (val == b.val && nd &lt; b.nd);
+  }
+};
+
+set&lt;FLONG&gt; s;
+set&lt;FLONG&gt;::iterator o;
+
+// pir хранит информацию о самом дальнем листе:
+// to - индекс листа
+// len - расстояние до него
+// Сортировка : сначала по убыванию длины, при равенстве - по возрастанию индекса
+// mn[v] - самый дальний лист в поддереве v
+// se[v] - второй по дальности лист
+// lf[v] - самый дальний лист вне поддерева v
+struct pir {
+  int to, len; // to - вершина-лист, len - расстояние до неё
+  pir(int t = 0, int l = 0) : to(t), len(l) {}
+
+  bool operator&lt;(const pir& b) const {
+    return len > b.len || (len == b.len && to &lt; b.to);
+  }
+} mn[N], se[N], lf[N];
+
+vector&lt;int&gt; e[N];
+
+// Первый обход дерева (srh)
+// Для каждой вершины находит два самых удалённых листа
+// в её поддереве. Это нужно для быстрого определения,
+// куда будет перемещаться значение вершины при разных корнях.
+void srh(int v, int fa) {
+  mn[v] = pir(v, 0); // для листа - он сам
+  se[v] = pir(0, ~0x3f3f3f3f); // очень маленькое значение
+  lf[v] = pir(0, ~0x3f3f3f3f);
+
+  for (unsigned i = 0; i &lt; e[v].size(); i++) {
+    if (e[v][i] != fa) {
+      srh(e[v][i], v);
+      pir th = mn[e[v][i]];
+      th.len++; // увеличиваем расстояние на 1 (ребро до дочерней вершины)
+      // Обновляем два самых дальних листа
+      if (th &lt; se[v])
+        swap(th, se[v]);
+      if (se[v] &lt; mn[v])
+        swap(se[v], mn[v]);
+    }
+  }
+}
+
+// Инициализация для корня 1 (gt1)
+// Вычисляет счёт для случая, когда корень - вершина 1:
+// Добавляет значение корня
+// Определяет, куда перераспределятся значения остальных вершин
+// Выбирает k - 1 наибольших накопленных значений(плюс корень даёт всего k операций)
+void gt1() {
+  sum = ans[1] = 0;
+  ans[1] += a[1]; // добавляем значение корня
+
+  // Для каждой не-корневой вершины i, её значение пойдёт к mn[i].to
+  for (int i = 2; i &lt;= n; i++) {
+    b[mn[i].to] += a[i];
+    tt[i] = mn[i].to; // запоминаем, куда пойдёт значение
+  }
+
+  // Собираем все накопленные значения в множество
+  s.clear();
+  for (int i = 2; i &lt;= n; i++) {
+    s.insert(FLONG(b[i], i));
+  }
+
+  // Берём k-1 самых больших значений (k-1, потому что корень уже взят)
+  o = s.begin();
+  ans[1] += o->val;
+  sum += o->val;
+
+  for (int i = 1; i &lt; k - 1; i++) {
+    o++;
+    ans[1] += o->val;
+    sum += o->val;
+  }
+
+  s.insert(FLONG(-1ll, 0));
+  s.insert(FLONG(-2ll, 0));
+}
+
+// Функции для динамического обновления (era, ins, stp, sett)
+
+// era(x) - удаляет вершину x из множества
+void era(int x) {
+  FLONG u = FLONG(b[x], x);
+  if (!(*o &lt; u)) {
+    o++;
+    sum += o->val;
+    sum -= b[x];
+  }
+  s.erase(u);
+}
+
+// ins(x) - добавляет вершину x в множество
+void ins(int x) {
+  FLONG u = FLONG(b[x], x);
+  s.insert(u);
+  if (!(*o &lt; u)) {
+    sum -= o->val;
+    sum += b[x];
+    o--;
+  }
+}
+
+// stp(x) - перемещает значение вершины x
+// (удаляет из старого места, добавляет в новое)
+void stp(int x) {
+  era(tt[x]);
+  b[tt[x]] -= a[x];
+  ins(tt[x]);
+  tt[x] = 0;
+}
+
+// sett(x, ttp) - устанавливает новое назначение для вершины x
+void sett(int x, int ttp) {
+  tt[x] = ttp;
+  era(tt[x]);
+  b[tt[x]] += a[x];
+  ins(tt[x]);
+}
+
+// Второй обход для пересчёта всех корней (srho)
+// Обходит дерево, пересчитывая ответ для каждой вершины
+// как потенциального корня.При переходе к новому корню :
+// Обновляет информацию о том, куда перераспределяются значения
+// Поддерживает актуальное множество накопленных значений
+// Использует технику "переподвешивания" дерева для эффективного пересчёта
+void srho(int v, int fa) {
+  if (fa != 0) {
+    stp(v); // убираем v из старого назначения
+    era(v); // удаляем v из множества
+    ins(fa); // добавляем fa в множество
+    sett(fa, lf[fa].to); // обновляем назначение для fa
+    ans[v] = sum + a[v]; // считаем ответ для корня v
+  }
+
+  // Рекурсивно обрабатываем детей
+  for (unsigned i = 0; i &lt; e[v].size(); i++) {
+    if (e[v][i] != fa) {
+      pir u = lf[fa];
+      u.len++;
+      // Вычисляем самый дальний лист вне поддерева v
+      if (mn[v].to == mn[e[v][i]].to)
+        lf[v] = min(u, se[v]);
+      else
+        lf[v] = min(u, mn[v]);
+      srho(e[v][i], v);
+    }
+  }
+
+  // Откатываем изменения при возврате
+  if (fa != 0) {
+    ins(v);
+    sett(v, mn[v].to);
+    stp(fa);
+    era(fa);
+  }
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  cin >> t;
+
+  while (t--) {
+    cin >> n >> k;
+    mxa = 0;
+
+    for (int i = 1; i &lt;= n; i++) {
+      cin >> a[i];
+      mxa = max(mxa, 1ll * a[i]);
+      e[i].clear();
+      b[i] = 0;
+    }
+
+    for (int i = 1; i &lt; n; i++) {
+      int u, v;
+      cin >> u >> v;
+      e[u].push_back(v);
+      e[v].push_back(u);
+    }
+
+    if (k == 1) {
+      cout &lt;&lt; mxa &lt;&lt; "\n";
+      continue;
+    }
+
+    lf[0].len = ~0x3f3f3f3f;
+    srh(1, 0);
+    gt1();
+    srho(1, 0);
+
+    for (int i = 1; i &lt;= n; i++) {
+      mxa = max(mxa, ans[i]);
+    }
+
+    cout &lt;&lt; mxa &lt;&lt; "\n";
+  }
+
+  return 0;
+}
+</pre>
+  </details>
+</article>

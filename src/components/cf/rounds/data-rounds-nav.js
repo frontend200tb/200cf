@@ -1,4 +1,5 @@
 import showRounds100  from './rounds100/rounds100';
+import showRounds200  from './rounds200/rounds200';
 
 export const dataRoundsNav = [
   {
@@ -7,6 +8,14 @@ export const dataRoundsNav = [
     content: '<rounds-100></rounds-100>',
     act() {
       showRounds100();
+    },
+  },
+  {
+    url: 'rounds200.html',
+    text: 'Rounds 200',
+    content: '<rounds-200></rounds-200>',
+    act() {
+      showRounds200();
     },
   },
 ];

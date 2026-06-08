@@ -1,8 +1,12 @@
-import b from '../../rounds/rounds100/z100/z4a.html';
-import c from '../../rounds/rounds100/z100/z12a.html';
-import d from '../../rounds/rounds100/z100/z12b.html';
+import a from '../z100/z4a.html';
+import b from '../z100/z4b.html';
+import c from '../z100/z4c.html';
+import d from '../z100/z4d.html';
 
 export default function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = a;
+  }
   if (document.querySelector('.t2')) {
     document.querySelector('.t2').innerHTML = b;
   }

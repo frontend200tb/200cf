@@ -1,7 +1,7 @@
 /** *******************
 Скрипт из файла rounds.js
 Навигация по теме rounds
-rounds100
+rounds100 rounds200
 ******************** */
 import './element-rounds';
 import { dataRoundsNav } from './data-rounds-nav';
