@@ -30,3 +30,117 @@
 </pre>
   <code>1.000000 0.000000 0.000000 0.000000 0.000000 </code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/16/problem/E" target="_blank">Задача 16E</a>
+    <br><a href="https://codeforces.com/contest/16" target="_blank">Codeforces Beta Round 16 2010.06.03</a>
+  </div>
+
+  <p>Ключевая идея решения — динамическое программирование по битовым маскам</p>
+  <h4>1. Состояние — битовая маска</h4>
+  <code>int mask = битовая_маска_живых_рыб</code>
+  <p>mask — число, где бит i равен 1, если рыба i жива</p>
+  <p>Всего возможных состояний: 2^n (от 0 до 2^n - 1)</p>
+  <h4>2. Значение состояния — вероятность</h4>
+  <code>dp[mask] = вероятность оказаться в состоянии mask</code>
+  <p>Изначально: dp[2^n - 1] = 1 (все рыбы живы)</p>
+  <p>В конце: dp[1 &lt;&lt; i] — вероятность того, что осталась только рыба i</p>
+  <h4>3. Переходы между состояниями</h4>
+  <p>Как из состояния mask попасть в другие состояния?</p>
+  <p>Подсчитываем количество живых рыб: aliveCount = popcount(mask)</p>
+  <p>Количество пар живых рыб:</p>
+  <code>totalPairs = C(aliveCount, 2) = aliveCount * (aliveCount - 1) / 2</code>
+  <p>Для каждой пары (i, j) живых рыб:</p>
+  <ul>
+    <li>Вероятность выбрать именно эту пару: 1 / totalPairs</li>
+    <li>Вероятность того, что i съест j (а не наоборот): prob[i][j]</li>
+    <li>Итоговая вероятность перехода: dp[mask] * prob[i][j] / totalPairs</li>
+    <li>Результат: рыба j умирает → новый mask без бита j</li>
+  </ul>
+  <p>Формула перехода:</p>
+  <code>dp[mask_without_j] += dp[mask] * a[i][j] / (aliveCount * (aliveCount - 1) / 2)</code>
+  <h4>4. Направление обхода</h4>
+  <p>Почему for (mask = all-1; mask >= 0; --mask)?</p>
+  <p>Это обратный проход — от большего числа рыб к меньшему:</p>
+  <ul>
+    <li>Начинаем с mask = все рыбы живы (максимальное число)</li>
+    <li>Переходим к mask'ам с меньшим количеством рыб</li>
+    <li>Каждая новая маска имеет МЕНЬШЕ единичных битов, чем исходная</li>
+    <li>Идем сверху вниз, потому что из состояния с большим числом рыб мы попадаем в состояния с меньшим числом</li>
+  </ul>
+  <p>Время: O(2^n * n^2) — для каждой маски перебираем все пары рыб</p>
+  <p>Память: O(2^n) — храним массив вероятностей</p>
+  <p>Для n ≤ 18 это работает быстро (≈ 262144 состояния).</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <cmath>
+
+int main() {
+  int n;
+  std::cin >> n;
+
+  // Используем vector вместо статического массива
+  std::vector<std::vector<double>> prob(n, std::vector<double>(n));
+
+  // Чтение матрицы вероятностей
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) {
+      std::cin >> prob[i][j];
+    }
+  }
+
+  // Динамическое программирование: dp[mask] - вероятность оказаться в маске
+  int totalMasks = 1 << n;
+  std::vector<double> dp(totalMasks, 0.0);
+  dp[totalMasks - 1] = 1.0;  // Изначально все рыбы живы
+
+  // Обратный проход по маскам
+  for (int mask = totalMasks - 1; mask >= 0; --mask) {
+    // Подсчет количества живых рыб в текущей маске
+    int aliveCount = 0;
+    for (int i = 0; i < n; ++i) {
+      if (mask >> i & 1) aliveCount++;
+    }
+
+    // Если жива 1 или 0 рыб, то переходов нет
+    if (aliveCount <= 1) continue;
+
+    // Общее количество пар живых рыб
+    int totalPairs = aliveCount * (aliveCount - 1) / 2;
+
+    // Перебираем все пары живых рыб
+    for (int i = 0; i < n; ++i) {
+      if (!(mask >> i & 1)) continue;  // Рыба i мертва
+
+      for (int j = 0; j < n; ++j) {
+        if (i == j) continue;
+        if (!(mask >> j & 1)) continue;  // Рыба j мертва
+
+        // Вероятность того, что i съест j
+        double eatProb = prob[i][j] / totalPairs;
+
+        // Новая маска, где j умирает
+        int newMask = mask ^ (1 << j);
+        dp[newMask] += dp[mask] * eatProb;
+      }
+    }
+  }
+
+  // Вывод результатов для каждой рыбы
+  std::cout << std::fixed << std::setprecision(6);
+  for (int i = 0; i < n; ++i) {
+    std::cout << dp[1 << i];
+    if (i != n - 1) std::cout << " ";
+  }
+  std::cout << std::endl;
+
+  return 0;
+}
+</pre>
+</details>
