@@ -37,3 +37,50 @@
 
   <p>В первом примере один из возможных вариантов составления иерархии — взять заявления под номерами 1, 2 и 4, которые в сумме дадут стоимость 11. Во втором примере составить иерархию невозможно, поэтому ответ -1.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/17/problem/B" target="_blank">Задача 17B</a>
+    <br><a href="https://codeforces.com/contest/17" target="_blank">Codeforces Beta Round 17 2010.06.10</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int n; // число сотрудников
+	cin >> n;
+
+	int a[1009];
+	for (int i = 1; i <= n; i++) {
+		int x;
+		cin >> x;
+		a[i] = 2147483647;
+	}
+
+	int m; // число заявлений
+	cin >> m;
+
+	while (m--) {
+		int x, y, z;
+		cin >> x >> y >> z;
+		a[y] = min(a[y], z);
+	}
+
+	int q = 0, cost = 0;
+	for (int i = 1; i <= n; i++) {
+		if (a[i] == 2147483647) {
+			q++;
+		} else {
+			cost += a[i];
+		}
+	}
+
+	cout << (q > 1 ? -1 : cost);
+}
+</pre>
+</details>

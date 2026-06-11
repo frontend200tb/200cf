@@ -22,6 +22,7 @@ import in17      from '../p100/elem-17-Round17';
 import in18      from '../p100/elem-18-Round18';
 import in19      from '../p100/elem-19-Round19';
 import in20      from '../p100/elem-20-Round20';
+import in21      from '../p100/elem-21-Round21';
 import in34      from '../p100/elem-34-Round34';
 import in38      from '../p100/elem-38-sio1';
 import in39      from '../p100/elem-39-sko1';
@@ -61,6 +62,7 @@ export default function pageLink(asideItems, currentContent) {
             case 18: in18(); break;
             case 19: in19(); break;
             case 20: in20(); break;
+            case 21: in21(); break;
             case 34: in34(); break;
             case 38: in38(); break;
             case 39: in39(); break;
