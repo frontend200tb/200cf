@@ -52,35 +52,35 @@
 using namespace std;
 
 int main() {
-	int n; // число сотрудников
-	cin >> n;
+  int n; // число сотрудников
+  cin >> n;
 
-	int a[1009];
-	for (int i = 1; i <= n; i++) {
-		int x;
-		cin >> x;
-		a[i] = 2147483647;
-	}
+  int a[1009];
+  for (int i = 1; i <= n; i++) {
+    int x;
+    cin >> x;
+    a[i] = 2147483647;
+  }
 
-	int m; // число заявлений
-	cin >> m;
+  int m; // число заявлений
+  cin >> m;
 
-	while (m--) {
-		int x, y, z;
-		cin >> x >> y >> z;
-		a[y] = min(a[y], z);
-	}
+  while (m--) {
+    int x, y, z;
+    cin >> x >> y >> z;
+    a[y] = min(a[y], z);
+  }
 
-	int q = 0, cost = 0;
-	for (int i = 1; i <= n; i++) {
-		if (a[i] == 2147483647) {
-			q++;
-		} else {
-			cost += a[i];
-		}
-	}
+  int q = 0, cost = 0;
+  for (int i = 1; i <= n; i++) {
+    if (a[i] == 2147483647) {
+    q++;
+    } else {
+      cost += a[i];
+    }
+  }
 
-	cout << (q > 1 ? -1 : cost);
+  cout << (q > 1 ? -1 : cost);
 }
 </pre>
 </details>
