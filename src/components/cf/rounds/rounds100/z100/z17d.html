@@ -27,3 +27,48 @@
 
   <p>В обоих примерах существует ровно 4 числа длины 3 в двоичной системе счисления. В первом примере Никита запишет 3 числа на первом листе бумаги и 1 число на втором. Во втором примере все 4 числа поместятся на один лист бумаги.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/17/problem/D" target="_blank">Задача 17D</a>
+    <br><a href="https://codeforces.com/contest/17" target="_blank">Codeforces Beta Round 17 2010.06.10</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  string b; // основание системы счисления
+  string n; // длина числа
+  long long c; // число чисел на одном листе
+  cin >> b >> n;
+  cin >> c;
+
+  long long s = 0, e = 1, t = 0;
+
+  for (int i = 0; i < b.size(); i++) {
+    s = (s * (long long)10 + b[i] - '0') % c;
+  }
+
+  for (int i = n.size() - 1; n[i]-- == '0'; n[i] = '9', i--);
+
+  for (int i = 0;i < n.size();i++) {
+    t = e;
+    for (int j = 1; j < 10; j++) {
+      e = e * t % c;
+    }
+    for (int j = 0; j < n[i] - '0'; j++) {
+      e = e * s % c;
+    }
+  }
+
+  e = e * (s + c - 1) % c;
+
+  cout << (e == 0 ? c : e);
+}
+</pre>
+</details>

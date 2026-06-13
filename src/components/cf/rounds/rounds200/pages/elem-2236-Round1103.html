@@ -1,0 +1,348 @@
+<article class="article">
+  <a href="https://codeforces.com/contest/2236" target="_blank">Codeforces 2236 Round 1103 (Div. 3) 2026.06.12</a>
+</article>
+
+
+<!-- Содержание -->
+<article class="article">
+  <h2>Содержание</h2>
+
+      <a href="#t1">Задача A. Игры в поезде</a>
+  <br><a href="#t2">Задача B. Татарское телешоу</a>
+  <br><a href="#t3">Задача C. Омские программисты</a>
+  <br><a href="#t4">Задача D. Совершенно новое татарское телешоу</a>
+  <br><a href="#t5">Задача E. Дружеские подарки</a>
+  <br><a href="#t6">Задача F1. Выборы в Саранске (простая версия)</a>
+  <br><a href="#t7">Задача F2. Выборы в Саранске (сложная версия)</a>
+  <br><a href="#t8">Задача G. Критерий в Бурляндии</a>
+</article>
+
+
+<!-- Задача A. Игры в поезде -->
+<article class="article">
+  <div class="anchor" id="t1"></div>
+  <h3>Задача A. Игры в поезде</h3>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  int n; // число башен
+
+  while (t--) {
+    cin >> n;
+    int min = 6;
+    int max = 1;
+    int next;
+    // ответом будет (max - min) + 1
+
+    // находим min и max
+    while (n--) {
+      cin >> next;
+      if (next > max) {
+        max = next;
+      }
+      if (min > next) {
+        min = next;
+      }
+    }
+
+    int res = max - min + 1;
+    cout << res << '\n';
+  }
+}
+</pre>
+</article>
+
+
+<!-- Задача B. Татарское телешоу -->
+<article class="article">
+  <div class="anchor" id="t2"></div>
+  <h3>Задача B. Татарское телешоу</h3>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  int n; // длина строки
+  int k; // число k
+  string s; // бинарная строка
+
+  while (t--) {
+    cin >> n >> k >> s;
+
+    bool flag = 1;
+
+    // нужно сделать строку полностью нулевой
+    // инвертируя попарно два символа
+    // это можно сделать только если число 1 четное
+    for (int r = 0; r < k; r++) {
+      int cnt1 = 0; // число единиц
+
+      for (int i = r; i < n; i += k) {
+        if (s[i] == '1') {
+          cnt1++;
+        }
+      }
+
+      if (cnt1 % 2 != 0) {
+        flag = 0;
+      }
+    }
+
+    if (flag) {
+      cout << "YES\n";
+    } else {
+      cout << "NO\n";
+    }
+
+  }
+}
+</pre>
+</article>
+
+
+<!-- Задача C. Омские программисты -->
+<article class="article">
+  <div class="anchor" id="t3"></div>
+  <h3>Задача C. Омские программисты</h3>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <climits>
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    long long a, b, x;
+    cin >> a >> b >> x;
+
+    long long ans = abs(a - b); // только инкременты
+
+    // Перебираем деления a и b
+    long long cur_a = a;
+    for (int steps_a = 0; steps_a <= 60; steps_a++) {
+      long long cur_b = b;
+      for (int steps_b = 0; steps_b <= 60; steps_b++) {
+        long long ops = steps_a + steps_b + abs(cur_a - cur_b);
+        if (ops < ans) {
+          ans = ops;
+        }
+        // Делим cur_b, если возможно, иначе break
+        if (cur_b == 0) break;
+        cur_b /= x;
+      }
+      // Делим cur_a
+      if (cur_a == 0) break;
+      cur_a /= x;
+    }
+
+    cout << ans << "\n";
+  }
+
+  return 0;
+}
+</pre>
+</article>
+
+
+<!-- Задача D. Совершенно новое татарское телешоу -->
+<article class="article">
+  <div class="anchor" id="t4"></div>
+  <h3>Задача D. Совершенно новое татарское телешоу</h3>
+
+<pre>
+
+</pre>
+</article>
+
+
+<!-- Задача E. Дружеские подарки -->
+<article class="article">
+  <div class="anchor" id="t5"></div>
+  <h3>Задача E. Дружеские подарки</h3>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+
+using namespace std;
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) {
+      cin >> a[i];
+      --a[i];
+    }
+
+    vector<vector<bool>> good(n, vector<bool>(n, false));
+    vector<vector<int>> minVal(n, vector<int>(n, 0));
+    vector<vector<int>> maxVal(n, vector<int>(n, 0));
+
+    // Precompute good segments
+    for (int i = 0; i < n; ++i) {
+      vector<int> freq(n, 0);
+      int mn = a[i], mx = a[i];
+      bool ok = true;
+      for (int j = i; j < n; ++j) {
+        if (++freq[a[j]] > 1) {
+          ok = false;
+        }
+        mn = min(mn, a[j]);
+        mx = max(mx, a[j]);
+        if (ok && mx - mn == j - i) {
+          good[i][j] = true;
+        }
+        minVal[i][j] = mn;
+        maxVal[i][j] = mx;
+      }
+    }
+
+    int ans = 0;
+
+    // Try all possible lengths k
+    for (int k = n / 2; k >= 1; --k) {
+      bool found = false;
+      for (int i = 0; i + k <= n && !found; ++i) {
+        if (!good[i][i + k - 1]) continue;
+        for (int j = i + k; j + k <= n && !found; ++j) {
+          if (!good[j][j + k - 1]) continue;
+          // Check if they are sequential intervals
+          int m1 = minVal[i][i + k - 1];
+          int m2 = minVal[j][j + k - 1];
+          if (abs(m1 - m2) == k) {
+            found = true;
+            ans = k;
+          }
+        }
+      }
+      if (found) break;
+    }
+
+    cout << ans << '\n';
+  }
+
+  return 0;
+}
+</pre>
+</article>
+
+
+<!-- Задача F1. Выборы в Саранске (простая версия) -->
+<article class="article">
+  <div class="anchor" id="t6"></div>
+  <h3>Задача F1. Выборы в Саранске (простая версия)</h3>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+const int MOD = 1e9 + 7;
+const int MAXA = 5e5 + 5;
+
+int spf[MAXA]; // smallest prime factor
+
+void sieve() {
+  for (int i = 2; i < MAXA; i++) spf[i] = i;
+  for (int i = 2; i * i < MAXA; i++) {
+    if (spf[i] == i) {
+      for (int j = i * i; j < MAXA; j += i) {
+        if (spf[j] == j) spf[j] = i;
+      }
+    }
+  }
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  sieve();
+
+  int t;
+  cin >> t;
+  while (t--) {
+    int n, x;
+    cin >> n >> x; // x = 1
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+
+    map<int, long long> prime_ways;
+
+    for (int i = 0; i < n; i++) {
+      int val = a[i];
+      while (val > 1) {
+        int p = spf[val];
+        int cnt = 0;
+        while (val % p == 0) {
+          val /= p;
+          cnt++;
+        }
+        prime_ways[p] += cnt; // sum v_q(a_i)
+      }
+    }
+
+    long long ans = 1;
+    for (auto& [prime, sum_v] : prime_ways) {
+      // ways = 1 (not using prime) + sum_v
+      ans = (ans * (sum_v + 1)) % MOD;
+    }
+
+    cout << ans << '\n';
+  }
+
+  return 0;
+}
+</pre>
+</article>
+
+
+<!-- Задача F2. Выборы в Саранске (сложная версия) -->
+<article class="article">
+  <div class="anchor" id="t7"></div>
+  <h3>Задача F2. Выборы в Саранске (сложная версия)</h3>
+
+<pre>
+
+</pre>
+</article>
+
+
+<!-- Задача G. Критерий в Бурляндии -->
+<article class="article">
+  <div class="anchor" id="t8"></div>
+  <h3>Задача G. Критерий в Бурляндии</h3>
+
+</article>
