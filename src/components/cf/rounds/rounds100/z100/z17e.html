@@ -47,3 +47,171 @@ aa
 </pre>
   <code>2</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/17/problem/D" target="_blank">Задача 17D</a>
+    <br><a href="https://codeforces.com/contest/17" target="_blank">Codeforces Beta Round 17 2010.06.10</a>
+  </div>
+
+  <h4>Основные идеи решения</h4>
+  <h4>1. Преобразование строки (чётные/нечётные палиндромы)</h4>
+<pre class="language-cpp">
+b[0]=1;
+for(int i=0;i < N;i++,M++) b[++M]=a[i];
+</pre>
+
+  <h4>2. Алгоритм Манакера (классическая реализация)</h4>
+<pre class="language-cpp">
+for(int i=1,p=0,q=0;i <= M;i++){
+    f[i] = (q > i) ? min(f[2*p-i], q-i) : 1;
+    while(b[i+f[i]] == b[i-f[i]]) f[i]++;
+    if(i+f[i] > q) p = i, q = i+f[i];
+}
+</pre>
+  <h4>3. Ключевая оптимизация: разностные массивы</h4>
+  <p>Это самое гениальное место. Вместо того чтобы добавлять каждый палиндром отдельно, используются разностные массивы l[] и r[]</p>
+<pre class="language-cpp">
+for(int i=1;i<=M;i++){
+    l[i-f[i]+1]++;  // начало палиндрома
+    l[i+1]--;       // конец области действия
+    r[i]++;         // центр палиндрома
+    r[i+f[i]]--;    // конец области действия
+    (ans += f[i]/2) %= P;  // считаем общее количество палиндромов
+}
+</pre>
+
+  <h4>4. Префиксные суммы и подсчёт непересекающихся пар</h4>
+<pre class="language-cpp">
+for(int i=1,s=0;i<=M;i++){
+    l[i] += l[i-1];  // восстанавливаем l[i] — сколько палиндромов начинается в i
+    r[i] += r[i-1];  // восстанавливаем r[i] — сколько палиндромов заканчивается в i
+
+    if(i%2==0){  // рассматриваем только позиции исходной строки (чётные в b)
+        ans = (ans - 1ll*s*l[i]%P + P) % P;  // вычитаем непересекающиеся пары
+        s = (s + r[i]) % P;  // накапливаем заканчивающиеся палиндромы
+    }
+}
+</pre>
+
+  <h4>5. Итоговая формула</h4>
+<pre class="language-cpp">
+ans = 1ll*ans*(ans-1)/2%P;  // общее количество пар
+// ... вычитаем непересекающиеся
+printf("%d\n",(ans+P)%P);
+</pre>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+constexpr int MOD = 51123987;
+
+int main() {
+  std::ios_base::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+
+  int n;
+  std::string s;
+  std::cin >> n >> s;
+
+  // Преобразование строки: вставляем разделители между символами
+  // Размер: 2*n + 3 для запаса (индексация с 1)
+  std::vector<char> transformed(2 * n + 5, 0);
+  transformed[1] = 1;  // специальный символ-разделитель (индекс 1)
+  int m = 2;  // текущая позиция для заполнения
+  for (char c : s) {
+    transformed[m++] = c;
+    transformed[m++] = 1;  // разделитель
+  }
+  m--;  // фактическая длина преобразованной строки (последний индекс)
+
+  // Добавляем граничные символы для безопасности
+  transformed[0] = 0;
+  transformed[m + 1] = 0;
+
+  // Алгоритм Манакера
+  std::vector<int> radius(m + 3, 0);
+  int center = 0, right = 0;
+
+  for (int i = 1; i <= m; ++i) {
+    // Инициализация радиуса с использованием уже вычисленных значений
+    if (right > i) {
+      radius[i] = std::min(radius[2 * center - i], right - i);
+    } else {
+      radius[i] = 1;
+    }
+
+    // Расширение палиндрома (с проверкой границ)
+    while (i - radius[i] >= 1 && i + radius[i] <= m &&
+      transformed[i - radius[i]] == transformed[i + radius[i]]) {
+      ++radius[i];
+    }
+
+    // Обновление самого правого палиндрома
+    if (i + radius[i] > right) {
+      center = i;
+      right = i + radius[i];
+    }
+  }
+
+  // Разностные массивы для подсчёта начал и концов палиндромов
+  std::vector<int> start_diff(m + 5, 0);
+  std::vector<int> end_diff(m + 5, 0);
+  long long total_palindromes = 0;
+
+  // Заполнение разностных массивов
+  for (int i = 1; i <= m; ++i) {
+    int pal_count = radius[i] / 2;  // количество реальных палиндромов с центром i
+    total_palindromes = (total_palindromes + pal_count) % MOD;
+
+    // Добавляем все палиндромы с центром i одной операцией
+    int left_start = i - radius[i] + 1;
+    if (left_start >= 1) {
+      start_diff[left_start]++;
+      start_diff[i + 1]--;
+    }
+
+    end_diff[i]++;
+    if (i + radius[i] <= m + 1) {
+      end_diff[i + radius[i]]--;
+    }
+  }
+
+  // Подсчёт непересекающихся пар
+  std::vector<int> start(m + 5, 0);
+  std::vector<int> end(m + 5, 0);
+  long long finished = 0;
+  long long non_intersecting = 0;
+
+  for (int i = 1; i <= m; ++i) {
+    // Восстанавливаем реальные значения из разностных массивов
+    start[i] = start[i - 1] + start_diff[i];
+    end[i] = end[i - 1] + end_diff[i];
+
+    // Рассматриваем только позиции исходной строки (чётные индексы в transformed)
+    if (i % 2 == 0) {
+      // Палиндромы, начинающиеся здесь, не пересекаются с уже закончившимися
+      non_intersecting = (non_intersecting + finished * start[i]) % MOD;
+      // Добавляем заканчивающиеся здесь палиндромы к копилке
+      finished = (finished + end[i]) % MOD;
+    }
+  }
+
+  // Общее количество пар палиндромов
+  long long total_pairs = (total_palindromes * (total_palindromes - 1) / 2) % MOD;
+
+  // Ответ = общее количество пар - непересекающиеся пары
+  long long answer = (total_pairs - non_intersecting) % MOD;
+  if (answer < 0) answer += MOD;
+
+  std::cout << answer << '\n';
+
+  return 0;
+}
+</pre>
+</details>
