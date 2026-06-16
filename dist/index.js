@@ -1709,7 +1709,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: function() { return /* binding */ asideThemes; }
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-const asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '20 Round 20', '21 Round 21', '22 Round 22 (Div. 2)', '23 Round 23', '24 Round 24', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f'];
+const asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '20 Round 20', '21 Round 21', '22 Round 22 (Div. 2)', '23 Round 23', '24 Round 24', '25 Round 25 (Div. 2)', '25 Round 26', '34 Round 34 (Div. 2)', '38 ШИО 1 2010', '39 ШКО 1 2010', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '48 ШИО 3 2010', '50 Round 47', '52 Testing Round 1', '59 Round 55 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f'];
 
 /***/ }),
 
@@ -1748,24 +1748,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _p100_elem_22_Round22_html__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../p100/elem-22-Round22.html */ "./src/components/cf/rounds/rounds100/p100/elem-22-Round22.html");
 /* harmony import */ var _p100_elem_23_Round23_html__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../p100/elem-23-Round23.html */ "./src/components/cf/rounds/rounds100/p100/elem-23-Round23.html");
 /* harmony import */ var _p100_elem_24_Round24_html__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../p100/elem-24-Round24.html */ "./src/components/cf/rounds/rounds100/p100/elem-24-Round24.html");
-/* harmony import */ var _p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../p100/elem-34-Round34.html */ "./src/components/cf/rounds/rounds100/p100/elem-34-Round34.html");
-/* harmony import */ var _p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../p100/elem-38-sio1.html */ "./src/components/cf/rounds/rounds100/p100/elem-38-sio1.html");
-/* harmony import */ var _p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../p100/elem-39-sko1.html */ "./src/components/cf/rounds/rounds100/p100/elem-39-sko1.html");
-/* harmony import */ var _p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../p100/elem-44-sko2.html */ "./src/components/cf/rounds/rounds100/p100/elem-44-sko2.html");
-/* harmony import */ var _p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../p100/elem-45-sko3.html */ "./src/components/cf/rounds/rounds100/p100/elem-45-sko3.html");
-/* harmony import */ var _p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../p100/elem-46-sio2.html */ "./src/components/cf/rounds/rounds100/p100/elem-46-sio2.html");
-/* harmony import */ var _p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../p100/elem-48-sio3.html */ "./src/components/cf/rounds/rounds100/p100/elem-48-sio3.html");
-/* harmony import */ var _p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../p100/elem-50-Round47.html */ "./src/components/cf/rounds/rounds100/p100/elem-50-Round47.html");
-/* harmony import */ var _p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../p100/elem-52-TRound1.html */ "./src/components/cf/rounds/rounds100/p100/elem-52-TRound1.html");
-/* harmony import */ var _p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../p100/elem-59-Round55.html */ "./src/components/cf/rounds/rounds100/p100/elem-59-Round55.html");
-/* harmony import */ var _p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../p100/elem-70-Round64.html */ "./src/components/cf/rounds/rounds100/p100/elem-70-Round64.html");
-/* harmony import */ var _p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../p100/elem-71-Round65.html */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.html");
-/* harmony import */ var _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../p100/elem-76-vuos.html */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html");
-/* harmony import */ var _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.html");
-/* harmony import */ var _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.html");
-/* harmony import */ var _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.html");
-/* harmony import */ var _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.html");
-/* harmony import */ var _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.html");
+/* harmony import */ var _p100_elem_25_Round25_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../p100/elem-25-Round25.html */ "./src/components/cf/rounds/rounds100/p100/elem-25-Round25.html");
+/* harmony import */ var _p100_elem_26_Round26_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../p100/elem-26-Round26.html */ "./src/components/cf/rounds/rounds100/p100/elem-26-Round26.html");
+/* harmony import */ var _p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../p100/elem-34-Round34.html */ "./src/components/cf/rounds/rounds100/p100/elem-34-Round34.html");
+/* harmony import */ var _p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../p100/elem-38-sio1.html */ "./src/components/cf/rounds/rounds100/p100/elem-38-sio1.html");
+/* harmony import */ var _p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../p100/elem-39-sko1.html */ "./src/components/cf/rounds/rounds100/p100/elem-39-sko1.html");
+/* harmony import */ var _p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../p100/elem-44-sko2.html */ "./src/components/cf/rounds/rounds100/p100/elem-44-sko2.html");
+/* harmony import */ var _p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../p100/elem-45-sko3.html */ "./src/components/cf/rounds/rounds100/p100/elem-45-sko3.html");
+/* harmony import */ var _p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../p100/elem-46-sio2.html */ "./src/components/cf/rounds/rounds100/p100/elem-46-sio2.html");
+/* harmony import */ var _p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../p100/elem-48-sio3.html */ "./src/components/cf/rounds/rounds100/p100/elem-48-sio3.html");
+/* harmony import */ var _p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../p100/elem-50-Round47.html */ "./src/components/cf/rounds/rounds100/p100/elem-50-Round47.html");
+/* harmony import */ var _p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../p100/elem-52-TRound1.html */ "./src/components/cf/rounds/rounds100/p100/elem-52-TRound1.html");
+/* harmony import */ var _p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../p100/elem-59-Round55.html */ "./src/components/cf/rounds/rounds100/p100/elem-59-Round55.html");
+/* harmony import */ var _p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../p100/elem-70-Round64.html */ "./src/components/cf/rounds/rounds100/p100/elem-70-Round64.html");
+/* harmony import */ var _p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../p100/elem-71-Round65.html */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.html");
+/* harmony import */ var _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../p100/elem-76-vuos.html */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html");
+/* harmony import */ var _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.html");
+/* harmony import */ var _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.html");
+/* harmony import */ var _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.html");
+/* harmony import */ var _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.html");
+/* harmony import */ var _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./../p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -1809,7 +1811,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const pages = [[_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__["default"], 20], [_p100_elem_21_Round21_html__WEBPACK_IMPORTED_MODULE_20__["default"], 21], [_p100_elem_22_Round22_html__WEBPACK_IMPORTED_MODULE_21__["default"], 22], [_p100_elem_23_Round23_html__WEBPACK_IMPORTED_MODULE_22__["default"], 23], [_p100_elem_24_Round24_html__WEBPACK_IMPORTED_MODULE_23__["default"], 24], [_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_24__["default"], 34], [_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_25__["default"], 38], [_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_26__["default"], 39], [_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_27__["default"], 44], [_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_28__["default"], 45], _p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_29__["default"], _p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_30__["default"], _p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_31__["default"], _p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_32__["default"], _p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_33__["default"], _p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_34__["default"], _p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_35__["default"], _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_36__["default"], _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_37__["default"], _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_38__["default"], _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_39__["default"], _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_40__["default"], _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_41__["default"]];
+
+
+const pages = [[_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__["default"], 20], [_p100_elem_21_Round21_html__WEBPACK_IMPORTED_MODULE_20__["default"], 21], [_p100_elem_22_Round22_html__WEBPACK_IMPORTED_MODULE_21__["default"], 22], [_p100_elem_23_Round23_html__WEBPACK_IMPORTED_MODULE_22__["default"], 23], [_p100_elem_24_Round24_html__WEBPACK_IMPORTED_MODULE_23__["default"], 24], [_p100_elem_25_Round25_html__WEBPACK_IMPORTED_MODULE_24__["default"], 25], [_p100_elem_26_Round26_html__WEBPACK_IMPORTED_MODULE_25__["default"], 26], [_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_26__["default"], 34], [_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_27__["default"], 38], [_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_28__["default"], 39], [_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_29__["default"], 44], [_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_30__["default"], 45], _p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_31__["default"], _p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_32__["default"], _p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_33__["default"], _p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_34__["default"], _p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_35__["default"], _p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_36__["default"], _p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_37__["default"], _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_38__["default"], _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_39__["default"], _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_40__["default"], _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_41__["default"], _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_42__["default"], _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_43__["default"]];
 
 /***/ }),
 
@@ -1939,14 +1943,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _p100_elem_22_Round22__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../p100/elem-22-Round22 */ "./src/components/cf/rounds/rounds100/p100/elem-22-Round22.js");
 /* harmony import */ var _p100_elem_23_Round23__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../p100/elem-23-Round23 */ "./src/components/cf/rounds/rounds100/p100/elem-23-Round23.js");
 /* harmony import */ var _p100_elem_24_Round24__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../p100/elem-24-Round24 */ "./src/components/cf/rounds/rounds100/p100/elem-24-Round24.js");
-/* harmony import */ var _p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../p100/elem-34-Round34 */ "./src/components/cf/rounds/rounds100/p100/elem-34-Round34.js");
-/* harmony import */ var _p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../p100/elem-38-sio1 */ "./src/components/cf/rounds/rounds100/p100/elem-38-sio1.js");
-/* harmony import */ var _p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../p100/elem-39-sko1 */ "./src/components/cf/rounds/rounds100/p100/elem-39-sko1.js");
-/* harmony import */ var _p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../p100/elem-44-sko2 */ "./src/components/cf/rounds/rounds100/p100/elem-44-sko2.js");
-/* harmony import */ var _p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../p100/elem-45-sko3 */ "./src/components/cf/rounds/rounds100/p100/elem-45-sko3.js");
+/* harmony import */ var _p100_elem_25_Round25__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../p100/elem-25-Round25 */ "./src/components/cf/rounds/rounds100/p100/elem-25-Round25.js");
+/* harmony import */ var _p100_elem_26_Round26__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../p100/elem-26-Round26 */ "./src/components/cf/rounds/rounds100/p100/elem-26-Round26.js");
+/* harmony import */ var _p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../p100/elem-34-Round34 */ "./src/components/cf/rounds/rounds100/p100/elem-34-Round34.js");
+/* harmony import */ var _p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../p100/elem-38-sio1 */ "./src/components/cf/rounds/rounds100/p100/elem-38-sio1.js");
+/* harmony import */ var _p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../p100/elem-39-sko1 */ "./src/components/cf/rounds/rounds100/p100/elem-39-sko1.js");
+/* harmony import */ var _p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../p100/elem-44-sko2 */ "./src/components/cf/rounds/rounds100/p100/elem-44-sko2.js");
+/* harmony import */ var _p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../p100/elem-45-sko3 */ "./src/components/cf/rounds/rounds100/p100/elem-45-sko3.js");
 /************************
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
+
+
 
 
 
@@ -2061,20 +2069,26 @@ function pageLink(asideItems, currentContent) {
             case 24:
               (0,_p100_elem_24_Round24__WEBPACK_IMPORTED_MODULE_24__["default"])();
               break;
+            case 25:
+              (0,_p100_elem_25_Round25__WEBPACK_IMPORTED_MODULE_25__["default"])();
+              break;
+            case 26:
+              (0,_p100_elem_26_Round26__WEBPACK_IMPORTED_MODULE_26__["default"])();
+              break;
             case 34:
-              (0,_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_25__["default"])();
+              (0,_p100_elem_34_Round34__WEBPACK_IMPORTED_MODULE_27__["default"])();
               break;
             case 38:
-              (0,_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_26__["default"])();
+              (0,_p100_elem_38_sio1__WEBPACK_IMPORTED_MODULE_28__["default"])();
               break;
             case 39:
-              (0,_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_27__["default"])();
+              (0,_p100_elem_39_sko1__WEBPACK_IMPORTED_MODULE_29__["default"])();
               break;
             case 44:
-              (0,_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_28__["default"])();
+              (0,_p100_elem_44_sko2__WEBPACK_IMPORTED_MODULE_30__["default"])();
               break;
             case 45:
-              (0,_p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_29__["default"])();
+              (0,_p100_elem_45_sko3__WEBPACK_IMPORTED_MODULE_31__["default"])();
               break;
             default:
               break;
@@ -2748,6 +2762,88 @@ function inElem() {
   }
   if (document.querySelector('.t5')) {
     document.querySelector('.t5').innerHTML = _z100_z24e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-25-Round25.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-25-Round25.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z25a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z25a.html */ "./src/components/cf/rounds/rounds100/z100/z25a.html");
+/* harmony import */ var _z100_z25b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z25b.html */ "./src/components/cf/rounds/rounds100/z100/z25b.html");
+/* harmony import */ var _z100_z25c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z25c.html */ "./src/components/cf/rounds/rounds100/z100/z25c.html");
+/* harmony import */ var _z100_z25d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z25d.html */ "./src/components/cf/rounds/rounds100/z100/z25d.html");
+/* harmony import */ var _z100_z25e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z25e.html */ "./src/components/cf/rounds/rounds100/z100/z25e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z25a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z25b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z25c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z25d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z25e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-26-Round26.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-26-Round26.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z26a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z26a.html */ "./src/components/cf/rounds/rounds100/z100/z26a.html");
+/* harmony import */ var _z100_z26b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z26b.html */ "./src/components/cf/rounds/rounds100/z100/z26b.html");
+/* harmony import */ var _z100_z26c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z26c.html */ "./src/components/cf/rounds/rounds100/z100/z26c.html");
+/* harmony import */ var _z100_z26d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z26d.html */ "./src/components/cf/rounds/rounds100/z100/z26d.html");
+/* harmony import */ var _z100_z26e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z26e.html */ "./src/components/cf/rounds/rounds100/z100/z26e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z26a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z26b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z26c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z26d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z26e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
   }
 }
 
@@ -6601,6 +6697,36 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-25-Round25.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-25-Round25.html ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/25\" target=\"_blank\">Codeforces 25 Round 25 Beta (Div.2) 2010.08.02</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. IQ тест</a>\r\n  <br><a href=\"#t2\">Задача B. Телефонные номера</a>\r\n  <br><a href=\"#t3\">Задача C. Дороги в Берляндии</a>\r\n  <br><a href=\"#t4\">Задача D. Дороги не только в Берляндии</a>\r\n  <br><a href=\"#t5\">Задача E. Тест</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. IQ тест -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. IQ тест</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Телефонные номера -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Телефонные номера</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Дороги в Берляндии -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Дороги в Берляндии</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Дороги не только в Берляндии -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Дороги не только в Берляндии</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Тест -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Тест</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-26-Round26.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-26-Round26.html ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/26\" target=\"_blank\">Codeforces 26 Round 26 Beta 2010.08.16</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Почти простые числа</a>\r\n  <br><a href=\"#t2\">Задача B. Правильная скобочная подпоследовательность</a>\r\n  <br><a href=\"#t3\">Задача C. Паркет</a>\r\n  <br><a href=\"#t4\">Задача D. Билеты</a>\r\n  <br><a href=\"#t5\">Задача E. Multithreading</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Почти простые числа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Почти простые числа</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Правильная скобочная подпоследовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Правильная скобочная подпоследовательность</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Паркет -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Паркет</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Билеты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Билеты</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Multithreading -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Multithreading</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/rounds100/p100/elem-3-Round3.html":
 /*!********************************************************************!*\
   !*** ./src/components/cf/rounds/rounds100/p100/elem-3-Round3.html ***!
@@ -8096,6 +8222,156 @@ var code = "<!-- Задача D. Сломанный робот -->\r\n<div class
 __webpack_require__.r(__webpack_exports__);
 // Module
 var code = "<!-- Задача E. Берляндский коллайдер -->\r\n<div class=\"time-memory\">(Время 1.5с. Память 256мб)</div>\r\n\r\n<p>Недавно в Берляндии завершилось строительство Берляндского коллайдера. Коллайдер представляет собой длинный узкий туннель, в котором находятся n частиц. Свяжем с коллайдером одномерную систему координат, идущую слева направо. Для каждой частицы известны ее координата и скорость на момент запуска коллайдера. Скорости частиц после запуска коллайдера не меняются. Берляндские ученые предполагают, что большой взрыв произойдет при первом столкновении частиц, скорости которых направлены в разные стороны. Помогите им определить, сколько времени пройдет после запуска коллайдера прежде чем случится большой взрыв.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (1 ≤ n ≤ 5·10⁵) — количество частиц в коллайдере. Далее в n строках даны описания частиц. Каждая частица описывается двумя целыми числами xi, vi (-10⁹ ≤ xi, vi ≤ 10⁹, vi ≠ 0) — координатой и скоростью соответственно. Все координаты различны. Частицы перечислены в порядке возрастания координат. Все координаты даны в метрах, а все скорости — в метрах в секунду. Отрицательная скорость означает, что при запуске коллайдера частица полетит влево, а положительная — что частица полетит вправо.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если большого взрыва не будет, выведите -1. Иначе выведите одно число — через сколько секунд после запуска коллайдера произойдет большой взрыв. Ваш ответ должен иметь относительную или абсолютную погрешность меньше чем 10⁻⁹.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n-5 9\r\n0 1\r\n5 -1\r\n</pre>\r\n<pre>\r\n1.00000000000000000000\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n6\r\n1 3\r\n2 3\r\n3 3\r\n4 -3\r\n5 -1\r\n6 -100\r\n</pre>\r\n<pre>\r\n0.02912621359223301065\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z25a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z25a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. IQ тест -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Вася готовится проходить IQ тест. В этом тесте часто встречаются задания, в которых нужно найти лишнее из n чисел. Вася заметил, что это лишнее число обычно отличается от остальных по четности. Помогите Васе — для проверки своих ответов, ему требуется программа, которая среди заданных n чисел находит отличающееся по четности.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (3 ≤ n ≤ 100) — количество чисел в задании. Во второй строке через пробел записано n натуральных чисел, не превосходящих 100. Гарантируется, что среди этих чисел ровно одно отличается по четности от остальных.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите номер числа, которое отличается по четности от остальных. Числа нумеруются начиная с 1 в том порядке, в котором они заданы во входных данных.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n5\r\n2 4 7 8 10\r\n</pre>\r\n<pre>\r\n3\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n4\r\n1 2 1 1\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z25b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z25b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Телефонные номера -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Телефонный номер в Берляндии представляет собой последовательность из n цифр. Часто чтобы было проще запомнить номер, его разбивают на группы из двух или трех цифр. Например, номер 1198733 проще запомнить как 11-987-33. Ваша задача — по заданному телефонному номеру найти любое его разбиение на группы из двух или трех цифр.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (2 ≤ n ≤ 100) — количество цифр в телефонном номере. Во второй строке записано n цифр — телефонный номер, который требуется разбить на группы.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите любое разбиение данного номера на группы из двух или трех цифр. Разделяйте группы символом -. Если решений несколько, выведите любое.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n6\r\n549871\r\n</pre>\r\n<pre>\r\n54-98-71\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n7\r\n1198733\r\n</pre>\r\n<pre>\r\n11-987-33\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z25c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z25c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Дороги в Берляндии -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>В Берляндии n городов, пронумерованных от 1 до n, некоторые из которых соединены двусторонними дорогами. Все дороги имеют длину — некоторое целое число от 1 до 1000. Известно, что из любого города можно доехать до любого другого по существующим дорогам. Так же для каждой пары городов известно кратчайшее расстояние между ними. Правительство Берляндии планирует построить k новых дорог. Для каждой запланированной дороги известна ее длина, и какие города она будет соединять. Чтобы контролировать правильность постройки новых дорог, после открытия очередной дороги правительство Берляндии хочет проверять сумму кратчайших расстояний между всеми парами городов. Помогите им — по заданной матрице кратчайших расстояний по старым дорогам и планам всех новых дорог, выясните, как будет меняться сумма кратчайших расстояний между всеми парами городов после постройки каждой дороги.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (2 ≤ n ≤ 300) — число городов в Берляндии. Далее в n строках записано по n целых чисел — матрица кратчайших расстояний. j-ое число в i-ой строке — di,j, кратчайшее расстояние между городами i и j. Гарантируется, что di,i = 0, di,j = dj,i, и заданная матрица является матрицей кратчайших расстояний для некоторого набора двусторонних дорог с целочисленной длиной от 1 до 1000, таким, что по этим дорогам можно доехать из любого города до любого другого.</p>\r\n<p>На следующей строке записано целое число k (1 ≤ k ≤ 300) — число запланированных дорог. В следующих k строках записаны описания запланированных дорог. Каждая дорога описывается тремя целыми числами ai, bi, ci (1 ≤ ai, bi ≤ n, ai ≠ bi, 1 ≤ ci ≤ 1000) — ai и bi — пара городов, которые соединяет дорога, ci — длина дороги. Между парой городов может быть несколько дорог, но никакая дорога не соединяет город сам с собой.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите k целых чисел qi (1 ≤ i ≤ k). qi должно равняться сумме кратчайших расстояний между всеми парами городов после постройки дорог с номерами от 1 до i. Дороги нумеруются начиная с 1 в том порядке, в котором они даны во входных данных. Каждая пара городов учитывается в сумме один раз, т. е. имеются в виду неупорядоченные пары.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2\r\n0 5\r\n5 0\r\n1\r\n1 2 3\r\n</pre>\r\n<pre>\r\n3\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3\r\n0 4 5\r\n4 0 9\r\n5 9 0\r\n2\r\n2 3 8\r\n1 2 1\r\n</pre>\r\n<pre>\r\n17 12\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z25d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z25d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Дороги не только в Берляндии -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Правительство Берляндии решило улучшать отношения с соседними странами. В первую очередь было решено построить новые дороги так чтобы из всех городов Берляндии и соседних стран можно было добраться до всех остальных. Всего в Берляндии и соседних странах n городов и ровно n-1 двусторонних дорог. Из-за недавнего финансового кризиса правительство Берляндии сильно стеснено в средствах, поэтому чтобы построить новую дорогу оно вынуждено закрывать какую-то из существующих. Каждый день можно закрыть одну существующую дорогу и сразу же построить новую. Ваша задача — определить, сколько дней потребуется для перестройки дороги так, чтобы из любого города можно было добраться до любого другого, а так же составить план закрытия старых и постройки новых дорог.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (2 ≤ n ≤ 1000) — число городов в Берляндии и соседних странах. Далее в n-1 строках записаны описания дорог. Каждая дорога описывается двумя целыми числами ai, bi (1 ≤ ai, bi ≤ n, ai ≠ bi) — пара городов, которые дорога соединяет. Между каждой парой городов не может быть больше одной дороги, никакая дорога не соединяет город сам с собой.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите ответ на задачу, число t — какое наименьшее число дней потребуется, чтобы перестроить дороги так чтобы из любого города можно было добраться до любого другого. Далее выведите t строк — план закрытия старых и постройки новых дорог. Каждая строка должна описывать действия в очередной день в формате i j u v — означает, что нужно закрыть дорогу между городами i и j и построить дорогу между городами u и v. Города нумеруются начиная с 1. Если решений несколько, выведите любое.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2\r\n1 2\r\n</pre>\r\n<pre>\r\n0\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n7\r\n1 2\r\n2 3\r\n3 1\r\n4 5\r\n5 6\r\n6 7\r\n</pre>\r\n<pre>\r\n1\r\n3 1 3 7\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z25e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z25e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Тест -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Иногда делать тесты к задачам трудно. Сейчас Вася делает тесты к новой задаче на строки — входными данными к его задаче является одна строка. У Васи есть 3 неправильных решения этой задачи. Первое выдает неправильный ответ, если входные данные содержат подстроку s1, второе входит в бесконечный цикл, если входные данные содержат подстроку s2, а третье требует слишком много памяти, если входные данные содержат подстроку s3. Вася хочет завалить эти решения одним тестом. Какую наименьшую длину может иметь тест, который не проходят все три Васиных решения?</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Во входных данных задано ровно 3 строки. В строке с номером i содержится строка si. Все строки непусты, состоят из строчных латинских букв, их длины не превосходят 10⁵.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число — наименьшую возможную длину строки, содержащей s1, s2 и s3 как подстроки.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\nab\r\nbc\r\ncd\r\n</pre>\r\n<pre>\r\n4\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\nabacaba\r\nabaaba\r\nx\r\n</pre>\r\n<pre>\r\n11\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z26a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z26a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Почти простые числа -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Число называется почти простым, если оно имеет ровно два различных простых делителя. Например, числа 6, 18, 24 являются почти простыми, а 4, 8, 9, 42 — не являются. Найдите количество почти простых чисел от 1 до n включительно.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входного файла записано число n (1 ≤ n ≤ 3000).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите количество почти простых чисел от 1 до n включительно.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n10\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n21\r\n</pre>\r\n<pre>\r\n8\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z26b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z26b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Правильная скобочная подпоследовательность -->\r\n<div class=\"time-memory\">(Время 5с. Память 256мб)</div>\r\n\r\n<p>Напомним, что скобочная последовательность называется правильной, если путем вставки в нее символов «+» и «1» можно получить из нее корректное математическое выражение. Например, последовательности «(())()», «()» и «(()(()))» — правильные, в то время как «)(», «(()» и «(()))(» — нет.</p>\r\n\r\n<p>Однажды Васе попалась скобочная последовательность. Он решил удалить из нее некоторые скобки так, чтобы последовательность стала правильной. Какую наибольшую длину может иметь получившаяся правильная скобочная последовательность?</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входного файла записана непустая строка, состоящая из символов «(» и «)». Её длина не превосходит 10⁶.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите длину наибольшей правильной скобочной подпоследовательности.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n(()))(\r\n</pre>\r\n<pre>\r\n4\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n((()())\r\n</pre>\r\n<pre>\r\n6\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z26c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z26c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Паркет -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Однажды Вася решил положить паркет у себя в гостиной, которая имела размеры n x m метров. У Васи были плитки трех типов: a плиток 1 x 2 метра, b плиток 2 x 1 метра и c плиток 2 x 2 метра. Помогите Васе выяснить, получится ли у него положить паркет в гостиной, и если получится, найдите один из возможных способов это сделать. Васе не обязательно использовать все имеющиеся плитки.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входных данных через пробел записаны 5 целых чисел n, m, a, b, c (1 ≤ n, m ≤ 100, 0 ≤ a, b, c ≤ 10⁴), n и m — размеры гостиной, a, b и c — соответственно число плиток 1 x 2, 2 x 1 и 2 x 2. Поворачивать плитки не разрешается.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если положить паркет, используя имеющиеся плитки, невозможно, выведите IMPOSSIBLE. Иначе выведите один из возможных вариантов паркета в гостиной — выведите n строк по m строчных латинских букв в каждой. Две соседние по стороне клетки должны содержать одинаковые буквы, если эти клетки относятся к одной и той же плитке, и различные буквы в противном случае. Разные плитки могут обозначаться одной и той же буквой (см. примеры). Если решений несколько, выведите любое.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2 6 2 2 1\r\n</pre>\r\n<pre>\r\naabcca\r\naabdda\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n1 1 100 100 100\r\n</pre>\r\n<pre>\r\nIMPOSSIBLE\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n4 4 10 10 10\r\n</pre>\r\n<pre>\r\naabb\r\naabb\r\nbbaa\r\nbbaa\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z26d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z26d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Билеты -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Как большой фанат Формулы-1, Чарли очень рад организовывать продажу билетов на следующий Гран-при, который проходит в его городе. К сожалению, в связи с финансовым кризисом в его стране остались купюры только на 10 и 20 евро. Каждый билет на гонку стоит 10 евро, поэтому если кто-то хочет купить один билет на купюру на 20 евро, Чарли должен выдать ему сдачу купюрой на 10 евро. Чарли понимает, что при нехватке купюр на 10 евро, это может стать проблемой. У Чарли есть некоторая информация о покупателях, но он никак не может ее использовать, и ему нужна ваша помощь. Ровно n + m человек придут к нему за билетами. n из них придут с одной купюрой на 10 евро, и остальные m из них придут с одной купюрой на 20 евро. Сейчас у Чарли есть k купюр на 10 евро, которые, если понадобится, он может использовать для выдачи сдачи. Все n + m человек придут в магазин билетов в случайном порядке, все порядки равновероятны. Найдите вероятность того, что продажа всех билетов пройдет гладко, т. е. у Чарли будет сдача для каждого человека с купюрой на 20 евро.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>На единственной строке через пробел записаны три целых числа n, m и k (0 ≤ n, m ≤ 10⁵, 0 ≤ k ≤ 10).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите требуемую вероятность по крайней мере с 4 знаками после десятичной точки.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n5 3 1\r\n</pre>\r\n<pre>\r\n0.857143\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n0 5 5\r\n</pre>\r\n<pre>\r\n1\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n0 1 0\r\n</pre>\r\n<pre>\r\n0\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z26e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z26e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Multithreading -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Дана следующая параллельная программа. Есть N процессов, i-ый процесс исполняет следующий псевдокод:</p>\r\n<pre>\r\nrepeat ni times\r\n  yi := y\r\n  y := yi + 1\r\nend repeat\r\n</pre>\r\n<p>Здесь y — общая переменная. Все остальное для каждого процесса является локальным. Каждое действие, записанное на отдельной строке, является атомарным, т. е. когда процесс исполняет некоторую строку, он не может быть прерван. Все остальные чередования возможны, т. е. каждый еще не завершивший свою работу процесс может получить право выполнить очередную строку своего кода. Вначале y = 0. Вам дано целое число W и ni, для i = 1, ... , N. Определите, возможно ли, что после выполнения всех процессов, y = W, и если это возможно, выведите любой порядок выполнения процессов, который приводит к этому.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке через пробел записаны два целых числа N (1 ≤ N ≤ 100) и W ( -10⁹ ≤ W ≤ 10⁹). Во второй строке через пробел записано N целых чисел ni (1 ≤ ni ≤ 1000).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>В первую строку выведите Yes если возможно, что в конце y = W, или No в противном случае. Если ответ No, второй строки быть не должно, но если ответ Yes, во вторую строку выведите через пробел список целых чисел, описывающих некоторый порядок выполнения процессов, который приводит к нужному результату (см. Примечание).</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n1 10\r\n11\r\n</pre>\r\n<pre>\r\nNo\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n2 3\r\n4 4\r\n</pre>\r\n<pre>\r\nYes\r\n1 1 2 1 2 2 2 2 2 1 2 1 1 1 1 2\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n3 6\r\n1 2 3\r\n</pre>\r\n<pre>\r\nYes\r\n1 1 2 2 2 2 3 3 3 3 3 3\r\n</pre>\r\n</details>\r\n\r\n<h4>Примечание</h4>\r\n<p>Предположим, что в коде процессов нет оператора цикла repeat, а код из тела цикла записан нужное число раз. Процессы пронумерованы начиная с 1. Каждое число из списка обозначает, какой процесс выполняет свое очередное действий на данном шаге. Например, рассмотрим порядок 1 2 2 1 3. Первый процесс 1 выполняет свое первое действие, затем процесс 2 свои первые два действия, потом процесс 1 выполняет свое второе действие, далее процесс 3 свое первое действие. Список должен содержать ровно 2·Σ i = 1...N ni чисел.</p>";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
@@ -10555,7 +10831,7 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2236\" target=\"_blank\">Codeforces 2236 Round 1103 (Div. 3) 2026.06.12</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Игры в поезде</a>\r\n  <br><a href=\"#t2\">Задача B. Татарское телешоу</a>\r\n  <br><a href=\"#t3\">Задача C. Омские программисты</a>\r\n  <br><a href=\"#t4\">Задача D. Совершенно новое татарское телешоу</a>\r\n  <br><a href=\"#t5\">Задача E. Дружеские подарки</a>\r\n  <br><a href=\"#t6\">Задача F1. Выборы в Саранске (простая версия)</a>\r\n  <br><a href=\"#t7\">Задача F2. Выборы в Саранске (сложная версия)</a>\r\n  <br><a href=\"#t8\">Задача G. Критерий в Бурляндии</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Игры в поезде -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Игры в поезде</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t; // число тестов\r\n  cin &gt;&gt; t;\r\n\r\n  int n; // число башен\r\n\r\n  while (t--) {\r\n    cin &gt;&gt; n;\r\n    int min = 6;\r\n    int max = 1;\r\n    int next;\r\n    // ответом будет (max - min) + 1\r\n\r\n    // находим min и max\r\n    while (n--) {\r\n      cin &gt;&gt; next;\r\n      if (next &gt; max) {\r\n        max = next;\r\n      }\r\n      if (min &gt; next) {\r\n        min = next;\r\n      }\r\n    }\r\n\r\n    int res = max - min + 1;\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Татарское телешоу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Татарское телешоу</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t; // число тестов\r\n  cin &gt;&gt; t;\r\n\r\n  int n; // длина строки\r\n  int k; // число k\r\n  string s; // бинарная строка\r\n\r\n  while (t--) {\r\n    cin &gt;&gt; n &gt;&gt; k &gt;&gt; s;\r\n\r\n    bool flag = 1;\r\n\r\n    // нужно сделать строку полностью нулевой\r\n    // инвертируя попарно два символа\r\n    // это можно сделать только если число 1 четное\r\n    for (int r = 0; r &lt; k; r++) {\r\n      int cnt1 = 0; // число единиц\r\n\r\n      for (int i = r; i &lt; n; i += k) {\r\n        if (s[i] == '1') {\r\n          cnt1++;\r\n        }\r\n      }\r\n\r\n      if (cnt1 % 2 != 0) {\r\n        flag = 0;\r\n      }\r\n    }\r\n\r\n    if (flag) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n\r\n  }\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Омские программисты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Омские программисты</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;cmath&gt;\r\n#include &lt;climits&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    long long a, b, x;\r\n    cin &gt;&gt; a &gt;&gt; b &gt;&gt; x;\r\n\r\n    long long ans = abs(a - b); // только инкременты\r\n\r\n    // Перебираем деления a и b\r\n    long long cur_a = a;\r\n    for (int steps_a = 0; steps_a &lt;= 60; steps_a++) {\r\n      long long cur_b = b;\r\n      for (int steps_b = 0; steps_b &lt;= 60; steps_b++) {\r\n        long long ops = steps_a + steps_b + abs(cur_a - cur_b);\r\n        if (ops &lt; ans) {\r\n          ans = ops;\r\n        }\r\n        // Делим cur_b, если возможно, иначе break\r\n        if (cur_b == 0) break;\r\n        cur_b /= x;\r\n      }\r\n      // Делим cur_a\r\n      if (cur_a == 0) break;\r\n      cur_a /= x;\r\n    }\r\n\r\n    cout &lt;&lt; ans &lt;&lt; \"\\n\";\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Совершенно новое татарское телешоу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Совершенно новое татарское телешоу</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nvoid solve();\r\n\r\nint main() {\r\n  int t; cin &gt;&gt; t;\r\n  while (t--) solve();\r\n  return 0;\r\n}\r\n\r\nvoid solve() {\r\n  int n, k; cin &gt;&gt; n &gt;&gt; k;\r\n  vector&lt;int&gt; A(n);\r\n  for (auto& x : A) cin &gt;&gt; x;\r\n  sort(A.begin(), A.end());\r\n  vector&lt;pair&lt;int, int&gt;&gt; a = { {A[0], 1} };\r\n  for (int i = 1; i &lt; n; ++i) {\r\n    if (A[i] == A[i - 1]) a.back().second++;\r\n    else a.emplace_back(A[i], 1);\r\n  }\r\n\r\n  while (a.size() &gt; 0) {\r\n    n = a.size();\r\n    if (a[n - 1].second % 2 == 0) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n      return;\r\n    }\r\n    if (n == 1) {\r\n      cout &lt;&lt; \"NO\\n\";\r\n      return;\r\n    }\r\n    if (a[n - 1].first - a[n - 2].first &lt;= k) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n      return;\r\n    }\r\n    a.pop_back();\r\n  }\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Дружеские подарки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Дружеские подарки</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nvoid solve();\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n  while (t--) {\r\n    solve();\r\n  }\r\n\r\n  return 0;\r\n}\r\n\r\nvoid solve() {\r\n  int n; cin &gt;&gt; n;\r\n  vector&lt;int&gt; a(n);\r\n  for (auto& x : a) cin &gt;&gt; x, --x;\r\n  vector&lt;vector&lt;bool&gt;&gt; able(n, vector&lt;bool&gt;(n));\r\n  for (int i = 0; i &lt; n; ++i) {\r\n    vector&lt;int&gt; us(n);\r\n    int mn = a[i], mx = a[i];\r\n    for (int j = i; j &lt; n; ++j) {\r\n      if (us[a[j]]) break;\r\n      us[a[j]] = 1;\r\n      mn = min(mn, a[j]), mx = max(mx, a[j]);\r\n      if (mx - mn == j - i) able[mn][mx] = 1;\r\n    }\r\n  }\r\n\r\n  for (int ans = n; ans &gt; 0; --ans) {\r\n    for (int i = 0; i + 2 * ans &lt;= n; ++i) {\r\n      if (able[i][i + ans - 1] && able[i + ans][i + 2 * ans - 1]) {\r\n        cout &lt;&lt; ans &lt;&lt; '\\n';\r\n        return;\r\n      }\r\n    }\r\n  }\r\n  cout &lt;&lt; \"0\\n\";\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача F1. Выборы в Саранске (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F1. Выборы в Саранске (простая версия)</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nconst int MOD = 1e9 + 7;\r\nconst int MAXA = 5e5 + 5;\r\n\r\nint spf[MAXA]; // smallest prime factor\r\n\r\nvoid sieve() {\r\n  for (int i = 2; i &lt; MAXA; i++) spf[i] = i;\r\n  for (int i = 2; i * i &lt; MAXA; i++) {\r\n    if (spf[i] == i) {\r\n      for (int j = i * i; j &lt; MAXA; j += i) {\r\n        if (spf[j] == j) spf[j] = i;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\nint main() {\r\n  ios::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  sieve();\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n  while (t--) {\r\n    int n, x;\r\n    cin &gt;&gt; n &gt;&gt; x; // x = 1\r\n    vector&lt;int&gt; a(n);\r\n    for (int i = 0; i &lt; n; i++) cin &gt;&gt; a[i];\r\n\r\n    map&lt;int, long long&gt; prime_ways;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      int val = a[i];\r\n      while (val &gt; 1) {\r\n        int p = spf[val];\r\n        int cnt = 0;\r\n        while (val % p == 0) {\r\n          val /= p;\r\n          cnt++;\r\n        }\r\n        prime_ways[p] += cnt; // sum v_q(a_i)\r\n      }\r\n    }\r\n\r\n    long long ans = 1;\r\n    for (auto& [prime, sum_v] : prime_ways) {\r\n      // ways = 1 (not using prime) + sum_v\r\n      ans = (ans * (sum_v + 1)) % MOD;\r\n    }\r\n\r\n    cout &lt;&lt; ans &lt;&lt; '\\n';\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача F2. Выборы в Саранске (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача F2. Выборы в Саранске (сложная версия)</h3>\r\n\r\n<pre>\r\n\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Критерий в Бурляндии -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача G. Критерий в Бурляндии</h3>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/2236\" target=\"_blank\">Codeforces 2236 Round 1103 (Div. 3) 2026.06.12</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Игры в поезде</a>\r\n  <br><a href=\"#t2\">Задача B. Татарское телешоу</a>\r\n  <br><a href=\"#t3\">Задача C. Омские программисты</a>\r\n  <br><a href=\"#t4\">Задача D. Совершенно новое татарское телешоу</a>\r\n  <br><a href=\"#t5\">Задача E. Дружеские подарки</a>\r\n  <br><a href=\"#t6\">Задача F1. Выборы в Саранске (простая версия)</a>\r\n  <br><a href=\"#t7\">Задача F2. Выборы в Саранске (сложная версия)</a>\r\n  <br><a href=\"#t8\">Задача G. Критерий в Бурляндии</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Игры в поезде -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Игры в поезде</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t; // число тестов\r\n  cin &gt;&gt; t;\r\n\r\n  int n; // число башен\r\n\r\n  while (t--) {\r\n    cin &gt;&gt; n;\r\n    int min = 6;\r\n    int max = 1;\r\n    int next;\r\n    // ответом будет (max - min) + 1\r\n\r\n    // находим min и max\r\n    while (n--) {\r\n      cin &gt;&gt; next;\r\n      if (next &gt; max) {\r\n        max = next;\r\n      }\r\n      if (min &gt; next) {\r\n        min = next;\r\n      }\r\n    }\r\n\r\n    int res = max - min + 1;\r\n    cout &lt;&lt; res &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Татарское телешоу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Татарское телешоу</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int t; // число тестов\r\n  cin &gt;&gt; t;\r\n\r\n  int n; // длина строки\r\n  int k; // число k\r\n  string s; // бинарная строка\r\n\r\n  while (t--) {\r\n    cin &gt;&gt; n &gt;&gt; k &gt;&gt; s;\r\n\r\n    bool flag = 1;\r\n\r\n    // нужно сделать строку полностью нулевой\r\n    // инвертируя попарно два символа\r\n    // это можно сделать только если число 1 четное\r\n    for (int r = 0; r &lt; k; r++) {\r\n      int cnt1 = 0; // число единиц\r\n\r\n      for (int i = r; i &lt; n; i += k) {\r\n        if (s[i] == '1') {\r\n          cnt1++;\r\n        }\r\n      }\r\n\r\n      if (cnt1 % 2 != 0) {\r\n        flag = 0;\r\n      }\r\n    }\r\n\r\n    if (flag) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n    } else {\r\n      cout &lt;&lt; \"NO\\n\";\r\n    }\r\n\r\n  }\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача C. Омские программисты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Омские программисты</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;cmath&gt;\r\n#include &lt;climits&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  ios_base::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n\r\n  while (t--) {\r\n    long long a, b, x;\r\n    cin &gt;&gt; a &gt;&gt; b &gt;&gt; x;\r\n\r\n    long long ans = abs(a - b); // только инкременты\r\n\r\n    // Перебираем деления a и b\r\n    long long cur_a = a;\r\n    for (int steps_a = 0; steps_a &lt;= 60; steps_a++) {\r\n      long long cur_b = b;\r\n      for (int steps_b = 0; steps_b &lt;= 60; steps_b++) {\r\n        long long ops = steps_a + steps_b + abs(cur_a - cur_b);\r\n        if (ops &lt; ans) {\r\n          ans = ops;\r\n        }\r\n        // Делим cur_b, если возможно, иначе break\r\n        if (cur_b == 0) break;\r\n        cur_b /= x;\r\n      }\r\n      // Делим cur_a\r\n      if (cur_a == 0) break;\r\n      cur_a /= x;\r\n    }\r\n\r\n    cout &lt;&lt; ans &lt;&lt; \"\\n\";\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Совершенно новое татарское телешоу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Совершенно новое татарское телешоу</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nvoid solve();\r\n\r\nint main() {\r\n  int t; cin &gt;&gt; t;\r\n  while (t--) solve();\r\n  return 0;\r\n}\r\n\r\nvoid solve() {\r\n  int n, k; cin &gt;&gt; n &gt;&gt; k;\r\n  vector&lt;int&gt; A(n);\r\n  for (auto& x : A) cin &gt;&gt; x;\r\n  sort(A.begin(), A.end());\r\n  vector&lt;pair&lt;int, int&gt;&gt; a = { {A[0], 1} };\r\n  for (int i = 1; i &lt; n; ++i) {\r\n    if (A[i] == A[i - 1]) a.back().second++;\r\n    else a.emplace_back(A[i], 1);\r\n  }\r\n\r\n  while (a.size() &gt; 0) {\r\n    n = a.size();\r\n    if (a[n - 1].second % 2 == 0) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n      return;\r\n    }\r\n    if (n == 1) {\r\n      cout &lt;&lt; \"NO\\n\";\r\n      return;\r\n    }\r\n    if (a[n - 1].first - a[n - 2].first &lt;= k) {\r\n      cout &lt;&lt; \"YES\\n\";\r\n      return;\r\n    }\r\n    a.pop_back();\r\n  }\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача E. Дружеские подарки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Дружеские подарки</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nvoid solve();\r\n\r\nint main() {\r\n  int t;\r\n  cin &gt;&gt; t;\r\n  while (t--) {\r\n    solve();\r\n  }\r\n\r\n  return 0;\r\n}\r\n\r\nvoid solve() {\r\n  int n; cin &gt;&gt; n;\r\n  vector&lt;int&gt; a(n);\r\n  for (auto& x : a) cin &gt;&gt; x, --x;\r\n  vector&lt;vector&lt;bool&gt;&gt; able(n, vector&lt;bool&gt;(n));\r\n  for (int i = 0; i &lt; n; ++i) {\r\n    vector&lt;int&gt; us(n);\r\n    int mn = a[i], mx = a[i];\r\n    for (int j = i; j &lt; n; ++j) {\r\n      if (us[a[j]]) break;\r\n      us[a[j]] = 1;\r\n      mn = min(mn, a[j]), mx = max(mx, a[j]);\r\n      if (mx - mn == j - i) able[mn][mx] = 1;\r\n    }\r\n  }\r\n\r\n  for (int ans = n; ans &gt; 0; --ans) {\r\n    for (int i = 0; i + 2 * ans &lt;= n; ++i) {\r\n      if (able[i][i + ans - 1] && able[i + ans][i + 2 * ans - 1]) {\r\n        cout &lt;&lt; ans &lt;&lt; '\\n';\r\n        return;\r\n      }\r\n    }\r\n  }\r\n  cout &lt;&lt; \"0\\n\";\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача F1. Выборы в Саранске (простая версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F1. Выборы в Саранске (простая версия)</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;map&gt;\r\n\r\nusing namespace std;\r\n\r\nconst int MOD = 1e9 + 7;\r\nconst int MAXA = 5e5 + 5;\r\n\r\nint spf[MAXA]; // smallest prime factor\r\n\r\nvoid sieve() {\r\n  for (int i = 2; i &lt; MAXA; i++) spf[i] = i;\r\n  for (int i = 2; i * i &lt; MAXA; i++) {\r\n    if (spf[i] == i) {\r\n      for (int j = i * i; j &lt; MAXA; j += i) {\r\n        if (spf[j] == j) spf[j] = i;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\nint main() {\r\n  ios::sync_with_stdio(false);\r\n  cin.tie(nullptr);\r\n\r\n  sieve();\r\n\r\n  int t;\r\n  cin &gt;&gt; t;\r\n  while (t--) {\r\n    int n, x;\r\n    cin &gt;&gt; n &gt;&gt; x; // x = 1\r\n    vector&lt;int&gt; a(n);\r\n    for (int i = 0; i &lt; n; i++) cin &gt;&gt; a[i];\r\n\r\n    map&lt;int, long long&gt; prime_ways;\r\n\r\n    for (int i = 0; i &lt; n; i++) {\r\n      int val = a[i];\r\n      while (val &gt; 1) {\r\n        int p = spf[val];\r\n        int cnt = 0;\r\n        while (val % p == 0) {\r\n          val /= p;\r\n          cnt++;\r\n        }\r\n        prime_ways[p] += cnt; // sum v_q(a_i)\r\n      }\r\n    }\r\n\r\n    long long ans = 1;\r\n    for (auto& [prime, sum_v] : prime_ways) {\r\n      // ways = 1 (not using prime) + sum_v\r\n      ans = (ans * (sum_v + 1)) % MOD;\r\n    }\r\n\r\n    cout &lt;&lt; ans &lt;&lt; '\\n';\r\n  }\r\n\r\n  return 0;\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача F2. Выборы в Саранске (сложная версия) -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача F2. Выборы в Саранске (сложная версия)</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n//#pragma GCC optimize(\"Ofast\")\r\n//#pragma GCC optimize(\"O3,unroll-loops\")\r\n\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;string&gt;\r\n#include &lt;queue&gt;\r\n#include &lt;map&gt;\r\n#include &lt;set&gt;\r\n#include &lt;functional&gt;\r\n#include &lt;climits&gt;\r\n#include &lt;cstdint&gt;\r\n#include &lt;cmath&gt;\r\n\r\nusing namespace std;\r\n\r\nusing ll = long long;\r\nusing ld = long double;\r\nusing str = string;\r\nconst ll INF = 1e18, MOD = 1e9 + 7;\r\ntemplate&lt;class T&gt; using pq_min = priority_queue&lt;T, vector&lt;T&gt;, greater&lt;T&gt;&gt;;\r\ntemplate&lt;class T&gt; using pq_max = priority_queue&lt;T, vector&lt;T&gt;, less&lt;T&gt;&gt;;\r\n#define int long long\r\n\r\nvoid solve();\r\n\r\nvector&lt;int&gt; P;\r\nconst int Mx = 1e4;\r\n\r\nsigned main() {\r\n  vector&lt;bool&gt; us(Mx);\r\n  for (int i = 2; i &lt; Mx; ++i) {\r\n    if (!us[i]) {\r\n      P.push_back(i);\r\n      for (int j = i * i; j &lt; Mx; j += i) {\r\n        us[j] = true;\r\n      }\r\n    }\r\n  }\r\n#ifdef LOCAL\r\n  freopen(\"input.txt\", \"r\", stdin);\r\n  freopen(\"output.txt\", \"w\", stdout);\r\n#endif\r\n  ios::sync_with_stdio(false);\r\n  cin.tie(0);\r\n  cout.tie(0);\r\n  ll q = 1;\r\n  cin &gt;&gt; q;\r\n  while (q--) {\r\n    solve();\r\n    cout &lt;&lt; \"\\n\";\r\n  }\r\n}\r\n\r\nvoid solve() {\r\n  int n, x;\r\n  cin &gt;&gt; n &gt;&gt; x;\r\n  map&lt;int, int&gt; cnt;\r\n  for (auto w : P) {\r\n    if (w * w &gt; x) {\r\n      break;\r\n    }\r\n    while (x % w == 0) {\r\n      x /= w;\r\n      cnt[w]++;\r\n    }\r\n  }\r\n  if (x &gt; 1) {\r\n    cnt[x]++;\r\n  }\r\n  vector&lt;int&gt; a(n);\r\n  for (int i = 0; i &lt; n; ++i) {\r\n    cin &gt;&gt; a[i];\r\n  }\r\n  map&lt;int, vector&lt;int&gt;&gt; w1;\r\n  for (int i = 0; i &lt; n; ++i) {\r\n    int val = a[i];\r\n    for (auto w : P) {\r\n      if (w * w &gt; val) {\r\n        break;\r\n      }\r\n      int sum = 0;\r\n      while (val % w == 0) {\r\n        val /= w;\r\n        sum++;\r\n      }\r\n      if (sum &gt; 0) {\r\n        w1[w].push_back(sum);\r\n      }\r\n    }\r\n    if (val &gt; 1) {\r\n      w1[val].push_back(1);\r\n    }\r\n  }\r\n  int Ans = 1;\r\n  for (auto& [id, e] : w1) {\r\n    int mx = 0;\r\n    for (auto s : e) {\r\n      mx = max(mx, s);\r\n    }\r\n    vector&lt;vector&lt;int&gt;&gt; dp(cnt[id] + 1, vector&lt;int&gt;(mx + 1));\r\n    dp[0][0] = 1;\r\n    for (auto w : e) {\r\n      vector&lt;vector&lt;int&gt;&gt; dp1(cnt[id] + 1, vector&lt;int&gt;(mx + 1));\r\n      for (int i = 0; i &lt;= w; ++i) {\r\n        for (int j = 0; j &lt;= cnt[id]; ++j) {\r\n          for (int k = 0; k &lt;= mx; ++k) {\r\n            if (j + min(i, k) &lt;= cnt[id]) {\r\n              dp1[j + min(i, k)][max(i, k)] += dp[j][k];\r\n              dp1[j + min(i, k)][max(i, k)] %= MOD;\r\n            }\r\n          }\r\n        }\r\n      }\r\n      swap(dp, dp1);\r\n    }\r\n    int s = 0;\r\n    for (int i = 0; i &lt;= mx; ++i) {\r\n      s += dp[cnt[id]][i];\r\n    }\r\n    s %= MOD;\r\n    Ans *= s;\r\n    Ans %= MOD;\r\n    cnt[id] = 0;\r\n  }\r\n  for (auto& s : cnt) {\r\n    if (s.second &gt; 0) {\r\n      Ans = 0;\r\n    }\r\n  }\r\n  cout &lt;&lt; Ans;\r\n}\r\n</pre>\r\n</article>\r\n\r\n\r\n<!-- Задача G. Критерий в Бурляндии -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача G. Критерий в Бурляндии</h3>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n#include &lt;cassert&gt;\r\n#include &lt;cmath&gt;\r\n#include &lt;climits&gt;\r\n\r\nusing namespace std;\r\nusing ll = long long;\r\nvoid solve();\r\n\r\nint main() {\r\n  int t = 1;\r\n  cin &gt;&gt; t;\r\n  while (t-- &gt; 0) solve();\r\n  return 0;\r\n}\r\n\r\nstruct Graph {\r\n  vector&lt;int&gt; tin, tout, d;\r\n  vector&lt;vector&lt;pair&lt;int, ll&gt;&gt;&gt; up;\r\n\r\n  int timer;\r\n\r\n  void dfs(int v, const vector&lt;vector&lt;int&gt;&gt;& g, const vector&lt;int&gt;& arr, int p = -1) {\r\n    tin[v] = timer++;\r\n    up[0][v] = { p, arr[v] };\r\n    for (int l = 1; l &lt; 20; ++l) {\r\n      if (up[l - 1][v].first == -1) {\r\n        up[l][v] = { -1, 0 };\r\n        continue;\r\n      }\r\n      up[l][v].first = up[l - 1][up[l - 1][v].first].first;\r\n      up[l][v].second = up[l - 1][up[l - 1][v].first].second + up[l - 1][v].second;\r\n    }\r\n    for (int u : g[v]) {\r\n      if (u == p) continue;\r\n      d[u] = d[v] + 1;\r\n      dfs(u, g, arr, v);\r\n    }\r\n    tout[v] = timer;\r\n  }\r\n\r\n  Graph(const vector&lt;vector&lt;int&gt;&gt;& g, const vector&lt;int&gt;& a) : tin(g.size()), tout(g.size()), d(g.size()), up(20, vector&lt;pair&lt;int, ll&gt;&gt;(g.size())) {\r\n    timer = 0;\r\n    dfs(0, g, a);\r\n  }\r\n\r\n  bool anc(int p, int v) {\r\n    return tin[p] &lt;= tin[v] && tout[p] &gt;= tout[v];\r\n  }\r\n\r\n  int getLenVertical(int u, int v) {\r\n    if (!anc(u, v)) swap(u, v);\r\n    //assert(anc(u, v));\r\n    return d[v] - d[u] - 1;\r\n  }\r\n\r\n  pair&lt;int, ll&gt; LA(int v, int k) {\r\n    if (k &lt;= 0) return { v, 0 };\r\n    ll sum = 0;\r\n    for (int i = 0; i &lt; 20; ++i) {\r\n      if (k &gt;&gt; i & 1) sum += up[i][v].second, v = up[i][v].first;\r\n    }\r\n    return { v, sum };\r\n  }\r\n\r\n  int LCA(int u, int v) {\r\n    if (anc(u, v)) return u;\r\n    for (int l = 19; l &gt;= 0; --l) {\r\n      if (up[l][u].first == -1 || anc(up[l][u].first, v)) continue;\r\n      u = up[l][u].first;\r\n    }\r\n    return up[0][u].first;\r\n  }\r\n\r\n  bool lower(int a, int b) {\r\n    return tin[a] &lt; tin[b];\r\n  }\r\n};\r\n\r\nll sum(int r) { return r * 1ll * (r + 1) / 2; }\r\n\r\nll sumSeg(int l, int r) {\r\n  return sum(r) - sum(l - 1);\r\n}\r\n\r\nvoid solve() {\r\n  int n, q; cin &gt;&gt; n &gt;&gt; q;\r\n  vector&lt;int&gt; a(n);\r\n  for (int i = 0; i &lt; n; ++i) cin &gt;&gt; a[i];\r\n  vector&lt;vector&lt;int&gt;&gt; g(n);\r\n  for (int i = 1; i &lt; n; ++i) {\r\n    int u, v; cin &gt;&gt; u &gt;&gt; v;\r\n    --u, --v;\r\n    g[u].emplace_back(v);\r\n    g[v].emplace_back(u);\r\n  }\r\n  vector&lt;int&gt; parent(n), d(n);\r\n  auto dfs = [&](auto& self, int v, int p = -1) -&gt; void {\r\n    parent[v] = p;\r\n    for (int u : g[v]) {\r\n      if (u == p) continue;\r\n      d[u] = d[v] + 1;\r\n      self(self, u, v);\r\n    }\r\n    };\r\n  dfs(dfs, 0);\r\n\r\n  vector&lt;int&gt; compressed_parent = parent;\r\n  vector&lt;vector&lt;int&gt;&gt; cG(n);\r\n  for (int v = 0; v &lt; n; ++v) {\r\n    vector&lt;int&gt; path;\r\n    while (compressed_parent[v] &gt; 0 && a[compressed_parent[v]] == 0) {\r\n      path.emplace_back(compressed_parent[v]);\r\n      compressed_parent[v] = compressed_parent[compressed_parent[v]];\r\n    }\r\n    for (auto& x : path) compressed_parent[x] = compressed_parent[v];\r\n    if (a[v] == 0 || !v) continue;\r\n    cG[compressed_parent[v]].emplace_back(v);\r\n  }\r\n\r\n  vector&lt;int&gt; next_collision(n), sum_collision(n);\r\n  for (int v = 0; v &lt; n; ++v) {\r\n    if (!a[v]) continue;\r\n    next_collision[v] = v;\r\n    int xr = a[v], sm = a[v];\r\n    while (xr == sm && next_collision[v] &gt; -1) {\r\n      next_collision[v] = compressed_parent[next_collision[v]];\r\n      if (next_collision[v] == -1) break;\r\n      xr ^= a[next_collision[v]];\r\n      sm += a[next_collision[v]];\r\n    }\r\n  }\r\n\r\n  for (int v = 0; v &lt; n; ++v) {\r\n    if (!a[v]) {\r\n      if (!v) next_collision[v] = -1;\r\n      else next_collision[v] = next_collision[compressed_parent[v]];\r\n    }\r\n    sum_collision[v] = d[v];\r\n    if (next_collision[v] &gt; -1) sum_collision[v] -= d[next_collision[v]];\r\n    else sum_collision[v]++;\r\n  }\r\n\r\n  Graph def(g, sum_collision);\r\n  Graph compressed(cG, sum_collision);\r\n\r\n  while (q--) {\r\n    int u, v; cin &gt;&gt; u &gt;&gt; v;\r\n    --u, --v;\r\n    if (def.lower(v, u)) swap(u, v);\r\n    int z = def.LCA(u, v);\r\n\r\n    int cv = (a[v] || !v ? v : compressed_parent[v]), cu = (a[u] || !u ? u : compressed_parent[u]), cz = (a[z] || !z ? z : compressed_parent[z]);\r\n\r\n    ll ans = 0;\r\n\r\n    vector&lt;int&gt; L, R, Lspaces = { 0 }, Rspaces = { 0 };\r\n\r\n    if (compressed.d[cv] &gt; compressed.d[cz] + 23) {\r\n      int unt = compressed.LA(cv, compressed.d[cv] - (compressed.d[cz] + 23)).first;\r\n      auto [to, sm] = def.LA(v, d[v] - d[unt]);\r\n      ans += sm; v = to;\r\n    }\r\n\r\n    if (compressed.d[cu] &gt; compressed.d[cz] + 23) {\r\n      int unt = compressed.LA(cu, compressed.d[cu] - (compressed.d[cz] + 23)).first;\r\n      auto [to, sm] = def.LA(u, d[u] - d[unt]);\r\n      ans += sm; u = to;\r\n    }\r\n\r\n    while (u != z) {\r\n      int to = compressed_parent[u];\r\n      if (def.anc(to, z)) to = z;\r\n      L.emplace_back(u);\r\n      Lspaces.emplace_back(def.getLenVertical(u, to));\r\n      u = to;\r\n    }\r\n    while (v != z) {\r\n      int to = compressed_parent[v];\r\n      if (def.anc(to, z)) to = z;\r\n      R.emplace_back(v);\r\n      Rspaces.emplace_back(def.getLenVertical(v, to));\r\n      v = to;\r\n    }\r\n    L.emplace_back(z);\r\n    reverse(R.begin(), R.end());\r\n    reverse(Rspaces.begin(), Rspaces.end());\r\n    for (auto& x : R) L.emplace_back(x);\r\n    for (auto& x : Rspaces) Lspaces.emplace_back(x);\r\n    int j = 0, xr = 0, sum = 0;\r\n    ll cnt = 0;\r\n    for (int i = 0; i &lt; (int)L.size(); ++i) {\r\n      while (j &lt; (int)L.size() && xr == sum) {\r\n        xr ^= a[L[j]]; sum += a[L[j]];\r\n        cnt += Lspaces[j] + 1;\r\n        j++;\r\n      }\r\n      if (xr != sum) cnt--;\r\n      ans += sumSeg(cnt - Lspaces[i], cnt);\r\n      if (xr != sum) cnt++;\r\n      xr ^= a[L[i]]; sum -= a[L[i]];\r\n      cnt -= Lspaces[i] + 1;\r\n    }\r\n    cout &lt;&lt; ans &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 

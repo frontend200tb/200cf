@@ -348,8 +348,140 @@ int main() {
   <div class="anchor" id="t7"></div>
   <h3>Задача F2. Выборы в Саранске (сложная версия)</h3>
 
-<pre>
+<pre class="language-cpp">
+//#pragma GCC optimize("Ofast")
+//#pragma GCC optimize("O3,unroll-loops")
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <queue>
+#include <map>
+#include <set>
+#include <functional>
+#include <climits>
+#include <cstdint>
+#include <cmath>
+
+using namespace std;
+
+using ll = long long;
+using ld = long double;
+using str = string;
+const ll INF = 1e18, MOD = 1e9 + 7;
+template<class T> using pq_min = priority_queue<T, vector<T>, greater<T>>;
+template<class T> using pq_max = priority_queue<T, vector<T>, less<T>>;
+#define int long long
+
+void solve();
+
+vector<int> P;
+const int Mx = 1e4;
+
+signed main() {
+  vector<bool> us(Mx);
+  for (int i = 2; i < Mx; ++i) {
+    if (!us[i]) {
+      P.push_back(i);
+      for (int j = i * i; j < Mx; j += i) {
+        us[j] = true;
+      }
+    }
+  }
+#ifdef LOCAL
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+#endif
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  cout.tie(0);
+  ll q = 1;
+  cin >> q;
+  while (q--) {
+    solve();
+    cout << "\n";
+  }
+}
+
+void solve() {
+  int n, x;
+  cin >> n >> x;
+  map<int, int> cnt;
+  for (auto w : P) {
+    if (w * w > x) {
+      break;
+    }
+    while (x % w == 0) {
+      x /= w;
+      cnt[w]++;
+    }
+  }
+  if (x > 1) {
+    cnt[x]++;
+  }
+  vector<int> a(n);
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+  map<int, vector<int>> w1;
+  for (int i = 0; i < n; ++i) {
+    int val = a[i];
+    for (auto w : P) {
+      if (w * w > val) {
+        break;
+      }
+      int sum = 0;
+      while (val % w == 0) {
+        val /= w;
+        sum++;
+      }
+      if (sum > 0) {
+        w1[w].push_back(sum);
+      }
+    }
+    if (val > 1) {
+      w1[val].push_back(1);
+    }
+  }
+  int Ans = 1;
+  for (auto& [id, e] : w1) {
+    int mx = 0;
+    for (auto s : e) {
+      mx = max(mx, s);
+    }
+    vector<vector<int>> dp(cnt[id] + 1, vector<int>(mx + 1));
+    dp[0][0] = 1;
+    for (auto w : e) {
+      vector<vector<int>> dp1(cnt[id] + 1, vector<int>(mx + 1));
+      for (int i = 0; i <= w; ++i) {
+        for (int j = 0; j <= cnt[id]; ++j) {
+          for (int k = 0; k <= mx; ++k) {
+            if (j + min(i, k) <= cnt[id]) {
+              dp1[j + min(i, k)][max(i, k)] += dp[j][k];
+              dp1[j + min(i, k)][max(i, k)] %= MOD;
+            }
+          }
+        }
+      }
+      swap(dp, dp1);
+    }
+    int s = 0;
+    for (int i = 0; i <= mx; ++i) {
+      s += dp[cnt[id]][i];
+    }
+    s %= MOD;
+    Ans *= s;
+    Ans %= MOD;
+    cnt[id] = 0;
+  }
+  for (auto& s : cnt) {
+    if (s.second > 0) {
+      Ans = 0;
+    }
+  }
+  cout << Ans;
+}
 </pre>
 </article>
 
@@ -359,4 +491,214 @@ int main() {
   <div class="anchor" id="t8"></div>
   <h3>Задача G. Критерий в Бурляндии</h3>
 
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
+#include <climits>
+
+using namespace std;
+using ll = long long;
+void solve();
+
+int main() {
+  int t = 1;
+  cin >> t;
+  while (t-- > 0) solve();
+  return 0;
+}
+
+struct Graph {
+  vector<int> tin, tout, d;
+  vector<vector<pair<int, ll>>> up;
+
+  int timer;
+
+  void dfs(int v, const vector<vector<int>>& g, const vector<int>& arr, int p = -1) {
+    tin[v] = timer++;
+    up[0][v] = { p, arr[v] };
+    for (int l = 1; l < 20; ++l) {
+      if (up[l - 1][v].first == -1) {
+        up[l][v] = { -1, 0 };
+        continue;
+      }
+      up[l][v].first = up[l - 1][up[l - 1][v].first].first;
+      up[l][v].second = up[l - 1][up[l - 1][v].first].second + up[l - 1][v].second;
+    }
+    for (int u : g[v]) {
+      if (u == p) continue;
+      d[u] = d[v] + 1;
+      dfs(u, g, arr, v);
+    }
+    tout[v] = timer;
+  }
+
+  Graph(const vector<vector<int>>& g, const vector<int>& a) : tin(g.size()), tout(g.size()), d(g.size()), up(20, vector<pair<int, ll>>(g.size())) {
+    timer = 0;
+    dfs(0, g, a);
+  }
+
+  bool anc(int p, int v) {
+    return tin[p] <= tin[v] && tout[p] >= tout[v];
+  }
+
+  int getLenVertical(int u, int v) {
+    if (!anc(u, v)) swap(u, v);
+    //assert(anc(u, v));
+    return d[v] - d[u] - 1;
+  }
+
+  pair<int, ll> LA(int v, int k) {
+    if (k <= 0) return { v, 0 };
+    ll sum = 0;
+    for (int i = 0; i < 20; ++i) {
+      if (k >> i & 1) sum += up[i][v].second, v = up[i][v].first;
+    }
+    return { v, sum };
+  }
+
+  int LCA(int u, int v) {
+    if (anc(u, v)) return u;
+    for (int l = 19; l >= 0; --l) {
+      if (up[l][u].first == -1 || anc(up[l][u].first, v)) continue;
+      u = up[l][u].first;
+    }
+    return up[0][u].first;
+  }
+
+  bool lower(int a, int b) {
+    return tin[a] < tin[b];
+  }
+};
+
+ll sum(int r) { return r * 1ll * (r + 1) / 2; }
+
+ll sumSeg(int l, int r) {
+  return sum(r) - sum(l - 1);
+}
+
+void solve() {
+  int n, q; cin >> n >> q;
+  vector<int> a(n);
+  for (int i = 0; i < n; ++i) cin >> a[i];
+  vector<vector<int>> g(n);
+  for (int i = 1; i < n; ++i) {
+    int u, v; cin >> u >> v;
+    --u, --v;
+    g[u].emplace_back(v);
+    g[v].emplace_back(u);
+  }
+  vector<int> parent(n), d(n);
+  auto dfs = [&](auto& self, int v, int p = -1) -> void {
+    parent[v] = p;
+    for (int u : g[v]) {
+      if (u == p) continue;
+      d[u] = d[v] + 1;
+      self(self, u, v);
+    }
+    };
+  dfs(dfs, 0);
+
+  vector<int> compressed_parent = parent;
+  vector<vector<int>> cG(n);
+  for (int v = 0; v < n; ++v) {
+    vector<int> path;
+    while (compressed_parent[v] > 0 && a[compressed_parent[v]] == 0) {
+      path.emplace_back(compressed_parent[v]);
+      compressed_parent[v] = compressed_parent[compressed_parent[v]];
+    }
+    for (auto& x : path) compressed_parent[x] = compressed_parent[v];
+    if (a[v] == 0 || !v) continue;
+    cG[compressed_parent[v]].emplace_back(v);
+  }
+
+  vector<int> next_collision(n), sum_collision(n);
+  for (int v = 0; v < n; ++v) {
+    if (!a[v]) continue;
+    next_collision[v] = v;
+    int xr = a[v], sm = a[v];
+    while (xr == sm && next_collision[v] > -1) {
+      next_collision[v] = compressed_parent[next_collision[v]];
+      if (next_collision[v] == -1) break;
+      xr ^= a[next_collision[v]];
+      sm += a[next_collision[v]];
+    }
+  }
+
+  for (int v = 0; v < n; ++v) {
+    if (!a[v]) {
+      if (!v) next_collision[v] = -1;
+      else next_collision[v] = next_collision[compressed_parent[v]];
+    }
+    sum_collision[v] = d[v];
+    if (next_collision[v] > -1) sum_collision[v] -= d[next_collision[v]];
+    else sum_collision[v]++;
+  }
+
+  Graph def(g, sum_collision);
+  Graph compressed(cG, sum_collision);
+
+  while (q--) {
+    int u, v; cin >> u >> v;
+    --u, --v;
+    if (def.lower(v, u)) swap(u, v);
+    int z = def.LCA(u, v);
+
+    int cv = (a[v] || !v ? v : compressed_parent[v]), cu = (a[u] || !u ? u : compressed_parent[u]), cz = (a[z] || !z ? z : compressed_parent[z]);
+
+    ll ans = 0;
+
+    vector<int> L, R, Lspaces = { 0 }, Rspaces = { 0 };
+
+    if (compressed.d[cv] > compressed.d[cz] + 23) {
+      int unt = compressed.LA(cv, compressed.d[cv] - (compressed.d[cz] + 23)).first;
+      auto [to, sm] = def.LA(v, d[v] - d[unt]);
+      ans += sm; v = to;
+    }
+
+    if (compressed.d[cu] > compressed.d[cz] + 23) {
+      int unt = compressed.LA(cu, compressed.d[cu] - (compressed.d[cz] + 23)).first;
+      auto [to, sm] = def.LA(u, d[u] - d[unt]);
+      ans += sm; u = to;
+    }
+
+    while (u != z) {
+      int to = compressed_parent[u];
+      if (def.anc(to, z)) to = z;
+      L.emplace_back(u);
+      Lspaces.emplace_back(def.getLenVertical(u, to));
+      u = to;
+    }
+    while (v != z) {
+      int to = compressed_parent[v];
+      if (def.anc(to, z)) to = z;
+      R.emplace_back(v);
+      Rspaces.emplace_back(def.getLenVertical(v, to));
+      v = to;
+    }
+    L.emplace_back(z);
+    reverse(R.begin(), R.end());
+    reverse(Rspaces.begin(), Rspaces.end());
+    for (auto& x : R) L.emplace_back(x);
+    for (auto& x : Rspaces) Lspaces.emplace_back(x);
+    int j = 0, xr = 0, sum = 0;
+    ll cnt = 0;
+    for (int i = 0; i < (int)L.size(); ++i) {
+      while (j < (int)L.size() && xr == sum) {
+        xr ^= a[L[j]]; sum += a[L[j]];
+        cnt += Lspaces[j] + 1;
+        j++;
+      }
+      if (xr != sum) cnt--;
+      ans += sumSeg(cnt - Lspaces[i], cnt);
+      if (xr != sum) cnt++;
+      xr ^= a[L[i]]; sum -= a[L[i]];
+      cnt -= Lspaces[i] + 1;
+    }
+    cout << ans << '\n';
+  }
+}
+</pre>
 </article>
