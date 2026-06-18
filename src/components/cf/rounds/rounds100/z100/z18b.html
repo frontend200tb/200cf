@@ -23,3 +23,37 @@
 </pre>
   <code>20</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/18/problem/A" target="_blank">Задача 18A</a>
+    <br><a href="https://codeforces.com/contest/18" target="_blank">Codeforces Beta Round 18 (Div.2) 2010.06.16</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+typedef long long ll;
+
+int main() {
+  ll n; // число платформ
+  ll d; // прыжок кузнечика
+  ll m, l; // координаты платформы [(k-1)m,(k-1)m+l]
+  cin >> n >> d >> m >> l;
+
+  ll coord = 0;
+  for (ll i = l; i < n * m; i += m) {
+    if (i + d - i % d < i - l + m || i > n * m - m) {
+      coord = i + d - i % d;
+      break;
+    }
+  }
+
+  cout << coord;
+}
+</pre>
+</details>
