@@ -37,3 +37,115 @@ sell 4
 </pre>
   <code>0</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/18/problem/D" target="_blank">Задача 18D</a>
+    <br><a href="https://codeforces.com/contest/18" target="_blank">Codeforces Beta Round 18 (Div.2) 2010.06.16</a>
+  </div>
+
+  <p>У Васи может быть только одна флешка. Каждый день происходит либо win x (выиграл флешку объема 2^x), либо sell x (пришел покупатель за флешкой 2^x). Нужно максимизировать заработок.</p>
+  <p>Алгоритм использует жадный подход с выбором продаж в порядке убывания объема.</p>
+  <p>Длинная арифметика для подсчета суммы. Так как 2^2000 — это огромное число (около 600 десятичных цифр), используем массив для хранения числа в десятичной системе.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+using namespace std;
+
+const int MAX_DIGITS = 610;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int days;
+  cin >> days;
+
+  int eventType[5000];
+  int volume[5000];
+  int wasSold[2001] = { 0 };
+
+  // result[1] - единицы, result[2] - десятки, ...
+  int result[MAX_DIGITS] = { 0 };
+
+  string operation;
+  int x;
+
+  for (int i = 0; i < days; i++) {
+    cin >> operation >> x;
+    volume[i] = x;
+    if (operation[0] == 'w')
+      eventType[i] = 0;
+    else
+      eventType[i] = 1;
+  }
+
+  while (true) {
+    // 1. Находим sell с максимальным объемом
+    int maxVolume = -1;
+    int sellPos = -1;
+
+    for (int i = 0; i < days; i++) {
+      if (eventType[i] == 1 && maxVolume < volume[i]) {
+        maxVolume = volume[i];
+        sellPos = i;
+      }
+    }
+
+    if (maxVolume < 0) {
+      break;
+    }
+
+    // 2. Ищем win того же объема до sell
+    int winPos;
+    for (winPos = sellPos - 1; winPos >= 0 && eventType[winPos] >= 0; winPos--) {
+      if (eventType[winPos] == 0 && volume[winPos] == maxVolume)
+        break;
+    }
+
+    // 3. Если win не найден - помечаем sell как невозможный
+    if (winPos < 0 || eventType[winPos] < 0) {
+      eventType[sellPos] = 2;
+      continue;
+    }
+
+    // 4. Нашли пару - запоминаем и удаляем промежуточные события
+    wasSold[maxVolume] = 1;
+
+    for (int i = winPos; i <= sellPos; i++) {
+      eventType[i] = -1;
+    }
+  }
+
+  for (int i = 0; i < MAX_DIGITS; i++) {
+    result[i] = 0;
+  }
+
+  for (int x = 2000; x >= 0; x--) {
+    // Умножаем текущее число на 2
+    for (int i = 1; i < MAX_DIGITS; i++) {
+      result[i] <<= 1; // умножаем разряд на 2
+      if (result[i - 1] > 9) {
+        result[i - 1] -= 10;
+        result[i]++;
+      }
+    }
+    // Добавляем 1 (прибавляем 2^x)
+    result[1] += wasSold[x];
+  }
+
+  int pos = MAX_DIGITS - 1;
+  while (pos > 1 && result[pos] == 0) pos--;
+
+  for (int i = pos; i >= 1; i--) {
+    cout << result[i];
+  }
+  cout << '\n';
+
+  return 0;
+}
+</pre>
+</details>
