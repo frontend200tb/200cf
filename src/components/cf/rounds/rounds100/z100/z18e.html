@@ -48,3 +48,127 @@ bab
 zbz
 </pre>
 </details>
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/18/problem/E" target="_blank">Задача 18E</a>
+    <br><a href="https://codeforces.com/contest/18" target="_blank">Codeforces Beta Round 18 (Div.2) 2010.06.16</a>
+  </div>
+
+  <p>Задача решается с помощью динамического программирования по строкам. Для каждой строки мы выбираем пару цветов: один для четных столбцов (0, 2, 4, ...), другой для нечетных (1, 3, 5, ...).</p>
+  <ul>
+    <li>В каждой строке не более 2 цветов → мы кодируем строку парой (цвет_четных, цвет_нечетных)</li>
+    <li>Соседние клетки в строке не совпадают → цвета в паре должны быть разными</li>
+    <li>Соседние клетки в столбце не совпадают → цвета соседних строк на одинаковых позициях должны отличаться</li>
+  </ul>
+  <p>Кодирование состояния</p>
+  <ul>
+    <li>Состояние pair = color_even * 26 + color_odd кодирует пару цветов</li>
+    <li>color_even — цвет для позиций с четным индексом (0, 2, 4, ...)</li>
+    <li>color_odd — цвет для позиций с нечетным индексом (1, 3, 5, ...)</li>
+  </ul>
+  <p>dp[i][pair] = минимальное количество перекрашиваний для первых i строк, где i-я строка имеет пару цветов pair</p>
+  <p>В массиве parent храним, из какого состояния пришли, чтобы восстановить оптимальное решение в конце.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int INF = 1e9;
+const int MAX_N = 500;
+const int ALPHABET = 26;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n, m;
+  cin >> n >> m;
+
+  // dp[i][j] - минимальное количество перекрашиваний для первых i строк,
+  // где j - код пары цветов для i-й строки (j / 26 - цвет в четных столбцах,
+  // j % 26 - цвет в нечетных столбцах)
+  vector<vector<int>> dp(n + 1, vector<int>(ALPHABET * ALPHABET, INF));
+  vector<vector<int>> parent(n + 1, vector<int>(ALPHABET * ALPHABET, -1));
+
+  // Инициализация для 0 строк
+  fill(dp[0].begin(), dp[0].end(), 0);
+
+  int best_last_pair = 0; // Лучшая пара цветов для последней строки
+
+  for (int i = 1; i <= n; ++i) {
+    string s;
+    cin >> s;
+
+    // cnt[0][c] - сколько раз цвет c встречается в четных позициях (0, 2, 4, ...)
+    // cnt[1][c] - сколько раз цвет c встречается в нечетных позициях (1, 3, 5, ...)
+    int cnt[2][ALPHABET] = {};
+    for (int j = 0; j < m; ++j) {
+      cnt[j & 1][s[j] - 'a']++;
+    }
+
+    // Перебираем все возможные пары цветов для текущей строки
+    for (int cur_pair = 0; cur_pair < ALPHABET * ALPHABET; ++cur_pair) {
+      int color_even = cur_pair / ALPHABET;  // Цвет для четных столбцов
+      int color_odd = cur_pair % ALPHABET;    // Цвет для нечетных столбцов
+
+      // Цвета в паре должны быть разными (смежные клетки не должны совпадать)
+      if (color_even == color_odd) continue;
+
+      // Ищем лучшую предыдущую строку
+      for (int prev_pair = 0; prev_pair < ALPHABET * ALPHABET; ++prev_pair) {
+        int prev_color_even = prev_pair / ALPHABET;
+        int prev_color_odd = prev_pair % ALPHABET;
+
+        // В соседних строках на одной позиции не должны совпадать цвета
+        if (prev_color_even == color_even || prev_color_odd == color_odd) continue;
+
+        if (dp[i - 1][prev_pair] < dp[i][cur_pair]) {
+          dp[i][cur_pair] = dp[i - 1][prev_pair];
+          parent[i][cur_pair] = prev_pair;
+        }
+      }
+
+      // Добавляем стоимость перекрашивания текущей строки
+      // Нужно перекрасить все клетки, которые не соответствуют выбранным цветам
+      dp[i][cur_pair] += m - cnt[0][color_even] - cnt[1][color_odd];
+
+      // Запоминаем лучший вариант для последней строки
+      if (i == n && dp[i][cur_pair] < dp[i][best_last_pair]) {
+        best_last_pair = cur_pair;
+      }
+    }
+  }
+
+  // Выводим минимальное количество перекрашиваний
+  cout << dp[n][best_last_pair] << '\n';
+
+  // Восстанавливаем ответ
+  vector<string> result(n, string(m, ' '));
+  int current_pair = best_last_pair;
+
+  for (int i = n - 1; i >= 0; --i) {
+    int color_even = current_pair / ALPHABET;
+    int color_odd = current_pair % ALPHABET;
+
+    // Заполняем строку
+    for (int j = 0; j < m; ++j) {
+      result[i][j] = (j & 1 ? color_odd : color_even) + 'a';
+    }
+
+    // Переходим к предыдущей строке
+    current_pair = parent[i + 1][current_pair];
+  }
+
+  // Выводим результат
+  for (const string& row : result) {
+    cout << row << '\n';
+  }
+
+  return 0;
+}
+</pre>
+</details>
