@@ -50,3 +50,101 @@ a-A 2:1
 a
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/19/problem/A" target="_blank">Задача 19A</a>
+    <br><a href="https://codeforces.com/contest/19" target="_blank">Codeforces Beta Round 19 2010.06.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <map>
+#include <algorithm>
+
+using namespace std;
+
+// Структура для хранения статистики команды
+struct TeamStats {
+  int points = 0;      // очки
+  int goalsScored = 0; // забитые голы
+  int goalDiff = 0;    // разность забитых и пропущенных
+};
+
+int main() {
+  int n;
+  cin >> n;
+
+  vector<string> teams(n);
+  for (int i = 0; i < n; i++) {
+    cin >> teams[i];
+  }
+
+  // Храним статистику для каждой команды
+  map<string, TeamStats> stats;
+
+  // Читаем все матчи: n*(n-1)/2 игр
+  int matches = n * (n - 1) / 2;
+  for (int i = 0; i < matches; i++) {
+    string matchInfo, matchResult;
+    int goals1, goals2;
+    char colon; // символ ':' между счетами
+
+    // Формат: "team1-team2 goals1:goals2"
+    cin >> matchInfo >> goals1 >> colon >> goals2;
+
+    // Разделяем название матча на две команды
+    int dashPos = matchInfo.find('-');
+    string team1 = matchInfo.substr(0, dashPos);
+    string team2 = matchInfo.substr(dashPos + 1);
+
+    // Обновляем статистику забитых голов
+    stats[team1].goalsScored += goals1;
+    stats[team2].goalsScored += goals2;
+
+    // Обновляем разность голов
+    stats[team1].goalDiff += (goals1 - goals2);
+    stats[team2].goalDiff += (goals2 - goals1);
+
+    // Начисляем очки в зависимости от результата
+    if (goals1 > goals2) {
+      // Победа первой команды
+      stats[team1].points += 3;
+    } else if (goals1 < goals2) {
+      // Победа второй команды
+      stats[team2].points += 3;
+    } else {
+      // Ничья
+      stats[team1].points += 1;
+      stats[team2].points += 1;
+    }
+  }
+
+  // Сортируем команды по правилам турнирной таблицы:
+  // 1. По убыванию очков
+  // 2. По убыванию разности голов
+  // 3. По убыванию забитых голов
+  sort(teams.begin(), teams.end(), [&](const string& a, const string& b) {
+    if (stats[a].points != stats[b].points)
+      return stats[a].points > stats[b].points;
+    if (stats[a].goalDiff != stats[b].goalDiff)
+      return stats[a].goalDiff > stats[b].goalDiff;
+    return stats[a].goalsScored > stats[b].goalsScored;
+    });
+
+  // В плей-офф выходят первые n/2 команд
+  // Сортируем их лексикографически для вывода
+  sort(teams.begin(), teams.begin() + n / 2);
+
+  // Выводим команды, прошедшие в плей-офф
+  for (int i = 0; i < n / 2; i++) {
+    cout << teams[i] << endl;
+  }
+
+  return 0;
+}
+</pre>
+</details>
