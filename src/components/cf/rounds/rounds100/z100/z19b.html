@@ -34,3 +34,51 @@
 111
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/19/problem/B" target="_blank">Задача 19B</a>
+    <br><a href="https://codeforces.com/contest/19" target="_blank">Codeforces Beta Round 19 2010.06.24</a>
+  </div>
+
+  <p>Это классическая задача о рюкзаке с минимальной стоимостью для достижения необходимого «веса» n:</p>
+  <p>У нас есть n предметов. Каждый предмет i имеет «вес» t_i и «стоимость» c_i. Мы хотим минимизировать стоимость выбранных предметов, но при этом они должны давать сумму t_i такую, что количество невыбранных предметов n - k не превосходит этой суммы.</p>
+  <p>Динамика: dp[s] — минимальная стоимость выбранных товаров, дающих суммарный вес ровно s (где вес = t_i + 1).</p>
+  <p>Инициализация: dp[0] = 0, остальные — INF.</p>
+  <p>Для каждого товара обновляем рюкзак в обратном порядке.</p>
+  <p>В конце ответ — минимальное dp[s] для всех s >= n.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  int n; // число товаров
+  cin >> n;
+
+  vector<int> t(n), c(n);
+  for (int i = 0; i < n; i++) {
+    cin >> t[i] >> c[i];
+  }
+
+  const long long INF = 4e18;
+  vector<long long> dp(n + 1, INF);
+  dp[0] = 0;
+
+  for (int i = 0; i < n; i++) {
+    int weight = t[i] + 1;
+    for (int s = n; s >= 0; s--) {
+      if (dp[s] == INF) continue;
+      int ns = min(n, s + weight);
+      dp[ns] = min(dp[ns], dp[s] + c[i]);
+    }
+  }
+
+  cout << dp[n];
+}
+</pre>
+</details>
