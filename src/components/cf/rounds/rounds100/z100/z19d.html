@@ -59,3 +59,62 @@ find 4 4
 5 5
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/19/problem/D" target="_blank">Задача 19D</a>
+    <br><a href="https://codeforces.com/contest/19" target="_blank">Codeforces Beta Round 19 2010.06.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+const int mxn = 5e5 + 5, T = 1 << 18;
+int op[mxn], x[mxn], y[mxn], n;
+int Mx[mxn], My[mxn];
+map<pair<int, int>, int>m;int C;
+
+void upd(int x, int y, int d) {
+  int id = T + m[{x, y}];
+  Mx[id] = x * d, My[id] = y * d;
+  for (int i = id >> 1;i;i >>= 1) {
+    Mx[i] = max(Mx[i << 1], Mx[i << 1 | 1]);
+    My[i] = max(My[i << 1], My[i << 1 | 1]);
+  }
+}
+
+int ask(int id, int x, int y) {
+  if (Mx[id] < x or My[id] < y)return -1;
+  if (id >= T)return id;
+  int t = ask(id << 1, x, y);
+  if (t != -1)return t;
+  return ask(id << 1 | 1, x, y);
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin >> n;
+  for (int i = 1;i <= n;++i) {
+    string s;cin >> s >> x[i] >> y[i];
+    if (s[0] == 'r')op[i] = 1;
+    if (s[0] == 'f')op[i] = 2;
+    if (op[i] < 2)m[{x[i], y[i]}] = 1;
+  }
+  for (auto& it : m)it.second = C++;
+  for (int i = 1;i <= n;++i) {
+    if (!op[i])upd(x[i], y[i], 1);
+    else if (op[i] == 1)upd(x[i], y[i], 0);
+    else {
+      int ans = ask(1, x[i] + 1, y[i] + 1);
+      if (ans == -1)cout << "-1\n";
+      else cout << Mx[ans] << ' ' << My[ans] << '\n';
+    }
+  }
+}
+</pre>
+</details>
