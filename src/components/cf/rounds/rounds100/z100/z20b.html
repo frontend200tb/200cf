@@ -21,3 +21,54 @@
 3.0000000000
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/20/problem/B" target="_blank">Задача 20B</a>
+  <br><a href="https://codeforces.com/contest/20" target="_blank">Codeforces Alpha Round 20 2010.06.18</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+  double a, b, c;
+  cin >> a >> b >> c;
+
+  int num; // число корней
+  double root1 = 0, root2 = 0; // корни
+
+  if (b * b < 4 * a * c || (a == 0 && b == 0 && c)) {
+    num = 0;
+  } else if (a == 0 && b == 0 && c == 0) {
+    num = -1;
+  } else if (b * b == 4 * a * c || a == 0) {
+    num = 1;
+    if (a) {
+      root1 = -b / (2 * a);
+    } else {
+      root1 = -c / b;
+    }
+  } else {
+    num = 2;
+    root1 = (-b + (a > 0 ? -1 : 1) * sqrt(b * b - 4 * a * c)) / 2 / a;
+    root2 = (-b + (a > 0 ? 1 : -1) * sqrt(b * b - 4 * a * c)) / 2 / a;
+  }
+
+  cout << num << '\n';
+  cout << fixed << setprecision(6);
+  if (num > 0) {
+    cout << root1 << '\n';
+  }
+  if (num > 1) {
+    cout << root2 << '\n';
+  }
+}
+</pre>
+</details>
