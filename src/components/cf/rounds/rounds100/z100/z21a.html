@@ -38,3 +38,112 @@ john.smith@codeforces.ru/contest.icpc/12
 NO
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/21/problem/A" target="_blank">Задача 21A</a>
+    <br><a href="https://codeforces.com/contest/21" target="_blank">Codeforces Alpha Round 21 2010.06.28</a>
+  </div>
+
+  <p>Напишем функцию isChar() которая проверяет что символ это последовательность латинских букв любого регистра, цифр и символа подчеркивания «_». Будем раздельно проверять username, hostname,resource. После каждой проверки проверяем число символов.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+bool isChar(char c) {
+  if (c >= '0' && c <= '9' ||
+    c == '_' ||
+    c >= 'A' && c <= 'Z' ||
+    c >= 'a' && c <= 'z') {
+    return true;
+  }
+  return false;
+}
+
+int main() {
+  string s;
+  cin >> s;
+
+  int n = s.length();
+  int cnt = 0; // число символов
+  int cntHost = 0; // число символов hostname
+  bool isName = true;
+
+  for (int i = 0; i < n; i++) {
+
+    // проверка username
+    while (i < n && s[i] != '@') {
+      if (isChar(s[i])) {
+        cnt++;
+      } else {
+        isName = false;
+      }
+      i++;
+    }
+    // длина от 1 до 16
+    if (cnt == 0 || cnt > 16) {
+      isName = false;
+    }
+    cnt = 0;
+    if (s[i] == '@') {
+      i++;
+    }
+
+    // проверка hostname
+    while (i < n && s[i] != '/') {
+      if (isChar(s[i])) {
+        cnt++;
+      } else if (s[i] == '.') {
+        if (cnt == 0 || cnt > 16) {
+          isName = false;
+        }
+        cntHost += cnt;
+        cnt = 0;
+      } else {
+        isName = false; // не символ и не '.'
+      }
+      i++;
+    }
+    cntHost += cnt;
+    // не заканчивается на '.'
+    if (i > 0 && s[i - 1] == '.') {
+      isName = false;
+    }
+    // длина от 1 до 32
+    if (cntHost == 0 || cntHost > 32) {
+      isName = false;
+    }
+    cnt = 0;
+
+    // проверка resourse
+    if (s[i] == '/') {
+      i++;
+      while (i < n) {
+        if (isChar(s[i])) {
+          cnt++;
+        } else {
+          isName = false;
+        }
+        i++;
+      }
+      // длина от 1 до 16
+      if (cnt == 0 || cnt > 16) {
+        isName = false;
+      }
+    }
+
+  }
+
+  if (isName) {
+    cout << "YES";
+  } else {
+    cout << "NO";
+  }
+}
+</pre>
+</details>
