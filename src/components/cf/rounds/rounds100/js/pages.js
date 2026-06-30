@@ -28,11 +28,17 @@ import in23      from '../p100/elem-23-Round23';
 import in24      from '../p100/elem-24-Round24';
 import in25      from '../p100/elem-25-Round25';
 import in26      from '../p100/elem-26-Round26';
+import in27      from '../p100/elem-27-Round27';
+import in28      from '../p100/elem-28-Round28';
+import in29      from '../p100/elem-29-Round29';
+import in30      from '../p100/elem-30-Round30';
+import in31      from '../p100/elem-31-Round31';
 import in34      from '../p100/elem-34-Round34';
 import in38      from '../p100/elem-38-sio1';
 import in39      from '../p100/elem-39-sko1';
 import in44      from '../p100/elem-44-sko2';
 import in45      from '../p100/elem-45-sko3';
+import in46      from '../p100/elem-46-sio2';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -73,11 +79,17 @@ export default function pageLink(asideItems, currentContent) {
             case 24: in24(); break;
             case 25: in25(); break;
             case 26: in26(); break;
+            case 27: in27(); break;
+            case 28: in28(); break;
+            case 29: in29(); break;
+            case 30: in30(); break;
+            case 31: in31(); break;
             case 34: in34(); break;
             case 38: in38(); break;
             case 39: in39(); break;
             case 44: in44(); break;
             case 45: in45(); break;
+            case 46: in46(); break;
             default: break;
           }
         } else {

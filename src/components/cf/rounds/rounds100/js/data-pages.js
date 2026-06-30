@@ -25,6 +25,11 @@ import html23       from './../p100/elem-23-Round23.html';
 import html24       from './../p100/elem-24-Round24.html';
 import html25       from './../p100/elem-25-Round25.html';
 import html26       from './../p100/elem-26-Round26.html';
+import html27       from './../p100/elem-27-Round27.html';
+import html28       from './../p100/elem-28-Round28.html';
+import html29       from './../p100/elem-29-Round29.html';
+import html30       from './../p100/elem-30-Round30.html';
+import html31       from './../p100/elem-31-Round31.html';
 import html34       from './../p100/elem-34-Round34.html';
 import html38       from './../p100/elem-38-sio1.html';
 import html39       from './../p100/elem-39-sko1.html';
@@ -71,12 +76,17 @@ export const pages = [
   [html24, 24],
   [html25, 25],
   [html26, 26],
+  [html27, 27],
+  [html28, 28],
+  [html29, 29],
+  [html30, 30],
+  [html31, 31],
   [html34, 34],
   [html38, 38],
   [html39, 39],
   [html44, 44],
   [html45, 45],
-  html46,
+  [html46, 46],
   html48,
   html50,
   html52,
