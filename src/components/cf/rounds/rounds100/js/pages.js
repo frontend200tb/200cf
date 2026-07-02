@@ -33,12 +33,23 @@ import in28      from '../p100/elem-28-Round28';
 import in29      from '../p100/elem-29-Round29';
 import in30      from '../p100/elem-30-Round30';
 import in31      from '../p100/elem-31-Round31';
+import in32      from '../p100/elem-32-Round32';
+import in33      from '../p100/elem-33-Round33';
 import in34      from '../p100/elem-34-Round34';
+import in35      from '../p100/elem-35-Round35';
+import in36      from '../p100/elem-36-Round36';
+import in37      from '../p100/elem-37-Round37';
 import in38      from '../p100/elem-38-sio1';
 import in39      from '../p100/elem-39-sko1';
+import in40      from '../p100/elem-40-Round39';
+import in41      from '../p100/elem-41-Round40';
+import in42      from '../p100/elem-42-Round41';
+import in43      from '../p100/elem-43-Round42';
 import in44      from '../p100/elem-44-sko2';
 import in45      from '../p100/elem-45-sko3';
 import in46      from '../p100/elem-46-sio2';
+import in48      from '../p100/elem-48-sio3';
+import in50      from '../p100/elem-50-Round47';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -84,12 +95,23 @@ export default function pageLink(asideItems, currentContent) {
             case 29: in29(); break;
             case 30: in30(); break;
             case 31: in31(); break;
+            case 32: in32(); break;
+            case 33: in33(); break;
             case 34: in34(); break;
+            case 35: in35(); break;
+            case 36: in36(); break;
+            case 37: in37(); break;
             case 38: in38(); break;
             case 39: in39(); break;
+            case 40: in40(); break;
+            case 41: in41(); break;
+            case 42: in42(); break;
+            case 43: in43(); break;
             case 44: in44(); break;
             case 45: in45(); break;
             case 46: in46(); break;
+            case 48: in48(); break;
+            case 50: in50(); break;
             default: break;
           }
         } else {

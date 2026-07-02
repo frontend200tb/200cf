@@ -30,9 +30,18 @@ import html28       from './../p100/elem-28-Round28.html';
 import html29       from './../p100/elem-29-Round29.html';
 import html30       from './../p100/elem-30-Round30.html';
 import html31       from './../p100/elem-31-Round31.html';
+import html32       from './../p100/elem-32-Round32.html';
+import html33       from './../p100/elem-33-Round33.html';
 import html34       from './../p100/elem-34-Round34.html';
+import html35       from './../p100/elem-35-Round35.html';
+import html36       from './../p100/elem-36-Round36.html';
+import html37       from './../p100/elem-37-Round37.html';
 import html38       from './../p100/elem-38-sio1.html';
 import html39       from './../p100/elem-39-sko1.html';
+import html40       from './../p100/elem-40-Round39.html';
+import html41       from './../p100/elem-41-Round40.html';
+import html42       from './../p100/elem-42-Round41.html';
+import html43       from './../p100/elem-43-Round42.html';
 import html44       from './../p100/elem-44-sko2.html';
 import html45       from './../p100/elem-45-sko3.html';
 import html46       from './../p100/elem-46-sio2.html';
@@ -81,14 +90,23 @@ export const pages = [
   [html29, 29],
   [html30, 30],
   [html31, 31],
+  [html32, 32],
+  [html33, 33],
   [html34, 34],
+  [html35, 35],
+  [html36, 36],
+  [html37, 37],
   [html38, 38],
   [html39, 39],
+  [html40, 40],
+  [html41, 41],
+  [html42, 42],
+  [html43, 43],
   [html44, 44],
   [html45, 45],
   [html46, 46],
-  html48,
-  html50,
+  [html48, 48],
+  [html50, 50],
   html52,
   html59,
   html70,
