@@ -48,7 +48,9 @@ import in43      from '../p100/elem-43-Round42';
 import in44      from '../p100/elem-44-sko2';
 import in45      from '../p100/elem-45-sko3';
 import in46      from '../p100/elem-46-sio2';
+import in47      from '../p100/elem-47-Round44';
 import in48      from '../p100/elem-48-sio3';
+import in49      from '../p100/elem-49-Round46';
 import in50      from '../p100/elem-50-Round47';
 
 export default function pageLink(asideItems, currentContent) {
@@ -110,7 +112,9 @@ export default function pageLink(asideItems, currentContent) {
             case 44: in44(); break;
             case 45: in45(); break;
             case 46: in46(); break;
+            case 47: in47(); break;
             case 48: in48(); break;
+            case 49: in49(); break;
             case 50: in50(); break;
             default: break;
           }
