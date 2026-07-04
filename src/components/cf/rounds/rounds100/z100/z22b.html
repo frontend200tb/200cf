@@ -35,3 +35,53 @@
 16
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/22/problem/B" target="_blank">Задача 22B</a>
+    <br><a href="https://codeforces.com/contest/22" target="_blank">Codeforces 22 Round 22 Beta (Div. 2) 2010.06.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int n, m; // размеры офиса
+  cin >> n >> m;
+
+  vector<string> A(n);
+  for (int i = 0; i < n; i++) {
+    cin >> A[i];
+  }
+
+  int res = 0; // наибольший периметр стола
+
+  for (int x1 = 0; x1 < n; x1++) {
+    for (int y1 = 0; y1 < m; y1++) {
+      for (int x2 = x1; x2 < n; x2++) {
+        for (int y2 = y1; y2 < m; y2++) {
+          int s = 0;
+          for (int i = x1; i < x2 + 1; i++) {
+            for (int j = y1; j < y2 + 1; j++) {
+              s += A[i][j] - 48;
+            }
+          }
+
+          if (!s) {
+            res = max(res, 2 * (y2 - y1 + x2 - x1 + 2));
+          }
+        }
+      }
+    }
+  }
+
+  cout << res;
+}
+</pre>
+</details>
