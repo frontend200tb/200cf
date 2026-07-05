@@ -32,3 +32,44 @@
 -1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/22/problem/C" target="_blank">Задача 22C</a>
+    <br><a href="https://codeforces.com/contest/22" target="_blank">Codeforces 22 Round 22 Beta (Div. 2) 2010.06.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  unsigned int n; // число серверов
+  unsigned int m; // число прямых соединений
+  unsigned int v; // номер сервера, при поломке
+                  // которого должна ломаться вся сеть
+  cin >> n >> m >> v;
+
+  // Проверка возможности построения графа
+  if (m < (n - 1) || (((n - 1) * (n - 2)) >> 1) + 1 < m) {
+    cout << "-1\n";
+  } else {
+    // Вывод первого ребра (связь с вершиной v)
+    cout << ((v == 1) ? 2u : 1u) << ' ' << v << '\n';
+    --m;
+
+    // Вывод оставшихся ребер
+    for (unsigned int i = 2; i <= n && m > 0; ++i) {
+      for (unsigned int j = i + 1; j <= n && m > 0; ++j) {
+        unsigned int first = (v == 1 && i == 2) ? 1u : i;
+        cout << first << ' ' << j << '\n';
+        --m;
+      }
+    }
+  }
+}
+</pre>
+</details>
