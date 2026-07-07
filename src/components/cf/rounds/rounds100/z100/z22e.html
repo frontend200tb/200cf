@@ -33,3 +33,72 @@
 3 7
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/22/problem/D" target="_blank">Задача 22D</a>
+    <br><a href="https://codeforces.com/contest/22" target="_blank">Codeforces 22 Round 22 Beta (Div. 2) 2010.06.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+#define N 100005
+int f[N], g[N], r[N];
+
+int dfs(int x) {
+  f[x] = 1;
+  if (!f[g[x]]) {
+    return dfs(g[x]);
+  }
+  return f[x] = x;
+}
+
+int main() {
+  int n; // число участников
+  cin >> n;
+
+  int x; // номер человека
+  for (int i = 1; i <= n; i++) {
+    cin >> x;
+    g[i] = x;
+    r[x]++;
+  }
+
+  int u = 0;
+  vector<int> s, t;
+
+  for (int i = 1; i <= n; i++) {
+    if (!r[i]) {
+      u++;
+      s.push_back(i);
+      t.push_back(dfs(i));
+    }
+  }
+
+  int v = u;
+
+  for (int i = 1;i <= n;i++) {
+    if (!f[i]) {
+      u++;
+      s.push_back(i);
+      t.push_back(dfs(i));
+    }
+  }
+
+  if (u == 1 && !v) {
+    u = 0;
+  }
+
+  cout << u << '\n';
+  for (int i = 0; i < u; i++) {
+    cout << t[i] << ' ' << s[(i + 1) % u] << '\n';
+  }
+}
+</pre>
+</details>
