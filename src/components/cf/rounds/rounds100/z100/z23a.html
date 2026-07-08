@@ -35,3 +35,40 @@ zzz
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/23/problem/D" target="_blank">Задача 23A</a>
+    <br><a href="https://codeforces.com/contest/23" target="_blank">Codeforces 23 Round 23 Beta 2010.07.09</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  string s; // строка
+  cin >> s;
+
+  int n = s.length(); // длина строки
+  int res = 0;
+
+  for (int i = 0; i < n; i++)	{
+    for (int j = i + 1; j < n; j++) {
+      int k = 0;
+      while (i + k < n && j + k < n && s[i + k] == s[j + k]) {
+        k++;
+      }
+      res = max(res, k);
+    }
+  }
+
+  cout << res;
+}
+</pre>
+</details>
