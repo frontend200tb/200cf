@@ -22,3 +22,35 @@
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/23/problem/B" target="_blank">Задача 23B</a>
+    <br><a href="https://codeforces.com/contest/23" target="_blank">Codeforces 23 Round 23 Beta 2010.07.09</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // число человек
+    cin >> n;
+
+    if (n > 1) {
+      cout << n - 2;
+    } else {
+      cout << 0;
+    }
+    cout << '\n';
+  }
+}
+</pre>
+</details>
