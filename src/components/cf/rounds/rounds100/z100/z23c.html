@@ -28,3 +28,73 @@ YES
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/23/problem/C" target="_blank">Задача 23C</a>
+    <br><a href="https://codeforces.com/contest/23" target="_blank">Codeforces 23 Round 23 Beta 2010.07.09</a>
+  </div>
+
+  <p>Отсортируем ящики в порядке возрастания числа апельсинов. Посчитаем общее число яблок в ящиках с нечетными и четными номерами. Если в ящиках с нечетными номерами яблок не меньше половины, то выберем их (их ровно N). Если же в ящиках с четными номерами яблок не меньше половины, то возьмем их и добавим к ним самый последний ящик (в котором больше всего апельсинов). Нетрудно видеть, что в обоих случаях требуемые условия выполнены.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int t; // число тестов
+  cin >> t;
+
+  while (t--) {
+    int n; // число ящиков в ответе
+    cin >> n;
+    int m = 2 * n - 1; // число ящиков
+
+    // <<яблоки,апельсины> номер ящика>
+    vector<pair<pair<int, int>, int>> p(m);
+
+    int a = 0; // число яблок
+    int o = 0; // число апельсинов
+
+    for (int i = 0; i < m; i++) {
+      cin >> a >> o;
+      p[i].first.first = a; // число яблок
+      p[i].first.second = o; // число апельсинов
+      p[i].second = i + 1; // номер ящика
+    }
+
+    // сортируем по числу яблок
+    sort(p.begin(), p.end());
+
+    long long sum1 = 0; // число апельсинов в нечетных ящиках
+    long long sum2 = 0; // число апельсинов в четных ящиках
+
+    for (int i = 0; i < m - 1; i += 2) {
+      sum1 += p[i].first.second;
+      sum2 += p[i+1].first.second;
+    }
+
+    cout << "YES\n";
+
+    // не менее половины яблок в нечетных ящиках
+    if (sum1 * 2 >= (sum1 + sum2)) {
+      for (int i = 0; i < m; i += 2) {
+        cout << p[i].second << ' ';
+      }
+    } else {
+      for (int i = 1; i < m; i += 2) {
+        cout << p[i].second << ' ';
+      }
+      cout << p[m-1].second;
+    }
+
+    cout << '\n';
+  }
+}
+</pre>
+</details>

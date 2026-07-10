@@ -28,3 +28,64 @@ NO
 
 </pre>
 </details>
+
+<details>
+  <summary>Решение неправильный ответ на тесте 20</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/23/problem/D" target="_blank">Задача 23D</a>
+    <br><a href="https://codeforces.com/contest/23" target="_blank">Codeforces 23 Round 23 Beta 2010.07.09</a>
+  </div>
+
+<pre class="language-cpp">
+#include <cstdio>
+#include <complex>
+
+using namespace std;
+
+#define R(a) scanf("%d%d",&x,&y),a=pnt(x,y)
+#define P(a) printf("%.9f %.9f ",real(a),imag(a))
+#define ep 1e-7
+
+typedef complex<double> pnt;
+pnt a, b, c;int T, x, y;
+
+double crs(pnt a, pnt b) {
+  return imag(a * conj(b));
+}
+
+bool G(pnt a, pnt b, pnt c) {
+  pnt d = b + b - c,
+    X = b - a,
+    Y = d - a,
+    z = pnt(norm(X), norm(Y)),
+    x = pnt(real(X) * 2, real(Y) * 2),
+    y = pnt(imag(X) * 2, imag(Y) * 2),
+    A = pnt(crs(z, y), crs(x, z)) / crs(x, y) + a,
+    B = b + b - A,
+    C = c + c - B,
+    D = a + a - A;
+
+  if (crs(A - D, B - A) < ep || crs(B - A, C - B) < ep ||
+    crs(C - B, D - C) < ep || crs(D - C, A - D) < ep) {
+    return 1;
+  } else {
+    return puts("YES"), P(A), P(B), P(C), P(D), 0;
+  }
+}
+
+int main() {
+  for (scanf("%d", &T);T;T--) {
+    R(a), R(b), R(c);
+
+    if (fabs(crs(b - a, c - a)) < ep ||
+      (G(a, b, c) && G(a, c, b) && G(b, a, c) &&
+        G(b, c, a) && G(c, a, b) && G(c, b, a))) {
+      puts("NO");
+    }
+
+    puts("");
+  }
+}
+</pre>
+</details>
