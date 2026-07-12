@@ -48,3 +48,172 @@
 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/23/problem/E" target="_blank">Задача 23E</a>
+    <br><a href="https://codeforces.com/contest/23" target="_blank">Codeforces 23 Round 23 Beta 2010.07.09</a>
+  </div>
+
+  <p>Задача решается с помощью динамического программирования на дереве. Мы рассматриваем каждую вершину как корень поддерева и вычисляем для неё два типа состояний.</p>
+  <p>dp[v][k] — максимальное произведение размеров компонент в поддереве вершины v, при условии что компонента, содержащая вершину v, имеет размер k.</p>
+  <p>Особое состояние dp[v][0] означает, что компонента с вершиной v уже "отрезана" от родителя и её размер учтён как множитель.</p>
+  <p>Объединение с ребёнком: Если мы не отрезаем ребро к ребёнку, то мы объединяем компоненту вершины v с компонентой ребёнка, суммируя их размеры.</p>
+  <p>Отрезание ребра: Мы можем отрезать ребро к родителю, тогда текущая компонента становится отдельным множителем в произведении.</p>
+  <p>Так как произведение может быть огромным (до 700^700), используется класс BigInt с системой счисления по основанию 10000.</p>
+  <p>Сложность:</p>
+  <p>Время: O(n²) для каждой вершины, всего O(n²) операций</p>
+  <p>Память: O(n²) для хранения состояний DP</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+
+// Класс для работы с большими числами (произведение может быть огромным)
+// Хранит число в системе счисления с основанием 10000
+struct BigInt {
+  static const int BASE = 10000;
+  static const int DIGITS = 4;  // количество цифр в одном разряде
+
+  vector<int> digits;  // цифры в системе счисления с основанием 10000
+
+  BigInt(int value = 0) {
+    if (value == 0) {
+      digits.push_back(0);
+    } else {
+      while (value > 0) {
+        digits.push_back(value % BASE);
+        value /= BASE;
+      }
+    }
+  }
+
+  // Умножение двух больших чисел
+  BigInt operator*(const BigInt& other) const {
+    BigInt result;
+    result.digits.assign(digits.size() + other.digits.size(), 0);
+
+    // Умножаем как в столбик
+    for (size_t i = 0; i < digits.size(); i++) {
+      for (size_t j = 0; j < other.digits.size(); j++) {
+        result.digits[i + j] += digits[i] * other.digits[j];
+      }
+    }
+
+    // Переносы в системе счисления
+    for (size_t i = 0; i < result.digits.size() - 1; i++) {
+      result.digits[i + 1] += result.digits[i] / BASE;
+      result.digits[i] %= BASE;
+    }
+
+    // Удаляем ведущие нули
+    while (result.digits.size() > 1 && result.digits.back() == 0) {
+      result.digits.pop_back();
+    }
+
+    return result;
+  }
+
+  // Сравнение двух больших чисел
+  bool operator<(const BigInt& other) const {
+    if (digits.size() != other.digits.size()) {
+      return digits.size() < other.digits.size();
+    }
+    for (int i = digits.size() - 1; i >= 0; i--) {
+      if (digits[i] != other.digits[i]) {
+        return digits[i] < other.digits[i];
+      }
+    }
+    return false;  // числа равны
+  }
+
+  // Вывод числа (ручной формат без setw/setfill)
+  void print() const {
+    cout << digits.back();
+    for (int i = digits.size() - 2; i >= 0; i--) {
+      // Выводим каждую цифру с ведущими нулями до 4 знаков
+      int num = digits[i];
+      if (num < 1000) cout << '0';
+      if (num < 100) cout << '0';
+      if (num < 10) cout << '0';
+      cout << num;
+    }
+    cout << '\n';
+  }
+};
+
+const int MAXN = 705;
+int n;
+vector<int> tree[MAXN];  // список смежности дерева
+int subtreeSize[MAXN];   // размер поддерева
+BigInt dp[MAXN][MAXN];   // dp[v][k] - максимальное произведение для поддерева v,
+// где компонента, содержащая v, имеет размер k
+
+void dfs(int vertex, int parent) {
+  subtreeSize[vertex] = 1;
+  dp[vertex][1] = BigInt(1);  // изначально одна компонента размера 1
+
+  // Перебираем всех детей
+  for (int child : tree[vertex]) {
+    if (child == parent) continue;
+
+    dfs(child, vertex);
+
+    // Объединяем поддеревья - это классический рюкзак на дереве
+    for (int currentSize = subtreeSize[vertex]; currentSize >= 1; currentSize--) {
+      for (int childSize = subtreeSize[child]; childSize >= 0; childSize--) {
+        // Если мы не отрезаем ребро к ребенку, то объединяем компоненты
+        if (currentSize + childSize <= n) {
+          if (dp[vertex][currentSize + childSize] <
+            dp[vertex][currentSize] * dp[child][childSize]) {
+            dp[vertex][currentSize + childSize] =
+              dp[vertex][currentSize] * dp[child][childSize];
+          }
+        }
+      }
+    }
+
+    subtreeSize[vertex] += subtreeSize[child];
+  }
+
+  // Важный шаг: мы можем отрезать ребро к родителю,
+  // тогда компонента с вершиной vertex идёт как отдельный множитель
+  for (int i = 1; i <= subtreeSize[vertex]; i++) {
+    if (dp[vertex][0] < dp[vertex][i] * BigInt(i)) {
+      dp[vertex][0] = dp[vertex][i] * BigInt(i);
+    }
+  }
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  cin >> n;
+
+  // Читаем дерево
+  for (int i = 0; i < n - 1; i++) {
+    int a, b;
+    cin >> a >> b;
+    tree[a].push_back(b);
+    tree[b].push_back(a);
+  }
+
+  // Запускаем DFS из корня
+  dfs(1, 0);
+
+  // Ответ хранится в dp[1][0] - компонента, содержащая корень,
+  // уже отделена от остального дерева
+  dp[1][0].print();
+
+  return 0;
+}
+</pre>
+</details>
