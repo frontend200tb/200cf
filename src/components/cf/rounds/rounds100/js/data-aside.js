@@ -50,6 +50,7 @@ export const asideThemes = [
   '48 ШИО 3 2010',
   '49 Round 46 (Div. 2)',
   '50 Round 47',
+  '51 Round 48',
   '52 Testing Round 1',
   '59 Round 55 (Div. 2)',
   '70 Round 64',

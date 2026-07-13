@@ -59,3 +59,45 @@
 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/24/problem/A" target="_blank">Задача 24A</a>
+    <br><a href="https://codeforces.com/contest/24" target="_blank">Codeforces 24 Round 24 Beta 2010.07.26</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int s[105], e[105];
+
+int main() {
+  int n; // число городов и дорог
+  cin >> n;
+
+  int ans = 0, res = 0;
+
+  while (n--) {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    if (s[a] || e[b]) {
+      res += c, s[b] = e[a] = 1;
+    } else {
+      s[a] = e[b] = 1;
+    }
+
+    ans += c;
+  }
+
+  res = min(res, ans - res);
+
+  cout << res;
+}
+</pre>
+</details>

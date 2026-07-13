@@ -52,6 +52,7 @@ import in47      from '../p100/elem-47-Round44';
 import in48      from '../p100/elem-48-sio3';
 import in49      from '../p100/elem-49-Round46';
 import in50      from '../p100/elem-50-Round47';
+import in51      from '../p100/elem-51-Round48';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -116,6 +117,7 @@ export default function pageLink(asideItems, currentContent) {
             case 48: in48(); break;
             case 49: in49(); break;
             case 50: in50(); break;
+            case 51: in51(); break;
             default: break;
           }
         } else {

@@ -49,6 +49,7 @@ import html47       from './../p100/elem-47-Round44.html';
 import html48       from './../p100/elem-48-sio3.html';
 import html49       from './../p100/elem-49-Round46.html';
 import html50       from './../p100/elem-50-Round47.html';
+import html51       from './../p100/elem-51-Round48.html';
 import html52       from './../p100/elem-52-TRound1.html';
 import html59       from './../p100/elem-59-Round55.html';
 import html70       from './../p100/elem-70-Round64.html';
@@ -111,6 +112,7 @@ export const pages = [
   [html48, 48],
   [html49, 49],
   [html50, 50],
+  [html51, 51],
   html52,
   html59,
   html70,
