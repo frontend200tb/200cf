@@ -61,3 +61,60 @@ Prost
 </pre>
 <p>Не гарантируется, что каждый гонщик участвовал в каждой гонке. В чемпионате учитываются все гонщики, участвовавшие хотя бы в одной гонке. Суммарное число гонщиков, участвовавших в чемпионате, не превосходит 50.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/24/problem/B" target="_blank">Задача 24B</a>
+    <br><a href="https://codeforces.com/contest/24" target="_blank">Codeforces 24 Round 24 Beta 2010.07.26</a>
+  </div>
+
+  <p>Тоже очень простая задача - надо сделать буквально то, что просят. А именно - завести ассоциативный массив, в котором каждому пилоту соответствуют количество очков и массив из 50 элементов - количество раз, которое он занял соответствующее место. Далее осталось найти максимум по 2м критериям.</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+int main() {
+  int t; // число гонок
+  cin >> t;
+
+  const int MAX = 59;
+  int a[MAX] = { 25,18,15,12,10,8,6,4,2,1 };
+
+  map<string, vector<int> > m;
+  vector<pair<vector<int>, string> > ans;
+
+  while (t--) {
+    int n; // число гонщиков
+    cin >> n;
+
+    string s; // имя гонщика
+    for (int i = 0; i < n; i++) {
+      cin >> s;
+      if (m.find(s) == m.end()) {
+        m[s].resize(MAX);
+      }
+      m[s][0] += a[i];
+      m[s][i + 1]++;
+    }
+  }
+
+  for (auto& v : m) {
+    ans.push_back({ v.second,v.first });
+  }
+
+  cout << max_element(ans.begin(), ans.end())->second << '\n';
+
+  for (auto& v : ans) {
+    swap(v.first[0], v.first[1]);
+  }
+
+  cout << max_element(ans.begin(), ans.end())->second << '\n';
+}
+</pre>
+</details>
