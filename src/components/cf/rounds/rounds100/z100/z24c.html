@@ -35,3 +35,42 @@
 1995 1995
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/24/problem/C" target="_blank">Задача 24C</a>
+    <br><a href="https://codeforces.com/contest/24" target="_blank">Codeforces 24 Round 24 Beta 2010.07.26</a>
+  </div>
+
+  <p>Задача о симметричном отображении точки относительно последовательности точек. После n отражений точка возвращается к исходной (если отражать по тем же точкам в том же порядке). Полный период — 2n операций</p>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  long long n; // число точек
+  long long j; // индекс требуемой точки
+  long long x, y; // координаты точки M0
+  cin >> n >> j >> x >> y;
+
+  vector<long long> A(n+1); // координаты x
+  vector<long long> B(n+1); // координаты y
+
+  for (int i = 0; i < n; i++) {
+    cin >> A[i] >> B[i];
+  }
+
+  for (long long d = 0; d < j % (2 * n); d++) {
+    x = 2 * A[d % n] - x;
+    y = 2 * B[d % n] - y;
+  }
+
+  cout << x << ' ' << y;
+}
+</pre>
+</details>
