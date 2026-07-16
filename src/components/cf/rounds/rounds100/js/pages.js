@@ -53,6 +53,12 @@ import in48      from '../p100/elem-48-sio3';
 import in49      from '../p100/elem-49-Round46';
 import in50      from '../p100/elem-50-Round47';
 import in51      from '../p100/elem-51-Round48';
+import in52      from '../p100/elem-52-TRound1';
+import in59      from '../p100/elem-59-Round55';
+import in70      from '../p100/elem-70-Round64';
+import in71      from '../p100/elem-71-Round65';
+import in76      from '../p100/elem-76-vuos';
+import in81      from '../p100/elem-81-yandex-q1';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -118,6 +124,12 @@ export default function pageLink(asideItems, currentContent) {
             case 49: in49(); break;
             case 50: in50(); break;
             case 51: in51(); break;
+            case 52: in52(); break;
+            case 59: in59(); break;
+            case 70: in70(); break;
+            case 71: in71(); break;
+            case 76: in76(); break;
+            case 81: in81(); break;
             default: break;
           }
         } else {

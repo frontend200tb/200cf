@@ -29,3 +29,61 @@
 18.0038068653
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/24/problem/C" target="_blank">Задача 24C</a>
+    <br><a href="https://codeforces.com/contest/24" target="_blank">Codeforces 24 Round 24 Beta 2010.07.26</a>
+  </div>
+
+  <p>Для робота не на границе возможные действия: остаться, вниз, влево, вправо (4 действия)</p>
+  <p>Все действия равновероятны (вероятность 1/4)</p>
+  <code>E(i,j) = 1 + (E(i,j) + E(i+1,j) + E(i,j-1) + E(i,j+1)) / 4</code>
+  <code>4*E(i,j) = 4 + E(i,j) + E(i+1,j) + E(i,j-1) + E(i,j+1)</code>
+  <code>3*E(i,j) = 4 + E(i+1,j) + E(i,j-1) + E(i,j+1)</code>
+  <code>E(i,j) = (4 + E(i+1,j) + E(i,j-1) + E(i,j+1)) / 3</code>
+
+  <p>Для робота на левой границы (j = 1) возможные действия: остаться, вниз, вправо (3 действия)</p>
+<pre>
+E(i,1) = 1 + (E(i,1) + E(i+1,1) + E(i,2)) / 3
+2*E(i,1) = 3 + E(i+1,1) + E(i,2)
+E(i,1) = (3 + E(i+1,1) + E(i,2)) / 2
+</pre>
+
+  <p>Для робота на правой границы (j = M) возможные действия: остаться, вниз, влево (3 действия)</p>
+<pre>
+E(i,M) = 1 + (E(i,M) + E(i+1,M) + E(i,M-1)) / 3
+2*E(i,M) = 3 + E(i+1,M) + E(i,M-1)
+E(i,M) = (3 + E(i+1,M) + E(i,M-1)) / 2
+</pre>
+
+<pre class="language-cpp">
+#include<cstdio>
+
+int a[1001];
+double dp[1001][1001], * p;
+
+int main() {
+	int n; // число строк
+	int m; // число столбцов
+	int x; // номер строки
+	int y; // номер столбца
+
+	scanf("%d%d%d%d", &n, &m, &x, &y);
+
+	for (int i = --n; i >= x; --i) {
+		for (int k = 1; k <= 39; ++k) {
+			for (int j = 1; j <= m; ++j) {
+				p = &dp[i][j];
+				*p = (*(p + 1) + *p + *(p - 1) +
+        *(p + 1001)) / (2 + (j > 1) + (j < m)) + 1;
+			}
+		}
+	}
+
+	printf("%lf", dp[x][y]);
+}
+</pre>
+</details>
