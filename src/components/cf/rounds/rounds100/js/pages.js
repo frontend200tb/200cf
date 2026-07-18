@@ -54,11 +54,19 @@ import in49      from '../p100/elem-49-Round46';
 import in50      from '../p100/elem-50-Round47';
 import in51      from '../p100/elem-51-Round48';
 import in52      from '../p100/elem-52-TRound1';
+import in53      from '../p100/elem-53-Round49';
+import in54      from '../p100/elem-54-Round50';
+import in55      from '../p100/elem-55-Round51';
+import in56      from '../p100/elem-56-Round52';
 import in59      from '../p100/elem-59-Round55';
 import in70      from '../p100/elem-70-Round64';
 import in71      from '../p100/elem-71-Round65';
 import in76      from '../p100/elem-76-vuos';
 import in81      from '../p100/elem-81-yandex-q1';
+import in82      from '../p100/elem-82-yandex-q2';
+import in85      from '../p100/elem-85-yandex-r1';
+import in86      from '../p100/elem-86-yandex-r2';
+import in97      from '../p100/elem-97-yandex-f';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -125,11 +133,19 @@ export default function pageLink(asideItems, currentContent) {
             case 50: in50(); break;
             case 51: in51(); break;
             case 52: in52(); break;
+            case 53: in53(); break;
+            case 54: in54(); break;
+            case 55: in55(); break;
+            case 56: in56(); break;
             case 59: in59(); break;
             case 70: in70(); break;
             case 71: in71(); break;
             case 76: in76(); break;
             case 81: in81(); break;
+            case 82: in82(); break;
+            case 85: in85(); break;
+            case 86: in86(); break;
+            case 97: in97(); break;
             default: break;
           }
         } else {

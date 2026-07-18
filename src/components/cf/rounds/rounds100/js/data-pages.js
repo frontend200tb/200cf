@@ -51,6 +51,10 @@ import html49       from './../p100/elem-49-Round46.html';
 import html50       from './../p100/elem-50-Round47.html';
 import html51       from './../p100/elem-51-Round48.html';
 import html52       from './../p100/elem-52-TRound1.html';
+import html53       from './../p100/elem-53-Round49.html';
+import html54       from './../p100/elem-54-Round50.html';
+import html55       from './../p100/elem-55-Round51.html';
+import html56       from './../p100/elem-56-Round52.html';
 import html59       from './../p100/elem-59-Round55.html';
 import html70       from './../p100/elem-70-Round64.html';
 import html71       from './../p100/elem-71-Round65.html';
@@ -114,13 +118,17 @@ export const pages = [
   [html50, 50],
   [html51, 51],
   [html52, 52],
+  [html53, 53],
+  [html54, 54],
+  [html55, 55],
+  [html56, 56],
   [html59, 59],
   [html70, 70],
   [html71, 71],
   [html76, 76],
   [html81, 81],
-  html82,
-  html85,
-  html86,
-  html97,
+  [html82, 82],
+  [html85, 85],
+  [html86, 86],
+  [html97, 97],
 ];
