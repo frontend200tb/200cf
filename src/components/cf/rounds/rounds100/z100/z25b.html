@@ -29,3 +29,45 @@
 11-987-33
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/25/problem/B" target="_blank">Задача 25B</a>
+    <br><a href="https://codeforces.com/contest/24" target="_blank">Codeforces 25 Round 25 Beta (Div.2) 2010.08.02</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n; // число цифр
+  cin >> n;
+  char c1, c2, c3;
+
+  if (n % 2 == 0) {
+    // если число цифр четное
+    // выводим по две цифры
+    for (int i = 0; i < n-2; i += 2) {
+      cin >> c1 >> c2;
+      cout << c1 << c2 << '-';
+    }
+    cin >> c1 >> c2;
+    cout << c1 << c2;
+  } else {
+    // если число цифр нечетное
+    // выводим по две цифры и в конце еще три
+    for (int i = 0; i < n-3; i += 2) {
+      cin >> c1 >> c2;
+      cout << c1 << c2 << '-';
+    }
+    cin >> c1 >> c2 >> c3;
+    cout << c1 << c2 << c3;
+  }
+
+}
+</pre>
+</details>
