@@ -29,3 +29,39 @@
 6
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/26/problem/B" target="_blank">Задача 26B</a>
+    <br><a href="https://codeforces.com/contest/26" target="_blank">Codeforces 26 Round 26 Beta 2010.08.16</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+int main() {
+  stack<char> St;
+  char c;
+  int cnt = 0;
+
+  while (cin.get(c) && c != '\n') {
+    if (c == '(') {
+      St.push(c);
+    } else {
+      if (!St.empty()) {
+        St.pop();
+        cnt += 2;
+      }
+    }
+  }
+
+  // вывод результата
+  cout << cnt;
+}
+</pre>
+</details>
