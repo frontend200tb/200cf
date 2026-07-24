@@ -35,3 +35,39 @@
 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/26/problem/D" target="_blank">Задача 26D</a>
+    <br><a href="https://codeforces.com/contest/26" target="_blank">Codeforces 26 Round 26 Beta 2010.08.16</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+  int n; // число чел с 10 евро
+  int m; // число чел с 20 евро
+  int k; // число купюр 10 евро для сдачи
+  cin >> n >> m >> k;
+
+  double res = 1; // вероятность
+
+  for (int i = 0; i <= k; i++) {
+    res *= (double)(m - i) / (n + 1 + i);
+  }
+  res = 1 - res;
+
+  if (res < 0) {
+    res = 0;
+  }
+
+  cout << setprecision(5) << res;
+}
+</pre>
+</details>
