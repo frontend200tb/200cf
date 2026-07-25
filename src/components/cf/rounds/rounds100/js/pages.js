@@ -63,6 +63,8 @@ import in58      from '../p100/elem-58-Round54';
 import in59      from '../p100/elem-59-Round55';
 import in60      from '../p100/elem-60-Round56';
 import in61      from '../p100/elem-61-Round57';
+import in62      from '../p100/elem-62-Round58';
+import in63      from '../p100/elem-63-Round59';
 import in70      from '../p100/elem-70-Round64';
 import in71      from '../p100/elem-71-Round65';
 import in76      from '../p100/elem-76-vuos';
@@ -146,6 +148,8 @@ export default function pageLink(asideItems, currentContent) {
             case 59: in59(); break;
             case 60: in60(); break;
             case 61: in61(); break;
+            case 62: in62(); break;
+            case 63: in63(); break;
             case 70: in70(); break;
             case 71: in71(); break;
             case 76: in76(); break;

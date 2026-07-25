@@ -60,6 +60,8 @@ import html58       from './../p100/elem-58-Round54.html';
 import html59       from './../p100/elem-59-Round55.html';
 import html60       from './../p100/elem-60-Round56.html';
 import html61       from './../p100/elem-61-Round57.html';
+import html62       from './../p100/elem-62-Round58.html';
+import html63       from './../p100/elem-63-Round59.html';
 import html70       from './../p100/elem-70-Round64.html';
 import html71       from './../p100/elem-71-Round65.html';
 import html76       from './../p100/elem-76-vuos.html';
@@ -131,6 +133,8 @@ export const pages = [
   [html59, 59],
   [html60, 60],
   [html61, 61],
+  [html62, 62],
+  [html63, 63],
   [html70, 70],
   [html71, 71],
   [html76, 76],
