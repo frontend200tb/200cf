@@ -28,3 +28,51 @@
 4 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/27/problem/B" target="_blank">Задача 27B</a>
+    <br><a href="https://codeforces.com/contest/27" target="_blank">Codeforces 27 Round 27 Beta (Div. 2) 2010.09.10</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n; // число участников
+  cin >> n;
+  int a, b; // номера участников
+  int v{};
+  int o[3]{};
+  int p[60]{};
+  int kk[60]{};
+
+  // число результатов игр
+  int k = n * (n - 1) / 2 - 1;
+
+  while (k--) {
+    cin >> a >> b;
+    p[a]++;
+    p[b]++;
+    kk[a]++;
+  }
+
+  for (int i = 1; i <= n; i++) {
+    if (p[i] == n - 2) {
+      v++;
+      o[v] = i;
+    }
+  }
+
+  if (kk[o[1]] < kk[o[2]]) {
+    swap(o[1], o[2]);
+  }
+
+  cout << o[1] << " " << o[2];
+}
+</pre>
+</details>
