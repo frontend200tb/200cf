@@ -41,3 +41,93 @@
 1 2 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/27/problem/C" target="_blank">Задача 27C</a>
+    <br><a href="https://codeforces.com/contest/27" target="_blank">Codeforces 27 Round 27 Beta (Div. 2) 2010.09.10</a>
+  </div>
+
+  <h4>Пример 4</h4>
+<pre>
+7
+-1 -1 -1 0 0 1 0
+</pre>
+<pre>
+3
+1 6 7
+</pre>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  int n; // длина последовательности
+  cin >> n;
+
+  if (n < 3) {
+    cout << 0;
+    return 0;
+  }
+
+  vector<int> A(n + 1);
+
+  for (int i = 1; i <= n; i++) {
+    cin >> A[i];
+  }
+
+  int f = A[1]; // первое число
+
+  int s = 0, si = 0; // второе число и индекс
+
+  int i = 2;
+
+  while (i <= n && A[i] == f) {
+    i++;
+  }
+
+  if (i <= n) {
+    s = A[i];
+    si = i;
+    i++;
+  }
+
+  int t = 0, ti = 0; // третье число и индекс
+
+  if (si > 0 && s > f) {
+    while (i <= n && A[i] >= s) {
+      s = A[i];
+      si = i;
+      i++;
+    }
+    if (i <= n) {
+      t = A[i];
+      ti = i;
+    }
+  }
+
+  if (si > 0 && s < f) {
+    while (i <= n && A[i] <= s) {
+      s = A[i];
+      si = i;
+      i++;
+    }
+    if (i <= n) {
+      t = A[i];
+      ti = i;
+    }
+  }
+
+  if (si > 0 && ti > 0) {
+    cout << 3 << '\n' << 1 << ' ' << si << ' ' << ti;
+  } else {
+    cout << 0;
+  }
+}
+</pre>
+</details>
