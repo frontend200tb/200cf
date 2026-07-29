@@ -33,3 +33,70 @@ io
 ooo
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/27/problem/D" target="_blank">Задача 27D</a>
+    <br><a href="https://codeforces.com/contest/27" target="_blank">Codeforces 27 Round 27 Beta (Div. 2) 2010.09.10</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+int a[N], b[N], col[N];
+bool flag, vis[N];
+int n; // число городов
+int m; // число новых дорог
+
+void dfs(int p, int coll) {
+  if (!vis[p]) {
+    col[p] = coll, vis[p] = true;
+    for (int i = 1;i <= m;i++) {
+      if (a[i] != a[p] && b[i] != b[p]) {
+        if ((a[p]<a[i] && b[p]>a[i] && b[p] < b[i]) ||
+          (a[i]<a[p] && b[i]>a[p] && b[i] < b[p])) {
+          dfs(i, coll ^ 1);
+        }
+      }
+    }
+  } else if (coll != col[p]) {
+    flag = true;
+  }
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= m; i++) {
+    cin >> a[i] >> b[i];
+    a[i]--;
+    b[i]--;
+    if (a[i] > b[i]) {
+      a[i] ^= b[i];
+      b[i] ^= a[i];
+      a[i] ^= b[i];
+    }
+  }
+
+  for (int i = 1; i <= m; i++) {
+    if (!vis[i]) {
+      dfs(i, 0);
+    }
+  }
+
+  if (flag) {
+    cout << "Impossible";
+    return 0;
+  }
+
+  for (int i = 1; i <= m; i++) {
+    cout << (col[i] ? 'i' : 'o');
+  }
+}
+</pre>
+</details>

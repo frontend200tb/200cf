@@ -1709,7 +1709,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: function() { return /* binding */ asideThemes; }
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-const asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '20 Round 20', '21 Round 21', '22 Round 22 (Div. 2)', '23 Round 23', '24 Round 24', '25 Round 25 (Div. 2)', '26 Round 26', '27 Round 27 (Div. 2)', '28 Round 28', '29 Round 29 (Div. 2)', '30 Round 30', '31 Round 31 (Div. 2)', '32 Round 32 (Div. 2)', '33 Round 33', '34 Round 34 (Div. 2)', '35 Round 35 (Div. 2)', '36 Round 36', '37 Round 37', '38 ШИО 1 2010', '39 ШКО 1 2010', '40 Round 39', '41 Round 40 (Div. 2)', '42 Round 41', '43 Round 42 (Div. 2)', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '47 Round 44 (Div. 2)', '48 ШИО 3 2010', '49 Round 46 (Div. 2)', '50 Round 47', '51 Round 48', '52 Testing Round 1', '53 Round 49 (Div. 2)', '54 Round 50', '55 Round 51', '56 Round 52 (Div. 2)', '57 Round 53', '58 Round 54 (Div. 2)', '59 Round 55 (Div. 2)', '60 Round 56', '61 Round 57 (Div. 2)', '62 Round 58', '63 Round 59 (Div. 2)', '64 Round ul 1', '65 Round 60', '66 Round 61 (Div. 2)', '67 Manthan 2011', '70 Round 64', '71 Round 65 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f'];
+const asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '20 Round 20', '21 Round 21', '22 Round 22 (Div. 2)', '23 Round 23', '24 Round 24', '25 Round 25 (Div. 2)', '26 Round 26', '27 Round 27 (Div. 2)', '28 Round 28', '29 Round 29 (Div. 2)', '30 Round 30', '31 Round 31 (Div. 2)', '32 Round 32 (Div. 2)', '33 Round 33', '34 Round 34 (Div. 2)', '35 Round 35 (Div. 2)', '36 Round 36', '37 Round 37', '38 ШИО 1 2010', '39 ШКО 1 2010', '40 Round 39', '41 Round 40 (Div. 2)', '42 Round 41', '43 Round 42 (Div. 2)', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '47 Round 44 (Div. 2)', '48 ШИО 3 2010', '49 Round 46 (Div. 2)', '50 Round 47', '51 Round 48', '52 Testing Round 1', '53 Round 49 (Div. 2)', '54 Round 50', '55 Round 51', '56 Round 52 (Div. 2)', '57 Round 53', '58 Round 54 (Div. 2)', '59 Round 55 (Div. 2)', '60 Round 56', '61 Round 57 (Div. 2)', '62 Round 58', '63 Round 59 (Div. 2)', '64 UL Round 1', '65 Round 60', '66 Round 61 (Div. 2)', '67 Manthan 2011', '68 Round 62', '69 Round 63 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '72 UL Round 2', '73 Round 66', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f'];
 
 /***/ }),
 
@@ -1787,18 +1787,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _p100_elem_61_Round57_html__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./../p100/elem-61-Round57.html */ "./src/components/cf/rounds/rounds100/p100/elem-61-Round57.html");
 /* harmony import */ var _p100_elem_62_Round58_html__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./../p100/elem-62-Round58.html */ "./src/components/cf/rounds/rounds100/p100/elem-62-Round58.html");
 /* harmony import */ var _p100_elem_63_Round59_html__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./../p100/elem-63-Round59.html */ "./src/components/cf/rounds/rounds100/p100/elem-63-Round59.html");
-/* harmony import */ var _p100_elem_64_Roundul1_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../p100/elem-64-Roundul1.html */ "./src/components/cf/rounds/rounds100/p100/elem-64-Roundul1.html");
+/* harmony import */ var _p100_elem_64_ULRound1_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../p100/elem-64-ULRound1.html */ "./src/components/cf/rounds/rounds100/p100/elem-64-ULRound1.html");
 /* harmony import */ var _p100_elem_65_Round60_html__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./../p100/elem-65-Round60.html */ "./src/components/cf/rounds/rounds100/p100/elem-65-Round60.html");
 /* harmony import */ var _p100_elem_66_Round61_html__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./../p100/elem-66-Round61.html */ "./src/components/cf/rounds/rounds100/p100/elem-66-Round61.html");
 /* harmony import */ var _p100_elem_67_Manthan2011_html__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./../p100/elem-67-Manthan2011.html */ "./src/components/cf/rounds/rounds100/p100/elem-67-Manthan2011.html");
-/* harmony import */ var _p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../p100/elem-70-Round64.html */ "./src/components/cf/rounds/rounds100/p100/elem-70-Round64.html");
-/* harmony import */ var _p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../p100/elem-71-Round65.html */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.html");
-/* harmony import */ var _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../p100/elem-76-vuos.html */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html");
-/* harmony import */ var _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.html");
-/* harmony import */ var _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.html");
-/* harmony import */ var _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.html");
-/* harmony import */ var _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.html");
-/* harmony import */ var _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.html");
+/* harmony import */ var _p100_elem_68_Round62_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../p100/elem-68-Round62.html */ "./src/components/cf/rounds/rounds100/p100/elem-68-Round62.html");
+/* harmony import */ var _p100_elem_69_Round63_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../p100/elem-69-Round63.html */ "./src/components/cf/rounds/rounds100/p100/elem-69-Round63.html");
+/* harmony import */ var _p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../p100/elem-70-Round64.html */ "./src/components/cf/rounds/rounds100/p100/elem-70-Round64.html");
+/* harmony import */ var _p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../p100/elem-71-Round65.html */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.html");
+/* harmony import */ var _p100_elem_72_ULRound2_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../p100/elem-72-ULRound2.html */ "./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.html");
+/* harmony import */ var _p100_elem_73_Round66_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../p100/elem-73-Round66.html */ "./src/components/cf/rounds/rounds100/p100/elem-73-Round66.html");
+/* harmony import */ var _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../p100/elem-76-vuos.html */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html");
+/* harmony import */ var _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.html");
+/* harmony import */ var _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.html");
+/* harmony import */ var _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.html");
+/* harmony import */ var _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.html");
+/* harmony import */ var _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -1875,7 +1879,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const pages = [[_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__["default"], 20], [_p100_elem_21_Round21_html__WEBPACK_IMPORTED_MODULE_20__["default"], 21], [_p100_elem_22_Round22_html__WEBPACK_IMPORTED_MODULE_21__["default"], 22], [_p100_elem_23_Round23_html__WEBPACK_IMPORTED_MODULE_22__["default"], 23], [_p100_elem_24_Round24_html__WEBPACK_IMPORTED_MODULE_23__["default"], 24], [_p100_elem_25_Round25_html__WEBPACK_IMPORTED_MODULE_24__["default"], 25], [_p100_elem_26_Round26_html__WEBPACK_IMPORTED_MODULE_25__["default"], 26], [_p100_elem_27_Round27_html__WEBPACK_IMPORTED_MODULE_26__["default"], 27], [_p100_elem_28_Round28_html__WEBPACK_IMPORTED_MODULE_27__["default"], 28], [_p100_elem_29_Round29_html__WEBPACK_IMPORTED_MODULE_28__["default"], 29], [_p100_elem_30_Round30_html__WEBPACK_IMPORTED_MODULE_29__["default"], 30], [_p100_elem_31_Round31_html__WEBPACK_IMPORTED_MODULE_30__["default"], 31], [_p100_elem_32_Round32_html__WEBPACK_IMPORTED_MODULE_31__["default"], 32], [_p100_elem_33_Round33_html__WEBPACK_IMPORTED_MODULE_32__["default"], 33], [_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_33__["default"], 34], [_p100_elem_35_Round35_html__WEBPACK_IMPORTED_MODULE_34__["default"], 35], [_p100_elem_36_Round36_html__WEBPACK_IMPORTED_MODULE_35__["default"], 36], [_p100_elem_37_Round37_html__WEBPACK_IMPORTED_MODULE_36__["default"], 37], [_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_37__["default"], 38], [_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_38__["default"], 39], [_p100_elem_40_Round39_html__WEBPACK_IMPORTED_MODULE_39__["default"], 40], [_p100_elem_41_Round40_html__WEBPACK_IMPORTED_MODULE_40__["default"], 41], [_p100_elem_42_Round41_html__WEBPACK_IMPORTED_MODULE_41__["default"], 42], [_p100_elem_43_Round42_html__WEBPACK_IMPORTED_MODULE_42__["default"], 43], [_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_43__["default"], 44], [_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_44__["default"], 45], [_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_45__["default"], 46], [_p100_elem_47_Round44_html__WEBPACK_IMPORTED_MODULE_46__["default"], 47], [_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_47__["default"], 48], [_p100_elem_49_Round46_html__WEBPACK_IMPORTED_MODULE_48__["default"], 49], [_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_49__["default"], 50], [_p100_elem_51_Round48_html__WEBPACK_IMPORTED_MODULE_50__["default"], 51], [_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_51__["default"], 52], [_p100_elem_53_Round49_html__WEBPACK_IMPORTED_MODULE_52__["default"], 53], [_p100_elem_54_Round50_html__WEBPACK_IMPORTED_MODULE_53__["default"], 54], [_p100_elem_55_Round51_html__WEBPACK_IMPORTED_MODULE_54__["default"], 55], [_p100_elem_56_Round52_html__WEBPACK_IMPORTED_MODULE_55__["default"], 56], [_p100_elem_57_Round53_html__WEBPACK_IMPORTED_MODULE_56__["default"], 57], [_p100_elem_58_Round54_html__WEBPACK_IMPORTED_MODULE_57__["default"], 58], [_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_58__["default"], 59], [_p100_elem_60_Round56_html__WEBPACK_IMPORTED_MODULE_59__["default"], 60], [_p100_elem_61_Round57_html__WEBPACK_IMPORTED_MODULE_60__["default"], 61], [_p100_elem_62_Round58_html__WEBPACK_IMPORTED_MODULE_61__["default"], 62], [_p100_elem_63_Round59_html__WEBPACK_IMPORTED_MODULE_62__["default"], 63], [_p100_elem_64_Roundul1_html__WEBPACK_IMPORTED_MODULE_63__["default"], 64], [_p100_elem_65_Round60_html__WEBPACK_IMPORTED_MODULE_64__["default"], 65], [_p100_elem_66_Round61_html__WEBPACK_IMPORTED_MODULE_65__["default"], 66], [_p100_elem_67_Manthan2011_html__WEBPACK_IMPORTED_MODULE_66__["default"], 67], [_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_67__["default"], 70], [_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_68__["default"], 71], [_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_69__["default"], 76], [_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_70__["default"], 81], [_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_71__["default"], 82], [_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_72__["default"], 85], [_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_73__["default"], 86], [_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_74__["default"], 97]];
+
+
+
+
+const pages = [[_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__["default"], 20], [_p100_elem_21_Round21_html__WEBPACK_IMPORTED_MODULE_20__["default"], 21], [_p100_elem_22_Round22_html__WEBPACK_IMPORTED_MODULE_21__["default"], 22], [_p100_elem_23_Round23_html__WEBPACK_IMPORTED_MODULE_22__["default"], 23], [_p100_elem_24_Round24_html__WEBPACK_IMPORTED_MODULE_23__["default"], 24], [_p100_elem_25_Round25_html__WEBPACK_IMPORTED_MODULE_24__["default"], 25], [_p100_elem_26_Round26_html__WEBPACK_IMPORTED_MODULE_25__["default"], 26], [_p100_elem_27_Round27_html__WEBPACK_IMPORTED_MODULE_26__["default"], 27], [_p100_elem_28_Round28_html__WEBPACK_IMPORTED_MODULE_27__["default"], 28], [_p100_elem_29_Round29_html__WEBPACK_IMPORTED_MODULE_28__["default"], 29], [_p100_elem_30_Round30_html__WEBPACK_IMPORTED_MODULE_29__["default"], 30], [_p100_elem_31_Round31_html__WEBPACK_IMPORTED_MODULE_30__["default"], 31], [_p100_elem_32_Round32_html__WEBPACK_IMPORTED_MODULE_31__["default"], 32], [_p100_elem_33_Round33_html__WEBPACK_IMPORTED_MODULE_32__["default"], 33], [_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_33__["default"], 34], [_p100_elem_35_Round35_html__WEBPACK_IMPORTED_MODULE_34__["default"], 35], [_p100_elem_36_Round36_html__WEBPACK_IMPORTED_MODULE_35__["default"], 36], [_p100_elem_37_Round37_html__WEBPACK_IMPORTED_MODULE_36__["default"], 37], [_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_37__["default"], 38], [_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_38__["default"], 39], [_p100_elem_40_Round39_html__WEBPACK_IMPORTED_MODULE_39__["default"], 40], [_p100_elem_41_Round40_html__WEBPACK_IMPORTED_MODULE_40__["default"], 41], [_p100_elem_42_Round41_html__WEBPACK_IMPORTED_MODULE_41__["default"], 42], [_p100_elem_43_Round42_html__WEBPACK_IMPORTED_MODULE_42__["default"], 43], [_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_43__["default"], 44], [_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_44__["default"], 45], [_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_45__["default"], 46], [_p100_elem_47_Round44_html__WEBPACK_IMPORTED_MODULE_46__["default"], 47], [_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_47__["default"], 48], [_p100_elem_49_Round46_html__WEBPACK_IMPORTED_MODULE_48__["default"], 49], [_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_49__["default"], 50], [_p100_elem_51_Round48_html__WEBPACK_IMPORTED_MODULE_50__["default"], 51], [_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_51__["default"], 52], [_p100_elem_53_Round49_html__WEBPACK_IMPORTED_MODULE_52__["default"], 53], [_p100_elem_54_Round50_html__WEBPACK_IMPORTED_MODULE_53__["default"], 54], [_p100_elem_55_Round51_html__WEBPACK_IMPORTED_MODULE_54__["default"], 55], [_p100_elem_56_Round52_html__WEBPACK_IMPORTED_MODULE_55__["default"], 56], [_p100_elem_57_Round53_html__WEBPACK_IMPORTED_MODULE_56__["default"], 57], [_p100_elem_58_Round54_html__WEBPACK_IMPORTED_MODULE_57__["default"], 58], [_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_58__["default"], 59], [_p100_elem_60_Round56_html__WEBPACK_IMPORTED_MODULE_59__["default"], 60], [_p100_elem_61_Round57_html__WEBPACK_IMPORTED_MODULE_60__["default"], 61], [_p100_elem_62_Round58_html__WEBPACK_IMPORTED_MODULE_61__["default"], 62], [_p100_elem_63_Round59_html__WEBPACK_IMPORTED_MODULE_62__["default"], 63], [_p100_elem_64_ULRound1_html__WEBPACK_IMPORTED_MODULE_63__["default"], 64], [_p100_elem_65_Round60_html__WEBPACK_IMPORTED_MODULE_64__["default"], 65], [_p100_elem_66_Round61_html__WEBPACK_IMPORTED_MODULE_65__["default"], 66], [_p100_elem_67_Manthan2011_html__WEBPACK_IMPORTED_MODULE_66__["default"], 67], [_p100_elem_68_Round62_html__WEBPACK_IMPORTED_MODULE_67__["default"], 68], [_p100_elem_69_Round63_html__WEBPACK_IMPORTED_MODULE_68__["default"], 69], [_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_69__["default"], 70], [_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_70__["default"], 71], [_p100_elem_72_ULRound2_html__WEBPACK_IMPORTED_MODULE_71__["default"], 72], [_p100_elem_73_Round66_html__WEBPACK_IMPORTED_MODULE_72__["default"], 73], [_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_73__["default"], 76], [_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_74__["default"], 81], [_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_75__["default"], 82], [_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_76__["default"], 85], [_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_77__["default"], 86], [_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_78__["default"], 97]];
 
 /***/ }),
 
@@ -2044,21 +2052,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _p100_elem_61_Round57__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ../p100/elem-61-Round57 */ "./src/components/cf/rounds/rounds100/p100/elem-61-Round57.js");
 /* harmony import */ var _p100_elem_62_Round58__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ../p100/elem-62-Round58 */ "./src/components/cf/rounds/rounds100/p100/elem-62-Round58.js");
 /* harmony import */ var _p100_elem_63_Round59__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ../p100/elem-63-Round59 */ "./src/components/cf/rounds/rounds100/p100/elem-63-Round59.js");
-/* harmony import */ var _p100_elem_64_Roundul1__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ../p100/elem-64-Roundul1 */ "./src/components/cf/rounds/rounds100/p100/elem-64-Roundul1.js");
+/* harmony import */ var _p100_elem_64_ULRound1__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ../p100/elem-64-ULRound1 */ "./src/components/cf/rounds/rounds100/p100/elem-64-ULRound1.js");
 /* harmony import */ var _p100_elem_65_Round60__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ../p100/elem-65-Round60 */ "./src/components/cf/rounds/rounds100/p100/elem-65-Round60.js");
 /* harmony import */ var _p100_elem_66_Round61__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ../p100/elem-66-Round61 */ "./src/components/cf/rounds/rounds100/p100/elem-66-Round61.js");
 /* harmony import */ var _p100_elem_67_Manthan2011__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ../p100/elem-67-Manthan2011 */ "./src/components/cf/rounds/rounds100/p100/elem-67-Manthan2011.js");
-/* harmony import */ var _p100_elem_70_Round64__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ../p100/elem-70-Round64 */ "./src/components/cf/rounds/rounds100/p100/elem-70-Round64.js");
-/* harmony import */ var _p100_elem_71_Round65__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ../p100/elem-71-Round65 */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.js");
-/* harmony import */ var _p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ../p100/elem-76-vuos */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.js");
-/* harmony import */ var _p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ../p100/elem-81-yandex-q1 */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.js");
-/* harmony import */ var _p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ../p100/elem-82-yandex-q2 */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.js");
-/* harmony import */ var _p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ../p100/elem-85-yandex-r1 */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.js");
-/* harmony import */ var _p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ../p100/elem-86-yandex-r2 */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.js");
-/* harmony import */ var _p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ../p100/elem-97-yandex-f */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.js");
+/* harmony import */ var _p100_elem_68_Round62__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ../p100/elem-68-Round62 */ "./src/components/cf/rounds/rounds100/p100/elem-68-Round62.js");
+/* harmony import */ var _p100_elem_69_Round63__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ../p100/elem-69-Round63 */ "./src/components/cf/rounds/rounds100/p100/elem-69-Round63.js");
+/* harmony import */ var _p100_elem_70_Round64__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ../p100/elem-70-Round64 */ "./src/components/cf/rounds/rounds100/p100/elem-70-Round64.js");
+/* harmony import */ var _p100_elem_71_Round65__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ../p100/elem-71-Round65 */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.js");
+/* harmony import */ var _p100_elem_72_ULRound2__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ../p100/elem-72-ULRound2 */ "./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.js");
+/* harmony import */ var _p100_elem_73_Round66__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ../p100/elem-73-Round66 */ "./src/components/cf/rounds/rounds100/p100/elem-73-Round66.js");
+/* harmony import */ var _p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ../p100/elem-76-vuos */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.js");
+/* harmony import */ var _p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ../p100/elem-81-yandex-q1 */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.js");
+/* harmony import */ var _p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ../p100/elem-82-yandex-q2 */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.js");
+/* harmony import */ var _p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ../p100/elem-85-yandex-r1 */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.js");
+/* harmony import */ var _p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ../p100/elem-86-yandex-r2 */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.js");
+/* harmony import */ var _p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ../p100/elem-97-yandex-f */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.js");
 /************************
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
+
+
+
+
 
 
 
@@ -2337,7 +2353,7 @@ function pageLink(asideItems, currentContent) {
               (0,_p100_elem_63_Round59__WEBPACK_IMPORTED_MODULE_63__["default"])();
               break;
             case 64:
-              (0,_p100_elem_64_Roundul1__WEBPACK_IMPORTED_MODULE_64__["default"])();
+              (0,_p100_elem_64_ULRound1__WEBPACK_IMPORTED_MODULE_64__["default"])();
               break;
             case 65:
               (0,_p100_elem_65_Round60__WEBPACK_IMPORTED_MODULE_65__["default"])();
@@ -2348,29 +2364,41 @@ function pageLink(asideItems, currentContent) {
             case 67:
               (0,_p100_elem_67_Manthan2011__WEBPACK_IMPORTED_MODULE_67__["default"])();
               break;
+            case 68:
+              (0,_p100_elem_68_Round62__WEBPACK_IMPORTED_MODULE_68__["default"])();
+              break;
+            case 69:
+              (0,_p100_elem_69_Round63__WEBPACK_IMPORTED_MODULE_69__["default"])();
+              break;
             case 70:
-              (0,_p100_elem_70_Round64__WEBPACK_IMPORTED_MODULE_68__["default"])();
+              (0,_p100_elem_70_Round64__WEBPACK_IMPORTED_MODULE_70__["default"])();
               break;
             case 71:
-              (0,_p100_elem_71_Round65__WEBPACK_IMPORTED_MODULE_69__["default"])();
+              (0,_p100_elem_71_Round65__WEBPACK_IMPORTED_MODULE_71__["default"])();
+              break;
+            case 72:
+              (0,_p100_elem_72_ULRound2__WEBPACK_IMPORTED_MODULE_72__["default"])();
+              break;
+            case 73:
+              (0,_p100_elem_73_Round66__WEBPACK_IMPORTED_MODULE_73__["default"])();
               break;
             case 76:
-              (0,_p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_70__["default"])();
+              (0,_p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_74__["default"])();
               break;
             case 81:
-              (0,_p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_71__["default"])();
+              (0,_p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_75__["default"])();
               break;
             case 82:
-              (0,_p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_72__["default"])();
+              (0,_p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_76__["default"])();
               break;
             case 85:
-              (0,_p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_73__["default"])();
+              (0,_p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_77__["default"])();
               break;
             case 86:
-              (0,_p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_74__["default"])();
+              (0,_p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_78__["default"])();
               break;
             case 97:
-              (0,_p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_75__["default"])();
+              (0,_p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_79__["default"])();
               break;
             default:
               break;
@@ -4917,9 +4945,9 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds100/p100/elem-64-Roundul1.js":
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-64-ULRound1.js":
 /*!*********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds100/p100/elem-64-Roundul1.js ***!
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-64-ULRound1.js ***!
   \*********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -5101,6 +5129,88 @@ function inElem() {
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-68-Round62.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-68-Round62.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z68a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z68a.html */ "./src/components/cf/rounds/rounds100/z100/z68a.html");
+/* harmony import */ var _z100_z68b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z68b.html */ "./src/components/cf/rounds/rounds100/z100/z68b.html");
+/* harmony import */ var _z100_z68c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z68c.html */ "./src/components/cf/rounds/rounds100/z100/z68c.html");
+/* harmony import */ var _z100_z68d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z68d.html */ "./src/components/cf/rounds/rounds100/z100/z68d.html");
+/* harmony import */ var _z100_z68e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z68e.html */ "./src/components/cf/rounds/rounds100/z100/z68e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z68a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z68b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z68c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z68d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z68e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-69-Round63.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-69-Round63.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z69a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z69a.html */ "./src/components/cf/rounds/rounds100/z100/z69a.html");
+/* harmony import */ var _z100_z69b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z69b.html */ "./src/components/cf/rounds/rounds100/z100/z69b.html");
+/* harmony import */ var _z100_z69c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z69c.html */ "./src/components/cf/rounds/rounds100/z100/z69c.html");
+/* harmony import */ var _z100_z69d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z69d.html */ "./src/components/cf/rounds/rounds100/z100/z69d.html");
+/* harmony import */ var _z100_z69e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z69e.html */ "./src/components/cf/rounds/rounds100/z100/z69e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z69a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z69b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z69c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z69d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z69e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/rounds100/p100/elem-7-Round7.js":
 /*!******************************************************************!*\
   !*** ./src/components/cf/rounds/rounds100/p100/elem-7-Round7.js ***!
@@ -5219,6 +5329,113 @@ function inElem() {
   }
   if (document.querySelector('.t5')) {
     document.querySelector('.t5').innerHTML = _z100_z71e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.js ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z72a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z72a.html */ "./src/components/cf/rounds/rounds100/z100/z72a.html");
+/* harmony import */ var _z100_z72b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z72b.html */ "./src/components/cf/rounds/rounds100/z100/z72b.html");
+/* harmony import */ var _z100_z72c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z72c.html */ "./src/components/cf/rounds/rounds100/z100/z72c.html");
+/* harmony import */ var _z100_z72d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z72d.html */ "./src/components/cf/rounds/rounds100/z100/z72d.html");
+/* harmony import */ var _z100_z72e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z72e.html */ "./src/components/cf/rounds/rounds100/z100/z72e.html");
+/* harmony import */ var _z100_z72f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z100/z72f.html */ "./src/components/cf/rounds/rounds100/z100/z72f.html");
+/* harmony import */ var _z100_z72g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z100/z72g.html */ "./src/components/cf/rounds/rounds100/z100/z72g.html");
+/* harmony import */ var _z100_z72h_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../z100/z72h.html */ "./src/components/cf/rounds/rounds100/z100/z72h.html");
+/* harmony import */ var _z100_z72i_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../z100/z72i.html */ "./src/components/cf/rounds/rounds100/z100/z72i.html");
+
+
+
+
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z72a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z72b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z72c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z72d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z72e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+  if (document.querySelector('.t6')) {
+    document.querySelector('.t6').innerHTML = _z100_z72f_html__WEBPACK_IMPORTED_MODULE_5__["default"];
+  }
+  if (document.querySelector('.t7')) {
+    document.querySelector('.t7').innerHTML = _z100_z72g_html__WEBPACK_IMPORTED_MODULE_6__["default"];
+  }
+  if (document.querySelector('.t8')) {
+    document.querySelector('.t8').innerHTML = _z100_z72h_html__WEBPACK_IMPORTED_MODULE_7__["default"];
+  }
+  if (document.querySelector('.t9')) {
+    document.querySelector('.t9').innerHTML = _z100_z72i_html__WEBPACK_IMPORTED_MODULE_8__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-73-Round66.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-73-Round66.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z73a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z73a.html */ "./src/components/cf/rounds/rounds100/z100/z73a.html");
+/* harmony import */ var _z100_z73b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z73b.html */ "./src/components/cf/rounds/rounds100/z100/z73b.html");
+/* harmony import */ var _z100_z73c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z73c.html */ "./src/components/cf/rounds/rounds100/z100/z73c.html");
+/* harmony import */ var _z100_z73d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z73d.html */ "./src/components/cf/rounds/rounds100/z100/z73d.html");
+/* harmony import */ var _z100_z73e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z73e.html */ "./src/components/cf/rounds/rounds100/z100/z73e.html");
+/* harmony import */ var _z100_z73f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z100/z73f.html */ "./src/components/cf/rounds/rounds100/z100/z73f.html");
+
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z73a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z73b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z73c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z73d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z73e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+  if (document.querySelector('.t6')) {
+    document.querySelector('.t6').innerHTML = _z100_z73f_html__WEBPACK_IMPORTED_MODULE_5__["default"];
   }
 }
 
@@ -9473,9 +9690,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds100/p100/elem-64-Roundul1.html":
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-64-ULRound1.html":
 /*!***********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds100/p100/elem-64-Roundul1.html ***!
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-64-ULRound1.html ***!
   \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -9533,6 +9750,36 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-68-Round62.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-68-Round62.html ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/68\" target=\"_blank\">Codeforces 68 Beta Round 62 2011.03.18</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Иррациональная задача</a>\r\n  <br><a href=\"#t2\">Задача B. Обмен энергией</a>\r\n  <br><a href=\"#t3\">Задача C. Синхрофазотрон</a>\r\n  <br><a href=\"#t4\">Задача D. Дерево полураспада</a>\r\n  <br><a href=\"#t5\">Задача E. Контакт</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Иррациональная задача -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Иррациональная задача</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Обмен энергией -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Обмен энергией</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Синхрофазотрон -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Синхрофазотрон</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Дерево полураспада -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Дерево полураспада</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Контакт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Контакт</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-69-Round63.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-69-Round63.html ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/69\" target=\"_blank\">Codeforces 69 Beta Round 63 (Div. 2) 2011.03.22</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Юный физик</a>\r\n  <br><a href=\"#t2\">Задача B. Ставки</a>\r\n  <br><a href=\"#t3\">Задача C. Игра</a>\r\n  <br><a href=\"#t4\">Задача D. Точка</a>\r\n  <br><a href=\"#t5\">Задача E. Подотрезки</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Юный физик -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Юный физик</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Ставки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Ставки</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Игра -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Игра</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Точка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Точка</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Подотрезки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Подотрезки</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/rounds100/p100/elem-7-Round7.html":
 /*!********************************************************************!*\
   !*** ./src/components/cf/rounds/rounds100/p100/elem-7-Round7.html ***!
@@ -9557,7 +9804,7 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/70\" target=\"_blank\">Codeforces 70 Round 64 Beta 2011.03.26</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Печеньки</a>\r\n  <br><a href=\"#t2\">Задача B. SMS</a>\r\n  <br><a href=\"#t3\">Задача C. Счастливые билеты</a>\r\n  <br><a href=\"#t4\">Задача D. Лабораторная работа</a>\r\n  <br><a href=\"#t5\">Задача E. Информационная реформа</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Печеньки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Печеньки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. SMS -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. SMS</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Счастливые билеты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Счастливые билеты</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Лабораторная работа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Лабораторная работа</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Информационная реформа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Информационная реформа</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/70\" target=\"_blank\">Codeforces 70 Beta Round 64 2011.03.26</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Печеньки</a>\r\n  <br><a href=\"#t2\">Задача B. SMS</a>\r\n  <br><a href=\"#t3\">Задача C. Счастливые билеты</a>\r\n  <br><a href=\"#t4\">Задача D. Лабораторная работа</a>\r\n  <br><a href=\"#t5\">Задача E. Информационная реформа</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Печеньки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Печеньки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. SMS -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. SMS</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Счастливые билеты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Счастливые билеты</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Лабораторная работа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Лабораторная работа</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Информационная реформа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Информационная реформа</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
@@ -9572,7 +9819,37 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/71\" target=\"_blank\">Codeforces 71 Round 65 Beta (Div. 2) 2011.03.29</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Слишком длинные слова</a>\r\n  <br><a href=\"#t2\">Задача B. Индикатор прогресса</a>\r\n  <br><a href=\"#t3\">Задача C. Рыцари круглого стола</a>\r\n  <br><a href=\"#t4\">Задача D. Пасьянс</a>\r\n  <br><a href=\"#t5\">Задача E. Ядерный синтез</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Слишком длинные слова -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Слишком длинные слова</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Индикатор прогресса -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Индикатор прогресса</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Рыцари круглого стола -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Рыцари круглого стола</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Пасьянс -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Пасьянс</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Ядерный синтез -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Ядерный синтез</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/71\" target=\"_blank\">Codeforces 71 Beta Round 65 (Div. 2) 2011.03.29</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Слишком длинные слова</a>\r\n  <br><a href=\"#t2\">Задача B. Индикатор прогресса</a>\r\n  <br><a href=\"#t3\">Задача C. Рыцари круглого стола</a>\r\n  <br><a href=\"#t4\">Задача D. Пасьянс</a>\r\n  <br><a href=\"#t5\">Задача E. Ядерный синтез</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Слишком длинные слова -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Слишком длинные слова</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Индикатор прогресса -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Индикатор прогресса</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Рыцари круглого стола -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Рыцари круглого стола</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Пасьянс -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Пасьянс</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Ядерный синтез -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Ядерный синтез</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/72\" target=\"_blank\">Codeforces 72 Unknown Language Round 2 2011.03.20</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Гоштасп, Виштасп и Эйди</a>\r\n  <br><a href=\"#t2\">Задача B. Ini-файл</a>\r\n  <br><a href=\"#t3\">Задача C. Замечательные числа</a>\r\n  <br><a href=\"#t4\">Задача D. Perse-script</a>\r\n  <br><a href=\"#t5\">Задача E. Али идет за покупками</a>\r\n  <br><a href=\"#t6\">Задача F. Нефть</a>\r\n  <br><a href=\"#t7\">Задача G. Проверка Фибоначчи</a>\r\n  <br><a href=\"#t8\">Задача H. Переворот</a>\r\n  <br><a href=\"#t9\">Задача I. Бесполезные числа</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Гоштасп, Виштасп и Эйди -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Гоштасп, Виштасп и Эйди</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Ini-файл -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Ini-файл</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Замечательные числа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Замечательные числа</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Perse-script -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Perse-script</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Али идет за покупками -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Али идет за покупками</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Нефть -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Нефть</h3>\r\n\r\n  <div class=\"t6\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Проверка Фибоначчи -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Проверка Фибоначчи</h3>\r\n\r\n  <div class=\"t7\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача H. Переворот -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H. Переворот</h3>\r\n\r\n  <div class=\"t8\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача I. Бесполезные числа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t9\"></div>\r\n  <h3>Задача I. Бесполезные числа</h3>\r\n\r\n  <div class=\"t9\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-73-Round66.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-73-Round66.html ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/73\" target=\"_blank\">Codeforces 73 Beta Round 66 2011.04.10</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. The Elder Trolls IV: Oblivon</a>\r\n  <br><a href=\"#t2\">Задача B. Need For Brake</a>\r\n  <br><a href=\"#t3\">Задача C. LionAge II</a>\r\n  <br><a href=\"#t4\">Задача D. FreeDiv</a>\r\n  <br><a href=\"#t5\">Задача E. Morrowindows</a>\r\n  <br><a href=\"#t6\">Задача F. Plane of Tanks</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. The Elder Trolls IV: Oblivon -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. The Elder Trolls IV: Oblivon</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Need For Brake -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Need For Brake</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. LionAge II -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. LionAge II</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. FreeDiv -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. FreeDiv</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Morrowindows -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Morrowindows</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Plane of Tanks -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Plane of Tanks</h3>\r\n\r\n  <div class=\"t6\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
@@ -11027,7 +11304,7 @@ var code = "<!-- Задача C. Неотсортированная подпос
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!-- Задача D. Кольцевая 2 -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Всем известно, что в Берляндии есть n городов, образующих Серебряное кольцо — пары городов с номерами i и i+1 (1 ≤ i &lt; n), а так же n и 1 соединены дорогами. Правительство Берляндии решило построить m новых дорог. Уже подготовлен план постройки — список пар городов, которые нужно соединить дорогами. Каждая дорога будет представлять собой непрерывную линию, находящуюся внутри, либо снаружи кольца. Дороги не будут иметь общих точек с кольцом (кроме двух ее концов).</p>\r\n<p>Теперь разработчикам плана интересно, можно ли построить дороги так, чтобы они не пересекались (заметим, что дороги могут пересекаться своими концами). Если это возможно сделать, то какие дороги должны находиться внутри кольца, а какие снаружи?</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записаны два целых числа n и m (4 ≤ n ≤ 100, 1 ≤ m ≤ 100). Далее следует m строк по два целых числа ai и bi (1 ≤ ai, bi ≤ n, ai ≠ bi). Между парой городов не может быть больше одной дороги. План не содержит тех дорог, которые уже существуют в Серебряном кольце.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если невозможно построить дороги так, чтобы они пересекались только в концах, выведите Impossible. Иначе выведите m символов. i-ый символ должен быть i, если дорогу нужно проводить внутри кольца, или o — если дорогу нужно проводить снаружи кольца. Если решений несколько, выведите любое.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4 2\r\n1 3\r\n2 4\r\n</pre>\r\n<pre>\r\nio\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n6 3\r\n1 3\r\n3 5\r\n5 1\r\n</pre>\r\n<pre>\r\nooo\r\n</pre>\r\n</details>\r\n";
+var code = "<!-- Задача D. Кольцевая 2 -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Всем известно, что в Берляндии есть n городов, образующих Серебряное кольцо — пары городов с номерами i и i+1 (1 ≤ i &lt; n), а так же n и 1 соединены дорогами. Правительство Берляндии решило построить m новых дорог. Уже подготовлен план постройки — список пар городов, которые нужно соединить дорогами. Каждая дорога будет представлять собой непрерывную линию, находящуюся внутри, либо снаружи кольца. Дороги не будут иметь общих точек с кольцом (кроме двух ее концов).</p>\r\n<p>Теперь разработчикам плана интересно, можно ли построить дороги так, чтобы они не пересекались (заметим, что дороги могут пересекаться своими концами). Если это возможно сделать, то какие дороги должны находиться внутри кольца, а какие снаружи?</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записаны два целых числа n и m (4 ≤ n ≤ 100, 1 ≤ m ≤ 100). Далее следует m строк по два целых числа ai и bi (1 ≤ ai, bi ≤ n, ai ≠ bi). Между парой городов не может быть больше одной дороги. План не содержит тех дорог, которые уже существуют в Серебряном кольце.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если невозможно построить дороги так, чтобы они пересекались только в концах, выведите Impossible. Иначе выведите m символов. i-ый символ должен быть i, если дорогу нужно проводить внутри кольца, или o — если дорогу нужно проводить снаружи кольца. Если решений несколько, выведите любое.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4 2\r\n1 3\r\n2 4\r\n</pre>\r\n<pre>\r\nio\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n6 3\r\n1 3\r\n3 5\r\n5 1\r\n</pre>\r\n<pre>\r\nooo\r\n</pre>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/27/problem/D\" target=\"_blank\">Задача 27D</a>\r\n    <br><a href=\"https://codeforces.com/contest/27\" target=\"_blank\">Codeforces 27 Round 27 Beta (Div. 2) 2010.09.10</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\nconst int N = 100010;\r\nint a[N], b[N], col[N];\r\nbool flag, vis[N];\r\nint n; // число городов\r\nint m; // число новых дорог\r\n\r\nvoid dfs(int p, int coll) {\r\n  if (!vis[p]) {\r\n    col[p] = coll, vis[p] = true;\r\n    for (int i = 1;i &lt;= m;i++) {\r\n      if (a[i] != a[p] && b[i] != b[p]) {\r\n        if ((a[p]&lt;a[i] && b[p]&gt;a[i] && b[p] &lt; b[i]) ||\r\n          (a[i]&lt;a[p] && b[i]&gt;a[p] && b[i] &lt; b[p])) {\r\n          dfs(i, coll ^ 1);\r\n        }\r\n      }\r\n    }\r\n  } else if (coll != col[p]) {\r\n    flag = true;\r\n  }\r\n}\r\n\r\nint main() {\r\n  cin &gt;&gt; n &gt;&gt; m;\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    cin &gt;&gt; a[i] &gt;&gt; b[i];\r\n    a[i]--;\r\n    b[i]--;\r\n    if (a[i] &gt; b[i]) {\r\n      a[i] ^= b[i];\r\n      b[i] ^= a[i];\r\n      a[i] ^= b[i];\r\n    }\r\n  }\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    if (!vis[i]) {\r\n      dfs(i, 0);\r\n    }\r\n  }\r\n\r\n  if (flag) {\r\n    cout &lt;&lt; \"Impossible\";\r\n    return 0;\r\n  }\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    cout &lt;&lt; (col[i] ? 'i' : 'o');\r\n  }\r\n}\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
@@ -14693,6 +14970,156 @@ var code = "<!-- Задача E. Спасите Город! -->\r\n<div class=\"
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/rounds100/z100/z68a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z68a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Иррациональная задача -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Маленькому Пете задали в качестве домашнего задания следующую задачу:</p>\r\n<p>Дана функция f(x) = (((x mod p1) mod p2) mod p3) mod p4 ( mod обозначает операцию взятия остатка по модулю). Требуется посчитать количество целых чисел x из промежутка [a;b] таких, что f(x) = x.</p>\r\n<p>К сожалению, Петя забыл, в каком порядке должны браться остатки, а просто записал 4 числа. С равной вероятностью может оказаться, что брать остатки для вычисления функции нужно в любом из 24 возможных порядков. К примеру, если у Пети есть числа 1, 2, 3, 4, то он может брать остатки именно в таком порядке, а может сначала брать остаток по модулю 4, затем по модулям 2, 3, 1. Также существует 22 других перестановки этих чисел, в порядке которых могут браться остатки. В этой задаче 4 числа, записанных Петей, будут попарно различны.</p>\r\n<p>Теперь Петя уже не может выполнить задачу так, как от него требовал учитель, но ради развлечения он решил найти количество таких целых чисел x из [a, b], что вероятность того, что для них f(x) = x, не меньше чем 31.4159265352718281828459045%. Иными словами, Пете подойдут те числа x, для которых существует не менее 7 таких перестановок чисел p1, p2, p3, p4, что f(x) = x.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входного файла находятся 6 целых чисел, разделенных пробелами: p1, p2, p3, p4, a, b (1 ≤ p1, p2, p3, p4 ≤ 1000, 0 ≤ a ≤ b ≤ 31415).</p>\r\n<p>Гарантируется, что числа p1, p2, p3, p4 будут попарно различны.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите количество целых чисел из заданного интервала, удовлетворяющих заданным условиям.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2 7 1 8 2 8\r\n</pre>\r\n<pre>\r\n0\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n20 30 40 50 0 100\r\n</pre>\r\n<pre>\r\n20\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n31 41 59 26 17 43\r\n</pre>\r\n<pre>\r\n9\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z68b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z68b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Обмен энергией -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Как известно, сейчас на планете энергетический кризис. Маленький Петя недоволен этим и собирается спасти мир. Для этого ему нужно чтобы в каждом накопителе было одинаковое число энергии. Изначально в каждом накопителе находится некое количество энергии: в i-ом накопителе находится ai единиц энергии. Энергию можно передавать между накопителями, причем каждый раз при передаче x единиц энергии (x не обязательно целое) ровно k процентов рассеивается. То есть если с одного накопителя передавалось на другой x единиц, то в первом стало на x единиц меньше энергии, а в другом — на x - (x * k) / 100 больше единиц.</p>\r\n<p>Ваша задача — помочь Пете найти, какое наибольшее равное количество энергии может остаться в накопителях после обменов энергией.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входного файла находятся два целых числа n и k (1 ≤ n ≤ 10000, 0 ≤ k ≤ 99) — количество накопителей и процент энергии, который рассеивается при передаче.</p>\r\n<p>В следующей строке находятся n целых чисел a1, a2, ... , an — запас энергии в первом, втором, ..., n-ом накопителе соответственно (0 ≤ ai ≤ 1000, 1 ≤ i ≤ n).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите максимальное возможное количество энергии, которое может остаться в каждом из накопителей после перераспределения энергии.</p>\r\n<p>Абсолютная или относительная погрешность ответа не должна превышать 10<sup>-6</sup>.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3 50\r\n4 2 1\r\n</pre>\r\n<pre>\r\n2.000000000\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n2 90\r\n1 11\r\n</pre>\r\n<pre>\r\n1.909090909\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z68c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z68c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Синхрофазотрон -->\r\n<div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n<p>Для неких экспериментов маленькому Пете срочно понадобился синхрофазотрон. Сам прибор у Пети уже есть, осталось настроить подачу топлива к нему. Топливо поступает по системе узлов, пронумерованных числами от 1 до n, соединённых трубами. Трубы идут из каждого узла с меньшим номером в каждый узел с большим, топливо может идти по трубе только в направлении от узла с меньшим номером к узлу с большим. В первый узел может поступить любое количество топлива, а из последнего узла топливо поступает прямо в синхрофазотрон. Известно, что каждая из труб имеет три характеристики: минимальное количество топлива, которое должно по ней течь, максимальное число топлива, которое может по ней течь, и стоимость активации трубы. Если по трубе из узла i в узел j течет cij единиц топлива (cij > 0), то заплатить за это надо будет aij + cij2 тугриков (aij — стоимость активации этой трубы). Если же по трубе не течет топливо, то платить ничего нельзя. По трубам может течь только целое число единиц топлива.</p>\r\n<p>Минимальное и максимальное ограничение на трубу действует всегда, а не только тогда когда она активирована. Считается, что труба активна тогда и только тогда, когда поток через это трубу строго больше нуля.</p>\r\n<p>Петя не хочет, чтобы система труб была слишком перегружена, поэтому он хочет найти минимальное количество топлива, которое, поступив в первый узел, сможет достигнуть синхрофазатрона. При этом он хочет впечатлить спонсоров, поэтому суммарная стоимость, которую нужно будет заплатить за прохождение топлива по всем трубам, должна быть максимальна.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находится целое число n (2 ≤ n ≤ 6) — количество узлов. В следующих n(n - 1) / 2 строках находятся пятерки целых чисел, s, f, l, h, a, описывающие трубы — начальный узел трубы, конечный узел трубы, минимальное и максимальное количество топлива, которое может течь по трубе, и стоимость активации трубы, соответственно. (1 ≤ s &lt; f ≤ n, 0 ≤ l ≤ h ≤ 5, 0 ≤ a ≤ 6). Гарантируется, что во входных данных для каждой пары узлов с различными номерами будет описана ровно одна труба между ними.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите в первую строку два числа через пробел: минимальное возможное количество топлива, которое может течь в синхрофазотрон, и максимальную возможную сумму, которую надо будет потратить на то, чтобы это количество топлива достигло синхрофазотрона. Если не существует количества топлива, которое могло бы достичь синхрофазотрона, выведите \"-1 -1\".</p>\r\n<p>Количество топлива, которое достигнет синхрофазотрона, не обязано быть положительным — оно может равняться нулю, если минимальные ограничения на количество топлива у всех труб равны нулю.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2\r\n1 2 1 2 3\r\n</pre>\r\n<pre>\r\n1 4\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3\r\n1 2 1 2 3\r\n1 3 0 0 0\r\n2 3 3 4 5\r\n</pre>\r\n<pre>\r\n-1 -1\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n4\r\n1 2 0 2 1\r\n2 3 0 2 1\r\n1 3 0 2 6\r\n1 4 0 0 1\r\n2 4 0 0 0\r\n3 4 2 3 0\r\n</pre>\r\n<pre>\r\n2 15\r\n</pre>\r\n\r\n  <h4>Пример 4</h4>\r\n<pre>\r\n3\r\n1 2 0 2 1\r\n1 3 1 2 1\r\n2 3 1 2 1\r\n</pre>\r\n<pre>\r\n2 6\r\n</pre>\r\n<p>В первом тесте мы можем пустить 1 или 2 единицы топлива по трубе из 1 в 2. Минимальное возможное количество — 1, пустить его стоит a12 + 1² = 4.</p>\r\n<p>Во втором тесте, мы можем пустить максимум 2 единицы из узла 1 в узел 2, и нам нужно пустить как минимум 3 единицы из узла 2 в узел 3. Это невозможно.</p>\r\n<p>В третьем тесте минимальное возмножное количество равно 2. Мы можем пустить каждую единицу топлива по одному из двух путей: 1->2->3->4 или 1->3->4. Если мы дважды воспользуемся первым путем, это будет стоить a12 + 2² + a23 + 2² + a34 + 2²=14. Если мы дважды воспользуемся вторым путем, это будет стоить a13 + 2² + a34 + 2²=14. Однако если мы воспользуемся каждым путем (разрешив 1 единице топлива течь по трубам 1->2, 2->3, 1->3 и двум единицам по трубе 3->4), это будет стоить a12 + 1² + a23 + 1² + a13 + 1² + a34 + 2²=15 и это максимальная возможная цена.</p>\r\n<p>Заметим также, что по ребру 1->4 ничего не течет, по-этому стоимость его активации к ответу не прибавляется.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z68d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z68d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Дерево полураспада -->\r\n<div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n<p>В последнее время Петя очень увлекся физикой. Анна Викторовна, его учительница, заметив Петину тягу к знаниям дала ему увлекательную физическую головоломку — дерево полураспада.</p>\r\n<p>Минимальное и максимальное ограничение на трубу действует всегда, а не только тогда когда она активирована. Считается, что труба активна тогда и только тогда, когда поток через это трубу строго больше нуля.</p>\r\n<p>Дерево полураспада представляет собой полное двоичное дерево высоты h. Высота двоичного дерева — максимум среди расстояний (в ребрах) от корня дерева до его листьев. В процессе изучения, Петя добавляет в его вершины электроны, а также вызывает случайный распад дерева с помощью синхрофазотрона. Случайным распадом называется процесс при котором вдоль пути от корня к случайному листку удаляются все ребра. Вероятности выбора листьев равны между собой. Естественно, так как казенное имущество портить ученикам воспрещается, после каждого такого распада Петя возвращает все удаленные ребра на место.</p>\r\n<p>Распавшись, дерево разлагается на компоненты связности. Зарядом такой компоненты называется суммарное количество электронов в вершинах, что принадлежат ей. Потенциалом разрушенного дерева называется максимальный заряд среди его компонент связности. Каждый раз вызывая случайный распад дерева, Петя предварительно хочет знать каково математическое ожидание потенциала дерева после его разрушения.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Первая строка будет содержать два целых числа h и q (1 ≤ h ≤ 30, 1 ≤ q ≤ 10<sup>5</sup>). Далее идут q строк в каждой из которых будет запрос одного из двух типов:</p>\r\n<ul>\r\n  <li>add v e. В вершину с номером v Петя добавляет e электронов (1 ≤ v ≤ 2<sup>h + 1</sup> - 1, 0 ≤ e ≤ 10<sup>4</sup>). v и e — целые числа. Вершины в дереве нумеруются следующим образом: корень имеет номер 1, потомки вершины x имеют номера 2x и 2x + 1.</li>\r\n  <li>decay. Петя провоцирует распад дерева.</li>\r\n</ul>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Для каждого запроса decay следует вывести математическое ожидание потенциала дерева после его разрушения. Абсолютная или относительная погрешность ответа не должна превышать 10<sup>-4</sup>.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n1 4\r\nadd 1 3\r\nadd 2 10\r\nadd 3 11\r\ndecay\r\n</pre>\r\n<pre>\r\n13.50000000\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z68e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z68e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Контакт -->\r\n<div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n<p>Маленький Петя готовится к первому контакту с инопланетянами. Он знает, что корабли инопланетян имеют формы невырожденных треугольников и что их будет ровно 4. Посадочная площадка для корабля — это 3 специальных колонны, размещенных в определенных точках плоскости, таких, что эти 3 точки образуют такой же треугольник, как и корабль, с точностью до поворота, параллельного переноса и отражения (симметрий относительно сторон). После посадки корабли могут пересекаться.</p>\r\n<p>Каждая колонна может быть использована чтобы посадить более чем один корабль, например, если есть два одинаковых корабля, то не обязательно строить 6 колонн чтобы посадить оба корабля, достаточно 3. Петя хочет узнать, какого минимального числа колонн будет достаточно, чтобы посадить все корабли.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В каждой из 4 строк находятся 6 целых чисел x1 y1 x2 y2 x3 y3 (0 ≤ x1, y1, x2, y2, x3, y3 ≤ 20), задающие 3 точки, описывающие форму каждого из 4 кораблей. Гарантируется, что тройка точек в каждой строке задает невырожденный треугольник.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите минимальное число колонн, достаточное для посадки всех кораблей.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n0 0 1 0 1 2\r\n0 0 0 2 2 2\r\n0 0 3 0 1 2\r\n0 0 3 0 2 2\r\n</pre>\r\n<pre>\r\n4\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n0 0 0 1 1 1\r\n0 0 0 2 2 2\r\n0 0 0 5 5 5\r\n0 0 0 17 17 17\r\n</pre>\r\n<pre>\r\n9\r\n</pre>\r\n<p>В первом тесте можно поставить колонны в таких точках: (0, 0), (1, 0), (3, 0), (1, 2). Заметьте, что второй корабль может приземлиться, используя последние 3 колонны.</p>\r\n<p>Во втором тесте можно выбрать точки (0, 0), (0, 1), (1, 0), (0, 2), (2, 0), (0, 5), (5, 0), (0, 17), (17, 0). Меньше чем 9 колонн использовать нельзя.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z69a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z69a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Юный физик -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>В одной школе в 11 классе учится мальчик Вася. Как-то раз Вася решил посмотреть матч своей любимой хоккейной команды. А поскольку мальчик очень любит хоккей, даже больше, чем физику, он забыл сделать уроки. В частности, забыл сделать задачки по физике. На следующий день учитель очень разозлился на Васю, и решил его проучить. Он дал нерадивому ученику, казалось бы, простую задачку: дано покоящееся тело в пространстве, и даны силы, действующие на него. Тело можно считать материальной точкой с координатами (0; 0; 0). Васе нужно было ответить, находится ли оно в равновесии. «Ерунда!» — подумал Вася, нужно лишь проверить, что сумма всех векторов равна 0, и принялся решать задачу. Но впоследствии оказалось, что этих сил может быть очень-очень много, и Вася не справится без вашей помощи. Помогите ему. Напишите программу, которая определяет по заданным векторам сил, покоится тело или движется.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке задано натуральное число n (1 ≤ n ≤ 100), далее следует n строк по три целых числа в каждой: координата xi, координата yi и координата zi вектора силы, приложенной к телу (-100 ≤ xi, yi, zi ≤ 100).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите слово \"YES\" если тело находится в равновесии, или слово \"NO\" если не находится.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\n4 1 7\r\n-2 4 -1\r\n1 -5 -3\r\n</pre>\r\n<pre>\r\nNO\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3\r\n3 -1 7\r\n-5 2 -4\r\n2 -1 -3\r\n</pre>\r\n<pre>\r\nYES\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z69b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z69b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Ставки -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>В Челябинске живет очень уважаемый бизнесмен Никита со странным прозвищем \"БОСС\". Как-то раз Никита решил съездить с его другом Алексеем на чемпионат мира по летнему биатлону. Никита, как особо важная персона, получил жетон, позволяющий ставить на каждом участке не более чем на одного спортсмена.</p>\r\n<p>Для начала друзья узнали правила: в гонке n участков равной длины и m участников. Участники пронумерованы от 1 до m. Про каждого участника известно:</p>\r\n<ul>\r\n  <li>li — номер участка, с которого биатлонист начинает бежать,</li>\r\n  <li>ri — номер участка, на котором биатлонист заканчивает бежать,</li>\r\n  <li>ti — время, которое требуется биатлонисту чтобы преодолеть один участок пути,</li>\r\n  <li>ci — прибыль в рублях, которую получит поставивший на него человек, в случае победы i-ого спортсмена на одном из участков.</li>\r\n</ul>\r\n<p>i-ый биатлонист проезжает участки с li по ri включительно. Весь путь участник пробегает за (ri - li + 1)·ti единиц времени. Одну секцию участник пробегает ровно за ti единиц времени. В случае победы спортсмена на k участках поставивший на него получит k·ci рублей.</p>\r\n<p>На каждом участке победитель определяется независимо следующим образом: если есть хотя бы один биатлонист, бегущий данный участок, то из всех них победителем является тот, кто пробежал этот участок за минимальное время (преодолел участок за меньшее время, чем другие). В случае равенства времени побеждает спортсмен с меньшим порядковым номером. Если же участников этапа нет, то победитель на этом этапе неопределен. Стоит добавить, что в летнем биатлоне все участники движутся с постоянной скоростью.</p>\r\n<p>Также стоит добавить, что Никита может ставить на каждом участке на любого участника, бегущего данный участок.</p>\r\n<p>Помогите друзьям определить максимальную возможную прибыль.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находится два целых числа n и m (1 ≤ n, m ≤ 100). Далее следуют m строк, в каждой из которых записано 4 целых числа li, ri, ti, ci (1 ≤ li ≤ ri ≤ n, 1 ≤ ti, ci ≤ 1000).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно целое число — максимальную прибыль в рублях, которую могут получить друзья. На каждом из n участков разрешается поставить деньги не более чем на одного спортсмена.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4 4\r\n1 4 20 5\r\n1 3 21 10\r\n3 3 4 30\r\n3 4 4 20\r\n</pre>\r\n<pre>\r\n60\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n8 4\r\n1 5 24 10\r\n2 4 6 15\r\n4 6 30 50\r\n6 7 4 20\r\n</pre>\r\n<pre>\r\n105\r\n</pre>\r\n<p>В первом тесте оптимально ставить: на 1-2 участках на 1 биатлониста, на 3 участке на 3 биатлониста, на 4 участке на 4 биатлониста. Итого: прибыль 5 рублей за 1 участок,прибыль 5 рублей за 2 участок, прибыль 30 рублей за 3 участок, прибыль 20 рублей за 4 участок. Суммарная прибыль 60 рублей.</p>\r\n<p>Во втором тесте оптимально ставить: на 1 и 5 участках на 1 биатлониста, на 2-4 участке на 2 биатлониста, на 6-7 участках на 4 спортсмена. На 8 участке нет победителя. На 1 участке прибыль 10 рублей, на 2,3,4 по 15 рублей, на 5 участке прибыль 10 рублей, на 6,7 участках прибыль 20 рублей. Суммарная прибыль 105 рублей.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z69c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z69c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Игра -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>В одной школе с Васей учится мальчик Костя. Костя не любит физику, он любит разные онлайн игры. Каждый день, приходя домой, Костя бросает свою сумку в самый дальний угол и садится за свой любимый компьютер. Костя даже ест не отрываясь от игры. На днях Костик купил новую RPG игру «ЗайцButtle», которая отличается от всех своих конкурентов в этом жанре огромным количеством артефактов. Как известно, артефакты делятся на базовые и составные. В продаже доступны только базовые артефакты. Более мощные составные артефакты собираются из некоторого количества базовых артефактов.</p>\r\n<p>После сборки составного артефакта, все его компоненты изчезают.</p>\r\n<p>Костя является главой альянса, поэтому он обязательно должен помнить, какие артефакты есть не только у него, но и у его союзников. Вы должны определить по последовательности купленных Костей и его союзниками артефактов, сколько и каких артефактов собрал каждый из них. Считается, что изначально ни у кого нет артефактов.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находится 4 натуральных числа: k (1 ≤ k ≤ 100) — количество союзников Кости, n (1 ≤ n ≤ 50) — количество базовых артефактов, m (0 ≤ m ≤ 50) — количество составных артефактов, q (1 ≤ q ≤ 500) — количество покупок его друзей. Следующие n строк содержат названия базовых артефактов. После них в m строках содержатся описания составных артефактов в следующем формате:</p>\r\n<code>&lt;Название арт.&gt;: &lt;Арт. №1&gt; &lt;Количество aрт. №1&gt;, &lt;Арт. №2&gt; &lt;Количество aрт. №2&gt;, ... &lt;Арт. №X&gt; &lt;Количество aрт. №Х&gt;</code>\r\n<p>Все количества — натуральные числа, не большие 100 (1 ≤ X ≤ n).</p>\r\n<p>Названия всех артефактов различны, состоят из строчных букв латинского алфавита, длина каждого названия — от 1 до 100 символов включительно. Все слова в формате описания составного артефакта разделены ровно одним пробелом. Гарантируется, что все составляющие нового артефакта различны и уже встречались во входных данных в качестве названий базовых артефактов.</p>\r\n<p>Дальше каждая из последующих q строчек характеризуется числом ai, номером друга, купившего артефакт (1 ≤ ai ≤ k), и наименованием купленного базового артефакта. Будем считать, что рюкзаки у героев бездонные и любой последующий купленный артефакт влезает.</p>\r\n<p>Гарантируется, что после очередной покупки появляется не более одной возможности собрать составной артефакт. Если такая возможность появилась, герой ей обязательно воспользуется.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выходной файл должен состоять из k блоков. В первой строке должно находиться число bi — количество различных артефактов у i-ого союзника. Далее в блоке должно располагаться bi строк с наименованиями этих артефактов и количеством этих артефактов, причем строки должны быть выведены в соответствии с лексикографическим порядком названий артефактов. В каждом блоке все артефакты должны быть различны, а все числа кроме bi положительны.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2 3 2 5\r\ndesolator\r\nrefresher\r\nperseverance\r\nvanguard: desolator 1, refresher 1\r\nmaelstorm: perseverance 2\r\n1 desolator\r\n2 perseverance\r\n1 refresher\r\n2 desolator\r\n2 perseverance\r\n</pre>\r\n<pre>\r\n1\r\nvanguard 1\r\n2\r\ndesolator 1\r\nmaelstorm 1\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z69d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z69d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Точка -->\r\n<div class=\"time-memory\">(Время 3с. Память 256мб)</div>\r\n\r\n<p>Антон и Даша на переменах любят играть в различные игры на клетчатой бумаге. К 11 классу они успели поиграть во все игры такого типа и попросили программиста Вову придумать им новую игру. Вова предложил им игру под кодовым названием \"Точка\" со следующими правилами:</p>\r\n<ul>\r\n  <li>На клетчатой бумаге рисуется система координат. В позицию (x, y) ставится точка.</li>\r\n  <li>Ходом является перемещение точки на один из заранее выбранных векторов. Также каждый игрок может один раз за игру симметрично отобразить точку относительно прямой y = x.</li>\r\n  <li>Антон и Даша ходят по очереди. Первым ходит Антон.</li>\r\n  <li>Проигрывает тот, после чьего хода расстояние от точки до начала координат превышает d.</li>\r\n</ul>\r\n<p>Помогите им определить победителя.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входного файла находится 4 целых числа x, y, n, d (-200 ≤ x, y ≤ 200, 1 ≤ d ≤ 200, 1 ≤ n ≤ 20) — начальные координаты точки, расстояние d и количество векторов. Гарантируется, что изначально точка находится на расстоянии меньшем d от начала координат. В следующих n строках записано по 2 неотрицательных числа xi и yi (0 ≤ xi, yi ≤ 200) — координаты i-ого вектора. Гарантируется, что все векторы ненулевые и различны.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Cледует вывести \"Anton\", если при оптимальной игре обоих игроков выигрывает Антон, и \"Dasha\" в противном случае.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n0 0 2 3\r\n1 1\r\n1 2\r\n</pre>\r\n<pre>\r\nAnton\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n0 0 2 4\r\n1 1\r\n1 2\r\n</pre>\r\n<pre>\r\nDasha\r\n</pre>\r\n<p>В первом тесте Антон ходит на вектор (1;2), и Даша проигрывает. Во втором тесте Даша своим первым ходом перемещает точку так, чтобы ее координаты стали (2;3), и Антон проигрывает, та как у него остается единственный возможный ход — отражение относительно прямой y = x, на который Даша ответит аналогичным ходом и вернет точку в позицию (2;3).</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z69e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z69e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Подотрезки -->\r\n<div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n<p>Программист Саша недавно начал изучать структуры данных. Его тренер Стас сказал ему решить задачу о нахождении минимума на отрезке массива за O(log n), с которой Саша справился. Чтобы Саша не думал, что все изучил, Стас задал ему новую задачу. Для каждого отрезка фиксированной длины Саша должен найти максимальный элемент из тех, что встречаются на данном отрезке ровно один раз. Помогите Саше решить эту задачу.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находится два натуральных числа n и k (1 ≤ n ≤ 10⁵, 1 ≤ k ≤ n) — количество элементов массива и длина отрезка.</p>\r\n<p>Далее следует n строк: в i-ой находится одно число ai (-10⁹ ≤ ai ≤ 10⁹).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите n–k+1 чисел, по одному в строке: в i-ой строке выведите максимальное из тех чисел подмассива ai ai + 1 … ai + k - 1, что встречается на этом подмассиве ровно 1 раз. Если таких чисел в данном подмассиве нет, выводите \"Nothing\".</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n5 3\r\n1\r\n2\r\n2\r\n3\r\n3\r\n</pre>\r\n<pre>\r\n1\r\n3\r\n2\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n6 4\r\n3\r\n3\r\n3\r\n4\r\n4\r\n2\r\n</pre>\r\n<pre>\r\n4\r\nNothing\r\n3\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/rounds100/z100/z6a.html":
 /*!**********************************************************!*\
   !*** ./src/components/cf/rounds/rounds100/z100/z6a.html ***!
@@ -14913,6 +15340,231 @@ var code = "<!-- Задача D. Пасьянс -->\r\n<div class=\"time-memory\
 __webpack_require__.r(__webpack_exports__);
 // Module
 var code = "<!-- Задача E. Ядерный синтез -->\r\n<div class=\"time-memory\">(Время 1.5с. Память 256мб)</div>\r\n\r\n<p>Среди физиков-ядерщиков популярна следующая головоломка.</p>\r\n<p>В реакторе находится набор из n атомов некоторых химических элементов. Под словосочетанием «номер атома» мы будем подразумевать номер элемента этого атома в периодической таблице химических элементов.</p>\r\n<p>Разрешается взять любые два различных атома и синтезировать из них один новый. При этом получается атом, номер которого равен сумме номеров исходных атомов. Операцию синтеза можно проводить несколько раз.</p>\r\n<p>Целью является получение нового набора из k атомов, заданного заранее.</p>\r\n<p>Сложность головоломки в том, что разрешается только сливать два атома в один, но не разделять один атом на несколько. Вам предлагается попробовать силы в решении данной головоломки.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находятся два целых числа n и k (1 ≤ k ≤ n ≤ 17). Во второй строке через пробел перечислены символы элементов n атомов, которые доступны изначально. В третьей строке через пробел перечислены символы элементов k атомов, которые нужно получить. Символы элементов совпадают с символами из периодической таблицы химических элементов. Номера атомов не превышают 100 (элементы с большим номером крайне нестабильны). Некоторые атомы могут иметь одинаковые номера (то есть может быть несколько атомов одного и того же элемента). Сумма номеров изначальных атомов равна сумме номеров атомов, которые требуется получить.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если синтезировать нужные атомы невозможно, то выведите «NO» без кавычек. Иначе выведите в первой строке «YES», а в следующих k строках выведите способ получения каждого из k атомов в виде равенств. Каждое равенство имеет вид «x1+x2+...+xt->yi», где xj — символ элемента некоторого атома из начального набора, а yi — символ элемента некоторого атома из конечного набора. Каждый атом из входных данных должен встретиться в выходных данных ровно один раз. Порядок слагаемых в уравнениях, а так же порядок вывода уравнений не имеет значения. Если решений несколько — выведите любое. Чтобы лучше понять формат вывода — смотрите примеры.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n10 3\r\nMn Co Li Mg C P F Zn Sc K\r\nSn Pt Y\r\n</pre>\r\n<pre>\r\nYES\r\nMn+C+K->Sn\r\nCo+Zn+Sc->Pt\r\nLi+Mg+P+F->Y\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n2 1\r\nH H\r\nHe\r\n</pre>\r\n<pre>\r\nYES\r\nH+H->He\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n2 2\r\nBk Fm\r\nCf Es\r\n</pre>\r\n<pre>\r\nNO\r\n</pre>\r\n<p>Реакции из первого примера имеют вид (слева снизу приписан номер атома):</p>\r\n<p>Для того, чтобы найти периодическую таблицу химических элементов, Вы можете использовать свою любимую поисковую систему.</p>\r\n<p>Набор претестов содержит каждый из первых 100 элементов периодической таблицы хотя бы по одному разу. Вы можете использовать эту информацию для проверки опечаток.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Гоштасп, Виштасп и Эйди -->\r\n<div class=\"time-memory\">(Время 5с. Память 256мб)</div>\r\n\r\n<p>Гоштасп хорошо программирует, и все в его школе это знают. Однажды его друг Виштасп попросил решить задачу:</p>\r\n<p>Дано натуральное число n, определите, является ли оно хорошим.</p>\r\n<p>Натуральное число x называется хорошим, если существует набор различных чисел a1, a2, ..., am такой, что . При этом каждое число из набора ai либо должно быть простым, либо должно равняться единице.</p>\r\n<p>Виштасп предлагает Гоштаспу разделить с ним свое Эйди поровну, если он сможет решить задачу. Эйди — это деньги, которые дарят детям на Новруз их родители и другие родственники.</p>\r\n<p>Помогите Гоштаспу решить задачу!</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано одно натуральное число n (1 ≤ n ≤ 10000).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если число не является хорошим, выведите 0. Иначе выведите числа a1, ..., am. Если существует несколько решений, выведите лексикографически наибольшее из них. Решения сравниваются как последовательности чисел, а не как строки.</p>\r\n<p>Чтобы сравнить последовательности a1, ..., am и b1, ..., bn найдите первый индекс i такой, что ai ≠ bi. Если ai &lt; bi, то a лексикографически меньше, а если bi &lt; ai, то b лексикографически меньше. Если m ≠ n, добавьте (только для сравнения) нули в конец меньшей последовательности и выполните сравнение.</p>\r\n<p>Количество элементов в последовательности (m) минимизировать не требуется.</p>\r\n<p>При выводе последовательности следуйте формату примеров.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n11\r\n</pre>\r\n<pre>\r\n11=11\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n545\r\n</pre>\r\n<pre>\r\n541+3+1=545\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Ini-файл -->\r\n<div class=\"time-memory\">(Время 5с. Память 256мб)</div>\r\n\r\n<p>С помощью ini-файлов в Windows записываются настройки приложений. Каждая строка ini-файла либо определяет некоторое значение, либо начинает секцию.</p>\r\n<p>Строка, определяющая значение, имеет вид \"key=value\", где key — это название некоторого свойства, а value — его значение. По обе стороны key и value могут быть пробелы, которые стоит игнорировать.</p>\r\n<p>Строка, начинающая секцию, имеет вид \"[section]\". Эта строка обозначает, что все последующие строки вида \"key=value\" определяют свойства для секции section. Разумеется, следующая строка начала секции меняет текущую секцию. В строках этого вида тоже могут встречаться незначащие пробелы (до и после любой квадратной скобки).</p>\r\n<p>Cтроки, у которых первый непробел является символом \";\", следует игнорировать.</p>\r\n<p>Ваша задача, написать программу, которая обработает заданный корректный ini-файл и выведет его в специальном виде:</p>\r\n<ul>\r\n  <li>сначала следует разместить строки вида \"key=value\", для которых секция не определена;</li>\r\n  <li>затем следует разместить все секции в лексикографическом (алфавитном) порядке их названий;</li>\r\n  <li>внутри каждого блока, описанного в двух предыдущих пуктах, строки вида \"key=value\" следует упорядочить лексикографически по \"key\";</li>\r\n  <li>если существует более одной пары \"key=value\" с одинаковым \"key\" для одной секции (или с неопределенной секцией), то следует выводить только последнее вхождение (для порядка определенного входными данными);</li>\r\n  <li>все незначащие пробелы и переводы строк следует удалить.</li>\r\n</ul>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Первая строка содержит одно целое число n (1 ≤ n ≤ 510) — количество строк в данном ini-файле.</p>\r\n<p>Далее в n строках описан корректный ini-файл. Значения section, key и value состоят только из латинских букв, цифр и символов \".\" и \"-\".</p>\r\n<p>Длины всех строк не превышают 255 символов и не меньше 1 символа, суммарная длина всех строк не превосходит 10000.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите заданный ini-файл в требуемом виде.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n11\r\na= 1\r\nb=a\r\na = 2\r\n ; comment\r\n[z]\r\n1=2\r\n[y]\r\n2=3\r\n[z]\r\n2=1\r\n[w]\r\n</pre>\r\n<pre>\r\na=2\r\nb=a\r\n[w]\r\n[y]\r\n2=3\r\n[z]\r\n1=2\r\n2=1\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Замечательные числа -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Натуральное число a является делителем натурального числа b тогда и только тогда, когда существует натуральное число c, такое что a x c = b.</p>\r\n<p>Царь Астиаг называет натуральное число замечательным, если количество его четных делителей совпадает с количеством его нечетных делителей.</p>\r\n<p>Например, у числа 3 всего два делителя 3 и 1, оба — нечетные. Значит 3 — не замечательное число. Но, например, число 2 делится на 2 и на 1. Один делитель четный, другой — нечетный, значит 2 — замечательное число.</p>\r\n<p>Определите, является ли заданное натуральное число x замечательным.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано одно натуральное число x (1 ≤ x ≤ 10³).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите yes, если число x — замечательное. Иначе выведите no. Регистр значения не имеет.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2\r\n</pre>\r\n<pre>\r\nyes\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3\r\n</pre>\r\n<pre>\r\nno\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Perse-script -->\r\n<div class=\"time-memory\">(Время 7с. Память 256мб)</div>\r\n\r\n<p>Два друга решили создать язык программирования, назвали они его Perse-script.</p>\r\n<p>Важная часть языка — строки. Строки в Perse-script записываются в кавычках (\")</p>\r\n<p>Например, \"Hello\" — константная строка. Но Hello — имя переменной или зарезервированное слово, которые мы не рассматриваем в этой задаче.</p>\r\n<p>Perse-script — функциональный язык, в нем нет операторов. Например, чтобы сложить два числа нужно написать sum(a,b), а не a+b.</p>\r\n<p>В языке есть несколько команд для работы со строками:</p>\r\n<ul>\r\n  <li>concat(x,y) возвращает конкатенацию («склейку») двух строк x и y. Например, concat(\"Hello\",\"World\") возвращает \"HelloWorld\".</li>\r\n  <li>reverse(x) возвращает перевернутую строку x. Например, reverse(\"Hello\") возвращает \"olleH\".</li>\r\n  <li>substr(x,a,b) принимает строку x и два целых числа a и b (1 ≤ a ≤ b ≤ n, где n — длина строки x). Возвращает подстроку x с индекса a по индекс b, включительно. Например, substr(\"Hello\",2,4) возвращает \"ell\".</li>\r\n  <li>substr(x,a,b,c) — другая версия substr, которая получает подстроку с шагом c. c всегда положительно. Например, substr(\"HelloWorld\",1,10,2) возвращает \"Hlool\". Более точно: изначально ответ пуст. Эта функция добавляет в ответ a-ый символ, а затем каждый c-ый считая от него, и так до b.</li>\r\n</ul>\r\n<p>Вы собираетесь реализовать работу со строками в Perse-script. Дано выражение, выведите его результат. Гарантируется, что все функции в качестве аргументов содержат только константные строки, записанные в кавычках, и перечисленные выше строковые функции.</p>\r\n<p>Названия функций Perse-script регистронезависимы. Так, чтобы вызвать substr можно написать SUBsTr(). Но нельзя писать \"hElLo\" вместо \"Hello\".</p>\r\n<p>Для дальнейшего разъяснения смотрите примеры.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Первая строка содержит корректное выражение. Гарантируется, что его длина не превосходит 103, и все целые числа не превосходят 100 по модулю. Заданная строка не пуста.</p>\r\n<p>Все константные строки состоят только из больших и маленьких латинских букв.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>В единственной строке выведите результат. Гарантируется, что ответ существует, и его длина не превосходит 104. Гарантируется, что ответ не является пустой строкой.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n\"HelloWorld\"\r\n</pre>\r\n<pre>\r\n\"HelloWorld\"\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\nREVerse(substr(\"helloworld\",1,5))\r\n</pre>\r\n<pre>\r\n\"olleh\"\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\nconCAT(rEveRSE(\"olleh\"),\"world\")\r\n</pre>\r\n<pre>\r\n\"helloworld\"\r\n</pre>\r\n\r\n  <h4>Пример 4</h4>\r\n<pre>\r\nreversE(concAT(substr(\"hello\",1,2),sUbstr(\"world\",1,5,1)))\r\n</pre>\r\n<pre>\r\n\"dlroweh\"\r\n</pre>\r\n\r\n  <h4>Пример 5</h4>\r\n<pre>\r\nsuBstr(\"Noruz\",1,4,2)\r\n</pre>\r\n<pre>\r\n\"Nr\"\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Али идет за покупками -->\r\n<div class=\"time-memory\">(Время 5с. Память 256мб)</div>\r\n\r\n<p>Али Кучулу собирается пойти за подарками к Наврузу, древнему персидскому празднику, иранскому новому году.</p>\r\n<p>Когда Али вошел в магазин, он сразу понял, что когда-то хозяин магазина тоже был программистом. Но программистом много денег не заработаешь, и ему пришлось сменить работу. Хозяин сказал Али, что тот может взять бесплатно что угодно, если ответит на простой вопрос за 10 секунд. Правда, чтобы увидеть вопрос, нужно было заплатить 3 томана.</p>\r\n<p>Али сразу же согласился, и хозяин магазина дал ему листок бумаги, на котором было задание. Оно было очень простым:</p>\r\n<p>Пусть строка A — ababababababab. Какая непустая подстрока A встречается в ней чаще всего?</p>\r\n<p>Али тут же ответил: a. Но хозяин сказал, что это неправильно, и попросил его дочитать условие до конца:</p>\r\n<p>Если есть несколько таких подстрок, выберите самую длинную из них. Если их все равно несколько, выберите ту из них, что идет позже других в алфавитном порядке.</p>\r\n<p>Правильный ответ был ab.</p>\r\n<p>Сейчас Али просит вас решить эту задачу для других строк. А у вас есть для этого компьютер и странный язык.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входных данных записана строка A. Эта строка непуста, состоит из маленьких латинских букв и содержит не более 30 символов.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>В первую строку выведите ответ.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\nabab\r\n</pre>\r\n<pre>\r\nab\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\nabcd\r\n</pre>\r\n<pre>\r\nabcd\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72f.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72f.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача F. Нефть -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Доктор Мосаддык хочет выкопать несколько нефтяных скважин в Персидском заливе. Залив представляет собой прямоугольное поле размера n x m. Каждая клетка либо содержит нефть, либо пуста.</p>\r\n<p>Две клетки считаются соседними, если у них есть общая сторона. Путь — это такая последовательность клеток c1, c2, ..., cx, что каждая из них содержит нефть, и для каждого i: клетка ci имеет общую сторону с ci - 1 и ci + 1 (если они существуют). Две клетки называются соединенными, если между ними существует путь. Если выкопать скважину в определенной клетке, то можно добывать нефть из всех клеток, соединенных с данной. Выкапывать скважины в пустых клетках не разрешается.</p>\r\n<p>Доктор Мосаддык также знает, что в Персидском заливе пустые клетки образуют целые ряды и строки. То есть если какая-то клетка пуста, то столбец и/или строка, содержащие ее, тоже пусты.</p>\r\n<p>Помогите доктору Мосаддыку выяснить, сколько скважин нужно выкопать, чтобы выкачать всю нефть в заливе.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке через пробел записаны два целых числа n и m (1 ≤ n, m ≤ 100).</p>\r\n<p>Во второй строке записано целое число t (0 ≤ t ≤ n) — количество пустых строк. Далее следует t различных целых чисел из диапазона [1, n] — номера пустых строк.</p>\r\n<p>В третьей строке записано целое число s (0 ≤ s ≤ m) — количество пустых столбцов. Далее следует s различных целых чисел из диапазона [1, m] — номера пустых столбцов.</p>\r\n<p>Строки нумеруются от 1 до n (сверху вниз), а столбцы нумеруются от 1 до m (слева направо).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число, минимальной количество скважин, которое должен выкопать доктор Мосаддык, чтобы выкачать всю нефть.</p>\r\n<p>Это количество совпадает с количеством областей, на которые распадается прямоугольник после удаления всех пустых строк и столбцов.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2 3\r\n1 2\r\n1 2\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n4 4\r\n2 2 3\r\n3 2 3 1\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n2 3\r\n1 1\r\n0\r\n</pre>\r\n<pre>\r\n1\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72g.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72g.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача G. Проверка Фибоначчи -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Царь Камбис любит числа Фибоначчи. Напомним, что числа Фибоначчи определяются следующим образом: f0 = f1 = 1, а для любого i ≥ 2: fi = fi - 1 + fi - 2.</p>\r\n<p>Сегодня царь решил собрать новую армию, с количеством солдат, равным n-ому числу Фибоначчи. Помогите ему вычислить это число.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В единственной строке записано одно целое число n (1 ≤ n ≤ 20).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число — n-ое число Фибоначчи.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n1\r\n</pre>\r\n<pre>\r\n1\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72h.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72h.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача H. Переворот -->\r\n<div class=\"time-memory\">(Время 4с. Память 256мб)</div>\r\n\r\n<p>14ое марта — день числа π = 3.1415926...</p>\r\n<p>В честь этого дня организация Goofy Nephews Unity (GNU) хочет выпустить самую быструю математическую программу в 1:59:26 утра.</p>\r\n<p>Сейчас 1:11:11 утра, а команда еще даже не запускала свою программу. Из-за нехватки времени они хотят проверить свою программу с помощью нескольких запросов. Они наняли Ормизда, одного из лучших программистов в мире, и поручили ему написать проверяющую программу. Но у Ормизда есть дела поважнее, поэтому он просит вас написать небольшую часть проверочной программы. Ваша задача — написать программу, которая переворачивает числа.</p>\r\n<p>Переворачивать числа просто. Например, после переворота 1234 получается 4321.</p>\r\n<p>Учтите, что если число отрицательное, после переворота оно остается отрицательным. Например, после переворота -123 превращается в -321.</p>\r\n<p>Также вы должны удалять все лидирующие нули до и после переворота.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n. Оно строго меньше 10<sup>1000</sup> по модулю. Это число может содержать лидирующие нули — в этом случае их требуется опускать. Гарантируется, что во входных данных меньше 10001 символа.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число — результат переворота заданного числа. Не выводите лидирующие нули.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n23\r\n</pre>\r\n<pre>\r\n32\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n-032\r\n</pre>\r\n<pre>\r\n-23\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n01234560\r\n</pre>\r\n<pre>\r\n654321\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z72i.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z72i.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача I. Бесполезные числа -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Неотрицательное целое число a является делителем неотрицательного целого числа b тогда и только тогда, когда существует положительное целое число c, такое что a x c = b.</p>\r\n<p>Генерал Сурен разделяет неотрицательные целые числа на 3 группы:</p>\r\n<ul>\r\n  <li>Число счастливое (happy), если оно делится хотя бы на одну из своих цифр, но не на любую.</li>\r\n  <li>Число еще счастливее (happier), если оно делится на любую свою цифру.</li>\r\n  <li>Число грустное (upset), если оно не делится ни на одну свою цифру.</li>\r\n</ul>\r\n<p>Генерал Сурен просит вас определить тип заданного числа.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано одно неотрицательное число n (1 ≤ n ≤ 10<sup>8</sup>).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите маленькими буквами тип числа: happy, happier или upset.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n23\r\n</pre>\r\n<pre>\r\n32\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n-032\r\n</pre>\r\n<pre>\r\n-23\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n01234560\r\n</pre>\r\n<pre>\r\n654321\r\n</pre>\r\n<p>Во втором тесте: 29994 делится только на 2.</p>\r\n<p>В третьем тесте: 23 — простое число.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z73a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z73a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. The Elder Trolls IV: Oblivon -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Вася играет в The Elder Trolls IV: Oblivon. Ох уж эти создатели компьютерных игр! Чего только они не придумают! В The Elder Trolls IV: Oblivon появились совершенно уникальные монстры. Одним из них является Неубивамемый Слизень. Почему \"неубиваемый\"? Во-первых, потому, что убить его можно только режущим оружием, так что любителям двуручных янтарных молотов необходимо подыскивать себе подходящий ножичек. Во-вторых, необходимо нанести Неубиваемому Слизню очень много режущих ударов. Крайне много. Слишком много!</p>\r\n<p>Вася уже успел прокачать своего персонажа до 80 уровня и для получения 81-ого ему было поручено убить Неубиваемого Слизня. Монстр имеет очень интересную форму. Он представляет собой прямоугольный параллелепипед размером x x y x z, состоящий из неразрушаемых клеток, размером 1 x 1 x 1. За один удар персонаж Васи может разрубить Слизня целиком вдоль линии воображаемой сетки, т.е. плоскостью параллельной одной из граней параллелепипеда. Монстр погибает только тогда, когда количество частей, на которые его разрубил Вася, достигает некоторого критического числа.</p>\r\n<p>После каждого удара все части монстра не распадаются, а остаются на своем месте. То есть Вася может разрубать сразу несколько частей одним ударом.</p>\r\n<p>Вася хочет узнать на какое максимальное количество частей он может разрубить Неубиваемого Слизня, нанеся ему не более чем k ударов.</p>\r\n<p>Персонаж Васи пользуется абсолютно тонким мечом бесконечной длины.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В единственной строке заданы 4 целых числа x, y, z, k (1 ≤ x, y, z ≤ 10⁶, 0 ≤ k ≤ 10⁹).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Вывести единственное число — ответ на задачу.</p>\r\n<p>Пожалуйста, не используйте спецификатор %lld для чтения или записи 64-х битовых чисел на С++. Рекомендуется использовать поток cout (также вы можете использовать спецификатор %I64d).</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2 2 2 3\r\n</pre>\r\n<pre>\r\n8\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n2 2 2 1\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n<p>В первом примере Вася проводит 3 попарно перпендикулярных разреза. Первым разрезом он разрубает монстра на две части, затем каждую часть разрубает еще на две вторым разрезом, потом каждую из 4 частей он снова разрубает на две последним разрезом.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z73b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z73b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Need For Brake -->\r\n<div class=\"time-memory\">(Время 4с. Память 256мб)</div>\r\n\r\n<p>Вася играет в Need For Brake. Играет потому, что ему подарили на день рождения новенький компьютерный руль! Теперь то он уж точно займет первое место в чемпионате в его любимой компьютерной игре в жанре авто-симуляторов!</p>\r\n<p>В чемпионате, состоящем из некоторого количества заездов, принимают участие n гонщиков. По результатам каждого заезда гонщики занимают места с 1 по n-ое (никакие два гонщика не разделяют одно место) и первые m мест являются призовыми. За i-ое призовое место гонщик получает bi очков, которые прибавляются к его очкам, заработанным за все предыдущие заезды. Известно, что к данному моменту гонщик i набрал ai очков. По итогам чемпионата гонщики сортируются в порядке убывания суммы очков. При равном количестве очков сортировка производится по возрастанию имени гонщика в лексикографическом порядке.</p>\r\n<p>К сожалению, чемпионат уже подошел к концу и остался всего лишь один заезд. Вася решил узнать какое самое высокое и самое низкое место он может занять по итогам чемпионата.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке задано число n — количество гонщиков (1 ≤ n ≤ 10⁵). В каждой из следующих n строк через пробел записаны si и ai — псевдоним, под которым выступает гонщик (непустая строка, состоящая из не более чем 20 маленьких латинских букв), и количество очков этого гонщика (0 ≤ ai ≤ 10⁶). Гонщики заданы в произвольном порядке.</p>\r\n<p>В следующей строке находится число m (0 ≤ m ≤ n). Далее идет m неотрицательных целых чисел bi. i-ое число в этой строке равно числу бонусных очков за i-ое призовое место (0 ≤ bi ≤ 10⁶).</p>\r\n<p>В последней строчке задан псевдоним, под которым выступает Вася.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Вывести два числа — самое высокое и самое низкое места, которые может занять Вася по итогам чемпионата.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3\r\nteama 10\r\nteamb 20\r\nteamc 40\r\n2\r\n10 20\r\nteama\r\n</pre>\r\n<pre>\r\n2 3\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n2\r\nteama 10\r\nteamb 10\r\n2\r\n10 10\r\nteamb\r\n</pre>\r\n<pre>\r\n2 2\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z73c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z73c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. LionAge II -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Вася играет в LionAge II. Ему надоело играть с глупым компьютером, поэтому он поставил себе эту популярнейшую MMORPG, чтобы сражаться со своими друзьями. Вася придумал имя своему персонажу — непустую строку s, состоящую из маленьких латинских букв. Однако, чтобы не ударить в грязь лицом перед друзьями, Вася решил изменить не более k букв имени персонажа таким образом, чтобы новое имя звучало как можно лучше. Благозвучие строки определяется следующим образом: для каждой пары соседних символов x и y (x находится в строке непосредственно перед y) к результату добавляется бонус c(x, y). Ваша задача определить, какое наибольшее благозвучие можно получить, изменив не более k букв в имени персонажа Васи.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке содержится имя персонажа s и целое число k (0 ≤ k ≤ 100). Длина непустой строки s не превосходит 100. Во второй строке находится число n (0 ≤ n ≤ 676) — количество пар символов, сочетание которых дает бонус к благозвучию. Далее следует n строк с описанием этих пар в формате «x y c», которое означает, что сочетание xy дает бонус c (x, y — маленькие латинские буквы, -1000 ≤ c ≤ 1000). Гарантируется, что никакая пара x y не встречается во входных данных дважды.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Вывести единственное число — максимально возможное благозвучие нового имени персонажа.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\nwinner 4\r\n4\r\ns e 7\r\no s 8\r\nl o 13\r\no o 8\r\n</pre>\r\n<pre>\r\n36\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\nabcdef 1\r\n5\r\na b -10\r\nb c 5\r\nc d 5\r\nd e 5\r\ne f 5\r\n</pre>\r\n<pre>\r\n20\r\n</pre>\r\n<p>В первом примере самым благозвучным именем будет looser. Не трудно посчитать, что его благозвучие составит 36.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z73d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z73d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. FreeDiv -->\r\n<div class=\"time-memory\">(Время 5с. Память 256мб)</div>\r\n\r\n<p>Вася играет во FreeDiv. В этой игре он управляет огромным государством, в котором имеется n городов и m двусторонних дорог между ними. К сожалению, не из каждого города можно добраться до любого другого по этим дорогам. Поэтому Вася решил разделить государство на провинции так, что в каждой провинции из каждого города можно добраться до всех городов этой провинции, но между провинциями дорог нет.</p>\r\n<p>В отличие от других пошаговых стратегий, во FreeDiv у игрока имеется возможность строить туннели между городами - двусторонние дороги, по которым можно перемещать войска незаметно для противника. Однако, в каждый город может вести не более одного туннеля. Сам Вася хочет построить сеть туннелей так, чтобы между любой парой городов его государства был путь по дорогам или туннелям, но при этом в каждую провинцию шло не более k туннелей (иначе, эту провинцию будет сложно удержать в случае захвата остальных провинций вражескими войсками).</p>\r\n<p>Вася обнаружил, что, возможно, ему не удастся построить такую сеть при текущем состоянии государства. Возможно, ему придется предварительно построить несколько дорог между городами различных провинций для объединения этих провинций. Ваша задача определить, какое наименьшее количество дорог нужно построить Васе, чтобы в полученном государстве можно было построить требуемую сеть туннелей.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке заданы три целых числа n, m и k (1 ≤ n, k ≤ 10⁶, 0 ≤ m ≤ 10⁶). В каждой из следующих m строк содержатся два целых числа — номера городов, соединенных соответствующей дорогой. Никакая дорога не соединяет город с самим собой, между каждой парой городов есть не более одной дороги.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Необходимо вывести единственное число — наименьшее количество дополнительных дорог.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3 3 2\r\n1 2\r\n2 3\r\n3 1\r\n</pre>\r\n<pre>\r\n0\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n4 2 2\r\n1 2\r\n3 4\r\n</pre>\r\n<pre>\r\n0\r\n</pre>\r\n\r\n  <h4>Пример 3</h4>\r\n<pre>\r\n4 0 2\r\n</pre>\r\n<pre>\r\n1\r\n</pre>\r\n<p>В первом примере в государстве всего одна провинция, поэтому туннелей и дополнительных дорог не требуется.</p>\r\n<p>Во втором примере в государстве две провинции. Их можно соединить, например, туннелем между городами 1 и 3.</p>\r\n<p>В третьем примере необходимо построить минимум одну дополнительную дорогу. Например, можно построить дорогу между городами 1 и 2, после чего соединить город 1 с городом 3, а город 2 с городом 4 туннелями.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z73e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z73e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Morrowindows -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Вася играет в The Elder Trolls III: Morrowindows. У него есть огромный список предметов в инвентаре, благо, ограничения на размер вещей нету. Сколько же всего предметов Вася не знает, но уверен, что их не больше чем x и не меньше, чем 2. В новом патче к игре появилась возможность просматривать инвентарь в n различных режимах. Отображение в режиме i представляет собой разбиение списка всех предметов инвентаря на страницы, на каждой из которых (кроме, может быть, последней) отображается ровно ai предметов. Кроме того, в каждом режиме показывается, сколько страниц bi занимает полный список. Прекрасно! Возможно, этой информации будет достаточно для Васи, чтобы найти заветное число. Более того, очень интересно, в каком наименьшем количестве режимов Васе придется просмотреть инвентарь, чтобы определить количество предметов в нем?</p>\r\n<p>Вася не может использовать информацию, полученную при просмотре одного режима, для выбора других режимов. Сначала Вася выбирает множество режимов, а затем просматривает инвентарь в этих режимах.</p>\r\n<p>Зная числа ai и x и предполагая, что Вася очень умный, установите, сможет ли он однозначно определить количество предметов в его инвентаре и за какое число просмотров он сможет это сделать, если он знает числа ai, x и может узнать число bi, посмотрев список в режиме i.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке заданы 2 числа n и x (0 ≤ n ≤ 10⁵, 2 ≤ x ≤ 10⁹). Во второй строке заданы целые числа ai (1 ≤ ai ≤ 10⁹). Все числа ai не обязательно различны.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если Вася сможет однозначно определить количество предметов в инвентаре, то нужно вывести наименьшее возможное количество режимов, необходимых для этого. В противном случае следует вывести -1.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n2 4\r\n2 3\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n1 4\r\n2\r\n</pre>\r\n<pre>\r\n-1\r\n</pre>\r\n<p>Во втором примере Вася не сможет определить количество предметов однозначно, поскольку как 3 предмета, так и 4 предмета будут отображаться на 2 страницах.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z73f.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z73f.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача F. Plane of Tanks -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Вася играет в Plane of Tanks. Танки в этой игре так и норовят друг друга переубивать. Но Ваш танк «Педальный» не такой... Ему всего лишь надо проехать по прямой из точки А в точку B на плоскости. К сожалению, на этой же плоскости находятся n вражеских танков. Будем считать, что все танки являются точками. В начальный момент времени Педальный находится в точке A. Вражеские танки рады бы его сразу уничтожить, но изначально их башни повернуты не в ту сторону. А именно, у каждого танка известны начальный поворот башни ai (угол в радианах относительно оси OX при повороте против часовой стрелки) и максимальная скорость поворота башни wi (рад/с). Если в какой-то момент времени башня танка будет повернута ровно на танк Педальный, то враг производит выстрел, и при этом всегда попадает. Педальный выдерживает не более k выстрелов. Перезарядка орудий занимает очень много времени, поэтому можно считать, что каждый враг произведет не более одного выстрела. Ваша задача определить, какой минимальной скоростью v должен обладать педальный, чтобы доехать до точки B. Считается, что педальный способен мгновенно развить скорость v, а первые k выстрелов по нему не снижают скорости и не меняют координаты танка.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке заданы 4 числа — координаты точек A и B (в метрах), точки не совпадают. Во второй строке задано число n (1 ≤ n ≤ 10⁴) — количество вражеских танков. В каждой из следующих n строк заданы координаты соответствующего танка xi, yi и его параметры ai и wi (0 ≤ ai ≤ 2π, 0 ≤ wi ≤ 100). Числа ai и wi содержат не более 5 знаков после десятичной точки. Все координаты — целые числа, по модулю не превосходящие 10⁵. Вражеские танки могут поворачивать башню как по часовой стрелке, так и против нее с угловой скоростью не более wi. Гарантируется, что каждому из вражеских танков необходимо минимум 0.1 секунды для наведения на какую-либо точку отрезка AB и что каждый из вражеских танков находится на расстоянии как минимум 0.1 метра от прямой AB. В последней строчке дано число k (0 ≤ k ≤ n).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Вывести единственное число — минимальную необходимую скорость Педального в метрах в секунду с абсолютной или относительной погрешностью не более чем 10<sup>-4</sup>.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n0 0 10 0\r\n1\r\n5 -5 4.71238 1\r\n0\r\n</pre>\r\n<pre>\r\n4.2441\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n0 0 10 0\r\n1\r\n5 -5 4.71238 1\r\n1\r\n</pre>\r\n<pre>\r\n0.0000\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
