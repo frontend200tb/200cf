@@ -73,6 +73,8 @@ export const asideThemes = [
   '71 Round 65 (Div. 2)',
   '72 UL Round 2',
   '73 Round 66',
+  '74 Round 68',
+  '75 Round 67 (Div. 2)',
   '76 ВУОШ 2011',
   '81 Яндекс 2011q1',
   '82 Яндекс 2011q2',

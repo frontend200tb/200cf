@@ -75,6 +75,8 @@ import in70      from '../p100/elem-70-Round64';
 import in71      from '../p100/elem-71-Round65';
 import in72      from '../p100/elem-72-ULRound2';
 import in73      from '../p100/elem-73-Round66';
+import in74      from '../p100/elem-74-Round68';
+import in75      from '../p100/elem-75-Round67';
 import in76      from '../p100/elem-76-vuos';
 import in81      from '../p100/elem-81-yandex-q1';
 import in82      from '../p100/elem-82-yandex-q2';
@@ -168,6 +170,8 @@ export default function pageLink(asideItems, currentContent) {
             case 71: in71(); break;
             case 72: in72(); break;
             case 73: in73(); break;
+            case 74: in74(); break;
+            case 75: in75(); break;
             case 76: in76(); break;
             case 81: in81(); break;
             case 82: in82(); break;

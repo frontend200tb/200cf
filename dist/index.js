@@ -1593,6 +1593,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _rounds100_rounds100__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rounds100/rounds100 */ "./src/components/cf/rounds/rounds100/rounds100.js");
 /* harmony import */ var _rounds200_rounds200__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rounds200/rounds200 */ "./src/components/cf/rounds/rounds200/rounds200.js");
+/* harmony import */ var _rounds300_rounds300__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./rounds300/rounds300 */ "./src/components/cf/rounds/rounds300/rounds300.js");
+
 
 
 const dataRoundsNav = [{
@@ -1608,6 +1610,13 @@ const dataRoundsNav = [{
   content: '<rounds-200></rounds-200>',
   act() {
     (0,_rounds200_rounds200__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  }
+}, {
+  url: 'rounds300.html',
+  text: 'Rounds 300',
+  content: '<rounds-300></rounds-300>',
+  act() {
+    (0,_rounds300_rounds300__WEBPACK_IMPORTED_MODULE_2__["default"])();
   }
 }];
 
@@ -1655,7 +1664,7 @@ __webpack_require__.r(__webpack_exports__);
 /** *******************
 Скрипт из файла rounds.js
 Навигация по теме rounds
-rounds100 rounds200
+rounds100 rounds200 rounds300
 ******************** */
 
 
@@ -1709,7 +1718,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: function() { return /* binding */ asideThemes; }
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-const asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '20 Round 20', '21 Round 21', '22 Round 22 (Div. 2)', '23 Round 23', '24 Round 24', '25 Round 25 (Div. 2)', '26 Round 26', '27 Round 27 (Div. 2)', '28 Round 28', '29 Round 29 (Div. 2)', '30 Round 30', '31 Round 31 (Div. 2)', '32 Round 32 (Div. 2)', '33 Round 33', '34 Round 34 (Div. 2)', '35 Round 35 (Div. 2)', '36 Round 36', '37 Round 37', '38 ШИО 1 2010', '39 ШКО 1 2010', '40 Round 39', '41 Round 40 (Div. 2)', '42 Round 41', '43 Round 42 (Div. 2)', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '47 Round 44 (Div. 2)', '48 ШИО 3 2010', '49 Round 46 (Div. 2)', '50 Round 47', '51 Round 48', '52 Testing Round 1', '53 Round 49 (Div. 2)', '54 Round 50', '55 Round 51', '56 Round 52 (Div. 2)', '57 Round 53', '58 Round 54 (Div. 2)', '59 Round 55 (Div. 2)', '60 Round 56', '61 Round 57 (Div. 2)', '62 Round 58', '63 Round 59 (Div. 2)', '64 UL Round 1', '65 Round 60', '66 Round 61 (Div. 2)', '67 Manthan 2011', '68 Round 62', '69 Round 63 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '72 UL Round 2', '73 Round 66', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f'];
+const asideThemes = ['1 Round 1', '2 Round 2', '3 Round 3', '4 Round 4 (Div. 2)', '5 Round 5', '6 Round 6 (Div. 2)', '7 Round 7', '8 Round 8', '9 Round 9 (Div. 2)', '10 Round 10', '11 Round 11', '12 Round 12 (Div. 2)', '13 Round 13', '14 Round 14 (Div. 2)', '15 Round 15', '16 Round 16 (Div. 2)', '17 Round 17', '18 Round 18 (Div. 2)', '19 Round 19', '20 Round 20', '21 Round 21', '22 Round 22 (Div. 2)', '23 Round 23', '24 Round 24', '25 Round 25 (Div. 2)', '26 Round 26', '27 Round 27 (Div. 2)', '28 Round 28', '29 Round 29 (Div. 2)', '30 Round 30', '31 Round 31 (Div. 2)', '32 Round 32 (Div. 2)', '33 Round 33', '34 Round 34 (Div. 2)', '35 Round 35 (Div. 2)', '36 Round 36', '37 Round 37', '38 ШИО 1 2010', '39 ШКО 1 2010', '40 Round 39', '41 Round 40 (Div. 2)', '42 Round 41', '43 Round 42 (Div. 2)', '44 ШКО 2 2010', '45 ШКО 3 2010', '46 ШИО 2 2010', '47 Round 44 (Div. 2)', '48 ШИО 3 2010', '49 Round 46 (Div. 2)', '50 Round 47', '51 Round 48', '52 Testing Round 1', '53 Round 49 (Div. 2)', '54 Round 50', '55 Round 51', '56 Round 52 (Div. 2)', '57 Round 53', '58 Round 54 (Div. 2)', '59 Round 55 (Div. 2)', '60 Round 56', '61 Round 57 (Div. 2)', '62 Round 58', '63 Round 59 (Div. 2)', '64 UL Round 1', '65 Round 60', '66 Round 61 (Div. 2)', '67 Manthan 2011', '68 Round 62', '69 Round 63 (Div. 2)', '70 Round 64', '71 Round 65 (Div. 2)', '72 UL Round 2', '73 Round 66', '74 Round 68', '75 Round 67 (Div. 2)', '76 ВУОШ 2011', '81 Яндекс 2011q1', '82 Яндекс 2011q2', '85 Яндекс 2011r1', '86 Яндекс 2011r2', '97 Яндекс 2011f'];
 
 /***/ }),
 
@@ -1797,12 +1806,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../p100/elem-71-Round65.html */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.html");
 /* harmony import */ var _p100_elem_72_ULRound2_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../p100/elem-72-ULRound2.html */ "./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.html");
 /* harmony import */ var _p100_elem_73_Round66_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../p100/elem-73-Round66.html */ "./src/components/cf/rounds/rounds100/p100/elem-73-Round66.html");
-/* harmony import */ var _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../p100/elem-76-vuos.html */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html");
-/* harmony import */ var _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.html");
-/* harmony import */ var _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.html");
-/* harmony import */ var _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.html");
-/* harmony import */ var _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.html");
-/* harmony import */ var _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.html");
+/* harmony import */ var _p100_elem_74_Round68_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../p100/elem-74-Round68.html */ "./src/components/cf/rounds/rounds100/p100/elem-74-Round68.html");
+/* harmony import */ var _p100_elem_75_Round67_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../p100/elem-75-Round67.html */ "./src/components/cf/rounds/rounds100/p100/elem-75-Round67.html");
+/* harmony import */ var _p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../p100/elem-76-vuos.html */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html");
+/* harmony import */ var _p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../p100/elem-81-yandex-q1.html */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.html");
+/* harmony import */ var _p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../p100/elem-82-yandex-q2.html */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.html");
+/* harmony import */ var _p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../p100/elem-85-yandex-r1.html */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.html");
+/* harmony import */ var _p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./../p100/elem-86-yandex-r2.html */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.html");
+/* harmony import */ var _p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./../p100/elem-97-yandex-f.html */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -1883,7 +1894,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const pages = [[_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__["default"], 20], [_p100_elem_21_Round21_html__WEBPACK_IMPORTED_MODULE_20__["default"], 21], [_p100_elem_22_Round22_html__WEBPACK_IMPORTED_MODULE_21__["default"], 22], [_p100_elem_23_Round23_html__WEBPACK_IMPORTED_MODULE_22__["default"], 23], [_p100_elem_24_Round24_html__WEBPACK_IMPORTED_MODULE_23__["default"], 24], [_p100_elem_25_Round25_html__WEBPACK_IMPORTED_MODULE_24__["default"], 25], [_p100_elem_26_Round26_html__WEBPACK_IMPORTED_MODULE_25__["default"], 26], [_p100_elem_27_Round27_html__WEBPACK_IMPORTED_MODULE_26__["default"], 27], [_p100_elem_28_Round28_html__WEBPACK_IMPORTED_MODULE_27__["default"], 28], [_p100_elem_29_Round29_html__WEBPACK_IMPORTED_MODULE_28__["default"], 29], [_p100_elem_30_Round30_html__WEBPACK_IMPORTED_MODULE_29__["default"], 30], [_p100_elem_31_Round31_html__WEBPACK_IMPORTED_MODULE_30__["default"], 31], [_p100_elem_32_Round32_html__WEBPACK_IMPORTED_MODULE_31__["default"], 32], [_p100_elem_33_Round33_html__WEBPACK_IMPORTED_MODULE_32__["default"], 33], [_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_33__["default"], 34], [_p100_elem_35_Round35_html__WEBPACK_IMPORTED_MODULE_34__["default"], 35], [_p100_elem_36_Round36_html__WEBPACK_IMPORTED_MODULE_35__["default"], 36], [_p100_elem_37_Round37_html__WEBPACK_IMPORTED_MODULE_36__["default"], 37], [_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_37__["default"], 38], [_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_38__["default"], 39], [_p100_elem_40_Round39_html__WEBPACK_IMPORTED_MODULE_39__["default"], 40], [_p100_elem_41_Round40_html__WEBPACK_IMPORTED_MODULE_40__["default"], 41], [_p100_elem_42_Round41_html__WEBPACK_IMPORTED_MODULE_41__["default"], 42], [_p100_elem_43_Round42_html__WEBPACK_IMPORTED_MODULE_42__["default"], 43], [_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_43__["default"], 44], [_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_44__["default"], 45], [_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_45__["default"], 46], [_p100_elem_47_Round44_html__WEBPACK_IMPORTED_MODULE_46__["default"], 47], [_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_47__["default"], 48], [_p100_elem_49_Round46_html__WEBPACK_IMPORTED_MODULE_48__["default"], 49], [_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_49__["default"], 50], [_p100_elem_51_Round48_html__WEBPACK_IMPORTED_MODULE_50__["default"], 51], [_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_51__["default"], 52], [_p100_elem_53_Round49_html__WEBPACK_IMPORTED_MODULE_52__["default"], 53], [_p100_elem_54_Round50_html__WEBPACK_IMPORTED_MODULE_53__["default"], 54], [_p100_elem_55_Round51_html__WEBPACK_IMPORTED_MODULE_54__["default"], 55], [_p100_elem_56_Round52_html__WEBPACK_IMPORTED_MODULE_55__["default"], 56], [_p100_elem_57_Round53_html__WEBPACK_IMPORTED_MODULE_56__["default"], 57], [_p100_elem_58_Round54_html__WEBPACK_IMPORTED_MODULE_57__["default"], 58], [_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_58__["default"], 59], [_p100_elem_60_Round56_html__WEBPACK_IMPORTED_MODULE_59__["default"], 60], [_p100_elem_61_Round57_html__WEBPACK_IMPORTED_MODULE_60__["default"], 61], [_p100_elem_62_Round58_html__WEBPACK_IMPORTED_MODULE_61__["default"], 62], [_p100_elem_63_Round59_html__WEBPACK_IMPORTED_MODULE_62__["default"], 63], [_p100_elem_64_ULRound1_html__WEBPACK_IMPORTED_MODULE_63__["default"], 64], [_p100_elem_65_Round60_html__WEBPACK_IMPORTED_MODULE_64__["default"], 65], [_p100_elem_66_Round61_html__WEBPACK_IMPORTED_MODULE_65__["default"], 66], [_p100_elem_67_Manthan2011_html__WEBPACK_IMPORTED_MODULE_66__["default"], 67], [_p100_elem_68_Round62_html__WEBPACK_IMPORTED_MODULE_67__["default"], 68], [_p100_elem_69_Round63_html__WEBPACK_IMPORTED_MODULE_68__["default"], 69], [_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_69__["default"], 70], [_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_70__["default"], 71], [_p100_elem_72_ULRound2_html__WEBPACK_IMPORTED_MODULE_71__["default"], 72], [_p100_elem_73_Round66_html__WEBPACK_IMPORTED_MODULE_72__["default"], 73], [_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_73__["default"], 76], [_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_74__["default"], 81], [_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_75__["default"], 82], [_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_76__["default"], 85], [_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_77__["default"], 86], [_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_78__["default"], 97]];
+
+
+const pages = [[_p100_elem_1_Round1_html__WEBPACK_IMPORTED_MODULE_0__["default"], 1], [_p100_elem_2_Round2_html__WEBPACK_IMPORTED_MODULE_1__["default"], 2], [_p100_elem_3_Round3_html__WEBPACK_IMPORTED_MODULE_2__["default"], 3], [_p100_elem_4_Round4_html__WEBPACK_IMPORTED_MODULE_3__["default"], 4], [_p100_elem_5_Round5_html__WEBPACK_IMPORTED_MODULE_4__["default"], 5], [_p100_elem_6_Round6_html__WEBPACK_IMPORTED_MODULE_5__["default"], 6], [_p100_elem_7_Round7_html__WEBPACK_IMPORTED_MODULE_6__["default"], 7], [_p100_elem_8_Round8_html__WEBPACK_IMPORTED_MODULE_7__["default"], 8], [_p100_elem_9_Round9_html__WEBPACK_IMPORTED_MODULE_8__["default"], 9], [_p100_elem_10_Round10_html__WEBPACK_IMPORTED_MODULE_9__["default"], 10], [_p100_elem_11_Round11_html__WEBPACK_IMPORTED_MODULE_10__["default"], 11], [_p100_elem_12_Round12_html__WEBPACK_IMPORTED_MODULE_11__["default"], 12], [_p100_elem_13_Round13_html__WEBPACK_IMPORTED_MODULE_12__["default"], 13], [_p100_elem_14_Round14_html__WEBPACK_IMPORTED_MODULE_13__["default"], 14], [_p100_elem_15_Round15_html__WEBPACK_IMPORTED_MODULE_14__["default"], 15], [_p100_elem_16_Round16_html__WEBPACK_IMPORTED_MODULE_15__["default"], 16], [_p100_elem_17_Round17_html__WEBPACK_IMPORTED_MODULE_16__["default"], 17], [_p100_elem_18_Round18_html__WEBPACK_IMPORTED_MODULE_17__["default"], 18], [_p100_elem_19_Round19_html__WEBPACK_IMPORTED_MODULE_18__["default"], 19], [_p100_elem_20_Round20_html__WEBPACK_IMPORTED_MODULE_19__["default"], 20], [_p100_elem_21_Round21_html__WEBPACK_IMPORTED_MODULE_20__["default"], 21], [_p100_elem_22_Round22_html__WEBPACK_IMPORTED_MODULE_21__["default"], 22], [_p100_elem_23_Round23_html__WEBPACK_IMPORTED_MODULE_22__["default"], 23], [_p100_elem_24_Round24_html__WEBPACK_IMPORTED_MODULE_23__["default"], 24], [_p100_elem_25_Round25_html__WEBPACK_IMPORTED_MODULE_24__["default"], 25], [_p100_elem_26_Round26_html__WEBPACK_IMPORTED_MODULE_25__["default"], 26], [_p100_elem_27_Round27_html__WEBPACK_IMPORTED_MODULE_26__["default"], 27], [_p100_elem_28_Round28_html__WEBPACK_IMPORTED_MODULE_27__["default"], 28], [_p100_elem_29_Round29_html__WEBPACK_IMPORTED_MODULE_28__["default"], 29], [_p100_elem_30_Round30_html__WEBPACK_IMPORTED_MODULE_29__["default"], 30], [_p100_elem_31_Round31_html__WEBPACK_IMPORTED_MODULE_30__["default"], 31], [_p100_elem_32_Round32_html__WEBPACK_IMPORTED_MODULE_31__["default"], 32], [_p100_elem_33_Round33_html__WEBPACK_IMPORTED_MODULE_32__["default"], 33], [_p100_elem_34_Round34_html__WEBPACK_IMPORTED_MODULE_33__["default"], 34], [_p100_elem_35_Round35_html__WEBPACK_IMPORTED_MODULE_34__["default"], 35], [_p100_elem_36_Round36_html__WEBPACK_IMPORTED_MODULE_35__["default"], 36], [_p100_elem_37_Round37_html__WEBPACK_IMPORTED_MODULE_36__["default"], 37], [_p100_elem_38_sio1_html__WEBPACK_IMPORTED_MODULE_37__["default"], 38], [_p100_elem_39_sko1_html__WEBPACK_IMPORTED_MODULE_38__["default"], 39], [_p100_elem_40_Round39_html__WEBPACK_IMPORTED_MODULE_39__["default"], 40], [_p100_elem_41_Round40_html__WEBPACK_IMPORTED_MODULE_40__["default"], 41], [_p100_elem_42_Round41_html__WEBPACK_IMPORTED_MODULE_41__["default"], 42], [_p100_elem_43_Round42_html__WEBPACK_IMPORTED_MODULE_42__["default"], 43], [_p100_elem_44_sko2_html__WEBPACK_IMPORTED_MODULE_43__["default"], 44], [_p100_elem_45_sko3_html__WEBPACK_IMPORTED_MODULE_44__["default"], 45], [_p100_elem_46_sio2_html__WEBPACK_IMPORTED_MODULE_45__["default"], 46], [_p100_elem_47_Round44_html__WEBPACK_IMPORTED_MODULE_46__["default"], 47], [_p100_elem_48_sio3_html__WEBPACK_IMPORTED_MODULE_47__["default"], 48], [_p100_elem_49_Round46_html__WEBPACK_IMPORTED_MODULE_48__["default"], 49], [_p100_elem_50_Round47_html__WEBPACK_IMPORTED_MODULE_49__["default"], 50], [_p100_elem_51_Round48_html__WEBPACK_IMPORTED_MODULE_50__["default"], 51], [_p100_elem_52_TRound1_html__WEBPACK_IMPORTED_MODULE_51__["default"], 52], [_p100_elem_53_Round49_html__WEBPACK_IMPORTED_MODULE_52__["default"], 53], [_p100_elem_54_Round50_html__WEBPACK_IMPORTED_MODULE_53__["default"], 54], [_p100_elem_55_Round51_html__WEBPACK_IMPORTED_MODULE_54__["default"], 55], [_p100_elem_56_Round52_html__WEBPACK_IMPORTED_MODULE_55__["default"], 56], [_p100_elem_57_Round53_html__WEBPACK_IMPORTED_MODULE_56__["default"], 57], [_p100_elem_58_Round54_html__WEBPACK_IMPORTED_MODULE_57__["default"], 58], [_p100_elem_59_Round55_html__WEBPACK_IMPORTED_MODULE_58__["default"], 59], [_p100_elem_60_Round56_html__WEBPACK_IMPORTED_MODULE_59__["default"], 60], [_p100_elem_61_Round57_html__WEBPACK_IMPORTED_MODULE_60__["default"], 61], [_p100_elem_62_Round58_html__WEBPACK_IMPORTED_MODULE_61__["default"], 62], [_p100_elem_63_Round59_html__WEBPACK_IMPORTED_MODULE_62__["default"], 63], [_p100_elem_64_ULRound1_html__WEBPACK_IMPORTED_MODULE_63__["default"], 64], [_p100_elem_65_Round60_html__WEBPACK_IMPORTED_MODULE_64__["default"], 65], [_p100_elem_66_Round61_html__WEBPACK_IMPORTED_MODULE_65__["default"], 66], [_p100_elem_67_Manthan2011_html__WEBPACK_IMPORTED_MODULE_66__["default"], 67], [_p100_elem_68_Round62_html__WEBPACK_IMPORTED_MODULE_67__["default"], 68], [_p100_elem_69_Round63_html__WEBPACK_IMPORTED_MODULE_68__["default"], 69], [_p100_elem_70_Round64_html__WEBPACK_IMPORTED_MODULE_69__["default"], 70], [_p100_elem_71_Round65_html__WEBPACK_IMPORTED_MODULE_70__["default"], 71], [_p100_elem_72_ULRound2_html__WEBPACK_IMPORTED_MODULE_71__["default"], 72], [_p100_elem_73_Round66_html__WEBPACK_IMPORTED_MODULE_72__["default"], 73], [_p100_elem_74_Round68_html__WEBPACK_IMPORTED_MODULE_73__["default"], 74], [_p100_elem_75_Round67_html__WEBPACK_IMPORTED_MODULE_74__["default"], 75], [_p100_elem_76_vuos_html__WEBPACK_IMPORTED_MODULE_75__["default"], 76], [_p100_elem_81_yandex_q1_html__WEBPACK_IMPORTED_MODULE_76__["default"], 81], [_p100_elem_82_yandex_q2_html__WEBPACK_IMPORTED_MODULE_77__["default"], 82], [_p100_elem_85_yandex_r1_html__WEBPACK_IMPORTED_MODULE_78__["default"], 85], [_p100_elem_86_yandex_r2_html__WEBPACK_IMPORTED_MODULE_79__["default"], 86], [_p100_elem_97_yandex_f_html__WEBPACK_IMPORTED_MODULE_80__["default"], 97]];
 
 /***/ }),
 
@@ -2062,15 +2075,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _p100_elem_71_Round65__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ../p100/elem-71-Round65 */ "./src/components/cf/rounds/rounds100/p100/elem-71-Round65.js");
 /* harmony import */ var _p100_elem_72_ULRound2__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ../p100/elem-72-ULRound2 */ "./src/components/cf/rounds/rounds100/p100/elem-72-ULRound2.js");
 /* harmony import */ var _p100_elem_73_Round66__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ../p100/elem-73-Round66 */ "./src/components/cf/rounds/rounds100/p100/elem-73-Round66.js");
-/* harmony import */ var _p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ../p100/elem-76-vuos */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.js");
-/* harmony import */ var _p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ../p100/elem-81-yandex-q1 */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.js");
-/* harmony import */ var _p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ../p100/elem-82-yandex-q2 */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.js");
-/* harmony import */ var _p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ../p100/elem-85-yandex-r1 */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.js");
-/* harmony import */ var _p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ../p100/elem-86-yandex-r2 */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.js");
-/* harmony import */ var _p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ../p100/elem-97-yandex-f */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.js");
+/* harmony import */ var _p100_elem_74_Round68__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ../p100/elem-74-Round68 */ "./src/components/cf/rounds/rounds100/p100/elem-74-Round68.js");
+/* harmony import */ var _p100_elem_75_Round67__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ../p100/elem-75-Round67 */ "./src/components/cf/rounds/rounds100/p100/elem-75-Round67.js");
+/* harmony import */ var _p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ../p100/elem-76-vuos */ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.js");
+/* harmony import */ var _p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ../p100/elem-81-yandex-q1 */ "./src/components/cf/rounds/rounds100/p100/elem-81-yandex-q1.js");
+/* harmony import */ var _p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ../p100/elem-82-yandex-q2 */ "./src/components/cf/rounds/rounds100/p100/elem-82-yandex-q2.js");
+/* harmony import */ var _p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ../p100/elem-85-yandex-r1 */ "./src/components/cf/rounds/rounds100/p100/elem-85-yandex-r1.js");
+/* harmony import */ var _p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ../p100/elem-86-yandex-r2 */ "./src/components/cf/rounds/rounds100/p100/elem-86-yandex-r2.js");
+/* harmony import */ var _p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ../p100/elem-97-yandex-f */ "./src/components/cf/rounds/rounds100/p100/elem-97-yandex-f.js");
 /************************
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
+
+
 
 
 
@@ -2382,23 +2399,29 @@ function pageLink(asideItems, currentContent) {
             case 73:
               (0,_p100_elem_73_Round66__WEBPACK_IMPORTED_MODULE_73__["default"])();
               break;
+            case 74:
+              (0,_p100_elem_74_Round68__WEBPACK_IMPORTED_MODULE_74__["default"])();
+              break;
+            case 75:
+              (0,_p100_elem_75_Round67__WEBPACK_IMPORTED_MODULE_75__["default"])();
+              break;
             case 76:
-              (0,_p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_74__["default"])();
+              (0,_p100_elem_76_vuos__WEBPACK_IMPORTED_MODULE_76__["default"])();
               break;
             case 81:
-              (0,_p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_75__["default"])();
+              (0,_p100_elem_81_yandex_q1__WEBPACK_IMPORTED_MODULE_77__["default"])();
               break;
             case 82:
-              (0,_p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_76__["default"])();
+              (0,_p100_elem_82_yandex_q2__WEBPACK_IMPORTED_MODULE_78__["default"])();
               break;
             case 85:
-              (0,_p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_77__["default"])();
+              (0,_p100_elem_85_yandex_r1__WEBPACK_IMPORTED_MODULE_79__["default"])();
               break;
             case 86:
-              (0,_p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_78__["default"])();
+              (0,_p100_elem_86_yandex_r2__WEBPACK_IMPORTED_MODULE_80__["default"])();
               break;
             case 97:
-              (0,_p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_79__["default"])();
+              (0,_p100_elem_97_yandex_f__WEBPACK_IMPORTED_MODULE_81__["default"])();
               break;
             default:
               break;
@@ -5441,6 +5464,88 @@ function inElem() {
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-74-Round68.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-74-Round68.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z74a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z74a.html */ "./src/components/cf/rounds/rounds100/z100/z74a.html");
+/* harmony import */ var _z100_z74b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z74b.html */ "./src/components/cf/rounds/rounds100/z100/z74b.html");
+/* harmony import */ var _z100_z74c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z74c.html */ "./src/components/cf/rounds/rounds100/z100/z74c.html");
+/* harmony import */ var _z100_z74d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z74d.html */ "./src/components/cf/rounds/rounds100/z100/z74d.html");
+/* harmony import */ var _z100_z74e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z74e.html */ "./src/components/cf/rounds/rounds100/z100/z74e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z74a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z74b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z74c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z74d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z74e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-75-Round67.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-75-Round67.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z100_z75a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z100/z75a.html */ "./src/components/cf/rounds/rounds100/z100/z75a.html");
+/* harmony import */ var _z100_z75b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z100/z75b.html */ "./src/components/cf/rounds/rounds100/z100/z75b.html");
+/* harmony import */ var _z100_z75c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z100/z75c.html */ "./src/components/cf/rounds/rounds100/z100/z75c.html");
+/* harmony import */ var _z100_z75d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z100/z75d.html */ "./src/components/cf/rounds/rounds100/z100/z75d.html");
+/* harmony import */ var _z100_z75e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z100/z75e.html */ "./src/components/cf/rounds/rounds100/z100/z75e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z100_z75a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z100_z75b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z100_z75c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z100_z75d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z100_z75e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.js":
 /*!*****************************************************************!*\
   !*** ./src/components/cf/rounds/rounds100/p100/elem-76-vuos.js ***!
@@ -5833,7 +5938,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   asideThemes: function() { return /* binding */ asideThemes; }
 /* harmony export */ });
 // Создаем массив asideThemes с темами для блока aside
-const asideThemes = ['106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)', '228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '492 Round 280 (Div. 2)', '509 Round 289 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)', '2193 Round 1076 (Div. 3)', '2209 Round 1087 (Div. 2)', '2218 Round 1090 (Div. 4)', '2236 Round 1103 (Div. 3)'];
+const asideThemes = ['104 Round 80 (Div. 2)', '106 Round 82 (Div. 2)', '110 Round 84 (Div. 2)', '112 Round 85 (Div. 2)', '116 Round 87 (Div. 2)', '118 Round 89 (Div. 2)', '120 КОШ Саратов 2011', '131 Round 95 (Div. 2)', '134 Testing Round 3', '136 Round 97 (Div. 2)', '141 Round 101 (Div. 2)', '155 Round 109 (Div. 2)', '158 VK 2012 q1', '159 VK 2012 q2', '163 VK 2012 r2 (Div. 1)', '169 VK 2012 r2 (Div. 2)', '200 Round 126 (Div. 2)'];
 
 /***/ }),
 
@@ -5848,136 +5953,495 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   pages: function() { return /* binding */ pages; }
 /* harmony export */ });
-/* harmony import */ var _pages_p200_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../pages/p200/elem-106-Round82.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-106-Round82.html");
-/* harmony import */ var _pages_p200_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../pages/p200/elem-110-Round84.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-110-Round84.html");
-/* harmony import */ var _pages_p200_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../pages/p200/elem-112-Round85.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-112-Round85.html");
-/* harmony import */ var _pages_p200_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../pages/p200/elem-116-Round87.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-116-Round87.html");
-/* harmony import */ var _pages_p200_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../pages/p200/elem-118-Round89.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-118-Round89.html");
-/* harmony import */ var _pages_p200_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../pages/p200/elem-120-kosSaratov.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-120-kosSaratov.html");
-/* harmony import */ var _pages_p200_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../pages/p200/elem-134-TRound3.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-134-TRound3.html");
-/* harmony import */ var _pages_p200_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../pages/p200/elem-136-Round97.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-136-Round97.html");
-/* harmony import */ var _pages_p200_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../pages/p200/elem-141-Round101.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-141-Round101.html");
-/* harmony import */ var _pages_p200_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../pages/p200/elem-155-Round109.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-155-Round109.html");
-/* harmony import */ var _pages_p200_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../pages/p200/elem-158-vk-q1.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-158-vk-q1.html");
-/* harmony import */ var _pages_p200_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../pages/p200/elem-159-vk-q2.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-159-vk-q2.html");
-/* harmony import */ var _pages_p200_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../pages/p200/elem-163-vk-r2.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-163-vk-r2.html");
-/* harmony import */ var _pages_p200_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../pages/p200/elem-169-vk-r2.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-169-vk-r2.html");
-/* harmony import */ var _pages_p200_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../pages/p200/elem-200-Round126.html */ "./src/components/cf/rounds/rounds200/pages/p200/elem-200-Round126.html");
-/* harmony import */ var _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../pages/elem-228-Round141.html */ "./src/components/cf/rounds/rounds200/pages/elem-228-Round141.html");
-/* harmony import */ var _pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../pages/elem-230-Round142.html */ "./src/components/cf/rounds/rounds200/pages/elem-230-Round142.html");
-/* harmony import */ var _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../pages/elem-268-Round164.html */ "./src/components/cf/rounds/rounds200/pages/elem-268-Round164.html");
-/* harmony import */ var _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../pages/elem-278-Round170.html */ "./src/components/cf/rounds/rounds200/pages/elem-278-Round170.html");
-/* harmony import */ var _pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../pages/elem-313-Round186.html */ "./src/components/cf/rounds/rounds200/pages/elem-313-Round186.html");
-/* harmony import */ var _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../pages/elem-318-Round188.html */ "./src/components/cf/rounds/rounds200/pages/elem-318-Round188.html");
-/* harmony import */ var _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../pages/elem-339-Round197.html */ "./src/components/cf/rounds/rounds200/pages/elem-339-Round197.html");
-/* harmony import */ var _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../pages/elem-381-Round223.html */ "./src/components/cf/rounds/rounds200/pages/elem-381-Round223.html");
-/* harmony import */ var _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../pages/elem-427-Round244.html */ "./src/components/cf/rounds/rounds200/pages/elem-427-Round244.html");
-/* harmony import */ var _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../pages/elem-467-Round267.html */ "./src/components/cf/rounds/rounds200/pages/elem-467-Round267.html");
-/* harmony import */ var _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../pages/elem-469-Round268.html */ "./src/components/cf/rounds/rounds200/pages/elem-469-Round268.html");
-/* harmony import */ var _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../pages/elem-490-Round279.html */ "./src/components/cf/rounds/rounds200/pages/elem-490-Round279.html");
-/* harmony import */ var _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../pages/elem-492-Round280.html */ "./src/components/cf/rounds/rounds200/pages/elem-492-Round280.html");
-/* harmony import */ var _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../pages/elem-509-Round289.html */ "./src/components/cf/rounds/rounds200/pages/elem-509-Round289.html");
-/* harmony import */ var _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../pages/elem-520-Round295.html */ "./src/components/cf/rounds/rounds200/pages/elem-520-Round295.html");
-/* harmony import */ var _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../pages/elem-546-Round304.html */ "./src/components/cf/rounds/rounds200/pages/elem-546-Round304.html");
-/* harmony import */ var _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../pages/elem-580-Round321.html */ "./src/components/cf/rounds/rounds200/pages/elem-580-Round321.html");
-/* harmony import */ var _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../pages/elem-617-Round340.html */ "./src/components/cf/rounds/rounds200/pages/elem-617-Round340.html");
-/* harmony import */ var _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../pages/elem-646-Techno1z.html */ "./src/components/cf/rounds/rounds200/pages/elem-646-Techno1z.html");
-/* harmony import */ var _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../pages/elem-647-Techno2z.html */ "./src/components/cf/rounds/rounds200/pages/elem-647-Techno2z.html");
-/* harmony import */ var _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../pages/elem-648-Techno1o.html */ "./src/components/cf/rounds/rounds200/pages/elem-648-Techno1o.html");
-/* harmony import */ var _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../pages/elem-649-Techno2o.html */ "./src/components/cf/rounds/rounds200/pages/elem-649-Techno2o.html");
-/* harmony import */ var _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../pages/elem-705-Round366.html */ "./src/components/cf/rounds/rounds200/pages/elem-705-Round366.html");
-/* harmony import */ var _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../pages/elem-723-Round375.html */ "./src/components/cf/rounds/rounds200/pages/elem-723-Round375.html");
-/* harmony import */ var _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../pages/elem-727-Techno2017o1.html */ "./src/components/cf/rounds/rounds200/pages/elem-727-Techno2017o1.html");
-/* harmony import */ var _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../pages/elem-732-Round377.html */ "./src/components/cf/rounds/rounds200/pages/elem-732-Round377.html");
-/* harmony import */ var _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../pages/elem-733-Round378.html */ "./src/components/cf/rounds/rounds200/pages/elem-733-Round378.html");
-/* harmony import */ var _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../pages/elem-743-Round384.html */ "./src/components/cf/rounds/rounds200/pages/elem-743-Round384.html");
-/* harmony import */ var _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./../pages/elem-758-Round392.html */ "./src/components/cf/rounds/rounds200/pages/elem-758-Round392.html");
-/* harmony import */ var _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../pages/elem-791-Round405.html */ "./src/components/cf/rounds/rounds200/pages/elem-791-Round405.html");
-/* harmony import */ var _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./../pages/elem-895-Round448.html */ "./src/components/cf/rounds/rounds200/pages/elem-895-Round448.html");
-/* harmony import */ var _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./../pages/elem-1030-Techno2019o1.html */ "./src/components/cf/rounds/rounds200/pages/elem-1030-Techno2019o1.html");
-/* harmony import */ var _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./../pages/elem-1041-Round509.html */ "./src/components/cf/rounds/rounds200/pages/elem-1041-Round509.html");
-/* harmony import */ var _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./../pages/elem-1272-Round605.html */ "./src/components/cf/rounds/rounds200/pages/elem-1272-Round605.html");
-/* harmony import */ var _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./../pages/elem-1296-Round617.html */ "./src/components/cf/rounds/rounds200/pages/elem-1296-Round617.html");
-/* harmony import */ var _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./../pages/elem-1313-Round622.html */ "./src/components/cf/rounds/rounds200/pages/elem-1313-Round622.html");
-/* harmony import */ var _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./../pages/elem-1325-Round628.html */ "./src/components/cf/rounds/rounds200/pages/elem-1325-Round628.html");
-/* harmony import */ var _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./../pages/elem-1351-TRound16.html */ "./src/components/cf/rounds/rounds200/pages/elem-1351-TRound16.html");
-/* harmony import */ var _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./../pages/elem-1352-Round640.html */ "./src/components/cf/rounds/rounds200/pages/elem-1352-Round640.html");
-/* harmony import */ var _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./../pages/elem-1360-Round644.html */ "./src/components/cf/rounds/rounds200/pages/elem-1360-Round644.html");
-/* harmony import */ var _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./../pages/elem-1367-Round650.html */ "./src/components/cf/rounds/rounds200/pages/elem-1367-Round650.html");
-/* harmony import */ var _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./../pages/elem-1420-Round672.html */ "./src/components/cf/rounds/rounds200/pages/elem-1420-Round672.html");
-/* harmony import */ var _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./../pages/elem-1490-Round702.html */ "./src/components/cf/rounds/rounds200/pages/elem-1490-Round702.html");
-/* harmony import */ var _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./../pages/elem-1512-Round713.html */ "./src/components/cf/rounds/rounds200/pages/elem-1512-Round713.html");
-/* harmony import */ var _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./../pages/elem-1520-Round719.html */ "./src/components/cf/rounds/rounds200/pages/elem-1520-Round719.html");
-/* harmony import */ var _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./../pages/elem-1634-Round770.html */ "./src/components/cf/rounds/rounds200/pages/elem-1634-Round770.html");
-/* harmony import */ var _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./../pages/elem-1669-Round784.html */ "./src/components/cf/rounds/rounds200/pages/elem-1669-Round784.html");
-/* harmony import */ var _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./../pages/elem-1676-Round790.html */ "./src/components/cf/rounds/rounds200/pages/elem-1676-Round790.html");
-/* harmony import */ var _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../pages/elem-1692-Round799.html */ "./src/components/cf/rounds/rounds200/pages/elem-1692-Round799.html");
-/* harmony import */ var _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./../pages/elem-1703-Round806.html */ "./src/components/cf/rounds/rounds200/pages/elem-1703-Round806.html");
-/* harmony import */ var _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./../pages/elem-1722-Round817.html */ "./src/components/cf/rounds/rounds200/pages/elem-1722-Round817.html");
-/* harmony import */ var _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./../pages/elem-1725-compfest.html */ "./src/components/cf/rounds/rounds200/pages/elem-1725-compfest.html");
-/* harmony import */ var _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../pages/elem-1726-Round819.html */ "./src/components/cf/rounds/rounds200/pages/elem-1726-Round819.html");
-/* harmony import */ var _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../pages/elem-1728-EdRound135.html */ "./src/components/cf/rounds/rounds200/pages/elem-1728-EdRound135.html");
-/* harmony import */ var _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../pages/elem-1729-Round820.html */ "./src/components/cf/rounds/rounds200/pages/elem-1729-Round820.html");
-/* harmony import */ var _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../pages/elem-1730-Round823.html */ "./src/components/cf/rounds/rounds200/pages/elem-1730-Round823.html");
-/* harmony import */ var _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../pages/elem-1733-Round821.html */ "./src/components/cf/rounds/rounds200/pages/elem-1733-Round821.html");
-/* harmony import */ var _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../pages/elem-1734-Round822.html */ "./src/components/cf/rounds/rounds200/pages/elem-1734-Round822.html");
-/* harmony import */ var _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../pages/elem-1738-GlRound22.html */ "./src/components/cf/rounds/rounds200/pages/elem-1738-GlRound22.html");
-/* harmony import */ var _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../pages/elem-1739-EdRound136.html */ "./src/components/cf/rounds/rounds200/pages/elem-1739-EdRound136.html");
-/* harmony import */ var _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../pages/elem-1740-Round831.html */ "./src/components/cf/rounds/rounds200/pages/elem-1740-Round831.html");
-/* harmony import */ var _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../pages/elem-1741-Round826.html */ "./src/components/cf/rounds/rounds200/pages/elem-1741-Round826.html");
-/* harmony import */ var _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../pages/elem-1742-Round827.html */ "./src/components/cf/rounds/rounds200/pages/elem-1742-Round827.html");
-/* harmony import */ var _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../pages/elem-1760-Round835.html */ "./src/components/cf/rounds/rounds200/pages/elem-1760-Round835.html");
-/* harmony import */ var _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./../pages/elem-1789-Round853.html */ "./src/components/cf/rounds/rounds200/pages/elem-1789-Round853.html");
-/* harmony import */ var _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./../pages/elem-1791-Round849.html */ "./src/components/cf/rounds/rounds200/pages/elem-1791-Round849.html");
-/* harmony import */ var _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./../pages/elem-1798-Round860.html */ "./src/components/cf/rounds/rounds200/pages/elem-1798-Round860.html");
-/* harmony import */ var _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./../pages/elem-1807-Round859.html */ "./src/components/cf/rounds/rounds200/pages/elem-1807-Round859.html");
-/* harmony import */ var _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./../pages/elem-1824-Round872.html */ "./src/components/cf/rounds/rounds200/pages/elem-1824-Round872.html");
-/* harmony import */ var _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./../pages/elem-1825-Round872.html */ "./src/components/cf/rounds/rounds200/pages/elem-1825-Round872.html");
-/* harmony import */ var _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./../pages/elem-1829-Round871.html */ "./src/components/cf/rounds/rounds200/pages/elem-1829-Round871.html");
-/* harmony import */ var _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./../pages/elem-1850-Round886.html */ "./src/components/cf/rounds/rounds200/pages/elem-1850-Round886.html");
-/* harmony import */ var _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./../pages/elem-1873-Round898.html */ "./src/components/cf/rounds/rounds200/pages/elem-1873-Round898.html");
-/* harmony import */ var _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./../pages/elem-1915-Round918.html */ "./src/components/cf/rounds/rounds200/pages/elem-1915-Round918.html");
-/* harmony import */ var _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./../pages/elem-1926-Round928.html */ "./src/components/cf/rounds/rounds200/pages/elem-1926-Round928.html");
-/* harmony import */ var _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./../pages/elem-1950-Round937.html */ "./src/components/cf/rounds/rounds200/pages/elem-1950-Round937.html");
-/* harmony import */ var _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./../pages/elem-1971-Round944.html */ "./src/components/cf/rounds/rounds200/pages/elem-1971-Round944.html");
-/* harmony import */ var _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./../pages/elem-1985-Round952.html */ "./src/components/cf/rounds/rounds200/pages/elem-1985-Round952.html");
-/* harmony import */ var _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./../pages/elem-1999-Round964.html */ "./src/components/cf/rounds/rounds200/pages/elem-1999-Round964.html");
-/* harmony import */ var _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./../pages/elem-2009-Round971.html */ "./src/components/cf/rounds/rounds200/pages/elem-2009-Round971.html");
-/* harmony import */ var _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./../pages/elem-2037-Round988.html */ "./src/components/cf/rounds/rounds200/pages/elem-2037-Round988.html");
-/* harmony import */ var _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./../pages/elem-2044-Round993.html */ "./src/components/cf/rounds/rounds200/pages/elem-2044-Round993.html");
-/* harmony import */ var _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./../pages/elem-2050-Round991.html */ "./src/components/cf/rounds/rounds200/pages/elem-2050-Round991.html");
-/* harmony import */ var _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./../pages/elem-2051-Round995.html */ "./src/components/cf/rounds/rounds200/pages/elem-2051-Round995.html");
-/* harmony import */ var _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./../pages/elem-2060-Round998.html */ "./src/components/cf/rounds/rounds200/pages/elem-2060-Round998.html");
-/* harmony import */ var _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./../pages/elem-2065-Round1003.html */ "./src/components/cf/rounds/rounds200/pages/elem-2065-Round1003.html");
-/* harmony import */ var _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./../pages/elem-2072-Round1006.html */ "./src/components/cf/rounds/rounds200/pages/elem-2072-Round1006.html");
-/* harmony import */ var _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./../pages/elem-2091-Round1013.html */ "./src/components/cf/rounds/rounds200/pages/elem-2091-Round1013.html");
-/* harmony import */ var _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./../pages/elem-2093-Round1016.html */ "./src/components/cf/rounds/rounds200/pages/elem-2093-Round1016.html");
-/* harmony import */ var _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./../pages/elem-2094-Round1017.html */ "./src/components/cf/rounds/rounds200/pages/elem-2094-Round1017.html");
-/* harmony import */ var _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./../pages/elem-2106-Round1020.html */ "./src/components/cf/rounds/rounds200/pages/elem-2106-Round1020.html");
-/* harmony import */ var _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./../pages/elem-2114-Round1027.html */ "./src/components/cf/rounds/rounds200/pages/elem-2114-Round1027.html");
-/* harmony import */ var _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./../pages/elem-2117-Round1029.html */ "./src/components/cf/rounds/rounds200/pages/elem-2117-Round1029.html");
-/* harmony import */ var _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./../pages/elem-2119-Round1035.html */ "./src/components/cf/rounds/rounds200/pages/elem-2119-Round1035.html");
-/* harmony import */ var _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./../pages/elem-2121-Round1032.html */ "./src/components/cf/rounds/rounds200/pages/elem-2121-Round1032.html");
-/* harmony import */ var _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./../pages/elem-2123-Round1034.html */ "./src/components/cf/rounds/rounds200/pages/elem-2123-Round1034.html");
-/* harmony import */ var _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./../pages/elem-2126-Round1037.html */ "./src/components/cf/rounds/rounds200/pages/elem-2126-Round1037.html");
-/* harmony import */ var _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./../pages/elem-2131-Round1042.html */ "./src/components/cf/rounds/rounds200/pages/elem-2131-Round1042.html");
-/* harmony import */ var _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./../pages/elem-2132-Round1043.html */ "./src/components/cf/rounds/rounds200/pages/elem-2132-Round1043.html");
-/* harmony import */ var _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./../pages/elem-2133-Round1044.html */ "./src/components/cf/rounds/rounds200/pages/elem-2133-Round1044.html");
-/* harmony import */ var _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./../pages/elem-2134-Round1045.html */ "./src/components/cf/rounds/rounds200/pages/elem-2134-Round1045.html");
-/* harmony import */ var _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./../pages/elem-2136-Round1046.html */ "./src/components/cf/rounds/rounds200/pages/elem-2136-Round1046.html");
-/* harmony import */ var _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./../pages/elem-2137-Round1047.html */ "./src/components/cf/rounds/rounds200/pages/elem-2137-Round1047.html");
-/* harmony import */ var _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./../pages/elem-2148-Round1050.html */ "./src/components/cf/rounds/rounds200/pages/elem-2148-Round1050.html");
-/* harmony import */ var _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./../pages/elem-2149-Round1054.html */ "./src/components/cf/rounds/rounds200/pages/elem-2149-Round1054.html");
-/* harmony import */ var _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./../pages/elem-2152-Round1055.html */ "./src/components/cf/rounds/rounds200/pages/elem-2152-Round1055.html");
-/* harmony import */ var _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./../pages/elem-2162-Round1059.html */ "./src/components/cf/rounds/rounds200/pages/elem-2162-Round1059.html");
-/* harmony import */ var _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./../pages/elem-2166-Round1064.html */ "./src/components/cf/rounds/rounds200/pages/elem-2166-Round1064.html");
-/* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/rounds200/pages/elem-2167-Round1062.html");
-/* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/rounds200/pages/elem-2171-Round1065.html");
-/* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/rounds200/pages/elem-2185-Round1074.html");
-/* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/rounds200/pages/elem-2193-Round1076.html");
-/* harmony import */ var _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./../pages/elem-2209-Round1087.html */ "./src/components/cf/rounds/rounds200/pages/elem-2209-Round1087.html");
-/* harmony import */ var _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./../pages/elem-2218-Round1090.html */ "./src/components/cf/rounds/rounds200/pages/elem-2218-Round1090.html");
-/* harmony import */ var _pages_elem_2236_Round1103_html__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./../pages/elem-2236-Round1103.html */ "./src/components/cf/rounds/rounds200/pages/elem-2236-Round1103.html");
+/* harmony import */ var _p200_elem_104_Round80_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../p200/elem-104-Round80.html */ "./src/components/cf/rounds/rounds200/p200/elem-104-Round80.html");
+/* harmony import */ var _p200_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../p200/elem-106-Round82.html */ "./src/components/cf/rounds/rounds200/p200/elem-106-Round82.html");
+/* harmony import */ var _p200_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../p200/elem-110-Round84.html */ "./src/components/cf/rounds/rounds200/p200/elem-110-Round84.html");
+/* harmony import */ var _p200_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../p200/elem-112-Round85.html */ "./src/components/cf/rounds/rounds200/p200/elem-112-Round85.html");
+/* harmony import */ var _p200_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../p200/elem-116-Round87.html */ "./src/components/cf/rounds/rounds200/p200/elem-116-Round87.html");
+/* harmony import */ var _p200_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../p200/elem-118-Round89.html */ "./src/components/cf/rounds/rounds200/p200/elem-118-Round89.html");
+/* harmony import */ var _p200_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../p200/elem-120-kosSaratov.html */ "./src/components/cf/rounds/rounds200/p200/elem-120-kosSaratov.html");
+/* harmony import */ var _p200_elem_131_Round95_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../p200/elem-131-Round95.html */ "./src/components/cf/rounds/rounds200/p200/elem-131-Round95.html");
+/* harmony import */ var _p200_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../p200/elem-134-TRound3.html */ "./src/components/cf/rounds/rounds200/p200/elem-134-TRound3.html");
+/* harmony import */ var _p200_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../p200/elem-136-Round97.html */ "./src/components/cf/rounds/rounds200/p200/elem-136-Round97.html");
+/* harmony import */ var _p200_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../p200/elem-141-Round101.html */ "./src/components/cf/rounds/rounds200/p200/elem-141-Round101.html");
+/* harmony import */ var _p200_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../p200/elem-155-Round109.html */ "./src/components/cf/rounds/rounds200/p200/elem-155-Round109.html");
+/* harmony import */ var _p200_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../p200/elem-158-vk-q1.html */ "./src/components/cf/rounds/rounds200/p200/elem-158-vk-q1.html");
+/* harmony import */ var _p200_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../p200/elem-159-vk-q2.html */ "./src/components/cf/rounds/rounds200/p200/elem-159-vk-q2.html");
+/* harmony import */ var _p200_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../p200/elem-163-vk-r2.html */ "./src/components/cf/rounds/rounds200/p200/elem-163-vk-r2.html");
+/* harmony import */ var _p200_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../p200/elem-169-vk-r2.html */ "./src/components/cf/rounds/rounds200/p200/elem-169-vk-r2.html");
+/* harmony import */ var _p200_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../p200/elem-200-Round126.html */ "./src/components/cf/rounds/rounds200/p200/elem-200-Round126.html");
+// Создаем массив pages со страницами из aside меню
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const pages = [[_p200_elem_104_Round80_html__WEBPACK_IMPORTED_MODULE_0__["default"], 104], [_p200_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_1__["default"], 106], _p200_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_2__["default"], _p200_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_3__["default"], _p200_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_4__["default"], _p200_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_5__["default"], _p200_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_6__["default"], _p200_elem_131_Round95_html__WEBPACK_IMPORTED_MODULE_7__["default"], [_p200_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_8__["default"], 134], _p200_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_9__["default"], _p200_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_10__["default"], _p200_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_11__["default"], _p200_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_12__["default"], _p200_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_13__["default"], _p200_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_14__["default"], _p200_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_15__["default"], _p200_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_16__["default"]];
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/js/element-rounds200.js":
+/*!********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/js/element-rounds200.js ***!
+  \********************************************************************/
+/***/ (function() {
+
+class Rounds200 extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+    <section class="main__aside">
+    </section>
+    `;
+    this.className = 'rounds-200';
+  }
+}
+customElements.define('rounds-200', Rounds200);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/js/f-create-aside.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/js/f-create-aside.js ***!
+  \*****************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createAside: function() { return /* binding */ createAside; },
+/* harmony export */   createMain: function() { return /* binding */ createMain; }
+/* harmony export */ });
+/* harmony import */ var _data_aside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-aside */ "./src/components/cf/rounds/rounds200/js/data-aside.js");
+/* harmony import */ var _pages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages */ "./src/components/cf/rounds/rounds200/js/pages.js");
+/** ***************
+Функция createInput создает inputArray
+**************** */
+
+
+
+// 2. Создаем массив asideDiv для элементов aside меню
+const asideDiv = [];
+
+// 3. Для каждой темы из массива asideThemes
+for (const theme of _data_aside__WEBPACK_IMPORTED_MODULE_0__.asideThemes) {
+  // 3.1 Создаем элемент elementAside
+  const elementAside = document.createElement('a');
+  elementAside.href = '#';
+  elementAside.innerHTML = theme;
+
+  // 3.2 Добавляем элемент elementAside в массив asideDiv
+  asideDiv.push(elementAside);
+
+  // 3.3 По клику на элемент elementAside
+  elementAside.addEventListener('click', e => {
+    e.preventDefault();
+
+    // 3.3.1 добавим ему class="active"
+    classActive(asideDiv, elementAside);
+  });
+}
+
+// Ставим class="active" выбранному элементу меню и убираем с остальных
+function classActive(elementOl, elementLi = null) {
+  elementOl.forEach(li => {
+    li.classList.remove('active');
+  });
+  if (elementLi) {
+    elementLi.classList.add('active');
+  }
+}
+const aside = document.createElement('aside');
+aside.classList.add('aside');
+aside.append(...asideDiv);
+const main = document.createElement('main');
+main.classList.add('main');
+main.id = 'rounds-200'; // эта строчка отличается
+
+(0,_pages__WEBPACK_IMPORTED_MODULE_1__["default"])(asideDiv, main);
+function createAside() {
+  return aside;
+}
+function createMain() {
+  return main;
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/js/pages.js":
+/*!********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/js/pages.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ pageLink; }
+/* harmony export */ });
+/* harmony import */ var _data_pages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-pages */ "./src/components/cf/rounds/rounds200/js/data-pages.js");
+/* harmony import */ var _p200_elem_104_Round80__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../p200/elem-104-Round80 */ "./src/components/cf/rounds/rounds200/p200/elem-104-Round80.js");
+/* harmony import */ var _p200_elem_106_Round82__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../p200/elem-106-Round82 */ "./src/components/cf/rounds/rounds200/p200/elem-106-Round82.js");
+/* harmony import */ var _p200_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../p200/elem-134-TRound3 */ "./src/components/cf/rounds/rounds200/p200/elem-134-TRound3.js");
+/************************
+Функция pageLink вешает обработчик клика на элементы asideMenu
+************************/
+
+
+
+
+function pageLink(asideItems, currentContent) {
+  asideItems.forEach((elem, index) => {
+    elem.addEventListener('click', e => {
+      e.preventDefault();
+      if (_data_pages__WEBPACK_IMPORTED_MODULE_0__.pages[index]) {
+        if (_data_pages__WEBPACK_IMPORTED_MODULE_0__.pages[index].length === 2) {
+          // если задачи берутся из базы
+          // подключаем страницу
+          currentContent.innerHTML = _data_pages__WEBPACK_IMPORTED_MODULE_0__.pages[index][0];
+
+          // подключаем задачи на страницу из базы
+          switch (_data_pages__WEBPACK_IMPORTED_MODULE_0__.pages[index][1]) {
+            case 104:
+              (0,_p200_elem_104_Round80__WEBPACK_IMPORTED_MODULE_1__["default"])();
+              break;
+            case 106:
+              (0,_p200_elem_106_Round82__WEBPACK_IMPORTED_MODULE_2__["default"])();
+              break;
+            case 134:
+              (0,_p200_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_3__["default"])();
+              break;
+            default:
+              break;
+          }
+        } else {
+          // если задачи на странице
+          // подключаем только страницу
+          currentContent.innerHTML = _data_pages__WEBPACK_IMPORTED_MODULE_0__.pages[index];
+        }
+      }
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-104-Round80.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-104-Round80.js ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z200_z104a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z200/z104a.html */ "./src/components/cf/rounds/rounds200/z200/z104a.html");
+/* harmony import */ var _z200_z104b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z200/z104b.html */ "./src/components/cf/rounds/rounds200/z200/z104b.html");
+/* harmony import */ var _z200_z104c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z200/z104c.html */ "./src/components/cf/rounds/rounds200/z200/z104c.html");
+/* harmony import */ var _z200_z104d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z200/z104d.html */ "./src/components/cf/rounds/rounds200/z200/z104d.html");
+/* harmony import */ var _z200_z104e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z200/z104e.html */ "./src/components/cf/rounds/rounds200/z200/z104e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z200_z104a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z200_z104b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z200_z104c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z200_z104d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z200_z104e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-106-Round82.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-106-Round82.js ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z200_z106a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z200/z106a.html */ "./src/components/cf/rounds/rounds200/z200/z106a.html");
+/* harmony import */ var _z200_z106b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z200/z106b.html */ "./src/components/cf/rounds/rounds200/z200/z106b.html");
+/* harmony import */ var _z200_z106c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z200/z106c.html */ "./src/components/cf/rounds/rounds200/z200/z106c.html");
+/* harmony import */ var _z200_z106d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z200/z106d.html */ "./src/components/cf/rounds/rounds200/z200/z106d.html");
+/* harmony import */ var _z200_z106e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z200/z106e.html */ "./src/components/cf/rounds/rounds200/z200/z106e.html");
+
+
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z200_z106a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z200_z106b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z200_z106c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z200_z106d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z200_z106e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-134-TRound3.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-134-TRound3.js ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ inElem; }
+/* harmony export */ });
+/* harmony import */ var _z200_z134a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z200/z134a.html */ "./src/components/cf/rounds/rounds200/z200/z134a.html");
+/* harmony import */ var _z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z200/z134b.html */ "./src/components/cf/rounds/rounds200/z200/z134b.html");
+/* harmony import */ var _z200_z134c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z200/z134c.html */ "./src/components/cf/rounds/rounds200/z200/z134c.html");
+
+
+
+function inElem() {
+  if (document.querySelector('.t1')) {
+    document.querySelector('.t1').innerHTML = _z200_z134a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  }
+  if (document.querySelector('.t2')) {
+    document.querySelector('.t2').innerHTML = _z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  }
+  if (document.querySelector('.t3')) {
+    document.querySelector('.t3').innerHTML = _z200_z134c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/rounds200.js":
+/*!*********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/rounds200.js ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ showRounds200; }
+/* harmony export */ });
+/* harmony import */ var _js_element_rounds200__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/element-rounds200 */ "./src/components/cf/rounds/rounds200/js/element-rounds200.js");
+/* harmony import */ var _js_element_rounds200__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_element_rounds200__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/f-create-aside */ "./src/components/cf/rounds/rounds200/js/f-create-aside.js");
+/** *******************
+Скрипт из файла rounds200.js
+Объект rounds содержит страницу rounds200
+Функция showRounds200 показывает страницу rounds200
+******************** */
+
+
+
+// 1. Создаем объект rounds200
+const rounds200 = {};
+
+// 2. В объекте rounds создаем свойство aside
+rounds200.aside = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createAside)();
+
+// 3. В объекте rounds создаем свойство main
+rounds200.main = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createMain)();
+
+// 4. Экспортируем функцию showRounds200()
+function showRounds200() {
+  const mainAside = document.querySelector('.main__aside');
+  if (mainAside) {
+    mainAside.innerHTML = '';
+    mainAside.append(rounds200.aside);
+    mainAside.append(rounds200.main);
+
+    // 5. Создадим и вызовем событие click на первой ссылке aside элемента
+    const eventClick = new Event('click');
+    mainAside.firstElementChild.firstElementChild.dispatchEvent(eventClick);
+  }
+}
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds300/js/data-aside.js":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/js/data-aside.js ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   asideThemes: function() { return /* binding */ asideThemes; }
+/* harmony export */ });
+// Создаем массив asideThemes с темами для блока aside
+const asideThemes = ['228 Round 141 (Div. 2)', '230 Round 142 (Div. 2)', '268 Round 164 (Div. 2)', '278 Round 170 (Div. 2)', '313 Round 186 (Div. 2)', '318 Round 188 (Div. 2)', '339 Round 197 (Div. 2)', '381 Round 223 (Div. 2)', '427 Round 244 (Div. 2)', '467 Round 267 (Div. 2)', '469 Round 268 (Div. 2)', '490 Round 279 (Div. 2)', '492 Round 280 (Div. 2)', '509 Round 289 (Div. 2)', '520 Round 295 (Div. 2)', '546 Round 304 (Div. 2)', '580 Round 321 (Div. 2)', '617 Round 340 (Div. 2)', '646 Techno 2016 z1', '647 Techno 2016 z2', '648 Techno 2016 o1', '649 Techno 2016 o2', '705 Round 366 (Div. 2)', '723 Round 375 (Div. 2)', '727 Techno 2017 o1', '732 Round 377 (Div. 2)', '733 Round 378 (Div. 2)', '743 Round 384 (Div. 2)', '758 Round 392 (Div. 2)', '791 Round 405 (Div. 2)', '895 Round 448 (Div. 2)', '1030 Techno 2019 o1', '1041 Round 509 (Div. 2)', '1272 Round 605 (Div. 3)', '1296 Round 617 (Div. 3)', '1313 Round 622 (Div. 2)', '1325 Round 628 (Div. 2)', '1351 Testing Round 16', '1352 Round 640 (Div. 4)', '1360 Round 644 (Div. 3)', '1367 Round 650 (Div. 3)', '1420 Round 672 (Div. 2)', '1490 Round 702 (Div. 3)', '1512 Round 713 (Div. 3)', '1520 Round 719 (Div. 3)', '1634 Round 770 (Div. 2)', '1669 Round 784 (Div. 4)', '1676 Round 790 (Div. 4)', '1692 Round 799 (Div. 4)', '1703 Round 806 (Div. 4)', '1722 Round 817 (Div. 4)', '1725 Compfest 14', '1726 Round 819 (Div. 1 + 2)', '1728 Ed Round 135 (Div. 2)', '1729 Round 820 (Div. 3)', '1730 Round 823 (Div. 2)', '1733 Round 821 (Div. 2)', '1734 Round 822 (Div. 2)', '1738 Gl Round 22', '1739 Ed Round 136 (Div. 2)', '1740 Round 831 (Div. 1 + 2)', '1741 Round 826 (Div. 3)', '1742 Round 827 (Div. 4)', '1760 Round 835 (Div. 4)', '1789 Round 853 (Div. 2)', '1791 Round 849 (Div. 4)', '1798 Round 860 (Div. 2)', '1807 Round 859 (Div. 4)', '1824 Round 872 (Div. 1)', '1825 Round 872 (Div. 2)', '1829 Round 871 (Div. 4)', '1850 Round 886 (Div. 4)', '1873 Round 898 (Div. 4)', '1915 Round 918 (Div. 4)', '1926 Round 928 (Div. 4)', '1950 Round 937 (Div. 4)', '1971 Round 944 (Div. 4)', '1985 Round 952 (Div. 4)', '1999 Round 964 (Div. 4)', '2009 Round 971 (Div. 4)', '2037 Round 988 (Div. 3)', '2044 Round 993 (Div. 4)', '2050 Round 991 (Div. 3)', '2051 Round 995 (Div. 3)', '2060 Round 998 (Div. 3)', '2065 Round 1003 (Div. 4)', '2072 Round 1006 (Div. 3)', '2091 Round 1013 (Div. 3)', '2093 Round 1016 (Div. 3)', '2094 Round 1017 (Div. 4)', '2106 Round 1020 (Div. 3)', '2114 Round 1027 (Div. 3)', '2117 Round 1029 (Div. 3)', '2119 Round 1035 (Div. 2)', '2121 Round 1032 (Div. 3)', '2123 Round 1034 (Div. 3)', '2126 Round 1037 (Div. 3)', '2131 Round 1042 (Div. 3)', '2132 Round 1043 (Div. 3)', '2133 Round 1044 (Div. 2)', '2134 Round 1045 (Div. 2)', '2136 Round 1046 (Div. 2)', '2137 Round 1047 (Div. 3)', '2148 Round 1050 (Div. 4)', '2149 Round 1054 (Div. 3)', '2152 Round 1055 (Div. 1 + 2)', '2162 Round 1059 (Div. 3)', '2166 Round 1064 (Div. 2)', '2167 Round 1062 (Div. 4)', '2171 Round 1065 (Div. 3)', '2185 Round 1074 (Div. 4)', '2193 Round 1076 (Div. 3)', '2209 Round 1087 (Div. 2)', '2218 Round 1090 (Div. 4)', '2236 Round 1103 (Div. 3)'];
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds300/js/data-pages.js":
+/*!*************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/js/data-pages.js ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   pages: function() { return /* binding */ pages; }
+/* harmony export */ });
+/* harmony import */ var _pages_p300_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../pages/p300/elem-228-Round141.html */ "./src/components/cf/rounds/rounds300/pages/p300/elem-228-Round141.html");
+/* harmony import */ var _pages_p300_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../pages/p300/elem-230-Round142.html */ "./src/components/cf/rounds/rounds300/pages/p300/elem-230-Round142.html");
+/* harmony import */ var _pages_p300_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../pages/p300/elem-268-Round164.html */ "./src/components/cf/rounds/rounds300/pages/p300/elem-268-Round164.html");
+/* harmony import */ var _pages_p300_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../pages/p300/elem-278-Round170.html */ "./src/components/cf/rounds/rounds300/pages/p300/elem-278-Round170.html");
+/* harmony import */ var _pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../pages/elem-313-Round186.html */ "./src/components/cf/rounds/rounds300/pages/elem-313-Round186.html");
+/* harmony import */ var _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../pages/elem-318-Round188.html */ "./src/components/cf/rounds/rounds300/pages/elem-318-Round188.html");
+/* harmony import */ var _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../pages/elem-339-Round197.html */ "./src/components/cf/rounds/rounds300/pages/elem-339-Round197.html");
+/* harmony import */ var _pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../pages/elem-381-Round223.html */ "./src/components/cf/rounds/rounds300/pages/elem-381-Round223.html");
+/* harmony import */ var _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../pages/elem-427-Round244.html */ "./src/components/cf/rounds/rounds300/pages/elem-427-Round244.html");
+/* harmony import */ var _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../pages/elem-467-Round267.html */ "./src/components/cf/rounds/rounds300/pages/elem-467-Round267.html");
+/* harmony import */ var _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../pages/elem-469-Round268.html */ "./src/components/cf/rounds/rounds300/pages/elem-469-Round268.html");
+/* harmony import */ var _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../pages/elem-490-Round279.html */ "./src/components/cf/rounds/rounds300/pages/elem-490-Round279.html");
+/* harmony import */ var _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../pages/elem-492-Round280.html */ "./src/components/cf/rounds/rounds300/pages/elem-492-Round280.html");
+/* harmony import */ var _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../pages/elem-509-Round289.html */ "./src/components/cf/rounds/rounds300/pages/elem-509-Round289.html");
+/* harmony import */ var _pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../pages/elem-520-Round295.html */ "./src/components/cf/rounds/rounds300/pages/elem-520-Round295.html");
+/* harmony import */ var _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../pages/elem-546-Round304.html */ "./src/components/cf/rounds/rounds300/pages/elem-546-Round304.html");
+/* harmony import */ var _pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./../pages/elem-580-Round321.html */ "./src/components/cf/rounds/rounds300/pages/elem-580-Round321.html");
+/* harmony import */ var _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./../pages/elem-617-Round340.html */ "./src/components/cf/rounds/rounds300/pages/elem-617-Round340.html");
+/* harmony import */ var _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../pages/elem-646-Techno1z.html */ "./src/components/cf/rounds/rounds300/pages/elem-646-Techno1z.html");
+/* harmony import */ var _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./../pages/elem-647-Techno2z.html */ "./src/components/cf/rounds/rounds300/pages/elem-647-Techno2z.html");
+/* harmony import */ var _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./../pages/elem-648-Techno1o.html */ "./src/components/cf/rounds/rounds300/pages/elem-648-Techno1o.html");
+/* harmony import */ var _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./../pages/elem-649-Techno2o.html */ "./src/components/cf/rounds/rounds300/pages/elem-649-Techno2o.html");
+/* harmony import */ var _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./../pages/elem-705-Round366.html */ "./src/components/cf/rounds/rounds300/pages/elem-705-Round366.html");
+/* harmony import */ var _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./../pages/elem-723-Round375.html */ "./src/components/cf/rounds/rounds300/pages/elem-723-Round375.html");
+/* harmony import */ var _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../pages/elem-727-Techno2017o1.html */ "./src/components/cf/rounds/rounds300/pages/elem-727-Techno2017o1.html");
+/* harmony import */ var _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./../pages/elem-732-Round377.html */ "./src/components/cf/rounds/rounds300/pages/elem-732-Round377.html");
+/* harmony import */ var _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./../pages/elem-733-Round378.html */ "./src/components/cf/rounds/rounds300/pages/elem-733-Round378.html");
+/* harmony import */ var _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./../pages/elem-743-Round384.html */ "./src/components/cf/rounds/rounds300/pages/elem-743-Round384.html");
+/* harmony import */ var _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../pages/elem-758-Round392.html */ "./src/components/cf/rounds/rounds300/pages/elem-758-Round392.html");
+/* harmony import */ var _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./../pages/elem-791-Round405.html */ "./src/components/cf/rounds/rounds300/pages/elem-791-Round405.html");
+/* harmony import */ var _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./../pages/elem-895-Round448.html */ "./src/components/cf/rounds/rounds300/pages/elem-895-Round448.html");
+/* harmony import */ var _pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./../pages/elem-1030-Techno2019o1.html */ "./src/components/cf/rounds/rounds300/pages/elem-1030-Techno2019o1.html");
+/* harmony import */ var _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./../pages/elem-1041-Round509.html */ "./src/components/cf/rounds/rounds300/pages/elem-1041-Round509.html");
+/* harmony import */ var _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./../pages/elem-1272-Round605.html */ "./src/components/cf/rounds/rounds300/pages/elem-1272-Round605.html");
+/* harmony import */ var _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./../pages/elem-1296-Round617.html */ "./src/components/cf/rounds/rounds300/pages/elem-1296-Round617.html");
+/* harmony import */ var _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./../pages/elem-1313-Round622.html */ "./src/components/cf/rounds/rounds300/pages/elem-1313-Round622.html");
+/* harmony import */ var _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./../pages/elem-1325-Round628.html */ "./src/components/cf/rounds/rounds300/pages/elem-1325-Round628.html");
+/* harmony import */ var _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./../pages/elem-1351-TRound16.html */ "./src/components/cf/rounds/rounds300/pages/elem-1351-TRound16.html");
+/* harmony import */ var _pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./../pages/elem-1352-Round640.html */ "./src/components/cf/rounds/rounds300/pages/elem-1352-Round640.html");
+/* harmony import */ var _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./../pages/elem-1360-Round644.html */ "./src/components/cf/rounds/rounds300/pages/elem-1360-Round644.html");
+/* harmony import */ var _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./../pages/elem-1367-Round650.html */ "./src/components/cf/rounds/rounds300/pages/elem-1367-Round650.html");
+/* harmony import */ var _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./../pages/elem-1420-Round672.html */ "./src/components/cf/rounds/rounds300/pages/elem-1420-Round672.html");
+/* harmony import */ var _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./../pages/elem-1490-Round702.html */ "./src/components/cf/rounds/rounds300/pages/elem-1490-Round702.html");
+/* harmony import */ var _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./../pages/elem-1512-Round713.html */ "./src/components/cf/rounds/rounds300/pages/elem-1512-Round713.html");
+/* harmony import */ var _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../pages/elem-1520-Round719.html */ "./src/components/cf/rounds/rounds300/pages/elem-1520-Round719.html");
+/* harmony import */ var _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./../pages/elem-1634-Round770.html */ "./src/components/cf/rounds/rounds300/pages/elem-1634-Round770.html");
+/* harmony import */ var _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./../pages/elem-1669-Round784.html */ "./src/components/cf/rounds/rounds300/pages/elem-1669-Round784.html");
+/* harmony import */ var _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./../pages/elem-1676-Round790.html */ "./src/components/cf/rounds/rounds300/pages/elem-1676-Round790.html");
+/* harmony import */ var _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./../pages/elem-1692-Round799.html */ "./src/components/cf/rounds/rounds300/pages/elem-1692-Round799.html");
+/* harmony import */ var _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./../pages/elem-1703-Round806.html */ "./src/components/cf/rounds/rounds300/pages/elem-1703-Round806.html");
+/* harmony import */ var _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./../pages/elem-1722-Round817.html */ "./src/components/cf/rounds/rounds300/pages/elem-1722-Round817.html");
+/* harmony import */ var _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./../pages/elem-1725-compfest.html */ "./src/components/cf/rounds/rounds300/pages/elem-1725-compfest.html");
+/* harmony import */ var _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./../pages/elem-1726-Round819.html */ "./src/components/cf/rounds/rounds300/pages/elem-1726-Round819.html");
+/* harmony import */ var _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./../pages/elem-1728-EdRound135.html */ "./src/components/cf/rounds/rounds300/pages/elem-1728-EdRound135.html");
+/* harmony import */ var _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./../pages/elem-1729-Round820.html */ "./src/components/cf/rounds/rounds300/pages/elem-1729-Round820.html");
+/* harmony import */ var _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./../pages/elem-1730-Round823.html */ "./src/components/cf/rounds/rounds300/pages/elem-1730-Round823.html");
+/* harmony import */ var _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./../pages/elem-1733-Round821.html */ "./src/components/cf/rounds/rounds300/pages/elem-1733-Round821.html");
+/* harmony import */ var _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./../pages/elem-1734-Round822.html */ "./src/components/cf/rounds/rounds300/pages/elem-1734-Round822.html");
+/* harmony import */ var _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./../pages/elem-1738-GlRound22.html */ "./src/components/cf/rounds/rounds300/pages/elem-1738-GlRound22.html");
+/* harmony import */ var _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./../pages/elem-1739-EdRound136.html */ "./src/components/cf/rounds/rounds300/pages/elem-1739-EdRound136.html");
+/* harmony import */ var _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./../pages/elem-1740-Round831.html */ "./src/components/cf/rounds/rounds300/pages/elem-1740-Round831.html");
+/* harmony import */ var _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./../pages/elem-1741-Round826.html */ "./src/components/cf/rounds/rounds300/pages/elem-1741-Round826.html");
+/* harmony import */ var _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./../pages/elem-1742-Round827.html */ "./src/components/cf/rounds/rounds300/pages/elem-1742-Round827.html");
+/* harmony import */ var _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./../pages/elem-1760-Round835.html */ "./src/components/cf/rounds/rounds300/pages/elem-1760-Round835.html");
+/* harmony import */ var _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./../pages/elem-1789-Round853.html */ "./src/components/cf/rounds/rounds300/pages/elem-1789-Round853.html");
+/* harmony import */ var _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./../pages/elem-1791-Round849.html */ "./src/components/cf/rounds/rounds300/pages/elem-1791-Round849.html");
+/* harmony import */ var _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./../pages/elem-1798-Round860.html */ "./src/components/cf/rounds/rounds300/pages/elem-1798-Round860.html");
+/* harmony import */ var _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./../pages/elem-1807-Round859.html */ "./src/components/cf/rounds/rounds300/pages/elem-1807-Round859.html");
+/* harmony import */ var _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./../pages/elem-1824-Round872.html */ "./src/components/cf/rounds/rounds300/pages/elem-1824-Round872.html");
+/* harmony import */ var _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./../pages/elem-1825-Round872.html */ "./src/components/cf/rounds/rounds300/pages/elem-1825-Round872.html");
+/* harmony import */ var _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./../pages/elem-1829-Round871.html */ "./src/components/cf/rounds/rounds300/pages/elem-1829-Round871.html");
+/* harmony import */ var _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./../pages/elem-1850-Round886.html */ "./src/components/cf/rounds/rounds300/pages/elem-1850-Round886.html");
+/* harmony import */ var _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./../pages/elem-1873-Round898.html */ "./src/components/cf/rounds/rounds300/pages/elem-1873-Round898.html");
+/* harmony import */ var _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./../pages/elem-1915-Round918.html */ "./src/components/cf/rounds/rounds300/pages/elem-1915-Round918.html");
+/* harmony import */ var _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./../pages/elem-1926-Round928.html */ "./src/components/cf/rounds/rounds300/pages/elem-1926-Round928.html");
+/* harmony import */ var _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./../pages/elem-1950-Round937.html */ "./src/components/cf/rounds/rounds300/pages/elem-1950-Round937.html");
+/* harmony import */ var _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./../pages/elem-1971-Round944.html */ "./src/components/cf/rounds/rounds300/pages/elem-1971-Round944.html");
+/* harmony import */ var _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./../pages/elem-1985-Round952.html */ "./src/components/cf/rounds/rounds300/pages/elem-1985-Round952.html");
+/* harmony import */ var _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./../pages/elem-1999-Round964.html */ "./src/components/cf/rounds/rounds300/pages/elem-1999-Round964.html");
+/* harmony import */ var _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./../pages/elem-2009-Round971.html */ "./src/components/cf/rounds/rounds300/pages/elem-2009-Round971.html");
+/* harmony import */ var _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./../pages/elem-2037-Round988.html */ "./src/components/cf/rounds/rounds300/pages/elem-2037-Round988.html");
+/* harmony import */ var _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./../pages/elem-2044-Round993.html */ "./src/components/cf/rounds/rounds300/pages/elem-2044-Round993.html");
+/* harmony import */ var _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./../pages/elem-2050-Round991.html */ "./src/components/cf/rounds/rounds300/pages/elem-2050-Round991.html");
+/* harmony import */ var _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./../pages/elem-2051-Round995.html */ "./src/components/cf/rounds/rounds300/pages/elem-2051-Round995.html");
+/* harmony import */ var _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./../pages/elem-2060-Round998.html */ "./src/components/cf/rounds/rounds300/pages/elem-2060-Round998.html");
+/* harmony import */ var _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./../pages/elem-2065-Round1003.html */ "./src/components/cf/rounds/rounds300/pages/elem-2065-Round1003.html");
+/* harmony import */ var _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./../pages/elem-2072-Round1006.html */ "./src/components/cf/rounds/rounds300/pages/elem-2072-Round1006.html");
+/* harmony import */ var _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./../pages/elem-2091-Round1013.html */ "./src/components/cf/rounds/rounds300/pages/elem-2091-Round1013.html");
+/* harmony import */ var _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./../pages/elem-2093-Round1016.html */ "./src/components/cf/rounds/rounds300/pages/elem-2093-Round1016.html");
+/* harmony import */ var _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./../pages/elem-2094-Round1017.html */ "./src/components/cf/rounds/rounds300/pages/elem-2094-Round1017.html");
+/* harmony import */ var _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./../pages/elem-2106-Round1020.html */ "./src/components/cf/rounds/rounds300/pages/elem-2106-Round1020.html");
+/* harmony import */ var _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./../pages/elem-2114-Round1027.html */ "./src/components/cf/rounds/rounds300/pages/elem-2114-Round1027.html");
+/* harmony import */ var _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./../pages/elem-2117-Round1029.html */ "./src/components/cf/rounds/rounds300/pages/elem-2117-Round1029.html");
+/* harmony import */ var _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./../pages/elem-2119-Round1035.html */ "./src/components/cf/rounds/rounds300/pages/elem-2119-Round1035.html");
+/* harmony import */ var _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./../pages/elem-2121-Round1032.html */ "./src/components/cf/rounds/rounds300/pages/elem-2121-Round1032.html");
+/* harmony import */ var _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./../pages/elem-2123-Round1034.html */ "./src/components/cf/rounds/rounds300/pages/elem-2123-Round1034.html");
+/* harmony import */ var _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./../pages/elem-2126-Round1037.html */ "./src/components/cf/rounds/rounds300/pages/elem-2126-Round1037.html");
+/* harmony import */ var _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./../pages/elem-2131-Round1042.html */ "./src/components/cf/rounds/rounds300/pages/elem-2131-Round1042.html");
+/* harmony import */ var _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./../pages/elem-2132-Round1043.html */ "./src/components/cf/rounds/rounds300/pages/elem-2132-Round1043.html");
+/* harmony import */ var _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./../pages/elem-2133-Round1044.html */ "./src/components/cf/rounds/rounds300/pages/elem-2133-Round1044.html");
+/* harmony import */ var _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./../pages/elem-2134-Round1045.html */ "./src/components/cf/rounds/rounds300/pages/elem-2134-Round1045.html");
+/* harmony import */ var _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./../pages/elem-2136-Round1046.html */ "./src/components/cf/rounds/rounds300/pages/elem-2136-Round1046.html");
+/* harmony import */ var _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./../pages/elem-2137-Round1047.html */ "./src/components/cf/rounds/rounds300/pages/elem-2137-Round1047.html");
+/* harmony import */ var _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./../pages/elem-2148-Round1050.html */ "./src/components/cf/rounds/rounds300/pages/elem-2148-Round1050.html");
+/* harmony import */ var _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./../pages/elem-2149-Round1054.html */ "./src/components/cf/rounds/rounds300/pages/elem-2149-Round1054.html");
+/* harmony import */ var _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./../pages/elem-2152-Round1055.html */ "./src/components/cf/rounds/rounds300/pages/elem-2152-Round1055.html");
+/* harmony import */ var _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./../pages/elem-2162-Round1059.html */ "./src/components/cf/rounds/rounds300/pages/elem-2162-Round1059.html");
+/* harmony import */ var _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./../pages/elem-2166-Round1064.html */ "./src/components/cf/rounds/rounds300/pages/elem-2166-Round1064.html");
+/* harmony import */ var _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./../pages/elem-2167-Round1062.html */ "./src/components/cf/rounds/rounds300/pages/elem-2167-Round1062.html");
+/* harmony import */ var _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./../pages/elem-2171-Round1065.html */ "./src/components/cf/rounds/rounds300/pages/elem-2171-Round1065.html");
+/* harmony import */ var _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./../pages/elem-2185-Round1074.html */ "./src/components/cf/rounds/rounds300/pages/elem-2185-Round1074.html");
+/* harmony import */ var _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./../pages/elem-2193-Round1076.html */ "./src/components/cf/rounds/rounds300/pages/elem-2193-Round1076.html");
+/* harmony import */ var _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./../pages/elem-2209-Round1087.html */ "./src/components/cf/rounds/rounds300/pages/elem-2209-Round1087.html");
+/* harmony import */ var _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./../pages/elem-2218-Round1090.html */ "./src/components/cf/rounds/rounds300/pages/elem-2218-Round1090.html");
+/* harmony import */ var _pages_elem_2236_Round1103_html__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./../pages/elem-2236-Round1103.html */ "./src/components/cf/rounds/rounds300/pages/elem-2236-Round1103.html");
 // Создаем массив pages со страницами из aside меню
 
 
@@ -6094,32 +6558,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const pages = [_pages_p200_elem_106_Round82_html__WEBPACK_IMPORTED_MODULE_0__["default"], _pages_p200_elem_110_Round84_html__WEBPACK_IMPORTED_MODULE_1__["default"], _pages_p200_elem_112_Round85_html__WEBPACK_IMPORTED_MODULE_2__["default"], _pages_p200_elem_116_Round87_html__WEBPACK_IMPORTED_MODULE_3__["default"], _pages_p200_elem_118_Round89_html__WEBPACK_IMPORTED_MODULE_4__["default"], _pages_p200_elem_120_kosSaratov_html__WEBPACK_IMPORTED_MODULE_5__["default"], [_pages_p200_elem_134_TRound3_html__WEBPACK_IMPORTED_MODULE_6__["default"], 134], _pages_p200_elem_136_Round97_html__WEBPACK_IMPORTED_MODULE_7__["default"], _pages_p200_elem_141_Round101_html__WEBPACK_IMPORTED_MODULE_8__["default"], _pages_p200_elem_155_Round109_html__WEBPACK_IMPORTED_MODULE_9__["default"], _pages_p200_elem_158_vk_q1_html__WEBPACK_IMPORTED_MODULE_10__["default"], _pages_p200_elem_159_vk_q2_html__WEBPACK_IMPORTED_MODULE_11__["default"], _pages_p200_elem_163_vk_r2_html__WEBPACK_IMPORTED_MODULE_12__["default"], _pages_p200_elem_169_vk_r2_html__WEBPACK_IMPORTED_MODULE_13__["default"], _pages_p200_elem_200_Round126_html__WEBPACK_IMPORTED_MODULE_14__["default"], _pages_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_15__["default"], [_pages_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_16__["default"], 230], _pages_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_18__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_19__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_21__["default"], [_pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_22__["default"], 381], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_28__["default"], [_pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_29__["default"], 520], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_30__["default"], [_pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_31__["default"], 580], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_37__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_38__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_39__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_45__["default"], [_pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_46__["default"], 1030], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_48__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_49__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_51__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_52__["default"], [_pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_53__["default"], 1352], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_114__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_115__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_116__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_117__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_118__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_119__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_120__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_121__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_122__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_123__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_124__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_125__["default"], _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_126__["default"], _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_127__["default"], _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_128__["default"], _pages_elem_2236_Round1103_html__WEBPACK_IMPORTED_MODULE_129__["default"]];
+const pages = [_pages_p300_elem_228_Round141_html__WEBPACK_IMPORTED_MODULE_0__["default"], [_pages_p300_elem_230_Round142_html__WEBPACK_IMPORTED_MODULE_1__["default"], 230], _pages_p300_elem_268_Round164_html__WEBPACK_IMPORTED_MODULE_2__["default"], _pages_p300_elem_278_Round170_html__WEBPACK_IMPORTED_MODULE_3__["default"], [_pages_elem_313_Round186_html__WEBPACK_IMPORTED_MODULE_4__["default"], 313], _pages_elem_318_Round188_html__WEBPACK_IMPORTED_MODULE_5__["default"], _pages_elem_339_Round197_html__WEBPACK_IMPORTED_MODULE_6__["default"], [_pages_elem_381_Round223_html__WEBPACK_IMPORTED_MODULE_7__["default"], 381], _pages_elem_427_Round244_html__WEBPACK_IMPORTED_MODULE_8__["default"], _pages_elem_467_Round267_html__WEBPACK_IMPORTED_MODULE_9__["default"], _pages_elem_469_Round268_html__WEBPACK_IMPORTED_MODULE_10__["default"], _pages_elem_490_Round279_html__WEBPACK_IMPORTED_MODULE_11__["default"], _pages_elem_492_Round280_html__WEBPACK_IMPORTED_MODULE_12__["default"], _pages_elem_509_Round289_html__WEBPACK_IMPORTED_MODULE_13__["default"], [_pages_elem_520_Round295_html__WEBPACK_IMPORTED_MODULE_14__["default"], 520], _pages_elem_546_Round304_html__WEBPACK_IMPORTED_MODULE_15__["default"], [_pages_elem_580_Round321_html__WEBPACK_IMPORTED_MODULE_16__["default"], 580], _pages_elem_617_Round340_html__WEBPACK_IMPORTED_MODULE_17__["default"], _pages_elem_646_Techno1z_html__WEBPACK_IMPORTED_MODULE_18__["default"], _pages_elem_647_Techno2z_html__WEBPACK_IMPORTED_MODULE_19__["default"], _pages_elem_648_Techno1o_html__WEBPACK_IMPORTED_MODULE_20__["default"], _pages_elem_649_Techno2o_html__WEBPACK_IMPORTED_MODULE_21__["default"], _pages_elem_705_Round366_html__WEBPACK_IMPORTED_MODULE_22__["default"], _pages_elem_723_Round375_html__WEBPACK_IMPORTED_MODULE_23__["default"], _pages_elem_727_Techno2017o1_html__WEBPACK_IMPORTED_MODULE_24__["default"], _pages_elem_732_Round377_html__WEBPACK_IMPORTED_MODULE_25__["default"], _pages_elem_733_Round378_html__WEBPACK_IMPORTED_MODULE_26__["default"], _pages_elem_743_Round384_html__WEBPACK_IMPORTED_MODULE_27__["default"], _pages_elem_758_Round392_html__WEBPACK_IMPORTED_MODULE_28__["default"], _pages_elem_791_Round405_html__WEBPACK_IMPORTED_MODULE_29__["default"], _pages_elem_895_Round448_html__WEBPACK_IMPORTED_MODULE_30__["default"], [_pages_elem_1030_Techno2019o1_html__WEBPACK_IMPORTED_MODULE_31__["default"], 1030], _pages_elem_1041_Round509_html__WEBPACK_IMPORTED_MODULE_32__["default"], _pages_elem_1272_Round605_html__WEBPACK_IMPORTED_MODULE_33__["default"], _pages_elem_1296_Round617_html__WEBPACK_IMPORTED_MODULE_34__["default"], _pages_elem_1313_Round622_html__WEBPACK_IMPORTED_MODULE_35__["default"], _pages_elem_1325_Round628_html__WEBPACK_IMPORTED_MODULE_36__["default"], _pages_elem_1351_TRound16_html__WEBPACK_IMPORTED_MODULE_37__["default"], [_pages_elem_1352_Round640_html__WEBPACK_IMPORTED_MODULE_38__["default"], 1352], _pages_elem_1360_Round644_html__WEBPACK_IMPORTED_MODULE_39__["default"], _pages_elem_1367_Round650_html__WEBPACK_IMPORTED_MODULE_40__["default"], _pages_elem_1420_Round672_html__WEBPACK_IMPORTED_MODULE_41__["default"], _pages_elem_1490_Round702_html__WEBPACK_IMPORTED_MODULE_42__["default"], _pages_elem_1512_Round713_html__WEBPACK_IMPORTED_MODULE_43__["default"], _pages_elem_1520_Round719_html__WEBPACK_IMPORTED_MODULE_44__["default"], _pages_elem_1634_Round770_html__WEBPACK_IMPORTED_MODULE_45__["default"], _pages_elem_1669_Round784_html__WEBPACK_IMPORTED_MODULE_46__["default"], _pages_elem_1676_Round790_html__WEBPACK_IMPORTED_MODULE_47__["default"], _pages_elem_1692_Round799_html__WEBPACK_IMPORTED_MODULE_48__["default"], _pages_elem_1703_Round806_html__WEBPACK_IMPORTED_MODULE_49__["default"], _pages_elem_1722_Round817_html__WEBPACK_IMPORTED_MODULE_50__["default"], _pages_elem_1725_compfest_html__WEBPACK_IMPORTED_MODULE_51__["default"], _pages_elem_1726_Round819_html__WEBPACK_IMPORTED_MODULE_52__["default"], _pages_elem_1728_EdRound135_html__WEBPACK_IMPORTED_MODULE_53__["default"], _pages_elem_1729_Round820_html__WEBPACK_IMPORTED_MODULE_54__["default"], _pages_elem_1730_Round823_html__WEBPACK_IMPORTED_MODULE_55__["default"], _pages_elem_1733_Round821_html__WEBPACK_IMPORTED_MODULE_56__["default"], _pages_elem_1734_Round822_html__WEBPACK_IMPORTED_MODULE_57__["default"], _pages_elem_1738_GlRound22_html__WEBPACK_IMPORTED_MODULE_58__["default"], _pages_elem_1739_EdRound136_html__WEBPACK_IMPORTED_MODULE_59__["default"], _pages_elem_1740_Round831_html__WEBPACK_IMPORTED_MODULE_60__["default"], _pages_elem_1741_Round826_html__WEBPACK_IMPORTED_MODULE_61__["default"], _pages_elem_1742_Round827_html__WEBPACK_IMPORTED_MODULE_62__["default"], _pages_elem_1760_Round835_html__WEBPACK_IMPORTED_MODULE_63__["default"], _pages_elem_1789_Round853_html__WEBPACK_IMPORTED_MODULE_64__["default"], _pages_elem_1791_Round849_html__WEBPACK_IMPORTED_MODULE_65__["default"], _pages_elem_1798_Round860_html__WEBPACK_IMPORTED_MODULE_66__["default"], _pages_elem_1807_Round859_html__WEBPACK_IMPORTED_MODULE_67__["default"], _pages_elem_1824_Round872_html__WEBPACK_IMPORTED_MODULE_68__["default"], _pages_elem_1825_Round872_html__WEBPACK_IMPORTED_MODULE_69__["default"], _pages_elem_1829_Round871_html__WEBPACK_IMPORTED_MODULE_70__["default"], _pages_elem_1850_Round886_html__WEBPACK_IMPORTED_MODULE_71__["default"], _pages_elem_1873_Round898_html__WEBPACK_IMPORTED_MODULE_72__["default"], _pages_elem_1915_Round918_html__WEBPACK_IMPORTED_MODULE_73__["default"], _pages_elem_1926_Round928_html__WEBPACK_IMPORTED_MODULE_74__["default"], _pages_elem_1950_Round937_html__WEBPACK_IMPORTED_MODULE_75__["default"], _pages_elem_1971_Round944_html__WEBPACK_IMPORTED_MODULE_76__["default"], _pages_elem_1985_Round952_html__WEBPACK_IMPORTED_MODULE_77__["default"], _pages_elem_1999_Round964_html__WEBPACK_IMPORTED_MODULE_78__["default"], _pages_elem_2009_Round971_html__WEBPACK_IMPORTED_MODULE_79__["default"], _pages_elem_2037_Round988_html__WEBPACK_IMPORTED_MODULE_80__["default"], _pages_elem_2044_Round993_html__WEBPACK_IMPORTED_MODULE_81__["default"], _pages_elem_2050_Round991_html__WEBPACK_IMPORTED_MODULE_82__["default"], _pages_elem_2051_Round995_html__WEBPACK_IMPORTED_MODULE_83__["default"], _pages_elem_2060_Round998_html__WEBPACK_IMPORTED_MODULE_84__["default"], _pages_elem_2065_Round1003_html__WEBPACK_IMPORTED_MODULE_85__["default"], _pages_elem_2072_Round1006_html__WEBPACK_IMPORTED_MODULE_86__["default"], _pages_elem_2091_Round1013_html__WEBPACK_IMPORTED_MODULE_87__["default"], _pages_elem_2093_Round1016_html__WEBPACK_IMPORTED_MODULE_88__["default"], _pages_elem_2094_Round1017_html__WEBPACK_IMPORTED_MODULE_89__["default"], _pages_elem_2106_Round1020_html__WEBPACK_IMPORTED_MODULE_90__["default"], _pages_elem_2114_Round1027_html__WEBPACK_IMPORTED_MODULE_91__["default"], _pages_elem_2117_Round1029_html__WEBPACK_IMPORTED_MODULE_92__["default"], _pages_elem_2119_Round1035_html__WEBPACK_IMPORTED_MODULE_93__["default"], _pages_elem_2121_Round1032_html__WEBPACK_IMPORTED_MODULE_94__["default"], _pages_elem_2123_Round1034_html__WEBPACK_IMPORTED_MODULE_95__["default"], _pages_elem_2126_Round1037_html__WEBPACK_IMPORTED_MODULE_96__["default"], _pages_elem_2131_Round1042_html__WEBPACK_IMPORTED_MODULE_97__["default"], _pages_elem_2132_Round1043_html__WEBPACK_IMPORTED_MODULE_98__["default"], _pages_elem_2133_Round1044_html__WEBPACK_IMPORTED_MODULE_99__["default"], _pages_elem_2134_Round1045_html__WEBPACK_IMPORTED_MODULE_100__["default"], _pages_elem_2136_Round1046_html__WEBPACK_IMPORTED_MODULE_101__["default"], _pages_elem_2137_Round1047_html__WEBPACK_IMPORTED_MODULE_102__["default"], _pages_elem_2148_Round1050_html__WEBPACK_IMPORTED_MODULE_103__["default"], _pages_elem_2149_Round1054_html__WEBPACK_IMPORTED_MODULE_104__["default"], _pages_elem_2152_Round1055_html__WEBPACK_IMPORTED_MODULE_105__["default"], _pages_elem_2162_Round1059_html__WEBPACK_IMPORTED_MODULE_106__["default"], _pages_elem_2166_Round1064_html__WEBPACK_IMPORTED_MODULE_107__["default"], _pages_elem_2167_Round1062_html__WEBPACK_IMPORTED_MODULE_108__["default"], _pages_elem_2171_Round1065_html__WEBPACK_IMPORTED_MODULE_109__["default"], _pages_elem_2185_Round1074_html__WEBPACK_IMPORTED_MODULE_110__["default"], _pages_elem_2193_Round1076_html__WEBPACK_IMPORTED_MODULE_111__["default"], _pages_elem_2209_Round1087_html__WEBPACK_IMPORTED_MODULE_112__["default"], _pages_elem_2218_Round1090_html__WEBPACK_IMPORTED_MODULE_113__["default"], _pages_elem_2236_Round1103_html__WEBPACK_IMPORTED_MODULE_114__["default"]];
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/js/element-rounds200.js":
+/***/ "./src/components/cf/rounds/rounds300/js/element-rounds300.js":
 /*!********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/js/element-rounds200.js ***!
+  !*** ./src/components/cf/rounds/rounds300/js/element-rounds300.js ***!
   \********************************************************************/
 /***/ (function() {
 
-class Rounds200 extends HTMLElement {
+class Rounds300 extends HTMLElement {
   constructor() {
     super();
   }
@@ -6128,16 +6577,16 @@ class Rounds200 extends HTMLElement {
     <section class="main__aside">
     </section>
     `;
-    this.className = 'rounds-200';
+    this.className = 'rounds-300';
   }
 }
-customElements.define('rounds-200', Rounds200);
+customElements.define('rounds-300', Rounds300);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/js/f-create-aside.js":
+/***/ "./src/components/cf/rounds/rounds300/js/f-create-aside.js":
 /*!*****************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/js/f-create-aside.js ***!
+  !*** ./src/components/cf/rounds/rounds300/js/f-create-aside.js ***!
   \*****************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6147,8 +6596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   createAside: function() { return /* binding */ createAside; },
 /* harmony export */   createMain: function() { return /* binding */ createMain; }
 /* harmony export */ });
-/* harmony import */ var _data_aside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-aside */ "./src/components/cf/rounds/rounds200/js/data-aside.js");
-/* harmony import */ var _pages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages */ "./src/components/cf/rounds/rounds200/js/pages.js");
+/* harmony import */ var _data_aside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-aside */ "./src/components/cf/rounds/rounds300/js/data-aside.js");
+/* harmony import */ var _pages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages */ "./src/components/cf/rounds/rounds300/js/pages.js");
 /** ***************
 Функция createInput создает inputArray
 **************** */
@@ -6191,7 +6640,7 @@ aside.classList.add('aside');
 aside.append(...asideDiv);
 const main = document.createElement('main');
 main.classList.add('main');
-main.id = 'rounds-200'; // эта строчка отличается
+main.id = 'rounds-300'; // эта строчка отличается
 
 (0,_pages__WEBPACK_IMPORTED_MODULE_1__["default"])(asideDiv, main);
 function createAside() {
@@ -6203,9 +6652,9 @@ function createMain() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/js/pages.js":
+/***/ "./src/components/cf/rounds/rounds300/js/pages.js":
 /*!********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/js/pages.js ***!
+  !*** ./src/components/cf/rounds/rounds300/js/pages.js ***!
   \********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6214,19 +6663,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ pageLink; }
 /* harmony export */ });
-/* harmony import */ var _data_pages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-pages */ "./src/components/cf/rounds/rounds200/js/data-pages.js");
-/* harmony import */ var _pages_p200_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/p200/elem-134-TRound3 */ "./src/components/cf/rounds/rounds200/pages/p200/elem-134-TRound3.js");
-/* harmony import */ var _pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/elem-230-Round142 */ "./src/components/cf/rounds/rounds200/pages/elem-230-Round142.js");
-/* harmony import */ var _pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/elem-313-Round186 */ "./src/components/cf/rounds/rounds200/pages/elem-313-Round186.js");
-/* harmony import */ var _pages_elem_381_Round223__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/elem-381-Round223 */ "./src/components/cf/rounds/rounds200/pages/elem-381-Round223.js");
-/* harmony import */ var _pages_elem_520_Round295__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/elem-520-Round295 */ "./src/components/cf/rounds/rounds200/pages/elem-520-Round295.js");
-/* harmony import */ var _pages_elem_580_Round321__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/elem-580-Round321 */ "./src/components/cf/rounds/rounds200/pages/elem-580-Round321.js");
-/* harmony import */ var _pages_elem_1030_Techno2019o1__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/elem-1030-Techno2019o1 */ "./src/components/cf/rounds/rounds200/pages/elem-1030-Techno2019o1.js");
-/* harmony import */ var _pages_elem_1352_Round640__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/elem-1352-Round640 */ "./src/components/cf/rounds/rounds200/pages/elem-1352-Round640.js");
+/* harmony import */ var _data_pages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-pages */ "./src/components/cf/rounds/rounds300/js/data-pages.js");
+/* harmony import */ var _pages_p300_elem_230_Round142__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/p300/elem-230-Round142 */ "./src/components/cf/rounds/rounds300/pages/p300/elem-230-Round142.js");
+/* harmony import */ var _pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/elem-313-Round186 */ "./src/components/cf/rounds/rounds300/pages/elem-313-Round186.js");
+/* harmony import */ var _pages_elem_381_Round223__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/elem-381-Round223 */ "./src/components/cf/rounds/rounds300/pages/elem-381-Round223.js");
+/* harmony import */ var _pages_elem_520_Round295__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/elem-520-Round295 */ "./src/components/cf/rounds/rounds300/pages/elem-520-Round295.js");
+/* harmony import */ var _pages_elem_580_Round321__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/elem-580-Round321 */ "./src/components/cf/rounds/rounds300/pages/elem-580-Round321.js");
+/* harmony import */ var _pages_elem_1030_Techno2019o1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/elem-1030-Techno2019o1 */ "./src/components/cf/rounds/rounds300/pages/elem-1030-Techno2019o1.js");
+/* harmony import */ var _pages_elem_1352_Round640__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/elem-1352-Round640 */ "./src/components/cf/rounds/rounds300/pages/elem-1352-Round640.js");
 /************************
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
-
 
 
 
@@ -6247,29 +6694,26 @@ function pageLink(asideItems, currentContent) {
 
           // подключаем задачи на страницу из базы
           switch (_data_pages__WEBPACK_IMPORTED_MODULE_0__.pages[index][1]) {
-            case 134:
-              (0,_pages_p200_elem_134_TRound3__WEBPACK_IMPORTED_MODULE_1__["default"])();
-              break;
             case 230:
-              (0,_pages_elem_230_Round142__WEBPACK_IMPORTED_MODULE_2__["default"])();
+              (0,_pages_p300_elem_230_Round142__WEBPACK_IMPORTED_MODULE_1__["default"])();
               break;
             case 313:
-              (0,_pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_3__["default"])();
+              (0,_pages_elem_313_Round186__WEBPACK_IMPORTED_MODULE_2__["default"])();
               break;
             case 381:
-              (0,_pages_elem_381_Round223__WEBPACK_IMPORTED_MODULE_4__["default"])();
+              (0,_pages_elem_381_Round223__WEBPACK_IMPORTED_MODULE_3__["default"])();
               break;
             case 520:
-              (0,_pages_elem_520_Round295__WEBPACK_IMPORTED_MODULE_5__["default"])();
+              (0,_pages_elem_520_Round295__WEBPACK_IMPORTED_MODULE_4__["default"])();
               break;
             case 580:
-              (0,_pages_elem_580_Round321__WEBPACK_IMPORTED_MODULE_6__["default"])();
+              (0,_pages_elem_580_Round321__WEBPACK_IMPORTED_MODULE_5__["default"])();
               break;
             case 1030:
-              (0,_pages_elem_1030_Techno2019o1__WEBPACK_IMPORTED_MODULE_7__["default"])();
+              (0,_pages_elem_1030_Techno2019o1__WEBPACK_IMPORTED_MODULE_6__["default"])();
               break;
             case 1352:
-              (0,_pages_elem_1352_Round640__WEBPACK_IMPORTED_MODULE_8__["default"])();
+              (0,_pages_elem_1352_Round640__WEBPACK_IMPORTED_MODULE_7__["default"])();
               break;
             default:
               break;
@@ -6286,9 +6730,9 @@ function pageLink(asideItems, currentContent) {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1030-Techno2019o1.js":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1030-Techno2019o1.js":
 /*!****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1030-Techno2019o1.js ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1030-Techno2019o1.js ***!
   \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6297,13 +6741,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z1030a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1030a.html */ "./src/components/cf/rounds/rounds200/z/z1030a.html");
-/* harmony import */ var _z_z1030b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1030b.html */ "./src/components/cf/rounds/rounds200/z/z1030b.html");
-/* harmony import */ var _z_z1030c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1030c.html */ "./src/components/cf/rounds/rounds200/z/z1030c.html");
-/* harmony import */ var _z_z1030d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1030d.html */ "./src/components/cf/rounds/rounds200/z/z1030d.html");
-/* harmony import */ var _z_z1030e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1030e.html */ "./src/components/cf/rounds/rounds200/z/z1030e.html");
-/* harmony import */ var _z_z1030f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1030f.html */ "./src/components/cf/rounds/rounds200/z/z1030f.html");
-/* harmony import */ var _z_z1030g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1030g.html */ "./src/components/cf/rounds/rounds200/z/z1030g.html");
+/* harmony import */ var _z_z1030a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1030a.html */ "./src/components/cf/rounds/rounds300/z/z1030a.html");
+/* harmony import */ var _z_z1030b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1030b.html */ "./src/components/cf/rounds/rounds300/z/z1030b.html");
+/* harmony import */ var _z_z1030c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1030c.html */ "./src/components/cf/rounds/rounds300/z/z1030c.html");
+/* harmony import */ var _z_z1030d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1030d.html */ "./src/components/cf/rounds/rounds300/z/z1030d.html");
+/* harmony import */ var _z_z1030e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1030e.html */ "./src/components/cf/rounds/rounds300/z/z1030e.html");
+/* harmony import */ var _z_z1030f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1030f.html */ "./src/components/cf/rounds/rounds300/z/z1030f.html");
+/* harmony import */ var _z_z1030g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1030g.html */ "./src/components/cf/rounds/rounds300/z/z1030g.html");
 
 
 
@@ -6337,9 +6781,9 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1352-Round640.js":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1352-Round640.js":
 /*!************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1352-Round640.js ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1352-Round640.js ***!
   \************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6348,13 +6792,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z1352a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1352a.html */ "./src/components/cf/rounds/rounds200/z/z1352a.html");
-/* harmony import */ var _z_z1352b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1352b.html */ "./src/components/cf/rounds/rounds200/z/z1352b.html");
-/* harmony import */ var _z_z1352c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1352c.html */ "./src/components/cf/rounds/rounds200/z/z1352c.html");
-/* harmony import */ var _z_z1352d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1352d.html */ "./src/components/cf/rounds/rounds200/z/z1352d.html");
-/* harmony import */ var _z_z1352e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1352e.html */ "./src/components/cf/rounds/rounds200/z/z1352e.html");
-/* harmony import */ var _z_z1352f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1352f.html */ "./src/components/cf/rounds/rounds200/z/z1352f.html");
-/* harmony import */ var _z_z1352g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1352g.html */ "./src/components/cf/rounds/rounds200/z/z1352g.html");
+/* harmony import */ var _z_z1352a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z1352a.html */ "./src/components/cf/rounds/rounds300/z/z1352a.html");
+/* harmony import */ var _z_z1352b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z1352b.html */ "./src/components/cf/rounds/rounds300/z/z1352b.html");
+/* harmony import */ var _z_z1352c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z1352c.html */ "./src/components/cf/rounds/rounds300/z/z1352c.html");
+/* harmony import */ var _z_z1352d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z1352d.html */ "./src/components/cf/rounds/rounds300/z/z1352d.html");
+/* harmony import */ var _z_z1352e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z1352e.html */ "./src/components/cf/rounds/rounds300/z/z1352e.html");
+/* harmony import */ var _z_z1352f_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../z/z1352f.html */ "./src/components/cf/rounds/rounds300/z/z1352f.html");
+/* harmony import */ var _z_z1352g_html__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../z/z1352g.html */ "./src/components/cf/rounds/rounds300/z/z1352g.html");
 
 
 
@@ -6388,9 +6832,9 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-230-Round142.js":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-313-Round186.js":
 /*!***********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-230-Round142.js ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-313-Round186.js ***!
   \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6399,52 +6843,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z230a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z230a.html */ "./src/components/cf/rounds/rounds200/z/z230a.html");
-/* harmony import */ var _z_z230b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z230b.html */ "./src/components/cf/rounds/rounds200/z/z230b.html");
-/* harmony import */ var _z_z230c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z230c.html */ "./src/components/cf/rounds/rounds200/z/z230c.html");
-/* harmony import */ var _z_z230d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z230d.html */ "./src/components/cf/rounds/rounds200/z/z230d.html");
-/* harmony import */ var _z_z230e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z230e.html */ "./src/components/cf/rounds/rounds200/z/z230e.html");
-
-
-
-
-
-function inElem() {
-  if (document.querySelector('.t1')) {
-    document.querySelector('.t1').innerHTML = _z_z230a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
-  }
-  if (document.querySelector('.t2')) {
-    document.querySelector('.t2').innerHTML = _z_z230b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-  }
-  if (document.querySelector('.t3')) {
-    document.querySelector('.t3').innerHTML = _z_z230c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
-  }
-  if (document.querySelector('.t4')) {
-    document.querySelector('.t4').innerHTML = _z_z230d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
-  }
-  if (document.querySelector('.t5')) {
-    document.querySelector('.t5').innerHTML = _z_z230e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
-  }
-}
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-313-Round186.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-313-Round186.js ***!
-  \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ inElem; }
-/* harmony export */ });
-/* harmony import */ var _z_z313a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z313a.html */ "./src/components/cf/rounds/rounds200/z/z313a.html");
-/* harmony import */ var _z_z313b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z313b.html */ "./src/components/cf/rounds/rounds200/z/z313b.html");
-/* harmony import */ var _z_z313c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z313c.html */ "./src/components/cf/rounds/rounds200/z/z313c.html");
-/* harmony import */ var _z_z313d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z313d.html */ "./src/components/cf/rounds/rounds200/z/z313d.html");
-/* harmony import */ var _z_z313e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z313e.html */ "./src/components/cf/rounds/rounds200/z/z313e.html");
+/* harmony import */ var _z_z313a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z313a.html */ "./src/components/cf/rounds/rounds300/z/z313a.html");
+/* harmony import */ var _z_z313b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z313b.html */ "./src/components/cf/rounds/rounds300/z/z313b.html");
+/* harmony import */ var _z_z313c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z313c.html */ "./src/components/cf/rounds/rounds300/z/z313c.html");
+/* harmony import */ var _z_z313d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z313d.html */ "./src/components/cf/rounds/rounds300/z/z313d.html");
+/* harmony import */ var _z_z313e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z313e.html */ "./src/components/cf/rounds/rounds300/z/z313e.html");
 
 
 
@@ -6470,9 +6873,9 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-381-Round223.js":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-381-Round223.js":
 /*!***********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-381-Round223.js ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-381-Round223.js ***!
   \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6481,11 +6884,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z381a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z381a.html */ "./src/components/cf/rounds/rounds200/z/z381a.html");
-/* harmony import */ var _z_z381b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z381b.html */ "./src/components/cf/rounds/rounds200/z/z381b.html");
-/* harmony import */ var _z_z381c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z381c.html */ "./src/components/cf/rounds/rounds200/z/z381c.html");
-/* harmony import */ var _z_z381d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z381d.html */ "./src/components/cf/rounds/rounds200/z/z381d.html");
-/* harmony import */ var _z_z381e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z381e.html */ "./src/components/cf/rounds/rounds200/z/z381e.html");
+/* harmony import */ var _z_z381a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z381a.html */ "./src/components/cf/rounds/rounds300/z/z381a.html");
+/* harmony import */ var _z_z381b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z381b.html */ "./src/components/cf/rounds/rounds300/z/z381b.html");
+/* harmony import */ var _z_z381c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z381c.html */ "./src/components/cf/rounds/rounds300/z/z381c.html");
+/* harmony import */ var _z_z381d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z381d.html */ "./src/components/cf/rounds/rounds300/z/z381d.html");
+/* harmony import */ var _z_z381e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z381e.html */ "./src/components/cf/rounds/rounds300/z/z381e.html");
 
 
 
@@ -6511,9 +6914,9 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-520-Round295.js":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-520-Round295.js":
 /*!***********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-520-Round295.js ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-520-Round295.js ***!
   \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6522,11 +6925,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z520a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z520a.html */ "./src/components/cf/rounds/rounds200/z/z520a.html");
-/* harmony import */ var _z_z520b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z520b.html */ "./src/components/cf/rounds/rounds200/z/z520b.html");
-/* harmony import */ var _z_z520c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z520c.html */ "./src/components/cf/rounds/rounds200/z/z520c.html");
-/* harmony import */ var _z_z520d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z520d.html */ "./src/components/cf/rounds/rounds200/z/z520d.html");
-/* harmony import */ var _z_z520e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z520e.html */ "./src/components/cf/rounds/rounds200/z/z520e.html");
+/* harmony import */ var _z_z520a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z520a.html */ "./src/components/cf/rounds/rounds300/z/z520a.html");
+/* harmony import */ var _z_z520b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z520b.html */ "./src/components/cf/rounds/rounds300/z/z520b.html");
+/* harmony import */ var _z_z520c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z520c.html */ "./src/components/cf/rounds/rounds300/z/z520c.html");
+/* harmony import */ var _z_z520d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z520d.html */ "./src/components/cf/rounds/rounds300/z/z520d.html");
+/* harmony import */ var _z_z520e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z520e.html */ "./src/components/cf/rounds/rounds300/z/z520e.html");
 
 
 
@@ -6552,9 +6955,9 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-580-Round321.js":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-580-Round321.js":
 /*!***********************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-580-Round321.js ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-580-Round321.js ***!
   \***********************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -6563,11 +6966,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z580a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z580a.html */ "./src/components/cf/rounds/rounds200/z/z580a.html");
-/* harmony import */ var _z_z580b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z580b.html */ "./src/components/cf/rounds/rounds200/z/z580b.html");
-/* harmony import */ var _z_z580c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z580c.html */ "./src/components/cf/rounds/rounds200/z/z580c.html");
-/* harmony import */ var _z_z580d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z580d.html */ "./src/components/cf/rounds/rounds200/z/z580d.html");
-/* harmony import */ var _z_z580e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z580e.html */ "./src/components/cf/rounds/rounds200/z/z580e.html");
+/* harmony import */ var _z_z580a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../z/z580a.html */ "./src/components/cf/rounds/rounds300/z/z580a.html");
+/* harmony import */ var _z_z580b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../z/z580b.html */ "./src/components/cf/rounds/rounds300/z/z580b.html");
+/* harmony import */ var _z_z580c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../z/z580c.html */ "./src/components/cf/rounds/rounds300/z/z580c.html");
+/* harmony import */ var _z_z580d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../z/z580d.html */ "./src/components/cf/rounds/rounds300/z/z580d.html");
+/* harmony import */ var _z_z580e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../z/z580e.html */ "./src/components/cf/rounds/rounds300/z/z580e.html");
 
 
 
@@ -6593,10 +6996,10 @@ function inElem() {
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-134-TRound3.js":
-/*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-134-TRound3.js ***!
-  \***************************************************************************/
+/***/ "./src/components/cf/rounds/rounds300/pages/p300/elem-230-Round142.js":
+/*!****************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/pages/p300/elem-230-Round142.js ***!
+  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6604,64 +7007,74 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
-/* harmony import */ var _z_z200_z134a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z200/z134a.html */ "./src/components/cf/rounds/rounds200/z/z200/z134a.html");
-/* harmony import */ var _z_z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z200/z134b.html */ "./src/components/cf/rounds/rounds200/z/z200/z134b.html");
-/* harmony import */ var _z_z200_z134c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z200/z134c.html */ "./src/components/cf/rounds/rounds200/z/z200/z134c.html");
+/* harmony import */ var _z_z300_z230a_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../z/z300/z230a.html */ "./src/components/cf/rounds/rounds300/z/z300/z230a.html");
+/* harmony import */ var _z_z300_z230b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../z/z300/z230b.html */ "./src/components/cf/rounds/rounds300/z/z300/z230b.html");
+/* harmony import */ var _z_z300_z230c_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../z/z300/z230c.html */ "./src/components/cf/rounds/rounds300/z/z300/z230c.html");
+/* harmony import */ var _z_z300_z230d_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../z/z300/z230d.html */ "./src/components/cf/rounds/rounds300/z/z300/z230d.html");
+/* harmony import */ var _z_z300_z230e_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../z/z300/z230e.html */ "./src/components/cf/rounds/rounds300/z/z300/z230e.html");
+
+
 
 
 
 function inElem() {
   if (document.querySelector('.t1')) {
-    document.querySelector('.t1').innerHTML = _z_z200_z134a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+    document.querySelector('.t1').innerHTML = _z_z300_z230a_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
   if (document.querySelector('.t2')) {
-    document.querySelector('.t2').innerHTML = _z_z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    document.querySelector('.t2').innerHTML = _z_z300_z230b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
   }
   if (document.querySelector('.t3')) {
-    document.querySelector('.t3').innerHTML = _z_z200_z134c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+    document.querySelector('.t3').innerHTML = _z_z300_z230c_html__WEBPACK_IMPORTED_MODULE_2__["default"];
+  }
+  if (document.querySelector('.t4')) {
+    document.querySelector('.t4').innerHTML = _z_z300_z230d_html__WEBPACK_IMPORTED_MODULE_3__["default"];
+  }
+  if (document.querySelector('.t5')) {
+    document.querySelector('.t5').innerHTML = _z_z300_z230e_html__WEBPACK_IMPORTED_MODULE_4__["default"];
   }
 }
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/rounds200.js":
+/***/ "./src/components/cf/rounds/rounds300/rounds300.js":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/rounds200.js ***!
+  !*** ./src/components/cf/rounds/rounds300/rounds300.js ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ showRounds200; }
+/* harmony export */   "default": function() { return /* binding */ showRounds300; }
 /* harmony export */ });
-/* harmony import */ var _js_element_rounds200__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/element-rounds200 */ "./src/components/cf/rounds/rounds200/js/element-rounds200.js");
-/* harmony import */ var _js_element_rounds200__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_element_rounds200__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/f-create-aside */ "./src/components/cf/rounds/rounds200/js/f-create-aside.js");
+/* harmony import */ var _js_element_rounds300__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/element-rounds300 */ "./src/components/cf/rounds/rounds300/js/element-rounds300.js");
+/* harmony import */ var _js_element_rounds300__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_element_rounds300__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/f-create-aside */ "./src/components/cf/rounds/rounds300/js/f-create-aside.js");
 /** *******************
-Скрипт из файла rounds200.js
-Объект rounds содержит страницу rounds200
-Функция showRounds200 показывает страницу rounds200
+Скрипт из файла rounds300.js
+Объект rounds содержит страницу rounds300
+Функция showRounds300 показывает страницу rounds300
 ******************** */
 
 
 
-// 1. Создаем объект rounds200
-const rounds200 = {};
+// 1. Создаем объект rounds300
+const rounds300 = {};
 
 // 2. В объекте rounds создаем свойство aside
-rounds200.aside = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createAside)();
+rounds300.aside = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createAside)();
 
 // 3. В объекте rounds создаем свойство main
-rounds200.main = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createMain)();
+rounds300.main = (0,_js_f_create_aside__WEBPACK_IMPORTED_MODULE_1__.createMain)();
 
-// 4. Экспортируем функцию showRounds200()
-function showRounds200() {
+// 4. Экспортируем функцию showRounds300()
+function showRounds300() {
   const mainAside = document.querySelector('.main__aside');
   if (mainAside) {
     mainAside.innerHTML = '';
-    mainAside.append(rounds200.aside);
-    mainAside.append(rounds200.main);
+    mainAside.append(rounds300.aside);
+    mainAside.append(rounds300.main);
 
     // 5. Создадим и вызовем событие click на первой ссылке aside элемента
     const eventClick = new Event('click');
@@ -7793,7 +8206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ inElem; }
 /* harmony export */ });
 /* harmony import */ var _rounds_rounds100_z100_z16b_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../rounds/rounds100/z100/z16b.html */ "./src/components/cf/rounds/rounds100/z100/z16b.html");
-/* harmony import */ var _rounds_rounds200_z_z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../rounds/rounds200/z/z200/z134b.html */ "./src/components/cf/rounds/rounds200/z/z200/z134b.html");
+/* harmony import */ var _rounds_rounds200_z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../rounds/rounds200/z200/z134b.html */ "./src/components/cf/rounds/rounds200/z200/z134b.html");
 
 
 function inElem() {
@@ -7801,7 +8214,7 @@ function inElem() {
     document.querySelector('.t9').innerHTML = _rounds_rounds100_z100_z16b_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
   if (document.querySelector('.t16')) {
-    document.querySelector('.t16').innerHTML = _rounds_rounds200_z_z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    document.querySelector('.t16').innerHTML = _rounds_rounds200_z200_z134b_html__WEBPACK_IMPORTED_MODULE_1__["default"];
   }
 }
 
@@ -9855,6 +10268,36 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-74-Round68.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-74-Round68.html ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/74\" target=\"_blank\">Codeforces 74 Beta Round 68 2011.04.15</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Лидер комнаты</a>\r\n  <br><a href=\"#t2\">Задача B. Электричка</a>\r\n  <br><a href=\"#t3\">Задача C. Бильярд на шахматной доске</a>\r\n  <br><a href=\"#t4\">Задача D. Вешалка</a>\r\n  <br><a href=\"#t5\">Задача E. Сдвигай!</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Лидер комнаты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Лидер комнаты</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Электричка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Электричка</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Бильярд на шахматной доске -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Бильярд на шахматной доске</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Вешалка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Вешалка</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Сдвигай! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Сдвигай!</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/p100/elem-75-Round67.html":
+/*!**********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/p100/elem-75-Round67.html ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/75\" target=\"_blank\">Codeforces 75 Beta Round 67 (Div. 2) 2011.04.13</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Жизнь без нулей</a>\r\n  <br><a href=\"#t2\">Задача B. Стена Facetook</a>\r\n  <br><a href=\"#t3\">Задача C. Модифицированный НОД</a>\r\n  <br><a href=\"#t4\">Задача D. Максимальная сумма</a>\r\n  <br><a href=\"#t5\">Задача E. Кратчайший путь корабля</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Жизнь без нулей -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Жизнь без нулей</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Стена Facetook -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Стена Facetook</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Модифицированный НОД -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Модифицированный НОД</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Максимальная сумма -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Максимальная сумма</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Кратчайший путь корабля -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Кратчайший путь корабля</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html":
 /*!*******************************************************************!*\
   !*** ./src/components/cf/rounds/rounds100/p100/elem-76-vuos.html ***!
@@ -11319,7 +11762,7 @@ var code = "<!-- Задача D. Кольцевая 2 -->\r\n<div class=\"time-m
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!-- Задача E. Число с заданным количеством делителей -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Найдите наименьшее натуральное число, имеющее заданное количество делителей. Гарантируется, что ответ не превосходит 10¹⁸.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (1 ≤ n ≤ 1000).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите наименьшее число, имеющее ровно n делителей.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n</pre>\r\n<pre>\r\n6\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n6\r\n</pre>\r\n<pre>\r\n12\r\n</pre>\r\n</details>\r\n";
+var code = "<!-- Задача E. Число с заданным количеством делителей -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Найдите наименьшее натуральное число, имеющее заданное количество делителей. Гарантируется, что ответ не превосходит 10¹⁸.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (1 ≤ n ≤ 1000).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите наименьшее число, имеющее ровно n делителей.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n4\r\n</pre>\r\n<pre>\r\n6\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n6\r\n</pre>\r\n<pre>\r\n12\r\n</pre>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/27/problem/E\" target=\"_blank\">Задача 27E</a>\r\n    <br><a href=\"https://codeforces.com/contest/27\" target=\"_blank\">Codeforces 27 Round 27 Beta (Div. 2) 2010.09.10</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\n\r\nll res = 10e17;\r\nll N;\r\nll p[] = { 2,3,5,7,11,13,17,19,23,29 };\r\n\r\nvoid f(ll w, ll n, ll v) {\r\n\tif (w &gt; 9 || v &gt; N) {\r\n\t\treturn;\r\n\t}\r\n\tif (v == N && res &gt; n) {\r\n\t\tres = n;\r\n\t}\r\n\r\n\tfor (int i = 2; i &lt; 99; i++) {\r\n\t\tn *= p[w];\r\n\t\tif (n &gt; res) {\r\n\t\t\tbreak;\r\n\t\t}\r\n\t\tf(w + 1, n, v * i);\r\n\t}\r\n\r\n\treturn;\r\n}\r\n\r\nint main() {\r\n\tcin &gt;&gt; N;\r\n\tf(0, 1, 1);\r\n\tcout &lt;&lt; res;\r\n}\r\n</pre>\r\n</details>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
@@ -15570,6 +16013,156 @@ var code = "<!-- Задача F. Plane of Tanks -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
+/***/ "./src/components/cf/rounds/rounds100/z100/z74a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z74a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Лидер комнаты -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Напомним вам часть правил соревнований формата Codeforces. Изложенные в условии задачи правила немного упрощены по сравнению с официальными, поэтому используйте текст условия в качестве формального документа.</p>\r\n<p>В начале раунда участники распределяются по комнатам. В каждой комнате находится ровно n участников. Участникам предлагается за время соревнования решить пять задач — A, B, C, D и E. За каждую из этих задач, в зависимости от того, когда сдана данная задача и сдана ли вообще, участники получают некоторое количество баллов. Кроме того, участник может делать взломы других участников. За каждый удачный взлом участник получает 100 баллов, за каждый неудачный — теряет 50 баллов. Количество баллов у каждого участника является суммой баллов по всем его задачам с учетом взломов.</p>\r\n<p>Вам предлагается для некоторой комнаты определить ее лидера — участника с наибольшим количеством баллов.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке содержится целое число n — количество участников в комнате (1 ≤ n ≤ 50). В следующих n строках описаны участники данной комнаты. i-я строка имеет формат «nicki plusi minusi ai bi ci di ei» — ник участника, количество удачных взломов, количество неудачных взломов и количество баллов по задачам A, B, C, D, E соответственно. Ник каждого участника состоит из латинских букв, цифр, а также символов подчеркивания и имеет длину от 1 до 20 символов. На числа наложены следующие ограничения:</p>\r\n<ul>\r\n  <li>0 ≤ plusi, minusi ≤ 50;</li>\r\n  <li>150 ≤ ai ≤ 500 или ai = 0, если задача A не сдана;</li>\r\n  <li>300 ≤ bi ≤ 1000 или bi = 0, если задача B не сдана;</li>\r\n  <li>450 ≤ ci ≤ 1500 или ci = 0, если задача C не сдана;</li>\r\n  <li>600 ≤ di ≤ 2000 или di = 0, если задача D не сдана;</li>\r\n  <li>750 ≤ ei ≤ 2500 или ei = 0, если задача E не сдана.</li>\r\n</ul>\r\n<p>Все числа во входных данных целые. У всех участников различные ники. Гарантируется, что лидер в комнате ровно один (то есть нет двух участников с максимальным количеством баллов).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите в единственной строке ник лидера комнаты.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n5\r\nPetr 3 1 490 920 1000 1200 0\r\ntourist 2 0 490 950 1100 1400 0\r\nEgor 7 0 480 900 950 0 1000\r\nc00lH4x0R 0 10 150 0 0 0 0\r\nsome_participant 2 1 450 720 900 0 0\r\n</pre>\r\n<pre>\r\ntourist\r\n</pre>\r\n<p>Количество очков, которые получит каждый участник из примера следующие:</p>\r\n<ul>\r\n  <li>Petr — 3860</li>\r\n  <li>tourist — 4140</li>\r\n  <li>Egor — 4030</li>\r\n  <li>c00lH4x0R — -350</li>\r\n  <li>some_participant — 2220</li>\r\n</ul>\r\n<p>Таким образом, лидером комнаты является tourist.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z74b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z74b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Электричка -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>«Заяц» и контролер играют в следующую игру.</p>\r\n<p>Электричка представляет собой n вагонов, которые нумеруются натуральными числами от 1 до n в порядке от головы до хвоста. «Заяц» и контролер изначально находятся в некоторых двух различных вагонах. Электричка каждую минуту может быть в одном из двух состояний — в движении или на остановке. Каждую минуту игроки делают ходы.</p>\r\n<p>Ход контролера заключается в следующем. Контролер имеет направление движения — к голове электрички или к ее хвосту. За свой ход контролер перемещается в соседний вагон в соответствии со своим направлением движения. Если по окончании своего хода контролер заходит в 1-ый или n-ый вагон, то он меняет свое направление движения на противоположное. Другими словами — контролер циклически ходит от головы электрички до хвоста и обратно в течение всего времени игры, на каждом ходу сдвигаясь на один вагон. Заметим, что у контролера есть всегда есть ровно один допустимый ход.</p>\r\n<p>Ход «зайца» зависит от того, в каком состоянии находится электричка. Если электричка движется, то «заяц» может перейти в один из соседних вагонов или же никуда не перемещаться. Если электричка на остановке, то «заяц» покидает электричку (то есть теперь не находится ни в одном из вагонов электрички) и затем, если остановка не конечная, заходит в электричку снова в любой из n вагонов (не обязательно в тот, из которого он только что вышел, и не обязательно в соседний для этого вагона). Если электричка стоит на остановке несколько минут, «заяц» покидает электричку и заходит в нее каждую минуту.</p>\r\n<p>Определим очередность ходов игроков. Если в данную минуту электричка находится в движении — то сначала делает ход «заяц», а затем — контролер. Если в данную минуту электричка на остановке, то сначала «заяц» выходит из электрички, затем контролер делает ход, а затем «заяц» заходит в электричку.</p>\r\n<p>Если в какой-то момент времени «заяц» и контролер оказываются в одном вагоне, то выигрывает контролер: он заставляет «зайца» выплатить штраф. Если через некоторое время «заяц» доезжает до конечной остановки — выигрывает «заяц»: своим ходом он просто выходит из электрички и более в нее не возвращается.</p>\r\n<p>В любой момент времени игроки знают положения друг друга. Игроки играют оптимально. В частности, если выигрывает контролер, то «заяц» играет так, чтобы проиграть как можно позже. Поскольку для контролера возможные ходы определены однозначно, то считается, что он играет оптимально всегда. Определите победителя.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находятся три целых числа n, m и k — количество вагонов в электричке, начальное положение «зайца» и контролера соответственно (2 ≤ n ≤ 50, 1 ≤ m, k ≤ n, m ≠ k).</p>\r\n<p>Во второй строке задано направление движения контролера. «to head» означает, что контролер движется к голове электрички, «to tail» — что контролер движется к ее хвосту. Гарантируется, что в направлении движения контролера имеется хотя бы один вагон. Вагон 1 — это голова, вагон n — хвост.</p>\r\n<p>Третья строка имеет длину от 1 до 200 и состоит из символов «0» и «1». i-ый символ содержит информацию о состоянии электрички в i-ую минуту времени. «0» означает, что в данную минуту электричка движется, «1» — что электричка в данную минуту стоит на остановке. Последний символ третьей строки всегда «1» — это конечная остановка.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Если выигрывает «заяц» — выведите «Stowaway» без кавычек. Иначе выведите «Controller» опять же без кавычек, затем через пробел — номер минуты, на которой «заяц» будет пойман.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n5 3 2\r\nto head\r\n0001001\r\n</pre>\r\n<pre>\r\nStowaway\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3 2 1\r\nto tail\r\n0001\r\n</pre>\r\n<pre>\r\nController 2\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z74c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z74c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Бильярд на шахматной доске -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Ход шахматной фигуры бильярдный шар похож на ход шахматной фигуры слон, с тем лишь различием, что при столкновении с границей доски бильярдный шар может от нее отразиться и продолжить движение.</p>\r\n<p>Более формально — сначала выбирается одно из четырех диагональных направлений и бильярдный шар движется в этом направлении. Попав на клетку, находящуюся на границе доски, бильярдный шар отражается от нее — изменяет направление своего движения на 90 градусов — и продолжает свое движение. В частности, попав в угловую клетку, бильярдный шар делает сразу 2 отражения и начинает двигаться в обратную сторону. В ходе своего движения бильярдный шар может сделать неограниченное число отражений. В любой клетке своей траектории шар может остановиться и на этом ход считается законченным.</p>\r\n<p>Считается, что один бильярдный шар a бьет другой бильярдный шар b если a может сходить в ту клетку, где находится b.</p>\r\n<p>Вам предлагается найти максимальное количество попарно не бьющих друг друга бильярдных шаров, которые можно разместить на шахматной доске размера n x m.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находятся два целых числа — n и m (2 ≤ n, m ≤ 10⁶).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число — максимальное возможное количество попарно не бьющих друг друга бильярдных шаров.</p>\r\n<p>Пожалуйста, не используйте спецификатор %lld для чтения или записи 64-х битовых чисел на С++. Рекомендуется использовать поток cin (также вы можете использовать спецификатор %I64d).</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3 4\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n3 3\r\n</pre>\r\n<pre>\r\n3\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z74d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z74d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Вешалка -->\r\n<div class=\"time-memory\">(Время 4с. Память 256мб)</div>\r\n\r\n<p>В одной очень большой и очень солидной компании в раздевалке есть вешалка для пальто. Она представляет собой n крючков, расположенных в ряд. Крючки пронумерованы натуральными числами от 1 до n слева направо.</p>\r\n<p>В компании очень сложный распорядок работ у сотрудников. В начале рабочего дня все сотрудники находятся не на работе, а вешалка в раздевалке пуста. В некоторые моменты времени сотрудники приходят на работу, а в некоторые уходят.</p>\r\n<p>Когда сотрудник приходит на работу, он вешает на один из свободных крючков свое пальто. Чтобы доставить своим коллегам как можно меньше неудобств, крючок, на который будет повешено пальто, выбирается следующим образом. Сначала выбирается самый длинный отрезок из подряд идущих пустых крючков. Если таких отрезков несколько, то выбирается самый правый из них. После этого пальто вешается на крючок, расположенный в середине этого отрезка. Если в отрезке четное количество крючков, то пальто вешается на правый из двух срединных крючков.</p>\r\n<p>Когда сотрудник уходит с работы — он забирает свое пальто. Так как все сотрудники в компании очень уважают друг друга, никто не трогает чужие пальто.</p>\r\n<p>Время от времени директору этой очень солидной компании становится скучно и он отправляет свою секретаршу посмотреть сколько пальто висят на вешалке с i-го по j-ый крючок включительно. И эту прихоть приходится всегда выполнять — иначе директор начинает злиться и у него случается нервный срыв.</p>\r\n<p>Чтобы не тратить слишком много времени на перемещение от кабинета директора до раздевалки и обратно, секретарша попросила вас написать программу, эмулирующую работу раздевалки компании.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке содержатся два целых числа n, q (1 ≤ n ≤ 10⁹, 1 ≤ q ≤ 10⁵) — количество крючков на вешалке и количество запросов соответственно. Далее идет q строк с запросами, отсортированными по времени. Запрос вида «0 i j» (1 ≤ i ≤ j ≤ n) — запрос директора. Во входных данных имеется хотя бы один запрос директора. Во всех остальных случаях запрос содержит натуральное число, не превышающее 10⁹ — идентификатор сотрудника. Каждое нечетное появление идентификатора сотрудника в списке запросов — это его приход на работу, каждое четное — его уход. Все сотрудники имеют различные идентификаторы. Во время любого прихода любого сотрудника всегда имеется хотя бы один свободный крючок.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>На каждый запрос директора в выходных данных выведите одно число на отдельной строке — количество пальто, висящих на крючках с i-го по j-ый включительно.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n9 11\r\n1\r\n2\r\n0 5 8\r\n1\r\n1\r\n3\r\n0 3 8\r\n9\r\n0 6 9\r\n6\r\n0 1 9\r\n</pre>\r\n<pre>\r\n2\r\n3\r\n2\r\n5\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z74e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z74e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Сдвигай! -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Имеется квадратная коробка размера 6 x 6, в которые помещены 36 фишек 1 x 1. На этих фишках записаны 36 различных символов — «0»-«9» и «A»-«Z». На каждой фишке записан ровно один символ, все фишки различны.</p>\r\n<p>Разрешается делать следующие операции — выбрать одну из 6 строк или один из 6 столбцов и циклически передвинуть там фишки на одну позицию влево или вправо (для строки), или же вверх или вниз (для столбца). Эти операции разрешается проводить несколько раз.</p>\r\n<p>Собрать головоломку означает вышеуказанными операциями переместить фишки так, чтобы они оказались записаны в порядке возрастания (ровно так, как на правом рисунке). Пример сборки головоломки показан на рисунке ниже.</p>\r\n<p>Напишите программу, которая находит последовательность операций, которые собирают головоломку. Эта последовательность не обязательно должна быть кратчайшей, но Вы должны уложиться в 10000 операций. Гарантируется, что решение всегда существует.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Входные данные представляют собой 6 строк по 6 символов в каждой — начальное положение головоломки. Эти строки содержат каждый из символов строки «0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ» ровно один раз.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>В первой строке выведите число n — количество операций. В следующих n строках выведите последовательность операций по одной на строку. Операция записывается словом из двух символов. Первый символ — направление, куда будет сдвинуты строка или столбец. Возможные направления: «L», «R» (влево, вправо соответственно, сдвигаем строку), «U», «D» (вверх, вниз соответственно, сдвигаем столбец). Второй символ — номер строки (или столбца) — цифра от «1» до «6». Строки нумеруются сверху вниз, а столбцы — слева направо.</p>\r\n<p>Количество операций не должно превышать 10⁴. Если решений несколько — выведите любое.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n01W345\r\n729AB6\r\nCD8FGH\r\nIJELMN\r\nOPKRST\r\nUVQXYZ\r\n</pre>\r\n<pre>\r\n2\r\nR2\r\nU3\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z75a.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z75a.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Сдвигай! -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Вы можете себе представить, что было, если бы все нули исчезли из нашей жизни? Конечно же, появилось бы множество проблем.</p>\r\n<p>Рассмотрим, например, что случилось бы с операцией сложения. Пусть дано верное равенство a + b = c, где a и b — целые положительные числа, а c — сумма a и b. Удалим все нули из этого равенства. Останется ли оно верным после этого?</p>\r\n<p>Например, пусть дано равенство 101 + 102 = 203. Если мы удалим все нули, получится 11 + 12 = 23 — верное равенство.</p>\r\n<p>Но если дано равенство 105 + 106 = 211, после удаления всех нулей получится 15 + 16 = 211 — неверное равенство.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Во входных данных 2 строки, в первой записано целое число a, во второй записано целое число b — числа из уравнений, описанного выше (1 ≤ a, b ≤ 10⁹). Эти числа не содержат лидирующих нулей. Значение c определяется по формуле c = a + b.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одну строку: если равенство будет верно после удаления всех нулей, выведите \"YES\", иначе выведите \"NO\".</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n101\r\n102\r\n</pre>\r\n<pre>\r\nYES\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n105\r\n106\r\n</pre>\r\n<pre>\r\nNO\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z75b.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z75b.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Стена Facetook -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Facetook — широко известная социальная сеть. Недавно в ней появилась новая функция — стена с приоритетами. Эта функция позволяет сортировать всех ваших друзей по коэффициенту дружбы. Чем больше вы общаетесь с другом, тем больше будет его коэффициент дружбы.</p>\r\n<p>На коэффициент дружбы влияет 3 типа действий:</p>\r\n<ul>\r\n  <li>1. человек X написал на стене человек Y (\"X posted on Y's wall\") — 15 очков;</li>\r\n  <li>2. человек X прокомментировал сообщение человека Y (\"X commented on Y's post\") — 10 очков;</li>\r\n  <li>3. человеку X понравилось сообщение человека Y (\"X likes Y's post\") — 5 очков.</li>\r\n</ul>\r\n<p>X и Y — два различных имени. Каждое действие увеличивает коэффициент дружбы между X и Y (и наоборот) на данное количество очков (коэффициент дружбы между X и Y равен коэффициенту дружбы между Y и X).</p>\r\n<p>Вам дано n действий в формате, описанном выше. Выведите все различные имена, которые встречаются в списке действий, в отсортированном порядке в соответствие с коэффициентом дружбы с вами.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано ваше имя. Во второй строке записано целое число n, количество действий (1 ≤ n ≤ 100). Далее следует n строк. Гарантируется, что каждая строка содержит описание ровно одного действия в описанном выше формате. Между каждой парой слов в строке есть ровно один пробел, никаких других пробелов в строке нет. Все буквы имеют нижний регистр. Все имена во входных данных имеют длину от 1 до 10 строчных латинских букв.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите m строк, где m — количество различных имен во входных данных (исключая вас). Каждая строка должна содержать ровно одно имя. Имена должны быть отсортированы в по убыванию коэффициента дружбы с вами (т. е. люди с большим коэффициентом дружбы должны идти раньше). Если два или больше человек имеют одинаковый коэффициент дружбы, выводите их в алфавитном (лексикографическом) порядке.</p>\r\n<p>Учтите, что нужно выводить все имена, присутствующие во входных данных (исключая вас), даже если человек имеет нулевой коэффициент дружбы с вами.</p>\r\n<p>Лексикографическое сравнение реализует оператор \"&lt;\" в современных языках программирования. Строка a лексикографически меньше строки b, если либо a является префиксом b, либо существует такое i (1 ≤ i ≤ min(|a|, |b|)), что ai &lt; bi, а для любого j (1 ≤ j &lt; i) aj = bj, где |a| и |b| обозначают длины строк a и b соответственно.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\nahmed\r\n3\r\nahmed posted on fatma's wall\r\nfatma commented on ahmed's post\r\nmona likes ahmed's post\r\n</pre>\r\n<pre>\r\nfatma\r\nmona\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\naba\r\n1\r\nlikes likes posted's post\r\n</pre>\r\n<pre>\r\nlikes\r\nposted\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z75c.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z75c.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Модифицированный НОД -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Что ж, вот еще одна математическая задача. Как известно, НОД — наибольший общий делитель. Найти НОД двух положительных целых чисел несложно.</p>\r\n<p>Общий делитель двух положительных чисел — это число на которое делятся оба этих числа.</p>\r\n<p>Но Вам дана более сложная задача. Требуется найти наибольший общий делитель d двух целых чисел a и b, принадлежащий отрезку целых чисел [low, high] (low ≤ high), то есть такой, что low ≤ d ≤ high.</p>\r\n<p>Может получиться, что в заданном отрезке нет общих делителей.</p>\r\n<p>Даны два целых числа a и b, далее следует n запросов. Каждый запрос — это некоторый отрезок [low, high]. Напишите программу, которая обработает все заданные запросы.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано два целых числа a и b, описанных выше (1 ≤ a, b ≤ 10⁹). Во второй строке содержится одно целое число n, количество запросов (1 ≤ n ≤ 10⁴). Далее следует n строк. Каждая строка содержит один запрос — два целых числа low и high (1 ≤ low ≤ high ≤ 10⁹).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите n строк, i-ая из них должна содержать ответ на i-ый запрос из входных данных. Если в данном отрезке общих делителей нет, выводите -1 в качестве ответа на запрос.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n9 27\r\n3\r\n1 5\r\n10 11\r\n9 11\r\n</pre>\r\n<pre>\r\n3\r\n-1\r\n9\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z75d.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z75d.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Максимальная сумма -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Ахмед и Мостафа участвуют в соревнованиях по программированию уже много лет. Однажды их тренер Фегла попросил их решить одну непростую задачу. Конечно же, Ахмед справился, а Мостафа — нет.</p>\r\n<p>Эта задача похожа на классическую задачу, но имеет другую структуру и ограничения.</p>\r\n<p>В классической задаче дан массив целых чисел, требуется найти такой подмассив данного массива, что сумма чисел в нем максимальная возможная. Подмассив — последовательность из одного или нескольких подряд идущих элементов данного массива.</p>\r\n<p>Но в данной задаче дано n маленьких массивов. Из них получается один большой массив — конкатенацией одного или нескольких экземпляров маленьких массивов (каждый маленький массив может встречаться в большом более одного раза). Большой массив задан в виде массива индексов (1-индексированных) маленьких массивов. Конкатенация должна быть выполнена в том же порядке, в котором числа записаны в массиве. После конкатенации на большом массиве решается описанная выше классическая задача.</p>\r\n<p>Например, пусть маленькие массивы — {1, 6, -2}, {3, 3} и {-5, 1}. Индексы большого массива — {2, 3, 1, 3}. Так, после конкатенации большой массив будет {3, 3, -5, 1, 1, 6, -2, -5, 1}. В этом примере максимальная сумма равна 9.</p>\r\n<p>Помогите Мостафе решить эту задачу.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано два целых числа n и m, где n — количество маленьких массивов (1 ≤ n ≤ 50), а m — количество индексов большого массива (1 ≤ m ≤ 250000). Далее следует n строк. Первое число в i-ой — целое число l, размер i-го маленького массива (1 ≤ l ≤ 5000). Далее следует l целых чисел, каждое из которых не меньше -1000 и не больше 1000. Последняя строка содержит m целых чисел — индексы большого массива. Вы должны конкатенировать маленькие массивы в этом порядке. Каждый индекс не меньше 1 и не больше n.</p>\r\n<p>Маленькие массивы нумеруются от 1 до n в том же порядке, в котором они заданы во входных данных. Некоторые маленькие массивы могут не использоваться для построения большого массива.</p>\r\n<p>Заметьте, что массив очень большой. Поэтому, если Вы попытаетесь построить его в явном виде, вы скорее всего превысите ограничения по времени и/или по памяти.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число — наибольшую сумму на каком-либо подмассиве сформированного большого массива. Учтите, что подмассив суммирования не может быть пустым, то есть он должен включать в себя хотя бы один элемент.</p>\r\n<p>Пожалуйста, не используйте спецификатор %lld для записи 64-х битовых чисел на С++. Рекомендуется использовать поток cout (также вы можете использовать спецификатор %I64d).</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n3 4\r\n3 1 6 -2\r\n2 3 3\r\n2 -5 1\r\n2 3 1 3\r\n</pre>\r\n<pre>\r\n9\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n6 1\r\n4 0 8 -3 -10\r\n8 3 -2 -5 10 8 -9 -5 -4\r\n1 0\r\n1 -3\r\n3 -8 5 6\r\n2 9 6\r\n1\r\n</pre>\r\n<pre>\r\n8\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds100/z100/z75e.html":
+/*!***********************************************************!*\
+  !*** ./src/components/cf/rounds/rounds100/z100/z75e.html ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Кратчайший путь корабля -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>У вас новая, очень интересная работа. Вы — капитан корабля. Ваша задача — провести корабль из одной точки в другую, минимизируя при этом расходы.</p>\r\n<p>Всем известно, что кратчайшее расстояние между любыми двумя точками — отрезок прямой, соединяющий эти точки. Но к сожалению, в море есть остров, поэтому иногда невозможно провести корабль по отрезку прямой между этими точками.</p>\r\n<p>Вы можете двигаться только по безопасным точкам. Точка называется безопасной, если она либо принадлежит прямой, соединяющей начальную и конечную точку, либо находится на границе острова.</p>\r\n<p>Вам повезло — у вас есть умные и сильные рабочие, которые могут помочь в вашем путешествии. Они могут перемещать корабль по морю: это стоит 1 египетский фунт за каждую единицу расстояния по морю. Они так же могут даже нести корабль по суше (они очень сильные!): это стоит 2 египетских фунта за каждую единицу расстояния по территории острова. Ваши деньги рабочие делят между собой поровну, поэтому количество рабочих значения не имеет.</p>\r\n<p>Вы можете перемещать корабль по границе острова, это считается за перемещение по морю.</p>\r\n<p>Вам задана карта моря, вам необходимо определить наименьшую возможную стоимость путешествия.</p>\r\n<p>Вы начинаете в точке (xStart, yStart), и должны приплыть в точку (xEnd, yEnd). Гарантируется, что эти точки различны.</p>\r\n<p>Остров представляет собой выпуклый многоугольник. Никакие 3 точки многоугольника не лежат на одной прямой. Также начальная и конечная точка не лежат внутри или на границе острова. Точки многоугольника заданы в порядке обхода против часовой стрелки.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано 4 целых числа, xStart, yStart, xEnd и yEnd (-100 ≤ xStart, yStart, xEnd, yEnd ≤ 100). Во второй строке записано целое число n, количество точек в многоугольнике (3 ≤ n ≤ 30), на следующей строке записано n пар целых чисел x и y — координаты точек многоугольника (-100 ≤ x, y ≤ 100), все точки многоугольника различны.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите минимальную возможную стоимость. Абсолютная или относительная погрешность ответа не должна превосходить 10<sup>-6</sup>.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n<pre>\r\n1 7 6 7\r\n4\r\n4 2 4 12 3 12 3 2\r\n</pre>\r\n<pre>\r\n6.000000000\r\n</pre>\r\n\r\n  <h4>Пример 2</h4>\r\n<pre>\r\n-1 0 2 0\r\n4\r\n0 0 1 0 1 1 0 1\r\n</pre>\r\n<pre>\r\n3.000000000\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
 /***/ "./src/components/cf/rounds/rounds100/z100/z76a.html":
 /*!***********************************************************!*\
   !*** ./src/components/cf/rounds/rounds100/z100/z76a.html ***!
@@ -16260,9 +16853,459 @@ var code = "<!-- Задача E. Интересный граф и яблоки -
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1030-Techno2019o1.html":
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-104-Round80.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-104-Round80.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/104\" target=\"_blank\">Codeforces 104 Round 80 Beta (Div. 2) 2011.08.07</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Блэкджек</a>\r\n  <br><a href=\"#t2\">Задача B. Проверка штанов на унылость</a>\r\n  <br><a href=\"#t3\">Задача C. Ктулху</a>\r\n  <br><a href=\"#t4\">Задача D. Русская рулетка</a>\r\n  <br><a href=\"#t5\">Задача E. Время грабить корованы</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Блэкджек -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Блэкджек</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Проверка штанов на унылость -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Проверка штанов на унылость</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Ктулху -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Ктулху</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Русская рулетка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Русская рулетка</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Время грабить корованы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Время грабить корованы</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-106-Round82.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-106-Round82.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Дурак</a>\r\n  <br><a href=\"#t2\">Задача B. Выбор ноутбука</a>\r\n  <br><a href=\"#t3\">Задача C. Булочки</a>\r\n  <br><a href=\"#t4\">Задача D. Остров сокровищ</a>\r\n  <br><a href=\"#t5\">Задача E. Космические спасатели</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Дурак -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Дурак</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Выбор ноутбука -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Выбор ноутбука</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Булочки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Булочки</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/106/problem/C\" target=\"_blank\">Задача 106C</a>\r\n      <br><a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n    </div>\r\n\r\n    <h4>Пример 3</h4>\r\n<pre>\r\n10 1 5 2\r\n100 1 2 3\r\n</pre>\r\n    <code>15</code>\r\n\r\n    <h4>Пример 4</h4>\r\n<pre>\r\n10 1 5 11\r\n3 1 3 8\r\n</pre>\r\n    <code>24</code>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int n; // число грамм теста\r\n  int m; // число видов начинки\r\n  int c0; // число грамм теста на булочку без начинки\r\n  int d0; // цена булочки без начинки\r\n  cin &gt;&gt; n &gt;&gt; m &gt;&gt; c0 &gt;&gt; d0;\r\n\r\n  // число грамм i-ой начинки\r\n  vector&lt;int&gt; A(m+1);\r\n\r\n  // число грамм i-ой начинки для одной булочки\r\n  vector&lt;int&gt; B(m+1);\r\n\r\n  // число грамм теста с i-ой начинкой для одной булочки\r\n  vector&lt;int&gt; C(m+1);\r\n\r\n  // цена булочки с i-ой начинкой\r\n  vector&lt;int&gt; D(m+1);\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    cin &gt;&gt; A[i] &gt;&gt; B[i] &gt;&gt; C[i] &gt;&gt; D[i];\r\n  }\r\n\r\n  // DP[i] максимальное количество денег,\r\n  // которое мы получим если используем i грамм теста\r\n  vector&lt;int&gt; DP(n+1,0);\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    int maxb = A[i] / B[i]; // максимум булочек из i-ой начинки\r\n    for (int j = 1; j &lt;= maxb; j++) {\r\n      for (int k = 0; k &lt;= n - C[i]; k++) {\r\n        DP[k] = max(DP[k + C[i]] + D[i], DP[k]);\r\n      }\r\n    }\r\n  }\r\n\r\n  int res = 0;\r\n  for (int i = 0; i &lt;= n; i++) {\r\n    res = max(res, DP[i] + i / c0 * d0);\r\n  }\r\n\r\n  cout &lt;&lt; res;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Остров сокровищ -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Остров сокровищ</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Космические спасатели -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Космические спасатели</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-110-Round84.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-110-Round84.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/110\" target=\"_blank\">Codeforces 110 Round 84 Beta (Div. 2) 2011.08.29</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Почти счастливое число</a>\r\n  <br><a href=\"#t2\">Задача B. Счастливая строка</a>\r\n  <br><a href=\"#t3\">Задача C. Счастливая сумма цифр</a>\r\n  <br><a href=\"#t4\">Задача D. Счастливая вероятность</a>\r\n  <br><a href=\"#t5\">Задача E. Счастливое дерево</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Почти счастливое число -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Почти счастливое число</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Счастливая строка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Счастливая строка</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Счастливая сумма цифр -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Счастливая сумма цифр</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Счастливая вероятность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Счастливая вероятность</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Счастливое дерево -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Счастливое дерево</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-112-Round85.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-112-Round85.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/112\" target=\"_blank\">Codeforces 112 Round 85 Beta (Div. 2) 2011.09.03</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Петя и строки</a>\r\n  <br><a href=\"#t2\">Задача B. Петя и квадрат</a>\r\n  <br><a href=\"#t3\">Задача C. Петя и неравенства</a>\r\n  <br><a href=\"#t4\">Задача D. Петя и делители</a>\r\n  <br><a href=\"#t5\">Задача E. Петя и пауки</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Петя и строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Петя и строки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Петя и квадрат -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Петя и квадрат</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Петя и неравенства -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Петя и неравенства</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Петя и делители -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Петя и делители</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Петя и пауки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Петя и пауки</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-116-Round87.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-116-Round87.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/116\" target=\"_blank\">Codeforces 116 Round 87 Beta (Div. 2) 2011.09.15</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Трамвай</a>\r\n  <br><a href=\"#t2\">Задача B. Поросята и волки</a>\r\n  <br><a href=\"#t3\">Задача C. Праздник</a>\r\n  <br><a href=\"#t4\">Задача D. Газонокосилка</a>\r\n  <br><a href=\"#t5\">Задача E. Водопроводчик</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Трамвай -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Трамвай</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Поросята и волки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Поросята и волки</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Праздник -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Праздник</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Газонокосилка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Газонокосилка</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Водопроводчик -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Водопроводчик</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-118-Round89.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-118-Round89.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.07</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Упражнение на строки</a>\r\n  <br><a href=\"#t2\">Задача B. Подарок от Лены</a>\r\n  <br><a href=\"#t3\">Задача C. Модный номер</a>\r\n  <br><a href=\"#t4\">Задача D. Легионы Цезаря</a>\r\n  <br><a href=\"#t5\">Задача E. Дороги в Бертауне</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Упражнение на строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Упражнение на строки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/118/problem/A\" target=\"_blank\">Задача 118A</a>\r\n      <br><a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.27</a>\r\n    </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  vector&lt;char&gt; res;\r\n  vector&lt;char&gt; vow{ 'a','A','o','O','y','Y','e','E','u','U','i','I' };\r\n\r\n  string s;\r\n  cin &gt;&gt; s;\r\n\r\n  for (int i = 0; i &lt; s.size(); i++) {\r\n    if (find(vow.begin(), vow.end(), s[i]) == vow.end()) {\r\n      res.push_back('.');\r\n      res.push_back(tolower(s[i]));\r\n    }\r\n  }\r\n\r\n  for (int i = 0; i &lt; res.size(); i++) {\r\n    cout &lt;&lt; res[i];\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Подарок от Лены -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Подарок от Лены</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Модный номер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Модный номер</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Легионы Цезаря -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Легионы Цезаря</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Дороги в Бертауне -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Дороги в Бертауне</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-120-kosSaratov.html":
+/*!**************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-120-kosSaratov.html ***!
+  \**************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/120\" target=\"_blank\">Codeforces 120 Командная олимпиада школьников, Саратов, 2011 2011.10.18</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Лифт</a>\r\n  <br><a href=\"#t2\">Задача B. Что? Где? Когда?</a>\r\n  <br><a href=\"#t3\">Задача C. Винни-Пух и мед</a>\r\n  <br><a href=\"#t4\">Задача D. Три сына</a>\r\n  <br><a href=\"#t5\">Задача E. Поставь Коня!</a>\r\n  <br><a href=\"#t6\">Задача F. Пауки</a>\r\n  <br><a href=\"#t7\">Задача G. Бум</a>\r\n  <br><a href=\"#t8\">Задача H. Краткость — сестра таланта</a>\r\n  <br><a href=\"#t9\">Задача I. Счастье в числах</a>\r\n  <br><a href=\"#t10\">Задача J. Минимальная сумма</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Лифт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Лифт</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Что? Где? Когда? -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Что? Где? Когда?</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Винни-Пух и мед -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Винни-Пух и мед</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Три сына -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Три сына</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Поставь Коня! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Поставь Коня!</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Пауки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Пауки</h3>\r\n\r\n  <div class=\"t6\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Бум -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Бум</h3>\r\n\r\n  <div class=\"t7\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача H. Краткость — сестра таланта -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H. Краткость — сестра таланта</h3>\r\n\r\n  <div class=\"t8\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача I. Счастье в числах -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t9\"></div>\r\n  <h3>Задача I. Счастье в числах</h3>\r\n\r\n  <div class=\"t9\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача J. Минимальная сумма -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t10\"></div>\r\n  <h3>Задача J. Минимальная сумма</h3>\r\n\r\n  <div class=\"t10\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-131-Round95.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-131-Round95.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/131\" target=\"_blank\">Codeforces 131 Round 95 Beta (Div. 2) 2011.11.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. cAPS lOCK</a>\r\n  <br><a href=\"#t2\">Задача B. Противоположности притягиваются</a>\r\n  <br><a href=\"#t3\">Задача C. Весь мир театр</a>\r\n  <br><a href=\"#t4\">Задача D. Метро</a>\r\n  <br><a href=\"#t5\">Задача E. Еще одна задача о ферзях</a>\r\n  <br><a href=\"#t6\">Задача F. Подарок маме</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. cAPS lOCK -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. cAPS lOCK</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Противоположности притягиваются -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Противоположности притягиваются</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Весь мир театр -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Весь мир театр</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Метро -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Метро</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Еще одна задача о ферзях -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Еще одна задача о ферзях</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Подарок маме -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Подарок маме</h3>\r\n\r\n  <div class=\"t6\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-134-TRound3.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-134-TRound3.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces 134 Testing Round 3 2011.12.02</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Среднестатистические элементы</a>\r\n  <br><a href=\"#t2\">Задача B. Пары чисел</a>\r\n  <br><a href=\"#t3\">Задача C. Обмены</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Среднестатистические элементы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Среднестатистические элементы</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Пары чисел -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Пары чисел</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Обмены -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Обмены</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-136-Round97.html":
+/*!***********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-136-Round97.html ***!
+  \***********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/136\" target=\"_blank\">Codeforces 136 Round 97 (Div. 2) 2011.12.09</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Подарки</a>\r\n  <br><a href=\"#t2\">Задача B. Тернарная логика</a>\r\n  <br><a href=\"#t3\">Задача C. Замена</a>\r\n  <br><a href=\"#t4\">Задача D. Прямоугольник и квадрат</a>\r\n  <br><a href=\"#t5\">Задача E. Ноль-один</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Подарки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Подарки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Тернарная логика -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Тернарная логика</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Замена -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Замена</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Прямоугольник и квадрат -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Прямоугольник и квадрат</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Ноль-один -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Ноль-один</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-141-Round101.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-141-Round101.html ***!
+  \************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/141\" target=\"_blank\">Codeforces 141 Round 101 (Div. 2) 2012.01.08</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Веселая шутка</a>\r\n  <br><a href=\"#t2\">Задача B. Классики</a>\r\n  <br><a href=\"#t3\">Задача C. Очередь</a>\r\n  <br><a href=\"#t4\">Задача D. Трамплины</a>\r\n  <br><a href=\"#t5\">Задача E. Большая чистка</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Веселая шутка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Веселая шутка</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Классики -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Классики</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Очередь -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Очередь</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Трамплины -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Трамплины</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Большая чистка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Большая чистка</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-155-Round109.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-155-Round109.html ***!
+  \************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/155\" target=\"_blank\">Codeforces 155 Round 109 (Div. 2) 2012.02.24</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. I_love_%username%</a>\r\n  <br><a href=\"#t2\">Задача B. Комбинация</a>\r\n  <br><a href=\"#t3\">Задача C. Домашнее задание</a>\r\n  <br><a href=\"#t4\">Задача D. Коллайдеры</a>\r\n  <br><a href=\"#t5\">Задача E. Профили-двойники</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. I_love_%username% -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. I_love_%username%</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Комбинация -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Комбинация</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Домашнее задание -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Домашнее задание</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Коллайдеры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Коллайдеры</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Профили-двойники -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Профили-двойники</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-158-vk-q1.html":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-158-vk-q1.html ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/158\" target=\"_blank\">Codeforces 158 VK Cup 2012 Квалификационный раунд 1 2012.03.04</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Следующий раунд</a>\r\n  <br><a href=\"#t2\">Задача B. Такси</a>\r\n  <br><a href=\"#t3\">Задача C. Команды cd и pwd</a>\r\n  <br><a href=\"#t4\">Задача D. Ледяные скульптуры</a>\r\n  <br><a href=\"#t5\">Задача E. Телефонные разговоры</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Следующий раунд -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Следующий раунд</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Такси -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Такси</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Команды cd и pwd -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Команды cd и pwd</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Ледяные скульптуры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Ледяные скульптуры</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Телефонные разговоры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Телефонные разговоры</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-159-vk-q2.html":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-159-vk-q2.html ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/159\" target=\"_blank\">Codeforces 159 VK Cup 2012 Квалификационный раунд 2 2012.03.09</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Друзья или нет?</a>\r\n  <br><a href=\"#t2\">Задача B. На вкус и цвет фломастеры разные</a>\r\n  <br><a href=\"#t3\">Задача C. String Manipulation 1.0</a>\r\n  <br><a href=\"#t4\">Задача D. Палиндромные пары</a>\r\n  <br><a href=\"#t5\">Задача E. Зебробашня</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Друзья или нет? -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Друзья или нет?</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. На вкус и цвет фломастеры разные -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. На вкус и цвет фломастеры разные</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. String Manipulation 1.0 -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. String Manipulation 1.0</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Палиндромные пары -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Палиндромные пары</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Зебробашня -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Зебробашня</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-163-vk-r2.html":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-163-vk-r2.html ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/163\" target=\"_blank\">Codeforces 163 VK Cup 2012 Раунд 2 (Div. 1) 2012.03.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Подстрока и подпоследовательность</a>\r\n  <br><a href=\"#t2\">Задача B. Лемминги</a>\r\n  <br><a href=\"#t3\">Задача C. Конвейер</a>\r\n  <br><a href=\"#t4\">Задача D. Большой холодильник</a>\r\n  <br><a href=\"#t5\">Задача E. Электронное правительство</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Подстрока и подпоследовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Подстрока и подпоследовательность</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Лемминги -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Лемминги</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Конвейер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Конвейер</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Большой холодильник -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Большой холодильник</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Электронное правительство -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Электронное правительство</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-169-vk-r2.html":
+/*!*********************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-169-vk-r2.html ***!
+  \*********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <br><a href=\"https://codeforces.com/contest/169\" target=\"_blank\">Codeforces 169 VK Cup 2012 Раунд 2 (Div. 2) 2012.03.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Домашние дела</a>\r\n  <br><a href=\"#t2\">Задача B. Замены цифр</a>\r\n  <br><a href=\"#t3\">Задача C. Подстрока и подпоследовательность</a>\r\n  <br><a href=\"#t4\">Задача D. Лемминги</a>\r\n  <br><a href=\"#t5\">Задача E. Конвейер</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Домашние дела -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Домашние дела</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Замены цифр -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Замены цифр</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Подстрока и подпоследовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Подстрока и подпоследовательность</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Лемминги -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Лемминги</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Конвейер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Конвейер</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/p200/elem-200-Round126.html":
+/*!************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/p200/elem-200-Round126.html ***!
+  \************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/200\" target=\"_blank\">Codeforces 200 Round 126 (Div. 2) 2012.06.24</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Кино</a>\r\n  <br><a href=\"#t2\">Задача B. Напитки</a>\r\n  <br><a href=\"#t3\">Задача C. Чемпионат по футболу</a>\r\n  <br><a href=\"#t4\">Задача D. Язык программирования</a>\r\n  <br><a href=\"#t5\">Задача E. Тракторный институт</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Кино -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Кино</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Напитки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Напитки</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Чемпионат по футболу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Чемпионат по футболу</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Язык программирования -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Язык программирования</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Тракторный институт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Тракторный институт</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z104a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z104a.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Блэкджек -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Дождливым пасмурным вечером, когда все модули попрятались по ближайшим кафетериям, попивая горячие энергококтейли, вирус Хексадесимал решила пролететь над Мэйнфреймом в поисках Гениальной Идеи. И Гениальная Идея нашлась!</p>\r\n<p>Почему бы не создать свой Codeforces, с блэкджеком и другими развлекательными мероприятиями? Наверняка найдется много желающих посетить это прекрасное высококультурное заведение.</p>\r\n<p>В Мэйнфрейме в блэкджек играют стандартной колодой из 52-х карт, содержащей 13 значений — 2, 3, 4, 5, 6, 7, 8, 9, 10, валеты, дамы, короли, тузы — каждой из четырех мастей — черви, бубны, трефы и пики. Значения очков каждой карты: от двойки до десятки — соответственно от 2 до 10, у туза — 1 или 11 по желанию игрока, у картинок (король, дама, валет) — 10. Значение очков карты не зависит от масти. Правила игры предельно просты. Игрок получает две карты, если сумма очков этих карт равна n, то игрок победил, иначе — проиграл.</p>\r\n<p>Игрок уже получил первую карту — это дама пик. Чтобы оценить шансы на победу, нужно определить, сколько существует способов получить вторую карту так, чтобы сумма очков была равна именно n.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В единственной строке дано n (1 ≤ n ≤ 25) — требуемая сумма очков.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите, сколько способов существует получить вторую карту требуемым образом, если первая карта — дама пик.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n12\r\n</pre>\r\n<pre>\r\n4\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n20\r\n</pre>\r\n<pre>\r\n15\r\n</pre>\r\n</details>\r\n\r\n<h4>Пример 3</h4>\r\n<pre>\r\n10\r\n</pre>\r\n<pre>\r\n0\r\n</pre>\r\n<p>В первом примере для получения требуемой суммы подходят только четыре двойки разных мастей.</p>\r\n<p>Во втором примере подходят все десятки, валеты, дамы и короли — всего 15 карт, поскольку дама пик (равно как и любая другая карта) существует в колоде в единственном экземпляре, и она уже используется.</p>\r\n<p>В третьем примере не существует карт, добавляющих ноль очков к текущим десяти.</p>\r\n</details>\r\n\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z104b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z104b.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Проверка штанов на унылость -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Реквестирую набор задач про штаны шахтера.</p>\r\n<p>Обычный среднестатистический шахтер Ваганыч проходит курсы повышения квалификации. По завершении этих курсов все шахтеры должны сдать экзамены, самый сложный из которых — компьютерный тест «Проверка штанов на унылость».</p>\r\n<p>Тест состоит из n вопросов, отвечать на них необходимо строго по порядку: с 1-го до n-го. В i-ом вопросе ai вариантов ответа, ровно один из которых является верным.</p>\r\n<p>Кликом считается выбор любого ответа в любом вопросе. Задача Ваганыча — выбрать верный ответ на каждый вопрос. Если на какой-то вопрос дан неверный ответ, то все выбранные ответы сбрасываются, и тест начинается с самого начала, с первого вопроса. Но при этом шахтер запоминает все свои действия. Порядок ответов, сами ответы в пределах одного вопроса и порядок самих вопросов не меняются.</p>\r\n<p>Ваганыч очень умен и обладает отличной памятью, но он крайне невезуч и совершенно ничего не знает по теме теста. Сколько кликов ему придется сделать в худшем случае?</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке дано целое число n (1 ≤ n ≤ 100) — количество вопросов в тесте. Во второй строке записаны через пробел n целых чисел ai (1 ≤ ai ≤ 10⁹) — количество вариантов ответа на i-ый вопрос.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число — минимальное количество кликов, требуемое для прохождения теста в худшем случае.</p>\r\n<p>Пожалуйста, не используйте спецификатор %lld для чтения или записи 64-битных чисел на С++. Рекомендуется использовать потоки cin, cout или спецификатор %I64d.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n2\r\n1 1\r\n</pre>\r\n<pre>\r\n2\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n2\r\n2 2\r\n</pre>\r\n<pre>\r\n5\r\n</pre>\r\n</details>\r\n\r\n<h4>Пример 3</h4>\r\n<pre>\r\n1\r\n10\r\n</pre>\r\n<pre>\r\n10\r\n</pre>\r\n<p>Пояснение ко второму примеру. В худшем случае потребуется пять кликов:</p>\r\n<ul>\r\n  <li>первым кликом выбираем первый вариант ответа на первый вопрос, он оказывается неправильным;</li>\r\n  <li>вторым кликом выбираем второй вариант ответа на первый вопрос, он оказывается правильным, переходим ко второму вопросу;</li>\r\n  <li>третьим кликом выбираем первый вариант ответа на второй вопрос, он оказывается неправильным, возвращаемся к первому вопросу;</li>\r\n  <li>четвертым кликом выбираем второй вариант ответа на первый вопрос, он оказывается правильным, как и прежде, переходим ко второму вопросу;</li>\r\n  <li>пятым кликом выбираем второй вариант ответа на второй вопрос, он оказывается правильным, тест окончен.</li>\r\n</ul>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z104c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z104c.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Ктулху -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>...И пошел старик к синему морю; видит, на море черная буря. Стал он кликать золотую рыбку, но, увы, появился лишь Ктулху...</p>\r\n<p>А на другом конце земного шара Пентагон уже вовсю собирает данные, прогнозирует поведение монстра и готовит сверхсекретное супероружие. Из-за высокой сейсмической активности и плохих погодных условий до сих пор не удалось сделать качественные фотоснимки со спутников. Результатом первичного анализа объекта оказался неориентированный граф c n вершинами и m ребрами. Теперь лучшим умам мира предстоит определить, можно ли считать этот граф Ктулху или нет.</p>\r\n<p>Для простоты предположим, что Ктулху из космоса выглядит как некоторое сферическое тело, к которому прикреплены отростки-щупальца. Формально, Ктулху назовем такой неориентированный граф, который может быть представлен как набор из трех или более корневых деревьев, корни которых соединены простым циклом.</p>\r\n<p>Гарантируется, что граф не содержит кратных ребер и петель.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке даны два целых числа — количество вершин n и количество ребер m графа (1 ≤ n ≤ 100, 0 ≤ m ≤ n * (n-1)/2).</p>\r\n<p>В каждой из последующих m строк записаны пары целых чисел x и y, которые обозначают существование ребра между вершинами x и y в графе (1 ≤ x, y ≤ n, x ≠ y). Гарантируется, что граф не содержит кратных ребер и петель.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите «NO», если граф не является Ктулху, и «FHTAGN!» в противном случае.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n6 6\r\n6 3\r\n6 4\r\n5 1\r\n2 5\r\n1 4\r\n5 4\r\n</pre>\r\n<pre>\r\nFHTAGN!\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n6 5\r\n5 6\r\n4 6\r\n3 1\r\n5 1\r\n1 2\r\n</pre>\r\n<pre>\r\nNO\r\n</pre>\r\n<p>Простым циклом назовем множество из v вершин, которые можно пронумеровать так, что будут существовать ребра только между вершинами с номерами 1 и 2, 2 и 3, ..., v - 1 и v, v и 1.</p>\r\n<p>Дерево — связный неориентированный граф из n вершин и n - 1 ребер (n > 0).</p>\r\n<p>Корневое дерево — дерево, в котором выделена одна вершина, корень.</p>\r\n</details>\r\n\r\n\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z104d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z104d.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Русская рулетка -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>После всем известных событий в Орландо, Саша и Рома решили определить между собой, кто же всё-таки является самым слабым звеном в команде. Спасибо Маше, которая где-то нашла револьвер с крутящимся барабаном на n зарядов и k патронов к нему, теперь у ребят появился отличный способ разобраться раз и навсегда.</p>\r\n<p>Саша выбирает k из n слотов по своему желанию и кладёт в них патроны. Рома раскручивает барабан так, что любой из n циклических сдвигов положения барабана равновероятен. Потом начинается игра, играют поочередно, первым делает ход Саша: он приставляет револьвер к виску и делает выстрел. Если напротив курка не было патрона, то барабан сдвигается на одну позицию, а оружие передается Роме для такого же хода. Игра продолжается до тех пор, пока кто-нибудь не застрелится, выживший считается победителем.</p>\r\n<p>Саша очень не хочет проигрывать, поэтому он должен выбрать слоты для патронов таким образом, чтобы минимизировать вероятность собственного поражения. Из всех существующих вариантов он готов выбрать только лексикографически минимальный, при этом пустой слот считается лексикографически меньше заряженного.</p>\r\n<p>Более формально барабан на n зарядов, заряженный k патронами, можно представить в виде строки из n символов, ровно k из которых — «X» (заряженные слоты), а остальные — «.» (незаряженные слоты).</p>\r\n<p>Опишем подробнее выстрел из револьвера. Предположим, что курок расположен напротив первого символа строки (первого слота барабана). Если выстрел никого не убивает, и барабан сдвигается на одну позицию, то строка сдвигается влево. То есть первый символ становится последним, второй — первым, и так далее. Курок при этом остается на месте — напротив первого символа получившейся строки.</p>\r\n<p>Среди всех строк, обеспечивающих минимальную вероятность проигрыша, Саша выбирает лексикографически наименьшую. Ваша задача — помочь Саше зарядить револьвер. Для этого на каждый запрос xi нужно ответить: есть ли пуля на позиции xi?</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке дано три целых числа n, k и p (1 ≤ n ≤ 10<sup>18</sup>, 0 ≤ k ≤ n, 1 ≤ p ≤ 1000) — количество слотов в барабане, количество патронов и количество запросов. Далее следует p строк — запросы. Каждая строка содержит одно целое число xi (1 ≤ xi ≤ n) — номер слота, содержимое которого необходимо вывести.</p>\r\n<p>Пожалуйста, не используйте спецификатор %lld для чтения или записи 64-битных чисел на С++. Рекомендуется использовать потоки cin, cout или спецификатор %I64d.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>На каждый из запросов выведите «.», если слот должен быть пустым и «X», если слот должен быть заряжен.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n3 1 3\r\n1\r\n2\r\n3\r\n</pre>\r\n<pre>\r\n..X\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n6 3 6\r\n1\r\n2\r\n3\r\n4\r\n5\r\n6\r\n</pre>\r\n<pre>\r\n.X.X.X\r\n</pre>\r\n\r\n<h4>Пример 3</h4>\r\n<pre>\r\n5 2 5\r\n1\r\n2\r\n3\r\n4\r\n5\r\n</pre>\r\n<pre>\r\n...XX\r\n</pre>\r\n<p>Лексикографическое сравнение реализует оператор < в современных языках программирования. Строка a лексикографически меньше строки b, если существует такое i (1 ≤ i ≤ n), что ai &lt; bi, а для любого j (1 ≤ j &lt; i) aj = bj.</p>\r\n</details>\r\n\r\n\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z104e.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z104e.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Время грабить корованы -->\r\n<div class=\"time-memory\">(Время 4с. Память 70мб)</div>\r\n\r\n<p>Я джва года хочу такую задачу.</p>\r\n<p>Как известно, самые умные существа на планете Земля — это, конечно, коровы. К этому выводу давно пришли марсианские инопланетяне, а также целый ряд других разумных цивилизаций из дальнего космоса.</p>\r\n<p>Иногда коровы собираются в корованы. Это, кажется, у них сезонное. Но именно в это время коровы становятся пассивными и слабо реагируют на внешние раздражители. Корован — идеальная мишень для марсианской исследовательской тарелки, самое время для крупномасштабных похищений, или, как говорят марсиане, ограблений. Говоря простым языком, корован — это множество коров, расположенных в ряд.</p>\r\n<p>Если пронумеровать всех коров в короване натуральными числами от 1 до n, то можно формализовать популярную модель похищения, известную как (a, b)-ограбление корована: сперва похищается корова с номером a, затем — с номером a + b, затем — с номером a + 2·b, и так далее, пока номер похищаемой коровы не превысит n. В процессе одного ограбления коровы не перенумеровываются.</p>\r\n<p>Инопланетяне с радостью бы расположили всех коров на борту своего гостеприимного судна, но, к сожалению, размер грузового отсека весьма и весьма ограничен. Исследователи, зная массу каждой коровы в короване, составили p сценариев (a, b)-ограбления. Теперь они хотят определить для каждого сценария в отдельности какая суммарная масса чистой говядины попадет на борт корабля. Все сценарии независимы, в процессе выполнения расчетов похищение коров не осуществляется.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке дано единственное натуральное число n — количество коров в короване (1 ≤ n ≤ 3·10⁵).</p>\r\n<p>Во второй строке содержится n натуральных чисел wi, разделенных пробелами, где i-ое число определяет массу i-ой коровы в короване (1 ≤ wi ≤ 10⁹).</p>\r\n<p>В третьей строке дано единственное натуральное число p — количество сценариев (a, b)-ограблений (1 ≤ p ≤ 3·10⁵).</p>\r\n<p>Каждая последующая строка содержит параметры a и b очередного сценария (1 ≤ a, b ≤ n).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>На каждый сценарий (a, b)-ограбления выведите суммарную массу коров, которые могут быть похищены в результате ограбления по этому сценарию.</p>\r\n<p>Пожалуйста, не используйте спецификатор %lld для чтения или записи 64-битных чисел на С++. Рекомендуется использовать потоки cin, cout или спецификатор %I64d.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n3\r\n1 2 3\r\n2\r\n1 1\r\n1 2\r\n</pre>\r\n<pre>\r\n6\r\n4\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n4\r\n2 3 5 7\r\n3\r\n1 3\r\n2 3\r\n2 2\r\n</pre>\r\n<pre>\r\n9\r\n3\r\n10\r\n</pre>\r\n</details>\r\n\r\n\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z106a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z106a.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Дурак -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Дурак — карточная игра, популярная в странах бывшего СССР. В этой задаче не раскрывается всех правил этой игры — при желании вы можете найти их потом сами.</p>\r\n<p>В дурака играют колодой из 36 карт. Каждая карта имеет масть («S», «H», «D» и «C») и достоинство (в порядке увеличения: «6», «7», «8», «9», «T», «J», «Q», «K» и «A»). В начале каждой партии одна из мастей случайным образом назначается козырной.</p>\r\n<p>Ходы игроков состоят в том, что один игрок выкладывает на стол одну или несколько своих карт, а другой должен покрыть каждую из них своими картами.</p>\r\n<p>Одна карта кроет другую если у них одинаковые масти, а достоинство первой выше достоинства второй. Кроме того, карта козырной масти может покрыть любую карту не козырной масти вне зависимости от их достоинств. Во всех остальных случаях вторую карту первой покрыть нельзя.</p>\r\n<p>Вам даны козырная масть и две различные карты. Определите покрывает ли первая их них вторую или нет.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находится козырная масть. Это «S», «H», «D» или «C».</p>\r\n<p>Во второй строке находится описание двух различных карт. Каждая из карт описывается словом из двух символов. Первый символ означает достоинство («6», «7», «8», «9», «T», «J», «Q», «K» или «A»), а второй — масть («S», «H», «D» или «C»).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите «YES» (без кавычек) если первая карта покрывает вторую. Иначе выведите «NO» (тоже без кавычек).</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\nH\r\nQH 9S\r\n</pre>\r\n<pre>\r\nYES\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\nS\r\n8D 6D\r\n</pre>\r\n<pre>\r\nYES\r\n</pre>\r\n</details>\r\n\r\n<h4>Пример 3</h4>\r\n<pre>\r\nC\r\n7H AS\r\n</pre>\r\n<pre>\r\nNO\r\n</pre>\r\n</details>\r\n\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z106b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z106b.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Выбор ноутбука -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Вася выбирает ноутбук. В магазине имеется n ноутбуков на самый разный вкус.</p>\r\n<p>Васе интересны такие параметры ноутбука как скорость процессора, объем оперативной памяти и место на жестком диске. Вася программист, Вася в игры не играет, поэтому все остальные параметры Васе не интересны.</p>\r\n<p>Если у одного ноутбука все три параметра cтрого меньше, чем у какого либо другого ноутбука, то первый из них Вася считает устаревшим. Из всех ноутбуков, которые он не считает устаревшими, Вася выбирает самый дешевый.</p>\r\n<p>Ноутбуков очень много, поэтому Вася решил написать программу, которая выбирает самый подходящий. Однако, у Васи еще нет ноутбука и программу ему писать негде. Поэтому он обратился за помощью к вам.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находится число n (1 ≤ n ≤ 100).</p>\r\n<p>Далее идут n строк. В каждой из них описан ноутбук в формате «speed ram hdd cost». При этом:</p>\r\n<ul>\r\n  <li>speed, ram, hdd и cost — целые числа</li>\r\n  <li>1000 ≤ speed ≤ 4200 — скорость процессора в мегагерцах</li>\r\n  <li>256 ≤ ram ≤ 4096 — объем оперативной памяти в мегабайтах</li>\r\n  <li>1 ≤ hdd ≤ 500 — размер жесткого диска в гигабайтах</li>\r\n  <li>100 ≤ cost ≤ 1000 — цена в тугриках</li>\r\n</ul>\r\n<p>Все цены ноутбуков различны.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите одно число — номер ноутбука, который выберет Вася. Ноутбуки нумеруются натуральными числами от 1 до n в том порядке, в котором они даны во входных данных.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n5\r\n2100 512 150 200\r\n2000 2048 240 350\r\n2300 1024 200 320\r\n2500 2048 80 300\r\n2000 512 180 150\r\n</pre>\r\n<pre>\r\n4\r\n</pre>\r\n<p>В первом примере Вася считает устаревшими первый и пятый ноутбуки, поскольку они во всем уступают третьему ноутбуку. Из оставшихся четвертый — самый дешевый. Его и выбирает Вася.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z106c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z106c.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Булочки -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Пекарь Лаврентий собирается испечь несколько булочек с начинкой на продажу.</p>\r\n<p>У Лаврентия есть n грамм теста, а так же m различных видов начинки. Виды начинки пронумерованы натуральными числами от 1 до m. Лаврентий знает, что i-го вида начинки у него осталось ai грамм. Чтобы испечь одну булочку с i-ой начинкой, нужно ровно bi грамм этой начинки и ci грамм теста, а продать одну такую булочку можно за di тугриков.</p>\r\n<p>Кроме того, он может испечь булочки без начинки. На каждую такую булочку нужно c0 грамм теста, а продать такую булочку можно за d0 тугриков. Лаврентий может испечь любое количество булочек с различными начинками или без начинки, если для этого хватит теста и начинки. Все излишки, которые остались после выпечки, Лаврентий выкидывает.</p>\r\n<p>Определите какое максимальное количество тугриков Лаврентий может заработать.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке содержатся 4 целых числа n, m, c0 и d0 (1 ≤ n ≤ 1000, 1 ≤ m ≤ 10, 1 ≤ c0, d0 ≤ 100). В каждой из последующих m строк содержится по 4 целых числа. В i-ой из них находятся числа ai, bi, ci и di (1 ≤ ai, bi, ci, di ≤ 100).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите единственное число — максимальное количество тугриков, которые Лаврентий может заработать.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n10 2 2 1\r\n7 3 2 100\r\n12 3 1 10\r\n</pre>\r\n<pre>\r\n241\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n100 1 25 50\r\n15 5 20 10\r\n</pre>\r\n<pre>\r\n200\r\n</pre>\r\n<p>Чтобы получить наибольшее количество тугриков в первом примере, нужно испечь 2 булочки с начинкой 1, 4 булочки с начинкой 2 и одну булочку без начинки.</p>\r\n<p>Во втором примере имеет смысл испечь только 4 булочки без начинки.</p>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z106d.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z106d.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача D. Остров сокровищ -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>Наконец отважные путешественники достигли острова, где зарыты сокровища пиратов. Однако, когда корабль уже подплывал к острову, капитан обнаружил, что какая-то крыса отгрызла кусочек от карты сокровищ.</p>\r\n<p>Карту сокровищ можно представить себе как прямоугольник размера n x m, каждая ячейка которого означает квадрат острова со стороной в одну милю. Некоторые ячейки означают море и они непроходимы. Все остальные ячейки проходимы, а в некоторых из них находятся некоторые достопримечательности. Например, большой дуб на холме или пещера в скалах.</p>\r\n<p>Кроме того, на карте имеется набор из k инструкций, каждая из которых имеет вид:</p>\r\n<p>«Пройти x миль в направлении y»,</p>\r\n<p>где возможны направления: север, юг, восток и запад. Если последовательно выполнить все эти инструкции последовательно от первой до последней, то придешь ровно в то место, где зарыты сокровища.</p>\r\n<p>К сожалению, капитан не знает от какого места нужно выполнять инструкции — именно этот кусочек карты был утерян. Но капитан точно помнит, что там была указана какая то из достопримечательностей. Кроме того, капитан знает, что весь путь проходит по проходимым клеткам острова.</p>\r\n<p>Капитан хочет узнать какие из достопримечательностей имеет смысл проверить. Он просит вас помочь в этом деле.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке находятся два целых числа n и m (3 ≤ n, m ≤ 1000).</p>\r\n<p>Далее расположены n строк по m символов в каждой — описание карты острова. «#» означает море. Гарантируется, что все ячейки по периметру прямоугольника — море. «.» означает проходимую клетку без каких либо достопримечательностей, а достопримечательности обозначаются большими буквами латинского алфавита (от «A» до «Z»). Не все буквы алфавита могут быть использованы. Однако гарантируется, что хотя бы одна из них на карте присутствует. Все достопримечательности обозначены различными буквами.</p>\r\n<p>В следующей строке находится число k (1 ≤ k ≤ 10⁵), после чего идут k строк, в каждой из которых описывается одна инструкция. Каждая из инструкций имеет вид «dir len», где dir — направление, а len — расстояние. dir может принимать значения «N», «S», «W» и «E» для севера, юга, запада и востока соответственно. При этом север находится наверху, юг внизу, запад слева, а восток справа. len — целое число от 1 до 1000.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите все достопримечательности, удовлетворяющие инструкциям, в виде одной строки без каких либо разделителей в алфавитном порядке. Если ни одна из достопримечательностей не подходит, то выведите «no solution» без кавычек.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n6 10\r\n##########\r\n#K#..#####\r\n#.#..##.##\r\n#..L.#...#\r\n###D###A.#\r\n##########\r\n4\r\nN 2\r\nS 1\r\nE 1\r\nW 2\r\n</pre>\r\n<pre>\r\nAD\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n3 4\r\n####\r\n#.A#\r\n####\r\n2\r\nW 1\r\nN 2\r\n</pre>\r\n<pre>\r\nno solution\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z106e.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z106e.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача E. Космические спасатели -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>В галактике находится n планет, на каждой из которых обитают множество различных живых существ. И каждое из них может оказаться в беде! Космические спасатели прекрасно знают об этом и всегда готовы помочь каждому, кому эта помощь действительно понадобится. Стоит только позвать.</p>\r\n<p>Сейчас космические спасатели планируют построить самую большую в истории галактики спасательную базу, однако месторасположение будущей базы пока еще не определено. Поскольку помощь иногда требуется абсолютно неотложно, спасатели стремятся найти такую точку в галактике, из которой можно было бы добраться до самой удаленной планеты за наименьшее возможное время. Другими словами, необходимо найти такую точку в пространстве, чтобы расстояние от нее до самой удаленной от нее планеты было наименьшим из всех возможных точек в пространстве. К сожалению, они не в силах решить такую задачу.</p>\r\n<p>Поскольку планеты достаточно удалены друг от друга, их можно считать точками в евклидовом трехмерном пространстве. Расстояние между точками (xi, yi, zi) и (xj, yj, zj) вычисляется по формуле p = sqrt((xi - xj)² + (yi - yj)² + (zi - zj)²). Спасательная база может располагаться в любой точке пространства, в том числе, совпадать с какой либо из планет.</p>\r\n<p>Галактика в опасности! Спасите космических спасателей и укажите им искомую точку.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке входного файла содержится целое число n — количество планет (1 ≤ N ≤ 100). Каждая из последующих n строк содержит информация о планетах. i-я из этих строк содержит три целых числа xi, yi, zi — координаты i-й планеты (-10⁴ ≤ xi, yi, zi ≤ 10⁴, 1 ≤ i ≤ n). Никакие две планеты не совпадают.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>В первой строке выходного файла следует вывести три вещественных числа через пробел x0, y0, z0 — координаты будущей базы. Если существует несколько решений, то разрешается вывести любое. Ответ будет засчитан, если расстояние от данной точки до самой удаленной планеты будет отличаться от результата жюри не более чем на 10<sup>-6</sup> по абсолютному или относительному значению.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n5\r\n5 0 0\r\n-5 0 0\r\n0 3 4\r\n4 -3 0\r\n2 2 -2\r\n</pre>\r\n<pre>\r\n0.000 0.000 0.000\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z134a.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z134a.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача A. Среднестатистические элементы -->\r\n<div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n<p>Задана последовательность положительных целых чисел a1, a2, ..., an. Найдите все такие индексы i, что i-ый элемент равен среднему арифметическому всех остальных элементов (то есть всех элементов, кроме него).</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (2 ≤ n ≤ 2·10⁵). Вторая строка содержит элементы последовательности a1, a2, ..., an (1 ≤ ai ≤ 1000). Все элементы — положительные целые числа.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>В первую строку выведите количество искомых индексов. Во вторую строку — искомые индексы в порядке возрастания. Все индексы — это целые числа от 1 до n.</p>\r\n<p>Если искомых элементов не существует, то первая строка выходных данных должна содержать число 0. В этом случае вторую строку можно не выводить или вывести пустую строку.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n5\r\n1 2 3 4 5\r\n</pre>\r\n<pre>\r\n1\r\n3\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n4\r\n50 50 50 50\r\n</pre>\r\n<pre>\r\n4\r\n1 2 3 4\r\n</pre>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/134/problem/A\" target=\"_blank\">Задача 134A</a>\r\n    <br><a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces 134 Testing Round 3 2011.12.02</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ввод данных\r\n  int n;\r\n  cin &gt;&gt; n;\r\n  vector&lt;int&gt; A(n);\r\n  for (int i = 0; i &lt; n; i++) {\r\n    cin &gt;&gt; A[i];\r\n  }\r\n\r\n  // решение\r\n  int sum = 0;\r\n  // находим сумму всех элементов\r\n  for (int i = 0; i &lt; n; i++) {\r\n    sum += A[i];\r\n  }\r\n\r\n  int cnt = 0;\r\n  vector&lt;int&gt; B;\r\n  for (int i = 0; i &lt; n; i++) {\r\n    // проверяем сумма что делится нацело\r\n    if (!((sum - A[i]) % (n - 1))) {\r\n      int tmp = (sum - A[i]) / (n - 1);\r\n      if (tmp == A[i]) {\r\n        cnt++;\r\n        B.push_back(i + 1);\r\n      }\r\n    }\r\n  }\r\n\r\n  // вывод результата\r\n  cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  if (cnt) {\r\n    for (int i = 0; i &lt; B.size(); i++) {\r\n      cout &lt;&lt; B[i] &lt;&lt; ' ';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z134b.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z134b.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача B. Пары чисел -->\r\n<div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n<p>Допустим, мы имеем пару чисел (a, b). Мы можем получить новую пару чисел вида (a + b, b) или (a, a + b) из данной. Назовем такое действие шагом.</p>\r\n<p>Пусть начальная пара чисел — (1,1). Ваша задача — найти число k, наименьшее количество шагов, необходимых чтобы получить из (1,1) пару, в которой хотя бы одно число равно n.</p>\r\n<h4>Входные данные</h4>\r\n<p>Входные данные содержат единственное целое число n (1 ≤ n ≤ 10⁶).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите единственное число k.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n  <code>5</code>\r\n  <code>3</code>\r\n\r\n  <h4>Пример 2</h4>\r\n  <code>1</code>\r\n  <code>0</code>\r\n  <p>Из пары (1,1) можно за три хода получить пару, содержащую 5: (1,1) → (1,2) → (3,2) → (5,2).</p>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/134/problem/B\" target=\"_blank\">Задача 134B</a>\r\n    <br><a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces Testing Round 3 2011.11.30</a>\r\n  </div>\r\n\r\n  <p>Нужно из пары (1,1) получить пару (x,n). Возможен переход (a,b) -> (a+b,b) и (a, a+b). При сложении мы должны выбрать из двух вариантов какие числа складывать.</p>\r\n  <p>Попробуем решить обратную задачу, т.е. из пары (x,n) получим пару (1,1). Возможен переход (x,y) -> (x,y-x) и (x-y,y). При переходе у нас должно получиться натуральное число, т.е. целое число больше нуля. При вычитании у нас остается только один вариант, во втором результат будет меньше нуля.</p>\r\n  <p>Перебираем все пары и смотрим за какое количество шагов мы из пары (x,n) придем к паре (1,1). Выберем минимальное количество шагов.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nlong long cnt;\r\n\r\nlong long gcd(long long a, long long b) {\r\n  if (b == 0) {\r\n    if (a != 1) {\r\n      cnt += 1'000'000;\r\n    }\r\n    cnt += a - 1;\r\n    return a;\r\n  } else {\r\n    cnt += a / b;\r\n    return gcd(b, a % b);\r\n  }\r\n}\r\n\r\nint main() {\r\n  long long n;\r\n  cin &gt;&gt; n;\r\n\r\n  long long min_count = 10'000'000;\r\n  for (long long i = 1; i &lt; n; i++) {\r\n    cnt = 0;\r\n    gcd(n, i);\r\n    min_count = min(min_count, cnt);\r\n  }\r\n  if (min_count == 10'000'000) {\r\n    cout &lt;&lt; 0;\r\n    return 0;\r\n  }\r\n\r\n  cout &lt;&lt; min_count - 1;\r\n}\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds200/z200/z134c.html":
+/*!************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds200/z200/z134c.html ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<!-- Задача C. Обмены -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>За круглым столом сидят n игроков. У всех них в сумме s карт n цветов, причем на начальный момент у первого человека карты только первого цвета, у второго — второго цвета и так далее. Они могут меняться картами, согласно следующим правилам:</p>\r\n<ul>\r\n  <li>человек может отдавать в процессе обмена карту только своего цвета;</li>\r\n  <li>игрок не может брать карту цвета, уже у него имеющегося (в частности, карты своего цвета он брать не может, независимо от того раздал он их все или нет);</li>\r\n  <li>в процессе одного обмена пара людей обменивается картами (каждый человек отдает одну карту и получает одну карту).</li>\r\n</ul>\r\n<p>Цель всех n человек: каждый из них должен отдать все карты, которые были у него в начале (то есть все карты своего цвета). Ваша задача указать, возможна ли такая последовательность обменов. Если ответ положительный, нужно указать все обмены.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записаны целые числа n (1 ≤ n ≤ 200000) и s (1 ≤ s ≤ 200000). Вторая строка содержит n чисел — количество карт у 1-го, 2-го, ..., n-го игрока на момент начала игры. Игрок может не иметь карт вообще на момент начала игры.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите в первой строке «No», если такая последовательность обменов невозможна, и «Yes» в противном случае. Если ответ положительный, выведите далее число k — количество обменов. Далее в k строках опишите обмены — парой номеров меняющихся игроков. Обмены и номера в обменах выводите в любом порядке.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n4 8\r\n2 2 2 2\r\n</pre>\r\n<pre>\r\nYes\r\n4\r\n4 3\r\n4 2\r\n1 3\r\n1 2\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n6 12\r\n1 1 2 2 3 3\r\n</pre>\r\n<pre>\r\nYes\r\n6\r\n6 5\r\n6 4\r\n6 3\r\n5 4\r\n5 3\r\n2 1\r\n</pre>\r\n\r\n<h4>Пример 3</h4>\r\n<pre>\r\n5 5\r\n0 0 0 0 5\r\n</pre>\r\n<pre>\r\nNo\r\n</pre>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/134/problem/C\" target=\"_blank\">Задача 134C</a>\r\n    <br><a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces Testing Round 3 2011.11.30</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;queue&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n// условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // ввод данных\r\n  int n; // число цветов\r\n  int s; // число карт\r\n  cin &gt;&gt; n &gt;&gt; s;\r\n  vector&lt;int&gt; A(n + 1); // число карт у каждого игрока\r\n  for (int i = 1; i &lt;= n; i++) {\r\n    cin &gt;&gt; A[i];\r\n  }\r\n\r\n  // решение\r\n  priority_queue&lt;pair&lt;int, int&gt; &gt; q;\r\n  for (int i = 1; i &lt;= n; i++) {\r\n    if (A[i]) q.push(make_pair(A[i], i));\r\n  }\r\n  vector&lt;pair&lt;int, int&gt; &gt; ret;\r\n  while (!q.empty()) {\r\n    pair&lt;int, int&gt; fu = q.top();\r\n    q.pop();\r\n    vector&lt;pair&lt;int, int&gt; &gt; tmp;\r\n    while (fu.first &gt; 0) {\r\n      if (q.empty()) {\r\n        cout &lt;&lt; \"No\\n\";\r\n        return 0;\r\n      }\r\n\r\n      pair&lt;int, int&gt; fv = q.top();\r\n      q.pop();\r\n      ret.push_back(make_pair(fu.second, fv.second));\r\n      fv.first--;\r\n      fu.first--;\r\n      if (fv.first &gt; 0) {\r\n        tmp.push_back(fv);\r\n      }\r\n    }\r\n    for (int i = 0; i &lt; tmp.size(); i++) {\r\n      q.push(tmp[i]);\r\n    }\r\n  }\r\n\r\n  // вывод результата\r\n  cout &lt;&lt; \"Yes\\n\";\r\n  cout &lt;&lt; ret.size() &lt;&lt; '\\n';\r\n  for (int i = 0; i &lt; ret.size(); i++) {\r\n    cout &lt;&lt; ret[i].first &lt;&lt; ' ' &lt;&lt; ret[i].second &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n</details>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1030-Techno2019o1.html":
 /*!******************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1030-Techno2019o1.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1030-Techno2019o1.html ***!
   \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16275,9 +17318,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1041-Round509.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1041-Round509.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1041-Round509.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1041-Round509.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16290,9 +17333,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1272-Round605.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1272-Round605.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1272-Round605.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1272-Round605.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16305,9 +17348,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1296-Round617.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1296-Round617.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1296-Round617.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1296-Round617.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16320,9 +17363,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1313-Round622.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1313-Round622.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1313-Round622.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1313-Round622.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16335,9 +17378,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1325-Round628.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1325-Round628.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1325-Round628.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1325-Round628.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16350,9 +17393,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1351-TRound16.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1351-TRound16.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1351-TRound16.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1351-TRound16.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16365,9 +17408,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1352-Round640.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1352-Round640.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1352-Round640.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1352-Round640.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16380,9 +17423,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1360-Round644.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1360-Round644.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1360-Round644.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1360-Round644.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16395,9 +17438,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1367-Round650.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1367-Round650.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1367-Round650.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1367-Round650.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16410,9 +17453,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1420-Round672.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1420-Round672.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1420-Round672.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1420-Round672.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16425,9 +17468,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1490-Round702.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1490-Round702.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1490-Round702.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1490-Round702.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16440,9 +17483,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1512-Round713.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1512-Round713.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1512-Round713.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1512-Round713.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16455,9 +17498,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1520-Round719.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1520-Round719.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1520-Round719.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1520-Round719.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16470,9 +17513,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1634-Round770.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1634-Round770.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1634-Round770.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1634-Round770.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16485,9 +17528,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1669-Round784.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1669-Round784.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1669-Round784.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1669-Round784.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16500,9 +17543,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1676-Round790.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1676-Round790.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1676-Round790.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1676-Round790.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16515,9 +17558,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1692-Round799.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1692-Round799.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1692-Round799.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1692-Round799.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16530,9 +17573,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1703-Round806.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1703-Round806.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1703-Round806.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1703-Round806.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16545,9 +17588,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1722-Round817.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1722-Round817.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1722-Round817.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1722-Round817.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16560,9 +17603,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1725-compfest.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1725-compfest.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1725-compfest.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1725-compfest.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16575,9 +17618,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1726-Round819.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1726-Round819.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1726-Round819.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1726-Round819.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16590,9 +17633,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1728-EdRound135.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1728-EdRound135.html":
 /*!****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1728-EdRound135.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1728-EdRound135.html ***!
   \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16605,9 +17648,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1729-Round820.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1729-Round820.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1729-Round820.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1729-Round820.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16620,9 +17663,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1730-Round823.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1730-Round823.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1730-Round823.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1730-Round823.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16635,9 +17678,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1733-Round821.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1733-Round821.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1733-Round821.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1733-Round821.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16650,9 +17693,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1734-Round822.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1734-Round822.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1734-Round822.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1734-Round822.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16665,9 +17708,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1738-GlRound22.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1738-GlRound22.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1738-GlRound22.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1738-GlRound22.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16680,9 +17723,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1739-EdRound136.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1739-EdRound136.html":
 /*!****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1739-EdRound136.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1739-EdRound136.html ***!
   \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16695,9 +17738,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1740-Round831.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1740-Round831.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1740-Round831.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1740-Round831.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16710,9 +17753,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1741-Round826.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1741-Round826.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1741-Round826.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1741-Round826.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16725,9 +17768,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1742-Round827.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1742-Round827.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1742-Round827.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1742-Round827.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16740,9 +17783,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1760-Round835.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1760-Round835.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1760-Round835.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1760-Round835.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16755,9 +17798,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1789-Round853.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1789-Round853.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1789-Round853.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1789-Round853.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16770,9 +17813,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1791-Round849.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1791-Round849.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1791-Round849.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1791-Round849.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16785,9 +17828,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1798-Round860.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1798-Round860.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1798-Round860.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1798-Round860.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16800,9 +17843,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1807-Round859.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1807-Round859.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1807-Round859.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1807-Round859.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16815,9 +17858,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1824-Round872.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1824-Round872.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1824-Round872.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1824-Round872.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16830,9 +17873,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1825-Round872.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1825-Round872.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1825-Round872.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1825-Round872.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16845,9 +17888,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1829-Round871.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1829-Round871.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1829-Round871.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1829-Round871.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16860,9 +17903,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1850-Round886.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1850-Round886.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1850-Round886.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1850-Round886.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16875,9 +17918,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1873-Round898.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1873-Round898.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1873-Round898.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1873-Round898.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16890,9 +17933,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1915-Round918.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1915-Round918.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1915-Round918.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1915-Round918.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16905,9 +17948,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1926-Round928.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1926-Round928.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1926-Round928.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1926-Round928.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16920,9 +17963,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1950-Round937.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1950-Round937.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1950-Round937.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1950-Round937.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16935,9 +17978,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1971-Round944.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1971-Round944.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1971-Round944.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1971-Round944.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16950,9 +17993,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1985-Round952.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1985-Round952.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1985-Round952.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1985-Round952.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16965,9 +18008,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-1999-Round964.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-1999-Round964.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-1999-Round964.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-1999-Round964.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16980,9 +18023,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2009-Round971.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2009-Round971.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2009-Round971.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2009-Round971.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16995,9 +18038,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2037-Round988.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2037-Round988.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2037-Round988.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2037-Round988.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17010,9 +18053,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2044-Round993.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2044-Round993.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2044-Round993.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2044-Round993.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17025,9 +18068,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2050-Round991.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2050-Round991.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2050-Round991.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2050-Round991.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17040,9 +18083,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2051-Round995.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2051-Round995.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2051-Round995.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2051-Round995.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17055,9 +18098,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2060-Round998.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2060-Round998.html":
 /*!**************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2060-Round998.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2060-Round998.html ***!
   \**************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17070,9 +18113,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2065-Round1003.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2065-Round1003.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2065-Round1003.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2065-Round1003.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17085,9 +18128,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2072-Round1006.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2072-Round1006.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2072-Round1006.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2072-Round1006.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17100,9 +18143,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2091-Round1013.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2091-Round1013.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2091-Round1013.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2091-Round1013.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17115,9 +18158,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2093-Round1016.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2093-Round1016.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2093-Round1016.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2093-Round1016.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17130,9 +18173,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2094-Round1017.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2094-Round1017.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2094-Round1017.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2094-Round1017.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17145,9 +18188,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2106-Round1020.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2106-Round1020.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2106-Round1020.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2106-Round1020.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17160,9 +18203,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2114-Round1027.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2114-Round1027.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2114-Round1027.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2114-Round1027.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17175,9 +18218,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2117-Round1029.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2117-Round1029.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2117-Round1029.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2117-Round1029.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17190,9 +18233,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2119-Round1035.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2119-Round1035.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2119-Round1035.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2119-Round1035.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17205,9 +18248,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2121-Round1032.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2121-Round1032.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2121-Round1032.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2121-Round1032.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17220,9 +18263,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2123-Round1034.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2123-Round1034.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2123-Round1034.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2123-Round1034.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17235,9 +18278,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2126-Round1037.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2126-Round1037.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2126-Round1037.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2126-Round1037.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17250,9 +18293,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2131-Round1042.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2131-Round1042.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2131-Round1042.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2131-Round1042.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17265,9 +18308,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2132-Round1043.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2132-Round1043.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2132-Round1043.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2132-Round1043.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17280,9 +18323,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2133-Round1044.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2133-Round1044.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2133-Round1044.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2133-Round1044.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17295,9 +18338,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2134-Round1045.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2134-Round1045.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2134-Round1045.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2134-Round1045.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17310,9 +18353,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2136-Round1046.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2136-Round1046.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2136-Round1046.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2136-Round1046.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17325,9 +18368,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2137-Round1047.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2137-Round1047.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2137-Round1047.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2137-Round1047.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17340,9 +18383,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2148-Round1050.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2148-Round1050.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2148-Round1050.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2148-Round1050.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17355,9 +18398,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2149-Round1054.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2149-Round1054.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2149-Round1054.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2149-Round1054.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17370,9 +18413,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2152-Round1055.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2152-Round1055.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2152-Round1055.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2152-Round1055.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17385,9 +18428,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2162-Round1059.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2162-Round1059.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2162-Round1059.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2162-Round1059.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17400,9 +18443,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2166-Round1064.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2166-Round1064.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2166-Round1064.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2166-Round1064.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17415,9 +18458,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2167-Round1062.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2167-Round1062.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2167-Round1062.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2167-Round1062.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17430,9 +18473,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2171-Round1065.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2171-Round1065.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2171-Round1065.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2171-Round1065.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17445,9 +18488,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2185-Round1074.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2185-Round1074.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2185-Round1074.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2185-Round1074.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17460,9 +18503,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2193-Round1076.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2193-Round1076.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2193-Round1076.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2193-Round1076.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17475,9 +18518,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2209-Round1087.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2209-Round1087.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2209-Round1087.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2209-Round1087.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17490,9 +18533,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2218-Round1090.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2218-Round1090.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2218-Round1090.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2218-Round1090.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17505,9 +18548,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-2236-Round1103.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-2236-Round1103.html":
 /*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-2236-Round1103.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-2236-Round1103.html ***!
   \***************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17520,69 +18563,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-228-Round141.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-313-Round186.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-228-Round141.html ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/228\" target=\"_blank\">Codeforces 228 Round 141 (Div. 2) 2012.09.27</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Не смешите мои подковы</a>\r\n  <br><a href=\"#t2\">Задача B. Две таблицы</a>\r\n  <br><a href=\"#t3\">Задача C. Детектор фракталов</a>\r\n  <br><a href=\"#t4\">Задача D. Зигзаг</a>\r\n  <br><a href=\"#t5\">Задача E. Как два пальца об асфальт</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Не смешите мои подковы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Не смешите мои подковы</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Две таблицы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Две таблицы</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Детектор фракталов -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Детектор фракталов</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Зигзаг -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Зигзаг</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Как два пальца об асфальт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Как два пальца об асфальт</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-230-Round142.html":
-/*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-230-Round142.html ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/230\" target=\"_blank\">Codeforces 230 Round 142 (Div. 2) 2012.10.01</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Драконы</a>\r\n  <br><a href=\"#t2\">Задача B. Т-простые числа</a>\r\n  <br><a href=\"#t3\">Задача C. Сдвиги</a>\r\n  <br><a href=\"#t4\">Задача D. Планеты</a>\r\n  <br><a href=\"#t5\">Задача E. Треугольники</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Драконы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Драконы</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Т-простые числа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Т-простые числа</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Сдвиги -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Сдвиги</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Планеты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Планеты</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Треугольники -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Треугольники</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-268-Round164.html":
-/*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-268-Round164.html ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/268\" target=\"_blank\">Codeforces 268 Round 164 (Div. 2) 2013.01.28</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Матчи</a>\r\n  <br><a href=\"#t2\">Задача B. Кнопки</a>\r\n  <br><a href=\"#t3\">Задача C. Красивые множества точек</a>\r\n  <br><a href=\"#t4\">Задача D. Шведская стенка</a>\r\n  <br><a href=\"#t5\">Задача E. Плейлист</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Матчи -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Матчи</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Кнопки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Кнопки</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Красивые множества точек -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Красивые множества точек</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Шведская стенка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Шведская стенка</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Плейлист -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Плейлист</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-278-Round170.html":
-/*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-278-Round170.html ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/278\" target=\"_blank\">Codeforces 278 Round 170 (Div. 2) 2013.02.28</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Кольцевая</a>\r\n  <br><a href=\"#t2\">Задача B. Новая задача</a>\r\n  <br><a href=\"#t3\">Задача C. Изучение языков</a>\r\n  <br><a href=\"#t4\">Задача D. Множество точек</a>\r\n  <br><a href=\"#t5\">Задача E. Игра</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Кольцевая -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Кольцевая</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Новая задача -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Новая задача</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Изучение языков -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Изучение языков</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Множество точек -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Множество точек</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Игра -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Игра</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-313-Round186.html":
-/*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-313-Round186.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-313-Round186.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17595,9 +18578,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-318-Round188.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-318-Round188.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-318-Round188.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-318-Round188.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17610,9 +18593,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-339-Round197.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-339-Round197.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-339-Round197.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-339-Round197.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17625,9 +18608,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-381-Round223.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-381-Round223.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-381-Round223.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-381-Round223.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17640,9 +18623,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-427-Round244.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-427-Round244.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-427-Round244.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-427-Round244.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17655,9 +18638,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-467-Round267.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-467-Round267.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-467-Round267.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-467-Round267.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17670,9 +18653,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-469-Round268.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-469-Round268.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-469-Round268.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-469-Round268.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17685,9 +18668,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-490-Round279.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-490-Round279.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-490-Round279.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-490-Round279.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17700,9 +18683,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-492-Round280.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-492-Round280.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-492-Round280.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-492-Round280.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17715,9 +18698,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-509-Round289.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-509-Round289.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-509-Round289.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-509-Round289.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17730,9 +18713,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-520-Round295.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-520-Round295.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-520-Round295.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-520-Round295.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17745,9 +18728,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-546-Round304.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-546-Round304.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-546-Round304.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-546-Round304.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17760,9 +18743,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-580-Round321.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-580-Round321.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-580-Round321.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-580-Round321.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17775,9 +18758,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-617-Round340.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-617-Round340.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-617-Round340.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-617-Round340.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17790,9 +18773,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-646-Techno1z.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-646-Techno1z.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-646-Techno1z.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-646-Techno1z.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17805,9 +18788,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-647-Techno2z.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-647-Techno2z.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-647-Techno2z.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-647-Techno2z.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17820,9 +18803,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-648-Techno1o.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-648-Techno1o.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-648-Techno1o.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-648-Techno1o.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17835,9 +18818,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-649-Techno2o.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-649-Techno2o.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-649-Techno2o.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-649-Techno2o.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17850,9 +18833,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-705-Round366.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-705-Round366.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-705-Round366.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-705-Round366.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17865,9 +18848,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-723-Round375.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-723-Round375.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-723-Round375.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-723-Round375.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17880,9 +18863,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-727-Techno2017o1.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-727-Techno2017o1.html":
 /*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-727-Techno2017o1.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-727-Techno2017o1.html ***!
   \*****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17895,9 +18878,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-732-Round377.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-732-Round377.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-732-Round377.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-732-Round377.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17910,9 +18893,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-733-Round378.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-733-Round378.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-733-Round378.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-733-Round378.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17925,9 +18908,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-743-Round384.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-743-Round384.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-743-Round384.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-743-Round384.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17940,9 +18923,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-758-Round392.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-758-Round392.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-758-Round392.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-758-Round392.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17955,9 +18938,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-791-Round405.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-791-Round405.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-791-Round405.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-791-Round405.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17970,9 +18953,9 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/elem-895-Round448.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/elem-895-Round448.html":
 /*!*************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/elem-895-Round448.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/elem-895-Round448.html ***!
   \*************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -17985,234 +18968,69 @@ var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/co
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-106-Round82.html":
-/*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-106-Round82.html ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Дурак</a>\r\n  <br><a href=\"#t2\">Задача B. Выбор ноутбука</a>\r\n  <br><a href=\"#t3\">Задача C. Булочки</a>\r\n  <br><a href=\"#t4\">Задача D. Остров сокровищ</a>\r\n  <br><a href=\"#t5\">Задача E. Космические спасатели</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Дурак -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Дурак</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Выбор ноутбука -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Выбор ноутбука</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Булочки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Булочки</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/106/problem/C\" target=\"_blank\">Задача 106C</a>\r\n      <br><a href=\"https://codeforces.com/contest/106\" target=\"_blank\">Codeforces 106 Round 82 Beta (Div. 2) 2011.08.19</a>\r\n    </div>\r\n\r\n    <h4>Пример 3</h4>\r\n<pre>\r\n10 1 5 2\r\n100 1 2 3\r\n</pre>\r\n    <code>15</code>\r\n\r\n    <h4>Пример 4</h4>\r\n<pre>\r\n10 1 5 11\r\n3 1 3 8\r\n</pre>\r\n    <code>24</code>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  int n; // число грамм теста\r\n  int m; // число видов начинки\r\n  int c0; // число грамм теста на булочку без начинки\r\n  int d0; // цена булочки без начинки\r\n  cin &gt;&gt; n &gt;&gt; m &gt;&gt; c0 &gt;&gt; d0;\r\n\r\n  // число грамм i-ой начинки\r\n  vector&lt;int&gt; A(m+1);\r\n\r\n  // число грамм i-ой начинки для одной булочки\r\n  vector&lt;int&gt; B(m+1);\r\n\r\n  // число грамм теста с i-ой начинкой для одной булочки\r\n  vector&lt;int&gt; C(m+1);\r\n\r\n  // цена булочки с i-ой начинкой\r\n  vector&lt;int&gt; D(m+1);\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    cin &gt;&gt; A[i] &gt;&gt; B[i] &gt;&gt; C[i] &gt;&gt; D[i];\r\n  }\r\n\r\n  // DP[i] максимальное количество денег,\r\n  // которое мы получим если используем i грамм теста\r\n  vector&lt;int&gt; DP(n+1,0);\r\n\r\n  for (int i = 1; i &lt;= m; i++) {\r\n    int maxb = A[i] / B[i]; // максимум булочек из i-ой начинки\r\n    for (int j = 1; j &lt;= maxb; j++) {\r\n      for (int k = 0; k &lt;= n - C[i]; k++) {\r\n        DP[k] = max(DP[k + C[i]] + D[i], DP[k]);\r\n      }\r\n    }\r\n  }\r\n\r\n  int res = 0;\r\n  for (int i = 0; i &lt;= n; i++) {\r\n    res = max(res, DP[i] + i / c0 * d0);\r\n  }\r\n\r\n  cout &lt;&lt; res;\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача D. Остров сокровищ -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Остров сокровищ</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Космические спасатели -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Космические спасатели</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-110-Round84.html":
-/*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-110-Round84.html ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/110\" target=\"_blank\">Codeforces 110 Round 84 Beta (Div. 2) 2011.08.29</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Почти счастливое число</a>\r\n  <br><a href=\"#t2\">Задача B. Счастливая строка</a>\r\n  <br><a href=\"#t3\">Задача C. Счастливая сумма цифр</a>\r\n  <br><a href=\"#t4\">Задача D. Счастливая вероятность</a>\r\n  <br><a href=\"#t5\">Задача E. Счастливое дерево</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Почти счастливое число -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Почти счастливое число</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Счастливая строка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Счастливая строка</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Счастливая сумма цифр -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Счастливая сумма цифр</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Счастливая вероятность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Счастливая вероятность</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Счастливое дерево -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Счастливое дерево</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-112-Round85.html":
-/*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-112-Round85.html ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/112\" target=\"_blank\">Codeforces 112 Round 85 Beta (Div. 2) 2011.09.03</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Петя и строки</a>\r\n  <br><a href=\"#t2\">Задача B. Петя и квадрат</a>\r\n  <br><a href=\"#t3\">Задача C. Петя и неравенства</a>\r\n  <br><a href=\"#t4\">Задача D. Петя и делители</a>\r\n  <br><a href=\"#t5\">Задача E. Петя и пауки</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Петя и строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Петя и строки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Петя и квадрат -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Петя и квадрат</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Петя и неравенства -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Петя и неравенства</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Петя и делители -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Петя и делители</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Петя и пауки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Петя и пауки</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-116-Round87.html":
-/*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-116-Round87.html ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/116\" target=\"_blank\">Codeforces 116 Round 87 Beta (Div. 2) 2011.09.15</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Трамвай</a>\r\n  <br><a href=\"#t2\">Задача B. Поросята и волки</a>\r\n  <br><a href=\"#t3\">Задача C. Праздник</a>\r\n  <br><a href=\"#t4\">Задача D. Газонокосилка</a>\r\n  <br><a href=\"#t5\">Задача E. Водопроводчик</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Трамвай -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Трамвай</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Поросята и волки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Поросята и волки</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Праздник -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Праздник</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Газонокосилка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Газонокосилка</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Водопроводчик -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Водопроводчик</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-118-Round89.html":
-/*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-118-Round89.html ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.07</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Упражнение на строки</a>\r\n  <br><a href=\"#t2\">Задача B. Подарок от Лены</a>\r\n  <br><a href=\"#t3\">Задача C. Модный номер</a>\r\n  <br><a href=\"#t4\">Задача D. Легионы Цезаря</a>\r\n  <br><a href=\"#t5\">Задача E. Дороги в Бертауне</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Упражнение на строки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Упражнение на строки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n  <details>\r\n    <summary>Решение</summary>\r\n\r\n    <div>\r\n      <a href=\"https://codeforces.com/contest/118/problem/A\" target=\"_blank\">Задача 118A</a>\r\n      <br><a href=\"https://codeforces.com/contest/118\" target=\"_blank\">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.27</a>\r\n    </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  vector&lt;char&gt; res;\r\n  vector&lt;char&gt; vow{ 'a','A','o','O','y','Y','e','E','u','U','i','I' };\r\n\r\n  string s;\r\n  cin &gt;&gt; s;\r\n\r\n  for (int i = 0; i &lt; s.size(); i++) {\r\n    if (find(vow.begin(), vow.end(), s[i]) == vow.end()) {\r\n      res.push_back('.');\r\n      res.push_back(tolower(s[i]));\r\n    }\r\n  }\r\n\r\n  for (int i = 0; i &lt; res.size(); i++) {\r\n    cout &lt;&lt; res[i];\r\n  }\r\n}\r\n</pre>\r\n  </details>\r\n</article>\r\n\r\n\r\n<!-- Задача B. Подарок от Лены -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Подарок от Лены</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Модный номер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Модный номер</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Легионы Цезаря -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Легионы Цезаря</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Дороги в Бертауне -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Дороги в Бертауне</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-120-kosSaratov.html":
-/*!********************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-120-kosSaratov.html ***!
-  \********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/120\" target=\"_blank\">Codeforces 120 Командная олимпиада школьников, Саратов, 2011 2011.10.18</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Лифт</a>\r\n  <br><a href=\"#t2\">Задача B. Что? Где? Когда?</a>\r\n  <br><a href=\"#t3\">Задача C. Винни-Пух и мед</a>\r\n  <br><a href=\"#t4\">Задача D. Три сына</a>\r\n  <br><a href=\"#t5\">Задача E. Поставь Коня!</a>\r\n  <br><a href=\"#t6\">Задача F. Пауки</a>\r\n  <br><a href=\"#t7\">Задача G. Бум</a>\r\n  <br><a href=\"#t8\">Задача H. Краткость — сестра таланта</a>\r\n  <br><a href=\"#t9\">Задача I. Счастье в числах</a>\r\n  <br><a href=\"#t10\">Задача J. Минимальная сумма</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Лифт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Лифт</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Что? Где? Когда? -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Что? Где? Когда?</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Винни-Пух и мед -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Винни-Пух и мед</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Три сына -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Три сына</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Поставь Коня! -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Поставь Коня!</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача F. Пауки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t6\"></div>\r\n  <h3>Задача F. Пауки</h3>\r\n\r\n  <div class=\"t6\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача G. Бум -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t7\"></div>\r\n  <h3>Задача G. Бум</h3>\r\n\r\n  <div class=\"t7\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача H. Краткость — сестра таланта -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t8\"></div>\r\n  <h3>Задача H. Краткость — сестра таланта</h3>\r\n\r\n  <div class=\"t8\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача I. Счастье в числах -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t9\"></div>\r\n  <h3>Задача I. Счастье в числах</h3>\r\n\r\n  <div class=\"t9\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача J. Минимальная сумма -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t10\"></div>\r\n  <h3>Задача J. Минимальная сумма</h3>\r\n\r\n  <div class=\"t10\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-134-TRound3.html":
-/*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-134-TRound3.html ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces 134 Testing Round 3 2011.12.02</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Среднестатистические элементы</a>\r\n  <br><a href=\"#t2\">Задача B. Пары чисел</a>\r\n  <br><a href=\"#t3\">Задача C. Обмены</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Среднестатистические элементы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"task1\"></div>\r\n  <h3>Задача A. Среднестатистические элементы</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Пары чисел -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Пары чисел</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Обмены -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Обмены</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-136-Round97.html":
-/*!*****************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-136-Round97.html ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/136\" target=\"_blank\">Codeforces 136 Round 97 (Div. 2) 2011.12.09</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Подарки</a>\r\n  <br><a href=\"#t2\">Задача B. Тернарная логика</a>\r\n  <br><a href=\"#t3\">Задача C. Замена</a>\r\n  <br><a href=\"#t4\">Задача D. Прямоугольник и квадрат</a>\r\n  <br><a href=\"#t5\">Задача E. Ноль-один</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Подарки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Подарки</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Тернарная логика -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Тернарная логика</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Замена -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Замена</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Прямоугольник и квадрат -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Прямоугольник и квадрат</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Ноль-один -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Ноль-один</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-141-Round101.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/p300/elem-228-Round141.html":
 /*!******************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-141-Round101.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/p300/elem-228-Round141.html ***!
   \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/141\" target=\"_blank\">Codeforces 141 Round 101 (Div. 2) 2012.01.08</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Веселая шутка</a>\r\n  <br><a href=\"#t2\">Задача B. Классики</a>\r\n  <br><a href=\"#t3\">Задача C. Очередь</a>\r\n  <br><a href=\"#t4\">Задача D. Трамплины</a>\r\n  <br><a href=\"#t5\">Задача E. Большая чистка</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Веселая шутка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Веселая шутка</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Классики -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Классики</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Очередь -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Очередь</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Трамплины -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Трамплины</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Большая чистка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Большая чистка</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/228\" target=\"_blank\">Codeforces 228 Round 141 (Div. 2) 2012.09.27</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Не смешите мои подковы</a>\r\n  <br><a href=\"#t2\">Задача B. Две таблицы</a>\r\n  <br><a href=\"#t3\">Задача C. Детектор фракталов</a>\r\n  <br><a href=\"#t4\">Задача D. Зигзаг</a>\r\n  <br><a href=\"#t5\">Задача E. Как два пальца об асфальт</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Не смешите мои подковы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Не смешите мои подковы</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Две таблицы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Две таблицы</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Детектор фракталов -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Детектор фракталов</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Зигзаг -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Зигзаг</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Как два пальца об асфальт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Как два пальца об асфальт</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-155-Round109.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/p300/elem-230-Round142.html":
 /*!******************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-155-Round109.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/p300/elem-230-Round142.html ***!
   \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/155\" target=\"_blank\">Codeforces 155 Round 109 (Div. 2) 2012.02.24</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. I_love_%username%</a>\r\n  <br><a href=\"#t2\">Задача B. Комбинация</a>\r\n  <br><a href=\"#t3\">Задача C. Домашнее задание</a>\r\n  <br><a href=\"#t4\">Задача D. Коллайдеры</a>\r\n  <br><a href=\"#t5\">Задача E. Профили-двойники</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. I_love_%username% -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. I_love_%username%</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Комбинация -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Комбинация</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Домашнее задание -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Домашнее задание</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Коллайдеры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Коллайдеры</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Профили-двойники -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Профили-двойники</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/230\" target=\"_blank\">Codeforces 230 Round 142 (Div. 2) 2012.10.01</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Драконы</a>\r\n  <br><a href=\"#t2\">Задача B. Т-простые числа</a>\r\n  <br><a href=\"#t3\">Задача C. Сдвиги</a>\r\n  <br><a href=\"#t4\">Задача D. Планеты</a>\r\n  <br><a href=\"#t5\">Задача E. Треугольники</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Драконы -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Драконы</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Т-простые числа -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Т-простые числа</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Сдвиги -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Сдвиги</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Планеты -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Планеты</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Треугольники -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Треугольники</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-158-vk-q1.html":
-/*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-158-vk-q1.html ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/158\" target=\"_blank\">Codeforces 158 VK Cup 2012 Квалификационный раунд 1 2012.03.04</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Следующий раунд</a>\r\n  <br><a href=\"#t2\">Задача B. Такси</a>\r\n  <br><a href=\"#t3\">Задача C. Команды cd и pwd</a>\r\n  <br><a href=\"#t4\">Задача D. Ледяные скульптуры</a>\r\n  <br><a href=\"#t5\">Задача E. Телефонные разговоры</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Следующий раунд -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Следующий раунд</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Такси -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Такси</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Команды cd и pwd -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Команды cd и pwd</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Ледяные скульптуры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Ледяные скульптуры</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Телефонные разговоры -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Телефонные разговоры</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-159-vk-q2.html":
-/*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-159-vk-q2.html ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/159\" target=\"_blank\">Codeforces 159 VK Cup 2012 Квалификационный раунд 2 2012.03.09</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Друзья или нет?</a>\r\n  <br><a href=\"#t2\">Задача B. На вкус и цвет фломастеры разные</a>\r\n  <br><a href=\"#t3\">Задача C. String Manipulation 1.0</a>\r\n  <br><a href=\"#t4\">Задача D. Палиндромные пары</a>\r\n  <br><a href=\"#t5\">Задача E. Зебробашня</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Друзья или нет? -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Друзья или нет?</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. На вкус и цвет фломастеры разные -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. На вкус и цвет фломастеры разные</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. String Manipulation 1.0 -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. String Manipulation 1.0</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Палиндромные пары -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Палиндромные пары</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Зебробашня -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Зебробашня</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-163-vk-r2.html":
-/*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-163-vk-r2.html ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/163\" target=\"_blank\">Codeforces 163 VK Cup 2012 Раунд 2 (Div. 1) 2012.03.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Подстрока и подпоследовательность</a>\r\n  <br><a href=\"#t2\">Задача B. Лемминги</a>\r\n  <br><a href=\"#t3\">Задача C. Конвейер</a>\r\n  <br><a href=\"#t4\">Задача D. Большой холодильник</a>\r\n  <br><a href=\"#t5\">Задача E. Электронное правительство</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Подстрока и подпоследовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Подстрока и подпоследовательность</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Лемминги -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Лемминги</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Конвейер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Конвейер</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Большой холодильник -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Большой холодильник</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Электронное правительство -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Электронное правительство</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-169-vk-r2.html":
-/*!***************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-169-vk-r2.html ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<article class=\"article\">\r\n  <br><a href=\"https://codeforces.com/contest/169\" target=\"_blank\">Codeforces 169 VK Cup 2012 Раунд 2 (Div. 2) 2012.03.25</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Домашние дела</a>\r\n  <br><a href=\"#t2\">Задача B. Замены цифр</a>\r\n  <br><a href=\"#t3\">Задача C. Подстрока и подпоследовательность</a>\r\n  <br><a href=\"#t4\">Задача D. Лемминги</a>\r\n  <br><a href=\"#t5\">Задача E. Конвейер</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Домашние дела -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Домашние дела</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Замены цифр -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Замены цифр</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Подстрока и подпоследовательность -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Подстрока и подпоследовательность</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Лемминги -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Лемминги</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Конвейер -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Конвейер</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/pages/p200/elem-200-Round126.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/p300/elem-268-Round164.html":
 /*!******************************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/pages/p200/elem-200-Round126.html ***!
+  !*** ./src/components/cf/rounds/rounds300/pages/p300/elem-268-Round164.html ***!
   \******************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/200\" target=\"_blank\">Codeforces 200 Round 126 (Div. 2) 2012.06.24</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Кино</a>\r\n  <br><a href=\"#t2\">Задача B. Напитки</a>\r\n  <br><a href=\"#t3\">Задача C. Чемпионат по футболу</a>\r\n  <br><a href=\"#t4\">Задача D. Язык программирования</a>\r\n  <br><a href=\"#t5\">Задача E. Тракторный институт</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Кино -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Кино</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Напитки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Напитки</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Чемпионат по футболу -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Чемпионат по футболу</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Язык программирования -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Язык программирования</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Тракторный институт -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Тракторный институт</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/268\" target=\"_blank\">Codeforces 268 Round 164 (Div. 2) 2013.01.28</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Матчи</a>\r\n  <br><a href=\"#t2\">Задача B. Кнопки</a>\r\n  <br><a href=\"#t3\">Задача C. Красивые множества точек</a>\r\n  <br><a href=\"#t4\">Задача D. Шведская стенка</a>\r\n  <br><a href=\"#t5\">Задача E. Плейлист</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Матчи -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Матчи</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Кнопки -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Кнопки</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Красивые множества точек -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Красивые множества точек</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Шведская стенка -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Шведская стенка</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Плейлист -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Плейлист</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1030a.html":
+/***/ "./src/components/cf/rounds/rounds300/pages/p300/elem-278-Round170.html":
+/*!******************************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/pages/p300/elem-278-Round170.html ***!
+  \******************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Module
+var code = "<article class=\"article\">\r\n  <a href=\"https://codeforces.com/contest/278\" target=\"_blank\">Codeforces 278 Round 170 (Div. 2) 2013.02.28</a>\r\n</article>\r\n\r\n\r\n<!-- Содержание -->\r\n<article class=\"article\">\r\n  <h2>Содержание</h2>\r\n\r\n      <a href=\"#t1\">Задача A. Кольцевая</a>\r\n  <br><a href=\"#t2\">Задача B. Новая задача</a>\r\n  <br><a href=\"#t3\">Задача C. Изучение языков</a>\r\n  <br><a href=\"#t4\">Задача D. Множество точек</a>\r\n  <br><a href=\"#t5\">Задача E. Игра</a>\r\n</article>\r\n\r\n\r\n<!-- Задача A. Кольцевая -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t1\"></div>\r\n  <h3>Задача A. Кольцевая</h3>\r\n\r\n  <div class=\"t1\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача B. Новая задача -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t2\"></div>\r\n  <h3>Задача B. Новая задача</h3>\r\n\r\n  <div class=\"t2\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача C. Изучение языков -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t3\"></div>\r\n  <h3>Задача C. Изучение языков</h3>\r\n\r\n  <div class=\"t3\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача D. Множество точек -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t4\"></div>\r\n  <h3>Задача D. Множество точек</h3>\r\n\r\n  <div class=\"t4\"></div>\r\n\r\n</article>\r\n\r\n\r\n<!-- Задача E. Игра -->\r\n<article class=\"article\">\r\n  <div class=\"anchor\" id=\"t5\"></div>\r\n  <h3>Задача E. Игра</h3>\r\n\r\n  <div class=\"t5\"></div>\r\n\r\n</article>\r\n";
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (code);
+
+/***/ }),
+
+/***/ "./src/components/cf/rounds/rounds300/z/z1030a.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1030a.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1030a.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18225,9 +19043,9 @@ var code = "<!-- Задача A. В поисках простой задачи -
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1030b.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1030b.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1030b.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1030b.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18240,9 +19058,9 @@ var code = "<!-- Задача B. Вася и кукурузное поле -->\r
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1030c.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1030c.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1030c.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1030c.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18255,9 +19073,9 @@ var code = "<!-- Задача C. Вася и золотой билет -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1030d.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1030d.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1030d.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1030d.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18270,9 +19088,9 @@ var code = "<!-- Задача D. Вася и треугольник -->\r\n<div 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1030e.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1030e.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1030e.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1030e.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18285,9 +19103,9 @@ var code = "<!-- Задача E. Вася и хорошие последоват
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1030f.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1030f.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1030f.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1030f.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18300,9 +19118,9 @@ var code = "<!-- Задача F. Сдвигаем ящики -->\r\n<div class=\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1030g.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1030g.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1030g.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1030g.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18315,9 +19133,9 @@ var code = "<!-- Задача G. Линейный конгруэнтный ге�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1352a.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1352a.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1352a.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1352a.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18330,9 +19148,9 @@ var code = "<!-- Задача A. Сумма круглых чисел -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1352b.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1352b.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1352b.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1352b.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18345,9 +19163,9 @@ var code = "<!-- Задача B. Сумма слагаемых одинаков�
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1352c.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1352c.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1352c.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1352c.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18360,9 +19178,9 @@ var code = "<!-- Задача C. K-е неделящееся на n -->\r\n<div 
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1352d.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1352d.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1352d.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1352d.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18375,9 +19193,9 @@ var code = "<!-- Задача D. Алиса, Боб и конфеты -->\r\n<di
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1352e.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1352e.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1352e.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1352e.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18390,9 +19208,9 @@ var code = "<!-- Задача E. Особые элементы -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1352f.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1352f.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1352f.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1352f.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18405,9 +19223,9 @@ var code = "<!-- Задача F. Восстановление 01-строки --
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z1352g.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z1352g.html":
 /*!**********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z1352g.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z1352g.html ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18420,55 +19238,10 @@ var code = "<!-- Задача G. Особая перестановка -->\r\n<d
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z200/z134a.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z300/z230a.html":
 /*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z200/z134a.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z300/z230a.html ***!
   \**************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<!-- Задача A. Среднестатистические элементы -->\r\n<div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n<p>Задана последовательность положительных целых чисел a1, a2, ..., an. Найдите все такие индексы i, что i-ый элемент равен среднему арифметическому всех остальных элементов (то есть всех элементов, кроме него).</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записано целое число n (2 ≤ n ≤ 2·10⁵). Вторая строка содержит элементы последовательности a1, a2, ..., an (1 ≤ ai ≤ 1000). Все элементы — положительные целые числа.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>В первую строку выведите количество искомых индексов. Во вторую строку — искомые индексы в порядке возрастания. Все индексы — это целые числа от 1 до n.</p>\r\n\r\n<p>Если искомых элементов не существует, то первая строка выходных данных должна содержать число 0. В этом случае вторую строку можно не выводить или вывести пустую строку.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n5\r\n1 2 3 4 5\r\n</pre>\r\n<pre>\r\n1\r\n3\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n4\r\n50 50 50 50\r\n</pre>\r\n<pre>\r\n4\r\n1 2 3 4\r\n</pre>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/134/problem/A\" target=\"_blank\">Задача 134A</a>\r\n    <br><a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces 134 Testing Round 3 2011.12.02</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n  // ввод данных\r\n  int n;\r\n  cin &gt;&gt; n;\r\n  vector&lt;int&gt; A(n);\r\n  for (int i = 0; i &lt; n; i++) {\r\n    cin &gt;&gt; A[i];\r\n  }\r\n\r\n  // решение\r\n  int sum = 0;\r\n  // находим сумму всех элементов\r\n  for (int i = 0; i &lt; n; i++) {\r\n    sum += A[i];\r\n  }\r\n\r\n  int cnt = 0;\r\n  vector&lt;int&gt; B;\r\n  for (int i = 0; i &lt; n; i++) {\r\n    // проверяем сумма что делится нацело\r\n    if (!((sum - A[i]) % (n - 1))) {\r\n      int tmp = (sum - A[i]) / (n - 1);\r\n      if (tmp == A[i]) {\r\n        cnt++;\r\n        B.push_back(i + 1);\r\n      }\r\n    }\r\n  }\r\n\r\n  // вывод результата\r\n  cout &lt;&lt; cnt &lt;&lt; '\\n';\r\n  if (cnt) {\r\n    for (int i = 0; i &lt; B.size(); i++) {\r\n      cout &lt;&lt; B[i] &lt;&lt; ' ';\r\n    }\r\n  }\r\n}\r\n</pre>\r\n</details>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/z/z200/z134b.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z200/z134b.html ***!
-  \**************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<!-- Задача B. Пары чисел -->\r\n<div class=\"time-memory\">(Время 1с. Память 256мб)</div>\r\n\r\n<p>Допустим, мы имеем пару чисел (a, b). Мы можем получить новую пару чисел вида (a + b, b) или (a, a + b) из данной. Назовем такое действие шагом.</p>\r\n\r\n<p>Пусть начальная пара чисел — (1,1). Ваша задача — найти число k, наименьшее количество шагов, необходимых чтобы получить из (1,1) пару, в которой хотя бы одно число равно n.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>Входные данные содержат единственное целое число n (1 ≤ n ≤ 10⁶).</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите единственное число k.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n  <h4>Пример 1</h4>\r\n  <code>5</code>\r\n  <code>3</code>\r\n\r\n  <h4>Пример 2</h4>\r\n  <code>1</code>\r\n  <code>0</code>\r\n  <p>Из пары (1,1) можно за три хода получить пару, содержащую 5: (1,1) → (1,2) → (3,2) → (5,2).</p>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/134/problem/B\" target=\"_blank\">Задача 134B</a>\r\n    <br><a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces Testing Round 3 2011.11.30</a>\r\n  </div>\r\n\r\n  <p>Нужно из пары (1,1) получить пару (x,n). Возможен переход (a,b) -> (a+b,b) и (a, a+b). При сложении мы должны выбрать из двух вариантов какие числа складывать.</p>\r\n  <p>Попробуем решить обратную задачу, т.е. из пары (x,n) получим пару (1,1). Возможен переход (x,y) -> (x,y-x) и (x-y,y). При переходе у нас должно получиться натуральное число, т.е. целое число больше нуля. При вычитании у нас остается только один вариант, во втором результат будет меньше нуля.</p>\r\n  <p>Перебираем все пары и смотрим за какое количество шагов мы из пары (x,n) придем к паре (1,1). Выберем минимальное количество шагов.</p>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;algorithm&gt;\r\n\r\nusing namespace std;\r\n\r\nlong long cnt;\r\n\r\nlong long gcd(long long a, long long b) {\r\n  if (b == 0) {\r\n    if (a != 1) {\r\n      cnt += 1'000'000;\r\n    }\r\n    cnt += a - 1;\r\n    return a;\r\n  } else {\r\n    cnt += a / b;\r\n    return gcd(b, a % b);\r\n  }\r\n}\r\n\r\nint main() {\r\n  long long n;\r\n  cin &gt;&gt; n;\r\n\r\n  long long min_count = 10'000'000;\r\n  for (long long i = 1; i &lt; n; i++) {\r\n    cnt = 0;\r\n    gcd(n, i);\r\n    min_count = min(min_count, cnt);\r\n  }\r\n  if (min_count == 10'000'000) {\r\n    cout &lt;&lt; 0;\r\n    return 0;\r\n  }\r\n\r\n  cout &lt;&lt; min_count - 1;\r\n}\r\n</pre>\r\n</details>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/z/z200/z134c.html":
-/*!**************************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z200/z134c.html ***!
-  \**************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Module
-var code = "<!-- Задача C. Обмены -->\r\n<div class=\"time-memory\">(Время 2с. Память 256мб)</div>\r\n\r\n<p>За круглым столом сидят n игроков. У всех них в сумме s карт n цветов, причем на начальный момент у первого человека карты только первого цвета, у второго — второго цвета и так далее. Они могут меняться картами, согласно следующим правилам:</p>\r\n<ul>\r\n  <li>человек может отдавать в процессе обмена карту только своего цвета;</li>\r\n  <li>игрок не может брать карту цвета, уже у него имеющегося (в частности, карты своего цвета он брать не может, независимо от того раздал он их все или нет);</li>\r\n  <li>в процессе одного обмена пара людей обменивается картами (каждый человек отдает одну карту и получает одну карту).</li>\r\n</ul>\r\n<p>Цель всех n человек: каждый из них должен отдать все карты, которые были у него в начале (то есть все карты своего цвета). Ваша задача указать, возможна ли такая последовательность обменов. Если ответ положительный, нужно указать все обмены.</p>\r\n\r\n<h4>Входные данные</h4>\r\n<p>В первой строке записаны целые числа n (1 ≤ n ≤ 200000) и s (1 ≤ s ≤ 200000). Вторая строка содержит n чисел — количество карт у 1-го, 2-го, ..., n-го игрока на момент начала игры. Игрок может не иметь карт вообще на момент начала игры.</p>\r\n\r\n<h4>Выходные данные</h4>\r\n<p>Выведите в первой строке «No», если такая последовательность обменов невозможна, и «Yes» в противном случае. Если ответ положительный, выведите далее число k — количество обменов. Далее в k строках опишите обмены — парой номеров меняющихся игроков. Обмены и номера в обменах выводите в любом порядке.</p>\r\n\r\n<details>\r\n  <summary>Примеры</summary>\r\n<h4>Пример 1</h4>\r\n<pre>\r\n4 8\r\n2 2 2 2\r\n</pre>\r\n<pre>\r\nYes\r\n4\r\n4 3\r\n4 2\r\n1 3\r\n1 2\r\n</pre>\r\n\r\n<h4>Пример 2</h4>\r\n<pre>\r\n6 12\r\n1 1 2 2 3 3\r\n</pre>\r\n<pre>\r\nYes\r\n6\r\n6 5\r\n6 4\r\n6 3\r\n5 4\r\n5 3\r\n2 1\r\n</pre>\r\n\r\n<h4>Пример 3</h4>\r\n<pre>\r\n5 5\r\n0 0 0 0 5\r\n</pre>\r\n<pre>\r\nNo\r\n</pre>\r\n</details>\r\n\r\n<details>\r\n  <summary>Решение</summary>\r\n\r\n  <div>\r\n    <a href=\"https://codeforces.com/contest/134/problem/C\" target=\"_blank\">Задача 134C</a>\r\n    <br><a href=\"https://codeforces.com/contest/134\" target=\"_blank\">Codeforces Testing Round 3 2011.11.30</a>\r\n  </div>\r\n\r\n<pre class=\"language-cpp\">\r\n#include &lt;iostream&gt;\r\n#include &lt;queue&gt;\r\n#include &lt;vector&gt;\r\n\r\nusing namespace std;\r\n\r\nint main() {\r\n// условная компиляция\r\n#ifdef _DEBUG\r\n  freopen(\"input.txt\", \"rt\", stdin);\r\n  freopen(\"output.txt\", \"wt\", stdout);\r\n#endif\r\n\r\n  // ввод данных\r\n  int n; // число цветов\r\n  int s; // число карт\r\n  cin &gt;&gt; n &gt;&gt; s;\r\n  vector&lt;int&gt; A(n + 1); // число карт у каждого игрока\r\n  for (int i = 1; i &lt;= n; i++) {\r\n    cin &gt;&gt; A[i];\r\n  }\r\n\r\n  // решение\r\n  priority_queue&lt;pair&lt;int, int&gt; &gt; q;\r\n  for (int i = 1; i &lt;= n; i++) {\r\n    if (A[i]) q.push(make_pair(A[i], i));\r\n  }\r\n  vector&lt;pair&lt;int, int&gt; &gt; ret;\r\n  while (!q.empty()) {\r\n    pair&lt;int, int&gt; fu = q.top();\r\n    q.pop();\r\n    vector&lt;pair&lt;int, int&gt; &gt; tmp;\r\n    while (fu.first &gt; 0) {\r\n      if (q.empty()) {\r\n        cout &lt;&lt; \"No\\n\";\r\n        return 0;\r\n      }\r\n\r\n      pair&lt;int, int&gt; fv = q.top();\r\n      q.pop();\r\n      ret.push_back(make_pair(fu.second, fv.second));\r\n      fv.first--;\r\n      fu.first--;\r\n      if (fv.first &gt; 0) {\r\n        tmp.push_back(fv);\r\n      }\r\n    }\r\n    for (int i = 0; i &lt; tmp.size(); i++) {\r\n      q.push(tmp[i]);\r\n    }\r\n  }\r\n\r\n  // вывод результата\r\n  cout &lt;&lt; \"Yes\\n\";\r\n  cout &lt;&lt; ret.size() &lt;&lt; '\\n';\r\n  for (int i = 0; i &lt; ret.size(); i++) {\r\n    cout &lt;&lt; ret[i].first &lt;&lt; ' ' &lt;&lt; ret[i].second &lt;&lt; '\\n';\r\n  }\r\n}\r\n</pre>\r\n</details>\r\n";
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (code);
-
-/***/ }),
-
-/***/ "./src/components/cf/rounds/rounds200/z/z230a.html":
-/*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z230a.html ***!
-  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18480,10 +19253,10 @@ var code = "<!-- Задача A. Драконы -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z230b.html":
-/*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z230b.html ***!
-  \*********************************************************/
+/***/ "./src/components/cf/rounds/rounds300/z/z300/z230b.html":
+/*!**************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/z/z300/z230b.html ***!
+  \**************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18495,10 +19268,10 @@ var code = "<!-- Задача B. Т-простые числа -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z230c.html":
-/*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z230c.html ***!
-  \*********************************************************/
+/***/ "./src/components/cf/rounds/rounds300/z/z300/z230c.html":
+/*!**************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/z/z300/z230c.html ***!
+  \**************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18510,10 +19283,10 @@ var code = "<!-- Задача C. Сдвиги -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z230d.html":
-/*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z230d.html ***!
-  \*********************************************************/
+/***/ "./src/components/cf/rounds/rounds300/z/z300/z230d.html":
+/*!**************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/z/z300/z230d.html ***!
+  \**************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18525,10 +19298,10 @@ var code = "<!-- Задача D. Планеты -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z230e.html":
-/*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z230e.html ***!
-  \*********************************************************/
+/***/ "./src/components/cf/rounds/rounds300/z/z300/z230e.html":
+/*!**************************************************************!*\
+  !*** ./src/components/cf/rounds/rounds300/z/z300/z230e.html ***!
+  \**************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18540,9 +19313,9 @@ var code = "<!-- Задача E. Треугольники -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z313a.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z313a.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z313a.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z313a.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18555,9 +19328,9 @@ var code = "<!-- Задача A. Илья и банковский счет -->\r
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z313b.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z313b.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z313b.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z313b.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18570,9 +19343,9 @@ var code = "<!-- Задача B. Илья и запросы -->\r\n<div class=\"
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z313c.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z313c.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z313c.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z313c.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18585,9 +19358,9 @@ var code = "<!-- Задача C. Илья и матрица -->\r\n<div class=\"
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z313d.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z313d.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z313d.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z313d.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18600,9 +19373,9 @@ var code = "<!-- Задача D. Илья и дороги -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z313e.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z313e.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z313e.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z313e.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18615,9 +19388,9 @@ var code = "<!-- Задача E. Илья и два числа -->\r\n<div class
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z381a.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z381a.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z381a.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z381a.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18630,9 +19403,9 @@ var code = "<!-- Задача A. Сережа и Дима -->\r\n<div class=\"ti
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z381b.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z381b.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z381b.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z381b.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18645,9 +19418,9 @@ var code = "<!-- Задача B. Сережа и лесенка -->\r\n<div clas
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z381c.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z381c.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z381c.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z381c.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18660,9 +19433,9 @@ var code = "<!-- Задача C. Сережа и префиксы -->\r\n<div cl
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z381d.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z381d.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z381d.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z381d.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18675,9 +19448,9 @@ var code = "<!-- Задача D. Сережа и дерево -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z381e.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z381e.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z381e.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z381e.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18690,9 +19463,9 @@ var code = "<!-- Задача E. Сережа и скобочки -->\r\n<div cl
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z520a.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z520a.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z520a.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z520a.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18705,9 +19478,9 @@ var code = "<!-- Задача A. Панграмма -->\r\n<div class=\"time-mem
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z520b.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z520b.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z520b.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z520b.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18720,9 +19493,9 @@ var code = "<!-- Задача B. Две кнопки -->\r\n<div class=\"time-me
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z520c.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z520c.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z520c.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z520c.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18735,9 +19508,9 @@ var code = "<!-- Задача C. Выравнивание ДНК -->\r\n<div cla
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z520d.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z520d.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z520d.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z520d.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18750,9 +19523,9 @@ var code = "<!-- Задача D. Кубики -->\r\n<div class=\"time-memory\">
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z520e.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z520e.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z520e.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z520e.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18765,9 +19538,9 @@ var code = "<!-- E. Сплошные плюсы -->\r\n<div class=\"time-memory\
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z580a.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z580a.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z580a.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z580a.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18780,9 +19553,9 @@ var code = "<!-- Задача A. Кефа и первые шаги -->\r\n<div c
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z580b.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z580b.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z580b.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z580b.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18795,9 +19568,9 @@ var code = "<!-- Задача B. Кефа и компания -->\r\n<div class=
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z580c.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z580c.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z580c.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z580c.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18810,9 +19583,9 @@ var code = "<!-- Задача C. Кефа и парк -->\r\n<div class=\"time-m
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z580d.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z580d.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z580d.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z580d.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -18825,9 +19598,9 @@ var code = "<!-- Задача D. Кефа и блюда -->\r\n<div class=\"time
 
 /***/ }),
 
-/***/ "./src/components/cf/rounds/rounds200/z/z580e.html":
+/***/ "./src/components/cf/rounds/rounds300/z/z580e.html":
 /*!*********************************************************!*\
-  !*** ./src/components/cf/rounds/rounds200/z/z580e.html ***!
+  !*** ./src/components/cf/rounds/rounds300/z/z580e.html ***!
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 

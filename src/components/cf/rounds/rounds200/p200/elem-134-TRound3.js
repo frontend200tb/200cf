@@ -1,6 +1,6 @@
-import a    from '../../z/z200/z134a.html';
-import b    from '../../z/z200/z134b.html';
-import c    from '../../z/z200/z134c.html';
+import a    from '../z200/z134a.html';
+import b    from '../z200/z134b.html';
+import c    from '../z200/z134c.html';
 
 export default function inElem() {
 

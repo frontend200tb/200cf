@@ -72,6 +72,8 @@ import html70       from './../p100/elem-70-Round64.html';
 import html71       from './../p100/elem-71-Round65.html';
 import html72       from './../p100/elem-72-ULRound2.html';
 import html73       from './../p100/elem-73-Round66.html';
+import html74       from './../p100/elem-74-Round68.html';
+import html75       from './../p100/elem-75-Round67.html';
 import html76       from './../p100/elem-76-vuos.html';
 import html81       from './../p100/elem-81-yandex-q1.html';
 import html82       from './../p100/elem-82-yandex-q2.html';
@@ -153,6 +155,8 @@ export const pages = [
   [html71, 71],
   [html72, 72],
   [html73, 73],
+  [html74, 74],
+  [html75, 75],
   [html76, 76],
   [html81, 81],
   [html82, 82],
