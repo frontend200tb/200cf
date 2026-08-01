@@ -42,3 +42,57 @@ NO
 YES
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/28/problem/A" target="_blank">Задача 28A</a>
+    <br><a href="https://codeforces.com/contest/27" target="_blank">Codeforces 28 Round 28 Beta 2010.09.17</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int f[101], a[101];
+
+inline int find(int x) {
+  while (x != f[x]) {
+    x = f[x] = f[f[x]];
+  }
+  return x;
+}
+
+int main() {
+  int n; // число ячеек в машине
+  cin >> n;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> a[i];
+    f[i] = i;
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    int x;
+    cin >> x;
+    if (i - x >= 1) {
+      f[find(i)] = find(i - x);
+    }
+    if (i + x <= n) {
+      f[find(i)] = find(i + x);
+    }
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    if (find(a[i]) != find(i)) {
+      cout << "NO";
+      return 0;
+    }
+  }
+
+  cout << "YES";
+}
+</pre>
+</details>

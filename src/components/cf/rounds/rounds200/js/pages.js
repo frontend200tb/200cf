@@ -8,6 +8,8 @@ import in110     from '../p200/elem-110-Round84';
 import in112     from '../p200/elem-112-Round85';
 import in116     from '../p200/elem-116-Round87';
 import in118     from '../p200/elem-118-Round89';
+import in120     from '../p200/elem-120-kosSaratov';
+import in131     from '../p200/elem-131-Round95';
 import in134     from '../p200/elem-134-TRound3';
 
 export default function pageLink(asideItems, currentContent) {
@@ -29,6 +31,8 @@ export default function pageLink(asideItems, currentContent) {
             case 112: in112(); break;
             case 116: in116(); break;
             case 118: in118(); break;
+            case 120: in120(); break;
+            case 131: in131(); break;
             case 134: in134(); break;
             default: break;
           }
