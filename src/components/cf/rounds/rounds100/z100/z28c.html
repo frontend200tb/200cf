@@ -48,3 +48,61 @@
 2.50216960000000070000
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/28/problem/C" target="_blank">Задача 28C</a>
+    <br><a href="https://codeforces.com/contest/27" target="_blank">Codeforces 28 Round 28 Beta 2010.09.17</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+double dp[55][55][55], c[55][55];
+
+int main() {
+  int n; // число студентов
+  int m; // число комнат с умывальниками
+  cin >> n >> m;
+
+  c[0][0] = dp[0][0][0] = 1;
+
+  for (int i = 1; i <= n; ++i) {
+    c[i][0] = 1;
+    for (int j = 1; j <= i; ++j) {
+      c[i][j] = c[i - 1][j] + c[i - 1][j - 1];
+    }
+  }
+
+  int a[55]{};
+
+  for (int i = 1; i <= m; ++i) {
+    cin >> a[i];
+  }
+
+  for (int i = 1; i <= m; ++i) {
+    for (int j = 0; j <= n; ++j) {
+      for (int k = 0; k <= j; ++k) {
+        for (int l = 0; l <= n - j; ++l) {
+          dp[i][j + l][max(k, (l + a[i] - 1) / a[i])] +=
+            dp[i - 1][j][k] * c[n - j][l];
+        }
+      }
+    }
+  }
+
+  double s{}, t{};
+
+  for (int i = 1; i <= n; ++i) {
+    s += dp[m][n][i] * i;
+    t += dp[m][n][i];
+  }
+
+  cout << fixed << setprecision(9) << s / t;
+}
+</pre>
+</details>
