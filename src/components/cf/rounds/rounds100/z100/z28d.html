@@ -46,3 +46,54 @@
 1 3 5
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/28/problem/D" target="_blank">Задача 28D</a>
+    <br><a href="https://codeforces.com/contest/27" target="_blank">Codeforces 28 Round 28 Beta 2010.09.17</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+const int MAX = 1e5 + 9;
+map<int, int> m[MAX];
+int z, cnt, p[MAX], f[MAX], s[MAX];
+
+int main() {
+  int n; // число грузовиков
+  cin >> n;
+
+  for (int i = 1;i <= n;i++)
+  {
+    int v, c, l, r;
+    cin >> v >> c >> l >> r;
+    if (r + c < MAX && (!l || m[l].find(r + c) != m[l].end())) {
+      int u = m[l][r + c];
+      f[i] = f[u] + v, p[i] = u;
+      if (!r && f[i] > f[z]) {
+        z = i;
+      }
+      if (f[i] > f[m[l + c][r]]) {
+        m[l + c][r] = i;
+      }
+    }
+  }
+
+  while (z) {
+    s[cnt++] = z;
+    z = p[z];
+  }
+
+  cout << cnt << '\n';
+  while (cnt--) {
+    cout << s[cnt] << ' ';
+  }
+}
+</pre>
+</details>

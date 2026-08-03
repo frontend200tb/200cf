@@ -78,10 +78,18 @@ import in73      from '../p100/elem-73-Round66';
 import in74      from '../p100/elem-74-Round68';
 import in75      from '../p100/elem-75-Round67';
 import in76      from '../p100/elem-76-vuos';
+import in77      from '../p100/elem-77-Round69';
+import in78      from '../p100/elem-78-Round70';
+import in79      from '../p100/elem-79-Round71';
+import in80      from '../p100/elem-80-Round69';
 import in81      from '../p100/elem-81-yandex-q1';
 import in82      from '../p100/elem-82-yandex-q2';
+import in83      from '../p100/elem-83-Round72';
+import in84      from '../p100/elem-84-Round72';
 import in85      from '../p100/elem-85-yandex-r1';
 import in86      from '../p100/elem-86-yandex-r2';
+import in87      from '../p100/elem-87-Round73';
+import in88      from '../p100/elem-88-Round73';
 import in97      from '../p100/elem-97-yandex-f';
 
 export default function pageLink(asideItems, currentContent) {
@@ -173,10 +181,18 @@ export default function pageLink(asideItems, currentContent) {
             case 74: in74(); break;
             case 75: in75(); break;
             case 76: in76(); break;
+            case 77: in77(); break;
+            case 78: in78(); break;
+            case 79: in79(); break;
+            case 80: in80(); break;
             case 81: in81(); break;
             case 82: in82(); break;
+            case 83: in83(); break;
+            case 84: in84(); break;
             case 85: in85(); break;
             case 86: in86(); break;
+            case 87: in87(); break;
+            case 88: in88(); break;
             case 97: in97(); break;
             default: break;
           }

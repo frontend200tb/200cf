@@ -75,10 +75,18 @@ import html73       from './../p100/elem-73-Round66.html';
 import html74       from './../p100/elem-74-Round68.html';
 import html75       from './../p100/elem-75-Round67.html';
 import html76       from './../p100/elem-76-vuos.html';
+import html77       from './../p100/elem-77-Round69.html';
+import html78       from './../p100/elem-78-Round70.html';
+import html79       from './../p100/elem-79-Round71.html';
+import html80       from './../p100/elem-80-Round69.html';
 import html81       from './../p100/elem-81-yandex-q1.html';
 import html82       from './../p100/elem-82-yandex-q2.html';
+import html83       from './../p100/elem-83-Round72.html';
+import html84       from './../p100/elem-84-Round72.html';
 import html85       from './../p100/elem-85-yandex-r1.html';
 import html86       from './../p100/elem-86-yandex-r2.html';
+import html87       from './../p100/elem-87-Round73.html';
+import html88       from './../p100/elem-88-Round73.html';
 import html97       from './../p100/elem-97-yandex-f.html';
 
 export const pages = [
@@ -158,9 +166,17 @@ export const pages = [
   [html74, 74],
   [html75, 75],
   [html76, 76],
+  [html77, 77],
+  [html78, 78],
+  [html79, 79],
+  [html80, 80],
   [html81, 81],
   [html82, 82],
+  [html83, 83],
+  [html84, 84],
   [html85, 85],
   [html86, 86],
+  [html87, 87],
+  [html88, 88],
   [html97, 97],
 ];
