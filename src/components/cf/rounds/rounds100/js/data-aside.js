@@ -88,5 +88,11 @@ export const asideThemes = [
   '86 Яндекс 2011r2',
   '87 Round 73 (Div. 1)',
   '88 Round 73 (Div. 2)',
+  '89 Round 74 (Div. 1)',
+  '90 Round 74 (Div. 2)',
+  '91 Round 75 (Div. 1)',
+  '92 Round 75 (Div. 2)',
+  '93 Round 76 (Div. 1)',
+  '94 Round 76 (Div. 2)',
   '97 Яндекс 2011f',
 ];

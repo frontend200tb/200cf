@@ -90,6 +90,12 @@ import in85      from '../p100/elem-85-yandex-r1';
 import in86      from '../p100/elem-86-yandex-r2';
 import in87      from '../p100/elem-87-Round73';
 import in88      from '../p100/elem-88-Round73';
+import in89      from '../p100/elem-89-Round74';
+import in90      from '../p100/elem-90-Round74';
+import in91      from '../p100/elem-91-Round75';
+import in92      from '../p100/elem-92-Round75';
+import in93      from '../p100/elem-93-Round76';
+import in94      from '../p100/elem-94-Round76';
 import in97      from '../p100/elem-97-yandex-f';
 
 export default function pageLink(asideItems, currentContent) {
@@ -193,6 +199,12 @@ export default function pageLink(asideItems, currentContent) {
             case 86: in86(); break;
             case 87: in87(); break;
             case 88: in88(); break;
+            case 89: in89(); break;
+            case 90: in90(); break;
+            case 91: in91(); break;
+            case 92: in92(); break;
+            case 93: in93(); break;
+            case 94: in94(); break;
             case 97: in97(); break;
             default: break;
           }

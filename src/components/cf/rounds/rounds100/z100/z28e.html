@@ -62,3 +62,153 @@
 0.50000000 0.00000000
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/28/problem/E" target="_blank">Задача 28E</a>
+    <br><a href="https://codeforces.com/contest/27" target="_blank">Codeforces 28 Round 28 Beta 2010.09.17</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <span>
+#include <iomanip>
+
+using namespace std;
+
+constexpr int N = 1e4 + 9;
+typedef long double ld;
+constexpr ld eps = 1e-9, INF = 1e18;
+
+typedef struct vec {
+  ld x, y;
+  vec operator+(const vec& to) const {
+    return { x + to.x, y + to.y };
+  }
+  vec operator-(const vec& to) const {
+    return { x - to.x, y - to.y };
+  }
+  vec operator*(const ld& to) const {
+    return { x * to, y * to };
+  }
+  ld operator/(const vec& to) const {
+    return abs(to.x) <= eps ? y / to.y : x / to.x;
+  }
+  bool operator==(const vec& to) const {
+    return abs(x - to.x) <= eps && abs(y - to.y) <= eps;
+  }
+  bool operator!=(const vec& to) const {
+    return !(*this == to);
+  }
+  ld operator*(const vec& to) const {
+    return x * to.x + y * to.y;
+  }
+} pnt;
+
+ld cross(vec a, vec b) {
+  return a.x * b.y - a.y * b.x;
+}
+
+int cross_sign(vec a, vec b) {
+  ld s = cross(a, b);
+  return abs(s) <= eps ? 0 : s < 0 ? -1 : 1;
+}
+
+struct line {
+  ld A, B, C;
+  line(pnt a, pnt b) : A(a.y - b.y), B(b.x - a.x), C(cross(a, b)) {}
+};
+
+pnt itsc(line a, line b) {
+  if (abs(a.A) <= eps) {
+    swap(a, b);
+  }
+  ld y = (a.C * b.A - a.A * b.C) / (a.A * b.B - a.B * b.A);
+  return { -(y * a.B + a.C) / a.A, y };
+}
+
+int n;
+pnt O, p[N], pos;
+vec V1, V2, V3;
+ld t1 = INF, t2 = INF, z1, z2, d;
+
+bool chk(pnt p) {
+  if (p = p - pos; int d = cross_sign(V1, V2)) {
+    return d * cross_sign(V1, p) >= 0 && d * cross_sign(V2, p) <= 0;
+  }
+  for (vec V : {V1, V2}) {
+    if (V == O || cross_sign(V, p)) {
+      continue;
+    }
+    if (p / V >= 0) {
+      return true;
+    }
+  }
+  return false;
+}
+
+void ctr(ld T1, ld T2) {
+  if (T1 < -eps || T2 < -eps) {
+    return;
+  }
+  if (T1 < t1 || abs(T1 - t1) < eps && T2 < t2) {
+    t1 = T1;
+    t2 = T2;
+  }
+}
+
+void calc(pnt p) {
+  if (!chk(p)) {
+    return;
+  }
+  if (cross_sign(V1, V2)) {
+    auto [pA, pB, pC] = line{ pos, pos + V1 };
+    vec v{ pA, pB };
+    ld T = (v * p + pC) / (v * V3), T1 = (p - pos - V3 * T) / V1,
+      T2 = (T1 * z1 + T * z2) / -d;
+    if (T >= -eps) {
+      ctr(T1, T2);
+    }
+  } else {
+    if (V1 != O && V3 / V1 < 0) {
+      ld T = (p - pos) / V1;
+      ctr(T, T * -z1 / d);
+    }
+    if (V2 != O) {
+      ctr((p - pos) / V2, 0);
+    }
+  }
+}
+
+int main() {
+  cin.tie(nullptr)->sync_with_stdio(false);
+  cin >> n;
+
+  for (auto& [x, y] : span(p, n)) {
+    cin >> x >> y;
+  }
+
+  cin >> pos.x >> pos.y;
+  cin >> V1.x >> V1.y >> z1 >> d >> V3.x >> V3.y >> z2;
+  V2 = V1 - V3 * (z1 / z2);
+  for_each(p, p + n, calc);
+  for (int i = 0; i < n; ++i) {
+    for (pnt a = p[i], b = p[(i + 1) % n]; vec V : {V1, V2}) {
+      if (cross_sign(V, a - pos) * cross_sign(V, b - pos) >= 0) {
+        continue;
+      }
+      calc(itsc({ pos, pos + V }, { a, b }));
+    }
+  }
+
+  if (t1 == INF) {
+    return cout << -1 << ' ' << -1 << endl, 0;
+  }
+
+  return cout << fixed << setprecision(8) << t1 << ' ' << t2 << endl, 0;
+}
+</pre>
+</details>

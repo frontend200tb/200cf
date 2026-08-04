@@ -69,8 +69,7 @@ int main() {
   int n; // число грузовиков
   cin >> n;
 
-  for (int i = 1;i <= n;i++)
-  {
+  for (int i = 1;i <= n;i++) {
     int v, c, l, r;
     cin >> v >> c >> l >> r;
     if (r + c < MAX && (!l || m[l].find(r + c) != m[l].end())) {

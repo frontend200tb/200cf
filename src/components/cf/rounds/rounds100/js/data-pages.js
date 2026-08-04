@@ -87,6 +87,12 @@ import html85       from './../p100/elem-85-yandex-r1.html';
 import html86       from './../p100/elem-86-yandex-r2.html';
 import html87       from './../p100/elem-87-Round73.html';
 import html88       from './../p100/elem-88-Round73.html';
+import html89       from './../p100/elem-89-Round74.html';
+import html90       from './../p100/elem-90-Round74.html';
+import html91       from './../p100/elem-91-Round75.html';
+import html92       from './../p100/elem-92-Round75.html';
+import html93       from './../p100/elem-93-Round76.html';
+import html94       from './../p100/elem-94-Round76.html';
 import html97       from './../p100/elem-97-yandex-f.html';
 
 export const pages = [
@@ -178,5 +184,11 @@ export const pages = [
   [html86, 86],
   [html87, 87],
   [html88, 88],
+  [html89, 89],
+  [html90, 90],
+  [html91, 91],
+  [html92, 92],
+  [html93, 93],
+  [html94, 94],
   [html97, 97],
 ];
