@@ -93,7 +93,12 @@ import html91       from './../p100/elem-91-Round75.html';
 import html92       from './../p100/elem-92-Round75.html';
 import html93       from './../p100/elem-93-Round76.html';
 import html94       from './../p100/elem-94-Round76.html';
+import html95       from './../p100/elem-95-Round77.html';
+import html96       from './../p100/elem-96-Round77.html';
 import html97       from './../p100/elem-97-yandex-f.html';
+import html98       from './../p100/elem-98-Round78.html';
+import html99       from './../p100/elem-99-Round78.html';
+import html100      from './../p100/elem-100-ULRound3.html';
 
 export const pages = [
   [html1, 1],
@@ -190,5 +195,10 @@ export const pages = [
   [html92, 92],
   [html93, 93],
   [html94, 94],
+  [html95, 95],
+  [html96, 96],
   [html97, 97],
+  [html98, 98],
+  [html99, 99],
+  [html100, 100],
 ];

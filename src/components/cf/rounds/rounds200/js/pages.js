@@ -11,6 +11,7 @@ import in118     from '../p200/elem-118-Round89';
 import in120     from '../p200/elem-120-kosSaratov';
 import in131     from '../p200/elem-131-Round95';
 import in134     from '../p200/elem-134-TRound3';
+import in136     from '../p200/elem-136-Round97';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -34,6 +35,7 @@ export default function pageLink(asideItems, currentContent) {
             case 120: in120(); break;
             case 131: in131(); break;
             case 134: in134(); break;
+            case 136: in136(); break;
             default: break;
           }
         } else {

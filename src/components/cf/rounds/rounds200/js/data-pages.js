@@ -27,7 +27,7 @@ export const pages = [
   [html120, 120],
   [html131, 131],
   [html134, 134],
-  html136,
+  [html136, 136],
   html141,
   html155,
   html158,

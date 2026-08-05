@@ -94,5 +94,10 @@ export const asideThemes = [
   '92 Round 75 (Div. 2)',
   '93 Round 76 (Div. 1)',
   '94 Round 76 (Div. 2)',
+  '95 Round 77 (Div. 1)',
+  '96 Round 77 (Div. 2)',
   '97 Яндекс 2011f',
+  '98 Round 78 (Div. 1)',
+  '99 Round 78 (Div. 2)',
+  '100 UL Round 3',
 ];

@@ -96,7 +96,12 @@ import in91      from '../p100/elem-91-Round75';
 import in92      from '../p100/elem-92-Round75';
 import in93      from '../p100/elem-93-Round76';
 import in94      from '../p100/elem-94-Round76';
+import in95      from '../p100/elem-95-Round77';
+import in96      from '../p100/elem-96-Round77';
 import in97      from '../p100/elem-97-yandex-f';
+import in98      from '../p100/elem-98-Round78';
+import in99      from '../p100/elem-99-Round78';
+import in100      from '../p100/elem-100-ULRound3';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -205,7 +210,12 @@ export default function pageLink(asideItems, currentContent) {
             case 92: in92(); break;
             case 93: in93(); break;
             case 94: in94(); break;
+            case 95: in95(); break;
+            case 96: in96(); break;
             case 97: in97(); break;
+            case 98: in98(); break;
+            case 99: in99(); break;
+            case 100: in100(); break;
             default: break;
           }
         } else {
