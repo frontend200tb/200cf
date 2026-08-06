@@ -29,3 +29,35 @@
 2.33333333
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/29/problem/B" target="_blank">Задача 29B</a>
+    <br><a href="https://codeforces.com/contest/29" target="_blank">Codeforces 29 Round 29 Beta (Div. 2) 2010.09.20</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+  int l; // расстояние от А до В
+  int d; // расстояние от А до светофора
+  int v; // скорость машины в м/с
+  int g; // время зеленого света
+  int r; // время красного света
+  cin >> l >> d >> v >> g >> r;
+
+  if (d % ((g + r) * v) >= g * v) {
+    l += (g + r) * v - d % ((g + r) * v);
+  }
+  double res = l * 1.0 / v;
+
+  cout << fixed << setprecision(8) << res;
+}
+</pre>
+</details>

@@ -12,6 +12,13 @@ import in120     from '../p200/elem-120-kosSaratov';
 import in131     from '../p200/elem-131-Round95';
 import in134     from '../p200/elem-134-TRound3';
 import in136     from '../p200/elem-136-Round97';
+import in141     from '../p200/elem-141-Round101';
+import in155     from '../p200/elem-155-Round109';
+import in158     from '../p200/elem-158-vk-q1';
+import in159     from '../p200/elem-159-vk-q2';
+import in163     from '../p200/elem-163-vk-r2';
+import in169     from '../p200/elem-169-vk-r2';
+import in200     from '../p200/elem-200-Round126';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -36,6 +43,13 @@ export default function pageLink(asideItems, currentContent) {
             case 131: in131(); break;
             case 134: in134(); break;
             case 136: in136(); break;
+            case 141: in141(); break;
+            case 155: in155(); break;
+            case 158: in158(); break;
+            case 159: in159(); break;
+            case 163: in163(); break;
+            case 169: in169(); break;
+            case 200: in200(); break;
             default: break;
           }
         } else {
