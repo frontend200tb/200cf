@@ -33,3 +33,46 @@
 100 2 3 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/29/problem/B" target="_blank">Задача 29B</a>
+    <br><a href="https://codeforces.com/contest/29" target="_blank">Codeforces 29 Round 29 Beta (Div. 2) 2010.09.20</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+map<int, vector<int> >mp;
+
+void dfs(int u, int fa) {
+  cout << u << ' ';
+  for (int v : mp[u])
+    if (v != fa) dfs(v, u);
+}
+
+int main() {
+  int n; // число почтовых штампов
+  cin >> n;
+
+  int a, b; // пара городов
+  while (n--) {
+    cin >> a >> b;
+    mp[a].push_back(b), mp[b].push_back(a);
+  }
+
+  for (auto i : mp) {
+    if (i.second.size() < 2) {
+      return dfs(i.first, 0), 0;
+    }
+  }
+
+}
+</pre>
+</details>
