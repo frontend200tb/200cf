@@ -55,3 +55,86 @@
 7 6 7 2 1 5 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/29/problem/E" target="_blank">Задача 29E</a>
+    <br><a href="https://codeforces.com/contest/29" target="_blank">Codeforces 29 Round 29 Beta (Div. 2) 2010.09.20</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <deque>
+
+using namespace std;
+
+int main() {
+  int n, m, u, v;
+  pair<int, int> p;
+  cin >> n >> m;
+  vector<vector<int>> edges(n + 1);
+
+  for (int i = 0; i < m; i++) {
+    cin >> u >> v;
+    edges[u].push_back(v);
+    edges[v].push_back(u);
+  }
+
+  deque<pair<int, int>> q;
+  vector<vector<pair<int, int>>> pre(n + 1, vector<pair<int, int>>(n + 1));
+  pre[1][n] = { -1, -1 };
+  pair<int, int> end = { n, 1 };
+  q.push_back({ 1, n });
+
+  while (q.empty() == 0) {
+    p = q.front();
+    q.pop_front();
+    if (p == end) {
+      break;
+    }
+
+    for (int u1 : edges[p.first]) {
+      for (int v1 : edges[p.second]) {
+        if (u1 != v1 && pre[u1][v1].first == 0) {
+          pre[u1][v1] = p;
+          q.push_back({ u1, v1 });
+        }
+      }
+    }
+  }
+
+  if (pre[n][1].first == 0) {
+    cout << -1 << endl;
+  } else {
+    u = n;
+    v = 1;
+    vector<int> arr1;
+    vector<int> arr2;
+
+    while (u != -1) {
+      p = pre[u][v];
+      u = p.first;
+      v = p.second;
+      arr1.push_back(u);
+      arr2.push_back(v);
+    }
+
+    int k = arr1.size() - 1;
+    cout << k << endl;
+
+    for (int i = k - 1; i >= 0; i--) {
+      cout << arr1[i] << ' ';
+    }
+    cout << n << endl;
+
+    for (int i = k - 1; i >= 0; i--) {
+      cout << arr2[i] << ' ';
+    }
+    cout << 1 << endl;
+  }
+}
+</pre>
+</details>
