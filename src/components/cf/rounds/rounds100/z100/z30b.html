@@ -43,3 +43,43 @@ NO
 NO
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/30/problem/B" target="_blank">Задача 30B</a>
+    <br><a href="https://codeforces.com/contest/30" target="_blank">Codeforces 30 Round 30 Beta 2010.09.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int a, b, c, d, e, f;
+int mon[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+
+void check(int y, int m, int d) {
+  mon[2] = 28 + (y % 4 == 0);
+  if (m < 13 && d <= mon[m] &&
+    (c - y > 18 || c - y == 18 && m < b ||
+      c - y == 18 && m == b && d <= a)) {
+    cout << "YES";
+    exit(0);
+  }
+}
+
+int main() {
+  scanf("%d.%d.%d%d.%d.%d", &a, &b, &c, &d, &e, &f);
+  check(d, e, f);
+  check(e, d, f);
+  check(e, f, d);
+  check(d, f, e);
+  check(f, d, e);
+  check(f, e, d);
+  cout << "NO";
+  return 0;
+}
+</pre>
+</details>
