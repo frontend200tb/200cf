@@ -32,3 +32,61 @@
 1.3000000000
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/30/problem/C" target="_blank">Задача 30C</a>
+    <br><a href="https://codeforces.com/contest/30" target="_blank">Codeforces 30 Round 30 Beta 2010.09.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+#define db double
+
+struct zz {
+  db x, y, t, p;
+} a[200005];
+
+bool operator <(zz x, zz y) {
+  return x.t < y.t;
+}
+
+db dp[5005], ans = 0;
+
+bool Check(zz x, zz y) {
+  return ((x.t - y.t) * (x.t - y.t) >=
+    (x.x - y.x) * (x.x - y.x) +
+    (x.y - y.y) * (x.y - y.y));
+}
+
+int main() {
+  int n; // число мишеней
+  cin >> n;
+
+  for (int i = 1; i <= n; i++) {
+    scanf("%lf%lf%lf%lf", &a[i].x, &a[i].y, &a[i].t, &a[i].p);
+  }
+
+  sort(a + 1, a + n + 1);
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j < i; j++) {
+      if (Check(a[i], a[j])) {
+        dp[i] = max(dp[i], dp[j]);
+      }
+    }
+    dp[i] += a[i].p;
+    ans = max(ans, dp[i]);
+  }
+
+  printf("%lf", ans);
+  return 0;
+}
+</pre>
+</details>
