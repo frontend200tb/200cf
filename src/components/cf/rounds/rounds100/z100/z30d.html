@@ -44,3 +44,67 @@
 14.24264068711928400000
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/30/problem/D" target="_blank">Задача 30D</a>
+    <br><a href="https://codeforces.com/contest/30" target="_blank">Codeforces 30 Round 30 Beta 2010.09.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+#define db double
+
+const int maxn = 1e5 + 10;
+
+db st, a[maxn], x, y;
+
+db getdis(int id) {
+  return 1.0 * sqrt((a[id] - x) * (a[id] - x) + y * y);
+}
+
+db solve1(int l, int r) {
+  return a[r] - a[l] + min(getdis(l), getdis(r));
+}
+
+db solve2(int l, int r) {
+  return a[r] - a[l] + min(fabs(st - a[l]) + getdis(r),
+    fabs(st - a[r]) + getdis(l));
+}
+
+int main() {
+  int n, k;
+  cin >> n >> k;
+
+  db ans;
+
+  for (int i = 1;i <= n;i++) {
+    cin >> a[i];
+  }
+
+  st = a[k];
+  cin >> x >> y;
+
+  sort(a + 1, a + 1 + n);
+  if (k == n + 1) {
+    ans = solve1(1, n);
+  } else {
+    ans = solve2(1, n);
+    for (int i = 1;i < n;i++) {
+      ans = min(ans, min(solve1(1, i) + solve2(i + 1, n),
+        solve2(1, i) + solve1(i + 1, n)));
+    }
+  }
+
+  cout << fixed << setprecision(10) << ans;
+}
+</pre>
+</details>
