@@ -46,3 +46,107 @@ xabyczba
 7 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/30/problem/E" target="_blank">Задача 30E</a>
+    <br><a href="https://codeforces.com/contest/30" target="_blank">Codeforces 30 Round 30 Beta 2010.09.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+const int maxn = 1e5 + 5;
+int ans, pos, vis, id, nxt[maxn], r[maxn], f[maxn], g[maxn];
+
+int main() {
+  string str;
+  cin >> str;
+
+  int n = str.size();
+  string s = " " + str;
+
+  reverse(str.begin(), str.end());
+  str = ' ' + str;
+
+  for (int i = 1; i <= n; i++) {
+    r[i] = (vis > i) ? min(r[id * 2 - i], vis - i) : 1;
+    while (s[i + r[i]] == s[i - r[i]]) {
+      r[i]++;
+    }
+    if (r[i] + i > vis) {
+      vis = r[i] + i;
+      id = i;
+    }
+  }
+
+  for (int i = 2, j = 0; i <= n; i++) {
+    while (j && str[j + 1] != str[i]) {
+      j = nxt[j];
+    }
+    j += (str[j + 1] == str[i]);
+    nxt[i] = j;
+
+  }
+
+  for (int i = 1, j = 0; i <= n; i++) {
+    while (j && str[j + 1] != s[i]) {
+      j = nxt[j];
+    }
+    j += (str[j + 1] == s[i]);
+    f[i] = j;
+    if (j) {
+      g[i] = i - j + 1;
+    }
+    if (j == n) {
+      j = nxt[j];
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    if (f[i - 1] > f[i]) {
+      f[i] = f[i - 1];
+      g[i] = g[i - 1];
+    }
+  }
+
+  bool flag(0);
+
+  for (int i = 1; i <= n; i++) {
+    if (2 * r[i] - 1 > ans) {
+      ans = 2 * r[i] - 1;
+      pos = i - r[i] + 1;
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    if (2 * min(f[i - r[i]], n - (i + r[i] - 1)) + 2 * r[i] - 1 > ans) {
+      flag = 1;
+      pos = i;
+      ans = 2 * min(f[i - r[i]], n - (i + r[i] - 1)) + 2 * r[i] - 1;
+    }
+  }
+
+  if (!flag) {
+    cout << "1\n" << pos << ' ' << ans;
+  } else {
+    printf("3\n%d %d\n%d %d\n%d %d",
+      g[pos - r[pos]],
+      f[pos - r[pos]],
+      pos - r[pos] + 1,
+      2 * r[pos] - 1,
+      n - f[pos - r[pos]] + 1,
+      f[pos - r[pos]]);
+  }
+
+  return 0;
+}
+</pre>
+</details>
