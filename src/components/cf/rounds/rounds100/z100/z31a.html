@@ -29,3 +29,40 @@
 -1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/31/problem/A" target="_blank">Задача 31A</a>
+    <br><a href="https://codeforces.com/contest/31" target="_blank">Codeforces 31 Round 31 Beta (Div. 2) 2010.09.27</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int i, k, g, n, w[200];
+  cin >> n;
+
+  for (i = 0; i < n; i++) {
+    cin >> w[i];
+  }
+
+  for (i = 0; i < n; i++) {
+    for (k = 0; k < n; k++) {
+      for (g = k + 1; g < n; g++) {
+        if (w[k] + w[g] == w[i]) {
+          cout << i + 1 << " " << k + 1 << " " << g + 1;
+          return 0;
+        }
+      }
+    }
+  }
+
+  cout << -1;
+}
+</pre>
+</details>
