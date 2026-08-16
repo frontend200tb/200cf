@@ -37,3 +37,42 @@ No solution
 No solution
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/31/problem/B" target="_blank">Задача 31B</a>
+    <br><a href="https://codeforces.com/contest/31" target="_blank">Codeforces 31 Round 31 Beta (Div. 2) 2010.09.27</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string s;
+  cin >> s;
+
+  int f = 0, p, f1 = -1;
+  int i = 0, a;
+
+  while (s.find('@', i) != -1) {
+    a = s.find('@', i);
+    if (s[a + 1] == '@' || s[a + 2] == '@' || s[a + 1] == '\0' || a == 0) {
+      return cout << "No solution", 0;
+    }
+    if (f == 1) {
+      s.insert(p, ",");
+    }
+    p = a + 2 + (f);
+    f = 1;
+    i = a + 2;
+  }
+
+  cout << (s.find('@') != -1 ? s : "No solution");
+}
+</pre>
+</details>
