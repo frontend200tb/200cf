@@ -48,3 +48,52 @@
 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/31/problem/C" target="_blank">Задача 31C</a>
+    <br><a href="https://codeforces.com/contest/31" target="_blank">Codeforces 31 Round 31 Beta (Div. 2) 2010.09.27</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int cnt, q, sum[5055], ans[5055];
+
+int main() {
+  int n; // число групп
+  cin >> n;
+
+  int l[5055], r[5055];
+  for (int i = 1; i <= n; i++) {
+    cin >> l[i] >> r[i];
+  }
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j < i; j++) {
+      if (l[i] < r[j] && l[j] < r[i]) {
+        sum[i]++;
+        sum[j]++;
+        q++;
+      }
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    if (sum[i] == q) {
+      ans[++cnt] = i;
+    }
+  }
+
+  cout << cnt << endl;
+
+  for (int i = 1; i <= cnt; i++) {
+    cout << ans[i] << ' ';
+  }
+}
+</pre>
+</details>
