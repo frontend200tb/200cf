@@ -35,3 +35,35 @@
 1012
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/32/problem/B" target="_blank">Задача 32B</a>
+    <br><a href="https://codeforces.com/contest/32" target="_blank">Codeforces 32 Round 32 Beta (Div. 2) 2010.10.02</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  char c;
+
+  while (cin >> c) {
+    if (c == '.') {
+      cout << 0;
+    } else {
+      cin >> c;
+      if (c == '.') {
+        cout << 1;
+      } else {
+        cout << 2;
+      }
+    }
+  }
+}
+</pre>
+</details>
