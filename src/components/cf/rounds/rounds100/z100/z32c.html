@@ -28,3 +28,27 @@
 4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/32/problem/C" target="_blank">Задача 32C</a>
+    <br><a href="https://codeforces.com/contest/32" target="_blank">Codeforces 32 Round 32 Beta (Div. 2) 2010.10.02</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  long long n, m; // длина и ширина доски
+  long long s; // длина прыжка блохи
+  cin >> n >> m >> s;
+
+  cout << (1 + (n - 1) % s) * (1 + (n - 1) / s) *
+    (1 + (m - 1) % s) * (1 + (m - 1) / s);
+}
+</pre>
+</details>
