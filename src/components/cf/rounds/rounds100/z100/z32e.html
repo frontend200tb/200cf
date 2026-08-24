@@ -61,3 +61,87 @@ YES
 YES
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/32/problem/E" target="_blank">Задача 32E</a>
+    <br><a href="https://codeforces.com/contest/32" target="_blank">Codeforces 32 Round 32 Beta (Div. 2) 2010.10.02</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+struct Point {
+  long double x, y;
+} st, ed, Mir1, Mir2, Wal1, Wal2;
+
+double mult(Point p0, Point p1, Point p2) {
+  return (p1.x - p0.x) * (p2.y - p0.y) - (p1.y - p0.y) * (p2.x - p0.x);
+}
+
+bool Judge(Point a, Point b, Point c, Point d) {
+  if (max(a.x, b.x) < min(c.x, d.x) ||
+    max(a.y, b.y) < min(c.y, d.y) ||
+    max(c.x, d.x) < min(a.x, b.x) ||
+    max(c.y, d.y) < min(a.y, b.y) ||
+    mult(a, c, b) * mult(a, b, d) < 0 ||
+    mult(c, a, d) * mult(c, d, b) < 0) {
+    return false;
+  }
+  return true;
+}
+
+Point Refl(Point A, Point B, Point C) {
+  long double xp1 = A.x, xp2 = B.x, yp1 = A.y, yp2 = B.y;
+  long double x = C.x, y = C.y, ptx, pty, k1, k2, b1, b2;
+
+  if (xp1 == xp2) {
+    ptx = xp1;
+    pty = y;
+  } else if (yp1 == yp2) {
+    ptx = x;
+    pty = yp1;
+  } else {
+    k1 = (yp1 - yp2) / (xp1 - xp2);
+    b1 = yp1 - xp1 * k1;
+    k2 = -1 / k1;
+    b2 = y - x * k2;
+    ptx = (b2 - b1) / (k1 - k2);
+    pty = ptx * k1 + b1;
+  }
+
+  Point G;
+  G.x = ptx * 2 - x;
+  G.y = pty * 2 - y;
+
+  return G;
+}
+
+int main() {
+  cin >> st.x >> st.y;
+  cin >> ed.x >> ed.y;
+  cin >> Wal1.x >> Wal1.y >> Wal2.x >> Wal2.y;
+  cin >> Mir1.x >> Mir1.y >> Mir2.x >> Mir2.y;
+
+  if (!Judge(st, ed, Wal1, Wal2) &&
+    !Judge(st, ed, Mir1, Mir2)) {
+    puts("YES");
+  } else {
+    Point Mired = Refl(Mir1, Mir2, ed);
+    Point MirWal1 = Refl(Mir1, Mir2, Wal1);
+    Point MirWal2 = Refl(Mir1, Mir2, Wal2);
+    if (!Judge(st, Mired, Wal1, Wal2) &&
+      Judge(st, Mired, Mir1, Mir2) &&
+      !Judge(st, Mired, MirWal1, MirWal2)) {
+      puts("YES");
+    } else {
+      puts("NO");
+    }
+  }
+}
+</pre>
+</details>

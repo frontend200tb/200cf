@@ -82,11 +82,12 @@
 
 using namespace std;
 
-string s[500];
 int main() {
   int n, m; // высота и ширина карты
   int k; // номер созвездия
   cin >> n >> m >> k;
+
+  string s[500]; // карта звездного неба
 
   for (int i = 0; i < n; i++) {
     cin >> s[i];
