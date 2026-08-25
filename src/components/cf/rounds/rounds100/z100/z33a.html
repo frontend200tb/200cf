@@ -39,3 +39,46 @@
 13
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/33/problem/A" target="_blank">Задача 33A</a>
+    <br><a href="https://codeforces.com/contest/33" target="_blank">Codeforces 33 Round 33 Beta 2010.10.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int x, y, a[1000];
+int main() {
+  int n; // число зубов
+  int m; // число рядов
+  int k; // число карасиков
+  cin >> n >> m >> k;
+
+  int A[1000];
+
+  for (int i = 0; i < m; i++) {
+    A[i] = 1e6;
+  }
+
+  int r; // номер ряда
+  int c; // остаточная жизнеспособность зуба
+
+  while (n--) {
+    cin >> r >> c;
+    A[r - 1] = min(A[r - 1], c);
+  }
+
+  while (m--) {
+    n += A[m];
+  }
+
+  cout << min(n + 1, k);
+}
+</pre>
+</details>
