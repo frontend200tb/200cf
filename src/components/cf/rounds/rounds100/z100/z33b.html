@@ -55,3 +55,76 @@ a c 0
 -1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/33/problem/B" target="_blank">Задача 33B</a>
+    <br><a href="https://codeforces.com/contest/33" target="_blank">Codeforces 33 Round 33 Beta 2010.10.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+#define maxn 0x3f3f3f3f
+
+string a, b, c;
+int di[26][26], w, k, s;
+char u, v;
+
+int main() {
+  cin >> a >> b >> k;
+  memset(di, 0x3f, sizeof(di));
+
+  for (int x = 0; x < 26; x++) {
+    di[x][x] = 0;
+  }
+
+  while (k--) {
+    cin >> u >> v >> w;
+    di[u - 'a'][v - 'a'] = min(di[u - 'a'][v - 'a'], w);
+  }
+
+  for (int x = 0; x < 26; x++) {
+    for (int y = 0;y < 26;y++) {
+      for (int z = 0;z < 26;z++) {
+        di[y][z] = min(di[y][z], di[y][x] + di[x][z]);
+      }
+    }
+  }
+
+  if (a.size() != b.size()) {
+    cout << "-1";
+    exit(0);
+  }
+
+  for (int x = 0; x < a.size(); x++) {
+    int mi = maxn;
+    char m;
+
+    for (int y = 0;y < 26;y++) {
+      int cos = di[a[x] - 'a'][y] + di[b[x] - 'a'][y];
+      if (cos < mi) {
+        mi = cos;
+        m = (char)y + 'a';
+      }
+    }
+
+    if (mi == maxn) {
+      cout << "-1";
+      exit(0);
+    }
+
+    s += mi, c += m;
+  }
+
+  cout << s << endl << c;
+
+  return 0;
+}
+</pre>
+</details>
