@@ -38,3 +38,35 @@
 18
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/33/problem/C" target="_blank">Задача 33C</a>
+    <br><a href="https://codeforces.com/contest/33" target="_blank">Codeforces 33 Round 33 Beta 2010.10.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n; // число элементов
+  cin >> n;
+
+  int t, c{}, s{}, m{};
+
+  while (n--) {
+    cin >> t;
+    c += t;
+    s += t;
+    c = c > 0 ? c : 0;
+    m = m > c ? m : c;
+  }
+
+  cout << 2 * m - s;
+}
+</pre>
+</details>
