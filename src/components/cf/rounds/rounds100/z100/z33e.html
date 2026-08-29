@@ -80,3 +80,154 @@ matan 1 08:03 1
 1 1 08:01 1 08:02
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/33/problem/E" target="_blank">Задача 33E</a>
+    <br><a href="https://codeforces.com/contest/33" target="_blank">Codeforces 33 Round 33 Beta 2010.10.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <map>
+#include <cstring>
+
+using namespace std;
+
+const int N = 5e4 + 10;
+int a[N], vis[N], t[N][20], dp[105][N], fm[105][N];
+
+struct node {
+  int p, t, w, id;
+}b[N];
+
+bool cmp(node x, node y) { return x.t < y.t; }
+map<string, int> mp;
+
+void out(int t) {
+  printf("%d %02d:%02d ", t / 1440 + 1, t % 1440 / 60, t % 60);
+}
+
+void dfs(int i, int j, int ln) {
+
+  if (!i || !j || fm[i][j] == -1) {
+    cout << ln << '\n';
+    return;
+  }
+
+  if (fm[i][j] == j) {
+    dfs(i - 1, fm[i][j], ln);
+  } else {
+    dfs(i - 1, fm[i][j], ln + 1);
+    int l = t[fm[i][j]][0], r = j - 1;
+    cout << b[i].id << " ";
+    out(l), out(r);
+    cout << '\n';
+  }
+}
+
+int main() {
+  int n; // число дисциплин в списке
+  int m; // число студентов
+  int k; // число дней
+  cin >> m >> n >> k;
+
+  for (int i = 1; i <= m; i++) {
+    string s;
+    cin >> s;
+    mp[s] = i;
+  }
+
+  for (int i = 1; i <= m; i++) {
+    cin >> a[i];
+  }
+
+  for (int i = 1; i <= 4; i++) {
+    int ax, ay, bx, by;
+    scanf("%2d:%2d-%2d:%2d", &ax, &ay, &bx, &by);
+
+    for (int j = 0; j < k; j++) {
+      for (int x = ax * 60 + ay; x <= bx * 60 + by; x++) {
+        vis[j * 1440 + x] = 1;
+      }
+    }
+  }
+
+  int ln = 0;
+  int at = k * 1440;
+
+  for (int i = 0; i < 20; i++) {
+    t[at][i] = at - 1;
+  }
+
+  for (int i = at - 1; i >= 0; i--) {
+    if (vis[i]) {
+      t[i][0] = t[i + 1][0];
+    } else {
+      t[i][0] = i;
+    }
+    for (int j = 1; j < 20; j++) {
+      t[i][j] = t[t[i][j - 1] + 1][j - 1];
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    string s;
+    cin >> s;
+
+    int p, x, y, w;
+    scanf("%d %2d:%2d %d", &p, &x, &y, &w);
+
+    p--;
+    if (!mp.count(s)) {
+      continue;
+    }
+    b[++ln] = { mp[s],p * 1440 + x * 60 + y,w,i };
+  }
+
+  n = ln;
+  sort(b + 1, b + 1 + n, cmp);
+  memset(fm, -1, sizeof(fm));
+
+  for (int i = 1; i <= n; i++) {
+
+    for (int j = 0; j <= at; j++) {
+      if (dp[i][j] < dp[i - 1][j]) {
+        dp[i][j] = dp[i - 1][j];
+        fm[i][j] = j;
+      }
+    }
+
+    for (int j = 0; j < at; j++) {
+      int x = j - 1;
+      for (int k = 0; k < 20; k++) {
+        if (a[b[i].p] & (1 << k)) {
+          x = t[x + 1][k];
+        }
+      }
+      if (x<b[i].t && dp[i - 1][j] + b[i].w>dp[i][x + 1]) {
+        dp[i][x + 1] = dp[i - 1][j] + b[i].w;
+        fm[i][x + 1] = j;
+      }
+    }
+  }
+
+  int ans = -1, st = 0;
+
+  for (int i = 0; i <= at; i++) {
+    if (dp[n][i] > ans) {
+      ans = dp[n][i];
+      st = i;
+    }
+  }
+
+  cout << ans << '\n';
+  dfs(n, st, 0);
+
+  return 0;
+}
+</pre>
+</details>
