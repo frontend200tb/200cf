@@ -3,6 +3,7 @@
 ************************/
 import {pages} from './data-pages';
 import in1     from '../pages/elem-sch1';
+import in2     from '../pages/elem-sch2';
 import in3     from '../pages/elem-sch3';
 import in6     from '../pages/elem-sch6';
 
@@ -17,6 +18,7 @@ export default function pageLink(asideItems, currentContent) {
         // подключаем на каждую страницу свои задачи
         switch (index) {
           case 0: in1(); break;
+          case 1: in2(); break;
           case 2: in3(); break;
           case 5: in6(); break;
         }

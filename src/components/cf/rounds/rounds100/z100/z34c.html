@@ -27,3 +27,43 @@
   <code>30,20,10</code>
   <code>10,20,30</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/34/problem/C" target="_blank">Задача 34C</a>
+    <br><a href="https://codeforces.com/contest/34" target="_blank">Codeforces 34 Round 34 Beta (Div. 2) 2010.10.11</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int a[111], i = 1, s, n;
+char q;
+
+int main() {
+  cin >> a[1];
+
+  while (cin >> q >> a[++i]);
+  i--;
+  sort(a + 1, a + i + 1);
+  s = a[1];
+
+  for (int j = 2; j <= i; j++) {
+    if (a[j] != a[j - 1] + 1 && a[j] != a[j - 1]) {
+      cout << a[j - 1] << ",";
+      s = a[j];
+    }
+    if (a[j - 1] == s && a[j] == a[j - 1] + 1) {
+      cout << a[j - 1] << "-";
+    }
+  }
+
+  cout << a[i];
+}
+</pre>
+</details>

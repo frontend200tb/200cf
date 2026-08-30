@@ -185,45 +185,6 @@ int main() {
   <div class="anchor" id="t5"></div>
   <h3>Задача E. Распродажа</h3>
 
-  <div class="time-memory">(Время 2с. Память 256мб)</div>
+  <div class="t5"></div>
 
-  <details>
-    <summary>Решение</summary>
-
-  <div>
-    <a href="https://codeforces.com/contest/34/problem/B" target="_blank">Задача 34B</a>
-    <br><a href="https://codeforces.com/contest/34" target="_blank">Codeforces 34 Round 34 Beta (Div. 2) 2010.10.11</a>
-  </div>
-
-<pre>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;algorithm&gt;
-
-using namespace std;
-
-int main() {
-  // ввод данных
-  int n; // число тв
-  int m; // число сколько можно взять тв
-  cin >> n >> m;
-  vector&lt;int&gt; A(n);
-  for (int i = 0; i &lt; n; i++) {
-    cin >> A[i];
-  }
-
-  // решение
-  sort(A.begin(), A.end());
-  int res = 0;
-  int i = 0;
-  while (i &lt;= m and A[i] &lt; 0) {
-    res -= A[i];
-    i++;
-  }
-
-  // вывод результата
-  cout &lt;&lt; res;
-}
-</pre>
-  </details>
 </article>
