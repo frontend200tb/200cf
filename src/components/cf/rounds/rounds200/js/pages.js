@@ -2,7 +2,11 @@
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
 import { pages }   from './data-pages';
+import in101     from '../p200/elem-101-Round79';
+import in102     from '../p200/elem-102-Round79';
+import in103     from '../p200/elem-103-Round80';
 import in104     from '../p200/elem-104-Round80';
+import in105     from '../p200/elem-105-Round81';
 import in106     from '../p200/elem-106-Round82';
 import in110     from '../p200/elem-110-Round84';
 import in112     from '../p200/elem-112-Round85';
@@ -33,7 +37,11 @@ export default function pageLink(asideItems, currentContent) {
 
           // подключаем задачи на страницу из базы
           switch (pages[index][1]) {
+            case 101: in101(); break;
+            case 102: in102(); break;
+            case 103: in103(); break;
             case 104: in104(); break;
+            case 105: in105(); break;
             case 106: in106(); break;
             case 110: in110(); break;
             case 112: in112(); break;

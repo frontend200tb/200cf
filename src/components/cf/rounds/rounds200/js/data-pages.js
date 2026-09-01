@@ -1,5 +1,9 @@
 // Создаем массив pages со страницами из aside меню
+import html101      from './../p200/elem-101-Round79.html';
+import html102      from './../p200/elem-102-Round79.html';
+import html103      from './../p200/elem-103-Round80.html';
 import html104      from './../p200/elem-104-Round80.html';
+import html105      from './../p200/elem-105-Round81.html';
 import html106      from './../p200/elem-106-Round82.html';
 import html110      from './../p200/elem-110-Round84.html';
 import html112      from './../p200/elem-112-Round85.html';
@@ -18,7 +22,11 @@ import html169      from './../p200/elem-169-vk-r2.html';
 import html200      from './../p200/elem-200-Round126.html';
 
 export const pages = [
+  [html101, 101],
+  [html102, 102],
+  [html103, 103],
   [html104, 104],
+  [html105, 105],
   [html106, 106],
   [html110, 110],
   [html112, 112],

@@ -1,6 +1,10 @@
 // Создаем массив asideThemes с темами для блока aside
 export const asideThemes = [
+  '101 Round 79 (Div. 1)',
+  '102 Round 79 (Div. 2)',
+  '103 Round 80 (Div. 1)',
   '104 Round 80 (Div. 2)',
+  '105 Round 81',
   '106 Round 82 (Div. 2)',
   '110 Round 84 (Div. 2)',
   '112 Round 85 (Div. 2)',

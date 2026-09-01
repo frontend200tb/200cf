@@ -41,3 +41,79 @@
 -15.666666667
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/34/problem/D" target="_blank">Задача 34D</a>
+    <br><a href="https://codeforces.com/contest/34" target="_blank">Codeforces 34 Round 34 Beta (Div. 2) 2010.10.11</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double eps = 1e-9;
+
+int main() {
+  int n; // число шариков
+  double t; // продолжительность процесса
+  cin >> n >> t;
+
+  double x[15], v[15], m[15];
+
+  for (int i = 0; i < n; i++) {
+    cin >> x[i] >> v[i] >> m[i];
+  }
+
+  while (1) {
+    double tmin = 999999;
+
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        if (fabs(x[i] - x[j]) > eps && fabs(v[i] - v[j]) > eps) {
+          double temp = (x[i] - x[j]) / (v[j] - v[i]);
+          if (temp > 0 && temp < tmin) {
+            tmin = temp;
+          }
+        }
+      }
+    }
+
+    if (tmin >= t) {
+      break;
+    }
+
+    t -= tmin;
+
+    for (int i = 0; i < n; i++) {
+      x[i] += tmin * v[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < i; j++) {
+        if (fabs(x[i] - x[j]) < eps) {
+          double vi = ((m[i] - m[j]) * v[i] + 2 * m[j] * v[j]) / (m[i] + m[j]);
+          double vj = ((m[j] - m[i]) * v[j] + 2 * m[i] * v[i]) / (m[i] + m[j]);
+          v[i] = vi;
+          v[j] = vj;
+        }
+      }
+    }
+  }
+
+  for (int i = 0; i < n; i++) {
+    x[i] += t * v[i];
+  }
+
+  for (int i = 0; i < n; i++) {
+    printf("%0.9lf\n", x[i]);
+  }
+
+  return 0;
+}
+</pre>
+</details>

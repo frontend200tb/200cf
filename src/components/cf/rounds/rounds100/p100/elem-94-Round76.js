@@ -1,8 +1,8 @@
 import a from '../z100/z94a.html';
 import b from '../z100/z94b.html';
-import c from '../z100/z94c.html';
-import d from '../z100/z94d.html';
-import e from '../z100/z94e.html';
+import c from '../z100/z93a.html'; // div1
+import d from '../z100/z93b.html'; // div1
+import e from '../z100/z93c.html'; // div1
 
 export default function inElem() {
   if (document.querySelector('.t1')) {
