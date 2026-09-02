@@ -35,3 +35,41 @@
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/35/problem/A" target="_blank">Задача 35A</a>
+    <br><a href="https://codeforces.com/contest/34" target="_blank">Codeforces 35 Round 35 Beta (Div. 2) 2010.10.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  freopen("input.txt", "rt", stdin);
+  freopen("output.txt", "wt", stdout);
+
+  int n; // номер стаканчика
+  cin >> n;
+
+  int o = 3; // число обменов
+
+  while (o--) {
+    int x, y; // пара стаканчиков для обмена
+    cin >> x >> y;
+
+    if (x == n) {
+      n = y;
+    } else if (y == n) {
+      n = x;
+    }
+  }
+
+  cout << n;
+}
+</pre>
+</details>
