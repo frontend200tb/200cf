@@ -42,3 +42,38 @@ aBAcAba
 .b.c.b
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/118/problem/A" target="_blank">Задача 118A</a>
+    <br><a href="https://codeforces.com/contest/118" target="_blank">Codeforces 118 Round 89 Beta (Div. 2) 2011.10.27</a>
+  </div>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  vector&lt;char&gt; res;
+  vector&lt;char&gt; vow{ 'a','A','o','O','y','Y','e','E','u','U','i','I' };
+
+  string s;
+  cin >> s;
+
+  for (int i = 0; i &lt; s.size(); i++) {
+    if (find(vow.begin(), vow.end(), s[i]) == vow.end()) {
+      res.push_back('.');
+      res.push_back(tolower(s[i]));
+    }
+  }
+
+  for (int i = 0; i &lt; res.size(); i++) {
+    cout &lt;&lt; res[i];
+  }
+}
+</pre>
+</details>

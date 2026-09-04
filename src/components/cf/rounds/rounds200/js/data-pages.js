@@ -5,7 +5,11 @@ import html103      from './../p200/elem-103-Round80.html';
 import html104      from './../p200/elem-104-Round80.html';
 import html105      from './../p200/elem-105-Round81.html';
 import html106      from './../p200/elem-106-Round82.html';
+import html107      from './../p200/elem-107-Round83.html';
+import html108      from './../p200/elem-108-Round83.html';
+import html109      from './../p200/elem-109-Round84.html';
 import html110      from './../p200/elem-110-Round84.html';
+import html111      from './../p200/elem-111-Round85.html';
 import html112      from './../p200/elem-112-Round85.html';
 import html116      from './../p200/elem-116-Round87.html';
 import html118      from './../p200/elem-118-Round89.html';
@@ -28,7 +32,11 @@ export const pages = [
   [html104, 104],
   [html105, 105],
   [html106, 106],
+  [html107, 107],
+  [html108, 108],
+  [html109, 109],
   [html110, 110],
+  [html111, 111],
   [html112, 112],
   [html116, 116],
   [html118, 118],
