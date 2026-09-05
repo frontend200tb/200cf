@@ -14,6 +14,7 @@ import in109     from '../p200/elem-109-Round84';
 import in110     from '../p200/elem-110-Round84';
 import in111     from '../p200/elem-111-Round85';
 import in112     from '../p200/elem-112-Round85';
+import in113     from '../p200/elem-113-Round86';
 import in116     from '../p200/elem-116-Round87';
 import in118     from '../p200/elem-118-Round89';
 import in120     from '../p200/elem-120-kosSaratov';
@@ -53,6 +54,7 @@ export default function pageLink(asideItems, currentContent) {
             case 110: in110(); break;
             case 111: in111(); break;
             case 112: in112(); break;
+            case 113: in113(); break;
             case 116: in116(); break;
             case 118: in118(); break;
             case 120: in120(); break;

@@ -11,6 +11,7 @@ import html109      from './../p200/elem-109-Round84.html';
 import html110      from './../p200/elem-110-Round84.html';
 import html111      from './../p200/elem-111-Round85.html';
 import html112      from './../p200/elem-112-Round85.html';
+import html113      from './../p200/elem-113-Round86.html';
 import html116      from './../p200/elem-116-Round87.html';
 import html118      from './../p200/elem-118-Round89.html';
 import html120      from './../p200/elem-120-kosSaratov.html';
@@ -38,6 +39,7 @@ export const pages = [
   [html110, 110],
   [html111, 111],
   [html112, 112],
+  [html113, 113],
   [html116, 116],
   [html118, 118],
   [html120, 120],

@@ -35,3 +35,42 @@
 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/35/problem/D" target="_blank">Задача 35D</a>
+    <br><a href="https://codeforces.com/contest/35" target="_blank">Codeforces 35 Round 35 Beta (Div. 2) 2010.10.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+
+  int n{}; // число дней
+  int x{}; // число тонн еды
+  cin >> n >> x;
+
+  int c{}; // число тонн для одного животного
+  int dp[10003]{};
+
+  while (n) {
+    cin >> c;
+    for (int i = c * n; i <= x; i++) {
+      dp[i - c * n] = max(dp[i - c * n], dp[i] + 1);
+    }
+    n--;
+  }
+
+  cout << dp[0];
+  return 0;
+}
+</pre>
+</details>
