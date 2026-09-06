@@ -65,3 +65,71 @@
 8 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/35/problem/E" target="_blank">Задача 35E</a>
+    <br><a href="https://codeforces.com/contest/35" target="_blank">Codeforces 35 Round 35 Beta (Div. 2) 2010.10.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<set>
+#include<tuple>
+
+using namespace std;
+
+const int N = 20000;
+
+int main() {
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+
+  int n; // число небоскребов
+  cin >> n;
+
+  vector<tuple<int, int, int> > v;
+
+  for (int i = 0; i < n; i++) {
+    int h, l, r;cin >> h >> l >> r;
+    v.emplace_back(l, 0, -h);
+    v.emplace_back(r, 1, h);
+  }
+
+  sort(v.begin(), v.end());
+
+  multiset<int>s;
+  int pre = 0;
+  int prex = get<0>(v[0]);
+  vector<tuple<int, int> > res;
+
+  for (int i = 0; i < n + n; i++) {
+    int x, h;
+    bool f;
+    tie(x, f, h) = v[i];
+    if (f == 0) {
+      s.insert(-h);
+    } else {
+      s.erase(s.find(h));
+    }
+    int now = 0;
+    if (!s.empty())now = *--s.end();
+    if (now != pre) {
+      res.emplace_back(x, pre);
+      res.emplace_back(x, now);
+      pre = now;
+    }
+  }
+
+  cout << res.size() << '\n';
+
+  for (int i = 0;i < res.size();i++) {
+    cout << get<0>(res[i]) << ' ' << get<1>(res[i]) << '\n';
+  }
+}
+</pre>
+</details>
