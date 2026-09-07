@@ -40,3 +40,46 @@ NO
 YES
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/36/problem/A" target="_blank">Задача 36A</a>
+    <br><a href="https://codeforces.com/contest/36" target="_blank">Codeforces 36 Round 36 Beta 2010.10.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+
+  int n; // число дней
+  cin >> n;
+
+  string s; // внеземные сигналы
+  cin >> s;
+
+  int a = s.find('1');
+  int b = s.find('1', a + 1);
+  int c = s.find('1', b + 1);
+
+  while (1 + c) {
+    if (a - b - b + c) {
+      cout << "NO";
+      return 0;
+    }
+    a = b;
+    b = c;
+    c = s.find('1', b + 1);
+  }
+
+  cout << "YES";
+}
+</pre>
+</details>
