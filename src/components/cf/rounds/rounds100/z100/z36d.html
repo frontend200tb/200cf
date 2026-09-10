@@ -41,3 +41,37 @@
 +
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/36/problem/C" target="_blank">Задача 36C</a>
+    <br><a href="https://codeforces.com/contest/36" target="_blank">Codeforces 36 Round 36 Beta 2010.10.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+
+  int t; // число досок
+  int k; // число клеток для прыжка по диагонали
+  cin >> t >> k;
+
+  int a, b, f[2]{};
+
+  while (t--) {
+    cin >> a >> b;
+    (a > b) ? (swap(a, b)) : (swap(f[0], f[1]));
+    puts((!(a % (k + 1)) or (b - a + a / (k + 1) * (k != 1)) % 2) ? "+" : "-");
+  }
+
+  return 0;
+}
+</pre>
+</details>
