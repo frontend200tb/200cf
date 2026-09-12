@@ -30,3 +30,43 @@
 2 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/37/problem/A" target="_blank">Задача 37A</a>
+    <br><a href="https://codeforces.com/contest/37" target="_blank">Codeforces 37 Round 37 Beta 2010.10.25</a>
+  </div>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int n; // число брусков
+  cin >> n;
+  int A[1001] = {};
+  int in;
+
+  for (int i = 1; i &lt;= n; i++) {
+    cin >> in; // длина бруска
+    A[in]++;
+  }
+
+  int maxa = 1; // высота наибольшей башни
+  int cnt = 0; // число башен
+  for (int i = 1; i &lt; 1001; i++) {
+    if (A[i]) {
+      cnt++;
+    }
+    if (A[i] > maxa) {
+      maxa = A[i];
+    }
+  }
+
+  cout &lt;&lt; maxa &lt;&lt; ' ' &lt;&lt; cnt;
+}
+</pre>
+</details>

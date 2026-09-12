@@ -42,3 +42,64 @@ YES
 10 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/37/problem/B" target="_blank">Задача 37B</a>
+    <br><a href="https://codeforces.com/contest/37" target="_blank">Codeforces 37 Round 37 Beta 2010.10.25</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int n, q, qn, l, kn, cnt, p[1001], k[1001], ans[1001], anst[1001], c[1001];
+bool b[1001];
+
+int main() {
+  int t = 0, maxk = 0, id = 0;
+  cin >> n >> q >> l;
+
+  for (int i = 1;i <= n;i++) {
+    cin >> p[i] >> k[i];
+  }
+
+  qn = q;
+  while (qn > 0) {
+    maxk = 0;
+    bool v = 0;
+
+    for (int i = 1;i <= n;i++) {
+      if (!b[i] && qn * 100.0 / q <= p[i] && k[i] > maxk) {
+        maxk = k[i];
+        id = i;
+        v = 1;
+      }
+    }
+
+    kn += maxk;
+    if (v) {
+      b[id] = 1;
+      ans[++cnt] = t;
+      anst[cnt] = id;
+    }
+    qn -= kn;
+    qn = min(q, qn + l);
+    if (kn <= l && v == 0) {
+      cout << "NO";
+      return 0;
+    }
+    t++;
+  }
+
+  cout << "YES" << endl << t << ' ' << cnt << endl;
+
+  for (int i = 1;i <= cnt;i++) {
+    cout << ans[i] << ' ' << anst[i] << endl;
+  }
+}
+</pre>
+</details>
