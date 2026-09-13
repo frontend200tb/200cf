@@ -33,3 +33,58 @@ YES
 NO
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/37/problem/C" target="_blank">Задача 37C</a>
+    <br><a href="https://codeforces.com/contest/37" target="_blank">Codeforces 37 Round 37 Beta 2010.10.25</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+const int N = 1 << 10;
+pair<int, int> a[N];
+string s[N];
+int n, p;
+
+void Trie(string t) {
+  if (p >= n)
+    return;
+  if (t.size() == a[p].first) {
+    s[a[p++].second] = t;
+    return;
+  }
+  Trie(t + '0');
+  Trie(t + '1');
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0, x; i < n; i++) {
+    cin >> x;
+    a[i] = { x, i };
+  }
+
+  sort(a, a + n);
+  Trie("");
+
+  if (p ^ n) {
+    cout << "NO";
+    return 0;
+  }
+
+  cout << "YES\n";
+
+  for (int i = 0; i < n; i++) {
+    cout << s[i] << '\n';
+  }
+}
+</pre>
+</details>
