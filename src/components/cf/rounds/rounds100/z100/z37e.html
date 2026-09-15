@@ -34,3 +34,74 @@ BWB
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/37/problem/E" target="_blank">Задача 37E</a>
+    <br><a href="https://codeforces.com/contest/37" target="_blank">Codeforces 37 Round 37 Beta 2010.10.25</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <deque>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  cout.tie(0);
+
+  int n, m; // число строк и столбцов
+  cin >> n >> m;
+
+  vector<string> s(n);
+  for (int i = 0; i < n; i++) {
+    cin >> s[i];
+  }
+
+  int ans = 1e9;
+  int dir[4][2] = { 1,0,-1,0,0,1,0,-1 };
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+      deque<pair<int, int> >q;
+      q.push_front({ i,j });
+      vector<vector<int> >dis(n, vector<int>(m, 1e9));
+      dis[i][j] = 1;
+      while (!q.empty()) {
+        int x = q.front().first, y = q.front().second;
+        q.pop_front();
+        for (int _ = 0; _ < 4; _++) {
+          int dx = x + dir[_][0], dy = y + dir[_][1];
+          if (dx < 0 || dy < 0 || dx >= n || dy >= m) continue;
+          int w = (s[x][y] != s[dx][dy]);
+          if (dis[dx][dy] > dis[x][y] + w) {
+            dis[dx][dy] = dis[x][y] + w;
+            if (w) {
+              q.push_back({ dx,dy });
+            } else {
+              q.push_front({ dx,dy });
+            }
+          }
+        }
+      }
+      int rr = 0;
+      for (int x = 0; x < n; x++) {
+        for (int y = 0; y < m; y++) {
+          if (s[x][y] == 'B') {
+            rr = max(rr, dis[x][y]);
+          }
+        }
+      }
+      ans = min(ans, rr);
+    }
+  }
+  cout << ans << "\n";
+  return 0;
+}
+</pre>
+</details>
