@@ -42,3 +42,49 @@ a+++++a
 
   <p>Рассмотрим второй пример. Сначала a=3. Пусть сначала вычисляется первое слагаемое, потом — второе. Первое слагаемое получается равным 3, и значение a увеличивается на 1. При вычислении второго слагаемого значение a сначала еще раз увеличивается (становится равным 5). Значение второго слагаемого — 5, и в сумме получаем 8. При вычислении сначала второго, а потом первого слагаемого получаем, что оба слагаемых равны 4 и ответ тоже 8.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/39/problem/A" target="_blank">Задача 39A</a>
+    <br><a href="https://codeforces.com/contest/37" target="_blank">Codeforces 39 Round 39 Beta 2010.10.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int b[10000], a, n, i, j, k, ans;
+string s;
+
+int main() {
+  cin >> a >> s;
+  if (s[0] != '-') {
+    s = "+" + s;
+  }
+  for (i = 0; i < s.length(); i += 3) {
+    k = s[i++] == '+' ? 1 : -1;
+    for (j = 0; s[i] >= '0' && s[i] <= '9'; i++) {
+      j = j * 10 + s[i] - '0';
+    }
+    if (s[i] == '*') {
+      i++;
+    } else {
+      j = 1;
+    }
+    b[++n] = (j *= k);
+    ans += (a - (s[i] == 'a')) * j;
+  }
+
+  sort(b + 1, b + n + 1);
+  for (i = 1; i <= n; i++) {
+    ans += i * b[i];
+  }
+
+  cout << ans;
+}
+</pre>
+</details>
