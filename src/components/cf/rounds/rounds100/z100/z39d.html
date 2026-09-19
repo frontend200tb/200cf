@@ -38,3 +38,33 @@ YES
 NO
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/39/problem/D" target="_blank">Задача 39D</a>
+    <br><a href="https://codeforces.com/contest/39" target="_blank">Codeforces 39 Round 39 Beta 2010.10.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  bool x1, y1, z1; // координаты первой мухи
+  bool x2, y2, z2; // координаты второй мухи
+  cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
+
+  // две мухи не видят друг друга
+  // если координаты противоположны
+
+  if (x1 == !x2 && y1 == !y2 && z1 == !z2) {
+    cout << "NO";
+  } else {
+    cout << "YES";
+  }
+}
+</pre>
+</details>
