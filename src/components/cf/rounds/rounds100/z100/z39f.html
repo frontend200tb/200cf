@@ -39,3 +39,63 @@
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/39/problem/F" target="_blank">Задача 39F</a>
+    <br><a href="https://codeforces.com/contest/39" target="_blank">Codeforces 39 Round 39 Beta 2010.10.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n, m, k;
+  cin >> n >> m >> k;
+
+  int a[101];
+  for (int i = 1; i <= m; i++) {
+    cin >> a[i];
+  }
+
+  int b[101];
+  for (int i = 1; i <= k; i++) {
+    cin >> b[i];
+  }
+
+  int c[101]{};
+  int d = 1000000001;
+  for (int i = 1; i <= m; i++) {
+    for (int j = 1; j <= k; j++) {
+      if (b[j] % a[i] == 0) {
+        c[i]++;
+      }
+    }
+    if (c[i] < d) {
+      d = c[i];
+    }
+  }
+
+  int e = 0;
+  for (int i = 1; i <= m; i++) {
+    if (c[i] == d) {
+      e++;
+    }
+  }
+
+  cout << e << "\n";
+
+  for (int i = 1; i <= m; i++) {
+    if (c[i] == d) {
+      cout << i << " ";
+    }
+  }
+
+  return 0;
+}
+</pre>
+</details>

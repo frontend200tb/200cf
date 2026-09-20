@@ -52,3 +52,45 @@ Missing
 <p>Если Стас увеличит число коробок, то проиграет, так как Маша следующим ходом может еще раз увеличить число коробок. После этого любой ход Стаса приведет к поражению.</p>
 <p>Если же Стас увеличит число предметов, то любой машин ход будет проигрышным.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/39/problem/E" target="_blank">Задача 39E</a>
+    <br><a href="https://codeforces.com/contest/39" target="_blank">Codeforces 39 Round 39 Beta 2010.10.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int n;
+string ans[3] = { "Missing","Stas","Masha" };
+int poi[100001][51];
+
+int fd(int x, int y) {
+  if (pow(x, y) >= n) {
+    return poi[x][y] = 2;
+  }
+  if (poi[x][y]) {
+    return poi[x][y];
+  }
+  return poi[x][y] = 3 - min(fd(x, y + 1), fd(x + 1, y));
+}
+
+int main() {
+  int l, r;
+  cin >> l >> r >> n;
+
+  if (l == 1 && pow(2, r) >= n) {
+    cout << "Missing";
+  } else {
+    cout << ans[fd(l, r)];
+  }
+  return 0;
+}
+</pre>
+</details>
