@@ -40,3 +40,44 @@ codeforces
 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/39/problem/J" target="_blank">Задача 39J</a>
+    <br><a href="https://codeforces.com/contest/39" target="_blank">Codeforces 39 Round 39 Beta 2010.10.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+char s[1000020], c[1000020];
+int l, r;
+
+int main() {
+  cin >> s >> c;
+
+  for (r = 0; s[r] == c[r]; ) {
+    r++;
+  }
+
+  for (l = strlen(c); l >= 0 && s[l + 1] == c[l]; ) {
+    l--;
+  }
+
+  if (r > l) {
+    cout << r - l << endl;
+  } else {
+    cout << 0 << endl;
+  }
+
+  for (int i = l + 1; i <= r; i++) {
+    cout << i + 1 << " ";
+  }
+}
+</pre>
+</details>

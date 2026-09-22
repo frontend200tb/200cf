@@ -34,3 +34,71 @@
 1 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/39/problem/I" target="_blank">Задача 39I</a>
+    <br><a href="https://codeforces.com/contest/39" target="_blank">Codeforces 39 Round 39 Beta 2010.10.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+vector<int> v[100001], p;
+int ans, x[100001], y[100001], dis[100001];
+
+void dfs(int x) {
+  for (int i : v[x]) {
+    if (dis[i] == -1) {
+      dis[i] = dis[x] + 1;
+      dfs(i);
+    }
+  }
+}
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
+  int n; // число перекрестков
+  int m; // число трамвайных путей
+  cin >> n >> m;
+
+  for (int i = 1; i <= m; i++) {
+    cin >> x[i] >> y[i];
+    v[x[i]].push_back(y[i]);
+  }
+
+  memset(dis, -1, sizeof dis);
+  dis[1] = 0;
+  dfs(1);
+
+  for (int i = 1; i <= m; i++) {
+    if (dis[x[i]] != -1 && dis[y[i]] != -1) {
+      ans = __gcd(ans, dis[x[i]] + 1 - dis[y[i]]);
+    }
+  }
+
+  cout << abs(ans) << "\n";
+
+  for (int i = 1; i <= n; i++) {
+    if (dis[i] != -1 && dis[i] % ans == 0) {
+      p.push_back(i);
+    }
+  }
+
+  cout << p.size() << "\n";
+
+  for (int i : p) {
+    cout << i << " ";
+  }
+}
+</pre>
+</details>
