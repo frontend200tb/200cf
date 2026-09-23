@@ -48,3 +48,126 @@
 4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/39/problem/K" target="_blank">Задача 39K</a>
+    <br><a href="https://codeforces.com/contest/39" target="_blank">Codeforces 39 Round 39 Beta 2010.10.24</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+#define int long long
+typedef pair<int, int> PII;
+const int N = 2010, M = 220;
+char mp[N][N];
+PII c[N];
+
+struct node {
+  int ax, ay, bx, by;
+} a[M];
+
+int b[M];
+
+signed main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+
+  int n, m, k;
+  cin >> n >> m >> k;
+
+  int ln = 0, ans = 0;
+  k = 0;
+
+  for (int i = 1;i <= n;i++) {
+    for (int j = 1;j <= m;j++) {
+      cin >> mp[i][j];
+    }
+  }
+
+  for (int i = 1;i <= n;i++) {
+    for (int j = 1;j <= m;j++) {
+      if (mp[i][j] == '*') {
+        int x = i, y = j;
+        while (mp[x + 1][j] == '*') {
+          x++;
+        }
+        while (mp[i][y + 1] == '*') {
+          y++;
+        }
+
+        for (int h = i;h <= x;h++) {
+          for (int c = j;c <= y;c++) {
+            mp[h][c] = '.';
+          }
+        }
+
+        a[++k] = { i,j,x,y };
+        b[++ln] = i;
+        b[++ln] = x;
+      }
+    }
+  }
+
+  b[++ln] = 0;
+  b[++ln] = n + 1;
+  sort(b + 1, b + 1 + ln);
+  ln = unique(b + 1, b + 1 + ln) - (b + 1);
+
+  for (int i = 1;i <= k;i++) {
+    a[i].ax = lower_bound(b + 1, b + 1 + ln, a[i].ax) - b;
+    a[i].bx = lower_bound(b + 1, b + 1 + ln, a[i].bx) - b;
+  }
+
+  for (int u = 2;u < ln;u++) {
+    for (int d = u;d < ln;d++) {
+      int lp = 0, res = 0;
+      for (int i = 1;i <= k;i++) {
+        if (a[i].bx<u || a[i].ax>d) {
+          continue;
+        }
+        if (a[i].ax >= u && a[i].bx <= d) {
+          c[++lp] = { a[i].ay,1 };
+          c[++lp] = { a[i].by,-1 };
+        } else {
+          c[++lp] = { a[i].ay,114 };
+          c[++lp] = { a[i].by,-114 };
+        }
+      }
+
+      sort(c + 1, c + 1 + lp);
+      c[0] = { 0,0 };
+      c[++lp] = { m + 1,0 };
+      for (int i = 1;i <= 3;i++) {
+        int sl = 0, sr = 0, ct = 0;
+        for (int l = 1, r = 1;r < lp;r++) {
+          sr += c[r].second;
+          ct += max(0ll, c[r].second);
+          if (!sr) {
+            while (sl || ct > i) {
+              sl -= c[l].second;
+              ct -= max(0ll, c[l].second), l++;
+            }
+            if (!sl && i == ct) {
+              res += (c[r + 1].first - c[r].first) * (c[l].first - c[l - 1].first);
+            }
+          }
+        }
+      }
+
+      ans += res * (b[u] - b[u - 1]) * (b[d + 1] - b[d]);
+    }
+  }
+
+  cout << ans;
+  return 0;
+}
+</pre>
+</details>

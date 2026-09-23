@@ -39,3 +39,34 @@ black
 black
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/40/problem/A" target="_blank">Задача 40A</a>
+    <br><a href="https://codeforces.com/contest/40" target="_blank">Codeforces 40 Round 39 Beta 2010.11.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int x, y;
+  cin >> x >> y;
+
+  int l, r;
+  l = x * x + y * y;
+
+  for (r = 1; r * r < l; r++);
+
+  if (r * r == l || (r & 1) ^ (x * y < 0)) {
+    cout << "black";
+  } else {
+    cout << "white";
+  }
+}
+</pre>
+</details>
