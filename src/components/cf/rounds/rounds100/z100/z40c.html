@@ -35,3 +35,34 @@
 17
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/40/problem/C" target="_blank">Задача 40C</a>
+    <br><a href="https://codeforces.com/contest/40" target="_blank">Codeforces 40 Round 39 Beta 2010.11.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int n, x, m, y;
+  cin >> n >> x >> m >> y;
+
+  int l = abs(y - x);
+  long long res = n + m + 1;
+
+  for (int i = 1; i <= n; i++) {
+    if (abs(l - i) < m) {
+      res += 2 * min(m, i + l - 1) + ((l - i) * 2 ^ -int(l >= i));
+    }
+  }
+  cout << res;
+}
+</pre>
+</details>
