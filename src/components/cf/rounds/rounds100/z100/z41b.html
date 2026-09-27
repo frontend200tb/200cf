@@ -38,3 +38,33 @@
 15
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/41/problem/B" target="_blank">Задача 41B</a>
+    <br><a href="https://codeforces.com/contest/41" target="_blank">Codeforces 41 Round 40 Beta 2010.11.08</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  int k = 0, p = 2000, q;
+
+  for (int i = 0; i < n; i++) {
+    cin >> q;
+    p = min(p, q);
+    k = max(k, m / p * q + m % p);
+  }
+
+  cout << k;
+}
+</pre>
+</details>
