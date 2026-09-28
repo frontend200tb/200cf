@@ -39,3 +39,34 @@ aatt
 a@t
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/41/problem/C" target="_blank">Задача 41C</a>
+    <br><a href="https://codeforces.com/contest/41" target="_blank">Codeforces 41 Round 40 Beta 2010.11.08</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string a;
+  cin >> a;
+
+  a.replace(a.find("at", 1), 2, "@");
+  int n = a.find("dot", 1);
+
+  while (n < a.size() - 3) {
+    a.replace(n, 3, ".");
+    n = a.find("dot", 1);
+  }
+
+  cout << a;
+}
+</pre>
+</details>
