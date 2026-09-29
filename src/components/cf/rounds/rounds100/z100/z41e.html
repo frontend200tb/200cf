@@ -33,3 +33,33 @@
 4 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/41/problem/E" target="_blank">Задача 41E</a>
+    <br><a href="https://codeforces.com/contest/41" target="_blank">Codeforces 41 Round 40 Beta 2010.11.08</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n; // число городов
+  cin >> n;
+
+  int m; // число дорог
+  m = n * n / 4;
+  cout << m;
+
+  for (int i = 1; i <= n; i += 2) {
+    for (int j = 2; j <= n; j += 2) {
+      cout << '\n' << i << ' ' << j;
+    }
+  }
+}
+</pre>
+</details>
