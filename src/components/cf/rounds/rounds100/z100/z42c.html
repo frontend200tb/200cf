@@ -48,3 +48,49 @@
 /4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/42/problem/C" target="_blank">Задача 42C</a>
+    <br><a href="https://codeforces.com/contest/42" target="_blank">Codeforces 42 Round 41 Beta 2010.11.18</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  vector<int> v(4);
+  cin >> v[0] >> v[1] >> v[2] >> v[3];
+
+  int n = 4;
+  while (!(v[0] == 1 && v[1] == 1 && v[2] == 1 && v[3] == 1)) {
+    int ind = 0;
+    for (int i = 1; i < 4; i++) {
+      if (v[i] > v[ind]) {
+        ind = i;
+      }
+    }
+    int l = (ind - 1 + n) % n;
+    int r = (ind + 1) % n;
+    if (v[ind] % 2 != v[r] % 2) {
+      v[l]++;
+      v[ind]++;
+      cout << "+" << l + 1 << endl;
+    }
+    if (v[ind] % 2 == 1) {
+      v[ind]++;
+      v[r]++;
+      cout << "+" << ind + 1 << endl;
+    }
+    cout << "/" << ind + 1 << endl;
+    v[ind] = v[ind] / 2;
+    v[r] = v[r] / 2;
+  }
+}
+</pre>
+</details>
