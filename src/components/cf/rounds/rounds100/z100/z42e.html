@@ -42,3 +42,94 @@
 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/42/problem/E" target="_blank">Задача 42E</a>
+    <br><a href="https://codeforces.com/contest/42" target="_blank">Codeforces 42 Round 41 Beta 2010.11.18</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+
+using namespace std;
+
+constexpr int N = 1e5 + 9;
+int n, m, q, fa[N], ctot;
+int ed[N], nxt[N], pos[N];
+int val[N], sgt[N << 1];
+long long sum;
+
+int findf(int x) {
+  return x == fa[x] ? x : fa[x] = findf(fa[x]);
+}
+
+int dst(int u, int v) {
+  int ret = 0;
+  if ((u = pos[u]) > (v = pos[v])) swap(u, v);
+  for (u += n, v += n; u < v; u >>= 1, v >>= 1) {
+    if (u & 1) ret = max(ret, sgt[u++]);
+    if (v & 1) ret = max(ret, sgt[--v]);
+  }
+  return ret;
+}
+
+long long calc(int u, int v) {
+  if (ctot > 2) return -1;
+  if (ctot == 2) return findf(u) == findf(v) ? -1 : sum;
+  return sum - dst(u, v);
+}
+
+int main() {
+  cin.tie(nullptr)->sync_with_stdio(false);
+  cin >> n >> m;
+
+  vector<tuple<int, int, int>> es(m);
+
+  for (auto& [w, u, v] : es) {
+    cin >> u >> v >> w;
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    fa[i] = ed[i] = i;
+  }
+
+  memset(val + 1, 0x3f, n * sizeof(int));
+
+  for (ranges::sort(es); auto [w, u, v] : es) {
+    if ((u = findf(u)) != (v = findf(v))) {
+      nxt[ed[u]] = v;
+      sum += val[ed[u]] = w;
+      ed[fa[v] = u] = ed[v];
+    }
+  }
+
+  for (int i = 1, j = -1; i <= n; ++i) {
+    if (fa[i] == i) {
+      ++ctot;
+      for (int x = i; x; x = nxt[x]) {
+        sgt[(pos[x] = ++j) + n] = val[x];
+      }
+    }
+  }
+
+  for (int i = n - 1; i; --i) {
+    sgt[i] = max(sgt[i << 1], sgt[i << 1 | 1]);
+  }
+
+  for (cin >> q; q; --q) {
+    int u, v;
+    cin >> u >> v;
+    cout << calc(u, v) << '\n';
+  }
+
+  cout << flush;
+  return 0;
+}
+</pre>
+</details>
