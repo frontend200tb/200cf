@@ -33,3 +33,46 @@ A
 A
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/43/problem/A" target="_blank">Задача 43A</a>
+    <br><a href="https://codeforces.com/contest/43" target="_blank">Codeforces 43 Round 42 Beta 2010.11.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  string sa;
+  cin >> sa;
+
+  int a = 1, b = 0;
+  n--;
+  string s, sb;
+
+  while (n--) {
+    cin >> s;
+    if (s == sa) {
+      a++;
+    } else {
+      sb = s;
+      b++;
+    }
+  }
+
+  if (a > b) {
+    cout << sa;
+  } else {
+    cout << sb;
+  }
+}
+</pre>
+</details>
