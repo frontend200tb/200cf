@@ -32,3 +32,32 @@
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/43/problem/C" target="_blank">Задача 43C</a>
+    <br><a href="https://codeforces.com/contest/43" target="_blank">Codeforces 43 Round 42 Beta 2010.11.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int x;
+  cin >> x;
+
+  int c[3]{};
+
+  while (cin >> x) {
+    c[x % 3]++;
+  }
+
+  cout << min(c[1], c[2]) + c[0] / 2;
+}
+</pre>
+</details>
