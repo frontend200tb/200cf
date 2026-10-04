@@ -31,3 +31,36 @@ oak yellow
 </pre>
   <code>1</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/44/problem/A" target="_blank">Задача 44A</a>
+    <br><a href="https://codeforces.com/contest/44" target="_blank">Codeforces 44 Школьная командная олимпиада 2 (ЗКШ 2010/11) 2010.11.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <set>
+#include <string>
+
+using namespace std;
+
+int main() {
+  int n; // число листьев
+  cin >> n;
+
+  set<string> st;
+  string s;
+  getline(cin, s); // ввод оставшегося конца строки
+
+  while (n--) {
+    getline(cin, s);
+    st.insert(s);
+  }
+
+  cout << st.size();
+}
+</pre>
+</details>

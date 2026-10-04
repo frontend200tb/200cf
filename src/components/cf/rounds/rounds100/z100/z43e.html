@@ -45,3 +45,58 @@
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/43/problem/E" target="_blank">Задача 43E</a>
+    <br><a href="https://codeforces.com/contest/43" target="_blank">Codeforces 43 Round 42 Beta 2010.11.29</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int n, awa, num, t, v, N, ans, f[201][40000];
+int main() {
+  cin >> n >> awa;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> num;
+    int j = 0;
+    while (num--) {
+      cin >> v >> t;
+      while (t--) {
+        j++;
+        f[i][j] = f[i][j - 1] + v;
+      }
+    }
+    N = max(N, j);
+  }
+
+  for (int o = 2; o < N; o++) {
+    for (int i = 1; i <= n; i++) {
+      if (f[i][o]) {
+        for (int j = 1; j <= n; j++) {
+          if (i != j && f[j][o]) {
+            if (f[i][o] == f[j][o]) {
+              if (f[i][o - 1] < f[j][o - 1] && f[i][o + 1] > f[j][o + 1]) {
+                ans++;
+              }
+            } else {
+              if (f[i][o - 1] < f[j][o - 1] && f[i][o] > f[j][o]) {
+                ans++;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  cout << ans;
+}
+</pre>
+</details>
