@@ -26,6 +26,8 @@ import in121     from '../p200/elem-121-Round91';
 import in122     from '../p200/elem-122-Round91';
 import in123     from '../p200/elem-123-Round92';
 import in124     from '../p200/elem-124-Round92';
+import in125     from '../p200/elem-125-TRound2';
+import in126     from '../p200/elem-126-Round93';
 import in131     from '../p200/elem-131-Round95';
 import in134     from '../p200/elem-134-TRound3';
 import in136     from '../p200/elem-136-Round97';
@@ -74,6 +76,8 @@ export default function pageLink(asideItems, currentContent) {
             case 122: in122(); break;
             case 123: in123(); break;
             case 124: in124(); break;
+            case 125: in125(); break;
+            case 126: in126(); break;
             case 131: in131(); break;
             case 134: in134(); break;
             case 136: in136(); break;

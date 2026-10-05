@@ -23,6 +23,8 @@ import html121      from './../p200/elem-121-Round91.html';
 import html122      from './../p200/elem-122-Round91.html';
 import html123      from './../p200/elem-123-Round92.html';
 import html124      from './../p200/elem-124-Round92.html';
+import html125      from './../p200/elem-125-TRound2.html';
+import html126      from './../p200/elem-126-Round93.html';
 import html131      from './../p200/elem-131-Round95.html';
 import html134      from './../p200/elem-134-TRound3.html';
 import html136      from './../p200/elem-136-Round97.html';
@@ -59,6 +61,8 @@ export const pages = [
   [html122, 122],
   [html123, 123],
   [html124, 124],
+  [html125, 125],
+  [html126, 126],
   [html131, 131],
   [html134, 134],
   [html136, 136],

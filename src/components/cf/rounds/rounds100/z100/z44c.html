@@ -45,3 +45,43 @@
   <code>4 0</code>
   <p>Обратите внимание, во втором примере из условия ошибка происходит не только во второй день, но и в шестой, когда цветы никто не поливает. Однако выдать нужно именно второй день, т.е. день с наименьшим номером.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/44/problem/C" target="_blank">Задача 44C</a>
+    <br><a href="https://codeforces.com/contest/44" target="_blank">Codeforces 44 Школьная командная олимпиада 2 (ЗКШ 2010/11) 2010.11.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int a[101];
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  int l, r;
+
+  for (int i = 1; i <= m; i++) {
+    cin >> l >> r;
+    for (int j = l; j <= r; j++) {
+      a[j]++;
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    if (a[i] != 1) {
+      cout << i << " " << a[i];
+      return 0;
+    }
+  }
+
+  cout << "OK";
+}
+</pre>
+</details>
