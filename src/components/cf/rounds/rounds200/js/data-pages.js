@@ -25,9 +25,17 @@ import html123      from './../p200/elem-123-Round92.html';
 import html124      from './../p200/elem-124-Round92.html';
 import html125      from './../p200/elem-125-TRound2.html';
 import html126      from './../p200/elem-126-Round93.html';
+import html127      from './../p200/elem-127-Round93.html';
+import html128      from './../p200/elem-128-Round94.html';
+import html129      from './../p200/elem-129-Round94.html';
+import html130      from './../p200/elem-130-ULRound4.html';
 import html131      from './../p200/elem-131-Round95.html';
+import html132      from './../p200/elem-132-Round96.html';
+import html133      from './../p200/elem-133-Round96.html';
 import html134      from './../p200/elem-134-TRound3.html';
+import html135      from './../p200/elem-135-Round97.html';
 import html136      from './../p200/elem-136-Round97.html';
+import html137      from './../p200/elem-137-Round98.html';
 import html141      from './../p200/elem-141-Round101.html';
 import html155      from './../p200/elem-155-Round109.html';
 import html158      from './../p200/elem-158-vk-q1.html';
@@ -63,9 +71,17 @@ export const pages = [
   [html124, 124],
   [html125, 125],
   [html126, 126],
+  [html127, 127],
+  [html128, 128],
+  [html129, 129],
+  [html130, 130],
   [html131, 131],
+  [html132, 132],
+  [html133, 133],
   [html134, 134],
+  [html135, 135],
   [html136, 136],
+  [html137, 137],
   [html141, 141],
   [html155, 155],
   [html158, 158],

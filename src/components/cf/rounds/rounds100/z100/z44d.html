@@ -29,3 +29,49 @@
 </pre>
   <code>1.7071067812</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/44/problem/D" target="_blank">Задача 44D</a>
+    <br><a href="https://codeforces.com/contest/44" target="_blank">Codeforces 44 Школьная командная олимпиада 2 (ЗКШ 2010/11) 2010.11.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double ans = 1e18;
+
+struct ppp {
+  int x, y, z;
+} a[5001];
+
+double f(int x, int y) {
+  return sqrt((a[x].x - a[y].x) * (a[x].x - a[y].x) +
+              (a[x].y - a[y].y) * (a[x].y - a[y].y) +
+              (a[x].z - a[y].z) * (a[x].z - a[y].z));
+}
+
+int main() {
+  int n;
+  cin >> n;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i].x >> a[i].y >> a[i].z;
+  }
+
+  for (int i = 3; i <= n; i++) {
+    for (int j = 2; j < i; j++) {
+      ans = min(ans, f(1, i) + f(1, j) + f(i, j));
+    }
+  }
+
+  printf("%.10lf\n", ans / 2);
+  return 0;
+}
+</pre>
+</details>

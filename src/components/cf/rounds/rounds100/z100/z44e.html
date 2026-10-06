@@ -31,3 +31,38 @@ abrakadabra
 No solution
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/44/problem/E" target="_blank">Задача 44E</a>
+    <br><a href="https://codeforces.com/contest/44" target="_blank">Codeforces 44 Школьная командная олимпиада 2 (ЗКШ 2010/11) 2010.11.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int k, a, b;
+  cin >> k >> a >> b;
+
+  string s;
+  cin >> s;
+
+  int l = 0, r = 0;
+  if (s.size() < (k * a) || s.size() > (k * b)) {
+    return cout << "No solution", 0;
+  }
+
+  while (k > 0) {
+    r = (s.size() - l) / k;
+    cout << s.substr(l, r) << endl;
+    l += r;
+    k--;
+  }
+}
+</pre>
+</details>
