@@ -72,3 +72,361 @@ white 26.00000000
 
   <p>Изначально черные отрезки, которые нарисовала Анфиса, также могут быть окрашены, если какая-то из выбранных точек попадет на отрезок. Отрезки имеют нулевую площадь. Поэтому, если в итоговой картинке в какой-то цвет будут окрашены только лишь части отрезков, то площадь, окрашенная в этот цвет, равна 0.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/44/problem/F" target="_blank">Задача 44F</a>
+    <br><a href="https://codeforces.com/contest/44" target="_blank">Codeforces 44 Школьная командная олимпиада 2 (ЗКШ 2010/11) 2010.11.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <bits/stdc++.h>
+
+#ifdef LOCAL
+#define debug(x) cerr << (#x) << ": " << x << endl
+#else
+#define debug(x) ;
+#endif
+
+#define rep(i, n) for (int i = 0; i < (n); ++i)
+#define rep1(i, n) for (int i = 1; i < (n); ++i)
+#define rep1n(i, n) for (int i = 1; i <= (n); ++i)
+#define repr(i, n) for (int i = (n) - 1; i >= 0; --i)
+#define pb push_back
+#define eb emplace_back
+#define mp make_pair
+#define all(a) (a).begin(), (a).end()
+#define rall(a) (a).rbegin(), (a).rend()
+#define sz(a) (int)(a.size())
+#define each(x, a) for (auto &x : a)
+#define y1 _y1
+
+using namespace std;
+
+using ll = long long;
+using ull = unsigned long long;
+using ld = long double;
+using str = string;
+using pi = pair<int, int>;
+using pl = pair<ll, ll>;
+using vi = vector<int>;
+using vl = vector<ll>;
+using vpi = vector<pair<int, int>>;
+using vvi = vector<vi>;
+
+mt19937 rnd(0);
+
+const int BIG = 1e9, LG = 30, maxN = 1e2;
+const ll INF = 1e18;
+const ld eps = 1e-10;
+
+struct Vector {
+  ld x, y;
+  Vector(ld x = 0, ld y = 0) : x(x), y(y) {}
+  Vector operator-(const Vector& other) const {
+    return Vector(x - other.x, y - other.y);
+  }
+  bool operator<(const Vector& other) const {
+    return eps < other.x - x || (abs(other.x - x) < eps && eps < other.y - y);
+  }
+  bool operator==(const Vector& other) const {
+    return abs(other.x - x) < eps && abs(other.y - y) < eps;
+  }
+} p[maxN * maxN];
+
+struct Segment {
+  Vector a, b;
+  Segment(const Vector& a = Vector(), const Vector& b = Vector()) : a(a), b(b) {}
+} s[maxN];
+
+struct Line {
+  ld a, b, c;
+  Line(ld a = 0, ld b = 0, ld c = 0) : a(a), b(b), c(c) {}
+  Line(const Vector& p1, const Vector& p2) : a(p1.y - p2.y), b(p2.x - p1.x), c(p1.x* p2.y - p1.y * p2.x) {}
+};
+
+struct Node {
+  int color;
+  ld square;
+  vi v;
+  Node(int color = 0, ld square = 0) : color(color), square(square), v({}) {}
+} gr[3 * maxN * maxN];
+
+bool exist[maxN + 2];
+int test = 1, w, h, n, x1, y1, x2, y2, m, x, y, it, base, itx, comp[maxN * maxN], example[maxN * maxN], comp_cnt, color_cnt;
+ld ans[maxN + 2];
+str color, color_list[maxN + 2];
+vector<bool> used[maxN * maxN];
+vi g[maxN * maxN], polygons[3 * maxN * maxN];
+unordered_map<str, int> dict;
+
+bool cross_lines(const Line& l1, const Line& l2, Vector& p) {
+  ld k = l1.a * l2.b - l1.b * l2.a;
+  if (abs(k) < eps)
+    return false;
+  p = Vector((l1.b * l2.c - l1.c * l2.b) / k, (l1.c * l2.a - l1.a * l2.c) / k);
+  return true;
+}
+
+ld dot_product(const Vector& v1, const Vector& v2) {
+  return v1.x * v2.x + v1.y * v2.y;
+}
+
+ld cross_product(const Vector& v1, const Vector& v2) {
+  return v1.x * v2.y - v1.y * v2.x;
+}
+
+bool is_point_on_segment(const Vector& p, const Segment& s) {
+  Vector v1 = s.a - p, v2 = s.b - p;
+  return abs(cross_product(v1, v2)) < eps && dot_product(v1, v2) <= 0;
+}
+
+bool cross_segments(const Segment& s1, const Segment& s2, Vector& p) {
+  Line l1 = Line(s1.a, s1.b), l2 = Line(s2.a, s2.b);
+  if (!cross_lines(l1, l2, p))
+    return false;
+  return is_point_on_segment(p, s1) && is_point_on_segment(p, s2);
+}
+
+bool is_upper_part(const Vector& v) {
+  return v.y > eps || (abs(v.y) < eps && v.x >= 0);
+}
+
+bool cmp(const int& a, const int& b) {
+  Vector va = p[a] - p[base], vb = p[b] - p[base];
+  bool fa = is_upper_part(va), fb = is_upper_part(vb);
+  if (fa != fb)
+    return fa;
+  return cross_product(va, vb) > 0;
+}
+
+ld get_square(const vi& poly) {
+  ld s = 0;
+  rep(iter, sz(poly)) {
+    int i = poly[iter], j = poly[(iter + 1) % sz(poly)];
+    s += cross_product(p[i], p[j]);
+  }
+  return -s / 2;
+}
+
+bool is_point_in_polygon(const Vector& p0, const vi& poly) {
+  int cnt = 0;
+  rep(iter, sz(poly)) {
+    int i = poly[iter], j = poly[(iter + 1) % sz(poly)];
+    if (is_point_on_segment(p0, Segment(p[i], p[j])))
+      return false;
+    if (abs(p[i].y - p[j].y) < eps)
+      continue;
+    Vector p1, p2;
+    if (p[i].y < p[j].y) {
+      p1 = p[i];
+      p2 = p[j];
+    } else {
+      p1 = p[j];
+      p2 = p[i];
+    }
+    if (p1.y <= p0.y && p0.y < p2.y) {
+      Vector v1 = p0 - p1, v2 = p2 - p1;
+      if (cross_product(v2, v1) > 0)
+        cnt++;
+    }
+  }
+  return cnt % 2 == 1;
+}
+
+void bfs(int start, int color) {
+  queue<int> q;
+  vector<bool> used(itx, false);
+  int old = gr[start].color;
+  q.push(start);
+  used[start] = true;
+  while (!q.empty()) {
+    int u = q.front();
+    q.pop();
+    gr[u].color = color;
+    each(v, gr[u].v) {
+      if (!used[v] && gr[v].color == old) {
+        q.push(v);
+        used[v] = true;
+      }
+    }
+  }
+}
+
+void solve() {
+  cin >> w >> h >> n;
+  rep(i, n) {
+    cin >> x1 >> y1 >> x2 >> y2;
+    s[i].a = p[it++] = Vector(x1, y1);
+    s[i].b = p[it++] = Vector(x2, y2);
+  }
+  rep(i, n) {
+    for (int j = i + 1; j < n; j++) {
+      Vector p0;
+      if (cross_segments(s[i], s[j], p0))
+        p[it++] = p0;
+    }
+  }
+  sort(p, p + it);
+  it = unique(p, p + it) - p;
+  rep(i, n) {
+    vi temp;
+    rep(j, it) {
+      if (is_point_on_segment(p[j], s[i]))
+        temp.pb(j);
+    }
+    rep1(j, sz(temp)) {
+      g[temp[j - 1]].pb(temp[j]);
+      g[temp[j]].pb(temp[j - 1]);
+    }
+  }
+  rep(i, it) {
+    sort(all(g[i]));
+    g[i].resize(unique(all(g[i])) - g[i].begin());
+    base = i;
+    sort(all(g[i]), cmp);
+  }
+  color_list[0] = "white";
+  color_list[1] = "black";
+  dict["white"] = 0;
+  dict["black"] = 1;
+  color_cnt = 2;
+  gr[itx++] = Node(0, w * h);
+  rep(i, it) {
+    if (comp[i] != 0)
+      continue;
+    queue<int> q;
+    q.push(i);
+    gr[itx++] = Node(1, 0);
+    comp[i] = ++comp_cnt;
+    example[comp_cnt] = i;
+    while (!q.empty()) {
+      int u = q.front();
+      q.pop();
+      each(v, g[u]) {
+        if (comp[v] != 0)
+          continue;
+        q.push(v);
+        comp[v] = comp_cnt;
+      }
+    }
+  }
+  rep(i, it) {
+    used[i].assign(sz(g[i]), false);
+  }
+  rep(i, it) {
+    rep(j, sz(g[i])) {
+      if (used[i][j])
+        continue;
+      vi temp;
+      int u = i, id = j;
+      while (!used[u][id]) {
+        temp.pb(u);
+        int v = g[u][id];
+        used[u][id] = true;
+        rep(h, sz(g[v])) {
+          if (g[v][h] == u) {
+            u = v;
+            id = (h + 1) % sz(g[u]);
+            break;
+          }
+        }
+      }
+      ld s = get_square(temp);
+      if (s > eps) {
+        each(id, temp) {
+          debug(id);
+        }
+        polygons[itx] = temp;
+        gr[itx++] = Node(0, s);
+        int root = comp[i];
+        gr[root].v.pb(itx - 1);
+        gr[itx - 1].v.pb(root);
+        gr[root].square -= s;
+      }
+    }
+  }
+  rep1n(i, comp_cnt) {
+    int root = 0;
+    for (int j = itx - 1; j > comp_cnt; j--)
+      if (is_point_in_polygon(p[example[i]], polygons[j])) {
+        root = j;
+        break;
+      }
+    gr[i].v.pb(root);
+    gr[root].v.pb(i);
+    gr[root].square += gr[i].square;
+    gr[i].square = 0;
+  }
+  cin >> m;
+  rep(iter, m) {
+    cin >> x >> y >> color;
+    Vector p0 = Vector(x, y);
+    if (dict.find(color) == dict.end()) {
+      color_list[color_cnt] = color;
+      dict[color] = color_cnt++;
+    }
+    int color_id = dict[color];
+    bool flag = false;
+    rep(u, it) {
+      each(v, g[u]) {
+        if (is_point_on_segment(p0, Segment(p[u], p[v]))) {
+          bfs(comp[u], color_id);
+          flag = true;
+          break;
+        }
+      }
+      if (flag)
+        break;
+    }
+    if (!flag) {
+      for (int j = itx - 1; j > comp_cnt; j--)
+        if (is_point_in_polygon(p0, polygons[j])) {
+          bfs(j, color_id);
+          flag = true;
+          break;
+        }
+      if (!flag)
+        bfs(0, color_id);
+    }
+  }
+  rep(i, itx) {
+    ans[gr[i].color] += gr[i].square;
+    exist[gr[i].color] = true;
+  }
+  rep(i, color_cnt) {
+    if (!exist[i])
+      continue;
+    printf("%s %.8Lf\n", color_list[i].c_str(), ans[i]);
+  }
+  rep(i, it) {
+    g[i].clear();
+  }
+  rep(i, itx) {
+    gr[i].v.clear();
+    polygons[i].clear();
+  }
+  fill(comp, comp + comp_cnt, 0);
+  fill(ans, ans + color_cnt, 0);
+  fill(exist, exist + color_cnt, false);
+  it = itx = comp_cnt = color_cnt = 0;
+  dict.clear();
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(0);
+  cout.tie(0);
+#ifdef LOCAL
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+  cin >> test;
+#endif
+  while (test--)
+    solve();
+  return 0;
+}
+</pre>
+</details>

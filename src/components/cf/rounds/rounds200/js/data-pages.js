@@ -36,7 +36,12 @@ import html134      from './../p200/elem-134-TRound3.html';
 import html135      from './../p200/elem-135-Round97.html';
 import html136      from './../p200/elem-136-Round97.html';
 import html137      from './../p200/elem-137-Round98.html';
+import html138      from './../p200/elem-138-Round99.html';
+import html139      from './../p200/elem-139-Round99.html';
 import html141      from './../p200/elem-141-Round101.html';
+import html142      from './../p200/elem-142-Round102.html';
+import html143      from './../p200/elem-143-Round102.html';
+import html144      from './../p200/elem-144-Round103.html';
 import html155      from './../p200/elem-155-Round109.html';
 import html158      from './../p200/elem-158-vk-q1.html';
 import html159      from './../p200/elem-159-vk-q2.html';
@@ -82,7 +87,12 @@ export const pages = [
   [html135, 135],
   [html136, 136],
   [html137, 137],
+  [html138, 138],
+  [html139, 139],
   [html141, 141],
+  [html142, 142],
+  [html143, 143],
+  [html144, 144],
   [html155, 155],
   [html158, 158],
   [html159, 159],
