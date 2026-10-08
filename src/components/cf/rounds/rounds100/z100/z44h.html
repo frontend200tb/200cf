@@ -34,3 +34,42 @@
 15
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/44/problem/H" target="_blank">Задача 44H</a>
+    <br><a href="https://codeforces.com/contest/44" target="_blank">Codeforces 44 Школьная командная олимпиада 2 (ЗКШ 2010/11) 2010.11.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <numeric>
+
+using namespace std;
+
+long long f[59][10];
+int g[59];
+string s;
+
+int main() {
+  int n, i, j, k;
+  for (cin >> s, n = s.size(), s[i = 0] ^= 48; i < 10; ++i) {
+    (*f)[i] = 1;
+  }
+  for (*g = i = 1; i < n; ++i) {
+    for (s[i] ^= 48, j = 0;j < 10;++j) {
+      f[i][k = j + s[i] >> 1] += f[i - 1][j];
+      g[i] |= g[i - 1] && s[i - 1] == j && s[i] == k;
+      if (s[i] + j & 1) {
+        f[i][k + 1] += f[i - 1][j];
+        g[i] |= g[i - 1] && s[i - 1] == j && s[i] == k + 1;
+      }
+    }
+  }
+
+  cout << accumulate(f[n - 1], f[n - 1] + 10, 0ll) - g[n - 1] << '\n';
+}
+</pre>
+</details>
