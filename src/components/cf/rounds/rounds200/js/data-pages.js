@@ -46,6 +46,9 @@ import html144      from './../p200/elem-144-Round103.html';
 import html145      from './../p200/elem-145-Round104.html';
 import html146      from './../p200/elem-146-Round104.html';
 import html148      from './../p200/elem-148-Round105.html';
+import html149      from './../p200/elem-149-Round106.html';
+import html150      from './../p200/elem-150-Round107.html';
+import html151      from './../p200/elem-151-Round107.html';
 import html155      from './../p200/elem-155-Round109.html';
 import html158      from './../p200/elem-158-vk-q1.html';
 import html159      from './../p200/elem-159-vk-q2.html';
@@ -101,6 +104,9 @@ export const pages = [
   [html145, 145],
   [html146, 146],
   [html148, 148],
+  [html149, 149],
+  [html150, 150],
+  [html151, 151],
   [html155, 155],
   [html158, 158],
   [html159, 159],

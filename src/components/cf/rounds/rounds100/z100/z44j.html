@@ -67,3 +67,64 @@ YES
 ...
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/44/problem/J" target="_blank">Задача 44J</a>
+    <br><a href="https://codeforces.com/contest/44" target="_blank">Codeforces 44 Школьная командная олимпиада 2 (ЗКШ 2010/11) 2010.11.06</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+char s[1020][1020], z[1020][1020];
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; i++) {
+    scanf("%s", s[i] + 1);
+  }
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= m; j++) {
+      z[i][j] = '.';
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= m; j++) {
+      if (s[i][j] == 'b') {
+        char c = 'a' + (i + j / 2 * 2) % 4;
+        if (s[i - 1][j] == 'w' && s[i + 1][j] == 'w') {
+          s[i - 1][j] = s[i + 1][j] = s[i][j] = '.';
+          z[i - 1][j] = z[i + 1][j] = z[i][j] = c;
+        } else if (s[i][j - 1] == 'w' && s[i][j + 1] == 'w') {
+          s[i][j - 1] = s[i][j + 1] = s[i][j] = '.';
+          z[i][j - 1] = z[i][j + 1] = z[i][j] = c;
+        }
+      }
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) {
+      if (s[i][j] == 'b' || s[i][j] == 'w') {
+        return puts("NO"), 0;
+      }
+    }
+  }
+
+  puts("YES");
+
+  for (int i = 1; i <= n; i++) {
+    puts(z[i] + 1);
+  }
+}
+</pre>
+</details>

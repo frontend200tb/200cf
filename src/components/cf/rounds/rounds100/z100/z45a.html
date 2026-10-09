@@ -27,3 +27,41 @@ May
 </pre>
   <code>May</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/45/problem/A" target="_blank">Задача 45A</a>
+    <br><a href="https://codeforces.com/contest/45" target="_blank">Codeforces 45 Школьная командная олимпиада 3 (ЗКШ 2010/11) 2010.11.13</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+string z[12] = {
+  "January","February","March",
+  "April","May","June",
+  "July","August","September",
+  "October","November","December"
+};
+
+int main() {
+  string s;
+  cin >> s;
+
+  int n;
+  cin >> n;
+
+  int i = 0;
+
+  while (z[i] != s) {
+    i++;
+  }
+
+  cout << z[(i + n) % 12];
+}
+</pre>
+</details>
