@@ -1,13 +1,12 @@
-import a    from '../z/z1030a.html';
-import b    from '../z/z1030b.html';
-import c    from '../z/z1030c.html';
-import d    from '../z/z1030d.html';
-import e    from '../z/z1030e.html';
-import f    from '../z/z1030f.html';
-import g    from '../z/z1030g.html';
+import a from '../z/z1030a.html';
+import b from '../z/z1030b.html';
+import c from '../z/z1030c.html';
+import d from '../z/z1030d.html';
+import e from '../z/z1030e.html';
+import f from '../z/z1030f.html';
+import g from '../z/z1030g.html';
 
 export default function inElem() {
-
   if (document.querySelector('.t1')) {
     document.querySelector('.t1').innerHTML = a;
   }
@@ -29,5 +28,4 @@ export default function inElem() {
   if (document.querySelector('.t7')) {
     document.querySelector('.t7').innerHTML = g;
   }
-
 }

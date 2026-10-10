@@ -1,8 +1,8 @@
-import a    from '../z200/z163a.html';
-import b    from '../z200/z163b.html';
-import c    from '../z200/z163c.html';
-import d    from '../z200/z163d.html';
-import e    from '../z200/z163e.html';
+import a from '../z200/z163a.html';
+import b from '../z200/z163b.html';
+import c from '../z200/z163c.html';
+import d from '../z200/z163d.html';
+import e from '../z200/z163e.html';
 
 export default function inElem() {
   if (document.querySelector('.t1')) {

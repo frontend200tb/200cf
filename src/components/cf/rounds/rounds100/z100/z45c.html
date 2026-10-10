@@ -46,3 +46,64 @@ BGBB
 1 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/45/problem/C" target="_blank">Задача 45C</a>
+    <br><a href="https://codeforces.com/contest/45" target="_blank">Codeforces 45 Школьная командная олимпиада 3 (ЗКШ 2010/11) 2010.11.13</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+const int N = 2e5 + 3;
+int a[N], l[N], r[N], cc;
+set<pair<int, int>> st;
+
+int main() {
+  ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+  int n;
+  string s;
+
+  cin >> n >> s;
+  s = ' ' + s;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+    l[i] = i - 1;
+    r[i] = i + 1;
+    cc += (s[i] == 'B');
+  }
+
+  for (int i = 1; i <= n; i++) {
+    if (i < n && s[i] != s[i + 1]) {
+      st.insert({ abs(a[i + 1] - a[i]),i });
+    }
+  }
+
+  cout << min(cc, n - cc) << "\n";
+
+  while (!st.empty()) {
+    int t1 = (*st.begin()).second;
+    int t2 = r[t1];
+    st.erase(st.begin());
+    cout << t1 << " " << t2 << "\n";
+    st.erase({ abs(a[t1] - a[l[t1]]),l[t1] });
+    st.erase({ abs(a[t2] - a[r[t2]]),t2 });
+    r[l[t1]] = r[t2];
+    l[r[t2]] = l[t1];
+
+    if (l[t1] && r[t2] <= n && s[l[t1]] != s[r[t2]]) {
+      st.insert({ abs(a[l[t1]] - a[r[t2]]),l[t1] });
+    }
+  }
+
+}
+</pre>
+</details>

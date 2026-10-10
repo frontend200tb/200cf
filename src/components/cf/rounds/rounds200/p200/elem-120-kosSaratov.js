@@ -1,13 +1,13 @@
-import a    from '../z200/z120a.html';
-import b    from '../z200/z120b.html';
-import c    from '../z200/z120c.html';
-import d    from '../z200/z120d.html';
-import e    from '../z200/z120e.html';
-import f    from '../z200/z120f.html';
-import g    from '../z200/z120g.html';
-import h    from '../z200/z120h.html';
-import i    from '../z200/z120i.html';
-import j    from '../z200/z120j.html';
+import a from '../z200/z120a.html';
+import b from '../z200/z120b.html';
+import c from '../z200/z120c.html';
+import d from '../z200/z120d.html';
+import e from '../z200/z120e.html';
+import f from '../z200/z120f.html';
+import g from '../z200/z120g.html';
+import h from '../z200/z120h.html';
+import i from '../z200/z120i.html';
+import j from '../z200/z120j.html';
 
 export default function inElem() {
   if (document.querySelector('.t1')) {

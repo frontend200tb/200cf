@@ -50,6 +50,8 @@ export const asideThemes = [
   '149 Round 106 (Div. 2)',
   '150 Round 107 (Div. 1)',
   '151 Round 107 (Div. 2)',
+  '152 Round 108 (Div. 2)',
+  '153 SLRound 5',
   '155 Round 109 (Div. 2)',
   '158 VK 2012 q1',
   '159 VK 2012 q2',

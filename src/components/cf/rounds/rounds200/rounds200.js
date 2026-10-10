@@ -9,10 +9,10 @@ import { createAside, createMain } from './js/f-create-aside';
 // 1. Создаем объект rounds200
 const rounds200 = {};
 
-// 2. В объекте rounds создаем свойство aside
+// 2. В объекте rounds200 создаем свойство aside
 rounds200.aside = createAside();
 
-// 3. В объекте rounds создаем свойство main
+// 3. В объекте rounds200 создаем свойство main
 rounds200.main = createMain();
 
 // 4. Экспортируем функцию showRounds200()

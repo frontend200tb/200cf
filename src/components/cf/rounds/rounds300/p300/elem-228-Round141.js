@@ -1,11 +1,10 @@
-import a    from '../../z/z300/z230a.html';
-import b    from '../../z/z300/z230b.html';
-import c    from '../../z/z300/z230c.html';
-import d    from '../../z/z300/z230d.html';
-import e    from '../../z/z300/z230e.html';
+import a from '../z300/z228a.html';
+import b from '../z300/z228b.html';
+import c from '../z300/z228c.html';
+import d from '../z300/z228d.html';
+import e from '../z300/z228e.html';
 
 export default function inElem() {
-
   if (document.querySelector('.t1')) {
     document.querySelector('.t1').innerHTML = a;
   }
@@ -21,5 +20,4 @@ export default function inElem() {
   if (document.querySelector('.t5')) {
     document.querySelector('.t5').innerHTML = e;
   }
-
 }
