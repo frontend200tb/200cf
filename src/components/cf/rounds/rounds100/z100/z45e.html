@@ -45,3 +45,63 @@ Bc
 Aa Ad, Ab Ae, Ac Bb, Ba Bc
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/45/problem/E" target="_blank">Задача 45E</a>
+    <br><a href="https://codeforces.com/contest/45" target="_blank">Codeforces 45 Школьная командная олимпиада 3 (ЗКШ 2010/11) 2010.11.13</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int n, bo, c[110], b[110], ls['z' + 10], lt['z' + 10];
+string s[110], t[110];
+
+int main() {
+  cin >> n;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> s[i];
+  }
+
+  for (int i = 1; i <= n; i++) {
+    cin >> t[i];
+  }
+
+  sort(s + 1, s + n + 1);
+  sort(t + 1, t + n + 1);
+
+  for (int i = 1; i <= n; i++) {
+    ls[s[i][0]]++;
+    lt[t[i][0]]++;
+  }
+
+  for (int i = 1; i <= n; i++) {
+    bo = 0;
+    for (int j = 1; j <= n; j++) {
+      if (b[j] == 0 && (ls[t[j][0]] < lt[t[j][0]] ||
+        s[i][0] == t[j][0]) && (lt[s[i][0]] < ls[s[i][0]] ||
+          t[j][0] >= s[i][0])) {
+        bo = j;
+        break;
+      }
+    }
+    b[bo] = 1;
+    c[i] = bo;
+    ls[s[i][0]]--;
+    lt[t[bo][0]]--;
+  }
+
+  for (int i = 1; i <= n; i++) {
+    cout << s[i] << " " << t[c[i]];
+    if (i != n) cout << ", ";
+  }
+}
+</pre>
+</details>
