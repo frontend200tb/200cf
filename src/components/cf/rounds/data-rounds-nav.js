@@ -1,6 +1,8 @@
 import showRounds100 from './rounds100/rounds100';
 import showRounds200 from './rounds200/rounds200';
 import showRounds300 from './rounds300/rounds300';
+import showRounds400 from './rounds400/rounds400';
+import showRounds500 from './rounds500/rounds500';
 import showRounds    from './rounds/rounds';
 
 export const dataRoundsNav = [
@@ -26,6 +28,22 @@ export const dataRoundsNav = [
     content: '<rounds-300></rounds-300>',
     act() {
       showRounds300();
+    },
+  },
+  {
+    url: 'rounds400.html',
+    text: 'Rounds 400',
+    content: '<rounds-400></rounds-400>',
+    act() {
+      showRounds400();
+    },
+  },
+  {
+    url: 'rounds500.html',
+    text: 'Rounds 500',
+    content: '<rounds-500></rounds-500>',
+    act() {
+      showRounds500();
     },
   },
   {

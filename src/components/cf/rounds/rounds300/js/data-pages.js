@@ -7,6 +7,6 @@ import html278 from './../p300/elem-278-Round170.html';
 export const pages = [
   [html228, 228],
   [html230, 230],
-  html268,
-  html278,
+  [html268, 268],
+  [html278, 278],
 ];
