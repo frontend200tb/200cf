@@ -27,3 +27,28 @@
 </pre>
   <code>2 1</code>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/46/problem/A" target="_blank">Задача 46A</a>
+    <br><a href="https://codeforces.com/contest/46" target="_blank">Codeforces 46 Школьная индивидуальная олимпиада 2 (ЗКШ 2010/11) Codeforces Beta Round 43 2010.12.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n; // число детей
+  cin >> n;
+
+  int s = 1;
+  for (int i = 1; i < n; i++) {
+    cout << ((s += i) - 1) % n + 1 << ' ';
+  }
+}
+</pre>
+</details>
