@@ -25,3 +25,47 @@ L
 L
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/46/problem/B" target="_blank">Задача 46B</a>
+    <br><a href="https://codeforces.com/contest/46" target="_blank">Codeforces 46 Школьная индивидуальная олимпиада 2 (ЗКШ 2010/11) Codeforces Beta Round 43 2010.12.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int t[5], b[5][5] = { 0,1,2,3,4,1,2,0,3,4,2,3,1,4,0,3,4,2,1,0,4,3,2,1,0 };
+string v[5] = { "S","M","L","XL","XXL" };
+
+int main() {
+  for (int i = 0; i < 5; i++) {
+    cin >> t[i];
+  }
+
+  int k;
+  cin >> k;
+
+  while (k--) {
+    string s;
+    cin >> s;
+    int i = 0;
+    int j = 0;
+    while (s != v[i]) {
+      i++;
+    }
+
+    while (!t[b[i][j]]) {
+      j++;
+    }
+
+    t[b[i][j]]--;
+    cout << v[b[i][j]] << endl;
+  }
+}
+</pre>
+</details>

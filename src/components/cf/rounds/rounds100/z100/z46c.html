@@ -30,3 +30,45 @@ HTHTHTHHT
 </pre>
   <p>В первом примере никого не нужно менять местами, потому что животные каждого вида и так стоят подряд. Во втором примере можно поменять, например, тигра в позиции 2 с хомячком в позиции 5 и затем — тигра в позиции 9 с хомячком в позиции 7.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/46/problem/C" target="_blank">Задача 46C</a>
+    <br><a href="https://codeforces.com/contest/46" target="_blank">Codeforces 46 Школьная индивидуальная олимпиада 2 (ЗКШ 2010/11) Codeforces Beta Round 43 2010.12.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include<cstdio>
+
+int n, m, i, j, k, a;
+char s[1111];
+
+int main() {
+  scanf("%d", &n);
+  scanf("%s", s);
+  a = n;
+
+  for (i = 0; i < n; i++) {
+    if (s[i] == 'T') {
+      k++;
+    }
+  }
+
+  for (i = 0; i < n; i++) {
+    for (m = j = 0; j < k; j++) {
+      if (s[(i + j) % n] == 'H') {
+        m++;
+      }
+    }
+    if (m < a) {
+      a = m;
+    }
+  }
+
+  printf("%d\n", a);
+  return 0;
+}
+</pre>
+</details>
