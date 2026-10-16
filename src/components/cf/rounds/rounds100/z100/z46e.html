@@ -21,3 +21,41 @@
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/46/problem/E" target="_blank">Задача 46E</a>
+    <br><a href="https://codeforces.com/contest/46" target="_blank">Codeforces 46 Школьная индивидуальная олимпиада 2 (ЗКШ 2010/11) Codeforces Beta Round 43 2010.12.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define D { p = M[i];  M[i] = t + A[i];  t = max(t , p); }
+
+long long M[1502],A[1502],m,n,i,t,p,h;
+
+int main(){
+
+  cin >> m >> n;
+
+  for(m++;m--;h=!h){
+    for(i=1;i<=n;i++){
+      scanf("%lld",A+i);
+      A[i] += A[i-1];
+    }
+    t = -100000000011LL;
+    if(h)
+      for(i=n; i ;i--)  D
+    else
+      for(i=1;i<=n;i++) D
+  }
+
+  cout << t;
+}
+</pre>
+</details>

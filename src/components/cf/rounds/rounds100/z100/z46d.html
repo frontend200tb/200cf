@@ -59,3 +59,51 @@
 -1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/46/problem/D" target="_blank">Задача 46D</a>
+    <br><a href="https://codeforces.com/contest/46" target="_blank">Codeforces 46 Школьная индивидуальная олимпиада 2 (ЗКШ 2010/11) Codeforces Beta Round 43 2010.12.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+map<int, int> mp;
+int m[100005];
+
+int main() {
+  int L, b, f, n;
+  cin >> L >> b >> f >> n;
+
+  for (int i = 1; i <= n; i++) {
+    int x, y;
+    cin >> x >> y;
+
+    mp[-b] = -b;
+    mp[L + f] = n + f;
+
+    if (x == 1) {
+      m[i] = -1;
+      for (auto l = mp.begin(), r = ++mp.begin();r != mp.end();l++, r++) {
+        if ((r->first) - (l->second) >= y + b + f) {
+          m[i] = (l->second) + b;
+          mp[m[i]] = m[i] + y;
+          break;
+        }
+      }
+      cout << m[i] << endl;
+    } else {
+      mp.erase(m[y]);
+    }
+  }
+
+  return 0;
+}
+</pre>
+</details>
