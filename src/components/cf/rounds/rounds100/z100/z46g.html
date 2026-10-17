@@ -42,3 +42,96 @@ YES
 -1 -1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/46/problem/G" target="_blank">Задача 46G</a>
+    <br><a href="https://codeforces.com/contest/46" target="_blank">Codeforces 46 Школьная индивидуальная олимпиада 2 (ЗКШ 2010/11) Codeforces Beta Round 43 2010.12.05</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+struct ppp {
+  int x, y;
+  double k;
+} ans[82000];
+
+int n;
+int bo[82000], choose[82000], sx, sy, i, j, k, s;
+pair<int, int> bo2[82000];
+
+bool cmp(const ppp& a, const ppp& b) {
+  return a.k < b.k;
+}
+
+int main() {
+  cin >> n;
+
+  for (i = 0; i <= 200; ++i) {
+    for (j = 0; j <= 200; ++j) {
+      bo[i * i + j * j] = 1;
+      bo2[i * i + j * j] = make_pair(i, j);
+    }
+  }
+
+  k = n;
+  s = 0;
+
+  for (i = 1; k; ++i) {
+    if (bo[i]) {
+      choose[i] = 1;
+      s += i;
+      k--;
+    }
+  }
+
+  if (s & 1) {
+    for (;;++i)if (bo[i]) {
+      choose[i] = 1;
+      s += i;
+      break;
+    }
+    for (;;--i)if (choose[i] && (s & 1) == (i & 1)) {
+      choose[i] = 0;
+      break;
+    }
+  }
+  sx = sy = 0;
+
+  for (i = 40000;i >= 1;--i)if (choose[i]) {
+    int xx = bo2[i].first, yy = bo2[i].second;
+    for (j = 0;j <= 1;++j)
+      for (int px = -1;px <= 1;++px)if (px)
+        for (int py = -1;py <= 1;++py)if (py) {
+          int tx = sx + (j ? xx * px : yy * px);
+          int ty = sy + (j ? yy * py : xx * py);
+          if (1ll * tx * tx + 1ll * ty * ty <= 1ll * xx * xx + 1ll * yy * yy) {
+            sx = tx; sy = ty;
+            ans[++k].x = (j ? xx * px : yy * px);
+            ans[k].y = (j ? yy * py : xx * py);
+            ans[k].k = atan2(ans[k].y, ans[k].x);
+            goto ff;
+          }
+        }
+  ff:;
+  }
+
+  sort(ans + 1, ans + n + 1, cmp);
+  sx = sy = 0;
+  printf("YES\n");
+
+  for (i = 1; i <= n; ++i) {
+    sx += ans[i].x;
+    sy += ans[i].y;
+    printf("%d %d\n", sx, sy);
+  }
+}
+</pre>
+</details>
