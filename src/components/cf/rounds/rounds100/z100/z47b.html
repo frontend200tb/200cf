@@ -31,3 +31,44 @@ C>A
 ACB
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/47/problem/B" target="_blank">Задача 47B</a>
+    <br><a href="https://codeforces.com/contest/47" target="_blank">Codeforces 47 Round 44 Beta (Div. 2) 2010.12.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+string s;
+int a[3];
+
+int main() {
+  for (int i = 0; i < 3; i++) {
+    cin >> s;
+    if (s[1] == '>') {
+      a[s[0] - 'A']++;
+    } else {
+      a[s[2] - 'A']++;
+    }
+  }
+
+  if (a[0] == a[1] || a[1] == a[2] || a[2] == a[0]) {
+    cout << "Impossible";
+  } else {
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        if (i == a[j]) {
+          cout << char('A' + j);
+        }
+      }
+    }
+  }
+}
+</pre>
+</details>

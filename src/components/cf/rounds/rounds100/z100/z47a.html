@@ -37,3 +37,27 @@ NO
 YES
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/47/problem/A" target="_blank">Задача 47A</a>
+    <br><a href="https://codeforces.com/contest/47" target="_blank">Codeforces 47 Round 44 Beta (Div. 2) 2010.12.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  int m = sqrtl(n * 2);
+  cout << (m * m + m == 2 * n ? "YES" : "NO");
+}
+</pre>
+</details>
