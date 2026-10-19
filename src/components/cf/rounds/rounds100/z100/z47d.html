@@ -43,3 +43,60 @@
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/47/problem/C" target="_blank">Задача 47C</a>
+    <br><a href="https://codeforces.com/contest/47" target="_blank">Codeforces 47 Round 44 Beta (Div. 2) 2010.12.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int n, m;
+long long int a[40];
+int t[40];
+int ans;
+
+void f(int ind, long long int num, int k) {
+  if (ind == n) {
+    bool ok = 1;
+    for (int i = 1; i <= m; i++) {
+      if ((n - __builtin_popcountll(num ^ a[i])) != t[i]) {
+        ok = 0;
+      }
+    }
+    ans += ok;
+    return;
+  }
+
+  f(ind + 1, num ^ (1LL << ind), k);
+  if (k) {
+    f(ind + 1, num, k - 1);
+  }
+}
+
+int main() {
+  cin >> n >> m;
+  for (int i = 1; i <= m; i++) {
+    string s;
+    cin >> s;
+    cin >> t[i];
+    for (int j = 0; j < n; j++) {
+      if (s[j] == '1') {
+        a[i] |= (1LL << j);
+      }
+    }
+  }
+
+  f(0, a[1], t[1]);
+  cout << ans;
+
+  return 0;
+}
+</pre>
+</details>
