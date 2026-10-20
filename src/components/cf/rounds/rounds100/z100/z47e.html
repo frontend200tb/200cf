@@ -53,3 +53,78 @@
 4.000000000 0.378324889
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/47/problem/E" target="_blank">Задача 47E</a>
+    <br><a href="https://codeforces.com/contest/47" target="_blank">Codeforces 47 Round 44 Beta (Div. 2) 2010.12.07</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+const int N = 1e6 + 5;
+int n, m;
+double v, x[N], y[N];
+
+struct node {
+  int op;
+  double val;
+  bool operator<(const node o)const {
+    return val < o.val;
+  }
+}a[N];
+
+pair<double, double>u[N];
+
+int main() {
+  cin >> n >> v;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i].val;
+    a[i].op = i;
+  }
+
+  sort(a + 1, a + n + 1);
+  cin >> m;
+  for (int i = 1; i <= m; i++) {
+    cin >> u[i].first >> u[i].second;
+  }
+  sort(u + 1, u + m + 1);
+  int j = 1;
+
+  for (int i = 1; i <= n; i++) {
+    double vx = v * cos(a[i].val);
+    double vy = v * sin(a[i].val);
+    double t = vy / 4.9;
+    bool flag = 0;
+    while (j <= m && u[j].first <= vx * t) {
+      double tm = u[j].first / vx;
+      double cur = vy * tm - 4.9 * tm * tm;
+      if (cur <= u[j].second) {
+        flag = 1;
+        x[a[i].op] = u[j].first;
+        y[a[i].op] = cur;
+        break;
+      }
+      j++;
+    }
+    if (!flag) {
+      x[a[i].op] = vx * t;
+      y[a[i].op] = 0;
+    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    printf("%.10lf %.10lf\n", x[i], y[i]);
+  }
+  return 0;
+  }
+</pre>
+</details>

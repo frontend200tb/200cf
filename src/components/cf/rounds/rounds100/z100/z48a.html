@@ -51,3 +51,31 @@ rock
 ?
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/48/problem/A" target="_blank">Задача 48A</a>
+    <br><a href="https://codeforces.com/contest/48" target="_blank">Codeforces 48 Школьная индивидуальная олимпиада 3 (ЗКШ 2010/11) Codeforces Beta Round 45 2010.12.12</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  string s, a;
+
+  for (int i = 0;i < 3;i++) {
+    cin >> a;
+    s += a[0];
+  }
+
+  cout << (s == "prr" || s == "rss" || s == "spp" ? 'F' :
+    s == "rpr" || s == "srs" || s == "psp" ? 'M' :
+    s == "rrp" || s == "ssr" || s == "pps" ? 'S' : '?');
+}
+</pre>
+</details>
