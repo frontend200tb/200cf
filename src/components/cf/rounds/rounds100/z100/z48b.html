@@ -36,3 +36,62 @@
 </pre>
   <p>Во втором примере левая верхняя клетка участка это (1,1), а правая нижняя — (3, 2).</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/48/problem/B" target="_blank">Задача 48B</a>
+    <br><a href="https://codeforces.com/contest/48" target="_blank">Codeforces 48 Школьная индивидуальная олимпиада 3 (ЗКШ 2010/11) Codeforces Beta Round 45 2010.12.12</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int a[101][101];
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  for (int i = 1;i <= n;i++) {
+    for (int j = 1;j <= m;j++) {
+      cin >> a[i][j];
+    }
+  }
+
+  int x, y;
+  cin >> x >> y;
+
+  int s, minn = 2500;
+  for (int i = 1; i <= n - x + 1; i++) {
+    for (int j = 1; j <= m - y + 1; j++) {
+      s = 0;
+      for (int k = i; k < i + x; k++) {
+        for (int p = j; p < j + y; p++) {
+          s += a[k][p];
+        }
+      }
+      minn = min(minn, s);
+    }
+  }
+
+  swap(x, y);
+  for (int i = 1; i <= n - x + 1; i++) {
+    for (int j = 1; j <= m - y + 1; j++) {
+      s = 0;
+      for (int k = i; k < i + x; k++) {
+        for (int p = j; p < j + y; p++) {
+          s += a[k][p];
+        }
+      }
+      minn = min(minn, s);
+    }
+  }
+
+  cout << minn;
+}
+</pre>
+</details>
