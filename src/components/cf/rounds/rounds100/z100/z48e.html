@@ -59,3 +59,105 @@ Zmey
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/48/problem/E" target="_blank">Задача 48E</a>
+    <br><a href="https://codeforces.com/contest/48" target="_blank">Codeforces 48 Школьная индивидуальная олимпиада 3 (ЗКШ 2010/11) Codeforces Beta Round 45 2010.12.12</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <queue>
+
+using namespace std;
+
+const int N = 3e2 + 8;
+
+int n, m, H, T, r, v, u, w, e, x, y, h[N], t[N], s[N], d[N], dis[N][N], dp[N][N], mk[N][N];
+bool mark[N][N], b;
+pair<int, int> f;
+queue < pair<int, int> > q;
+vector < pair <int, int> > nei[N][N];
+
+void bfs(int H, int T) {
+  mark[H][T] = 1;
+  q.push({ H , T });
+
+  while (!q.empty()) {
+    f = q.front();
+    v = f.first, u = f.second;
+    for (int i = 1; i <= min(v, n); i++) {
+      x = v - i + h[i], y = u + t[i];
+      if (x + y > r) {
+        continue;
+      }
+      nei[v][u].push_back({ x , y });
+      if (!mark[x][y]) {
+        mark[x][y] = 1;
+        q.push({ x , y });
+        dis[x][y] = dis[v][u] + 1;
+      }
+    }
+    for (int i = 1; i <= min(u, m); i++) {
+      x = v + s[i], y = u - i + d[i];
+      if (x + y > r)
+        continue;
+      nei[v][u].push_back({ x , y });
+      if (!mark[x][y]) {
+        mark[x][y] = 1;
+        q.push({ x , y });
+        dis[x][y] = dis[v][u] + 1;
+      }
+    }
+    q.pop();
+  }
+}
+
+void dfs(int v, int u) {
+  for (pair<int, int> f : nei[v][u]) {
+    w = f.first, e = f.second;
+    if (!mk[w][e]) {
+      mk[w][e] = 1;
+      dfs(w, e);
+    } else if (mk[w][e] == 1) {
+      b = 1;
+    }
+  }
+  mk[v][u] = 2;
+  for (pair <int, int> f : nei[v][u])
+    dp[v][u] = max(dp[v][u], dp[f.first][f.second]);
+  dp[v][u]++;
+}
+
+int main() {
+  cin >> H >> T >> r >> n;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> h[i] >> t[i];
+  }
+
+  cin >> m;
+
+  for (int i = 1; i <= m; i++) {
+    cin >> s[i] >> d[i];
+  }
+
+  bfs(H, T);
+
+  if (mark[0][0]) {
+    cout << "Ivan" << endl << dis[0][0];
+  } else {
+    dfs(H, T);
+    if (b) {
+      cout << "Draw";
+    } else {
+      cout << "Zmey" << endl << dp[H][T];
+    }
+  }
+}
+</pre>
+</details>
