@@ -30,3 +30,58 @@
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/49/problem/B" target="_blank">Задача 49B</a>
+    <br><a href="https://codeforces.com/contest/48" target="_blank">Codeforces 49 Round 46 Beta (Div. 2) 2010.12.17</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int a, b;
+  cin >> a >> b;
+
+  int ld = -1; // largest digit
+  int aa = a, bb = b;
+  while (aa > 0) {
+    ld = max(ld, aa % 10);
+    aa /= 10;
+  }
+  while (bb > 0) {
+    ld = max(ld, bb % 10);
+    bb /= 10;
+  }
+
+  int base = ld + 1;
+  aa = a; bb = b;
+  int num1 = 0, num2 = 0;
+
+  for (int pw = 1; aa > 0; pw *= base) {
+    num1 += (aa % 10) * pw;
+    aa /= 10;
+  }
+  for (int pw = 1; bb > 0; pw *= base) {
+    num2 += (bb % 10) * pw;
+    bb /= 10;
+  }
+
+  int dec_num = num1 + num2;
+
+  string converted;
+  while (dec_num > 0) {
+    converted += '0' + (dec_num % base);
+    dec_num /= base;
+  }
+
+  cout << converted.size() << '\n';
+}
+</pre>
+</details>
