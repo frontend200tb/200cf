@@ -33,3 +33,88 @@
 99999995149.999995249999991
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/48/problem/F" target="_blank">Задача 48F</a>
+    <br><a href="https://codeforces.com/contest/48" target="_blank">Codeforces 48 Школьная индивидуальная олимпиада 3 (ЗКШ 2010/11) Codeforces Beta Round 45 2010.12.12</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int n, m, s, day, w[500000], c[500000], a[500000];
+long long ans;
+double dot;
+
+void qsort(int l, int r, int ok) {
+  int x = (l + r) / 2;
+  int m = c[x] - day * a[x];
+  int v = w[x];
+  int i = l;
+  int j = r;
+
+  if (l == r) {
+    long long sum = m * 1ll * ok;
+    dot += sum % w[x] * 1.0 / w[x];
+    ans += sum / w[x];
+    return;
+  }
+
+  while (i <= j) {
+    while ((c[i] - day * a[i]) * 1ll * v < m * 1ll * w[i]) i++;
+    while ((c[j] - day * a[j]) * 1ll * v > m * 1ll * w[j]) j--;
+    if (i <= j) {
+      swap(c[i], c[j]);
+      swap(a[i], a[j]);
+      swap(w[i], w[j]);
+      i++, j--;
+    }
+  }
+
+  j = max(j, l);
+  long long cnt = 0, sum = 0;
+  for (i = l; i <= j; i++) {
+    cnt += w[i];
+    sum += c[i] - day * a[i];
+  }
+  if (cnt >= ok) {
+    qsort(l, j, ok);
+  } else {
+    qsort(j + 1, r, ok - cnt);
+    ans += sum;
+  }
+}
+
+int main() {
+  char buff[100];
+  scanf("%d%d%d", &n, &m, &s);
+
+  for (int i = 0; i < m; i++) {
+    scanf("%d", w + i);
+  }
+
+  for (int i = 0; i < m; i++) {
+    scanf("%d", c + i);
+  }
+
+  for (int i = 0; i < m; i++) {
+    scanf("%d", a + i);
+  }
+
+  for (day = 0; day < n; day++) {
+    qsort(0, m - 1, s);
+    ans += int(dot);
+    dot -= int(dot);
+  }
+
+  sprintf(buff, "%.15f", dot);
+  printf("%I64d%s\n", ans, buff + 1);
+}
+</pre>
+</details>
