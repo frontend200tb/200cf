@@ -49,3 +49,34 @@
   <p>В первом примере Петя может выбрать клетки 1 и 2. Он перекрашивает клетку 1 в черный и клетку 2 в белый.</p>
   <p>Во втором примере Петя может выбрать клетки 2 и 3. Он перекрашивает клетку 2 в белый и клетку 3 в черный.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/49/problem/D" target="_blank">Задача 49D</a>
+    <br><a href="https://codeforces.com/contest/48" target="_blank">Codeforces 49 Round 46 Beta (Div. 2) 2010.12.17</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  string a;
+  cin >> a;
+
+  int ans = 0;
+  for (int i = 0; i < n; i++) {
+    ans += (a[i] != (i % 2 ? '0' : '1'));
+  }
+
+  cout << min(ans, n - ans);
+}
+</pre>
+</details>
