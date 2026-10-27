@@ -27,3 +27,39 @@
 16
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/50/problem/C" target="_blank">Задача 50C</a>
+    <br><a href="https://codeforces.com/contest/50" target="_blank">Codeforces Beta Round 47 2010.12.20</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  int x, y;
+  int a = -0x3f3f3f;
+  int b = -0x3f3f3f;
+  int c = -0x3f3f3f;
+  int	d = -a;
+
+  while (n--) {
+    cin >> x >> y;
+    a = max(a, x + y);
+    b = max(b, x - y);
+    c = max(c, y - x);
+    d = min(d, x + y);
+  }
+
+  cout << a + b + c - d + 4;
+}
+</pre>
+</details>

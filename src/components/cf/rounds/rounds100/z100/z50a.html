@@ -34,3 +34,29 @@
 4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/50/problem/A" target="_blank">Задача 50А</a>
+    <br><a href="https://codeforces.com/contest/50" target="_blank">Codeforces Beta Round 47 2010.12.20</a>
+  </div>
+
+  <p>Каждая доминошка занимает 2 клетки. Поэтому максимальное количество доминошек, которое можно уложить на доску, равно половине площади доски с округлением вниз</p>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  // ввод данных
+  int m, n;
+  cin >> m >> n;
+
+  // решение и вывод результата
+  cout &lt;&lt; (m * n) / 2;
+}
+</pre>
+</details>

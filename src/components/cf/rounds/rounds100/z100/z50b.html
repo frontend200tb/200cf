@@ -31,3 +31,36 @@ aaaaaaaaaa
 100
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/50/problem/B" target="_blank">Задача 50B</a>
+    <br><a href="https://codeforces.com/contest/50" target="_blank">Codeforces Beta Round 47 2010.12.20</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  string j;
+  cin >> j;
+
+  long long i = j.length();
+  long long s[900] = { 0 }, a = 0, n = 900;
+
+  while (i--) {
+    s[j[i]]++;
+  }
+
+  while (n--) {
+    a += s[n] * s[n];
+  }
+
+  cout << a;
+}
+</pre>
+</details>
