@@ -51,3 +51,47 @@
   <code>b = 3, c = 3: x² + 6x + 3 = 0; Корни x1 = -3 - sqrt(6), x2 = -3 + sqrt(6)</code>
   <p>Всего корней 13, и поскольку корень -1 повторяется дважды, то различных из них 12.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/50/problem/E" target="_blank">Задача 50E</a>
+    <br><a href="https://codeforces.com/contest/50" target="_blank">Codeforces Beta Round 47 2010.12.20</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+  long long b, c;
+  cin >> b >> c;
+
+  long long n = 0, d, x = 0, y = 0, z = 0, t;
+
+  for (long long i = 1;i <= b;i++) {
+    n = n + 2 * min(i * i, c);
+    t = ceil(sqrt(i * i - c));
+    if (i * i <= c) {
+      x = x + 2 * i - 2;
+      d = 2 * i - 1;
+    } else {
+      if (t == i) {
+      } else {
+        y = y + (i - t);
+        if ((d - (i + t)) < 0) {
+        } else {
+          z = z + (d - (i + t)) + 1;
+          d = 2 * i - 1;
+        }
+      }
+    }
+  }
+
+  cout << n - x - 1 - y - z;
+}
+</pre>
+</details>

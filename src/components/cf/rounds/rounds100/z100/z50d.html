@@ -55,3 +55,48 @@
 13.45126176453737600
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/50/problem/D" target="_blank">Задача 50D</a>
+    <br><a href="https://codeforces.com/contest/50" target="_blank">Codeforces Beta Round 47 2010.12.20</a>
+  </div>
+
+<pre class="language-cpp">
+#include <cstdio>
+#include <cmath>
+
+int x[200], y[200];
+double d[200][200];
+
+int main() {
+  int n, k, p, a, b;
+  scanf("%d%d%d%d%d", &n, &k, &p, &a, &b);
+  for (int i = 0; i < n; i++) {
+    scanf("%d%d", x + i, y + i);
+  }
+  double l = 0, h = 9999, r;
+  for (int m = 0; m < 60; m++) {
+    r = (l + h) / 2;
+    d[0][0] = 1;
+    for (int i = 0; i < n; i++) {
+      double z = hypot(x[i] - a, y[i] - b), t = z <= r ? 1 : exp(1 - z * z / r / r);
+      for (int j = 0;j <= i + 1;j++)
+        d[i + 1][j] = (j ? d[i][j - 1] * t : 0) + d[i][j] * (1 - t);
+    }
+    double s = 0;
+    for (int i = k; i <= n; i++) {
+      s += d[n][i];
+    }
+    if (s * 1000 < 1000 - p) {
+      l = r;
+    } else {
+      h = r;
+    }
+  }
+  printf("%.9f", h);
+}
+</pre>
+</details>
