@@ -45,3 +45,67 @@
 1.000000 10001.500000 10003.500000
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/51/problem/C" target="_blank">Задача 51C</a>
+    <br><a href="https://codeforces.com/contest/51" target="_blank">Codeforces 51 Round 48 Beta 2010.12.18</a>
+  </div>
+
+<pre class="language-cpp">
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+
+int n;
+int arr[200020];
+double sol[3];
+double tmp[3];
+
+bool v(double d) {
+  double end = 0;
+  int j = 0;
+
+  for (int i = 0; i < n; i++) {
+    if (arr[i] > end) {
+      if (j == 3) return 0;
+      tmp[j++] = d + arr[i];
+      end = arr[i] + 2.0 * d;
+    }
+  }
+
+  for (int i = 0; i < 3; i++) {
+    sol[i] = tmp[i];
+  }
+  return 1;
+}
+
+double S() {
+  double lo = 0;
+  double hi = arr[n - 1];
+
+  for (int i = 0; i < 400; i++) {
+    double mid = (lo + hi) / 2;
+    if (v(mid)) hi = mid;
+    else lo = mid;
+  }
+
+  return lo;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; i++) {
+    cin >> arr[i];
+  }
+
+  sort(arr, arr + n);
+  printf("%.6lf\n", S());
+  printf("%.6lf %.6lf %.6lf", sol[0], sol[1], sol[2]);
+}
+</pre>
+</details>
