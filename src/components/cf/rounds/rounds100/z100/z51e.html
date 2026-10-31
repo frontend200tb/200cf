@@ -46,3 +46,59 @@
 12
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/51/problem/E" target="_blank">Задача 51E</a>
+    <br><a href="https://codeforces.com/contest/51" target="_blank">Codeforces 51 Round 48 Beta 2010.12.18</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+const int N = 705;
+long long dp[6][N][N];
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+
+  int n, m;
+  cin >> n >> m;
+
+  for (int i = 1;i <= m;i++) {
+    int u, v;
+    cin >> u >> v;
+    dp[1][u][v] = dp[1][v][u] = 1;
+  }
+
+  for (int i = 1;i <= 5;i++) {
+    for (int k = 1;k <= n;k++) {
+      for (int u = 1;u <= n;u++) {
+        for (int v = 1;v <= n;v++) {
+          dp[i][u][v] += dp[i - 1][u][k] * dp[1][k][v];
+        }
+      }
+    }
+  }
+
+  long long ans = 0;
+  for (int u = 1;u <= n;u++) {
+    ans += 1ll * dp[5][u][u];
+  }
+  for (int u = 1;u <= n;u++) {
+    ans -= 1ll * dp[3][u][u] * dp[2][u][u] * 5;
+  }
+  for (int u = 1;u <= n;u++) {
+    ans += 1ll * dp[3][u][u] * 5;
+  }
+
+  cout << ans / 10;
+}
+</pre>
+</details>

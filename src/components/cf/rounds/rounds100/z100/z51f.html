@@ -56,3 +56,111 @@
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/51/problem/F" target="_blank">Задача 51F</a>
+    <br><a href="https://codeforces.com/contest/51" target="_blank">Codeforces 51 Round 48 Beta 2010.12.18</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <cstring>
+
+using namespace std;
+
+const int N = 3e5 + 10;
+int n, m, sum, t, cnt, tot, mx, pos;
+int x[N], y[N], dfn[N], low[N], dcc[N], st[N], d[N];
+bool vis[N];
+vector<int>e[N], ans[N];
+
+void trj(int u, int fa) {
+  dfn[u] = low[u] = ++tot, st[++t] = u;
+
+  for (int v : e[u]) {
+    if (!dfn[v]) {
+      trj(v, u), low[u] = min(low[u], low[v]);
+    } else if (!dcc[v] && v != fa) {
+      low[u] = min(low[u], dfn[v]);
+    }
+  }
+
+  if (dfn[u] == low[u]) {
+    ++cnt;
+    while (st[t] != u) {
+      ans[cnt].push_back(st[t]);
+      dcc[st[t]] = cnt;
+      --t;
+    }
+    ans[cnt].push_back(st[t]);
+    dcc[st[t]] = cnt;
+    --t;
+  }
+}
+
+void dfs(int u) {
+  vis[u] = 1;
+  if (d[u] > mx) {
+    mx = d[u];
+    pos = u;
+  }
+  for (int v : e[u]) {
+    if (!d[v]) {
+      d[v] = d[u] + 1;
+      dfs(v);
+    }
+  }
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1;i <= m;++i) {
+    cin >> x[i] >> y[i];
+    e[x[i]].push_back(y[i]);
+    e[y[i]].push_back(x[i]);
+  }
+
+  for (int i = 1;i <= n;++i) {
+    if (!dfn[i]) {
+      trj(i, 0);
+      ++sum;
+    }
+  }
+
+  for (int i = 1;i <= cnt;++i) {
+    sum += ans[i].size() - 1;
+  }
+
+  for (int i = 1;i <= n;++i) {
+    e[i].clear();
+  }
+
+  for (int i = 1;i <= m;++i) {
+    if (dcc[x[i]] != dcc[y[i]]) {
+      e[dcc[x[i]]].push_back(dcc[y[i]]);
+      e[dcc[y[i]]].push_back(dcc[x[i]]);
+    }
+  }
+
+  for (int i = 1;i <= cnt;++i) {
+    if (!vis[i]) {
+      sum += 2;
+      memset(d, 0, sizeof d);
+      d[i] = 1, mx = 0, dfs(i);
+      memset(d, 0, sizeof d);
+      d[pos] = 1, dfs(pos);
+      sum -= mx + (mx == 1);
+    }
+    sum -= (e[i].size() < 2);
+  }
+
+  cout << sum - 1 + cnt;
+  return 0;
+}
+</pre>
+</details>
