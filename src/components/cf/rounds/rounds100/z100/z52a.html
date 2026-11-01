@@ -21,3 +21,46 @@
 </pre>
   <p>В примере все числа, равные 1 и 3 надо заменить на 2.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/52/problem/A" target="_blank">Задача 52A</a>
+  <br><a href="https://codeforces.com/contest/52" target="_blank">Codeforces Testing Round 1 2011-01-04</a>
+</div>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  // ввод данных
+  int n; // длина массива
+  cin >> n;
+  int in;
+
+  // соберем частотный массив
+  int F[4] = { 0,0,0,0 };
+  for (int i = 0; i &lt; n; i++) {
+    cin >> in;
+    F[in]++;
+  }
+
+  // решение
+  int res = 0;
+  // находим наибольшее из трех чисел
+  if (F[1] >= F[2] && F[1] >= F[3]) {
+    res = F[2] + F[3];
+  } else if (F[2] >= F[1] && F[2] >= F[3]) {
+    res = F[1] + F[3];
+  } else {
+    res = F[1] + F[2];
+  }
+
+  // вывод результата
+  cout &lt;&lt; res;
+}
+</pre>
+</details>

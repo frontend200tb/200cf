@@ -35,3 +35,94 @@
 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/52/problem/C" target="_blank">Задача 52C</a>
+  <br><a href="https://codeforces.com/contest/52" target="_blank">Codeforces Testing Round 1 2011-01-04</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+const int buk = 450;
+int n, m, q;
+long long a[200005], add[200005], b[200005];
+
+void update(int cur) {
+  b[cur] = 1e18;
+  for (int i = cur * buk; i < cur * buk + buk; i++) {
+    b[cur] = min(b[cur], a[i]);
+  }
+}
+
+long long query(int l, int r) {
+  long long res = 1e18;
+  int i = l;
+  for (;i % buk != 0 && i <= r;++i) {
+    res = min(res, a[i] + add[i / buk]);
+  }
+  for (;i + buk - 1 <= r;i += buk) {
+    res = min(res, b[i / buk] + add[i / buk]);
+  }
+  for (;i <= r;++i) {
+    res = min(res, a[i] + add[i / buk]);
+  }
+  return res;
+}
+void inc(int l, int r, int d) {
+  int i = l;
+  while (i % buk != 0 && i <= r) {
+    a[i++] += d;
+  }
+  update(l / buk);
+  for (;i + buk - 1 <= r;i += buk) {
+    add[i / buk] += d;
+  }
+  while (i <= r) {
+    a[i++] += d;
+  }
+  update(r / buk);
+}
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin >> n;
+
+  for (int i = 0;i < n;i++) {
+    cin >> a[i];
+  }
+
+  for (int i = 0;i <= (n - 1) / buk;i++) {
+    update(i);
+  }
+
+  cin >> q;
+  while (q--)	{
+    int l, r, d;
+    cin >> l >> r;
+    if (cin.get() == 10) {
+      if (l <= r) {
+        cout << query(l, r) << endl;
+      } else {
+        cout << min(query(0, r), query(l, n - 1)) << endl;
+      }
+    } else {
+      cin >> d;
+      if (l <= r) {
+        inc(l, r, d);
+      } else {
+        inc(0, r, d);
+        inc(l, n - 1, d);
+      }
+    }
+  }
+
+  return 0;
+}
+</pre>
+</details>
