@@ -45,15 +45,22 @@ import html143 from './../p200/elem-143-Round102.html';
 import html144 from './../p200/elem-144-Round103.html';
 import html145 from './../p200/elem-145-Round104.html';
 import html146 from './../p200/elem-146-Round104.html';
+import html147 from './../p200/elem-147-TRound4.html';
 import html148 from './../p200/elem-148-Round105.html';
 import html149 from './../p200/elem-149-Round106.html';
 import html150 from './../p200/elem-150-Round107.html';
 import html151 from './../p200/elem-151-Round107.html';
 import html152 from './../p200/elem-152-Round108.html';
 import html153 from './../p200/elem-153-SLRound5.html';
+import html154 from './../p200/elem-154-Round109.html';
 import html155 from './../p200/elem-155-Round109.html';
+import html156 from './../p200/elem-156-Round110.html';
+import html157 from './../p200/elem-157-Round110.html';
 import html158 from './../p200/elem-158-vk-q1.html';
 import html159 from './../p200/elem-159-vk-q2.html';
+import html160 from './../p200/elem-160-Round111.html';
+import html161 from './../p200/elem-161-vk-r1.html';
+import html162 from './../p200/elem-162-vk-wcr1.html';
 import html163 from './../p200/elem-163-vk-r2.html';
 import html169 from './../p200/elem-169-vk-r2.html';
 import html200 from './../p200/elem-200-Round126.html';
@@ -105,15 +112,22 @@ export const pages = [
   [html144, 144],
   [html145, 145],
   [html146, 146],
+  [html147, 147],
   [html148, 148],
   [html149, 149],
   [html150, 150],
   [html151, 151],
   [html152, 152],
   [html153, 153],
+  [html154, 154],
   [html155, 155],
+  [html156, 156],
+  [html157, 157],
   [html158, 158],
   [html159, 159],
+  [html160, 160],
+  [html161, 161],
+  [html162, 162],
   [html163, 163],
   [html169, 169],
   [html200, 200],

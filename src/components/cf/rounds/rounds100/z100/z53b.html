@@ -35,3 +35,38 @@
 5 4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/53/problem/B" target="_blank">Задача 53B</a>
+  <br><a href="https://codeforces.com/contest/52" target="_blank">Codeforces 53 Round 49 Beta (Div. 2) 2011.01.06</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  long long h, w;
+  cin >> h >> w;
+
+  long long k = 1;
+
+  while (k << 1 <= min(h, w)) {
+    k <<= 1;
+  }
+
+  h = min(h, k * 5 / 4);
+  w = min(w, k * 5 / 4);
+
+  if (h >= w) {
+    cout << h << " " << k;
+  } else {
+    cout << k << " " << w;
+  }
+}
+</pre>
+</details>
