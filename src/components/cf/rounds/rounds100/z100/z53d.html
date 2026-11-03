@@ -35,3 +35,55 @@
 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/53/problem/C" target="_blank">Задача 53C</a>
+  <br><a href="https://codeforces.com/contest/53" target="_blank">Codeforces 53 Round 49 Beta (Div. 2) 2011.01.06</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int c, d, m, k, x, f, a[304], b[303], an[100000][2];
+
+int main() {
+  int n;
+  cin >> n;
+
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
+  }
+
+  for (int i = 0; i < n; i++) {
+    cin >> b[i];
+  }
+
+  for (int i = 0, j = 0; i < n; i++) {
+    if (a[i] != b[i]) {
+      for (j = i + 1; j < n; j++) {
+        if (a[i] == b[j]) {
+          break;
+        }
+      }
+      while (i != j) {
+        swap(b[j], b[j - 1]);
+        an[k][0] = j;
+        an[k][1] = j + 1;
+        k++;
+        j--;
+      }
+    }
+  }
+
+  cout << k << endl;
+  for (int i = 0; i < k; i++) {
+    cout << an[i][0] << " " << an[i][1] << endl;
+  }
+}
+</pre>
+</details>
