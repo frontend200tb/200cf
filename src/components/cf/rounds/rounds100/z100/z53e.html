@@ -57,3 +57,73 @@
 4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/53/problem/E" target="_blank">Задача 53E</a>
+  <br><a href="https://codeforces.com/contest/53" target="_blank">Codeforces 53 Round 49 Beta (Div. 2) 2011.01.06</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int N = 15, M = (1 << 10) + 5;
+int f[M][M];
+vector<int> v[N];
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+
+  int n, m, k;
+  cin >> n >> m >> k;
+
+  for (int i = 1, x, y;i <= m;i++) {
+    cin >> x >> y;
+    v[x].push_back(y);
+    v[y].push_back(x);
+  }
+
+  for (int i : v[1]) {
+    f[1 + (1 << i - 1)][1 + (1 << i - 1)] = 1;
+  }
+
+  int as = 0;
+  for (int i = 0; i < (1 << n); i++) {
+    for (int j = i; j; j = (j - 1) & i) {
+      int ct = 0;
+
+      for (int k = 1;k <= n;k++) {
+        if (i & (1 << k - 1)) {
+          for (int p : v[k]) {
+            if (i & (1 << p - 1)) {
+              continue;
+            }
+            int u = (((1 << n) - 1) ^ (1 << k - 1)) & j ^ (1 << p - 1);
+            if ((u >> (p - 1)) == 1) {
+              f[i ^ (1 << p - 1)][u] += f[i][j];
+            }
+          }
+        }
+
+        if (j & (1 << k - 1)) {
+          ct++;
+        }
+      }
+
+      if (i == (1 << n) - 1 && ct == k) {
+        as += f[i][j];
+      }
+    }
+  }
+
+  cout << as;
+}
+</pre>
+</details>

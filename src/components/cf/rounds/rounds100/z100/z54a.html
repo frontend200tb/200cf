@@ -41,3 +41,34 @@
 10
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/54/problem/A" target="_blank">Задача 54A</a>
+  <br><a href="https://codeforces.com/contest/53" target="_blank">Codeforces 54 Round 50 Beta 2011.01.11</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int x, y, z, s;
+
+int main() {
+  int n, k, m;
+  cin >> n >> k >> m;
+
+  for (int i = 1; i <= m; i++) {
+    cin >> x;
+    s += (x - y - 1) / k;
+    y = x;
+    if (i == m) z = x;
+  }
+  s += (n - z) / k;
+  cout << s + m;
+}
+</pre>
+</details>
