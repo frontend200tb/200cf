@@ -42,3 +42,61 @@
 0.833333333333333
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/54/problem/C" target="_blank">Задача 54C</a>
+  <br><a href="https://codeforces.com/contest/53" target="_blank">Codeforces 54 Round 50 Beta 2011.01.11</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+long long l, r, sum, x, y;
+double f[1010], ans, t;
+
+int main() {
+  int n;
+  cin >> n;
+
+  f[0] = 1;
+  for (int i = 1; i <= n; i++) {
+    cin >> l >> r;
+    sum = 0;
+    x = 1;
+    while (x <= 100000000000000000) {
+      y = x + x - 1;
+      if (y >= l && x <= r) {
+        sum += min(y, r) - max(x, l) + 1;
+      }
+      if (x > r) {
+        break;
+      }
+      x = (x << 3) + (x << 1);
+    } if (r == 1000000000000000000) {
+      ++sum;
+    }
+    t = sum / (double)(r - l + 1);
+    for (int j = n; j > 0; j--) {
+      f[j] = f[j] * (1 - t) + f[j - 1] * (t);
+    }
+    f[0] *= 1 - t;
+  }
+
+  int k;
+  cin >> k;
+
+  k = (n * k + 99) / 100;
+  for (int i = k; i <= n; i++) {
+    ans += f[i];
+  }
+
+  printf("%.12lf", ans);
+  return 0;
+}
+</pre>
+</details>

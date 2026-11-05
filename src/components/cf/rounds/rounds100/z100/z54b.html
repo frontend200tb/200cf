@@ -46,3 +46,83 @@ ABCCBA
 </pre>
 <p>В первом примере получаются следующие хорошие пазлы: (2, 1), (2, 2), (2, 4).</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/54/problem/B" target="_blank">Задача 54B</a>
+  <br><a href="https://codeforces.com/contest/53" target="_blank">Codeforces 54 Round 50 Beta 2011.01.11</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+long long x, y, ansx = 1000, ansy = 1000, ans;
+string c[21];
+
+void check(int m, int n) {
+  map<string, bool> mp;
+  for (int i = 0; i < x; i += m) {
+    for (int j = 0; j < y; j += n) {
+      string s;
+
+      for (int k = i; k < i + m; k++) {
+        for (int l = j; l < j + n; l++) {
+          s += c[k][l];
+        }
+      }
+
+      if (mp[s]) {
+        return;
+      }
+
+      mp[s] = 1;
+      reverse(s.begin(), s.end());
+      mp[s] = 1;
+
+      if (m == n) {
+        s = "";
+
+        for (int l = j; l < j + n; l++) {
+          for (int k = i + m - 1; k >= i; k--) {
+            s += c[k][l];
+          }
+        }
+
+        mp[s] = 1;
+        reverse(s.begin(), s.end());
+        mp[s] = 1;
+      }
+    }
+  }
+  ans++;
+  if (m * n < ansx * ansy) {
+    ansx = m;
+    ansy = n;
+  }
+}
+
+int main() {
+  cin >> x >> y;
+
+  for (int i = 0; i < x; i++) {
+    cin >> c[i];
+  }
+
+  for (int i = 1; i <= x; i++) {
+    for (int j = 1; j <= y; j++) {
+      if (x % i == 0 && y % j == 0) {
+        check(i, j);
+      }
+    }
+  }
+
+  cout << ans << endl << ansx << ' ' << ansy;
+  return 0;
+}
+</pre>
+</details>
