@@ -52,3 +52,72 @@ abba
 No solution
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/54/problem/D" target="_blank">Задача 54D</a>
+  <br><a href="https://codeforces.com/contest/53" target="_blank">Codeforces 54 Round 50 Beta 2011.01.11</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+char res[114];
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  string s, bin;
+  cin >> s >> bin;
+
+  int len = s.size();
+  int lenb = bin.size();
+
+  for (int i = 0; i < lenb; i++) {
+    if (bin[i] == '1') {
+      for (int j = 0; j < len; j++) {
+        if (res[i + j] && res[i + j] != s[j]) {
+          cout << "No solution";
+          return 0;
+        }
+        res[i + j] = s[j];
+      }
+    }
+  }
+
+  for (int i = 0; i < n; i++) {
+    if (bin[i] == '0') {
+      int k;
+      for (k = 0; k < len; k++) {
+        if (res[i + k] && res[i + k] != s[k]) {
+          break;
+        }
+      }
+      if (k == len) {
+        for (k = 0; k < len; k++) {
+          if (!res[i + k]) {
+            res[i + k] = (s[k] == 'a') ? 'b' : 'a';
+            break;
+          }
+        }
+        if (k == len) {
+          cout << "No solution";
+          return 0;
+        }
+      }
+    }
+  }
+
+  for (int i = 0; i < n; i++) {
+    if (!res[i]) res[i] = 'a';
+    cout << res[i];
+  }
+  return 0;
+}
+</pre>
+</details>
