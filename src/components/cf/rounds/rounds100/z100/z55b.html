@@ -40,3 +40,57 @@
 9
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/55/problem/B" target="_blank">Задача 55B</a>
+  <br><a href="https://codeforces.com/contest/55" target="_blank">Codeforces 55 Round 51 Beta 2011.01.14</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+long long a[5], ans = 1e18;
+char ch[4];
+
+void dfs(int k) {
+  if (k == 3) {
+    ans = min(ans, a[0]);
+    return;
+  }
+  int b[5];
+  for (int i = 0; i < 4; i++) {
+    b[i] = a[i];
+  }
+  for (int i = 0; i < 3 - k; i++) {
+    if (ch[k] == '+') {
+      a[i] += a[i + 1];
+    } else {
+      a[i] *= a[i + 1];
+    }
+    for (int j = i + 1; j < 4; j++) {
+      a[j] = a[j + 1];
+    }
+    dfs(k + 1);
+    for (int i = 0; i < 4; i++) {
+      a[i] = b[i];
+    }
+  }
+}
+
+int main() {
+  cin >> a[0] >> a[1] >> a[2] >> a[3] >> ch[0] >> ch[1] >> ch[2];
+
+  do {
+    dfs(0);
+  } while (next_permutation(a, a + 4));
+
+  cout << ans;
+}
+</pre>
+</details>

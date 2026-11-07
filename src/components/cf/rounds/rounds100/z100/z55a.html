@@ -27,3 +27,27 @@ YES
 NO
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/55/problem/A" target="_blank">Задача 55A</a>
+  <br><a href="https://codeforces.com/contest/55" target="_blank">Codeforces 55 Round 51 Beta 2011.01.14</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  bool res = n & n - 1;
+
+  cout << (res ? "NO" : "YES");
+}
+</pre>
+</details>
