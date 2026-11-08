@@ -30,3 +30,68 @@
 2
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/55/problem/D" target="_blank">Задача 55D</a>
+  <br><a href="https://codeforces.com/contest/55" target="_blank">Codeforces 55 Round 51 Beta 2011.01.14</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <numeric>
+#include <cstring>
+
+using namespace std;
+typedef long long ll;
+
+const int N = 2520;
+ll t, l, r, cnt, a[20], v[N + 5], f[20][N + 5][50];
+
+ll dfs(ll i, ll x, ll y, bool flag) {
+  if (!i) {
+    return x % y == 0;
+  }
+  if (!flag && ~f[i][x][v[y]]) {
+    return f[i][x][v[y]];
+  }
+  ll end = flag ? a[i] : 9, sum = 0;
+  for (int j = 0; j <= end; j++) {
+    sum += dfs(i - 1, (x * 10 + j) % N, j ? y / gcd(y, j) * j : y, (flag & (j == end)));
+  }
+  if (!flag) {
+    f[i][x][v[y]] = sum;
+  }
+  return sum;
+}
+
+ll calc(ll x) {
+  ll n = 0;
+  while (x) {
+    a[++n] = x % 10;
+    x /= 10;
+  }
+  return dfs(n, 0, 1, 1);
+}
+
+int main() {
+  memset(f, -1, sizeof(f));
+
+  for (int i = 1; i <= N; i++) {
+    if (N % i == 0) {
+      v[i] = ++cnt;
+    }
+  }
+
+  scanf("%lld", &t);
+  while (t--) {
+    scanf("%lld%lld", &l, &r);
+    printf("%lld\n", calc(r) - calc(l - 1));
+  }
+
+  return 0;
+}
+</pre>
+</details>

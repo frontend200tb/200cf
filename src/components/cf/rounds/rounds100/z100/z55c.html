@@ -38,3 +38,35 @@ NO
 NO
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/55/problem/C" target="_blank">Задача 55C</a>
+  <br><a href="https://codeforces.com/contest/55" target="_blank">Codeforces 55 Round 51 Beta 2011.01.14</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n, m, k;
+  cin >> n >> m >> k;
+
+  int x, y;
+
+  for (int i = 1; i <= k; i++) {
+    cin >> x >> y;
+    if (x < 6 || y < 6 || n - x < 5 || m - y < 5) {
+      cout << "YES";
+      return 0;
+    }
+  }
+
+  cout << "NO";
+}
+</pre>
+</details>
