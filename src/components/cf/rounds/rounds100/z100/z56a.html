@@ -29,3 +29,52 @@ COKE
 </pre>
 <p>В тесте из примера нужно проверить второго и пятого посетителя.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/56/problem/A" target="_blank">Задача 56A</a>
+  <br><a href="https://codeforces.com/contest/56" target="_blank">Codeforces 56 Round 52 Beta (Div. 2) 2011.01.21</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <set>
+#include <string>
+
+using namespace std;
+
+set<string> Alcohol{
+  "ABSINTH","BEER","BRANDY",
+  "CHAMPAGNE","GIN","RUM",
+  "SAKE","TEQUILA","VODKA",
+  "WHISKEY","WINE"
+};
+
+int main() {
+  int n; // число человек в баре
+  cin >> n;
+
+  int cnt = 0;
+  string man;
+
+  while (n--) {
+    cin >> man;
+
+
+    if (isdigit(man[0])) { // если возраст
+      if (stoi(man) < 18) {
+        cnt++;
+      }
+    } else { // если напиток
+      if (Alcohol.count(man)) {
+        cnt++;
+      }
+    }
+  }
+
+  cout << cnt;
+}
+</pre>
+</details>

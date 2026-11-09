@@ -65,3 +65,60 @@
 4
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/55/problem/E" target="_blank">Задача 55E</a>
+  <br><a href="https://codeforces.com/contest/55" target="_blank">Codeforces 55 Round 51 Beta 2011.01.14</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+typedef long long ll;
+
+const int MAX = 1e5 + 9;
+ll n, x[MAX], y[MAX], t, a, b, ans, c, p;
+
+ll lie(ll p, ll q) {
+  if (p == q) {
+    return -1;
+  }
+  return (x[q] - x[p]) * (b - y[p]) - (y[q] - y[p]) * (a - x[p]);
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; i++) {
+    cin >> x[i] >> y[i];
+  }
+
+  cin >> t;
+
+  while (t--) {
+    cin >> a >> b;
+    ans = n * (n - 1) * (n - 2) / 6;
+    p = 1;
+
+    for (int i = 0; i < n; i++) {
+      if (lie(i, (i + 1) % n) > 0) {
+        ans = 0;
+        break;
+      }
+      while (lie(i, p) < 0) {
+        p = (p + 1) % n;
+      }
+      c = (n + i - p - 1) % n;
+      ans -= (c + 1) * c / 2;
+    }
+
+    cout << ans << '\n';
+  }
+}
+</pre>
+</details>
