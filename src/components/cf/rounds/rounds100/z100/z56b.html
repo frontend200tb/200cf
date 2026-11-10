@@ -38,3 +38,44 @@
 0 0
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/56/problem/B" target="_blank">Задача 56B</a>
+  <br><a href="https://codeforces.com/contest/56" target="_blank">Codeforces 56 Round 52 Beta (Div. 2) 2011.01.21</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  int a[1001], L = 0, R;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+    if (a[i] != i) {
+      R = i;
+      if (L == 0) {
+        L = i;
+      }
+    }
+  }
+
+  for (int i = L, j = R; i <= R; i++, j--) {
+    if (a[i] != j) {
+      cout << "0 0";
+      return 0;
+    }
+  }
+
+  cout << L << " " << R;
+}
+</pre>
+</details>
