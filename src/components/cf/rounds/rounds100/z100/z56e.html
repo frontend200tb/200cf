@@ -37,3 +37,58 @@
 4 1 2 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/56/problem/E" target="_blank">Задача 56E</a>
+  <br><a href="https://codeforces.com/contest/56" target="_blank">Codeforces 56 Round 52 Beta (Div. 2) 2011.01.21</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int n, e[100100], f[100100];
+
+struct node {
+  int x, h, nb;
+}a[100100];
+
+bool cmp(node a, node b) {
+  return a.x < b.x;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i].x >> a[i].h;
+    a[i].nb = i;
+  }
+
+  sort(a + 1, a + n + 1, cmp);
+
+  for (int i = 1; i <= n; i++) {
+    f[i] = 1;
+  }
+
+  for (int i = n - 1; i > 0; i--) {
+    int j;
+    for (j = i + 1; j != 0 && a[i].x + a[i].h > a[j].x; j = e[j]) {
+      f[a[i].nb] += f[a[j].nb];
+    }
+    e[i] = j;
+  }
+
+  for (int i = 1; i <= n; i++) {
+    cout << f[i] << ' ';
+  }
+
+  return 0;
+}
+</pre>
+</details>
