@@ -35,3 +35,30 @@
 200
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/57/problem/A" target="_blank">Задача 57A</a>
+  <br><a href="https://codeforces.com/contest/57" target="_blank">Codeforces 57 Round 53 Beta 2011.01.25</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  int n, a, b, c, d;
+  cin >> n >> a >> b >> c >> d;
+
+  int r = abs(a - c);
+  int s = abs(b - d);
+  a = (r == n || n == s) ? a + b + c + d : r + s;
+
+  cout << min(4 * n - a, a);
+}
+</pre>
+</details>
