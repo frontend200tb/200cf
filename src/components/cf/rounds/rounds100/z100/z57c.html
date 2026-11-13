@@ -33,3 +33,37 @@
 17
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/57/problem/C" target="_blank">Задача 57C</a>
+  <br><a href="https://codeforces.com/contest/57" target="_blank">Codeforces 57 Round 53 Beta 2011.01.25</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+const int mod = 1e9 + 7, maxn = 1e5 + 233;
+long long n, ans = 1, e[maxn];
+
+int main() {
+  cin >> n;
+  e[1] = 1;
+
+  for (long long i = 2; i <= n; i++) {
+    e[i] = (mod - mod / i) * e[mod % i] % mod;
+  }
+
+  for (long long i = 1; i <= n; i++) {
+    ans = ans * e[i] % mod * (n + i) % mod;
+  }
+
+  cout << ((ans - n) % mod + mod) % mod;
+  return 0;
+}
+</pre>
+</details>
