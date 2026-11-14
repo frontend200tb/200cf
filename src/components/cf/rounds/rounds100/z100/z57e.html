@@ -38,3 +38,64 @@
 9
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/57/problem/E" target="_blank">Задача 57E</a>
+  <br><a href="https://codeforces.com/contest/57" target="_blank">Codeforces 57 Round 53 Beta 2011.01.25</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+const int N = 1203l;
+const int mod = 1e9 + 7;
+pair<int, int> q[2][1000003];
+int x, y, xx, yy;
+int b[8][2] = { {-2,-1},{-2,1},{-1,2},{-1,-2},{2,1},{2,-1},{1,2},{1,-2} };
+int cnt, n, a[2], fl, vis[N * 2][N * 2];
+long long k, tmp, kk, d;
+
+int main() {
+  cin >> k >> n;
+
+  for (int i = 1; i <= n; i++) {
+    cin >> x >> y;
+    vis[x + N][y + N] = 1;
+  }
+
+  q[0][0] = make_pair(0, 0);
+  vis[N][N] = 1;
+  a[0] = 1;
+  tmp = min(k, (long long)500);
+
+  for (int tim = 0; tim < tmp; tim++, fl ^= 1) {
+    cnt += a[fl];d = a[fl] - a[fl ^ 1];
+    a[fl ^ 1] = 0;
+    for (int i = 0; i < a[fl]; i++) {
+      x = q[fl][i].first;
+      y = q[fl][i].second;
+      for (int j = 0; j < 8; j++) {
+        xx = x + b[j][0];
+        yy = y + b[j][1];
+        if (!vis[xx + N][yy + N]) {
+          q[fl ^ 1][a[fl ^ 1]++] = make_pair(xx, yy);
+          vis[xx + N][yy + N] = 1;
+        }
+      }
+    }
+  }
+
+  if (k > tmp) {
+    kk = (k - tmp) % mod;
+  }
+
+  cout << (cnt + a[fl] + a[fl] * kk + kk * (kk + 1) / 2 % mod * d) % mod;
+  return 0;
+}
+</pre>
+</details>
