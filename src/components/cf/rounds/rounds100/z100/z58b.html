@@ -35,3 +35,30 @@
 3 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+<div>
+  <a href="https://codeforces.com/contest/58/problem/B" target="_blank">Задача 58B</a>
+  <br><a href="https://codeforces.com/contest/58" target="_blank">Codeforces 58 Round 54 Beta (Div. 2) 2011.01.31</a>
+</div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n; // стоимость самой дорогой монеты
+  cin >> n;
+
+  for (int i = n; i > 0; i--) {
+    if ((n % i) == 0) {
+      n = i;
+      cout << i << ' ';
+    }
+  }
+}
+</pre>
+</details>
