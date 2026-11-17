@@ -35,3 +35,60 @@ maTRIx
 matrix
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/59/problem/A" target="_blank">Задача 59А</a>
+    <br><a href="https://codeforces.com/contest/59" target="_blank">Codeforces Beta Round 55 (Div. 2) 2011.02.11</a>
+  </div>
+
+  <h4>Идея решения:</h4>
+  <ol>
+    <li>Подсчитаем количество больших и маленьких букв в слове.</li>
+    <li>Если количество больших букв строго больше, чем маленьких, то преобразуем всё слово в верхний регистр.</li>
+    <li>Иначе преобразуем всё слово в нижний регистр.</li>
+  </ol>
+
+<pre class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+  // ввод данных
+  string s;
+  cin >> s;
+
+  // решение
+  int upperCount = 0; // Счётчик больших букв
+  int lowerCount = 0; // Счётчик маленьких букв
+
+  // Подсчитываем количество больших и маленьких букв
+  for (char c : s) {
+    if (isupper(c)) {
+      upperCount++;
+    } else {
+      lowerCount++;
+    }
+  }
+
+  // Преобразуем слово в нужный регистр
+  if (upperCount > lowerCount) {
+    for (int i = 0; i &lt; s.length(); i++) {
+      s[i] = toupper(s[i]);
+    }
+  }
+  else {
+    for (int i = 0; i &lt; s.length(); i++) {
+      s[i] = tolower(s[i]);
+    }
+  }
+
+  // вывод результата
+  cout &lt;&lt; s;
+}
+</pre>
+</details>

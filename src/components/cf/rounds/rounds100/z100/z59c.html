@@ -42,3 +42,61 @@ abba
 abba
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/59/problem/C" target="_blank">Задача 59C</a>
+    <br><a href="https://codeforces.com/contest/59" target="_blank">Codeforces Beta Round 55 (Div. 2) 2011.02.11</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+bool a[28];
+
+int main() {
+  int k;
+  cin >> k;
+
+  char s[120];
+  cin >> s;
+  int n = strlen(s);
+
+  for (int i = 0; i < n; i++) {
+    if (s[i] == '?' && s[n - 1 - i] != '?') {
+      s[i] = s[n - 1 - i];
+    }
+    if (s[i] != '?') {
+      a[s[i] - 'a'] = true;
+    }
+    if (s[n - 1 - i] != '?' && s[i] != s[n - 1 - i]) {
+      cout << "IMPOSSIBLE";
+      return 0;
+    }
+  }
+
+  int j;
+  for (j = k - 1; j >= 0 && a[j]; j--);
+
+  for (int i = (n - 1) / 2; i >= 0; i--) {
+    if (s[i] == '?') {
+      if (j < 0)j = 0;
+      s[i] = s[n - 1 - i] = j + 'a';
+      a[j] = true;
+      while (j >= 0 && a[j])j--;
+    }
+  }
+
+  if (j < 0) {
+    cout << s;
+  } else {
+    cout << "IMPOSSIBLE";
+  }
+}
+</pre>
+</details>

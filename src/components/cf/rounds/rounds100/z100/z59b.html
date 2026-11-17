@@ -38,3 +38,35 @@
 13
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/59/problem/B" target="_blank">Задача 59B</a>
+    <br><a href="https://codeforces.com/contest/59" target="_blank">Codeforces Beta Round 55 (Div. 2) 2011.02.11</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  int a;
+  int sum = 0;
+  int m = 1e9;
+
+  for (int i = 0; i < n; i++) {
+    cin >> a;
+    sum += a;
+    a % 2 ? m = min(m, a) : 0;
+  }
+
+  cout << (sum % 2 ? sum : max(0, sum - m));
+}
+</pre>
+</details>
