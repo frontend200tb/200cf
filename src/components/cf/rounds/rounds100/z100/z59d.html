@@ -57,3 +57,78 @@
 5 6 1 2 3
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/59/problem/D" target="_blank">Задача 59D</a>
+    <br><a href="https://codeforces.com/contest/59" target="_blank">Codeforces Beta Round 55 (Div. 2) 2011.02.11</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+const int maxn = 1e5 + 10;
+int a[maxn * 3], b[maxn * 3], c[maxn * 3];
+
+int main() {
+  int n;
+  cin >> n;
+
+  for (int i = 0; i < 3 * n; i++) {
+    cin >> b[i];
+  }
+
+  for (int i = 0; i < 3 * n; i++) {
+    cin >> a[i];
+  }
+
+  int k;
+  cin >> k;
+
+  int now = 0;
+  while (a[now] != k) {
+    now++;
+  }
+
+  int g = now / 3 + 1, p;
+  for (int i = 0; i < 3 * (g - 1); i++) {
+    c[a[i]] = 1;
+  }
+
+  for (int i = 0; i < 3 * n; i++) {
+    if (!c[b[i]]) {
+      p = i;
+      break;
+    }
+  }
+
+  if (a[now] != b[p]) {
+    sort(a, a + 3 * n);
+  } else {
+    int f = -1;
+    for (int i = 3 * (g - 1); i < 3 * g; i++) {
+      if (i != now) {
+        f = max(f, a[i]);
+      }
+    }
+    sort(a, a + 3 * g);
+    int sum = 0;
+    while (a[sum] != f) {
+      sum++;
+    }
+    sort(a + 1 + sum, a + 3 * n);
+  }
+
+  for (int i = 0; i < 3 * n; i++) {
+    if (a[i] != k) {
+      cout << a[i] << " ";
+    }
+  }
+}
+</pre>
+</details>
