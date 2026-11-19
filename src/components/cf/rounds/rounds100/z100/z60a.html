@@ -49,3 +49,41 @@ To the right of 1
 -1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/60/problem/A" target="_blank">Задача 60A</a>
+    <br><a href="https://codeforces.com/contest/60" target="_blank">Codeforces 60 Round 56 Beta 2011.02.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int n, m, e, r, l;
+string a, b, c, d;
+
+int main() {
+  cin >> n >> m;
+  l = 1, r = n;
+
+  while (m--) {
+    cin >> a >> b >> c >> d >> e;
+    if (c == "left") {
+      r = min(r, e - 1);
+    } else {
+      l = max(l, e + 1);
+    }
+  }
+
+  if (r >= l) {
+    cout << r - l + 1;
+  } else {
+    cout << -1;
+  }
+}
+</pre>
+</details>
