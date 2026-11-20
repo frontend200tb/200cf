@@ -42,3 +42,79 @@
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/60/problem/C" target="_blank">Задача 60C</a>
+    <br><a href="https://codeforces.com/contest/60" target="_blank">Codeforces 60 Round 56 Beta 2011.02.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include<algorithm>
+#include<iostream>
+#include<cstring>
+#include<cstdio>
+#include<cmath>
+
+using namespace std;
+
+typedef long long ll;
+const int MAXN = 1e7 + 5, LIMIT = 1e7;
+int n, cnt, fa[MAXN];
+
+ll gcd(ll x, ll y) {
+  return y ? gcd(y, x % y) : x;
+}
+
+int find(int x) {
+  return x == fa[x] ? x : fa[x] = find(fa[x]);
+}
+
+void merge(int u, int v) {
+  if (!fa[u] || !fa[v]) {
+    return;
+  }
+  u = find(u);
+  v = find(v);
+  if (u == v) {
+    return;
+  }
+  fa[u] = v;
+  cnt++;
+}
+
+int main() {
+  scanf("%d", &n);
+
+  for (int i = 1, x;i <= n;i++) {
+    scanf("%d", &x);
+    fa[x] = x;
+  }
+
+  cnt = 0;
+
+  for (ll x = 1, y, a, b, c;x <= LIMIT;x++) {
+    for (y = x + 1;;y++) {
+      a = y * y - x * x;
+      b = x * y << 1;
+      if (a > LIMIT || b > LIMIT) {
+        break;
+      }
+      if (gcd(a, b) == 1) {
+        merge(a, b);
+        c = x * x + y * y;
+        if (c <= LIMIT) {
+          merge(a, c);
+          merge(c, b);
+        }
+      }
+    }
+  }
+
+  printf("%d\n", n - cnt);
+  return 0;
+}
+</pre>
+</details>

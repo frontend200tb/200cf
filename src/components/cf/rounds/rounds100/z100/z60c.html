@@ -50,3 +50,99 @@ YES
 NO
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/60/problem/C" target="_blank">Задача 60C</a>
+    <br><a href="https://codeforces.com/contest/60" target="_blank">Codeforces 60 Round 56 Beta 2011.02.19</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+
+using namespace std;
+
+#define ll long long
+
+ll n, m, g, l, k, tx, ty, tp, c[210], b[210];
+
+struct node {
+  ll cv, cg, cl;
+  node(ll tcv, ll tcg, ll tcl) { cv = tcv;cg = tcg;cl = tcl; }
+};
+
+vector<node> a[210];
+
+ll dfs(ll x) {
+  if (b[x]) {
+    return 1;
+  }
+  b[x] = 1;
+  for (ll i = 0;i < a[x].size();i++) {
+    node t = a[x][i];
+    if (t.cl % c[x]) {
+      return 0;
+    }
+    tp = t.cg * t.cl;k = tp / c[x];
+    if (__gcd(k, c[x]) != t.cg) {
+      return 0;
+    }
+    if (b[t.cv] && k != c[t.cv]) {
+      return 0;
+    }
+    c[t.cv] = k;
+    if (!dfs(t.cv)) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+ll check(ll x) {
+  node t = a[x][0];
+
+  for (ll i = t.cg;i <= t.cl;i += t.cg) {
+    memset(b, 0, sizeof(b));c[x] = i;
+    if (dfs(x)) {
+      return 1;
+    }
+  }
+
+  return 0;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1;i <= m;i++) {
+    scanf("%lld%lld%lld%lld", &tx, &ty, &g, &l);
+    a[tx].push_back(node(ty, g, l));
+    a[ty].push_back(node(tx, g, l));
+  }
+
+  for (int i = 1;i <= n;i++) {
+    if (c[i] || a[i].size() == 0) {
+      continue;
+    }
+    if (!check(i)) {
+      puts("NO");
+      return 0;
+    }
+  }
+
+  puts("YES");
+
+  for (int i = 1;i <= n;i++) {
+    if (c[i] == 0) printf("1 ");
+    else printf("%lld ", c[i]);
+  }
+
+  return 0;
+}
+</pre>
+</details>
