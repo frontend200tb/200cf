@@ -71,3 +71,54 @@ ACC
 ACC
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/61/problem/B" target="_blank">Задача 61B</a>
+    <br><a href="https://codeforces.com/contest/61" target="_blank">Codeforces 61 Round 57 Beta (Div. 2) 2011.02.22</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+string change(string s) {
+  string ss = "";
+  for (auto i : s)
+    if (isalpha(i)) ss += tolower(i);
+  return ss;
+}
+
+int main() {
+  string a, b, c;
+  cin >> a >> b >> c;
+
+  a = change(a);
+  b = change(b);
+  c = change(c);
+
+  int n;
+  cin >> n;
+
+  string s;
+
+  while (n--) {
+    cin >> s;
+    s = change(s);
+    if (s == a + b + c ||
+        s == a + c + b ||
+        s == b + a + c ||
+        s == b + c + a ||
+        s == c + a + b ||
+        s == c + b + a) {
+      puts("ACC");
+    } else {
+      puts("WA");
+    }
+  }
+}
+</pre>
+</details>

@@ -86,3 +86,74 @@ A
 </pre>
 <p>Подробно о римских числах: http://ru.wikipedia.org/wiki/Римские_цифры</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/61/problem/C" target="_blank">Задача 61C</a>
+    <br><a href="https://codeforces.com/contest/61" target="_blank">Codeforces 61 Round 57 Beta (Div. 2) 2011.02.22</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <sstream>
+
+using namespace std;
+
+const int ra[13] = { 1000,900, 500,400, 100 ,90  ,50, 40,  10, 9,   5,  4,   1 };
+const string rb[13] = { "M","CM", "D","CD","C","XC","L","XL","X","IX","V","IV","I" };
+
+int main() {
+  long long int n;
+  cin >> n;
+
+  string b, x;
+  cin >> b >> x;
+
+  istringstream iss(b);
+
+  long long bb;
+  iss >> bb;
+
+  long long temp = 0;
+  string TR;
+  long long cnt = 1;
+
+  for (int i = x.size() - 1; i >= 0; i--) {
+    if (x[i] >= 'A' && x[i] <= 'Z') {
+      temp += ((x[i] - 'A' + 10) * cnt);
+    } else {
+      temp += ((x[i] - '0') * cnt);
+    }
+    cnt *= n;
+  }
+
+  if (b[0] == 'R') {
+    for (int i = 0; i < 13; i++) {
+      while (temp >= ra[i]) {
+        printf("%s", rb[i].c_str());
+        temp -= ra[i];
+      }
+    }
+    return 0;
+  } else {
+    while (temp) {
+      if (temp % bb >= 10) {
+        TR.push_back('A' + temp % bb - 10);
+      } else {
+        TR.push_back('0' + temp % bb);
+      }
+      temp /= bb;
+    }
+    reverse(TR.begin(), TR.end());
+  }
+
+  if (TR == "") {
+    cout << 0;
+  } else {
+    cout << TR;
+  }
+}
+</pre>
+</details>
