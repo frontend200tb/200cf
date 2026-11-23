@@ -39,3 +39,51 @@
 9
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/61/problem/D" target="_blank">Задача 61D</a>
+    <br><a href="https://codeforces.com/contest/61" target="_blank">Codeforces 61 Round 57 Beta (Div. 2) 2011.02.22</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+typedef long long ll;
+const int MAX = 1e5 + 9;
+ll n, d[MAX], ans, mx;
+vector<pair<int, ll> > g[MAX];
+
+void dfs(int v, int p = -1) {
+  mx = max(mx, d[v]);
+  for (auto u : g[v]) {
+    if (u.first != p) {
+      d[u.first] = d[v] + u.second;
+      dfs(u.first, v);
+    }
+  }
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0, v, u, w; i < n - 1; i++) {
+    cin >> v >> u >> w;
+    v--;
+    u--;
+    g[v].push_back({ u,w });
+    g[u].push_back({ v,w });
+    ans += 2 * w;
+  }
+
+  dfs(0);
+  cout << ans - mx;
+}
+</pre>
+</details>

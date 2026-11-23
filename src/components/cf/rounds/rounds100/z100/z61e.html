@@ -55,3 +55,49 @@
 1
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/61/problem/E" target="_blank">Задача 61E</a>
+    <br><a href="https://codeforces.com/contest/61" target="_blank">Codeforces 61 Round 57 Beta (Div. 2) 2011.02.22</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+typedef long long LL;
+
+LL n, a[1 << 20], b[1 << 20], c[1 << 20], w;
+
+int main() {
+  cin >> n;
+
+  for (LL i = 0; i < n and cin >> a[i]; i++) {
+    b[i] = a[i];
+  }
+
+  sort(b, b + n);
+
+  for (LL i = 0; i < n; i++) {
+    LL u = lower_bound(b, b + n, a[i]) - b + 1, t = 0;
+
+    for (LL j = u; j > 0; j -= j & -j) {
+      t += c[j];
+    }
+
+    w += (i - t) * (u - 1 - t);
+    while (u <= n) {
+      c[u]++;
+      u += u & -u;
+    }
+  }
+
+  cout << w << '\n';
+}
+</pre>
+</details>
