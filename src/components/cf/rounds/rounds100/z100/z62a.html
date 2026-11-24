@@ -47,3 +47,30 @@ NO
 </pre>
 <p>Мальчику и девочке не принципиально, кто пойдёт слева, а кто справа.</p>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/62/problem/A" target="_blank">Задача 62A</a>
+    <br><a href="https://codeforces.com/contest/62" target="_blank">Codeforces 62 Round 58 Beta 2011.02.25</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int al, ar, bl, br;
+  cin >> al >> ar >> bl >> br;
+
+  if (al * 2 + 3 > br && br + 1 >= al ||
+    ar * 2 + 3 > bl && bl + 1 >= ar) {
+    cout << "YES";
+  } else {
+    cout << "NO";
+  }
+}
+</pre>
+</details>
