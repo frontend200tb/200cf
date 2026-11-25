@@ -37,3 +37,102 @@
 37.7044021497
 </pre>
 </details>
+
+<details>
+  <summary>Решение</summary>
+
+  <div>
+    <a href="https://codeforces.com/contest/62/problem/C" target="_blank">Задача 62C</a>
+    <br><a href="https://codeforces.com/contest/62" target="_blank">Codeforces 62 Round 58 Beta 2011.02.25</a>
+  </div>
+
+<pre class="language-cpp">
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <queue>
+#include <string>
+#include <cstring>
+#include <cmath>
+#include <set>
+#include <map>
+#include <cstdio>
+#include <stdlib.h>
+#include <stack>
+#include <numeric>
+
+typedef long long ll;
+#define MAX 105
+using namespace std;
+int n, m, k;
+#define INF 2147483647
+#define MOD 1000000007
+#define G 9.8
+bool debug = false;
+
+struct point {
+  double x, y;
+};
+
+point p[MAX][3];
+double dis(point a, point b) {
+  return sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
+}
+
+double cha(point a, point b, point z) {
+  double x1 = b.x - a.x, y1 = b.y - a.y, x2 = z.x - a.x, y2 = z.y - a.y;
+  return x1 * y2 - x2 * y1;
+}
+
+bool ins(point pp, int tri) {
+  double ss = 0;
+  for (int j = 0;j < 3;j++) {
+    ss += abs(cha(p[tri][j], p[tri][(j + 1) % 3], pp));
+  }
+  return abs(ss - abs(cha(p[tri][0], p[tri][1], p[tri][2]))) < 1e-7;
+}
+
+int main() {
+  scanf("%d", &n);
+
+  for (int i = 0;i < n;i++) for (int j = 0;j < 3;j++) {
+    scanf("%lf%lf", &p[i][j].x, &p[i][j].y);
+  }
+
+  double ans = 0;
+  for (int i = 0;i < n;i++) for (int j = 0;j < 3;j++) {
+    point A = p[i][j], B = p[i][(j + 1) % 3];
+    double d = dis(A, B);
+    vector<double> r; r.push_back(0); r.push_back(1);
+
+    for (int ii = 0;ii < n;ii++) if (ii != i) {
+      for (int jj = 0;jj < 3;jj++) {
+        point C = p[ii][jj], D = p[ii][(jj + 1) % 3];
+        double c1 = cha(C, D, A), c2 = cha(C, D, B), c3 = cha(A, B, C), c4 = cha(A, B, D);
+        if (c1 * c2 < 0 && c3 * c4 < 0) {
+          r.push_back(abs(c1) / (abs(c1) + abs(c2)));
+        }
+      }
+    }
+
+    sort(r.begin(), r.end());
+
+    for (int ii = 1;ii < r.size();ii++) {
+      point q;
+      q.x = (B.x - A.x) * (r[ii] + r[ii - 1]) / 2 + A.x;
+      q.y = (B.y - A.y) * (r[ii] + r[ii - 1]) / 2 + A.y;
+      int iii = 0;
+      for (;iii < n;iii++) if (iii != i) {
+        if (ins(q, iii)) { break; }
+      }
+      if (iii == n) {
+        ans += (r[ii] - r[ii - 1]) * d;
+      }
+    }
+  }
+
+  printf("%.10lf\n", ans);
+  return 0;
+}
+</pre>
+</details>
